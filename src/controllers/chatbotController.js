@@ -98,10 +98,7 @@ function handleMessage(sender_psid, received_message) {
 
     else if(notes.includes(received_message.text)){
         response = {
-            "content_type":"text",
-            "title":"tap me",
-            "image_url":"http://example.com/img/red.png",
-            "payload":"level_1"
+            "text": `${greetReply[Math.floor(Math.random()*greetReply.length)]}`
           }
     }
 
