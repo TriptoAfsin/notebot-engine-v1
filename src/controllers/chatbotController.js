@@ -3,6 +3,10 @@ require("dotenv").config();
 
 const request = require('request');
 
+//keywords
+const positiveKeywords = require('./keywords/positiveKeywords');
+const negativeKeywords = require('./keywords/negativeKeywords');
+
 
 //keyword flows
 const notesFlow = require('./flows/botReplies/noteFlow');
@@ -97,7 +101,9 @@ function handleMessage(sender_psid, received_message) {
     const greetReply = ["Hey!", "Hello", "Hello!", "Hi 😊", "Wassup 😀", "Hello 😀"];
     const loveMoji = ["🖤", "❤", "💜", "💚", "🧡","🤎", "🤍", "❣", "💕", "💗", "💖", "💝", "💘", "💟", "😍", "❤️"];
     const loveReply = ["🖤", "❤", "💜", "💚", "🧡","Thanks 😀", "🤍", "Thank you !", "Thanks 😍", "❤❤❤", "😊", "😃"];
-    const positive = ["good", "great", "awesome", "superb"];
+    const sadReply = ["sorry", "my bad 😥", "😓😓😓", "😓", "Please pardon my mistakes 😥", "মাফ করবেন", "দু:খিত"];
+    const positive = positiveKeywords;
+    const negative = negativeKeywords;
 
   
     
@@ -109,12 +115,7 @@ function handleMessage(sender_psid, received_message) {
       }
     }
 
-    else if(loveMoji.some(word => received_message.text.includes(word))){
-        // Create the payload for a basic text message
-      response = {
-        "text": `${loveReply[Math.floor(Math.random()*loveReply.length)]}`
-      }
-    }
+   
 
     else if(positive.some(word => received_message.text.toLowerCase().includes(word))){
         // Create the payload for a basic text message
@@ -123,9 +124,25 @@ function handleMessage(sender_psid, received_message) {
       }
     }
 
+    else if(negative.some(word => received_message.text.toLowerCase().includes(word))){
+        // Create the payload for a basic text message
+      response = {
+        "text": `${sadReply[Math.floor(Math.random()*sadReply.length)]}`
+      }
+    }
+
     else if(notes.some(word => received_message.text.toLowerCase().includes(word))){
         response = notesFlow;
     }
+
+     //emoji
+     else if(loveMoji.some(word => received_message.text.includes(word))){
+        // Create the payload for a basic text message
+      response = {
+        "text": `${loveReply[Math.floor(Math.random()*loveReply.length)]}`
+      }
+    }
+
 
     
     //default reply
