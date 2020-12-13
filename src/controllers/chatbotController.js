@@ -87,12 +87,22 @@ function handleMessage(sender_psid, received_message) {
     const greets = ["hello", "hi", "hey", "Hey", "Hi", "Whatsup", "Hello"];
     const notes = ["note", "notes", "Notes", "Note", "Chotha", "নোট ", "নোটস"];
     const greetReply = ["Hey!", "Hello", "Hello!", "Hi 😊", "Wassup 😀", "Hello 😀"];
+    const loveMoji = ["🖤", "❤", "💜", "💚", "🧡","🤎", "🤍", "❣", "💕", "💗", "💖", "💝", "💘", "💟", "😍"];
+
+    const loveReply = ["🖤", "❤", "💜", "💚", "🧡","Thanks 😀", "🤍", "Thank you !", "Thanks 😍", "❤❤❤", "😊"];
   
-    // Check if the message contains text
+    // Check if the message
     if(greets.some(word => received_message.text.includes(word))){
         // Create the payload for a basic text message
       response = {
         "text": `${greetReply[Math.floor(Math.random()*greetReply.length)]}`
+      }
+    }
+
+    else if(loveMoji.some(word => received_message.text.includes(word))){
+        // Create the payload for a basic text message
+      response = {
+        "text": `${loveReply[Math.floor(Math.random()*loveReply.length)]}`
       }
     }
 
