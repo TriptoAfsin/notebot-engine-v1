@@ -118,7 +118,7 @@ function handleMessage(sender_psid, received_message) {
 
     
     //default reply
-    if (received_message.text) {    
+    else if (received_message.text) {    
       // Create the payload for a basic text message
       response = {
         "text": `Sorry I didn't get what you meant by - "${received_message.text}"😥`
