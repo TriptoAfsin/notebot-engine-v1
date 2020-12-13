@@ -97,7 +97,7 @@ function handleMessage(sender_psid, received_message) {
     const loveMoji = ["🖤", "❤", "💜", "💚", "🧡","🤎", "🤍", "❣", "💕", "💗", "💖", "💝", "💘", "💟", "😍"];
     const loveReply = ["🖤", "❤", "💜", "💚", "🧡","Thanks 😀", "🤍", "Thank you !", "Thanks 😍", "❤❤❤", "😊"];
   
-    /*
+    
     // Check if the message
     if(greets.some(word => received_message.text.includes(word))){
         // Create the payload for a basic text message
@@ -117,9 +117,9 @@ function handleMessage(sender_psid, received_message) {
         response = notesFlow;
     }
 
-    */
+    
     //default reply
-    if (received_message.text) {    
+    else if (received_message.text) {    
       // Create the payload for a basic text message
       response = {
         "text": `Sorry I didn't get what you meant by - "${received_message.text}"😥`
