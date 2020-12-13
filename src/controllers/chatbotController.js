@@ -103,7 +103,7 @@ function handleMessage(sender_psid, received_message) {
                {
                 "content_type": "text",
                 "title":"Tap me",
-                "image_url":"http://example.com/img/red.png",
+                "image_url":"✔",
                 "payload":"level_1"
                }
            
