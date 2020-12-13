@@ -90,6 +90,7 @@ function handleMessage(sender_psid, received_message) {
     let response;
 
     
+    /*
     //keywords
     const greets = ["hello", "hi", "hey", "Hey", "Hi", "Whatsup", "Hello"];
     const notes = ["note", "notes", "Notes", "Note", "Chotha", "নোট ", "নোটস"];
@@ -117,9 +118,9 @@ function handleMessage(sender_psid, received_message) {
         response = notesFlow;
     }
 
-    
+    */
     //default reply
-    else if (received_message.text) {    
+    if (received_message.text) {    
       // Create the payload for a basic text message
       response = {
         "text": `Sorry I didn't get what you meant by - "${received_message.text}"😥`
