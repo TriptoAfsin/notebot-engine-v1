@@ -3,9 +3,11 @@ let notes =
     "attachment": {
         "type": "template",
         "payload": {
-            "template_type": "button",
-            "text": "Choose - ",
-            "buttons": [
+            "template_type": "generic",
+            "elements": [
+                {
+                    "title": "Choose",
+                     "buttons": [
                 {
                     "type": "postback",
                     "title": "Level 1",
@@ -22,6 +24,10 @@ let notes =
                     "payload": "level_3"
                 }
             ],
+                }
+                
+            ]
+           
         },
     },
 
