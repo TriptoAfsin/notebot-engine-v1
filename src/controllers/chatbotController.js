@@ -98,7 +98,6 @@ function handleMessage(sender_psid, received_message) {
 
     else if(notes.includes(received_message.text)){
         response = {
-            "text":"Choose-",
             /*
            "quick_replies": [
                {
@@ -108,13 +107,17 @@ function handleMessage(sender_psid, received_message) {
                }
            ]
            */
-          "buttons": [
-              {
-                "type": "web_url",
-                "url": "https://developers.facebook.com/docs/messenger-platform/reference/buttons/quick-replies/",
-                "title": "Tap me",
-              }
-          ]
+          "payload": {
+            "template_type":"button",
+            "text":"Choose - ",
+            "buttons":[
+                {
+                    "type": "web_url",
+                    "url": "https://developers.facebook.com/docs/messenger-platform/reference/buttons/quick-replies/",
+                    "title": "Tap me",
+                }
+            ]
+          }
           }
     }
 
