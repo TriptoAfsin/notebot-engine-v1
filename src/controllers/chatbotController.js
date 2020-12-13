@@ -107,16 +107,19 @@ function handleMessage(sender_psid, received_message) {
                }
            ]
            */
-          "payload": {
-            "template_type":"button",
-            "text":"Choose - ",
-            "buttons":[
-                {
-                    "type": "web_url",
-                    "url": "https://developers.facebook.com/docs/messenger-platform/reference/buttons/quick-replies/",
-                    "title": "Tap me",
+          "attachment":{
+                "type":"template",
+                "payload": {
+                    "template_type": "button",
+                    "text": "Choose - ",
+                    "buttons": [
+                        {
+                            "type": "web_url",
+                            "url": "https://developers.facebook.com/docs/messenger-platform/reference/buttons/quick-replies/",
+                            "title": "Tap me",
+                        }
+                    ]
                 }
-            ]
           }
           }
     }
@@ -144,7 +147,10 @@ function handlePostback(sender_psid, received_postback) {
     let payload = received_postback.payload;
 
     // Set the response based on the postback payload
-    if (payload === 'level_1') {
+    if (payload === 'get_started') {
+        response = { "text": `Welcome to ____` }
+    } 
+    else if (payload === 'level_1') {
         response = { "text": "Notes for level 1" }
     } 
     else if (payload === 'level_2') {
