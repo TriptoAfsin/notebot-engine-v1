@@ -21,10 +21,7 @@ let notes = {
                     "payload": "level_3"
                 }
             ]
-        }
-    },
-    "attachment": {
-        "type": "template",
+        },
         "payload": {
             "template_type": "button",
             "text": "Choose - ",
@@ -36,9 +33,7 @@ let notes = {
                 },
             ]
         }
-    },
-
-
+    }
 }
 
 
