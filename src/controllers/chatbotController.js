@@ -102,8 +102,7 @@ function handleMessage(sender_psid, received_message) {
            "quick_replies": [
                {
                 "content_type": "text",
-                "title":"Tap me",
-                "image_url":"✔",
+                "title":"Tap me✔",
                 "payload":"level_1"
                }
            
