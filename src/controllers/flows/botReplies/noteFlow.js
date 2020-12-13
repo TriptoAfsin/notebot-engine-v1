@@ -1,8 +1,8 @@
-let notes = {
-    "attachment": {
-        "type": "template",
-        "payload": [
-            {
+let notes = [
+    {
+        "attachment": {
+            "type": "template",
+            "payload": {
                 "template_type": "button",
                 "text": "Choose - ",
                 "buttons": [
@@ -23,7 +23,12 @@ let notes = {
                     }
                 ],
             },
-            {
+        }
+    },
+    {
+        "attachment": {
+            "type": "template",
+            "payload": {
                 "template_type": "button",
                 "text": "Choose - ",
                 "buttons": [
@@ -32,11 +37,12 @@ let notes = {
                         "title": "Level 4",
                         "payload": "level_4"
                     },
-                ]
-            }
-        ],
+                ],
+            },
+        }
     }
-}
+    
+]
 
 
 module.exports = notes;
