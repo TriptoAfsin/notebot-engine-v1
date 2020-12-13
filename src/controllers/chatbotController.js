@@ -95,12 +95,14 @@ function handleMessage(sender_psid, received_message) {
     const greets = ["hello", "hi", "hey", "Hey", "Hi", "Whatsup", "Hello"];
     const notes = ["note", "notes", "Notes", "Note", "Chotha", "নোট ", "নোটস"];
     const greetReply = ["Hey!", "Hello", "Hello!", "Hi 😊", "Wassup 😀", "Hello 😀"];
-    const loveMoji = ["🖤", "❤", "💜", "💚", "🧡","🤎", "🤍", "❣", "💕", "💗", "💖", "💝", "💘", "💟", "😍"];
-    const loveReply = ["🖤", "❤", "💜", "💚", "🧡","Thanks 😀", "🤍", "Thank you !", "Thanks 😍", "❤❤❤", "😊"];
+    const loveMoji = ["🖤", "❤", "💜", "💚", "🧡","🤎", "🤍", "❣", "💕", "💗", "💖", "💝", "💘", "💟", "😍", "❤️"];
+    const loveReply = ["🖤", "❤", "💜", "💚", "🧡","Thanks 😀", "🤍", "Thank you !", "Thanks 😍", "❤❤❤", "😊", "😃"];
+    const positive = ["good", "great", "awesome", "superb"];
+
   
     
     // Check if the message
-    if(greets.some(word => received_message.text.includes(word))){
+    if(greets.some(word => received_message.text.toLowerCase().includes(word))){
         // Create the payload for a basic text message
       response = {
         "text": `${greetReply[Math.floor(Math.random()*greetReply.length)]}`
@@ -114,7 +116,14 @@ function handleMessage(sender_psid, received_message) {
       }
     }
 
-    else if(notes.some(word => received_message.text.includes(word))){
+    else if(positive.some(word => received_message.text.toLowerCase().includes(word))){
+        // Create the payload for a basic text message
+      response = {
+        "text": `${loveReply[Math.floor(Math.random()*loveReply.length)]}`
+      }
+    }
+
+    else if(notes.some(word => received_message.text.toLowerCase().includes(word))){
         response = notesFlow;
     }
 
