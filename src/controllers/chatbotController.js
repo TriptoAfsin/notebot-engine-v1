@@ -2,6 +2,11 @@ require("dotenv").config();
 
 
 const request = require('request');
+
+
+//keyword flows
+const notes = require('./flows/botReplies/noteFlow');
+
 const MY_VERIFY_TOKEN = process.env.MY_VERIFY_TOKEN;
 
 let testMsg = (req, res) => {
@@ -88,7 +93,7 @@ function handleMessage(sender_psid, received_message) {
     const greets = ["hello", "hi", "hey", "Hey", "Hi", "Whatsup", "Hello"];
     const notes = ["note", "notes", "Notes", "Note", "Chotha", "নোট ", "নোটস"];
     const greetReply = ["Hey!", "Hello", "Hello!", "Hi 😊", "Wassup 😀", "Hello 😀"];
-    const loveMoji = ["🖤", "❤", "💜", "💚", "🧡","🤎", "🤍", "❣", "💕", "💗", "💖", "💝", "💘", "💟", "😍"];
+    const loveMoji = ["🖤", "❤", "💜", "💚", "🧡","🤎", "🤍", "❣", "💕", "💗", "💖", "💝", "💘", "💟", "😍", "♥️"];
     const loveReply = ["🖤", "❤", "💜", "💚", "🧡","Thanks 😀", "🤍", "Thank you !", "Thanks 😍", "❤❤❤", "😊"];
   
     // Check if the message
@@ -107,48 +112,7 @@ function handleMessage(sender_psid, received_message) {
     }
 
     else if(notes.some(word => received_message.text.includes(word))){
-        response = {
-            /*
-           "quick_replies": [
-               {
-                "content_type": "text",
-                "title":"Tap me✔",
-                "payload":"level_1"
-               }
-           ]
-           */
-          "attachment":{
-                "type":"template",
-                "payload": {
-                    "template_type": "button",
-                    "text": "Choose - ",
-                    "buttons": [
-                        /*
-                        {
-                            "type": "web_url",
-                            "url": "https://developers.facebook.com/docs/messenger-platform/reference/buttons/quick-replies/",
-                            "title": "Tap me",
-                        }
-                        */
-                       {
-                        "type": "postback",
-                        "title": "Level 1",
-                        "payload": "level_1"
-                        },
-                        {
-                            "type": "postback",
-                            "title": "Level 2",
-                            "payload": "level_2"
-                        },
-                        {
-                            "type": "postback",
-                            "title": "Level 3",
-                            "payload": "level_3"
-                        }
-                    ]
-                }
-          }
-          }
+        response = notes;
     }
 
     //default reply
