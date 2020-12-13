@@ -5,7 +5,7 @@ const request = require('request');
 
 
 //keyword flows
-const notes = require('./flows/botReplies/noteFlow');
+const notesFlow = require('./flows/botReplies/noteFlow');
 
 const MY_VERIFY_TOKEN = process.env.MY_VERIFY_TOKEN;
 
@@ -112,7 +112,7 @@ function handleMessage(sender_psid, received_message) {
     }
 
     else if(notes.some(word => received_message.text.includes(word))){
-        response = notes;
+        response = notesFlow;
     }
 
     //default reply
