@@ -93,7 +93,7 @@ function handleMessage(sender_psid, received_message) {
     const greets = ["hello", "hi", "hey", "Hey", "Hi", "Whatsup", "Hello"];
     const notes = ["note", "notes", "Notes", "Note", "Chotha", "নোট ", "নোটস"];
     const greetReply = ["Hey!", "Hello", "Hello!", "Hi 😊", "Wassup 😀", "Hello 😀"];
-    const loveMoji = ["🖤", "❤", "💜", "💚", "🧡","🤎", "🤍", "❣", "💕", "💗", "💖", "💝", "💘", "💟", "😍", "♥️"];
+    const loveMoji = ["🖤", "❤", "💜", "💚", "🧡","🤎", "🤍", "❣", "💕", "💗", "💖", "💝", "💘", "💟", "😍"];
     const loveReply = ["🖤", "❤", "💜", "💚", "🧡","Thanks 😀", "🤍", "Thank you !", "Thanks 😍", "❤❤❤", "😊"];
   
     // Check if the message
