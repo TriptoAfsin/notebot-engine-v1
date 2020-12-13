@@ -96,7 +96,7 @@ function handleMessage(sender_psid, received_message) {
       }
     }
 
-    else if(notes.includes(received_message.text)){
+    else if(notes.some(word => received_message.text.includes(word))){
         response = {
             /*
            "quick_replies": [
