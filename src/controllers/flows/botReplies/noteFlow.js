@@ -1,6 +1,6 @@
 let notes =
 {
-    "part1":{
+    "part1": {
         "attachment": {
             "type": "template",
             "payload": {
@@ -25,8 +25,24 @@ let notes =
                 ],
             },
         },
+    },
+    "part2": {
+        "attachment": {
+            "type": "template",
+            "payload": {
+                "template_type": "button",
+                "text": "Choose - ",
+                "buttons": [
+                    {
+                        "type": "postback",
+                        "title": "Level 4",
+                        "payload": "level_4"
+                    },
+                ],
+            },
+        },
     }
-   
+
 }
 
 
@@ -34,5 +50,6 @@ let notes =
 
 
 module.exports = {
-    notes_part1: notes.part1
+    notes_part1: notes.part1,
+    notes_part2: notes.part2
 };
