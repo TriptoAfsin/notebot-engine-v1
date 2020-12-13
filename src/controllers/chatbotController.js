@@ -85,6 +85,7 @@ function handleMessage(sender_psid, received_message) {
     let response;
 
     const greets = ["hello", "hi", "hey", "Hey", "Hi", "Whatsup", "Hello"];
+    const notes = ["note", "notes", "Notes", "Note", "Chotha", "নোট ", "নোটস"];
     const greetReply = ["Hey!", "Hello", "Hello!", "Hi 😊", "Wassup 😀", "Hello 😀"];
   
     // Check if the message contains text
@@ -93,6 +94,34 @@ function handleMessage(sender_psid, received_message) {
       response = {
         "text": `${greetReply[Math.floor(Math.random()*greetReply.length)]}`
       }
+    }
+
+    else if(notes.includes(received_message.text)){
+        response = {
+            "text": `Choose -`,
+            "buttons": [
+                {
+                  "type": "postback",
+                  "title": "Level 1",
+                  "payload": "level_1",
+                },
+                {
+                  "type": "postback",
+                  "title": "Level 2",
+                  "payload": "level_2",
+                },
+                {
+                    "type": "postback",
+                    "title": "Level 3",
+                    "payload": "level_3",
+                },
+                {
+                    "type": "postback",
+                    "title": "Level 4",
+                    "payload": "level_4",
+                  }
+              ],
+          }
     }
 
     //default reply
@@ -109,8 +138,30 @@ function handleMessage(sender_psid, received_message) {
 
 
 
-// Handles messaging_postbacks events
+// Handles messaging_postbacks events(button response)
 function handlePostback(sender_psid, received_postback) {
+
+    let response;
+
+    // Get the payload for the postback
+    let payload = received_postback.payload;
+
+    // Set the response based on the postback payload
+    if (payload === 'level_1') {
+        response = { "text": "Notes for level 1" }
+    } 
+    else if (payload === 'level_2') {
+        response = { "text": "Notes for level 2" }
+    }
+    else if (payload === 'level_3') {
+        response = { "text": "Notes for level 3" }
+    }
+    else if (payload === 'level_4') {
+        response = { "text": "Notes for level 4" }
+    }
+    // Send the message to acknowledge the postback
+    callSendAPI(sender_psid, response);
+
 
 }
 
