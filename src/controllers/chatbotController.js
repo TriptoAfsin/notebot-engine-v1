@@ -6,6 +6,7 @@ const request = require('request');
 //keywords
 const positiveKeywords = require('./keywords/positiveKeywords');
 const negativeKeywords = require('./keywords/negativeKeywords');
+const loveMoji = require('./keywords/loveMoji.js');
 
 
 //keyword flows
@@ -99,7 +100,7 @@ function handleMessage(sender_psid, received_message) {
     const greets = ["hello", "hi", "hey", "Hey", "Hi", "Whatsup", "Hello"];
     const notes = ["note", "notes", "Notes", "Note", "Chotha", "নোট ", "নোটস"];
     const greetReply = ["Hey!", "Hello", "Hello!", "Hi 😊", "Wassup 😀", "Hello 😀"];
-    const loveMoji = ["🖤", "❤", "💜", "💚", "🧡","🤎", "🤍", "❣", "💕", "💗", "💖", "💝", "💘", "💟", "😍", "❤️"];
+    const loveMoji = loveMoji;
     const loveReply = ["🖤", "❤", "💜", "💚", "🧡","Thanks 😀", "🤍", "Thank you !", "Thanks 😍", "❤❤❤", "😊", "😃"];
     const sadReply = ["sorry", "my bad 😥", "😓😓😓", "😓", "Please pardon my mistakes 😥", "মাফ করবেন", "দু:খিত"];
     const positive = positiveKeywords;
