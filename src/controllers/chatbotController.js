@@ -134,11 +134,6 @@ function handleMessage(sender_psid, received_message) {
                             "type": "postback",
                             "title": "Level 3",
                             "payload": "level_3"
-                        },
-                        {
-                            "type": "postback",
-                            "title": "Level 4",
-                            "payload": "level_4"
                         }
                     ]
                 }
