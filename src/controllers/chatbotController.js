@@ -101,7 +101,8 @@ let postWebhook = (req, res) => {
 function handleMessage(sender_psid, received_message) {
 
     let response;
-
+    let response2;
+    let response3;
     
     
     //keywords
@@ -142,6 +143,7 @@ function handleMessage(sender_psid, received_message) {
 
     else if(notes.some(word => received_message.text.toLowerCase().includes(word))){
         response = notesFlow;
+        response2 = notesFlow;
     }
 
      //emoji
