@@ -89,7 +89,7 @@ function handleMessage(sender_psid, received_message) {
     const greetReply = ["Hey!", "Hello", "Hello!", "Hi 😊", "Wassup 😀", "Hello 😀"];
   
     // Check if the message contains text
-    if(greets.includes(received_message.text)){
+    if(greets.some(word => received_message.text.includes(word))){
         // Create the payload for a basic text message
       response = {
         "text": `${greetReply[Math.floor(Math.random()*greetReply.length)]}`
