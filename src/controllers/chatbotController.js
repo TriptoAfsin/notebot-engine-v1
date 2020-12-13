@@ -114,8 +114,7 @@ function handleMessage(sender_psid, received_message) {
     }
 
     else if(notes.some(word => received_message.text.includes(word))){
-        response = notesFlow.notes_part1;
-        response = notesFlow.notes_part2;
+        response = notesFlow;
     }
 
     

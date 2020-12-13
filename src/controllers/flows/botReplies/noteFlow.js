@@ -1,5 +1,6 @@
 let notes =
 {
+    /*
     "part1": {
         "attachment": {
             "type": "template",
@@ -26,30 +27,64 @@ let notes =
             },
         },
     },
-    "part2": {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "Choose - ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "Level 4",
-                        "payload": "level_4"
-                    },
-                ],
-            },
-        },
+    */
+   "recipient": {
+    "id": "RECIPIENT_ID"
+  },
+  "message": {
+    "attachment": {
+      "type": "template",
+      "payload": {
+        "template_type": "generic",
+        "elements": [
+          {
+            "title": "Swipe left/right for more options.",
+            "buttons": [
+              {
+                "type": "postback",
+                "title": "Button 1",
+                "payload": "button1"
+              },
+              {
+                "type": "postback",
+                "title": "Button 2",
+                "payload": "button2"
+              },
+              {
+                "type": "postback",
+                "title": "Button 3",
+                "payload": "button3"
+              }
+            ]
+          },
+          {
+            "title": "Swipe left/right for more options.",
+            "buttons": [
+              {
+                "type": "postback",
+                "title": "Button 4",
+                "payload": "button4"
+              },
+              {
+                "type": "postback",
+                "title": "Button 5",
+                "payload": "button5"
+              },
+              {
+                "type": "postback",
+                "title": "Button 6",
+                "payload": "button6"
+              }
+            ]
+          }
+        ]
+      }
     }
-
+  }
 }
 
 
 
 
 
-module.exports = {
-    notes_part1: notes.part1,
-    notes_part2: notes.part2
-};
+module.exports = notes;
