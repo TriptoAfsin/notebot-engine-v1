@@ -98,17 +98,10 @@ function handleMessage(sender_psid, received_message) {
 
     else if(notes.includes(received_message.text)){
         response = {
-            "payload": {
-                "template_type":"button",
-                "text":"Choose - ",
-                "buttons":[
-                    {
-                        "type": "web_url",
-                        "url": "https://www.youtube.com/",
-                        "title": "Click me",
-                      }
-                ]
-              }
+            "content_type":"text",
+            "title":"tap me",
+            "image_url":"http://example.com/img/red.png",
+            "payload":"level_1"
           }
     }
 
