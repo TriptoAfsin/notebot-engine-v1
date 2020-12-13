@@ -99,14 +99,22 @@ function handleMessage(sender_psid, received_message) {
     else if(notes.includes(received_message.text)){
         response = {
             "text":"Choose-",
+            /*
            "quick_replies": [
                {
                 "content_type": "text",
                 "title":"Tap me✔",
                 "payload":"level_1"
                }
-           
            ]
+           */
+          "buttons": [
+              {
+                "type": "web_url",
+                "url": "https://developers.facebook.com/docs/messenger-platform/reference/buttons/quick-replies/",
+                "title": "Tap me",
+              }
+          ]
           }
     }
 
