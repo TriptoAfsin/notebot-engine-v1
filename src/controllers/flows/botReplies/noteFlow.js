@@ -20,11 +20,7 @@ let notes = {
                     "title": "Level 3",
                     "payload": "level_3"
                 }
-            ]
-        },
-        "payload": {
-            "template_type": "button",
-            "text": "Choose - ",
+            ],
             "buttons": [
                 {
                     "type": "postback",
@@ -32,7 +28,8 @@ let notes = {
                     "payload": "level_4"
                 },
             ]
-        }
+
+        },
     }
 }
 
