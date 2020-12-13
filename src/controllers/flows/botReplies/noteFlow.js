@@ -28,10 +28,6 @@ let notes =
         },
     },
     */
-   "recipient": {
-    "id": "RECIPIENT_ID"
-  },
-  "message": {
     "attachment": {
       "type": "template",
       "payload": {
@@ -80,7 +76,6 @@ let notes =
         ]
       }
     }
-  }
 }
 
 
