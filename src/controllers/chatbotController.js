@@ -3,7 +3,7 @@ require("dotenv").config();
 const MY_VERIFY_TOKEN = process.env.MY_VERIFY_TOKEN;
 
 let testMsg = (req, res) => {
-    return res.status(200).send("Hello from notebot engine v1")
+    return res.status(200).send("Hello from notebot engine v1 ✔✔")
 }
 
 //get webhook

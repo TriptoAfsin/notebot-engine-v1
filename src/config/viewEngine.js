@@ -1,4 +1,6 @@
-import express from "express";
+const express = require('express');
+
+const app = express();
 
 let configViewEngine = (app) => {
     app.use(express.static("./src/public")); //static folder
