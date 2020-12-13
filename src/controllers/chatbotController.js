@@ -113,10 +113,32 @@ function handleMessage(sender_psid, received_message) {
                     "template_type": "button",
                     "text": "Choose - ",
                     "buttons": [
+                        /*
                         {
                             "type": "web_url",
                             "url": "https://developers.facebook.com/docs/messenger-platform/reference/buttons/quick-replies/",
                             "title": "Tap me",
+                        }
+                        */
+                       {
+                        "type": "postback",
+                        "title": "Level 1",
+                        "payload": "level_1"
+                        },
+                        {
+                            "type": "postback",
+                            "title": "Level 2",
+                            "payload": "level_2"
+                        },
+                        {
+                            "type": "postback",
+                            "title": "Level 3",
+                            "payload": "level_3"
+                        },
+                        {
+                            "type": "postback",
+                            "title": "Level 4",
+                            "payload": "level_4"
                         }
                     ]
                 }
