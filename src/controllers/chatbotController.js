@@ -83,9 +83,19 @@ let postWebhook = (req, res) => {
 function handleMessage(sender_psid, received_message) {
 
     let response;
+
+    const greets = ["hello", "hi", "hey", "Hey", "Hi", "Whatsup", "Hello"];
+    const greetReply = ["Hey!", "Hello", "Hello!", "Hi 😊", "Wassup 😀", "Hello 😀"];
   
     // Check if the message contains text
-    if (received_message.text) {    
+    if(greets.includes(received_message.text)){
+        // Create the payload for a basic text message
+      response = {
+        "text": `${greetReply[Math.floor(Math.random())*greetReply.length]}`
+      }
+    }
+
+    else if (received_message.text) {    
   
       // Create the payload for a basic text message
       response = {
