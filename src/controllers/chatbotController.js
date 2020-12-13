@@ -91,7 +91,7 @@ function handleMessage(sender_psid, received_message) {
     if(greets.includes(received_message.text)){
         // Create the payload for a basic text message
       response = {
-        "text": `${greetReply[Math.floor(Math.random())*greetReply.length]}`
+        "text": `${greetReply[Math.floor(Math.random()*greetReply.length)]}`
       }
     }
 
