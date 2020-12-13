@@ -98,7 +98,15 @@ function handleMessage(sender_psid, received_message) {
 
     else if(notes.includes(received_message.text)){
         response = {
-            "text": `${greetReply[Math.floor(Math.random()*greetReply.length)]}`
+           "quick_replies": [
+               {
+                "content_type": "text",
+                "title":"Tap me",
+                "image_url":"http://example.com/img/red.png",
+                "payload":"level_1"
+               }
+           
+           ]
           }
     }
 
