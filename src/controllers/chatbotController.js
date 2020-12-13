@@ -101,10 +101,8 @@ function handleMessage(sender_psid, received_message) {
             "attachment": {
                 "type": "template",
                 "payload": {
-                  "template_type": "generic",
-                  "elements": [{
-                    "title": "Choose",
-                    "subtitle": "",
+                  "template_type": "button",
+                  "text":"Choose - ",
                     "buttons": [
                       {
                         "type": "postback",
@@ -127,7 +125,7 @@ function handleMessage(sender_psid, received_message) {
                         "payload": "level_4",
                       }
                     ],
-                  }]
+                  
                 }
             }
           }
