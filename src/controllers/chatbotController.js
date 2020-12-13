@@ -202,13 +202,13 @@ function handlePostback(sender_psid, received_postback) {
 }
 
 // Sends response messages via the Send API
-function callSendAPI(sender_psid, response, response2) {
+function callSendAPI(sender_psid, response) {
     // Construct the message body
     let request_body = {
       "recipient": {
         "id": sender_psid
       },
-      "message": [response, response2]
+      "message": response
     }
   
     // Send the HTTP request to the Messenger Platform
