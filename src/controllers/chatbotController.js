@@ -143,15 +143,8 @@ function handleMessage(sender_psid, received_message) {
 
     else if(notes.some(word => received_message.text.toLowerCase().includes(word))){
 
-      messages: [{
-        notesFlow
-      },
-      {
-        notesFlow
-      }]
-
-        //response = notesFlow;
-        //response2 = notesFlow;
+        response = notesFlow;
+        response2 = notesFlow;
     }
 
      //emoji
@@ -209,13 +202,13 @@ function handlePostback(sender_psid, received_postback) {
 }
 
 // Sends response messages via the Send API
-function callSendAPI(sender_psid, response) {
+function callSendAPI(sender_psid, response, response2) {
     // Construct the message body
     let request_body = {
       "recipient": {
         "id": sender_psid
       },
-      "message": response
+      "message": [response, response2]
     }
   
     // Send the HTTP request to the Messenger Platform
