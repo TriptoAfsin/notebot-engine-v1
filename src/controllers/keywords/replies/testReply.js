@@ -1,8 +1,4 @@
 const testReply = {
-    "recipient": {
-        "id": "<PSID>"
-    },
-    "message": {
         "attachment": {
             "type": "template",
             "payload": {
@@ -32,7 +28,6 @@ const testReply = {
                 ]
             }
         }
-    }
 }
 
 
