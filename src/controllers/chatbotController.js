@@ -12,7 +12,10 @@ const noteWords = require('./keywords/academic_words/noteWords');
 
 //default reply
 const defaultReply = require('./keywords/replies/defaultReply');
+const getStartedMsg = require('./flows/botReplies/welcome/getStarted');
+
 const testReply = require('./keywords/replies/testReply');
+
 
 //reply words
 const loveMojiReplies = require('./keywords/replies/lovemojiReply');
@@ -191,8 +194,8 @@ function handlePostback(sender_psid, received_postback) {
     let payload = received_postback.payload;
 
     // Set the response based on the postback payload
-    if (payload === 'get_started') {
-        response = { "text": `Welcome to ____` }
+    if (payload === 'GET_STARTED') {
+        response = getStartedMsg;
     } 
     else if (payload === 'level_1') {
         response = { "text": "Notes for level 1" }
