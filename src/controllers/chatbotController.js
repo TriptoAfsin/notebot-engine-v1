@@ -166,6 +166,8 @@ function handleMessage(sender_psid, received_message) {
     else if (notes.some(word => received_message.text.toLowerCase().includes(word))) {
 
       response = notesFlow;
+      response2 = notesFlow;
+      callSendAPI2(sender_psid, response2)
       //response2 = notesFlow;
     }
 
@@ -254,6 +256,30 @@ function callSendAPI(sender_psid, response) {
     }); 
 }
 
+// Sends response messages via the Send API2
+function callSendAPI2(sender_psid, response2) {
+  // Construct the message body
+  let request_body = {
+    "recipient": {
+      "id": sender_psid
+    },
+    "message": response2
+  }
+
+  // Send the HTTP request to the Messenger Platform
+  request({
+    "uri": "https://graph.facebook.com/v7.0/me/messages",
+    "qs": { "access_token": process.env.PAGE_ACCESS_TOKEN },
+    "method": "POST",
+    "json": request_body
+  }, (err, res, body) => {
+    if (!err) {
+      console.log('message sent!')
+    } else {
+      console.error("Unable to send message:" + err);
+    }
+  }); 
+}
 
 
 module.exports = {
