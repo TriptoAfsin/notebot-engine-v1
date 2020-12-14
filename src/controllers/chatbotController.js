@@ -202,7 +202,7 @@ function handlePostback(sender_psid, received_postback) {
 
     // Set the response based on the postback payload
     if (payload === 'GET_STARTED') {
-        response = getStartedMsg;
+      response = { "text": "Hi There 😄" }
     } 
     else if (payload === 'level_1') {
         response = { "text": "Notes for level 1" }
