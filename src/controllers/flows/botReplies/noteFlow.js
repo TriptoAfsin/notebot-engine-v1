@@ -1,5 +1,5 @@
-let notes =
-{
+let notes = [
+    {
         "attachment": {
             "type": "template",
             "payload": {
@@ -24,7 +24,25 @@ let notes =
                 ],
             },
         },
-}
+    },
+    {
+        "attachment": {
+            "type": "template",
+            "payload": {
+                "template_type": "button",
+                "text": "Choose - ",
+                "buttons": [
+                    {
+                        "type": "postback",
+                        "title": "Level 4",
+                        "payload": "level_4"
+                    },
+                ],
+            },
+        },
+    }
+
+]
 
 
 
