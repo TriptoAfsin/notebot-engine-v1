@@ -1,8 +1,5 @@
-const testReply = {
-    "recipient": {
-      "id": "RECIPIENT_ID"
-    },
-    "message": {
+const testReply = [
+   {
       "attachment": {
         "type": "template",
         "payload": {
@@ -52,7 +49,7 @@ const testReply = {
         }
       }
     }
-  }
+]
 
 
 
