@@ -1,7 +1,7 @@
 //services
 const chatBotService = require('../../../../services/chatBotService');
 
-let username = await chatBotService.getFacebookUserInfo(sender_psid);
+let username = chatBotService.getFacebookUserInfo(sender_psid);
 
 const getStarted = [
     {
