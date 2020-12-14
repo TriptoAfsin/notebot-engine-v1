@@ -1,37 +1,40 @@
 const testReply = {
-    "attachment": {
-        "type": "template",
-        "payload": {
-            "template_type": "generic",
-            "elements": [{
-                "title": "group of options part 1",
-                "buttons": [{
-                    "type": "postback",
-                    "title": "option 1",
-                    "payload": "option 1",
-                },
-                {
-                    "type": "postback",
-                    "title": "option 3",
-                    "payload": "option 3",
-                }],
-            },
-            {
-                "title": "group of options 10",
-                "buttons": [{
-                    "type": "postback",
-                    "title": "option 28",
-                    "payload": "option 28",
-                },
-                {
-                    "type": "postback",
-                    "title": "option 30",
-                    "payload": "option 30",
-                }],
-            }]
+    "recipient": {
+        "id": "<PSID>"
+    },
+    "message": {
+        "attachment": {
+            "type": "template",
+            "payload": {
+                "template_type": "generic",
+                "elements": [
+                    {
+                        "title": "Welcome!",
+                        "image_url": "https://petersfancybrownhats.com/company_image.png",
+                        "subtitle": "We have the right hat for everyone.",
+                        "default_action": {
+                            "type": "web_url",
+                            "url": "https://petersfancybrownhats.com/view?item=103",
+                            "webview_height_ratio": "tall",
+                        },
+                        "buttons": [
+                            {
+                                "type": "web_url",
+                                "url": "https://petersfancybrownhats.com",
+                                "title": "View Website"
+                            }, {
+                                "type": "postback",
+                                "title": "Start Chatting",
+                                "payload": "DEVELOPER_DEFINED_PAYLOAD"
+                            }
+                        ]
+                    }
+                ]
+            }
         }
     }
 }
+
 
 
 module.exports = testReply;
