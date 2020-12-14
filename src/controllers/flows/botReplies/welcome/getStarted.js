@@ -4,7 +4,6 @@ require("dotenv").config();
 
 const request = require('request');
 
-let userName = '';
 
 let getFacebookUserInfo = (sender_psid) => {
 
@@ -30,7 +29,7 @@ let getFacebookUserInfo = (sender_psid) => {
 
 const getStarted = [
     {
-        "text": `Hello ${getFacebookUserInfo}, Welcome to the new BUTEX NoteBOT`,
+        "text": `Hello ${userName}, Welcome to the new BUTEX NoteBOT`,
         "quick_replies": [{
                 "content_type": "text",
                 "title": "Help😥",
