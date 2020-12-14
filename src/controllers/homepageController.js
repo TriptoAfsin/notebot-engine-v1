@@ -19,6 +19,15 @@ let setUpUserFacebookProfile = (req, res) => {
         "get_started": {
             "payload": "GET_STARTED"
         },
+        "greeting":[
+            {
+              "locale":"default",
+              "text":"This BOT Provides Study Materials for BUTEX(Bangladesh University of Textiles)😀Moreover It Has Casual Talking Abilities(Bangla & English)☺"
+            }, {
+              "locale":"en_US",
+              "text":"This BOT Provides Study Materials for BUTEX(Bangladesh University of Textiles)😀Moreover It Has Casual Talking Abilities(Bangla & English)☺"
+            }
+        ],
         "persistent_menu": [
             {
                 "locale": "default",
@@ -26,19 +35,25 @@ let setUpUserFacebookProfile = (req, res) => {
                 "call_to_actions": [
                     {
                         "type": "postback",
-                        "title": "Talk to an agent",
-                        "payload": "CARE_HELP"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Outfit suggestions",
-                        "payload": "CURATION"
+                        "title": "Help 😥",
+                        "payload": "help_payload"
                     },
                     {
                         "type": "web_url",
-                        "title": "Shop now",
-                        "url": "https://www.originalcoastclothing.com/",
+                        "title": "Submit Notes📗",
+                        "url": "https://goo.gl/forms/akfj9X8vxuoj2xQg2",
                         "webview_height_ratio": "full"
+                    },
+                    {
+                        "type": "web_url",
+                        "title": "Visit Our Page 👍",
+                        "url": "https://www.facebook.com/butex.notebot2.0",
+                        "webview_height_ratio": "full"
+                    },
+                    {
+                        "type": "postback",
+                        "title": "Donate 💰",
+                        "payload": "donate_payload"
                     }
                 ]
             }
