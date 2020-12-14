@@ -3,6 +3,11 @@ const defaultReply = [
         "text": `Sorry I didn't get what you meant`,
         "quick_replies": [{
                 "content_type": "text",
+                "title": "Help😥",
+                "payload": "help_flow"
+            },
+            {
+                "content_type": "text",
                 "title": "Notes📗",
                 "payload": "notes_flow"
             },
