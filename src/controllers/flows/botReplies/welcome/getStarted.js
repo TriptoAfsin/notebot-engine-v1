@@ -1,3 +1,4 @@
+/*
 //services
 require("dotenv").config();
 
@@ -24,6 +25,7 @@ let getFacebookUserInfo = (sender_psid) => {
         });
     })
 }
+*/
 
 
 

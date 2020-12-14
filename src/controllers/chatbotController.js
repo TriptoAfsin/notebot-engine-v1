@@ -154,7 +154,7 @@ function handleMessage(sender_psid, received_message) {
 
     else if (test.includes(received_message.text)) {
       // Create the payload for a basic text message
-      return response = testReply[0];
+      response = testReply[0];
 
     }
 
@@ -207,7 +207,7 @@ let handlePostback = async (sender_psid, received_postback) => {
     if (payload === 'GET_STARTED') {
       //getting username
       let username = await chatBotService.getFacebookUserInfo(sender_psid);
-      
+
       console.log(username);
       response = getStartedMsg[0];
     } 
