@@ -145,6 +145,7 @@ function handleMessage(sender_psid, received_message) {
         default:
           response = testReply[0];
           console.log("Error");
+          break;
     }
     
     /*
