@@ -133,22 +133,9 @@ function handleMessage(sender_psid, received_message) {
     
   if (received_message.text !== undefined || received_message.text !== '') {
 
-    switch (received_message.text){
-        case (greets.some(word => received_message.text.toLowerCase().includes(word))):
-          response = greetReplies[0];
-          break;
-        case (positive.some(word => received_message.text.toLowerCase().includes(word))):
-          response = {
-            "text": `${loveReply[Math.floor(Math.random() * loveReply.length)]}`
-          };
-          break;
-        default:
-          response = testReply[0];
-          console.log("Error");
-          break;
-    }
+   
     
-    /*
+    
     // Check if the message
     if (greets.some(word => received_message.text.toLowerCase().includes(word))) {
       // Create the payload for a basic text message
@@ -204,7 +191,7 @@ function handleMessage(sender_psid, received_message) {
       // Create the payload for a basic text message
       response = defaultReply[0];
     }
-    */
+    
   }
   
     // Sends the response message
