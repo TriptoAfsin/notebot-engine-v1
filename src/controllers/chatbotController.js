@@ -132,7 +132,7 @@ function handleMessage(sender_psid, received_message) {
 
     
   if (received_message.text !== undefined || received_message.text !== '') {
-    /*
+    
     // Check if the message
     if (greets.some(word => received_message.text.toLowerCase().includes(word))) {
       // Create the payload for a basic text message
@@ -182,7 +182,7 @@ function handleMessage(sender_psid, received_message) {
     }
 
 
-    */
+    
     //default reply
     if (received_message.text) {
       // Create the payload for a basic text message
