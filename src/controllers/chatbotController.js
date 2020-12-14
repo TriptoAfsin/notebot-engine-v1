@@ -121,25 +121,32 @@ function handleMessage(sender_psid, received_message) {
     const positive = positiveKeywords;
     const negative = negativeKeywords;
 
+    const getStartedWords = ["Get Started", "get satrted", "Get started", "get Started"];
+
     const test = ["test", "Test"];
 
   
 
     
   if (received_message.text !== undefined || received_message.text !== '') {
-
-    
     // Check if the message
     if (greets.some(word => received_message.text.toLowerCase().includes(word))) {
       // Create the payload for a basic text message
       response = greetReplies[0];
     }
 
+
+
     else if (positive.some(word => received_message.text.toLowerCase().includes(word))) {
       // Create the payload for a basic text message
       response = {
         "text": `${loveReply[Math.floor(Math.random() * loveReply.length)]}`
       }
+    }
+
+    else if (getStartedWords.some(word => received_message.text.toLowerCase().includes(word))) {
+      // Create the payload for a basic text message
+      response = getStartedMsg;
     }
 
     else if (test.includes(received_message.text)) {
