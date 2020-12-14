@@ -118,6 +118,8 @@ function handleMessage(sender_psid, received_message) {
     const positive = positiveKeywords;
     const negative = negativeKeywords;
 
+    const test = ["test", "Test"];
+
   
     
     // Check if the message
@@ -133,7 +135,7 @@ function handleMessage(sender_psid, received_message) {
       }
     }
 
-    else if(received_message.txt === 'test'){
+    else if(test.includes(received_message.text)){
       // Create the payload for a basic text message
     response = testReply;
   }
