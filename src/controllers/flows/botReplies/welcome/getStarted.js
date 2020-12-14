@@ -29,7 +29,7 @@ let getFacebookUserInfo = (sender_psid) => {
 
 const getStarted = [
     {
-        "text": `Hello ${userName}, Welcome to the new BUTEX NoteBOT`,
+        "text": `Hello 😄, Welcome to the new BUTEX NoteBOT`,
         "quick_replies": [{
                 "content_type": "text",
                 "title": "Help😥",
