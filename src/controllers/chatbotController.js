@@ -10,6 +10,8 @@ const loveMojis = require('./keywords/loveMoji.js');
 const greetWords = require('./keywords/greetWords');
 const noteWords = require('./keywords/academic_words/noteWords');
 
+//default reply
+const defaultReply = require('./keywords/replies/defaultReply');
 
 //reply words
 const loveMojiReplies = require('./keywords/replies/lovemojiReply');
@@ -158,9 +160,7 @@ function handleMessage(sender_psid, received_message) {
     //default reply
     else if (received_message.text) {    
       // Create the payload for a basic text message
-      response = {
-        "text": `Sorry I didn't get what you meant by - "${received_message.text}"😥`
-      }
+      response = defaultReply[0];
     }  
     
     // Sends the response message
