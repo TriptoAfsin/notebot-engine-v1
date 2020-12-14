@@ -128,14 +128,8 @@ function handleMessage(sender_psid, received_message) {
 
     const test = ["test", "Test"];
 
-  
-
     
-  if (received_message.text !== undefined || received_message.text !== '') {
-
-   
-    
-    
+    /*
     // Check if the message
     if (greets.some(word => received_message.text.toLowerCase().includes(word))) {
       // Create the payload for a basic text message
@@ -158,11 +152,7 @@ function handleMessage(sender_psid, received_message) {
 
     else if (test.includes(received_message.text)) {
       // Create the payload for a basic text message
-      try {
-        response = testReply[0];
-      } catch (error) {
-        response = defaultReply[0];
-      } 
+      return response = testReply[0];
     }
 
 
@@ -187,16 +177,17 @@ function handleMessage(sender_psid, received_message) {
       }
     }
 
+    */
     
-    
+
     //default reply
-    else if (received_message.text) {
+    if (received_message.text) {
       // Create the payload for a basic text message
       // response = response = testReply[0];
       response = defaultReply[0];
     }
     
-  }
+  
   
     // Sends the response message
     callSendAPI(sender_psid, response);    
