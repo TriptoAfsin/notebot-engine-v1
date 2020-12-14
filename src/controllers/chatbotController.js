@@ -143,6 +143,9 @@ function handleMessage(sender_psid, received_message) {
           };
           break;
         default:
+          response = {
+            "text": `${loveReply[Math.floor(Math.random() * loveReply.length)]}`
+          };
           console.log("Error");
     }
     
