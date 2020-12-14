@@ -12,6 +12,7 @@ const noteWords = require('./keywords/academic_words/noteWords');
 
 //default reply
 const defaultReply = require('./keywords/replies/defaultReply');
+const testReply = require('./keywords/replies/testReply');
 
 //reply words
 const loveMojiReplies = require('./keywords/replies/lovemojiReply');
@@ -125,14 +126,18 @@ function handleMessage(sender_psid, received_message) {
       response = greetReplies[0];
     }
 
-   
-
     else if(positive.some(word => received_message.text.toLowerCase().includes(word))){
         // Create the payload for a basic text message
       response = {
         "text": `${loveReply[Math.floor(Math.random()*loveReply.length)]}`
       }
     }
+
+    else if(received_message.txt === 'test'){
+      // Create the payload for a basic text message
+    response = testReply;
+  }
+
 
     else if(negative.some(word => received_message.text.toLowerCase().includes(word))){
         // Create the payload for a basic text message
