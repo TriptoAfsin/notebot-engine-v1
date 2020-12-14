@@ -1,4 +1,4 @@
-let greetReplies = [
+let greetText = [
     "Hey!", 
     "Hello", 
     "Hello!", 
@@ -7,5 +7,28 @@ let greetReplies = [
     "Hello 😀"
 ];
 
+
+let greetReplies = [
+    {
+        "text": `${Math.floor(Math.random()*greetText.length)}`,
+        "quick_replies": [{
+                "content_type": "text",
+                "title": "Notes📗",
+                "payload": "notes_flow"
+            },
+            {
+                "content_type": "text",
+                "title": "Routine📅",
+                "payload": "routine_flow"
+            },
+            {
+                "content_type": "text",
+                "title": "Results📝",
+                "payload": "result_flow"
+            }
+
+        ]
+    }
+]
 
 module.exports = greetReplies;

@@ -144,7 +144,7 @@ function handleMessage(sender_psid, received_message) {
     else if(notes.some(word => received_message.text.toLowerCase().includes(word))){
 
         response = notesFlow;
-        response2 = notesFlow;
+        //response2 = notesFlow;
     }
 
      //emoji
