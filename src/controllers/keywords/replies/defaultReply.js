@@ -1,6 +1,6 @@
 const defaultReply = [
     {
-        "text": `Sorry I didn't get what you meant by - "${received_message.text}"😥`,
+        "text": `Sorry I didn't get what you meant`,
         "quick_replies": [{
                 "content_type": "text",
                 "title": "Notes📗",
