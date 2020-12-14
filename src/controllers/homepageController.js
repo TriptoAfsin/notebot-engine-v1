@@ -49,11 +49,6 @@ let setUpUserFacebookProfile = (req, res) => {
                         "title": "Visit Our Page 👍",
                         "url": "https://www.facebook.com/butex.notebot2.0",
                         "webview_height_ratio": "full"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Donate 💰",
-                        "payload": "donate_payload"
                     }
                 ]
             }
