@@ -158,9 +158,11 @@ function handleMessage(sender_psid, received_message) {
 
     else if (test.includes(received_message.text)) {
       // Create the payload for a basic text message
-      response = testReply[0];
-      break;
-
+      try {
+        response = testReply[0];
+      } catch (error) {
+        response = defaultReply[0];
+      } 
     }
 
 
