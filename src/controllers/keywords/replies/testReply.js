@@ -1,34 +1,58 @@
 const testReply = {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "generic",
-                "elements": [
-                    {
-                        "title": "Welcome!",
-                        "image_url": "https://petersfancybrownhats.com/company_image.png",
-                        "subtitle": "We have the right hat for everyone.",
-                        "default_action": {
-                            "type": "web_url",
-                            "url": "https://petersfancybrownhats.com/view?item=103",
-                            "webview_height_ratio": "tall",
-                        },
-                        "buttons": [
-                            {
-                                "type": "web_url",
-                                "url": "https://petersfancybrownhats.com",
-                                "title": "View Website"
-                            }, {
-                                "type": "postback",
-                                "title": "Start Chatting",
-                                "payload": "DEVELOPER_DEFINED_PAYLOAD"
-                            }
-                        ]
-                    }
-                ]
+    "recipient": {
+      "id": "RECIPIENT_ID"
+    },
+    "message": {
+      "attachment": {
+        "type": "template",
+        "payload": {
+          "template_type": "generic",
+          "elements": [
+            {
+              "title": "Swipe left/right for more options.",
+              "buttons": [
+                {
+                  "type": "postback",
+                  "title": "Button 1",
+                  "payload": "button1"
+                },
+                {
+                  "type": "postback",
+                  "title": "Button 2",
+                  "payload": "button2"
+                },
+                {
+                  "type": "postback",
+                  "title": "Button 3",
+                  "payload": "button3"
+                }
+              ]
+            },
+            {
+              "title": "Swipe left/right for more options.",
+              "buttons": [
+                {
+                  "type": "postback",
+                  "title": "Button 4",
+                  "payload": "button4"
+                },
+                {
+                  "type": "postback",
+                  "title": "Button 5",
+                  "payload": "button5"
+                },
+                {
+                  "type": "postback",
+                  "title": "Button 6",
+                  "payload": "button6"
+                }
+              ]
             }
+          ]
         }
-}
+      }
+    }
+  }
 
 
 
