@@ -122,89 +122,95 @@ function handleMessage(sender_psid, received_message) {
 
   
 
-    if(received_message.text !== undefined || received_message.text !== ''){
-       // Check if the message
-    if(greets.some(word => received_message.text.toLowerCase().includes(word))){
+    /*
+  if (received_message.text !== undefined || received_message.text !== '') {
+    // Check if the message
+    if (greets.some(word => received_message.text.toLowerCase().includes(word))) {
       // Create the payload for a basic text message
-    response = greetReplies[0];
-  }
-
-  else if(positive.some(word => received_message.text.toLowerCase().includes(word))){
-      // Create the payload for a basic text message
-    response = {
-      "text": `${loveReply[Math.floor(Math.random()*loveReply.length)]}`
+      response = greetReplies[0];
     }
-  }
 
-  else if(test.includes(received_message.text)){
-    // Create the payload for a basic text message
-   return response = testReply[0];
-  
-}
-
-
-  else if(negative.some(word => received_message.text.toLowerCase().includes(word))){
+    else if (positive.some(word => received_message.text.toLowerCase().includes(word))) {
       // Create the payload for a basic text message
-    response = {
-      "text": `${sadReply[Math.floor(Math.random()*sadReply.length)]}`
+      response = {
+        "text": `${loveReply[Math.floor(Math.random() * loveReply.length)]}`
+      }
     }
-  }
 
-  else if(notes.some(word => received_message.text.toLowerCase().includes(word))){
+    else if (test.includes(received_message.text)) {
+      // Create the payload for a basic text message
+      return response = testReply[0];
+
+    }
+
+
+    else if (negative.some(word => received_message.text.toLowerCase().includes(word))) {
+      // Create the payload for a basic text message
+      response = {
+        "text": `${sadReply[Math.floor(Math.random() * sadReply.length)]}`
+      }
+    }
+
+    else if (notes.some(word => received_message.text.toLowerCase().includes(word))) {
 
       response = notesFlow;
       //response2 = notesFlow;
-  }
-
-   //emoji
-   else if(loveMoji.some(word => received_message.text.includes(word))){
-      // Create the payload for a basic text message
-    response = {
-      "text": `${loveReply[Math.floor(Math.random()*loveReply.length)]}`
     }
-  }
+
+    //emoji
+    else if (loveMoji.some(word => received_message.text.includes(word))) {
+      // Create the payload for a basic text message
+      response = {
+        "text": `${loveReply[Math.floor(Math.random() * loveReply.length)]}`
+      }
+    }
 
 
-  
-  //default reply
-  else if (received_message.text) {    
-    // Create the payload for a basic text message
-    response = defaultReply[0];
-  }  
 
-  else if (received_message.attachments) {
-    // Get the URL of the message attachment
-    let attachment_url = received_message.attachments[0].payload.url;
-    response = {
-      "attachment": {
-        "type": "template",
-        "payload": {
-          "template_type": "generic",
-          "elements": [{
-            "title": "Is this the right picture?",
-            "subtitle": "Tap a button to answer.",
-            "image_url": attachment_url,
-            "buttons": [
-              {
-                "type": "postback",
-                "title": "Yes!",
-                "payload": "yes",
-              },
-              {
-                "type": "postback",
-                "title": "No!",
-                "payload": "no",
-              }
-            ],
-          }]
+    //default reply
+    else if (received_message.text) {
+      // Create the payload for a basic text message
+      response = defaultReply[0];
+    }
+
+    else if (received_message.attachments) {
+      // Get the URL of the message attachment
+      let attachment_url = received_message.attachments[0].payload.url;
+      response = {
+        "attachment": {
+          "type": "template",
+          "payload": {
+            "template_type": "generic",
+            "elements": [{
+              "title": "Is this the right picture?",
+              "subtitle": "Tap a button to answer.",
+              "image_url": attachment_url,
+              "buttons": [
+                {
+                  "type": "postback",
+                  "title": "Yes!",
+                  "payload": "yes",
+                },
+                {
+                  "type": "postback",
+                  "title": "No!",
+                  "payload": "no",
+                }
+              ],
+            }]
+          }
         }
       }
     }
-    } 
-    }
-    
-   
-    
+  }
+
+
+  */
+  //default reply
+  if (received_message.text) {
+    // Create the payload for a basic text message
+    response = defaultReply[0];
+  }
     // Sends the response message
     callSendAPI(sender_psid, response);    
   }
