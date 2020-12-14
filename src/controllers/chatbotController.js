@@ -134,10 +134,10 @@ function handleMessage(sender_psid, received_message) {
   if (received_message.text !== undefined || received_message.text !== '') {
 
     switch (received_message.text){
-        case `${greets.some(word => received_message.text.toLowerCase().includes(word))}`:
+        case (greets.some(word => received_message.text.toLowerCase().includes(word))):
           response = greetReplies[0];
           break;
-        case `${positive.some(word => received_message.text.toLowerCase().includes(word))}`:
+        case (positive.some(word => received_message.text.toLowerCase().includes(word))):
           response = {
             "text": `${loveReply[Math.floor(Math.random() * loveReply.length)]}`
           };
