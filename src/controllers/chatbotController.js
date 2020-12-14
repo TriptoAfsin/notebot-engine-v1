@@ -120,7 +120,7 @@ function handleMessage(sender_psid, received_message) {
     // Check if the message
     if(greets.some(word => received_message.text.toLowerCase().includes(word))){
         // Create the payload for a basic text message
-      response = greetReplies;
+      response = greetReplies[0];
     }
 
    
