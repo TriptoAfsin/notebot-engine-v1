@@ -10,7 +10,7 @@ let greetText = [
 
 let greetReplies = [
     {
-        "text": `${Math.floor(Math.random()*greetText.length)}`,
+        "text": `${greetText[Math.floor(Math.random()*greetText.length)]}`,
         "quick_replies": [{
                 "content_type": "text",
                 "title": "Notes📗",
