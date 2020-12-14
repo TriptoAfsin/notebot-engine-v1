@@ -29,7 +29,7 @@ const notesFlow = require('./flows/botReplies/noteFlow');
 const MY_VERIFY_TOKEN = process.env.MY_VERIFY_TOKEN;
 
 let testMsg = (req, res) => {
-    return res.status(200).send("Hello from notebot engine v1 ✔✔")
+    return res.status(200).send(`Hello from notebot engine v1 ✔✔\n here are some routes - \n/profile\n/homepage`)
 }
 
 //get webhook
