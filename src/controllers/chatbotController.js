@@ -3,6 +3,9 @@ require("dotenv").config();
 
 const request = require('request');
 
+//services
+const chatBotService = require('../services/chatBotService');
+
 //keywords
 const positiveKeywords = require('./keywords/positiveKeywords');
 const negativeKeywords = require('./keywords/negativeKeywords');
@@ -193,7 +196,7 @@ function handleMessage(sender_psid, received_message) {
 
 
 // Handles messaging_postbacks events(button response)
-function handlePostback(sender_psid, received_postback) {
+let handlePostback = async (sender_psid, received_postback) => {
 
     let response;
 
@@ -202,6 +205,9 @@ function handlePostback(sender_psid, received_postback) {
 
     // Set the response based on the postback payload
     if (payload === 'GET_STARTED') {
+      //getting username
+      let username = await chatBotService.getFacebookUserInfo(sender_psid);
+      console.log(username);
       response = getStartedMsg[0];
     } 
     else if (payload === 'level_1') {
@@ -218,9 +224,9 @@ function handlePostback(sender_psid, received_postback) {
     }
     // Send the message to acknowledge the postback
     callSendAPI(sender_psid, response);
-
-
 }
+
+
 
 // Sends response messages via the Send API
 function callSendAPI(sender_psid, response) {
@@ -247,6 +253,23 @@ function callSendAPI(sender_psid, response) {
     }); 
 }
 
+let getFacebookUserInfo = (sender_psid) => {
+
+
+  let uri = `"https://graph.facebook.com/${sender_psid}?fields=first_name,last_name,profile_pic&access_token=${process.env.PAGE_ACCESS_TOKEN}"`
+  // Send the HTTP request to the Messenger Platform
+  request({
+    "uri": uri,
+    
+    "method": "GET", //get method here
+  }, (err, res, body) => {
+    if (!err) {
+      console.log(res)
+    } else {
+      console.error("Unable to send message:" + err);
+    }
+  }); 
+}
 
 module.exports = {
     testMsg: testMsg,
