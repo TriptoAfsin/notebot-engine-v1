@@ -146,7 +146,7 @@ function handleMessage(sender_psid, received_message) {
 
     else if (getStartedWords.some(word => received_message.text.toLowerCase().includes(word))) {
       // Create the payload for a basic text message
-      response = getStartedMsg;
+      response = getStartedMsg[0];
     }
 
     else if (test.includes(received_message.text)) {
@@ -202,7 +202,7 @@ function handlePostback(sender_psid, received_postback) {
 
     // Set the response based on the postback payload
     if (payload === 'GET_STARTED') {
-      response = defaultReply[0];
+      response = getStartedMsg[0];
     } 
     else if (payload === 'level_1') {
         response = { "text": "Notes for level 1" }
