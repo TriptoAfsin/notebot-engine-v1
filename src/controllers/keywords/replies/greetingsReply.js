@@ -25,6 +25,11 @@ let greetReplies = [
                 "content_type": "text",
                 "title": "Results📝",
                 "payload": "result_flow"
+            },
+            {
+                "content_type": "text",
+                "title": "Lab Reports📋",
+                "payload": "reports_flow"
             }
 
         ]
