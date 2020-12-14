@@ -135,7 +135,7 @@ function handleMessage(sender_psid, received_message) {
 
    
     
-    
+    /*
     // Check if the message
     if (greets.some(word => received_message.text.toLowerCase().includes(word))) {
       // Create the payload for a basic text message
@@ -184,12 +184,13 @@ function handleMessage(sender_psid, received_message) {
       }
     }
 
-
+    */
     
     //default reply
-    else if (received_message.text) {
+    if (received_message.text) {
       // Create the payload for a basic text message
-      response = defaultReply[0];
+        response = response = testReply[0];
+      //response = defaultReply[0];
     }
     
   }
