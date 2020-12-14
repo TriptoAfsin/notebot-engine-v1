@@ -16,7 +16,8 @@ let getFacebookUserInfo = (sender_psid) => {
         }, (err, res, body) => {
             //console.log(body);
             if (!err) {
-                resolve(body);
+                let userName = `${body.last_name} ${body.first_name}`;
+                resolve(userName);
             } else {
                 reject("Unable to send message:" + err);
             }

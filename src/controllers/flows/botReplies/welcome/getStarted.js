@@ -1,6 +1,11 @@
+//services
+const chatBotService = require('../../../../services/chatBotService');
+
+let username = await chatBotService.getFacebookUserInfo(sender_psid);
+
 const getStarted = [
     {
-        "text": `Hello there, Welcome to the new BUTEX NoteBOT`,
+        "text": `Hello ${username}, Welcome to the new BUTEX NoteBOT`,
         "quick_replies": [{
                 "content_type": "text",
                 "title": "Help😥",
