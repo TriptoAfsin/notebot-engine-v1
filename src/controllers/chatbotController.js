@@ -17,7 +17,9 @@ const level_1_note_words = require('./keywords/academic_words/level1_word_note')
 const level_2_note_words = require('./keywords/academic_words/level2_word_note');
 const level_3_note_words = require('./keywords/academic_words/level3_word_note');
 const level_4_note_words = require('./keywords/academic_words/level4_word_note');
+const bce_words = require('./keywords/academic_words/subjects/bceWords');
 const labWords = require('./keywords/academic_words/labWords');
+
 const routineWords = require('./keywords/academic_words/routineWords');
 const resultWords = require('./keywords/academic_words/resultWords');
 const syllabusWords = require('./keywords/academic_words/syllabusWords');
@@ -41,6 +43,7 @@ const level_1_notes = require('./flows/botReplies/note_levels/level_1/level_1_fl
 const level_2_notes = require('./flows/botReplies/note_levels/level_2/level_2_flow');
 const level_3_notes = require('./flows/botReplies/note_levels/level_3/level_3_flow');
 const level_4_notes = require('./flows/botReplies/note_levels/level_4/level_4_flow');
+const bce_flow = require('./flows/botReplies/note_levels/level_1/level_1_subs/bce/bce_flow');
 const labFlow = require('./flows/botReplies/labFlow');
 const routineFlow = require('./flows/botReplies/routineFlow');
 const resultFlow = require('./flows/botReplies/resultFlow');
@@ -148,6 +151,7 @@ function handleMessage(sender_psid, received_message) {
     const level2 = level_2_note_words;
     const level3 = level_3_note_words;
     const level4 = level_4_note_words;
+    const bce = bce_words;
     const lab_report = labWords;
     const result = resultWords;
     const routine = routineWords;
@@ -276,6 +280,20 @@ function handleMessage(sender_psid, received_message) {
       response2 = level_4_notes[1];
       response3 = level_4_notes[2];
       response4 = level_4_notes[3];
+
+      callSendAPI2(sender_psid, response2);
+      callSendAPI3(sender_psid, response3);
+      callSendAPI4(sender_psid, response4);
+      
+      
+    }
+
+    else if (bce.some(word => received_message.text.toLowerCase().includes(word))) {
+
+      response = bce_flow[0];
+      response2 = bce_flow[1];
+      response3 = bce_flow[2];
+      response4 = bce_flow[3];
 
       callSendAPI2(sender_psid, response2);
       callSendAPI3(sender_psid, response3);
@@ -439,9 +457,23 @@ let handlePostback = async (sender_psid, received_postback) => {
       callSendAPI3(sender_psid, response3);
       callSendAPI4(sender_psid, response4);
     }
+
+    else if (payload === 'bce_flow') {
+      response = bce_flow[0];
+      response2 = bce_flow[1];
+      response3 = bce_flow[2];
+      response4 = bce_flow[3];
+
+      callSendAPI(sender_psid, response);
+      callSendAPI2(sender_psid, response2);
+      callSendAPI3(sender_psid, response3);
+      callSendAPI4(sender_psid, response4);
+    }
     // Send the message to acknowledge the postback
     //callSendAPI(sender_psid, response);
 }
+
+
 
 
 
