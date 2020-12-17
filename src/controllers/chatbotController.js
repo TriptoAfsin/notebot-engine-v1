@@ -191,7 +191,7 @@ function handleMessage(sender_psid, received_message) {
       
     }
 
-    else if (lab_report.some(word => received_message.text.toLowerCase().includes(word))) {
+    else if (labWords.includes(received_message.txt)) {
 
       response = labFlow[0];
       response2 = labFlow[1];
