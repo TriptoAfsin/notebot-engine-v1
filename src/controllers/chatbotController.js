@@ -468,7 +468,7 @@ function callSendAPI5(sender_psid, response5) {
 
 
 // Sends response messages via the Send API6
-function callSendAPI6(sender_psid, response4) {
+function callSendAPI6(sender_psid, response6) {
   // Construct the message body
   let request_body = {
     "recipient": {
