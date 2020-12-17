@@ -5,7 +5,14 @@ const positive = [
      "superb", 
      "ভালো", 
      "সুন্দর", 
-     "কিউট"
+     "কিউট",
+     "joss",
+     "xoss",
+     "shera",
+     "sera",
+     "জোস",
+     "জোশ",
+     "সেরা",
 ]
 
 module.exports = positive;

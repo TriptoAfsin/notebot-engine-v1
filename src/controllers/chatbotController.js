@@ -17,7 +17,10 @@ const level_1_note_words = require('./keywords/academic_words/level1_word_note')
 const level_2_note_words = require('./keywords/academic_words/level2_word_note');
 const level_3_note_words = require('./keywords/academic_words/level3_word_note');
 const level_4_note_words = require('./keywords/academic_words/level4_word_note');
+//academic -> bce
 const bce_words = require('./keywords/academic_words/subjects/bceWords');
+
+
 const labWords = require('./keywords/academic_words/labWords');
 
 const routineWords = require('./keywords/academic_words/routineWords');
@@ -43,7 +46,12 @@ const level_1_notes = require('./flows/botReplies/note_levels/level_1/level_1_fl
 const level_2_notes = require('./flows/botReplies/note_levels/level_2/level_2_flow');
 const level_3_notes = require('./flows/botReplies/note_levels/level_3/level_3_flow');
 const level_4_notes = require('./flows/botReplies/note_levels/level_4/level_4_flow');
+
+//academic flows -> bce
 const bce_flow = require('./flows/botReplies/note_levels/level_1/level_1_subs/bce/bce_flow');
+const bce_allsheets = require('./flows/botReplies/note_levels/level_1/level_1_subs/bce/topics/allsheetsBce');
+
+
 const labFlow = require('./flows/botReplies/labFlow');
 const routineFlow = require('./flows/botReplies/routineFlow');
 const resultFlow = require('./flows/botReplies/resultFlow');
@@ -469,8 +477,17 @@ let handlePostback = async (sender_psid, received_postback) => {
       callSendAPI3(sender_psid, response3);
       callSendAPI4(sender_psid, response4);
     }
-    // Send the message to acknowledge the postback
-    //callSendAPI(sender_psid, response);
+
+    else if (payload === 'all_sheets_bce_flow') {
+      response = bce_allsheets[0];
+      response2 = bce_allsheets[1];
+     
+
+      callSendAPI(sender_psid, response);
+      callSendAPI2(sender_psid, response2);
+      
+    }
+    
 }
 
 
