@@ -1,4 +1,4 @@
-const routine = [
+const lab = [
     "report", 
     "lab", 
     "experiment", 
@@ -9,4 +9,4 @@ const routine = [
 ];
 
 
-module.exports = routine;
+module.exports = lab;
