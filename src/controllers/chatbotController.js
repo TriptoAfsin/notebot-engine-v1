@@ -603,8 +603,8 @@ let handlePostback = async (sender_psid, received_postback) => {
       response2 = cp_flow[1];
       response3 = cp_flow[2];
       response4 = cp_flow[3];
-      response4 = cp_flow[4];
-      response4 = cp_flow[5];
+      response5 = cp_flow[4];
+      response6 = cp_flow[5];
 
       callSendAPI(sender_psid, response);
       callSendAPI2(sender_psid, response2);
