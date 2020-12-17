@@ -8,7 +8,7 @@ let level_2_note = [
                 "buttons": [
                     {
                         "type": "postback",
-                        "title": "All Level 1",
+                        "title": "All Level 2",
                         "payload": "qb_2_flow"
                     }
                 ],

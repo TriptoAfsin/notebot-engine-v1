@@ -15,6 +15,7 @@ const greetWords = require('./keywords/greetWords');
 const noteWords = require('./keywords/academic_words/noteWords');
 const level_1_note_words = require('./keywords/academic_words/level1_word_note');
 const level_2_note_words = require('./keywords/academic_words/level2_word_note');
+const level_3_note_words = require('./keywords/academic_words/level3_word_note');
 const labWords = require('./keywords/academic_words/labWords');
 const routineWords = require('./keywords/academic_words/routineWords');
 const resultWords = require('./keywords/academic_words/resultWords');
@@ -37,6 +38,7 @@ const greetReplies = require('./keywords/replies/greetingsReply');
 const notesFlow = require('./flows/botReplies/noteFlow');
 const level_1_notes = require('./flows/botReplies/note_levels/level_1/level_1_flow');
 const level_2_notes = require('./flows/botReplies/note_levels/level_2/level_2_flow');
+const level_3_notes = require('./flows/botReplies/note_levels/level_3/level_3_flow');
 const labFlow = require('./flows/botReplies/labFlow');
 const routineFlow = require('./flows/botReplies/routineFlow');
 const resultFlow = require('./flows/botReplies/resultFlow');
@@ -142,6 +144,7 @@ function handleMessage(sender_psid, received_message) {
     const notes = noteWords;
     const level1 = level_1_note_words;
     const level2 = level_2_note_words;
+    const level3 = level_3_note_words;
     const lab_report = labWords;
     const result = resultWords;
     const routine = routineWords;
@@ -241,6 +244,26 @@ function handleMessage(sender_psid, received_message) {
       callSendAPI6(sender_psid, response6);
       callSendAPI7(sender_psid, response7);
       callSendAPI8(sender_psid, response8);
+      
+    }
+
+    else if (level3.some(word => received_message.text.toLowerCase().includes(word))) {
+
+      response = level_3_notes[0];
+      response2 = level_3_notes[1];
+      response3 = level_3_notes[2];
+      response4 = level_3_notes[3];
+      response5 = level_3_notes[4];
+      response6 = level_3_notes[5];
+      response7 = level_3_notes[6];
+
+      callSendAPI2(sender_psid, response2);
+      callSendAPI3(sender_psid, response3);
+      callSendAPI4(sender_psid, response4);
+      callSendAPI5(sender_psid, response5);
+      callSendAPI6(sender_psid, response6);
+      callSendAPI7(sender_psid, response7);
+      
       
     }
 
@@ -369,8 +392,22 @@ let handlePostback = async (sender_psid, received_postback) => {
       callSendAPI8(sender_psid, response8);
   } 
     else if (payload === 'level_3') {
-        response = { "text": "Notes for level 3" }
-        callSendAPI(sender_psid, response);
+      response = level_3_notes[0];
+      response2 = level_3_notes[1];
+      response3 = level_3_notes[2];
+      response4 = level_3_notes[3];
+      response5 = level_3_notes[4];
+      response6 = level_3_notes[5];
+      response7 = level_3_notes[6];
+
+
+      callSendAPI(sender_psid, response);
+      callSendAPI2(sender_psid, response2);
+      callSendAPI3(sender_psid, response3);
+      callSendAPI4(sender_psid, response4);
+      callSendAPI5(sender_psid, response5);
+      callSendAPI6(sender_psid, response6);
+      callSendAPI7(sender_psid, response7);
     }
     else if (payload === 'level_4') {
         response = { "text": "Notes for level 4" }
