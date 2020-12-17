@@ -16,6 +16,7 @@ const noteWords = require('./keywords/academic_words/noteWords');
 const labWords = require('./keywords/academic_words/labWords');
 const routineWords = require('./keywords/academic_words/routineWords');
 const resultWords = require('./keywords/academic_words/resultWords');
+const syllabusWords = require('./keywords/academic_words/syllabusWords');
 
 //default reply
 const defaultReply = require('./keywords/replies/defaultReply');
@@ -35,6 +36,7 @@ const notesFlow = require('./flows/botReplies/noteFlow');
 const labFlow = require('./flows/botReplies/labFlow');
 const routineFlow = require('./flows/botReplies/routineFlow');
 const resultFlow = require('./flows/botReplies/resultFlow');
+const syllabusFlow = require('./flows/botReplies/syllabusFlow');
 
 
 const MY_VERIFY_TOKEN = process.env.MY_VERIFY_TOKEN;
@@ -130,6 +132,8 @@ function handleMessage(sender_psid, received_message) {
     const lab_report = labWords;
     const result = resultWords;
     const routine = routineWords;
+    const syllabus = syllabusWords;
+
 
     const greetReply = greetReplies;
     const loveMoji = loveMojis;
@@ -184,7 +188,7 @@ function handleMessage(sender_psid, received_message) {
       response = notesFlow[0];
       response2 = notesFlow[1];
       callSendAPI2(sender_psid, response2)
-      //response2 = notesFlow;
+      
     }
 
     else if (lab_report.some(word => received_message.text.toLowerCase().includes(word))) {
@@ -192,7 +196,7 @@ function handleMessage(sender_psid, received_message) {
       response = labFlow[0];
       response2 = labFlow[1];
       callSendAPI2(sender_psid, response2)
-      //response2 = notesFlow;
+     
     }
 
     else if (result.some(word => received_message.text.toLowerCase().includes(word))) {
@@ -200,15 +204,18 @@ function handleMessage(sender_psid, received_message) {
       response = resultFlow[0];
       response2 = resultFlow[1];
       callSendAPI2(sender_psid, response2)
-      //response2 = notesFlow;
+     
     }
 
     else if (routine.some(word => received_message.text.toLowerCase().includes(word))) {
-
       response = routineFlow[0];
       response2 = routineFlow[1];
       callSendAPI2(sender_psid, response2)
-      //response2 = notesFlow;
+    }
+
+    else if (syllabus.some(word => received_message.text.toLowerCase().includes(word))) {
+
+      response = syllabusFlow[0];
     }
 
 
