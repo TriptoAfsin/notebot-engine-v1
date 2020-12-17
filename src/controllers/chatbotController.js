@@ -20,7 +20,7 @@ const level_4_note_words = require('./keywords/academic_words/level4_word_note')
 //academic -> bce
 const bce_words = require('./keywords/academic_words/subjects/bceWords');
 //academic -> cp
-const bce_words = require('./keywords/academic_words/subjects/cpWords');
+const cp_words = require('./keywords/academic_words/subjects/cpWords');
 
 const labWords = require('./keywords/academic_words/labWords');
 
