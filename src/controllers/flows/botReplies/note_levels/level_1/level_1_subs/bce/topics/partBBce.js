@@ -5,7 +5,7 @@ let partB_bce = [
     },
     {
         "text": `🔷Part B Hand Note(Tripto, 2019)-
-        https://drive.google.com/file/d/11wwor1lGnGBcdhM0HgegYFIdQFXQdk1t/view?usp=sharing
+        https://drive.google.com/file/d/11wwor1lGnGBcdhM0HgegYFIdQFXQdk1t/view?usp=sharing \n
         N.B: Some Topics Might Be Missing`
     },
     {
