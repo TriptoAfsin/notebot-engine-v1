@@ -54,12 +54,17 @@ const bce_part_a = require('./flows/botReplies/note_levels/level_1/level_1_subs/
 const bce_part_b = require('./flows/botReplies/note_levels/level_1/level_1_subs/bce/topics/partBBce');
 const full_part_bce = require('./flows/botReplies/note_levels/level_1/level_1_subs/bce/topics/fullabpartBce');
 const bce_questions = require('./flows/botReplies/note_levels/level_1/level_1_subs/bce/topics/bceQuestions');
+const bce_letter = require('./flows/botReplies/note_levels/level_1/level_1_subs/bce/topics/letterBce');
+const bce_report = require('./flows/botReplies/note_levels/level_1/level_1_subs/bce/topics/reportBce');
+const bce_read_writing = require('./flows/botReplies/note_levels/level_1/level_1_subs/bce/topics/reading_writingBce');
 
 
 const labFlow = require('./flows/botReplies/labFlow');
 const routineFlow = require('./flows/botReplies/routineFlow');
 const resultFlow = require('./flows/botReplies/resultFlow');
 const syllabusFlow = require('./flows/botReplies/syllabusFlow');
+const letter_bce = require("./flows/botReplies/note_levels/level_1/level_1_subs/bce/topics/letterBce");
+const report_bce = require("./flows/botReplies/note_levels/level_1/level_1_subs/bce/topics/reportBce");
 
 
 const MY_VERIFY_TOKEN = process.env.MY_VERIFY_TOKEN;
@@ -519,8 +524,28 @@ let handlePostback = async (sender_psid, received_postback) => {
       callSendAPI(sender_psid, response);
       callSendAPI2(sender_psid, response2);
     }
+    else if (payload === 'letter_bce_flow') {
+      response = bce_letter[0];
+      response2 = bce_letter[1];
+      response3 = bce_letter[2];
+
+
+      callSendAPI(sender_psid, response);
+      callSendAPI2(sender_psid, response2);
+      callSendAPI3(sender_psid, response3);
+    }
     else if (payload === 'bce_ques_flow') {
       response = bce_questions[0];
+
+      callSendAPI(sender_psid, response);
+    }
+    else if (payload === 'report_bce_flow') {
+      response = bce_report[0];
+
+      callSendAPI(sender_psid, response);
+    }
+    else if (payload === 'read_write_bce_flow') {
+      response = bce_read_writing[0];
 
       callSendAPI(sender_psid, response);
     }
