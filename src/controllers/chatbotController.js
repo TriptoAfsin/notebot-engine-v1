@@ -50,6 +50,9 @@ const level_4_notes = require('./flows/botReplies/note_levels/level_4/level_4_fl
 //academic flows -> bce
 const bce_flow = require('./flows/botReplies/note_levels/level_1/level_1_subs/bce/bce_flow');
 const bce_allsheets = require('./flows/botReplies/note_levels/level_1/level_1_subs/bce/topics/allsheetsBce');
+const bce_part_a = require('./flows/botReplies/note_levels/level_1/level_1_subs/bce/topics/partABce');
+const bce_part_b = require('./flows/botReplies/note_levels/level_1/level_1_subs/bce/topics/partBBce');
+const full_part_bce = require('./flows/botReplies/note_levels/level_1/level_1_subs/bce/topics/fullabpartBce');
 
 
 const labFlow = require('./flows/botReplies/labFlow');
@@ -466,6 +469,7 @@ let handlePostback = async (sender_psid, received_postback) => {
       callSendAPI4(sender_psid, response4);
     }
 
+    //subject-> bce
     else if (payload === 'bce_flow') {
       response = bce_flow[0];
       response2 = bce_flow[1];
@@ -486,6 +490,33 @@ let handlePostback = async (sender_psid, received_postback) => {
       callSendAPI(sender_psid, response);
       callSendAPI2(sender_psid, response2);
       
+    }
+
+    else if (payload === 'part_a_bce_flow') {
+      response = bce_part_a[0];
+      response2 = bce_part_a[1];
+     
+
+      callSendAPI(sender_psid, response);
+      callSendAPI2(sender_psid, response2);
+    }
+    else if (payload === 'part_b_bce_flow') {
+      response = bce_part_b[0];
+      response2 = bce_part_b[1];
+      response3 = bce_part_b[2];
+
+
+      callSendAPI(sender_psid, response);
+      callSendAPI2(sender_psid, response2);
+      callSendAPI3(sender_psid, response3);
+    }
+    else if (payload === 'full_ab_bce_flow') {
+      response = full_part_bce[0];
+      response2 = full_part_bce[1];
+
+
+      callSendAPI(sender_psid, response);
+      callSendAPI2(sender_psid, response2);
     }
     
 }
