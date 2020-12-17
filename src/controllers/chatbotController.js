@@ -63,9 +63,6 @@ const bce_lang_func = require('./flows/botReplies/note_levels/level_1/level_1_su
 const bce_comm = require('./flows/botReplies/note_levels/level_1/level_1_subs/bce/topics/communicationBce');
 
 //academic flows -> cp
-const bce_flow = require('./flows/botReplies/note_levels/level_1/level_1_subs/cp/cp_flow');
-
-
 const labFlow = require('./flows/botReplies/labFlow');
 const routineFlow = require('./flows/botReplies/routineFlow');
 const resultFlow = require('./flows/botReplies/resultFlow');
