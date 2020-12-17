@@ -57,14 +57,16 @@ const bce_questions = require('./flows/botReplies/note_levels/level_1/level_1_su
 const bce_letter = require('./flows/botReplies/note_levels/level_1/level_1_subs/bce/topics/letterBce');
 const bce_report = require('./flows/botReplies/note_levels/level_1/level_1_subs/bce/topics/reportBce');
 const bce_read_writing = require('./flows/botReplies/note_levels/level_1/level_1_subs/bce/topics/reading_writingBce');
+const bce_intro = require('./flows/botReplies/note_levels/level_1/level_1_subs/bce/topics/introBce');
+const bce_lang_func = require('./flows/botReplies/note_levels/level_1/level_1_subs/bce/topics/langFuncBce');
+const bce_comm = require('./flows/botReplies/note_levels/level_1/level_1_subs/bce/topics/communicationBce');
 
 
 const labFlow = require('./flows/botReplies/labFlow');
 const routineFlow = require('./flows/botReplies/routineFlow');
 const resultFlow = require('./flows/botReplies/resultFlow');
 const syllabusFlow = require('./flows/botReplies/syllabusFlow');
-const letter_bce = require("./flows/botReplies/note_levels/level_1/level_1_subs/bce/topics/letterBce");
-const report_bce = require("./flows/botReplies/note_levels/level_1/level_1_subs/bce/topics/reportBce");
+
 
 
 const MY_VERIFY_TOKEN = process.env.MY_VERIFY_TOKEN;
@@ -533,6 +535,27 @@ let handlePostback = async (sender_psid, received_postback) => {
       callSendAPI(sender_psid, response);
       callSendAPI2(sender_psid, response2);
       callSendAPI3(sender_psid, response3);
+    }
+    else if (payload === 'communi_bce_flow') {
+      response = bce_comm[0];
+      response2 = bce_comm[1];
+
+
+      callSendAPI(sender_psid, response);
+      callSendAPI2(sender_psid, response2);
+    }
+    else if (payload === 'lang_func_bce_flow') {
+      response = bce_lang_func[0];
+      response2 = bce_lang_func[1];
+
+
+      callSendAPI(sender_psid, response);
+      callSendAPI2(sender_psid, response2);
+    }
+    else if (payload === 'intro_bce_flow') {
+      response = bce_intro[0];
+
+      callSendAPI(sender_psid, response);
     }
     else if (payload === 'bce_ques_flow') {
       response = bce_questions[0];
