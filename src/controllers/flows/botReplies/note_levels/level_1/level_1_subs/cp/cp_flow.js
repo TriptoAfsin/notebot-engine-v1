@@ -115,14 +115,20 @@ let cp_flow = [
         },
     },
     {
-        "text": ``,
-        "quick_replies": [{
-                "content_type": "text",
-                "title": "Friendly Suggestion ☺",
-                "payload": "cp_suggestion_flow"
+        "attachment": {
+            "type": "template",
+            "payload": {
+                "template_type": "button",
+                "text": "🟩Useful Suggestion ",
+                "buttons": [
+                    {
+                        "type": "postback",
+                        "title": "Suggestion 🟢",
+                        "payload": "suggestion_cp_flow"
+                    },
+                ],
             },
-
-        ]
+        },
     }
 ]
 
