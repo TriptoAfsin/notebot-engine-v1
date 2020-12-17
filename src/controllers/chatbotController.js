@@ -13,6 +13,7 @@ const loveMojis = require('./keywords/loveMoji.js');
 const greetWords = require('./keywords/greetWords');
 //academic
 const noteWords = require('./keywords/academic_words/noteWords');
+const level_1_note_words = require('./keywords/academic_words/level1_word_note');
 const labWords = require('./keywords/academic_words/labWords');
 const routineWords = require('./keywords/academic_words/routineWords');
 const resultWords = require('./keywords/academic_words/resultWords');
@@ -33,6 +34,7 @@ const greetReplies = require('./keywords/replies/greetingsReply');
 
 //keyword flows
 const notesFlow = require('./flows/botReplies/noteFlow');
+const level_1_notes = require('./flows/botReplies/note_levels/level_1/level_1_flow');
 const labFlow = require('./flows/botReplies/labFlow');
 const routineFlow = require('./flows/botReplies/routineFlow');
 const resultFlow = require('./flows/botReplies/resultFlow');
@@ -122,6 +124,13 @@ function handleMessage(sender_psid, received_message) {
     let response;
     let response2;
     let response3;
+    let response4;
+    let response5;
+    let response6;
+    let response7;
+    let response8;
+    let response9;
+    let response10;
     
     
     //keywords
@@ -129,6 +138,7 @@ function handleMessage(sender_psid, received_message) {
 
     //academic
     const notes = noteWords;
+    const level1 = level_1_note_words;
     const lab_report = labWords;
     const result = resultWords;
     const routine = routineWords;
@@ -188,6 +198,25 @@ function handleMessage(sender_psid, received_message) {
       response = notesFlow[0];
       response2 = notesFlow[1];
       callSendAPI2(sender_psid, response2)
+      
+    }
+
+    else if (level1.some(word => received_message.text.toLowerCase().includes(word))) {
+
+      response = level_1_notes[0];
+      response2 = level_1_notes[1];
+      response3 = level_1_notes[2];
+      response4 = level_1_notes[3];
+      response5 = level_1_notes[4];
+      response6 = level_1_notes[5];
+      response7 = level_1_notes[6];
+
+      callSendAPI2(sender_psid, response2);
+      callSendAPI3(sender_psid, response3);
+      callSendAPI4(sender_psid, response4);
+      callSendAPI5(sender_psid, response5);
+      callSendAPI6(sender_psid, response6);
+      callSendAPI7(sender_psid, response7);
       
     }
 
@@ -252,7 +281,16 @@ function handleMessage(sender_psid, received_message) {
 // Handles messaging_postbacks events(button response)
 let handlePostback = async (sender_psid, received_postback) => {
 
-    let response;
+  let response;
+  let response2;
+  let response3;
+  let response4;
+  let response5;
+  let response6;
+  let response7;
+  let response8;
+  let response9;
+  let response10;
 
     // Get the payload for the postback
     let payload = received_postback.payload;
@@ -264,21 +302,41 @@ let handlePostback = async (sender_psid, received_postback) => {
 
       console.log(username);
       response = getStartedMsg[0];
+      callSendAPI(sender_psid, response);
     } 
+
     else if (payload === 'level_1') {
-        response = { "text": "Notes for level 1" }
+        response = level_1_notes[0];
+        response2 = level_1_notes[1];
+        response3 = level_1_notes[2];
+        response4 = level_1_notes[3];
+        response5 = level_1_notes[4];
+        response6 = level_1_notes[5];
+        response7 = level_1_notes[7];
+
+
+        callSendAPI(sender_psid, response);
+        callSendAPI2(sender_psid, response2);
+        callSendAPI3(sender_psid, response3);
+        callSendAPI4(sender_psid, response4);
+        callSendAPI5(sender_psid, response5);
+        callSendAPI6(sender_psid, response6);
+        callSendAPI7(sender_psid, response7);
     } 
     else if (payload === 'level_2') {
         response = { "text": "Notes for level 2" }
+        callSendAPI(sender_psid, response);
     }
     else if (payload === 'level_3') {
         response = { "text": "Notes for level 3" }
+        callSendAPI(sender_psid, response);
     }
     else if (payload === 'level_4') {
         response = { "text": "Notes for level 4" }
+        callSendAPI(sender_psid, response);
     }
     // Send the message to acknowledge the postback
-    callSendAPI(sender_psid, response);
+    //callSendAPI(sender_psid, response);
 }
 
 
@@ -332,6 +390,216 @@ function callSendAPI2(sender_psid, response2) {
     }
   }); 
 }
+
+// Sends response messages via the Send API3
+function callSendAPI3(sender_psid, response3) {
+  // Construct the message body
+  let request_body = {
+    "recipient": {
+      "id": sender_psid
+    },
+    "message": response3
+  }
+
+  // Send the HTTP request to the Messenger Platform
+  request({
+    "uri": "https://graph.facebook.com/v7.0/me/messages",
+    "qs": { "access_token": process.env.PAGE_ACCESS_TOKEN },
+    "method": "POST",
+    "json": request_body
+  }, (err, res, body) => {
+    if (!err) {
+      console.log('message sent!')
+    } else {
+      console.error("Unable to send message:" + err);
+    }
+  }); 
+}
+
+// Sends response messages via the Send API4
+function callSendAPI4(sender_psid, response4) {
+  // Construct the message body
+  let request_body = {
+    "recipient": {
+      "id": sender_psid
+    },
+    "message": response4
+  }
+
+  // Send the HTTP request to the Messenger Platform
+  request({
+    "uri": "https://graph.facebook.com/v7.0/me/messages",
+    "qs": { "access_token": process.env.PAGE_ACCESS_TOKEN },
+    "method": "POST",
+    "json": request_body
+  }, (err, res, body) => {
+    if (!err) {
+      console.log('message sent!')
+    } else {
+      console.error("Unable to send message:" + err);
+    }
+  }); 
+}
+
+// Sends response messages via the Send API5
+function callSendAPI5(sender_psid, response5) {
+  // Construct the message body
+  let request_body = {
+    "recipient": {
+      "id": sender_psid
+    },
+    "message": response5
+  }
+
+  // Send the HTTP request to the Messenger Platform
+  request({
+    "uri": "https://graph.facebook.com/v7.0/me/messages",
+    "qs": { "access_token": process.env.PAGE_ACCESS_TOKEN },
+    "method": "POST",
+    "json": request_body
+  }, (err, res, body) => {
+    if (!err) {
+      console.log('message sent!')
+    } else {
+      console.error("Unable to send message:" + err);
+    }
+  }); 
+}
+
+
+// Sends response messages via the Send API6
+function callSendAPI6(sender_psid, response4) {
+  // Construct the message body
+  let request_body = {
+    "recipient": {
+      "id": sender_psid
+    },
+    "message": response6
+  }
+
+  // Send the HTTP request to the Messenger Platform
+  request({
+    "uri": "https://graph.facebook.com/v7.0/me/messages",
+    "qs": { "access_token": process.env.PAGE_ACCESS_TOKEN },
+    "method": "POST",
+    "json": request_body
+  }, (err, res, body) => {
+    if (!err) {
+      console.log('message sent!')
+    } else {
+      console.error("Unable to send message:" + err);
+    }
+  }); 
+}
+
+
+// Sends response messages via the Send API7
+function callSendAPI7(sender_psid, response7) {
+  // Construct the message body
+  let request_body = {
+    "recipient": {
+      "id": sender_psid
+    },
+    "message": response7
+  }
+
+  // Send the HTTP request to the Messenger Platform
+  request({
+    "uri": "https://graph.facebook.com/v7.0/me/messages",
+    "qs": { "access_token": process.env.PAGE_ACCESS_TOKEN },
+    "method": "POST",
+    "json": request_body
+  }, (err, res, body) => {
+    if (!err) {
+      console.log('message sent!')
+    } else {
+      console.error("Unable to send message:" + err);
+    }
+  }); 
+}
+
+
+// Sends response messages via the Send API8
+function callSendAPI8(sender_psid, response8) {
+  // Construct the message body
+  let request_body = {
+    "recipient": {
+      "id": sender_psid
+    },
+    "message": response8
+  }
+
+  // Send the HTTP request to the Messenger Platform
+  request({
+    "uri": "https://graph.facebook.com/v7.0/me/messages",
+    "qs": { "access_token": process.env.PAGE_ACCESS_TOKEN },
+    "method": "POST",
+    "json": request_body
+  }, (err, res, body) => {
+    if (!err) {
+      console.log('message sent!')
+    } else {
+      console.error("Unable to send message:" + err);
+    }
+  }); 
+}
+
+
+// Sends response messages via the Send API9
+function callSendAPI9(sender_psid, response9) {
+  // Construct the message body
+  let request_body = {
+    "recipient": {
+      "id": sender_psid
+    },
+    "message": response9
+  }
+
+  // Send the HTTP request to the Messenger Platform
+  request({
+    "uri": "https://graph.facebook.com/v7.0/me/messages",
+    "qs": { "access_token": process.env.PAGE_ACCESS_TOKEN },
+    "method": "POST",
+    "json": request_body
+  }, (err, res, body) => {
+    if (!err) {
+      console.log('message sent!')
+    } else {
+      console.error("Unable to send message:" + err);
+    }
+  }); 
+}
+
+// Sends response messages via the Send API10
+function callSendAPI10(sender_psid, response10) {
+  // Construct the message body
+  let request_body = {
+    "recipient": {
+      "id": sender_psid
+    },
+    "message": response10
+  }
+
+  // Send the HTTP request to the Messenger Platform
+  request({
+    "uri": "https://graph.facebook.com/v7.0/me/messages",
+    "qs": { "access_token": process.env.PAGE_ACCESS_TOKEN },
+    "method": "POST",
+    "json": request_body
+  }, (err, res, body) => {
+    if (!err) {
+      console.log('message sent!')
+    } else {
+      console.error("Unable to send message:" + err);
+    }
+  }); 
+}
+
+
+
+
+
+
 
 
 module.exports = {
