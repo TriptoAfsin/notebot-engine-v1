@@ -427,10 +427,10 @@ let handlePostback = async (sender_psid, received_postback) => {
       callSendAPI7(sender_psid, response7);
     }
     else if (payload === 'level_4') {
-      response = level_3_notes[0];
-      response2 = level_3_notes[1];
-      response3 = level_3_notes[2];
-      response4 = level_3_notes[3];
+      response = level_4_notes[0];
+      response2 = level_4_notes[1];
+      response3 = level_4_notes[2];
+      response4 = level_4_notes[3];
       
 
 
