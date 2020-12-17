@@ -19,7 +19,8 @@ const level_3_note_words = require('./keywords/academic_words/level3_word_note')
 const level_4_note_words = require('./keywords/academic_words/level4_word_note');
 //academic -> bce
 const bce_words = require('./keywords/academic_words/subjects/bceWords');
-
+//academic -> cp
+const bce_words = require('./keywords/academic_words/subjects/cpWords');
 
 const labWords = require('./keywords/academic_words/labWords');
 
@@ -61,11 +62,16 @@ const bce_intro = require('./flows/botReplies/note_levels/level_1/level_1_subs/b
 const bce_lang_func = require('./flows/botReplies/note_levels/level_1/level_1_subs/bce/topics/langFuncBce');
 const bce_comm = require('./flows/botReplies/note_levels/level_1/level_1_subs/bce/topics/communicationBce');
 
+//academic flows -> cp
+const bce_flow = require('./flows/botReplies/note_levels/level_1/level_1_subs/cp/cp_flow');
+
 
 const labFlow = require('./flows/botReplies/labFlow');
 const routineFlow = require('./flows/botReplies/routineFlow');
 const resultFlow = require('./flows/botReplies/resultFlow');
 const syllabusFlow = require('./flows/botReplies/syllabusFlow');
+const cp_flow = require("./flows/botReplies/note_levels/level_1/level_1_subs/cp/cp_flow");
+const cp_words = require("./keywords/academic_words/subjects/cpWords");
 
 
 
@@ -171,6 +177,7 @@ function handleMessage(sender_psid, received_message) {
     const level3 = level_3_note_words;
     const level4 = level_4_note_words;
     const bce = bce_words;
+    const cp = cp_words;
     const lab_report = labWords;
     const result = resultWords;
     const routine = routineWords;
@@ -307,6 +314,7 @@ function handleMessage(sender_psid, received_message) {
       
     }
 
+    //academic -> bce
     else if (bce.some(word => received_message.text.toLowerCase().includes(word))) {
 
       response = bce_flow[0];
@@ -317,6 +325,25 @@ function handleMessage(sender_psid, received_message) {
       callSendAPI2(sender_psid, response2);
       callSendAPI3(sender_psid, response3);
       callSendAPI4(sender_psid, response4);
+      
+      
+    }
+
+    //academic -> cp
+    else if (cp.includes(received_message.text.toLowerCase())) {
+
+      response = cp_flow[0];
+      response2 = cp_flow[1];
+      response3 = cp_flow[2];
+      response4 = cp_flow[3];
+      response5 = cp_flow[4];
+      response6 = cp_flow[5];
+
+      callSendAPI2(sender_psid, response2);
+      callSendAPI3(sender_psid, response3);
+      callSendAPI4(sender_psid, response4);
+      callSendAPI5(sender_psid, response5);
+      callSendAPI6(sender_psid, response6);
       
       
     }
@@ -571,6 +598,23 @@ let handlePostback = async (sender_psid, received_postback) => {
       response = bce_read_writing[0];
 
       callSendAPI(sender_psid, response);
+    }
+
+    //subject-> cp
+    else if (payload === 'cp_flow') {
+      response = cp_flow[0];
+      response2 = cp_flow[1];
+      response3 = cp_flow[2];
+      response4 = cp_flow[3];
+      response4 = cp_flow[4];
+      response4 = cp_flow[5];
+
+      callSendAPI(sender_psid, response);
+      callSendAPI2(sender_psid, response2);
+      callSendAPI3(sender_psid, response3);
+      callSendAPI4(sender_psid, response4);
+      callSendAPI5(sender_psid, response5);
+      callSendAPI6(sender_psid, response6);
     }
     
 }
