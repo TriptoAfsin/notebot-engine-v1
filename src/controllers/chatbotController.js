@@ -23,6 +23,8 @@ const bce_words = require('./keywords/academic_words/subjects/bceWords');
 const cp_words = require('./keywords/academic_words/subjects/cpWords');
 //academic -> chem1
 const chem1_words = require('./keywords/academic_words/subjects/chem1Words');
+//academic -> phy1
+const phy1_words = require('./keywords/academic_words/subjects/phy1Words');
 
 
 const labWords = require('./keywords/academic_words/labWords');
@@ -91,6 +93,9 @@ const chem1_photo = require("./flows/botReplies/note_levels/level_1/level_1_subs
 const chem1_analy = require("./flows/botReplies/note_levels/level_1/level_1_subs/chem1/topics/chem1Analy");
 const chem1_colloid = require("./flows/botReplies/note_levels/level_1/level_1_subs/chem1/topics/chem1Coll");
 const chem1_acid_base = require("./flows/botReplies/note_levels/level_1/level_1_subs/chem1/topics/chem1Acibas");
+
+//academic flows -> phy1
+const phy1_flow = require("./flows/botReplies/note_levels/level_1/level_1_subs/phy1/phy1_flow");
 
 
 const labFlow = require('./flows/botReplies/labFlow');
@@ -205,6 +210,7 @@ function handleMessage(sender_psid, received_message) {
     const level4 = level_4_note_words;
     const bce = bce_words;
     const chem1 = chem1_words;
+    const phy1 = phy1_words;
     const cp = cp_words;
     const lab_report = labWords;
     const result = resultWords;
@@ -385,6 +391,22 @@ function handleMessage(sender_psid, received_message) {
       callSendAPI2(sender_psid, response2);
       callSendAPI3(sender_psid, response3);
       callSendAPI4(sender_psid, response4);
+    }
+
+     //academic -> phy1
+     else if (phy1.includes(received_message.text.toLowerCase())) {
+
+      response = phy1_flow[0];
+      response2 = phy1_flow[1];
+      response3 = phy1_flow[2];
+      response4 = phy1_flow[3];
+      response5 = phy1_flow[4];
+
+      callSendAPI(sender_psid, response);
+      callSendAPI2(sender_psid, response2);
+      callSendAPI3(sender_psid, response3);
+      callSendAPI4(sender_psid, response4);
+      callSendAPI5(sender_psid, response5);
     }
 
 
@@ -866,6 +888,37 @@ let handlePostback = async (sender_psid, received_postback) => {
       callSendAPI(sender_psid, response);
       callSendAPI2(sender_psid, response2);
     }
+
+    else if (payload === 'chem1_kinetics_flow') {
+      response = chem1_kinetic[0];
+      response2 = chem1_kinetic[1];
+      response3 = chem1_kinetic[2];
+      response4 = chem1_kinetic[3];
+      
+
+      callSendAPI(sender_psid, response);
+      callSendAPI2(sender_psid, response2);
+      callSendAPI3(sender_psid, response3);
+      callSendAPI4(sender_psid, response4);
+    }
+
+    //subject-> phy1
+    else if (payload === 'phy1_flow') {
+      response = phy1_flow[0];
+      response2 = phy1_flow[1];
+      response3 = phy1_flow[2];
+      response4 = phy1_flow[3];
+      response5 = phy1_flow[4];
+
+      callSendAPI(sender_psid, response);
+      callSendAPI2(sender_psid, response2);
+      callSendAPI3(sender_psid, response3);
+      callSendAPI4(sender_psid, response4);
+      callSendAPI5(sender_psid, response5);
+    }
+
+
+
 
     
     
