@@ -63,11 +63,24 @@ const bce_lang_func = require('./flows/botReplies/note_levels/level_1/level_1_su
 const bce_comm = require('./flows/botReplies/note_levels/level_1/level_1_subs/bce/topics/communicationBce');
 
 //academic flows -> cp
+const cp_flow = require("./flows/botReplies/note_levels/level_1/level_1_subs/cp/cp_flow");
+const cp_books = require("./flows/botReplies/note_levels/level_1/level_1_subs/cp/topics/booksCp");
+const cp_ques = require("./flows/botReplies/note_levels/level_1/level_1_subs/cp/topics/quesCp");
+const cp_condition = require("./flows/botReplies/note_levels/level_1/level_1_subs/cp/topics/conditionCp");
+const cp_fundamental = require("./flows/botReplies/note_levels/level_1/level_1_subs/cp/topics/fundamentalCp");
+const cp_loops = require("./flows/botReplies/note_levels/level_1/level_1_subs/cp/topics/loopCp");
+const cp_array = require("./flows/botReplies/note_levels/level_1/level_1_subs/cp/topics/arrayCp");
+const cp_function = require("./flows/botReplies/note_levels/level_1/level_1_subs/cp/topics/funcCp");
+const cp_string = require("./flows/botReplies/note_levels/level_1/level_1_subs/cp/topics/stringCp");
+const cp_suggestion = require("./flows/botReplies/note_levels/level_1/level_1_subs/cp/topics/suggestionCp");
+
+
+
 const labFlow = require('./flows/botReplies/labFlow');
 const routineFlow = require('./flows/botReplies/routineFlow');
 const resultFlow = require('./flows/botReplies/resultFlow');
 const syllabusFlow = require('./flows/botReplies/syllabusFlow');
-const cp_flow = require("./flows/botReplies/note_levels/level_1/level_1_subs/cp/cp_flow");
+
 
 
 
@@ -341,9 +354,8 @@ function handleMessage(sender_psid, received_message) {
       callSendAPI4(sender_psid, response4);
       callSendAPI5(sender_psid, response5);
       callSendAPI6(sender_psid, response6);
-      
-      
     }
+
 
     else if (lab_report.includes(received_message.text.toLowerCase())) {
 
@@ -613,6 +625,73 @@ let handlePostback = async (sender_psid, received_postback) => {
       callSendAPI5(sender_psid, response5);
       callSendAPI6(sender_psid, response6);
     }
+
+    else if (payload === 'books_cp_flow') {
+      response = cp_books[0];
+      response2 = cp_books[1];
+      response3 = cp_books[2];
+
+      callSendAPI(sender_psid, response);
+      callSendAPI2(sender_psid, response2);
+      callSendAPI3(sender_psid, response3);
+    }
+    else if (payload === 'ques_cp_flow') {
+      response = cp_ques[0];
+      response2 = cp_ques[1];
+      response3 = cp_ques[2];
+      response4 = cp_ques[3];
+
+      callSendAPI(sender_psid, response);
+      callSendAPI2(sender_psid, response2);
+      callSendAPI3(sender_psid, response3);
+      callSendAPI4(sender_psid, response4);
+    }
+
+    else if (payload === 'condition_cp_flow') {
+      response = cp_condition[0];
+     
+      callSendAPI(sender_psid, response);
+    }
+
+    else if (payload === 'fundamental_cp_flow') {
+      response = cp_fundamental[0];
+     
+      callSendAPI(sender_psid, response);
+    }
+    else if (payload === 'loop_cp_flow') {
+      response = cp_loops[0];
+     
+      callSendAPI(sender_psid, response);
+    }
+
+    else if (payload === 'array_cp_flow') {
+      response = cp_array[0];
+      response2 = cp_array[1];
+     
+      callSendAPI(sender_psid, response);
+      callSendAPI2(sender_psid, response2);
+    }
+    else if (payload === 'function_cp_flow') {
+      response = cp_function[0];
+      response2 = cp_function[1];
+     
+      callSendAPI(sender_psid, response);
+      callSendAPI2(sender_psid, response2);
+    }
+    else if (payload === 'string_cp_flow') {
+      response = cp_string[0];
+      response2 = cp_string[1];
+     
+      callSendAPI(sender_psid, response);
+      callSendAPI2(sender_psid, response2);
+    }
+    else if (payload === 'suggestion_cp_flow') {
+      response = cp_suggestion[1];
+      callSendAPI(sender_psid, response);
+    }
+
+
+
     
 }
 
