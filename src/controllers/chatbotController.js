@@ -96,6 +96,16 @@ const chem1_acid_base = require("./flows/botReplies/note_levels/level_1/level_1_
 
 //academic flows -> phy1
 const phy1_flow = require("./flows/botReplies/note_levels/level_1/level_1_subs/phy1/phy1_flow");
+const phy1_books = require("./flows/botReplies/note_levels/level_1/level_1_subs/phy1/topics/phy1Books");
+const phy1_ques = require("./flows/botReplies/note_levels/level_1/level_1_subs/phy1/topics/phy1Ques");
+const phy1_circular = require("./flows/botReplies/note_levels/level_1/level_1_subs/phy1/topics/phy1Circular");
+const phy1_hydro = require("./flows/botReplies/note_levels/level_1/level_1_subs/phy1/topics/phy1Hydro");
+const phy1_diffraction = require("./flows/botReplies/note_levels/level_1/level_1_subs/phy1/topics/phy1Diffrac");
+const phy1_interferrence = require("./flows/botReplies/note_levels/level_1/level_1_subs/phy1/topics/phy1Interfe");
+const phy1_polar = require("./flows/botReplies/note_levels/level_1/level_1_subs/phy1/topics/phy1Polar");
+const phy1_elasticity = require("./flows/botReplies/note_levels/level_1/level_1_subs/phy1/topics/phy1Elasti");
+const phy1_viscosity = require("./flows/botReplies/note_levels/level_1/level_1_subs/phy1/topics/phy1Visco");
+const phy1_surface = require("./flows/botReplies/note_levels/level_1/level_1_subs/phy1/topics/phy1Surface");
 
 
 const labFlow = require('./flows/botReplies/labFlow');
@@ -909,6 +919,113 @@ let handlePostback = async (sender_psid, received_postback) => {
       response4 = phy1_flow[3];
       response5 = phy1_flow[4];
 
+      callSendAPI(sender_psid, response);
+      callSendAPI2(sender_psid, response2);
+      callSendAPI3(sender_psid, response3);
+      callSendAPI4(sender_psid, response4);
+      callSendAPI5(sender_psid, response5);
+    }
+
+    else if (payload === 'phy1_books_flow') {
+      response = phy1_books[0];
+      response2 = phy1_books[1];
+      response3 = phy1_books[2];
+
+      callSendAPI(sender_psid, response);
+      callSendAPI2(sender_psid, response2);
+      callSendAPI3(sender_psid, response3);
+    }
+
+    else if (payload === 'phy1_ques_flow') {
+      response = phy1_ques[0];
+     
+      callSendAPI(sender_psid, response);
+    }
+
+    else if (payload === 'phy1_circular_flow') {
+      response = phy1_circular[0];
+      response2 = phy1_circular[1];
+      response3 = phy1_circular[2];
+      response4 = phy1_circular[3];
+
+      callSendAPI(sender_psid, response);
+      callSendAPI2(sender_psid, response2);
+      callSendAPI3(sender_psid, response3);
+      callSendAPI4(sender_psid, response4);
+    }
+
+    else if (payload === 'phy1_hydro_flow') {
+      response = phy1_hydro[0];
+      response2 = phy1_hydro[1];
+      response3 = phy1_hydro[2];
+      
+      callSendAPI(sender_psid, response);
+      callSendAPI2(sender_psid, response2);
+      callSendAPI3(sender_psid, response3);
+    }
+
+    else if (payload === 'phy1_diffraction_flow') {
+      response = phy1_diffraction[0];
+     
+      callSendAPI(sender_psid, response);
+    }
+
+    else if (payload === 'phy1_interfer_flow') {
+      response = phy1_interferrence[0];
+      response2 = phy1_interferrence[1];
+      response3 = phy1_interferrence[2];
+      response4 = phy1_interferrence[3];
+      
+      callSendAPI(sender_psid, response);
+      callSendAPI2(sender_psid, response2);
+      callSendAPI3(sender_psid, response3);
+      callSendAPI4(sender_psid, response4);
+    }
+
+    else if (payload === 'phy1_polar_flow') {
+      response = phy1_polar[0];
+      response2 = phy1_polar[1];
+      response3 = phy1_polar[2];
+      response4 = phy1_polar[3];
+      response5 = phy1_polar[4];
+      
+      callSendAPI(sender_psid, response);
+      callSendAPI2(sender_psid, response2);
+      callSendAPI3(sender_psid, response3);
+      callSendAPI4(sender_psid, response4);
+      callSendAPI5(sender_psid, response5);
+    }
+
+    else if (payload === 'phy1_elas_flow') {
+      response = phy1_elasticity[0];
+      response2 = phy1_elasticity[1];
+      response3 = phy1_elasticity[2];
+      response4 = phy1_elasticity[3];
+      response5 = phy1_elasticity[4];
+      
+      callSendAPI(sender_psid, response);
+      callSendAPI2(sender_psid, response2);
+      callSendAPI3(sender_psid, response3);
+      callSendAPI4(sender_psid, response4);
+      callSendAPI5(sender_psid, response5);
+    }
+
+    else if (payload === 'phy1_visco_flow') {
+      response = phy1_viscosity[0];
+      response2 = phy1_viscosity[1];
+      
+      
+      callSendAPI(sender_psid, response);
+      callSendAPI2(sender_psid, response2);
+    }
+
+    else if (payload === 'phy1_surface_flow') {
+      response = phy1_surface[0];
+      response2 = phy1_surface[1];
+      response3 = phy1_surface[2];
+      response4 = phy1_surface[3];
+      response5 = phy1_surface[4];
+      
       callSendAPI(sender_psid, response);
       callSendAPI2(sender_psid, response2);
       callSendAPI3(sender_psid, response3);
