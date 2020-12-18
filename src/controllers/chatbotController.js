@@ -21,6 +21,9 @@ const level_4_note_words = require('./keywords/academic_words/level4_word_note')
 const bce_words = require('./keywords/academic_words/subjects/bceWords');
 //academic -> cp
 const cp_words = require('./keywords/academic_words/subjects/cpWords');
+//academic -> chem1
+const chem1_words = require('./keywords/academic_words/subjects/chem1Words');
+
 
 const labWords = require('./keywords/academic_words/labWords');
 
@@ -74,6 +77,8 @@ const cp_function = require("./flows/botReplies/note_levels/level_1/level_1_subs
 const cp_string = require("./flows/botReplies/note_levels/level_1/level_1_subs/cp/topics/stringCp");
 const cp_suggestion = require("./flows/botReplies/note_levels/level_1/level_1_subs/cp/topics/suggestionCp");
 
+//academic flows -> chem1
+const chem1_flow = require("./flows/botReplies/note_levels/level_1/level_1_subs/chem1/chem1_flow");
 
 
 const labFlow = require('./flows/botReplies/labFlow');
@@ -187,6 +192,7 @@ function handleMessage(sender_psid, received_message) {
     const level3 = level_3_note_words;
     const level4 = level_4_note_words;
     const bce = bce_words;
+    const chem1 = chem1_words;
     const cp = cp_words;
     const lab_report = labWords;
     const result = resultWords;
@@ -354,6 +360,19 @@ function handleMessage(sender_psid, received_message) {
       callSendAPI4(sender_psid, response4);
       callSendAPI5(sender_psid, response5);
       callSendAPI6(sender_psid, response6);
+    }
+
+     //academic -> chem1
+     else if (chem1.includes(received_message.text.toLowerCase())) {
+
+      response = chem1_flow[0];
+      response2 = chem1_flow[1];
+      response3 = chem1_flow[2];
+      response4 = chem1_flow[3];
+
+      callSendAPI2(sender_psid, response2);
+      callSendAPI3(sender_psid, response3);
+      callSendAPI4(sender_psid, response4);
     }
 
 
@@ -689,6 +708,21 @@ let handlePostback = async (sender_psid, received_postback) => {
       response = cp_suggestion[1];
       callSendAPI(sender_psid, response);
     }
+
+
+    //subject-> chem1
+    else if (payload === 'che1_flow') {
+      response = chem1_flow[0];
+      response2 = chem1_flow[1];
+      response3 = chem1_flow[2];
+      response4 = chem1_flow[3];
+
+      callSendAPI(sender_psid, response);
+      callSendAPI2(sender_psid, response2);
+      callSendAPI3(sender_psid, response3);
+      callSendAPI4(sender_psid, response4);
+    }
+
 
 
 
