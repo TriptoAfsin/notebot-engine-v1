@@ -79,6 +79,18 @@ const cp_suggestion = require("./flows/botReplies/note_levels/level_1/level_1_su
 
 //academic flows -> chem1
 const chem1_flow = require("./flows/botReplies/note_levels/level_1/level_1_subs/chem1/chem1_flow");
+const chem1_books = require("./flows/botReplies/note_levels/level_1/level_1_subs/chem1/topics/chem1Books");
+const chem1_ques = require("./flows/botReplies/note_levels/level_1/level_1_subs/chem1/topics/chem1Ques");
+const chem1_period = require("./flows/botReplies/note_levels/level_1/level_1_subs/chem1/topics/chem1Perio");
+const chem1_dilute = require("./flows/botReplies/note_levels/level_1/level_1_subs/chem1/topics/chem1Dilu");
+const chem1_complex = require("./flows/botReplies/note_levels/level_1/level_1_subs/chem1/topics/chem1Complx");
+const chem1_bond = require("./flows/botReplies/note_levels/level_1/level_1_subs/chem1/topics/cehm1Bond");
+const chem1_kinetic = require("./flows/botReplies/note_levels/level_1/level_1_subs/chem1/topics/cehm1Kinetics");
+const chem1_equilibrium = require("./flows/botReplies/note_levels/level_1/level_1_subs/chem1/topics/chem1Equi");
+const chem1_photo = require("./flows/botReplies/note_levels/level_1/level_1_subs/chem1/topics/chem1Photo");
+const chem1_analy = require("./flows/botReplies/note_levels/level_1/level_1_subs/chem1/topics/chem1Analy");
+const chem1_colloid = require("./flows/botReplies/note_levels/level_1/level_1_subs/chem1/topics/chem1Coll");
+const chem1_acid_base = require("./flows/botReplies/note_levels/level_1/level_1_subs/chem1/topics/chem1Acibas");
 
 
 const labFlow = require('./flows/botReplies/labFlow');
@@ -723,9 +735,139 @@ let handlePostback = async (sender_psid, received_postback) => {
       callSendAPI4(sender_psid, response4);
     }
 
+    else if (payload === 'chem1_books_flow') {
+      response = chem1_books[0];
+      response2 = chem1_books[1];
+      response3 = chem1_books[2];
+      response4 = chem1_books[3];
+      response5 = chem1_books[4];
 
+      callSendAPI(sender_psid, response);
+      callSendAPI2(sender_psid, response2);
+      callSendAPI3(sender_psid, response3);
+      callSendAPI4(sender_psid, response4);
+      callSendAPI5(sender_psid, response5);
+    }
 
+    else if (payload === 'chem1_ques_flow') {
+      response = chem1_ques[0];
+      response2 = chem1_ques[1];
+      response3 = chem1_ques[2];
 
+      callSendAPI(sender_psid, response);
+      callSendAPI2(sender_psid, response2);
+      callSendAPI3(sender_psid, response3);
+    }
+
+    else if (payload === 'chem1_periodic_flow') {
+      response = chem1_period[0];
+      response2 = chem1_period[1];
+
+      callSendAPI(sender_psid, response);
+      callSendAPI2(sender_psid, response2);
+    }
+
+    else if (payload === 'chem1_dilute_flow') {
+      response = chem1_dilute[0];
+      response2 = chem1_dilute[1];
+      response3 = chem1_dilute[2];
+      response4 = chem1_dilute[3];
+      response5 = chem1_dilute[4];
+      response6 = chem1_dilute[5];
+
+      callSendAPI(sender_psid, response);
+      callSendAPI2(sender_psid, response2);
+      callSendAPI3(sender_psid, response3);
+      callSendAPI4(sender_psid, response4);
+      callSendAPI5(sender_psid, response5);
+      callSendAPI6(sender_psid, response6);
+    }
+
+    else if (payload === 'chem1_complx_flow') {
+      response = chem1_complex[0];
+      response2 = chem1_complex[1];
+      response3 = chem1_complex[2];
+      response4 = chem1_complex[3];
+      response5 = chem1_complex[4];
+      
+
+      callSendAPI(sender_psid, response);
+      callSendAPI2(sender_psid, response2);
+      callSendAPI3(sender_psid, response3);
+      callSendAPI4(sender_psid, response4);
+      callSendAPI5(sender_psid, response5);
+      
+    }
+
+    else if (payload === 'chem1_bond_flow') {
+      response = chem1_bond[0];
+      response2 = chem1_bond[1];
+      
+
+      callSendAPI(sender_psid, response);
+      callSendAPI2(sender_psid, response2);
+    }
+
+    else if (payload === 'chem1_equi_flow') {
+      response = chem1_equilibrium[0];
+      response2 = chem1_equilibrium[1];
+      response3 = chem1_equilibrium[2];
+      response4 = chem1_equilibrium[3];
+      
+
+      callSendAPI(sender_psid, response);
+      callSendAPI2(sender_psid, response2);
+      callSendAPI3(sender_psid, response3);
+      callSendAPI4(sender_psid, response4);
+    }
+
+    else if (payload === 'chem1_photo_flow') {
+      response = chem1_photo[0];
+      response2 = chem1_photo[1];
+      response3 = chem1_photo[2];
+      
+
+      callSendAPI(sender_psid, response);
+      callSendAPI2(sender_psid, response2);
+      callSendAPI3(sender_psid, response3);
+    }
+
+    else if (payload === 'chem1_analy_flow') {
+      response = chem1_analy[0];
+      response2 = chem1_analy[1];
+      response3 = chem1_analy[2];
+      response4 = chem1_analy[3];
+      response5 = chem1_analy[4];
+      
+
+      callSendAPI(sender_psid, response);
+      callSendAPI2(sender_psid, response2);
+      callSendAPI3(sender_psid, response3);
+      callSendAPI4(sender_psid, response4);
+      callSendAPI5(sender_psid, response5);
+    }
+
+    else if (payload === 'chem1_coll_flow') {
+      response = chem1_colloid[0];
+      response2 = chem1_colloid[1];
+      response3 = chem1_colloid[2];
+      
+
+      callSendAPI(sender_psid, response);
+      callSendAPI2(sender_psid, response2);
+      callSendAPI3(sender_psid, response3);
+    }
+
+    else if (payload === 'chem1_acid_base_flow') {
+      response = chem1_acid_base[0];
+      response2 = chem1_acid_base[1];
+      
+
+      callSendAPI(sender_psid, response);
+      callSendAPI2(sender_psid, response2);
+    }
+
+    
     
 }
 
