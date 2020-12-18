@@ -402,7 +402,6 @@ function handleMessage(sender_psid, received_message) {
       response4 = phy1_flow[3];
       response5 = phy1_flow[4];
 
-      callSendAPI(sender_psid, response);
       callSendAPI2(sender_psid, response2);
       callSendAPI3(sender_psid, response3);
       callSendAPI4(sender_psid, response4);
