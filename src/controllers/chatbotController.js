@@ -138,6 +138,30 @@ const math1_axes = require("./flows/botReplies/note_levels/level_1/level_1_subs/
 
 //academic flows -> ntf
 const ntf_flow = require("./flows/botReplies/note_levels/level_1/level_1_subs/ntf/ntf_flow");
+const ntf_books = require("./flows/botReplies/note_levels/level_1/level_1_subs/ntf/topics/ntfBooks");
+const ntf_hand_notes = require("./flows/botReplies/note_levels/level_1/level_1_subs/ntf/topics/ntfHandNotes");
+const ntf_question = require("./flows/botReplies/note_levels/level_1/level_1_subs/ntf/topics/ntfQues");
+const ntf_suggestion = require("./flows/botReplies/note_levels/level_1/level_1_subs/ntf/topics/ntfSuggestion");
+const ntf_intro = require("./flows/botReplies/note_levels/level_1/level_1_subs/ntf/topics/ntfIntro");
+const ntf_cotton = require("./flows/botReplies/note_levels/level_1/level_1_subs/ntf/topics/cotton/ntfCotton");
+const ntf_cotton_handNote = require("./flows/botReplies/note_levels/level_1/level_1_subs/ntf/topics/cotton/cotton_topics/cottonNotes");
+const ntf_cotton_slide = require("./flows/botReplies/note_levels/level_1/level_1_subs/ntf/topics/cotton/cotton_topics/cottonSlides");
+const ntf_cotton_video = require("./flows/botReplies/note_levels/level_1/level_1_subs/ntf/topics/cotton/cotton_topics/cottonVideos");
+const ntf_flax = require("./flows/botReplies/note_levels/level_1/level_1_subs/ntf/topics/ntfFlax");
+const ntf_wool = require("./flows/botReplies/note_levels/level_1/level_1_subs/ntf/topics/wool/ntfWool");
+const ntf_wool_handNote = require("./flows/botReplies/note_levels/level_1/level_1_subs/ntf/topics/wool/wool_topics/woolNotes");
+const ntf_wool_slides = require("./flows/botReplies/note_levels/level_1/level_1_subs/ntf/topics/wool/wool_topics/woolSlides");
+const ntf_wool_videos = require("./flows/botReplies/note_levels/level_1/level_1_subs/ntf/topics/wool/wool_topics/woolVideos");
+const ntf_jute = require("./flows/botReplies/note_levels/level_1/level_1_subs/ntf/topics/ntfJute");
+const ntf_silk = require("./flows/botReplies/note_levels/level_1/level_1_subs/ntf/topics/ntfSilk");
+const ntf_sisal = require("./flows/botReplies/note_levels/level_1/level_1_subs/ntf/topics/ntfSisal");
+const ntf_hemp = require("./flows/botReplies/note_levels/level_1/level_1_subs/ntf/topics/ntfHemp");
+const ntf_palf = require("./flows/botReplies/note_levels/level_1/level_1_subs/ntf/topics/ntfPalf");
+const ntf_kapok = require("./flows/botReplies/note_levels/level_1/level_1_subs/ntf/topics/ntfKapok");
+const ntf_asbestos = require("./flows/botReplies/note_levels/level_1/level_1_subs/ntf/topics/ntfAsbestos");
+const ntf_other_fibre = require("./flows/botReplies/note_levels/level_1/level_1_subs/ntf/topics/ntfOtherFibres");
+
+
 
 
 
@@ -1312,13 +1336,13 @@ let handlePostback = async (sender_psid, received_postback) => {
 
     //subject-> ntf
     else if (payload === 'ntf_flow') {
-      response = math1_flow[0];
-      response2 = math1_flow[1];
-      response3 = math1_flow[2];
-      response4 = math1_flow[3];
-      response5 = math1_flow[4];
-      response6 = math1_flow[5];
-      response7 = math1_flow[6];
+      response = ntf_flow[0];
+      response2 = ntf_flow[1];
+      response3 = ntf_flow[2];
+      response4 = ntf_flow[3];
+      response5 = ntf_flow[4];
+      response6 = ntf_flow[5];
+      response7 = ntf_flow[6];
 
       callSendAPI(sender_psid, response);
       callSendAPI2(sender_psid, response2);
@@ -1327,6 +1351,220 @@ let handlePostback = async (sender_psid, received_postback) => {
       callSendAPI5(sender_psid, response5);
       callSendAPI6(sender_psid, response6);
       callSendAPI7(sender_psid, response7);
+    }
+
+    else if (payload === 'ntf_books_flow') {
+      response = ntf_books[0];
+      response2 = ntf_books[1];
+      response3 = ntf_books[2];
+
+      callSendAPI(sender_psid, response);
+      callSendAPI2(sender_psid, response2);
+      callSendAPI3(sender_psid, response3);
+    }
+
+    else if (payload === 'ntf_hnotes_flow') {
+      response = ntf_hand_notes[0];
+      response2 = ntf_hand_notes[1];
+      response3 = ntf_hand_notes[2];
+      response4 = ntf_hand_notes[3];
+      response5 = ntf_hand_notes[4];
+
+      callSendAPI(sender_psid, response);
+      callSendAPI2(sender_psid, response2);
+      callSendAPI3(sender_psid, response3);
+      callSendAPI4(sender_psid, response4);
+      callSendAPI5(sender_psid, response5);
+    }
+
+    else if (payload === 'ntf_ques_flow') {
+      response = ntf_question[0];
+      response2 = ntf_question[1];
+
+      callSendAPI(sender_psid, response);
+      callSendAPI2(sender_psid, response2);
+    }
+
+    else if (payload === 'ntf_suggestion_flow') {
+      response = ntf_suggestion[0];
+      response2 = ntf_suggestion[1];
+      response3 = ntf_suggestion[2];
+
+      callSendAPI(sender_psid, response);
+      callSendAPI2(sender_psid, response2);
+      callSendAPI3(sender_psid, response3);
+    }
+
+    else if (payload === 'ntf_intro_flow') {
+      response = ntf_intro[0];
+      response2 = ntf_intro[1];
+      response3 = ntf_intro[2];
+      response4 = ntf_intro[3];
+
+      callSendAPI(sender_psid, response);
+      callSendAPI2(sender_psid, response2);
+      callSendAPI3(sender_psid, response3);
+      callSendAPI4(sender_psid, response4);
+    }
+
+    else if (payload === 'ntf_cotton_flow') {
+      response = ntf_cotton[0];
+
+      callSendAPI(sender_psid, response);
+    }
+
+    else if (payload === 'ntf_cotton_hand_flow') {
+      response = ntf_cotton_handNote[0];
+      response2 = ntf_cotton_handNote[1];
+
+      callSendAPI(sender_psid, response);
+      callSendAPI2(sender_psid, response2);
+    }
+
+    else if (payload === 'ntf_slides_flow') {
+      response = ntf_intro[0];
+      response2 = ntf_intro[1];
+      response3 = ntf_intro[2];
+      response4 = ntf_intro[3];
+      response5 = ntf_intro[4];
+      response6 = ntf_intro[5];
+      response7 = ntf_intro[6];
+      response8 = ntf_intro[7];
+
+      callSendAPI(sender_psid, response);
+      callSendAPI2(sender_psid, response2);
+      callSendAPI3(sender_psid, response3);
+      callSendAPI4(sender_psid, response4);
+      callSendAPI5(sender_psid, response5);
+      callSendAPI6(sender_psid, response6);
+      callSendAPI7(sender_psid, response7);
+      callSendAPI8(sender_psid, response8);
+    }
+
+    else if (payload === 'ntf_videos_flow') {
+      response = ntf_cotton_video[0];
+
+      callSendAPI(sender_psid, response);
+    }
+
+    else if (payload === 'ntf_flax_flow') {
+      response = ntf_flax[0];
+      response2 = ntf_flax[1];
+      response3 = ntf_flax[2];
+      response4 = ntf_flax[3];
+
+      callSendAPI(sender_psid, response);
+      callSendAPI2(sender_psid, response2);
+      callSendAPI3(sender_psid, response3);
+      callSendAPI4(sender_psid, response4);
+    }
+
+    else if (payload === 'ntf_wool_flow') {
+      response = ntf_wool[0];
+
+      callSendAPI(sender_psid, response);
+    }
+
+    else if (payload === 'ntf_wool_hand_flow') {
+      response = ntf_wool_handNote[0];
+      response2 = ntf_wool_handNote[1];
+
+      callSendAPI(sender_psid, response);
+      callSendAPI2(sender_psid, response2);
+    }
+
+    else if (payload === 'ntf_wool_slides_flow') {
+      response = ntf_wool_slides[0];
+      response2 = ntf_wool_slides[1];
+      response3 = ntf_wool_slides[2];
+      response4 = ntf_wool_slides[3];
+
+      callSendAPI(sender_psid, response);
+      callSendAPI2(sender_psid, response2);
+      callSendAPI3(sender_psid, response3);
+      callSendAPI4(sender_psid, response4);
+    }
+
+    else if (payload === 'ntf_wool_videos_flow') {
+      response = ntf_wool_videos[0];
+
+      callSendAPI(sender_psid, response);
+    }
+
+    else if (payload === 'ntf_jute_flow') {
+      response = ntf_jute[0];
+      response2 = ntf_jute[1];
+      response3 = ntf_jute[2];
+      response4 = ntf_jute[3];
+      response5 = ntf_jute[4];
+      response6 = ntf_jute[5];
+
+
+
+      callSendAPI(sender_psid, response);
+      callSendAPI2(sender_psid, response2);
+      callSendAPI3(sender_psid, response3);
+      callSendAPI4(sender_psid, response4);
+      callSendAPI5(sender_psid, response5);
+      callSendAPI6(sender_psid, response6);
+    }
+
+    else if (payload === 'ntf_silk_flow') {
+      response = ntf_silk[0];
+      response2 = ntf_silk[1];
+      response3 = ntf_silk[2];
+      response4 = ntf_silk[3];
+      response5 = ntf_silk[4];
+      response6 = ntf_silk[5];
+
+
+
+      callSendAPI(sender_psid, response);
+      callSendAPI2(sender_psid, response2);
+      callSendAPI3(sender_psid, response3);
+      callSendAPI4(sender_psid, response4);
+      callSendAPI5(sender_psid, response5);
+      callSendAPI6(sender_psid, response6);
+    }
+
+    else if (payload === 'ntf_sisal_flow') {
+      response = ntf_sisal[0];
+
+      callSendAPI(sender_psid, response);
+    }
+
+    else if (payload === 'ntf_hemp_flow') {
+      response = ntf_hemp[0];
+
+      callSendAPI(sender_psid, response);
+    }
+
+    else if (payload === 'ntf_palf_flow') {
+      response = ntf_palf[0];
+      response2 = ntf_palf[1];
+
+      callSendAPI(sender_psid, response);
+      callSendAPI2(sender_psid, response2);
+    }
+
+    else if (payload === 'ntf_kapok_flow') {
+      response = ntf_kapok[0];
+
+      callSendAPI(sender_psid, response);
+    }
+
+    else if (payload === 'ntf_asbestos_flow') {
+      response = ntf_asbestos[0];
+
+      callSendAPI(sender_psid, response);
+    }
+
+    else if (payload === 'ntf_other_fib_flow') {
+      response = ntf_other_fibre[0];
+      response2 = ntf_other_fibre[1];
+
+      callSendAPI(sender_psid, response);
+      callSendAPI2(sender_psid, response2);
     }
 
 
