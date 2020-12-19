@@ -25,6 +25,8 @@ const cp_words = require('./keywords/academic_words/subjects/cpWords');
 const chem1_words = require('./keywords/academic_words/subjects/chem1Words');
 //academic -> phy1
 const phy1_words = require('./keywords/academic_words/subjects/phy1Words');
+//academic -> math1
+const math1_words = require('./keywords/academic_words/subjects/math1Words');
 
 
 const labWords = require('./keywords/academic_words/labWords');
@@ -106,6 +108,10 @@ const phy1_polar = require("./flows/botReplies/note_levels/level_1/level_1_subs/
 const phy1_elasticity = require("./flows/botReplies/note_levels/level_1/level_1_subs/phy1/topics/phy1Elasti");
 const phy1_viscosity = require("./flows/botReplies/note_levels/level_1/level_1_subs/phy1/topics/phy1Visco");
 const phy1_surface = require("./flows/botReplies/note_levels/level_1/level_1_subs/phy1/topics/phy1Surface");
+
+
+//academic flows -> math1
+const math1_flow = require("./flows/botReplies/note_levels/level_1/level_1_subs/math1/math1_flow");
 
 
 const labFlow = require('./flows/botReplies/labFlow');
@@ -221,6 +227,7 @@ function handleMessage(sender_psid, received_message) {
     const bce = bce_words;
     const chem1 = chem1_words;
     const phy1 = phy1_words;
+    const math1 = math1_words;
     const cp = cp_words;
     const lab_report = labWords;
     const result = resultWords;
@@ -411,6 +418,21 @@ function handleMessage(sender_psid, received_message) {
       response3 = phy1_flow[2];
       response4 = phy1_flow[3];
       response5 = phy1_flow[4];
+
+      callSendAPI2(sender_psid, response2);
+      callSendAPI3(sender_psid, response3);
+      callSendAPI4(sender_psid, response4);
+      callSendAPI5(sender_psid, response5);
+    }
+
+    //academic -> math1
+    else if (math1.includes(received_message.text.toLowerCase())) {
+
+      response = math1_flow[0];
+      response2 = math1_flow[1];
+      response3 = math1_flow[2];
+      response4 = math1_flow[3];
+      response5 = math1_flow[4];
 
       callSendAPI2(sender_psid, response2);
       callSendAPI3(sender_psid, response3);
@@ -1026,6 +1048,21 @@ let handlePostback = async (sender_psid, received_postback) => {
       response4 = phy1_surface[3];
       response5 = phy1_surface[4];
       
+      callSendAPI(sender_psid, response);
+      callSendAPI2(sender_psid, response2);
+      callSendAPI3(sender_psid, response3);
+      callSendAPI4(sender_psid, response4);
+      callSendAPI5(sender_psid, response5);
+    }
+
+    //subject-> math1
+    else if (payload === 'math1_flow') {
+      response = math1_flow[0];
+      response2 = math1_flow[1];
+      response3 = math1_flow[2];
+      response4 = math1_flow[3];
+      response5 = math1_flow[4];
+
       callSendAPI(sender_psid, response);
       callSendAPI2(sender_psid, response2);
       callSendAPI3(sender_psid, response3);
