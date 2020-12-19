@@ -4,7 +4,7 @@ let ntfWool = [
             "type": "template",
             "payload": {
                 "template_type": "button",
-                "text": "🟩 Select Topic for Cotton - ",
+                "text": "🟩 Select Topic for Wool - ",
                 "buttons": [
                     {
                         "type": "postback",

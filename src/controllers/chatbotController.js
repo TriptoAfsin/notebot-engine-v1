@@ -29,6 +29,8 @@ const phy1_words = require('./keywords/academic_words/subjects/phy1Words');
 const math1_words = require('./keywords/academic_words/subjects/math1Words');
 //academic -> ntf
 const ntf_words = require('./keywords/academic_words/subjects/ntfWords');
+//academic -> em
+const em_words = require('./keywords/academic_words/subjects/emWords');
 
 
 
@@ -162,6 +164,10 @@ const ntf_asbestos = require("./flows/botReplies/note_levels/level_1/level_1_sub
 const ntf_other_fibre = require("./flows/botReplies/note_levels/level_1/level_1_subs/ntf/topics/ntfOtherFibres");
 
 
+//academic flows -> em
+const em_flow = require("./flows/botReplies/note_levels/level_1/level_1_subs/em/em_flow");
+
+
 
 
 
@@ -283,6 +289,7 @@ function handleMessage(sender_psid, received_message) {
     const math1 = math1_words;
     const cp = cp_words;
     const ntf = ntf_words;
+    const em = em_words;
 
     const quiz = quiz_words;
     const lab_report = labWords;
@@ -524,6 +531,24 @@ function handleMessage(sender_psid, received_message) {
       callSendAPI5(sender_psid, response5);
       callSendAPI6(sender_psid, response6);
       callSendAPI7(sender_psid, response7);
+    }
+
+    //academic -> em
+    else if (em.includes(received_message.text.toLowerCase())) {
+
+      response = em_flow[0];
+      response2 = em_flow[1];
+      response3 = em_flow[2];
+      response4 = em_flow[3];
+      response5 = em_flow[4];
+      response6 = em_flow[5];
+      
+
+      callSendAPI2(sender_psid, response2);
+      callSendAPI3(sender_psid, response3);
+      callSendAPI4(sender_psid, response4);
+      callSendAPI5(sender_psid, response5);
+      callSendAPI6(sender_psid, response6);
     }
 
 
@@ -1565,6 +1590,23 @@ let handlePostback = async (sender_psid, received_postback) => {
 
       callSendAPI(sender_psid, response);
       callSendAPI2(sender_psid, response2);
+    }
+
+    //subject-> ntf
+    else if (payload === 'em_flow') {
+      response = em_flow[0];
+      response2 = em_flow[1];
+      response3 = em_flow[2];
+      response4 = em_flow[3];
+      response5 = em_flow[4];
+      response6 = em_flow[5];
+      
+      callSendAPI(sender_psid, response);
+      callSendAPI2(sender_psid, response2);
+      callSendAPI3(sender_psid, response3);
+      callSendAPI4(sender_psid, response4);
+      callSendAPI5(sender_psid, response5);
+      callSendAPI6(sender_psid, response6);
     }
 
 
