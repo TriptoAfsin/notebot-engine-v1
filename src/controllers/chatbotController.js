@@ -27,8 +27,12 @@ const chem1_words = require('./keywords/academic_words/subjects/chem1Words');
 const phy1_words = require('./keywords/academic_words/subjects/phy1Words');
 //academic -> math1
 const math1_words = require('./keywords/academic_words/subjects/math1Words');
+//academic -> ntf
+const ntf_words = require('./keywords/academic_words/subjects/ntfWords');
 
 
+
+const quiz_words = require('./keywords/academic_words/quizWords');
 const labWords = require('./keywords/academic_words/labWords');
 
 const routineWords = require('./keywords/academic_words/routineWords');
@@ -50,6 +54,7 @@ const greetReplies = require('./keywords/replies/greetingsReply');
 
 //keyword flows
 const notesFlow = require('./flows/botReplies/noteFlow');
+const quizFlow = require('./flows/botReplies/quizFlow');
 const level_1_notes = require('./flows/botReplies/note_levels/level_1/level_1_flow');
 const level_2_notes = require('./flows/botReplies/note_levels/level_2/level_2_flow');
 const level_3_notes = require('./flows/botReplies/note_levels/level_3/level_3_flow');
@@ -130,6 +135,9 @@ const math1_matrix = require("./flows/botReplies/note_levels/level_1/level_1_sub
 const math1_coOrd = require("./flows/botReplies/note_levels/level_1/level_1_subs/math1/topics/math1CoOrd");
 const math1_linear = require("./flows/botReplies/note_levels/level_1/level_1_subs/math1/topics/math1Linear");
 const math1_axes = require("./flows/botReplies/note_levels/level_1/level_1_subs/math1/topics/math1Axes");
+
+//academic flows -> ntf
+const ntf_flow = require("./flows/botReplies/note_levels/level_1/level_1_subs/ntf/ntf_flow");
 
 
 
@@ -250,6 +258,9 @@ function handleMessage(sender_psid, received_message) {
     const phy1 = phy1_words;
     const math1 = math1_words;
     const cp = cp_words;
+    const ntf = ntf_words;
+
+    const quiz = quiz_words;
     const lab_report = labWords;
     const result = resultWords;
     const routine = routineWords;
@@ -310,6 +321,16 @@ function handleMessage(sender_psid, received_message) {
       response2 = notesFlow[1];
       callSendAPI2(sender_psid, response2)
       
+    }
+
+    else if (quiz.some(word => received_message.text.toLowerCase().includes(word))) {
+
+      response = quizFlow[0];
+      response2 = quizFlow[1];
+      response3 = quizFlow[2];
+
+      callSendAPI2(sender_psid, response2)
+      callSendAPI3(sender_psid, response3)
     }
 
     else if (level1.some(word => received_message.text.toLowerCase().includes(word))) {
@@ -459,6 +480,26 @@ function handleMessage(sender_psid, received_message) {
       callSendAPI3(sender_psid, response3);
       callSendAPI4(sender_psid, response4);
       callSendAPI5(sender_psid, response5);
+    }
+
+    //academic -> ntf
+    else if (ntf.includes(received_message.text.toLowerCase())) {
+
+      response = ntf_flow[0];
+      response2 = ntf_flow[1];
+      response3 = ntf_flow[2];
+      response4 = ntf_flow[3];
+      response5 = ntf_flow[4];
+      response6 = ntf_flow[5];
+      response7 = ntf_flow[6];
+      
+
+      callSendAPI2(sender_psid, response2);
+      callSendAPI3(sender_psid, response3);
+      callSendAPI4(sender_psid, response4);
+      callSendAPI5(sender_psid, response5);
+      callSendAPI6(sender_psid, response6);
+      callSendAPI7(sender_psid, response7);
     }
 
 
@@ -1255,6 +1296,25 @@ let handlePostback = async (sender_psid, received_postback) => {
     
       callSendAPI(sender_psid, response);
       callSendAPI2(sender_psid, response2);
+    }
+
+    //subject-> ntf
+    else if (payload === 'ntf_flow') {
+      response = math1_flow[0];
+      response2 = math1_flow[1];
+      response3 = math1_flow[2];
+      response4 = math1_flow[3];
+      response5 = math1_flow[4];
+      response6 = math1_flow[5];
+      response7 = math1_flow[6];
+
+      callSendAPI(sender_psid, response);
+      callSendAPI2(sender_psid, response2);
+      callSendAPI3(sender_psid, response3);
+      callSendAPI4(sender_psid, response4);
+      callSendAPI5(sender_psid, response5);
+      callSendAPI6(sender_psid, response6);
+      callSendAPI7(sender_psid, response7);
     }
 
 

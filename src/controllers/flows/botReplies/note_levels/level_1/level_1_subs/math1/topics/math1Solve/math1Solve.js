@@ -30,7 +30,7 @@ let math1Solve = [
             "type": "template",
             "payload": {
                 "template_type": "button",
-                "text": "🟩 Select Topic for Math-I -  ",
+                "text": "🟩 Solves -   ",
                 "buttons": [
                     {
                         "type": "postback",
