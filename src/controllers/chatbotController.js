@@ -1298,6 +1298,18 @@ let handlePostback = async (sender_psid, received_postback) => {
       callSendAPI2(sender_psid, response2);
     }
 
+    //quizflow
+    else if (payload === 'quiz_flow') {
+      response = quizFlow[0];
+      response2 = quizFlow[1];
+      response3 = quizFlow[2];
+
+      callSendAPI(sender_psid, response);
+      callSendAPI2(sender_psid, response2);
+      callSendAPI3(sender_psid, response3);
+    }
+
+
     //subject-> ntf
     else if (payload === 'ntf_flow') {
       response = math1_flow[0];
