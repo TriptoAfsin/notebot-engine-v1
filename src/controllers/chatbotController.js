@@ -112,6 +112,27 @@ const phy1_surface = require("./flows/botReplies/note_levels/level_1/level_1_sub
 
 //academic flows -> math1
 const math1_flow = require("./flows/botReplies/note_levels/level_1/level_1_subs/math1/math1_flow");
+const math1_books = require("./flows/botReplies/note_levels/level_1/level_1_subs/math1/topics/math1Books");
+const math1_question = require("./flows/botReplies/note_levels/level_1/level_1_subs/math1/topics/math1Ques");
+const math1_solve = require("./flows/botReplies/note_levels/level_1/level_1_subs/math1/topics/math1Solve/math1Solve");
+const math1_solve_diff = require("./flows/botReplies/note_levels/level_1/level_1_subs/math1/topics/math1Solve/solves/diffSolve");
+const math1_solve_coord = require("./flows/botReplies/note_levels/level_1/level_1_subs/math1/topics/math1Solve/solves/coOrdSolve");
+const math1_solve_integre = require("./flows/botReplies/note_levels/level_1/level_1_subs/math1/topics/math1Solve/solves/integrationSolve");
+const math1_solve_linear = require("./flows/botReplies/note_levels/level_1/level_1_subs/math1/topics/math1Solve/solves/linearSolve");
+const math1_convergence = require("./flows/botReplies/note_levels/level_1/level_1_subs/math1/topics/math1Conver");
+const math1_expansion = require("./flows/botReplies/note_levels/level_1/level_1_subs/math1/topics/math1Exapnasion");
+const math1_differntitation = require("./flows/botReplies/note_levels/level_1/level_1_subs/math1/topics/math1Differnti");
+const math1_integration = require("./flows/botReplies/note_levels/level_1/level_1_subs/math1/topics/math1Integreation");
+const math1_extrema = require("./flows/botReplies/note_levels/level_1/level_1_subs/math1/topics/math1Extremea");
+const math1_conics = require("./flows/botReplies/note_levels/level_1/level_1_subs/math1/topics/math1Conics");
+const math1_vector = require("./flows/botReplies/note_levels/level_1/level_1_subs/math1/topics/math1Vector");
+const math1_matrix = require("./flows/botReplies/note_levels/level_1/level_1_subs/math1/topics/math1Matrix");
+const math1_coOrd = require("./flows/botReplies/note_levels/level_1/level_1_subs/math1/topics/math1CoOrd");
+const math1_linear = require("./flows/botReplies/note_levels/level_1/level_1_subs/math1/topics/math1Linear");
+const math1_axes = require("./flows/botReplies/note_levels/level_1/level_1_subs/math1/topics/math1Axes");
+
+
+
 
 
 const labFlow = require('./flows/botReplies/labFlow');
@@ -1069,6 +1090,174 @@ let handlePostback = async (sender_psid, received_postback) => {
       callSendAPI4(sender_psid, response4);
       callSendAPI5(sender_psid, response5);
     }
+
+    else if (payload === 'math1_books_flow') {
+      response = math1_books[0];
+      response2 = math1_books[1];
+      response3 = math1_books[2];
+
+      callSendAPI(sender_psid, response);
+      callSendAPI2(sender_psid, response2);
+      callSendAPI3(sender_psid, response3);
+    }
+
+    else if (payload === 'math1_ques_flow') {
+      response = math1_question[0];
+
+      callSendAPI(sender_psid, response);
+    }
+
+    else if (payload === 'math1_solve18_flow') {
+      response = math1_solve[0];
+      response2 = math1_solve[1];
+
+      callSendAPI(sender_psid, response);
+      callSendAPI2(sender_psid, response2);
+    }
+
+    else if (payload === 'math1_diff_solve_flow') {
+      response = math1_solve_diff[0];
+      response2 = math1_solve_diff[1];
+      response3 = math1_solve_diff[2];
+
+      callSendAPI(sender_psid, response);
+      callSendAPI2(sender_psid, response2);
+      callSendAPI3(sender_psid, response3);
+    }
+
+    else if (payload === 'math1_coord_solve_flow') {
+      response = math1_solve_coord[0];
+
+      callSendAPI(sender_psid, response);
+    }
+
+    else if (payload === 'math1_integreation_solve_flow') {
+      response = math1_solve_integre[0];
+
+      callSendAPI(sender_psid, response);
+    }
+
+    
+    else if (payload === 'math1_linear_solve_flow') {
+      response = math1_solve_linear[0];
+      response2 = math1_solve_linear[1];
+      response3 = math1_solve_linear[2];
+
+      callSendAPI(sender_psid, response);
+      callSendAPI2(sender_psid, response2);
+      callSendAPI3(sender_psid, response3);
+    }
+
+    else if (payload === 'math1_conv_div_flow') {
+      response = math1_convergence[0];
+      response2 = math1_convergence[1];
+      
+
+      callSendAPI(sender_psid, response);
+      callSendAPI2(sender_psid, response2);
+    }
+
+    else if (payload === 'math1_exapnsion_flow') {
+      response = math1_expansion[0];
+      
+      callSendAPI(sender_psid, response);
+    }
+
+    else if (payload === 'math1_diff_flow') {
+      response = math1_differntitation[0];
+      response2 = math1_differntitation[1];
+      response3 = math1_differntitation[2];
+      response4 = math1_differntitation[3];
+      response5 = math1_differntitation[4];
+      
+
+      callSendAPI(sender_psid, response);
+      callSendAPI2(sender_psid, response2);
+      callSendAPI3(sender_psid, response3);
+      callSendAPI4(sender_psid, response4);
+      callSendAPI5(sender_psid, response5);
+    }
+
+    else if (payload === 'math1_integre_flow') {
+      response = math1_integration[0];
+      response2 = math1_integration[1];
+      response3 = math1_integration[2];
+      response4 = math1_integration[3];
+      
+      
+
+      callSendAPI(sender_psid, response);
+      callSendAPI2(sender_psid, response2);
+      callSendAPI3(sender_psid, response3);
+      callSendAPI4(sender_psid, response4);
+    }
+
+    else if (payload === 'math1_extreme_flow') {
+      response = math1_extrema[0];
+      response2 = math1_extrema[1];
+      
+      
+
+      callSendAPI(sender_psid, response);
+      callSendAPI2(sender_psid, response2);
+    }
+
+    else if (payload === 'math1_conics_flow') {
+      response = math1_conics[0];
+      
+      callSendAPI(sender_psid, response);
+    }
+
+    else if (payload === 'math1_vector_flow') {
+      response = math1_vector[0];
+      response2 = math1_vector[1];
+      
+      callSendAPI(sender_psid, response);
+      callSendAPI2(sender_psid, response2);
+    }
+
+    else if (payload === 'math1_matrix_flow') {
+      response = math1_matrix[0];
+      response2 = math1_matrix[1];
+      response3 = math1_matrix[2];
+    
+      callSendAPI(sender_psid, response);
+      callSendAPI2(sender_psid, response2);
+      callSendAPI3(sender_psid, response3);
+    }
+
+    else if (payload === 'math1_co_ord_flow') {
+      response = math1_coOrd[0];
+      response2 = math1_coOrd[1];
+      response3 = math1_coOrd[2];
+      response4 = math1_coOrd[3];
+      response5 = math1_coOrd[4];
+      
+
+      callSendAPI(sender_psid, response);
+      callSendAPI2(sender_psid, response2);
+      callSendAPI3(sender_psid, response3);
+      callSendAPI4(sender_psid, response4);
+      callSendAPI5(sender_psid, response5);
+    }
+
+    else if (payload === 'math1_linear_flow') {
+      response = math1_linear[0];
+      response2 = math1_linear[1];
+    
+      callSendAPI(sender_psid, response);
+      callSendAPI2(sender_psid, response2);
+    }
+
+    else if (payload === 'math1_change_axes_flow') {
+      response = math1_axes[0];
+      response2 = math1_axes[1];
+    
+      callSendAPI(sender_psid, response);
+      callSendAPI2(sender_psid, response2);
+    }
+
+
 
 
 

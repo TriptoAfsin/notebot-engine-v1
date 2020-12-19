@@ -6,7 +6,8 @@ const math1_words = [
     "mathematics 1",
     "math-1",
     "ম্য়াথ 1",
-    "গণিত 1"
+    "গণিত 1",
+    "math 1"
 ];
 
 
