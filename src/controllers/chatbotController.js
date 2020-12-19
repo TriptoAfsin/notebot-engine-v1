@@ -31,6 +31,8 @@ const math1_words = require('./keywords/academic_words/subjects/math1Words');
 const ntf_words = require('./keywords/academic_words/subjects/ntfWords');
 //academic -> em
 const em_words = require('./keywords/academic_words/subjects/emWords');
+//academic -> bfs
+const bfs_words = require('./keywords/academic_words/subjects/bfsWords');
 
 
 
@@ -180,6 +182,10 @@ const em_corrosion = require("./flows/botReplies/note_levels/level_1/level_1_sub
 const em_alloy = require("./flows/botReplies/note_levels/level_1/level_1_subs/em/topics/emAlloy");
 const em_composites = require("./flows/botReplies/note_levels/level_1/level_1_subs/em/topics/emComposites");
 
+//academic flows -> bfs
+const bfs_flow = require("./flows/botReplies/note_levels/level_1/level_1_subs/bfs/bfs_flow");
+const bfs_lec3 = require("./flows/botReplies/note_levels/level_1/level_1_subs/bfs/topics/bfsLec3");
+
 
 
 
@@ -304,6 +310,7 @@ function handleMessage(sender_psid, received_message) {
     const cp = cp_words;
     const ntf = ntf_words;
     const em = em_words;
+    const bfs = bfs_words;
 
     const quiz = quiz_words;
     const lab_report = labWords;
@@ -483,6 +490,13 @@ function handleMessage(sender_psid, received_message) {
       callSendAPI5(sender_psid, response5);
       callSendAPI6(sender_psid, response6);
     }
+
+     //academic -> bfs
+
+    else if (bfs.includes(received_message.text.toLowerCase())) {
+      response = bfs_flow[0];
+    }
+
 
      //academic -> chem1
      else if (chem1.includes(received_message.text.toLowerCase())) {
@@ -1713,6 +1727,21 @@ let handlePostback = async (sender_psid, received_postback) => {
 
     else if (payload === 'em_composites_flow') {
       response = em_composites[0];
+      
+      callSendAPI(sender_psid, response);
+    }
+
+    //subject-> ntf
+    else if (payload === 'bfs_flow') {
+      response = bfs_flow[0];
+     
+      
+      callSendAPI(sender_psid, response);
+    }
+
+    else if (payload === 'bfs_lec3_flow') {
+      response = bfs_lec3[0];
+     
       
       callSendAPI(sender_psid, response);
     }
