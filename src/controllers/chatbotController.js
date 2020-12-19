@@ -166,6 +166,20 @@ const ntf_other_fibre = require("./flows/botReplies/note_levels/level_1/level_1_
 
 //academic flows -> em
 const em_flow = require("./flows/botReplies/note_levels/level_1/level_1_subs/em/em_flow");
+const em_books = require("./flows/botReplies/note_levels/level_1/level_1_subs/em/topics/emBooks");
+const em_question = require("./flows/botReplies/note_levels/level_1/level_1_subs/em/topics/emQuestions");
+const em_math = require("./flows/botReplies/note_levels/level_1/level_1_subs/em/topics/emMath");
+const em_blastFur = require("./flows/botReplies/note_levels/level_1/level_1_subs/em/topics/emBlastFur");
+const em_heatTreat = require("./flows/botReplies/note_levels/level_1/level_1_subs/em/topics/emHeattreat");
+const em_wrought = require("./flows/botReplies/note_levels/level_1/level_1_subs/em/topics/emWroughtCast");
+const em_crystal = require("./flows/botReplies/note_levels/level_1/level_1_subs/em/topics/emCrystal");
+const em_iron = require("./flows/botReplies/note_levels/level_1/level_1_subs/em/topics/emIron");
+const em_glass = require("./flows/botReplies/note_levels/level_1/level_1_subs/em/topics/emGlass");
+const em_ceramic = require("./flows/botReplies/note_levels/level_1/level_1_subs/em/topics/emCeramic");
+const em_corrosion = require("./flows/botReplies/note_levels/level_1/level_1_subs/em/topics/emCorrosion");
+const em_alloy = require("./flows/botReplies/note_levels/level_1/level_1_subs/em/topics/emAlloy");
+const em_composites = require("./flows/botReplies/note_levels/level_1/level_1_subs/em/topics/emComposites");
+
 
 
 
@@ -1607,6 +1621,100 @@ let handlePostback = async (sender_psid, received_postback) => {
       callSendAPI4(sender_psid, response4);
       callSendAPI5(sender_psid, response5);
       callSendAPI6(sender_psid, response6);
+    }
+
+    else if (payload === 'em_books_flow') {
+      response = em_books[0];
+      response2 = em_books[1];
+      
+      callSendAPI(sender_psid, response);
+      callSendAPI2(sender_psid, response2);
+    }
+
+    else if (payload === 'em_ques_flow') {
+      response = em_question[0];
+      response2 = em_question[1];
+      
+      callSendAPI(sender_psid, response);
+      callSendAPI2(sender_psid, response2);
+    }
+
+    else if (payload === 'em_math_flow') {
+      response = em_math[0];
+      
+      callSendAPI(sender_psid, response);
+    }
+
+    else if (payload === 'em_blast_flow') {
+      response = em_blastFur[0];
+      
+      callSendAPI(sender_psid, response);
+    }
+
+    else if (payload === 'em_heat_flow') {
+      response = em_heatTreat[0];
+      response2 = em_heatTreat[1];
+      response3 = em_heatTreat[2];
+      
+      callSendAPI(sender_psid, response);
+      callSendAPI2(sender_psid, response2);
+      callSendAPI3(sender_psid, response3);
+    }
+
+    else if (payload === 'em_wrought_flow') {
+      response = em_wrought[0];
+      
+      callSendAPI(sender_psid, response);
+    }
+
+    else if (payload === 'em_crystal_flow') {
+      response = em_crystal[0];
+      response2 = em_crystal[1];
+      
+      callSendAPI(sender_psid, response);
+      callSendAPI2(sender_psid, response2);
+    }
+
+    else if (payload === 'em_iron_ceramic_flow') {
+      response = em_iron[0];
+      response2 = em_iron[1];
+      
+      callSendAPI(sender_psid, response);
+      callSendAPI2(sender_psid, response2);
+    }
+
+    else if (payload === 'em_glass_flow') {
+      response = em_glass[0];
+      
+      callSendAPI(sender_psid, response);
+    }
+
+    else if (payload === 'em_ceramic_flow') {
+      response = em_ceramic[0];
+      response2 = em_ceramic[1];
+      
+      callSendAPI(sender_psid, response);
+      callSendAPI2(sender_psid, response2);
+    }
+
+    else if (payload === 'em_corrosion_flow') {
+      response = em_corrosion[0];
+      
+      callSendAPI(sender_psid, response);
+    }
+
+    else if (payload === 'em_alloy_flow') {
+      response = em_alloy[0];
+      response2 = em_alloy[1];
+      
+      callSendAPI(sender_psid, response);
+      callSendAPI2(sender_psid, response2);
+    }
+
+    else if (payload === 'em_composites_flow') {
+      response = em_composites[0];
+      
+      callSendAPI(sender_psid, response);
     }
 
 
