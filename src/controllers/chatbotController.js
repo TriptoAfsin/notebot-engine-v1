@@ -35,6 +35,8 @@ const pse_words = require('./keywords/academic_words/subjects/pseWords');
 const em_words = require('./keywords/academic_words/subjects/emWords');
 //academic -> bfs
 const bfs_words = require('./keywords/academic_words/subjects/bfsWords');
+//academic -> tpm
+const tpm_words = require('./keywords/academic_words/subjects/tpmWords');
 
 
 
@@ -206,6 +208,12 @@ const pse_morpho = require("./flows/botReplies/note_levels/level_1/level_1_subs/
 const bfs_flow = require("./flows/botReplies/note_levels/level_1/level_1_subs/bfs/bfs_flow");
 const bfs_lec3 = require("./flows/botReplies/note_levels/level_1/level_1_subs/bfs/topics/bfsLec3");
 
+//academic flows -> tpm
+const tpm_flow = require("./flows/botReplies/note_levels/level_1/level_1_subs/tpm/tpm_flow");
+const tpm_ques = require("./flows/botReplies/note_levels/level_1/level_1_subs/tpm/topics/tpmQues");
+const tpm_fabWet = require("./flows/botReplies/note_levels/level_1/level_1_subs/tpm/topics/tpmWovFabWet");
+const tpm_fabManu = require("./flows/botReplies/note_levels/level_1/level_1_subs/tpm/topics/tpmWovFabManu");
+
 
 
 
@@ -333,6 +341,7 @@ function handleMessage(sender_psid, received_message) {
     const em = em_words;
     const bfs = bfs_words;
     const pse = pse_words;
+    const tpm = tpm_words;
 
     const quiz = quiz_words;
     const lab_report = labWords;
@@ -519,6 +528,16 @@ function handleMessage(sender_psid, received_message) {
       response = bfs_flow[0];
     }
 
+     //academic -> tpm
+     else if (tpm.includes(received_message.text.toLowerCase())) {
+
+      response = tpm_flow[0];
+      response2 = tpm_flow[1];
+      response3 = tpm_flow[2];
+
+      callSendAPI2(sender_psid, response2);
+      callSendAPI3(sender_psid, response3);
+    }
 
      //academic -> chem1
      else if (chem1.includes(received_message.text.toLowerCase())) {
@@ -1921,6 +1940,34 @@ let handlePostback = async (sender_psid, received_postback) => {
 
     else if (payload === 'pse_application_flow') {
       response = pse_application[0];
+      
+      callSendAPI(sender_psid, response);
+    }
+
+    else if (payload === 'tpm_flow') {
+      response = tpm_flow[0];
+      response2 = tpm_flow[1];
+      response3 = tpm_flow[2];
+      
+      callSendAPI(sender_psid, response);
+      callSendAPI2(sender_psid, response2);
+      callSendAPI3(sender_psid, response3);
+    }
+
+    else if (payload === 'tpm_ques_flow') {
+      response = tpm_ques[0];
+      
+      callSendAPI(sender_psid, response);
+    }
+
+    else if (payload === 'tpm_wov_fab_wet_flow') {
+      response = tpm_fabWet[0];
+      
+      callSendAPI(sender_psid, response);
+    }
+
+    else if (payload === 'tpm_wov_fab_manu_flow') {
+      response = tpm_fabManu[0];
       
       callSendAPI(sender_psid, response);
     }
