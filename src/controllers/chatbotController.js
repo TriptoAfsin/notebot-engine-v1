@@ -41,8 +41,10 @@ const tpm_words = require('./keywords/academic_words/subjects/tpmWords');
 const fmg_words = require('./keywords/academic_words/subjects/fmgWords');
 //academic -> tmm
 const tmm_words = require('./keywords/academic_words/subjects/tmmWords');
-//academic -> tmm
+//academic -> iae
 const iae_words = require('./keywords/academic_words/subjects/iaeWords');
+//academic -> tee
+const iee_words = require('./keywords/academic_words/subjects/ieeWords');
 
 
 
@@ -239,6 +241,19 @@ const iae_quota = require("./flows/botReplies/note_levels/level_1/level_1_subs/i
 const iae_cam = require("./flows/botReplies/note_levels/level_1/level_1_subs/iae/topics/iaeCam");
 const iae_shirt = require("./flows/botReplies/note_levels/level_1/level_1_subs/iae/topics/iaeShirt");
 
+//academic flows -> iee
+const iee_flow = require("./flows/botReplies/note_levels/level_1/level_1_subs/iee/iee_flow");
+const iee_books = require("./flows/botReplies/note_levels/level_1/level_1_subs/iee/topics/ieeBooks");
+const iee_sheets = require("./flows/botReplies/note_levels/level_1/level_1_subs/iee/topics/ieeSheets");
+const iee_notes = require("./flows/botReplies/note_levels/level_1/level_1_subs/iee/topics/ieeHandNotes");
+const iee_manEnv = require("./flows/botReplies/note_levels/level_1/level_1_subs/iee/topics/ieeManEnv");
+const iee_soil = require("./flows/botReplies/note_levels/level_1/level_1_subs/iee/topics/ieeSoil");
+const iee_envIssues = require("./flows/botReplies/note_levels/level_1/level_1_subs/iee/topics/ieeSheets");
+const iee_natureEnv = require("./flows/botReplies/note_levels/level_1/level_1_subs/iee/topics/ieeNatureEnv");
+const iee_spf = require("./flows/botReplies/note_levels/level_1/level_1_subs/iee/topics/ieeSPF");
+
+
+
 
 
 
@@ -372,6 +387,7 @@ function handleMessage(sender_psid, received_message) {
     const fmg = fmg_words;
     const tmm = tmm_words;
     const iae = iae_words;
+    const iee = iee_words;
 
     const quiz = quiz_words;
     const lab_report = labWords;
@@ -534,7 +550,7 @@ function handleMessage(sender_psid, received_message) {
     }
 
     //academic -> iae
-    else if (iae.some(word => received_message.text.toLowerCase().includes(word))) {
+    else if (iae.includes(received_message.text.toLowerCase())) {
 
       response = iae_flow[0];
       response2 = iae_flow[1];
@@ -544,8 +560,17 @@ function handleMessage(sender_psid, received_message) {
       callSendAPI2(sender_psid, response2);
       callSendAPI3(sender_psid, response3);
       callSendAPI4(sender_psid, response4);
-      
-      
+    }
+
+    //academic -> iee
+    else if (iee.includes(received_message.text.toLowerCase())) {
+
+      response = iee_flow[0];
+      response2 = iee_flow[1];
+      response3 = iee_flow[2];
+
+      callSendAPI2(sender_psid, response2);
+      callSendAPI3(sender_psid, response3);
     }
 
     //academic -> cp
@@ -1584,14 +1609,14 @@ let handlePostback = async (sender_psid, received_postback) => {
     }
 
     else if (payload === 'ntf_slides_flow') {
-      response = ntf_intro[0];
-      response2 = ntf_intro[1];
-      response3 = ntf_intro[2];
-      response4 = ntf_intro[3];
-      response5 = ntf_intro[4];
-      response6 = ntf_intro[5];
-      response7 = ntf_intro[6];
-      response8 = ntf_intro[7];
+      response = ntf_cotton_slide[0];
+      response2 = ntf_cotton_slide[1];
+      response3 = ntf_cotton_slide[2];
+      response4 = ntf_cotton_slide[3];
+      response5 = ntf_cotton_slide[4];
+      response6 = ntf_cotton_slide[5];
+      response7 = ntf_cotton_slide[6];
+      response8 = ntf_cotton_slide[7];
 
       callSendAPI(sender_psid, response);
       callSendAPI2(sender_psid, response2);
@@ -2118,9 +2143,67 @@ let handlePostback = async (sender_psid, received_postback) => {
       callSendAPI(sender_psid, response);
     }
 
+    //subject-> iae
+    else if (payload === 'iee_flow') {
+      response = iee_flow[0];
+      response2 = iee_flow[1];
+      response3 = iee_flow[2];
+     
+      
+      callSendAPI(sender_psid, response);
+      callSendAPI2(sender_psid, response2);
+      callSendAPI3(sender_psid, response3);
+    }
+
+    else if (payload === 'iee_books_flow') {
+      response = iee_books[0];
+      
+      callSendAPI(sender_psid, response);
+    }
+
+    else if (payload === 'iee_sheets_flow') {
+      response = iee_sheets[0];
+      
+      callSendAPI(sender_psid, response);
+    }
+
+    else if (payload === 'iee_handnotes_flow') {
+      response = iee_notes[0];
+      
+      callSendAPI(sender_psid, response);
+    }
+
+    else if (payload === 'iee_man_env_flow') {
+      response = iee_manEnv[0];
+      
+      callSendAPI(sender_psid, response);
+    }
+
+    else if (payload === 'iee_soil_flow') {
+      response = iee_soil[0];
+      
+      callSendAPI(sender_psid, response);
+    }
+
+    else if (payload === 'iee_env_issue_flow') {
+      response = iee_envIssues[0];
+      
+      callSendAPI(sender_psid, response);
+    }
+
+    else if (payload === 'iee_nature_env_flow') {
+      response = iee_natureEnv[0];
+      
+      callSendAPI(sender_psid, response);
+    }
+
+    else if (payload === 'iee_spf_upf_flow') {
+      response = iee_spf[0];
+      
+      callSendAPI(sender_psid, response);
+    }
+
     
-
-
 
 
 
