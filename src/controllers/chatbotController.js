@@ -187,10 +187,25 @@ const em_composites = require("./flows/botReplies/note_levels/level_1/level_1_su
 
 //academic flows -> pse
 const pse_flow = require("./flows/botReplies/note_levels/level_1/level_1_subs/pse/pse_flow");
+const pse_books = require("./flows/botReplies/note_levels/level_1/level_1_subs/pse/topics/pseBooks");
+const pse_questions = require("./flows/botReplies/note_levels/level_1/level_1_subs/pse/topics/pseQuestions");
+const pse_handnotes = require("./flows/botReplies/note_levels/level_1/level_1_subs/pse/topics/pseHandNotes");
+const pse_intro = require("./flows/botReplies/note_levels/level_1/level_1_subs/pse/topics/pseIntro");
+const pse_physical = require("./flows/botReplies/note_levels/level_1/level_1_subs/pse/topics/psePhysical");
+const pse_chemical = require("./flows/botReplies/note_levels/level_1/level_1_subs/pse/topics/pseChemical");
+const pse_moleWeight = require("./flows/botReplies/note_levels/level_1/level_1_subs/pse/topics/pseMoleWeight");
+const pse_step = require("./flows/botReplies/note_levels/level_1/level_1_subs/pse/topics/pseStepGrowth");
+const pse_chain = require("./flows/botReplies/note_levels/level_1/level_1_subs/pse/topics/pseChainGrowth");
+const pse_thermal = require("./flows/botReplies/note_levels/level_1/level_1_subs/pse/topics/pseThermalTran");
+const pse_degrad = require("./flows/botReplies/note_levels/level_1/level_1_subs/pse/topics/pseDegradation");
+const pse_polyTech = require("./flows/botReplies/note_levels/level_1/level_1_subs/pse/topics/psePolymerizationTech");
+const pse_application = require("./flows/botReplies/note_levels/level_1/level_1_subs/pse/topics/pseAppliPoly");
+const pse_morpho = require("./flows/botReplies/note_levels/level_1/level_1_subs/pse/topics/pseMorpho");
 
 //academic flows -> bfs
 const bfs_flow = require("./flows/botReplies/note_levels/level_1/level_1_subs/bfs/bfs_flow");
 const bfs_lec3 = require("./flows/botReplies/note_levels/level_1/level_1_subs/bfs/topics/bfsLec3");
+
 
 
 
@@ -1783,6 +1798,133 @@ let handlePostback = async (sender_psid, received_postback) => {
       callSendAPI4(sender_psid, response4);
       callSendAPI5(sender_psid, response5);
     }
+
+    else if (payload === 'pse_books_flow') {
+      response = pse_books[0];
+      response2 = pse_books[1];
+      response3 = pse_books[2];
+      
+      callSendAPI(sender_psid, response);
+      callSendAPI2(sender_psid, response2);
+      callSendAPI3(sender_psid, response3);
+    }
+
+    else if (payload === 'pse_ques_flow') {
+      response = pse_questions[0];
+      
+      callSendAPI(sender_psid, response);
+    }
+
+    else if (payload === 'pse_handnotes_flow') {
+      response = pse_handnotes[0];
+      
+      callSendAPI(sender_psid, response);
+    }
+
+    else if (payload === 'pse_intro_flow') {
+      response = pse_intro[0];
+      response2 = pse_intro[1];
+      response3 = pse_intro[2];
+      
+      callSendAPI(sender_psid, response);
+      callSendAPI2(sender_psid, response2);
+      callSendAPI3(sender_psid, response3);
+    }
+
+    else if (payload === 'pse_physical_struc_flow') {
+      response = pse_physical[0];
+      response2 = pse_physical[1];
+      
+      callSendAPI(sender_psid, response);
+      callSendAPI2(sender_psid, response2);
+    }
+
+    else if (payload === 'pse_chemical_struc_flow') {
+      response = pse_chemical[0];
+      response2 = pse_chemical[1];
+      
+      callSendAPI(sender_psid, response);
+      callSendAPI2(sender_psid, response2);
+    }
+
+    else if (payload === 'pse_molWei_flow') {
+      response = pse_moleWeight[0];
+      response2 = pse_moleWeight[1];
+      response3 = pse_moleWeight[2];
+      
+      callSendAPI(sender_psid, response);
+      callSendAPI2(sender_psid, response2);
+      callSendAPI3(sender_psid, response3);
+    }
+
+    else if (payload === 'pse_step_growth_flow') {
+      response = pse_step[0];
+      response2 = pse_step[1];
+      response3 = pse_step[2];
+      
+      callSendAPI(sender_psid, response);
+      callSendAPI2(sender_psid, response2);
+      callSendAPI3(sender_psid, response3);
+    }
+
+    else if (payload === 'pse_chain_growth_flow') {
+      response = pse_chain[0];
+      response2 = pse_chain[1];
+      response3 = pse_chain[2];
+      
+      callSendAPI(sender_psid, response);
+      callSendAPI2(sender_psid, response2);
+      callSendAPI3(sender_psid, response3);
+    }
+
+    else if (payload === 'pse_morpho_flow') {
+      response = pse_morpho[0];
+      response2 = pse_morpho[1];
+      response3 = pse_morpho[2];
+      response4 = pse_morpho[3];
+      response5 = pse_morpho[4];
+      
+      callSendAPI(sender_psid, response);
+      callSendAPI2(sender_psid, response2);
+      callSendAPI3(sender_psid, response3);
+      callSendAPI4(sender_psid, response4);
+      callSendAPI5(sender_psid, response5);
+    }
+
+    else if (payload === 'pse_thermal_flow') {
+      response = pse_thermal[0];
+      response2 = pse_thermal[1];
+      response3 = pse_thermal[2];
+      
+      callSendAPI(sender_psid, response);
+      callSendAPI2(sender_psid, response2);
+      callSendAPI3(sender_psid, response3);
+    }
+
+    else if (payload === 'pse_degrad_flow') {
+      response = pse_degrad[0];
+      response2 = pse_degrad[1];
+      response3 = pse_degrad[2];
+      
+      callSendAPI(sender_psid, response);
+      callSendAPI2(sender_psid, response2);
+      callSendAPI3(sender_psid, response3);
+    }
+
+    else if (payload === 'pse_polymer_tec_flow') {
+      response = pse_polyTech[0];
+      response2 = pse_polyTech[1];
+      
+      callSendAPI(sender_psid, response);
+      callSendAPI2(sender_psid, response2);
+    }
+
+    else if (payload === 'pse_application_flow') {
+      response = pse_application[0];
+      
+      callSendAPI(sender_psid, response);
+    }
+
 
 
 

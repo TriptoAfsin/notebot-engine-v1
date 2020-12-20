@@ -3,6 +3,8 @@ const pse_words = [
     "polymer scinece and engineering", 
     "polymer", 
     "polymer scinece", 
+    "polimar",
+    "পলিমার"
 ];
 
 
