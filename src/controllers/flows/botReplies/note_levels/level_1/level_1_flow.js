@@ -134,12 +134,12 @@ let level_1_note = [
                     {
                         "type": "postback",
                         "title": "IAE",
-                        "payload": "iae_Flow"
+                        "payload": "iae_flow"
                     },
                     {
                         "type": "postback",
                         "title": "TMM",
-                        "payload": "tmm_Flow"
+                        "payload": "tmm_flow"
                     },
                     {
                         "type": "postback",
