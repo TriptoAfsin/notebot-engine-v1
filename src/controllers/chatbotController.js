@@ -37,6 +37,8 @@ const em_words = require('./keywords/academic_words/subjects/emWords');
 const bfs_words = require('./keywords/academic_words/subjects/bfsWords');
 //academic -> tpm
 const tpm_words = require('./keywords/academic_words/subjects/tpmWords');
+//academic -> fmg
+const fmg_words = require('./keywords/academic_words/subjects/fmgWords');
 
 
 
@@ -208,11 +210,16 @@ const pse_morpho = require("./flows/botReplies/note_levels/level_1/level_1_subs/
 const bfs_flow = require("./flows/botReplies/note_levels/level_1/level_1_subs/bfs/bfs_flow");
 const bfs_lec3 = require("./flows/botReplies/note_levels/level_1/level_1_subs/bfs/topics/bfsLec3");
 
+//academic flows -> fmg
+const fmg_flow = require("./flows/botReplies/note_levels/level_1/level_1_subs/fmg/fmg_flow");
+
 //academic flows -> tpm
 const tpm_flow = require("./flows/botReplies/note_levels/level_1/level_1_subs/tpm/tpm_flow");
 const tpm_ques = require("./flows/botReplies/note_levels/level_1/level_1_subs/tpm/topics/tpmQues");
 const tpm_fabWet = require("./flows/botReplies/note_levels/level_1/level_1_subs/tpm/topics/tpmWovFabWet");
 const tpm_fabManu = require("./flows/botReplies/note_levels/level_1/level_1_subs/tpm/topics/tpmWovFabManu");
+
+
 
 
 
@@ -342,6 +349,7 @@ function handleMessage(sender_psid, received_message) {
     const bfs = bfs_words;
     const pse = pse_words;
     const tpm = tpm_words;
+    const fmg = fmg_words;
 
     const quiz = quiz_words;
     const lab_report = labWords;
@@ -523,9 +531,13 @@ function handleMessage(sender_psid, received_message) {
     }
 
      //academic -> bfs
-
     else if (bfs.includes(received_message.text.toLowerCase())) {
       response = bfs_flow[0];
+    }
+
+     //academic -> fmg
+     else if (fmg.includes(received_message.text.toLowerCase())) {
+      response = fmg_flow[0];
     }
 
      //academic -> tpm
@@ -1968,6 +1980,12 @@ let handlePostback = async (sender_psid, received_postback) => {
 
     else if (payload === 'tpm_wov_fab_manu_flow') {
       response = tpm_fabManu[0];
+      
+      callSendAPI(sender_psid, response);
+    }
+
+    else if (payload === 'fmg_flow') {
+      response = fmg_flow[0];
       
       callSendAPI(sender_psid, response);
     }
