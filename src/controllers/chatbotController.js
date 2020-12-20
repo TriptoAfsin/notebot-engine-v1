@@ -39,6 +39,8 @@ const bfs_words = require('./keywords/academic_words/subjects/bfsWords');
 const tpm_words = require('./keywords/academic_words/subjects/tpmWords');
 //academic -> fmg
 const fmg_words = require('./keywords/academic_words/subjects/fmgWords');
+//academic -> tmm
+const tmm_words = require('./keywords/academic_words/subjects/tmmWords');
 
 
 
@@ -213,6 +215,10 @@ const bfs_lec3 = require("./flows/botReplies/note_levels/level_1/level_1_subs/bf
 //academic flows -> fmg
 const fmg_flow = require("./flows/botReplies/note_levels/level_1/level_1_subs/fmg/fmg_flow");
 
+//academic flows -> tmm
+const tmm_flow = require("./flows/botReplies/note_levels/level_1/level_1_subs/tmm/tmm_flow");
+const tmm_questions = require("./flows/botReplies/note_levels/level_1/level_1_subs/tmm/topics/tmmQues");
+
 //academic flows -> tpm
 const tpm_flow = require("./flows/botReplies/note_levels/level_1/level_1_subs/tpm/tpm_flow");
 const tpm_ques = require("./flows/botReplies/note_levels/level_1/level_1_subs/tpm/topics/tpmQues");
@@ -350,6 +356,7 @@ function handleMessage(sender_psid, received_message) {
     const pse = pse_words;
     const tpm = tpm_words;
     const fmg = fmg_words;
+    const tmm = tmm_words;
 
     const quiz = quiz_words;
     const lab_report = labWords;
@@ -538,6 +545,11 @@ function handleMessage(sender_psid, received_message) {
      //academic -> fmg
      else if (fmg.includes(received_message.text.toLowerCase())) {
       response = fmg_flow[0];
+    }
+
+    //academic -> tmm
+    else if (tmm.includes(received_message.text.toLowerCase())) {
+      response = tmm_flow[0];
     }
 
      //academic -> tpm
@@ -1984,8 +1996,23 @@ let handlePostback = async (sender_psid, received_postback) => {
       callSendAPI(sender_psid, response);
     }
 
+
+     //subject-> fmg
     else if (payload === 'fmg_flow') {
       response = fmg_flow[0];
+      
+      callSendAPI(sender_psid, response);
+    }
+
+     //subject-> tmm
+     else if (payload === 'tmm_flow') {
+      response = tmm_flow[0];
+      
+      callSendAPI(sender_psid, response);
+    }
+
+    else if (payload === 'tmm_quess_flow') {
+      response = tmm_questions[0];
       
       callSendAPI(sender_psid, response);
     }
