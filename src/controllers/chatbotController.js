@@ -41,6 +41,8 @@ const tpm_words = require('./keywords/academic_words/subjects/tpmWords');
 const fmg_words = require('./keywords/academic_words/subjects/fmgWords');
 //academic -> tmm
 const tmm_words = require('./keywords/academic_words/subjects/tmmWords');
+//academic -> tmm
+const iae_words = require('./keywords/academic_words/subjects/iaeWords');
 
 
 
@@ -225,6 +227,18 @@ const tpm_ques = require("./flows/botReplies/note_levels/level_1/level_1_subs/tp
 const tpm_fabWet = require("./flows/botReplies/note_levels/level_1/level_1_subs/tpm/topics/tpmWovFabWet");
 const tpm_fabManu = require("./flows/botReplies/note_levels/level_1/level_1_subs/tpm/topics/tpmWovFabManu");
 
+//academic flows -> iae
+const iae_flow = require("./flows/botReplies/note_levels/level_1/level_1_subs/iae/iae_flow");
+const iae_books = require("./flows/botReplies/note_levels/level_1/level_1_subs/iae/topics/iaeBooks");
+const iae_question = require("./flows/botReplies/note_levels/level_1/level_1_subs/iae/topics/iaeQues");
+const iae_intro = require("./flows/botReplies/note_levels/level_1/level_1_subs/iae/topics/iaeIntro");
+const iae_fullSlide = require("./flows/botReplies/note_levels/level_1/level_1_subs/iae/topics/iaeFullSlide");
+const iae_diffWov = require("./flows/botReplies/note_levels/level_1/level_1_subs/iae/topics/iaeDiffWoven");
+const iae_brands = require("./flows/botReplies/note_levels/level_1/level_1_subs/iae/topics/iaeBrands");
+const iae_quota = require("./flows/botReplies/note_levels/level_1/level_1_subs/iae/topics/iaeQuota");
+const iae_cam = require("./flows/botReplies/note_levels/level_1/level_1_subs/iae/topics/iaeCam");
+const iae_shirt = require("./flows/botReplies/note_levels/level_1/level_1_subs/iae/topics/iaeShirt");
+
 
 
 
@@ -357,6 +371,7 @@ function handleMessage(sender_psid, received_message) {
     const tpm = tpm_words;
     const fmg = fmg_words;
     const tmm = tmm_words;
+    const iae = iae_words;
 
     const quiz = quiz_words;
     const lab_report = labWords;
@@ -512,6 +527,19 @@ function handleMessage(sender_psid, received_message) {
       response2 = bce_flow[1];
       response3 = bce_flow[2];
       response4 = bce_flow[3];
+
+      callSendAPI2(sender_psid, response2);
+      callSendAPI3(sender_psid, response3);
+      callSendAPI4(sender_psid, response4);
+    }
+
+    //academic -> iae
+    else if (iae.some(word => received_message.text.toLowerCase().includes(word))) {
+
+      response = iae_flow[0];
+      response2 = iae_flow[1];
+      response3 = iae_flow[2];
+      response4 = iae_flow[3];
 
       callSendAPI2(sender_psid, response2);
       callSendAPI3(sender_psid, response3);
@@ -2016,6 +2044,82 @@ let handlePostback = async (sender_psid, received_postback) => {
       
       callSendAPI(sender_psid, response);
     }
+
+    //subject-> iae
+    else if (payload === 'iae_flow') {
+      response = iae_flow[0];
+      response2 = iae_flow[1];
+      response3 = iae_flow[2];
+      response4 = iae_flow[3];
+      
+      callSendAPI(sender_psid, response);
+      callSendAPI2(sender_psid, response2);
+      callSendAPI3(sender_psid, response3);
+      callSendAPI4(sender_psid, response4);
+    }
+
+    else if (payload === 'iae_books_flow') {
+      response = iae_books[0];
+      
+      callSendAPI(sender_psid, response);
+    }
+
+    else if (payload === 'iae_ques_flow') {
+      response = iae_question[0];
+      
+      callSendAPI(sender_psid, response);
+    }
+
+    else if (payload === 'iae_intro_flow') {
+      response = iae_intro[0];
+      response2 = iae_intro[1];
+      response3 = iae_intro[2];
+      response4 = iae_intro[3];
+      
+      callSendAPI(sender_psid, response);
+      callSendAPI2(sender_psid, response2);
+      callSendAPI3(sender_psid, response3);
+      callSendAPI4(sender_psid, response4);
+    }
+
+    else if (payload === 'iae_full_slide_flow') {
+      response = iae_fullSlide[0];
+      
+      callSendAPI(sender_psid, response);
+    }
+
+    else if (payload === 'iae_diff_woven_flow') {
+      response = iae_diffWov[0];
+      
+      callSendAPI(sender_psid, response);
+    }
+
+    else if (payload === 'iae_brands_flow') {
+      response = iae_brands[0];
+      
+      callSendAPI(sender_psid, response);
+    }
+
+    else if (payload === 'iae_quota_flow') {
+      response = iae_quota[0];
+      
+      callSendAPI(sender_psid, response);
+    }
+
+    else if (payload === 'iae_cam_flow') {
+      response = iae_cam[0];
+      
+      callSendAPI(sender_psid, response);
+    }
+
+    else if (payload === 'iae_shirt_flow') {
+      response = iae_shirt[0];
+      
+      callSendAPI(sender_psid, response);
+    }
+
+    
+
 
 
 
