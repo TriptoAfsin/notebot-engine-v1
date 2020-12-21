@@ -27,6 +27,8 @@ const chem1_words = require('./keywords/academic_words/subjects/chem1Words');
 const chem2_words = require('./keywords/academic_words/subjects/chem2Words');
 //academic -> phy1
 const phy1_words = require('./keywords/academic_words/subjects/phy1Words');
+//academic -> phy2
+const phy2_words = require('./keywords/academic_words/subjects/phy2Words');
 //academic -> math1
 const math1_words = require('./keywords/academic_words/subjects/math1Words');
 //academic -> math2
@@ -151,6 +153,20 @@ const phy1_polar = require("./flows/botReplies/note_levels/level_1/level_1_subs/
 const phy1_elasticity = require("./flows/botReplies/note_levels/level_1/level_1_subs/phy1/topics/phy1Elasti");
 const phy1_viscosity = require("./flows/botReplies/note_levels/level_1/level_1_subs/phy1/topics/phy1Visco");
 const phy1_surface = require("./flows/botReplies/note_levels/level_1/level_1_subs/phy1/topics/phy1Surface");
+
+//academic flows -> phy2
+const phy2_flow = require("./flows/botReplies/note_levels/level_1/level_1_subs/phy2/phy2_flow");
+const phy2_books = require("./flows/botReplies/note_levels/level_1/level_1_subs/phy2/topics/phy2Books");
+const phy2_question = require("./flows/botReplies/note_levels/level_1/level_1_subs/phy2/topics/phy2Ques");
+const phy2_Kinetic = require("./flows/botReplies/note_levels/level_1/level_1_subs/phy2/topics/phy2Kinetic");
+const phy2_Elctricity = require("./flows/botReplies/note_levels/level_1/level_1_subs/phy2/topics/electric/phy2Electric");
+const phy2_Elctricity_slides = require("./flows/botReplies/note_levels/level_1/level_1_subs/phy2/topics/electric/electric_topics/electricSlides");
+const phy2_Elctricity_notes = require("./flows/botReplies/note_levels/level_1/level_1_subs/phy2/topics/electric/electric_topics/electricNotes");
+const phy2_Thermo = require("./flows/botReplies/note_levels/level_1/level_1_subs/phy2/topics/phy2Thermodynamic");
+const phy2_Radiation = require("./flows/botReplies/note_levels/level_1/level_1_subs/phy2/topics/phy2Radiation");
+const phy2_magnet = require("./flows/botReplies/note_levels/level_1/level_1_subs/phy2/topics/phy2Magnet");
+const phy2_modern = require("./flows/botReplies/note_levels/level_1/level_1_subs/phy2/topics/phy2Modern");
+const phy2_entropy = require("./flows/botReplies/note_levels/level_1/level_1_subs/phy2/topics/phy2Entropy");
 
 
 //academic flows -> math1
@@ -316,6 +332,7 @@ const labFlow = require('./flows/botReplies/labFlow');
 const routineFlow = require('./flows/botReplies/routineFlow');
 const resultFlow = require('./flows/botReplies/resultFlow');
 const syllabusFlow = require('./flows/botReplies/syllabusFlow');
+const phy2_electric_flow = require("./flows/botReplies/note_levels/level_1/level_1_subs/phy2/topics/electric/phy2Electric");
 
 
 
@@ -426,6 +443,7 @@ function handleMessage(sender_psid, received_message) {
     const chem1 = chem1_words;
     const chem2 = chem2_words;
     const phy1 = phy1_words;
+    const phy2 = phy2_words;
     const math1 = math1_words;
     const math2 = math2_words;
     const cp = cp_words;
@@ -707,6 +725,19 @@ function handleMessage(sender_psid, received_message) {
       callSendAPI3(sender_psid, response3);
       callSendAPI4(sender_psid, response4);
       callSendAPI5(sender_psid, response5);
+    }
+
+    //academic -> phy2
+    else if (phy2.includes(received_message.text.toLowerCase())) {
+
+      response = phy2_flow[0];
+      response2 = phy2_flow[1];
+      response3 = phy2_flow[2];
+      response4 = phy2_flow[3];
+
+      callSendAPI2(sender_psid, response2);
+      callSendAPI3(sender_psid, response3);
+      callSendAPI4(sender_psid, response4);
     }
 
     //academic -> math1
@@ -2669,6 +2700,152 @@ let handlePostback = async (sender_psid, received_postback) => {
       response = chem2_solubulity[0];
      
       callSendAPI(sender_psid, response);
+    }
+
+
+    //subject-> phy2
+    else if (payload === 'phy2_flow') {
+      response = phy2_flow[0];
+      response2 = phy2_flow[1];
+      response3 = phy2_flow[2];
+      response4 = phy2_flow[3];
+     
+      
+      callSendAPI(sender_psid, response);
+      callSendAPI2(sender_psid, response2);
+      callSendAPI3(sender_psid, response3);
+      callSendAPI4(sender_psid, response4);
+    }
+
+    else if (payload === 'phy2_books_flow') {
+      response = phy2_books[0];
+      response2 = phy2_books[1];
+      response3 = phy2_books[2];
+      response4 = phy2_books[3];
+     
+      
+      callSendAPI(sender_psid, response);
+      callSendAPI2(sender_psid, response2);
+      callSendAPI3(sender_psid, response3);
+      callSendAPI4(sender_psid, response4);
+    }
+
+    else if (payload === 'phy2_ques_flow') {
+      response = phy2_question[0];
+     
+      callSendAPI(sender_psid, response);
+    }
+
+    else if (payload === 'phy2_kinetic_flow') {
+      response = phy2_Kinetic[0];
+      response2 = phy2_Kinetic[1];
+      response3 = phy2_Kinetic[2];
+      response4 = phy2_Kinetic[3];
+     
+      
+      callSendAPI(sender_psid, response);
+      callSendAPI2(sender_psid, response2);
+      callSendAPI3(sender_psid, response3);
+      callSendAPI4(sender_psid, response4);
+    }
+
+    else if (payload === 'phy2_electricity_flow') {
+      response = phy2_Elctricity[0];
+     
+      callSendAPI(sender_psid, response);
+    }
+
+    else if (payload === 'phy2_electric_notes_flow') {
+      response = phy2_Elctricity_notes[0];
+      response2 = phy2_Elctricity_notes[1];
+      response3 = phy2_Elctricity_notes[2];
+      response4 = phy2_Elctricity_notes[3];
+     
+      
+      callSendAPI(sender_psid, response);
+      callSendAPI2(sender_psid, response2);
+      callSendAPI3(sender_psid, response3);
+      callSendAPI4(sender_psid, response4);
+    }
+
+    else if (payload === 'phy2_electric_slides_flow') {
+      response = phy2_Elctricity_slides[0];
+      response2 = phy2_Elctricity_slides[1];
+      response3 = phy2_Elctricity_slides[2];
+      response4 = phy2_Elctricity_slides[3];
+      response5 = phy2_Elctricity_slides[4];
+      response6 = phy2_Elctricity_slides[5];
+     
+      
+      callSendAPI(sender_psid, response);
+      callSendAPI2(sender_psid, response2);
+      callSendAPI3(sender_psid, response3);
+      callSendAPI4(sender_psid, response4);
+      callSendAPI5(sender_psid, response5);
+      callSendAPI6(sender_psid, response6);
+    }
+
+    else if (payload === 'phy2_thermodynamics_flow') {
+      response = phy2_Thermo[0];
+      response2 = phy2_Thermo[1];
+      response3 = phy2_Thermo[2];
+      response4 = phy2_Thermo[3];
+      response5 = phy2_Thermo[4];
+     
+      
+      callSendAPI(sender_psid, response);
+      callSendAPI2(sender_psid, response2);
+      callSendAPI3(sender_psid, response3);
+      callSendAPI4(sender_psid, response4);
+      callSendAPI5(sender_psid, response5);
+    }
+
+    else if (payload === 'phy2_radiation_flow') {
+      response = phy2_Radiation[0];
+     
+      callSendAPI(sender_psid, response);
+    }
+
+
+    else if (payload === 'phy2_magnet_flow') {
+      response = phy2_magnet[0];
+      response2 = phy2_magnet[1];
+      response3 = phy2_magnet[2];
+      response4 = phy2_magnet[3];
+      response5 = phy2_magnet[4];
+     
+      
+      callSendAPI(sender_psid, response);
+      callSendAPI2(sender_psid, response2);
+      callSendAPI3(sender_psid, response3);
+      callSendAPI4(sender_psid, response4);
+      callSendAPI5(sender_psid, response5);
+    }
+
+    else if (payload === 'phy2_modern_flow') {
+      response = phy2_modern[0];
+      response2 = phy2_modern[1];
+      response3 = phy2_modern[2];
+      response4 = phy2_modern[3];
+     
+      
+      callSendAPI(sender_psid, response);
+      callSendAPI2(sender_psid, response2);
+      callSendAPI3(sender_psid, response3);
+      callSendAPI4(sender_psid, response4);
+    }
+
+    else if (payload === 'phy2_entropy_flow') {
+      response = phy2_entropy[0];
+      response2 = phy2_entropy[1];
+      response3 = phy2_entropy[2];
+      response4 = phy2_entropy[3];
+     
+      
+      callSendAPI(sender_psid, response);
+      callSendAPI2(sender_psid, response2);
+      callSendAPI3(sender_psid, response3);
+      callSendAPI4(sender_psid, response4);
     }
 
 
