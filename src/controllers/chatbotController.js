@@ -27,6 +27,8 @@ const chem1_words = require('./keywords/academic_words/subjects/chem1Words');
 const phy1_words = require('./keywords/academic_words/subjects/phy1Words');
 //academic -> math1
 const math1_words = require('./keywords/academic_words/subjects/math1Words');
+//academic -> math2
+const math2_words = require('./keywords/academic_words/subjects/math2Words');
 //academic -> ntf
 const ntf_words = require('./keywords/academic_words/subjects/ntfWords');
 //academic -> ntf
@@ -151,6 +153,32 @@ const math1_matrix = require("./flows/botReplies/note_levels/level_1/level_1_sub
 const math1_coOrd = require("./flows/botReplies/note_levels/level_1/level_1_subs/math1/topics/math1CoOrd");
 const math1_linear = require("./flows/botReplies/note_levels/level_1/level_1_subs/math1/topics/math1Linear");
 const math1_axes = require("./flows/botReplies/note_levels/level_1/level_1_subs/math1/topics/math1Axes");
+
+//academic flows -> math2
+const math2_flow = require("./flows/botReplies/note_levels/level_1/level_1_subs/math2/math2_flow");
+const math2_books = require("./flows/botReplies/note_levels/level_1/level_1_subs/math2/topics/math2Books");
+const math2_question = require("./flows/botReplies/note_levels/level_1/level_1_subs/math2/topics/math2Ques");
+const math2_suggestion = require("./flows/botReplies/note_levels/level_1/level_1_subs/math2/topics/math2Sugg");
+const math2_moivre = require("./flows/botReplies/note_levels/level_1/level_1_subs/math2/topics/math2Moivre");
+const math2_homo = require("./flows/botReplies/note_levels/level_1/level_1_subs/math2/topics/math2Homo");
+const math2_exact = require("./flows/botReplies/note_levels/level_1/level_1_subs/math2/topics/math2Exact");
+const math2_lde = require("./flows/botReplies/note_levels/level_1/level_1_subs/math2/topics/math2LDE");
+const math2_redhomo = require("./flows/botReplies/note_levels/level_1/level_1_subs/math2/topics/math2RedHomo");
+const math2_diffeqn = require("./flows/botReplies/note_levels/level_1/level_1_subs/math2/topics/diffEqn/math2DifEqn");
+const math2_diffeqn_note = require("./flows/botReplies/note_levels/level_1/level_1_subs/math2/topics/diffEqn/diffEqn_Topics/diffEqnNote");
+const math2_diffeqn_book = require("./flows/botReplies/note_levels/level_1/level_1_subs/math2/topics/diffEqn/diffEqn_Topics/diffeqnBook");
+const math2_linEqn = require("./flows/botReplies/note_levels/level_1/level_1_subs/math2/topics/math2LinearEqn");
+const math2_residue = require("./flows/botReplies/note_levels/level_1/level_1_subs/math2/topics/math2Residue");
+const math2_lineInt = require("./flows/botReplies/note_levels/level_1/level_1_subs/math2/topics/math2LineInt");
+const math2_methodVar = require("./flows/botReplies/note_levels/level_1/level_1_subs/math2/topics/math2MethodVar");
+const math2_analy = require("./flows/botReplies/note_levels/level_1/level_1_subs/math2/topics/math2AnnalyFunc");
+const math2_vector = require("./flows/botReplies/note_levels/level_1/level_1_subs/math2/topics/math2Vector");
+const math2_ode = require("./flows/botReplies/note_levels/level_1/level_1_subs/math2/topics/math2ODe");
+const math2_sepaVar = require("./flows/botReplies/note_levels/level_1/level_1_subs/math2/topics/math2Separ");
+const math2_laplace = require("./flows/botReplies/note_levels/level_1/level_1_subs/math2/topics/math2Laplace");
+const math2_cxNum = require("./flows/botReplies/note_levels/level_1/level_1_subs/math2/topics/math2CxNum");
+
+
 
 //academic flows -> ntf
 const ntf_flow = require("./flows/botReplies/note_levels/level_1/level_1_subs/ntf/ntf_flow");
@@ -378,6 +406,7 @@ function handleMessage(sender_psid, received_message) {
     const chem1 = chem1_words;
     const phy1 = phy1_words;
     const math1 = math1_words;
+    const math2 = math2_words;
     const cp = cp_words;
     const ntf = ntf_words;
     const em = em_words;
@@ -739,6 +768,25 @@ function handleMessage(sender_psid, received_message) {
     else if (syllabus.some(word => received_message.text.toLowerCase().includes(word))) {
 
       response = syllabusFlow[0];
+    }
+
+    //academic -> math1
+    else if (math2.includes(received_message.text.toLowerCase())) {
+
+      response = math2_flow[0];
+      response2 = math2_flow[1];
+      response3 = math2_flow[2];
+      response4 = math2_flow[3];
+      response5 = math2_flow[4];
+      response6 = math2_flow[5];
+      response7 = math2_flow[6];
+
+      callSendAPI2(sender_psid, response2);
+      callSendAPI3(sender_psid, response3);
+      callSendAPI4(sender_psid, response4);
+      callSendAPI5(sender_psid, response5);
+      callSendAPI6(sender_psid, response6);
+      callSendAPI7(sender_psid, response7);
     }
 
 
@@ -2201,6 +2249,24 @@ let handlePostback = async (sender_psid, received_postback) => {
       response = iee_spf[0];
       
       callSendAPI(sender_psid, response);
+    }
+
+    else if (payload === 'math2_flow') {
+      response = math2_flow[0];
+      response2 = math2_flow[1];
+      response3 = math2_flow[2];
+      response4 = math2_flow[3];
+      response5 = math2_flow[4];
+      response6 = math2_flow[5];
+      response7 = math2_flow[6];
+      
+      callSendAPI(sender_psid, response);
+      callSendAPI2(sender_psid, response2);
+      callSendAPI3(sender_psid, response3);
+      callSendAPI4(sender_psid, response4);
+      callSendAPI5(sender_psid, response5);
+      callSendAPI6(sender_psid, response6);
+      callSendAPI7(sender_psid, response7);
     }
 
     
