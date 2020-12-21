@@ -23,6 +23,8 @@ const bce_words = require('./keywords/academic_words/subjects/bceWords');
 const cp_words = require('./keywords/academic_words/subjects/cpWords');
 //academic -> chem1
 const chem1_words = require('./keywords/academic_words/subjects/chem1Words');
+//academic -> chem2
+const chem2_words = require('./keywords/academic_words/subjects/chem2Words');
 //academic -> phy1
 const phy1_words = require('./keywords/academic_words/subjects/phy1Words');
 //academic -> math1
@@ -118,6 +120,24 @@ const chem1_photo = require("./flows/botReplies/note_levels/level_1/level_1_subs
 const chem1_analy = require("./flows/botReplies/note_levels/level_1/level_1_subs/chem1/topics/chem1Analy");
 const chem1_colloid = require("./flows/botReplies/note_levels/level_1/level_1_subs/chem1/topics/chem1Coll");
 const chem1_acid_base = require("./flows/botReplies/note_levels/level_1/level_1_subs/chem1/topics/chem1Acibas");
+
+//academic flows -> chem2
+const chem2_flow = require("./flows/botReplies/note_levels/level_1/level_1_subs/chem2/chem2_flow");
+const chem2_books = require("./flows/botReplies/note_levels/level_1/level_1_subs/chem2/topics/chem2Books");
+const chem2_question = require("./flows/botReplies/note_levels/level_1/level_1_subs/chem2/topics/chem2Ques");
+const chem2_orgMetalic = require("./flows/botReplies/note_levels/level_1/level_1_subs/chem2/topics/chem2OrgMet");
+const chem2_carbonyl = require("./flows/botReplies/note_levels/level_1/level_1_subs/chem2/topics/chem2Carbonyl");
+const chem2_orgReac = require("./flows/botReplies/note_levels/level_1/level_1_subs/chem2/topics/chem2OrgReac");
+const chem2_AlcPhenol = require("./flows/botReplies/note_levels/level_1/level_1_subs/chem2/topics/chem2AlcPhe");
+const chem2_AminoAcid = require("./flows/botReplies/note_levels/level_1/level_1_subs/chem2/topics/chem2Amino");
+const chem2_carbohydrates = require("./flows/botReplies/note_levels/level_1/level_1_subs/chem2/topics/chem2CarboHy");
+const chem2_color_dye = require("./flows/botReplies/note_levels/level_1/level_1_subs/chem2/topics/chem2ColorDye");
+const chem2_carboxylic = require("./flows/botReplies/note_levels/level_1/level_1_subs/chem2/topics/chem2Carboxylic");
+const chem2_amine = require("./flows/botReplies/note_levels/level_1/level_1_subs/chem2/topics/chem2Amine");
+const chem2_solubulity = require("./flows/botReplies/note_levels/level_1/level_1_subs/chem2/topics/chem2Solubility");
+
+
+
 
 //academic flows -> phy1
 const phy1_flow = require("./flows/botReplies/note_levels/level_1/level_1_subs/phy1/phy1_flow");
@@ -404,6 +424,7 @@ function handleMessage(sender_psid, received_message) {
     const level4 = level_4_note_words;
     const bce = bce_words;
     const chem1 = chem1_words;
+    const chem2 = chem2_words;
     const phy1 = phy1_words;
     const math1 = math1_words;
     const math2 = math2_words;
@@ -656,6 +677,21 @@ function handleMessage(sender_psid, received_message) {
       callSendAPI2(sender_psid, response2);
       callSendAPI3(sender_psid, response3);
       callSendAPI4(sender_psid, response4);
+    }
+
+    //academic -> chem2
+    else if (chem2.includes(received_message.text.toLowerCase())) {
+
+      response = chem2_flow[0];
+      response2 = chem2_flow[1];
+      response3 = chem2_flow[2];
+      response4 = chem2_flow[3];
+      response5 = chem2_flow[4];
+
+      callSendAPI2(sender_psid, response2);
+      callSendAPI3(sender_psid, response3);
+      callSendAPI4(sender_psid, response4);
+      callSendAPI5(sender_psid, response5);
     }
 
      //academic -> phy1
@@ -2460,6 +2496,179 @@ let handlePostback = async (sender_psid, received_postback) => {
       
       callSendAPI(sender_psid, response);
       callSendAPI2(sender_psid, response2);
+    }
+
+
+     //subject-> chem2
+     else if (payload === 'che2_flow') {
+      response = chem2_flow[0];
+      response2 = chem2_flow[1];
+      response3 = chem2_flow[2];
+      response4 = chem2_flow[3];
+      response5 = chem2_flow[4];
+     
+      
+      callSendAPI(sender_psid, response);
+      callSendAPI2(sender_psid, response2);
+      callSendAPI3(sender_psid, response3);
+      callSendAPI4(sender_psid, response4);
+      callSendAPI5(sender_psid, response5);
+    }
+
+    else if (payload === 'chem2_books_flow') {
+      response = chem2_books[0];
+      response2 = chem2_books[1];
+      response3 = chem2_books[2];
+      response4 = chem2_books[3];
+     
+      
+      callSendAPI(sender_psid, response);
+      callSendAPI2(sender_psid, response2);
+      callSendAPI3(sender_psid, response3);
+      callSendAPI4(sender_psid, response4);
+    }
+
+    else if (payload === 'chem2_ques_flow') {
+      response = chem2_question[0];
+     
+      callSendAPI(sender_psid, response);
+    }
+
+    else if (payload === 'chem2_org_meta_flow') {
+      response = chem2_orgMetalic[0];
+      response2 = chem2_orgMetalic[1];
+      response3 = chem2_orgMetalic[2];
+      
+      callSendAPI(sender_psid, response);
+      callSendAPI2(sender_psid, response2);
+      callSendAPI3(sender_psid, response3);
+    }
+
+    else if (payload === 'chem2_carbonyl_flow') {
+      response = chem2_carbonyl[0];
+      response2 = chem2_carbonyl[1];
+      response3 = chem2_carbonyl[2];
+      response4 = chem2_carbonyl[3];
+     
+      
+      callSendAPI(sender_psid, response);
+      callSendAPI2(sender_psid, response2);
+      callSendAPI3(sender_psid, response3);
+      callSendAPI4(sender_psid, response4);
+    }
+
+    else if (payload === 'chem2_org_reac_flow') {
+      response = chem2_orgReac[0];
+      response2 = chem2_orgReac[1];
+      response3 = chem2_orgReac[2];
+      response4 = chem2_orgReac[3];
+      response5 = chem2_orgReac[4];
+      response6 = chem2_orgReac[5];
+     
+      
+      callSendAPI(sender_psid, response);
+      callSendAPI2(sender_psid, response2);
+      callSendAPI3(sender_psid, response3);
+      callSendAPI4(sender_psid, response4);
+      callSendAPI5(sender_psid, response5);
+      callSendAPI6(sender_psid, response6);
+    }
+
+    else if (payload === 'chem2_alc_phe_flow') {
+      response = chem2_AlcPhenol[0];
+      response2 = chem2_AlcPhenol[1];
+      response3 = chem2_AlcPhenol[2];
+      response4 = chem2_AlcPhenol[3];
+      response5 = chem2_AlcPhenol[4];
+      response6 = chem2_AlcPhenol[5];
+     
+      
+      callSendAPI(sender_psid, response);
+      callSendAPI2(sender_psid, response2);
+      callSendAPI3(sender_psid, response3);
+      callSendAPI4(sender_psid, response4);
+      callSendAPI5(sender_psid, response5);
+      callSendAPI6(sender_psid, response6);
+    }
+
+    else if (payload === 'chem2_amino_flow') {
+      response = chem2_AminoAcid[0];
+      response2 = chem2_AminoAcid[1];
+      response3 = chem2_AminoAcid[2];
+      response4 = chem2_AminoAcid[3];
+      response5 = chem2_AminoAcid[4];
+      response6 = chem2_AminoAcid[5];
+     
+      
+      callSendAPI(sender_psid, response);
+      callSendAPI2(sender_psid, response2);
+      callSendAPI3(sender_psid, response3);
+      callSendAPI4(sender_psid, response4);
+      callSendAPI5(sender_psid, response5);
+      callSendAPI6(sender_psid, response6);
+    }
+
+    else if (payload === 'chem2_carbo_flow') {
+      response = chem2_carbohydrates[0];
+      response2 = chem2_carbohydrates[1];
+      response3 = chem2_carbohydrates[2];
+      response4 = chem2_carbohydrates[3];
+      response5 = chem2_carbohydrates[4];
+     
+      
+      callSendAPI(sender_psid, response);
+      callSendAPI2(sender_psid, response2);
+      callSendAPI3(sender_psid, response3);
+      callSendAPI4(sender_psid, response4);
+      callSendAPI5(sender_psid, response5);
+    }
+
+    else if (payload === 'chem2_color_dye_flow') {
+      response = chem2_color_dye[0];
+      response2 = chem2_color_dye[1];
+      response3 = chem2_color_dye[2];
+      response4 = chem2_color_dye[3];
+     
+      
+      callSendAPI(sender_psid, response);
+      callSendAPI2(sender_psid, response2);
+      callSendAPI3(sender_psid, response3);
+      callSendAPI4(sender_psid, response4);
+    }
+
+    else if (payload === 'chem2_carboxylic_flow') {
+      response = chem2_carboxylic[0];
+      response2 = chem2_carboxylic[1];
+      response3 = chem2_carboxylic[2];
+      response4 = chem2_carboxylic[3];
+      response5 = chem2_carboxylic[4];
+     
+      
+      callSendAPI(sender_psid, response);
+      callSendAPI2(sender_psid, response2);
+      callSendAPI3(sender_psid, response3);
+      callSendAPI4(sender_psid, response4);
+      callSendAPI5(sender_psid, response5);
+    }
+
+
+    else if (payload === 'chem2_amine_flow') {
+      response = chem2_amine[0];
+      response2 = chem2_amine[1];
+      response3 = chem2_amine[2];
+      response4 = chem2_amine[3];
+     
+      
+      callSendAPI(sender_psid, response);
+      callSendAPI2(sender_psid, response2);
+      callSendAPI3(sender_psid, response3);
+      callSendAPI4(sender_psid, response4);
+    }
+
+    else if (payload === 'chem2_solubulity_flow') {
+      response = chem2_solubulity[0];
+     
+      callSendAPI(sender_psid, response);
     }
 
 
