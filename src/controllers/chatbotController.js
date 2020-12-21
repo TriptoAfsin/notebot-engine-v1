@@ -2269,6 +2269,203 @@ let handlePostback = async (sender_psid, received_postback) => {
       callSendAPI7(sender_psid, response7);
     }
 
+    else if (payload === 'math2_books_flow') {
+      response = math2_books[0];
+      response2 = math2_books[1];
+      response3 = math2_books[2];
+      response4 = math2_books[3];
+      
+      callSendAPI(sender_psid, response);
+      callSendAPI2(sender_psid, response2);
+      callSendAPI3(sender_psid, response3);
+      callSendAPI4(sender_psid, response4);
+    }
+
+    else if (payload === 'math2_ques_flow') {
+      response = math2_question[0];
+      
+      callSendAPI(sender_psid, response);
+    }
+
+    else if (payload === 'math2_suggestion_flow') {
+      response = math2_suggestion[0];
+      
+      callSendAPI(sender_psid, response);
+    }
+
+    else if (payload === 'math2_moivre_flow') {
+      response = math2_moivre[0];
+      response2 = math2_moivre[1];
+      
+      callSendAPI(sender_psid, response);
+      callSendAPI2(sender_psid, response2);
+    }
+
+    else if (payload === 'math2_homo_flow') {
+      response = math2_homo[0];
+      response2 = math2_homo[1];
+      
+      callSendAPI(sender_psid, response);
+      callSendAPI2(sender_psid, response2);
+    }
+
+    else if (payload === 'math2_exact_flow') {
+      response = math2_exact[0];
+      response2 = math2_exact[1];
+      
+      callSendAPI(sender_psid, response);
+      callSendAPI2(sender_psid, response2);
+    }
+
+    else if (payload === 'math2_lde_flow') {
+      response = math2_lde[0];
+      response2 = math2_lde[1];
+      
+      callSendAPI(sender_psid, response);
+      callSendAPI2(sender_psid, response2);
+    }
+
+    else if (payload === 'math2_red_homo_flow') {
+      response = math2_redhomo[0];
+      response2 = math2_redhomo[1];
+      
+      callSendAPI(sender_psid, response);
+      callSendAPI2(sender_psid, response2);
+    }
+
+    else if (payload === 'math2_dif_eqn_flow') {
+      response = math2_diffeqn[0];
+      
+      callSendAPI(sender_psid, response);
+    }
+
+    else if (payload === 'math2_diffeqn_note_flow') {
+      response = math2_diffeqn_note[0];
+      response2 = math2_diffeqn_note[1];
+      response3 = math2_diffeqn_note[2];
+      response4 = math2_diffeqn_note[3];
+      response5 = math2_diffeqn_note[4];
+      response6 = math2_diffeqn_note[5];
+      
+      
+      callSendAPI(sender_psid, response);
+      callSendAPI2(sender_psid, response2);
+      callSendAPI3(sender_psid, response3);
+      callSendAPI4(sender_psid, response4);
+      callSendAPI5(sender_psid, response5);
+      callSendAPI6(sender_psid, response6);
+    }
+
+    else if (payload === 'math2_diffeqn_book_flow') {
+      response = math2_diffeqn_book[0];
+      response2 = math2_diffeqn_book[1];
+      response3 = math2_diffeqn_book[2];
+      response4 = math2_diffeqn_book[3];
+      response5 = math2_diffeqn_book[4];
+      
+      
+      callSendAPI(sender_psid, response);
+      callSendAPI2(sender_psid, response2);
+      callSendAPI3(sender_psid, response3);
+      callSendAPI4(sender_psid, response4);
+      callSendAPI5(sender_psid, response5);
+    }
+
+    else if (payload === 'math2_linear_eqn_flow') {
+      response = math2_linEqn[0];
+      response2 = math2_linEqn[1];
+      
+      callSendAPI(sender_psid, response);
+      callSendAPI2(sender_psid, response2);
+    }
+
+    else if (payload === 'math2_residue_flow') {
+      response = math2_residue[0];
+      
+      callSendAPI(sender_psid, response);
+    }
+
+    else if (payload === 'math2_line_int_flow') {
+      response = math2_lineInt[0];
+      
+      callSendAPI(sender_psid, response);
+    }
+
+    else if (payload === 'math2_method_var_flow') {
+      response = math2_methodVar[0];
+      
+      callSendAPI(sender_psid, response);
+    }
+
+    else if (payload === 'math2_analy_func_flow') {
+      response = math2_analy[0];
+      
+      callSendAPI(sender_psid, response);
+    }
+
+    else if (payload === 'math2_vector_flow') {
+      response = math2_vector[0];
+      response2 = math2_vector[1];
+      response3 = math2_vector[2];
+      response4 = math2_vector[3];
+      
+      
+      callSendAPI(sender_psid, response);
+      callSendAPI2(sender_psid, response2);
+      callSendAPI3(sender_psid, response3);
+      callSendAPI4(sender_psid, response4);
+    }
+
+    else if (payload === 'math2_ode_flow') {
+      response = math2_ode[0];
+      response2 = math2_ode[1];
+      response3 = math2_ode[2];
+      
+      
+      callSendAPI(sender_psid, response);
+      callSendAPI2(sender_psid, response2);
+      callSendAPI3(sender_psid, response3);
+    }
+
+    else if (payload === 'math2_separation_flow') {
+      response = math2_sepaVar[0];
+      response2 = math2_sepaVar[1];
+      
+      
+      callSendAPI(sender_psid, response);
+      callSendAPI2(sender_psid, response2);
+    }
+
+    else if (payload === 'math2_laplace_flow') {
+      response = math2_laplace[0];
+      response2 = math2_laplace[1];
+      response3 = math2_laplace[2];
+      response4 = math2_laplace[3];
+      response5 = math2_laplace[4];
+      response6 = math2_laplace[5];
+      
+      
+      callSendAPI(sender_psid, response);
+      callSendAPI2(sender_psid, response2);
+      callSendAPI3(sender_psid, response3);
+      callSendAPI4(sender_psid, response4);
+      callSendAPI5(sender_psid, response5);
+      callSendAPI6(sender_psid, response6);
+    }
+
+    else if (payload === 'math2_cx_num_flow') {
+      response = math2_cxNum[0];
+      response2 = math2_cxNum[1];
+      
+      
+      callSendAPI(sender_psid, response);
+      callSendAPI2(sender_psid, response2);
+    }
+
+
+
+    
+
     
 
 
