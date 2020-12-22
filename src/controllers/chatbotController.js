@@ -523,15 +523,7 @@ function handleMessage(sender_psid, received_message) {
 
     //academic
     else if (notes.some(word => received_message.text.toLowerCase().includes(word))) {
-
-      
-      let i = 0;
-
-      for(i = 0; i < notesFlow.length; i++){
-
-        response = notesFlow[i];
-        callSendAPI(sender_psid, response);
-      }
+      magicFunc(sender_psid, notesFlow);
     }
 
     else if (quiz.some(word => received_message.text.toLowerCase().includes(word))) {
@@ -1387,26 +1379,11 @@ let handlePostback = async (sender_psid, received_postback) => {
     }
 
     else if (payload === 'phy1_visco_flow') {
-      response = phy1_viscosity[0];
-      response2 = phy1_viscosity[1];
-      
-      
-      callSendAPI(sender_psid, response);
-      callSendAPI2(sender_psid, response2);
+      magicFunc(sender_psid, phy1_viscosity);
     }
 
     else if (payload === 'phy1_surface_flow') {
-      response = phy1_surface[0];
-      response2 = phy1_surface[1];
-      response3 = phy1_surface[2];
-      response4 = phy1_surface[3];
-      response5 = phy1_surface[4];
-      
-      callSendAPI(sender_psid, response);
-      callSendAPI2(sender_psid, response2);
-      callSendAPI3(sender_psid, response3);
-      callSendAPI4(sender_psid, response4);
-      callSendAPI5(sender_psid, response5);
+      magicFunc(sender_psid, phy1_surface);
     }
 
     //subject-> math1
@@ -1415,194 +1392,88 @@ let handlePostback = async (sender_psid, received_postback) => {
     }
 
     else if (payload === 'math1_books_flow') {
-      response = math1_books[0];
-      response2 = math1_books[1];
-      response3 = math1_books[2];
-
-      callSendAPI(sender_psid, response);
-      callSendAPI2(sender_psid, response2);
-      callSendAPI3(sender_psid, response3);
+      magicFunc(sender_psid, math1_books);
     }
 
     else if (payload === 'math1_ques_flow') {
-      response = math1_question[0];
-
-      callSendAPI(sender_psid, response);
+      magicFunc(sender_psid, math1_question);
     }
 
     else if (payload === 'math1_solve18_flow') {
-      response = math1_solve[0];
-      response2 = math1_solve[1];
-
-      callSendAPI(sender_psid, response);
-      callSendAPI2(sender_psid, response2);
+      magicFunc(sender_psid, math1_solve);
     }
 
     else if (payload === 'math1_diff_solve_flow') {
-      response = math1_solve_diff[0];
-      response2 = math1_solve_diff[1];
-      response3 = math1_solve_diff[2];
+      magicFunc(sender_psid, math1_solve_diff);
 
-      callSendAPI(sender_psid, response);
-      callSendAPI2(sender_psid, response2);
-      callSendAPI3(sender_psid, response3);
     }
 
     else if (payload === 'math1_coord_solve_flow') {
-      response = math1_solve_coord[0];
-
-      callSendAPI(sender_psid, response);
+      magicFunc(sender_psid, math1_solve_coord);
     }
 
     else if (payload === 'math1_integreation_solve_flow') {
-      response = math1_solve_integre[0];
-
-      callSendAPI(sender_psid, response);
+      magicFunc(sender_psid, math1_solve_integre);
     }
 
     
     else if (payload === 'math1_linear_solve_flow') {
-      response = math1_solve_linear[0];
-      response2 = math1_solve_linear[1];
-      response3 = math1_solve_linear[2];
-
-      callSendAPI(sender_psid, response);
-      callSendAPI2(sender_psid, response2);
-      callSendAPI3(sender_psid, response3);
+      magicFunc(sender_psid, math1_solve_linear);
     }
 
     else if (payload === 'math1_conv_div_flow') {
-      response = math1_convergence[0];
-      response2 = math1_convergence[1];
-      
-
-      callSendAPI(sender_psid, response);
-      callSendAPI2(sender_psid, response2);
+      magicFunc(sender_psid, math1_convergence);
     }
 
     else if (payload === 'math1_exapnsion_flow') {
-      response = math1_expansion[0];
-      
-      callSendAPI(sender_psid, response);
+      magicFunc(sender_psid, math1_expansion);
     }
 
     else if (payload === 'math1_diff_flow') {
-      response = math1_differntitation[0];
-      response2 = math1_differntitation[1];
-      response3 = math1_differntitation[2];
-      response4 = math1_differntitation[3];
-      response5 = math1_differntitation[4];
-      
-
-      callSendAPI(sender_psid, response);
-      callSendAPI2(sender_psid, response2);
-      callSendAPI3(sender_psid, response3);
-      callSendAPI4(sender_psid, response4);
-      callSendAPI5(sender_psid, response5);
+      magicFunc(sender_psid, math1_differntitation);
     }
 
     else if (payload === 'math1_integre_flow') {
-      response = math1_integration[0];
-      response2 = math1_integration[1];
-      response3 = math1_integration[2];
-      response4 = math1_integration[3];
-      
-      
-
-      callSendAPI(sender_psid, response);
-      callSendAPI2(sender_psid, response2);
-      callSendAPI3(sender_psid, response3);
-      callSendAPI4(sender_psid, response4);
+      magicFunc(sender_psid, math1_integration);
     }
 
     else if (payload === 'math1_extreme_flow') {
-      response = math1_extrema[0];
-      response2 = math1_extrema[1];
-      
-      
-
-      callSendAPI(sender_psid, response);
-      callSendAPI2(sender_psid, response2);
+      magicFunc(sender_psid, math1_extrema);
     }
 
     else if (payload === 'math1_conics_flow') {
-      response = math1_conics[0];
-      
-      callSendAPI(sender_psid, response);
+      magicFunc(sender_psid, math1_conics);
     }
 
     else if (payload === 'math1_vector_flow') {
-      response = math1_vector[0];
-      response2 = math1_vector[1];
-      
-      callSendAPI(sender_psid, response);
-      callSendAPI2(sender_psid, response2);
+      magicFunc(sender_psid, math1_vector);
     }
 
     else if (payload === 'math1_matrix_flow') {
-      response = math1_matrix[0];
-      response2 = math1_matrix[1];
-      response3 = math1_matrix[2];
-    
-      callSendAPI(sender_psid, response);
-      callSendAPI2(sender_psid, response2);
-      callSendAPI3(sender_psid, response3);
+      magicFunc(sender_psid, math1_matrix);
     }
 
     else if (payload === 'math1_co_ord_flow') {
-      response = math1_coOrd[0];
-      response2 = math1_coOrd[1];
-      response3 = math1_coOrd[2];
-      response4 = math1_coOrd[3];
-      response5 = math1_coOrd[4];
-      
-
-      callSendAPI(sender_psid, response);
-      callSendAPI2(sender_psid, response2);
-      callSendAPI3(sender_psid, response3);
-      callSendAPI4(sender_psid, response4);
-      callSendAPI5(sender_psid, response5);
+      magicFunc(sender_psid, math1_coOrd);
     }
 
     else if (payload === 'math1_linear_flow') {
-      response = math1_linear[0];
-      response2 = math1_linear[1];
-    
-      callSendAPI(sender_psid, response);
-      callSendAPI2(sender_psid, response2);
+      magicFunc(sender_psid, math1_linear);
     }
 
     else if (payload === 'math1_change_axes_flow') {
-      let i = 0;
-
-      for(i = 0; i < math1_axes.length; i++){
-
-        response = math1_axes[i];
-        callSendAPI(sender_psid, response);
-      }
+      magicFunc(sender_psid, math1_axes);
     }
 
     //quizflow
     else if (payload === 'quiz_flow') {
-      let i = 0;
-
-      for(i = 0; i < quizFlow.length; i++){
-
-        response = quizFlow[i];
-        callSendAPI(sender_psid, response);
-      }
+      magicFunc(sender_psid, quizFlow);
     }
 
 
     //subject-> ntf
     else if (payload === 'ntf_flow') {
-      let i = 0;
-
-      for(i = 0; i < ntf_flow.length; i++){
-
-        response = ntf_flow[i];
-        callSendAPI(sender_psid, response);
-      }
+      magicFunc(sender_psid, ntf_flow);
     }
 
     else if (payload === 'ntf_books_flow') {
