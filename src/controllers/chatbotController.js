@@ -1411,7 +1411,7 @@ let handlePostback = async (sender_psid, received_postback) => {
 
     //subject-> math1
     else if (payload === 'math1_flow') {
-      magicFunc(math1_flow);
+      magicFunc(sender_psid, math1_flow);
     }
 
     else if (payload === 'math1_books_flow') {
@@ -2711,7 +2711,7 @@ let handlePostback = async (sender_psid, received_postback) => {
 }
 
 //magic func
-let magicFunc = (flow) => {
+let magicFunc = (sender_psid ,flow) => {
   let i = 0;
 
   for(i = 0; i < flow.length; i++){
