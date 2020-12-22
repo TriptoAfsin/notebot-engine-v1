@@ -2671,29 +2671,25 @@ let handlePostback = async (sender_psid, received_postback) => {
 
     //subject-> phy2
     else if (payload === 'phy2_flow') {
-      response = phy2_flow[0];
-      response2 = phy2_flow[1];
-      response3 = phy2_flow[2];
-      response4 = phy2_flow[3];
-     
-      
-      callSendAPI(sender_psid, response);
-      callSendAPI2(sender_psid, response2);
-      callSendAPI3(sender_psid, response3);
-      callSendAPI4(sender_psid, response4);
+
+      let i = 0;
+
+      for(i = 0; i < phy2_flow.length; i++){
+
+        response = phy2_flow[i];
+        callSendAPI(sender_psid, response);
+      }
     }
 
     else if (payload === 'phy2_books_flow') {
-      response = phy2_books[0];
-      response2 = phy2_books[1];
-      response3 = phy2_books[2];
-      response4 = phy2_books[3];
-     
-      
-      callSendAPI(sender_psid, response);
-      callSendAPI2(sender_psid, response2);
-      callSendAPI3(sender_psid, response3);
-      callSendAPI4(sender_psid, response4);
+
+      let i = 0;
+
+      for(i = 0; i < phy2_books.length; i++){
+
+        response = phy2_books[i];
+        callSendAPI(sender_psid, response);
+      }
     }
 
     else if (payload === 'phy2_ques_flow') {
@@ -2703,16 +2699,14 @@ let handlePostback = async (sender_psid, received_postback) => {
     }
 
     else if (payload === 'phy2_kinetic_flow') {
-      response = phy2_Kinetic[0];
-      response2 = phy2_Kinetic[1];
-      response3 = phy2_Kinetic[2];
-      response4 = phy2_Kinetic[3];
-     
-      
-      callSendAPI(sender_psid, response);
-      callSendAPI2(sender_psid, response2);
-      callSendAPI3(sender_psid, response3);
-      callSendAPI4(sender_psid, response4);
+
+      let i = 0;
+
+      for(i = 0; i < phy2_Kinetic.length; i++){
+
+        response = phy2_Kinetic[i];
+        callSendAPI(sender_psid, response);
+      }
     }
 
     else if (payload === 'phy2_electricity_flow') {
@@ -2722,96 +2716,81 @@ let handlePostback = async (sender_psid, received_postback) => {
     }
 
     else if (payload === 'phy2_electric_notes_flow') {
-      response = phy2_Elctricity_notes[0];
-      response2 = phy2_Elctricity_notes[1];
-      response3 = phy2_Elctricity_notes[2];
-      response4 = phy2_Elctricity_notes[3];
-     
-      
-      callSendAPI(sender_psid, response);
-      callSendAPI2(sender_psid, response2);
-      callSendAPI3(sender_psid, response3);
-      callSendAPI4(sender_psid, response4);
+
+      let i = 0;
+
+      for(i = 0; i < phy2_Elctricity_notes.length; i++){
+
+        response = phy2_Elctricity_notes[i];
+        callSendAPI(sender_psid, response);
+      }
     }
 
     else if (payload === 'phy2_electric_slides_flow') {
-      response = phy2_Elctricity_slides[0];
-      response2 = phy2_Elctricity_slides[1];
-      response3 = phy2_Elctricity_slides[2];
-      response4 = phy2_Elctricity_slides[3];
-      response5 = phy2_Elctricity_slides[4];
-      response6 = phy2_Elctricity_slides[5];
-     
-      
-      callSendAPI(sender_psid, response);
-      callSendAPI2(sender_psid, response2);
-      callSendAPI3(sender_psid, response3);
-      callSendAPI4(sender_psid, response4);
-      callSendAPI5(sender_psid, response5);
-      callSendAPI6(sender_psid, response6);
+
+      let i = 0;
+
+      for(i = 0; i < phy2_Elctricity_slides.length; i++){
+
+        response = phy2_Elctricity_slides[i];
+        callSendAPI(sender_psid, response);
+      }
     }
 
     else if (payload === 'phy2_thermodynamics_flow') {
-      response = phy2_Thermo[0];
-      response2 = phy2_Thermo[1];
-      response3 = phy2_Thermo[2];
-      response4 = phy2_Thermo[3];
-      response5 = phy2_Thermo[4];
-     
-      
-      callSendAPI(sender_psid, response);
-      callSendAPI2(sender_psid, response2);
-      callSendAPI3(sender_psid, response3);
-      callSendAPI4(sender_psid, response4);
-      callSendAPI5(sender_psid, response5);
+
+      let i = 0;
+
+      for(i = 0; i < phy2_Thermo.length; i++){
+
+        response = phy2_Thermo[i];
+        callSendAPI(sender_psid, response);
+      }
     }
 
     else if (payload === 'phy2_radiation_flow') {
-      response = phy2_Radiation[0];
-     
-      callSendAPI(sender_psid, response);
+
+      let i = 0;
+
+      for(i = 0; i < phy2_Radiation.length; i++){
+
+        response = phy2_Radiation[i];
+        callSendAPI(sender_psid, response);
+      }
     }
 
 
     else if (payload === 'phy2_magnet_flow') {
-      response = phy2_magnet[0];
-      response2 = phy2_magnet[1];
-      response3 = phy2_magnet[2];
-      response4 = phy2_magnet[3];
-      response5 = phy2_magnet[4];
-     
-      
-      callSendAPI(sender_psid, response);
-      callSendAPI2(sender_psid, response2);
-      callSendAPI3(sender_psid, response3);
-      callSendAPI4(sender_psid, response4);
-      callSendAPI5(sender_psid, response5);
+
+      let i = 0;
+
+      for(i = 0; i < phy2_magnet.length; i++){
+
+        response = phy2_magnet[i];
+        callSendAPI(sender_psid, response);
+      }
     }
 
     else if (payload === 'phy2_modern_flow') {
-      response = phy2_modern[0];
-      response2 = phy2_modern[1];
-      response3 = phy2_modern[2];
-      response4 = phy2_modern[3];
-     
-      
-      callSendAPI(sender_psid, response);
-      callSendAPI2(sender_psid, response2);
-      callSendAPI3(sender_psid, response3);
-      callSendAPI4(sender_psid, response4);
+
+      let i = 0;
+
+      for(i = 0; i < phy2_modern.length; i++){
+
+        response = phy2_modern[i];
+        callSendAPI(sender_psid, response);
+      }
     }
 
     else if (payload === 'phy2_entropy_flow') {
-      response = phy2_entropy[0];
-      response2 = phy2_entropy[1];
-      response3 = phy2_entropy[2];
-      response4 = phy2_entropy[3];
-     
-      
-      callSendAPI(sender_psid, response);
-      callSendAPI2(sender_psid, response2);
-      callSendAPI3(sender_psid, response3);
-      callSendAPI4(sender_psid, response4);
+
+      let i = 0;
+
+      for(i = 0; i < phy2_entropy.length; i++){
+
+        response = phy2_entropy[i];
+        callSendAPI(sender_psid, response);
+      }
     }
 
 
