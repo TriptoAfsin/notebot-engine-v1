@@ -1411,17 +1411,7 @@ let handlePostback = async (sender_psid, received_postback) => {
 
     //subject-> math1
     else if (payload === 'math1_flow') {
-      response = math1_flow[0];
-      response2 = math1_flow[1];
-      response3 = math1_flow[2];
-      response4 = math1_flow[3];
-      response5 = math1_flow[4];
-
-      callSendAPI(sender_psid, response);
-      callSendAPI2(sender_psid, response2);
-      callSendAPI3(sender_psid, response3);
-      callSendAPI4(sender_psid, response4);
-      callSendAPI5(sender_psid, response5);
+      magicFunc(math1_flow);
     }
 
     else if (payload === 'math1_books_flow') {
@@ -1583,96 +1573,86 @@ let handlePostback = async (sender_psid, received_postback) => {
     }
 
     else if (payload === 'math1_change_axes_flow') {
-      response = math1_axes[0];
-      response2 = math1_axes[1];
-    
-      callSendAPI(sender_psid, response);
-      callSendAPI2(sender_psid, response2);
+      let i = 0;
+
+      for(i = 0; i < math1_axes.length; i++){
+
+        response = math1_axes[i];
+        callSendAPI(sender_psid, response);
+      }
     }
 
     //quizflow
     else if (payload === 'quiz_flow') {
-      response = quizFlow[0];
-      response2 = quizFlow[1];
-      response3 = quizFlow[2];
+      let i = 0;
 
-      callSendAPI(sender_psid, response);
-      callSendAPI2(sender_psid, response2);
-      callSendAPI3(sender_psid, response3);
+      for(i = 0; i < quizFlow.length; i++){
+
+        response = quizFlow[i];
+        callSendAPI(sender_psid, response);
+      }
     }
 
 
     //subject-> ntf
     else if (payload === 'ntf_flow') {
-      response = ntf_flow[0];
-      response2 = ntf_flow[1];
-      response3 = ntf_flow[2];
-      response4 = ntf_flow[3];
-      response5 = ntf_flow[4];
-      response6 = ntf_flow[5];
-      response7 = ntf_flow[6];
+      let i = 0;
 
-      callSendAPI(sender_psid, response);
-      callSendAPI2(sender_psid, response2);
-      callSendAPI3(sender_psid, response3);
-      callSendAPI4(sender_psid, response4);
-      callSendAPI5(sender_psid, response5);
-      callSendAPI6(sender_psid, response6);
-      callSendAPI7(sender_psid, response7);
+      for(i = 0; i < ntf_flow.length; i++){
+
+        response = ntf_flow[i];
+        callSendAPI(sender_psid, response);
+      }
     }
 
     else if (payload === 'ntf_books_flow') {
-      response = ntf_books[0];
-      response2 = ntf_books[1];
-      response3 = ntf_books[2];
+      let i = 0;
 
-      callSendAPI(sender_psid, response);
-      callSendAPI2(sender_psid, response2);
-      callSendAPI3(sender_psid, response3);
+      for(i = 0; i < ntf_books.length; i++){
+
+        response = ntf_books[i];
+        callSendAPI(sender_psid, response);
+      }
     }
 
     else if (payload === 'ntf_hnotes_flow') {
-      response = ntf_hand_notes[0];
-      response2 = ntf_hand_notes[1];
-      response3 = ntf_hand_notes[2];
-      response4 = ntf_hand_notes[3];
-      response5 = ntf_hand_notes[4];
+      let i = 0;
 
-      callSendAPI(sender_psid, response);
-      callSendAPI2(sender_psid, response2);
-      callSendAPI3(sender_psid, response3);
-      callSendAPI4(sender_psid, response4);
-      callSendAPI5(sender_psid, response5);
+      for(i = 0; i < ntf_hand_notes.length; i++){
+
+        response = ntf_hand_notes[i];
+        callSendAPI(sender_psid, response);
+      }
     }
 
     else if (payload === 'ntf_ques_flow') {
-      response = ntf_question[0];
-      response2 = ntf_question[1];
+      let i = 0;
 
-      callSendAPI(sender_psid, response);
-      callSendAPI2(sender_psid, response2);
+      for(i = 0; i < ntf_question.length; i++){
+
+        response = ntf_question[i];
+        callSendAPI(sender_psid, response);
+      }
     }
 
     else if (payload === 'ntf_suggestion_flow') {
-      response = ntf_suggestion[0];
-      response2 = ntf_suggestion[1];
-      response3 = ntf_suggestion[2];
+      let i = 0;
 
-      callSendAPI(sender_psid, response);
-      callSendAPI2(sender_psid, response2);
-      callSendAPI3(sender_psid, response3);
+      for(i = 0; i < ntf_suggestion.length; i++){
+
+        response = ntf_suggestion[i];
+        callSendAPI(sender_psid, response);
+      }
     }
 
     else if (payload === 'ntf_intro_flow') {
-      response = ntf_intro[0];
-      response2 = ntf_intro[1];
-      response3 = ntf_intro[2];
-      response4 = ntf_intro[3];
+      let i = 0;
 
-      callSendAPI(sender_psid, response);
-      callSendAPI2(sender_psid, response2);
-      callSendAPI3(sender_psid, response3);
-      callSendAPI4(sender_psid, response4);
+      for(i = 0; i < ntf_intro.length; i++){
+
+        response = ntf_intro[i];
+        callSendAPI(sender_psid, response);
+      }
     }
 
     else if (payload === 'ntf_cotton_flow') {
@@ -1682,31 +1662,23 @@ let handlePostback = async (sender_psid, received_postback) => {
     }
 
     else if (payload === 'ntf_cotton_hand_flow') {
-      response = ntf_cotton_handNote[0];
-      response2 = ntf_cotton_handNote[1];
+      let i = 0;
 
-      callSendAPI(sender_psid, response);
-      callSendAPI2(sender_psid, response2);
+      for(i = 0; i < ntf_cotton_handNote.length; i++){
+
+        response = ntf_cotton_handNote[i];
+        callSendAPI(sender_psid, response);
+      }
     }
 
     else if (payload === 'ntf_slides_flow') {
-      response = ntf_cotton_slide[0];
-      response2 = ntf_cotton_slide[1];
-      response3 = ntf_cotton_slide[2];
-      response4 = ntf_cotton_slide[3];
-      response5 = ntf_cotton_slide[4];
-      response6 = ntf_cotton_slide[5];
-      response7 = ntf_cotton_slide[6];
-      response8 = ntf_cotton_slide[7];
+      let i = 0;
 
-      callSendAPI(sender_psid, response);
-      callSendAPI2(sender_psid, response2);
-      callSendAPI3(sender_psid, response3);
-      callSendAPI4(sender_psid, response4);
-      callSendAPI5(sender_psid, response5);
-      callSendAPI6(sender_psid, response6);
-      callSendAPI7(sender_psid, response7);
-      callSendAPI8(sender_psid, response8);
+      for(i = 0; i < ntf_cotton_slide.length; i++){
+
+        response = ntf_cotton_slide[i];
+        callSendAPI(sender_psid, response);
+      }
     }
 
     else if (payload === 'ntf_videos_flow') {
@@ -1716,15 +1688,13 @@ let handlePostback = async (sender_psid, received_postback) => {
     }
 
     else if (payload === 'ntf_flax_flow') {
-      response = ntf_flax[0];
-      response2 = ntf_flax[1];
-      response3 = ntf_flax[2];
-      response4 = ntf_flax[3];
+      let i = 0;
 
-      callSendAPI(sender_psid, response);
-      callSendAPI2(sender_psid, response2);
-      callSendAPI3(sender_psid, response3);
-      callSendAPI4(sender_psid, response4);
+      for(i = 0; i < ntf_flax.length; i++){
+
+        response = ntf_flax[i];
+        callSendAPI(sender_psid, response);
+      }
     }
 
     else if (payload === 'ntf_wool_flow') {
@@ -1734,23 +1704,23 @@ let handlePostback = async (sender_psid, received_postback) => {
     }
 
     else if (payload === 'ntf_wool_hand_flow') {
-      response = ntf_wool_handNote[0];
-      response2 = ntf_wool_handNote[1];
+      let i = 0;
 
-      callSendAPI(sender_psid, response);
-      callSendAPI2(sender_psid, response2);
+      for(i = 0; i < ntf_wool_handNote.length; i++){
+
+        response = ntf_wool_handNote[i];
+        callSendAPI(sender_psid, response);
+      }
     }
 
     else if (payload === 'ntf_wool_slides_flow') {
-      response = ntf_wool_slides[0];
-      response2 = ntf_wool_slides[1];
-      response3 = ntf_wool_slides[2];
-      response4 = ntf_wool_slides[3];
+      let i = 0;
 
-      callSendAPI(sender_psid, response);
-      callSendAPI2(sender_psid, response2);
-      callSendAPI3(sender_psid, response3);
-      callSendAPI4(sender_psid, response4);
+      for(i = 0; i < ntf_wool_slides.length; i++){
+
+        response = ntf_wool_slides[i];
+        callSendAPI(sender_psid, response);
+      }
     }
 
     else if (payload === 'ntf_wool_videos_flow') {
@@ -1760,39 +1730,23 @@ let handlePostback = async (sender_psid, received_postback) => {
     }
 
     else if (payload === 'ntf_jute_flow') {
-      response = ntf_jute[0];
-      response2 = ntf_jute[1];
-      response3 = ntf_jute[2];
-      response4 = ntf_jute[3];
-      response5 = ntf_jute[4];
-      response6 = ntf_jute[5];
+      let i = 0;
 
+      for(i = 0; i < ntf_jute.length; i++){
 
-
-      callSendAPI(sender_psid, response);
-      callSendAPI2(sender_psid, response2);
-      callSendAPI3(sender_psid, response3);
-      callSendAPI4(sender_psid, response4);
-      callSendAPI5(sender_psid, response5);
-      callSendAPI6(sender_psid, response6);
+        response = ntf_jute[i];
+        callSendAPI(sender_psid, response);
+      }
     }
 
     else if (payload === 'ntf_silk_flow') {
-      response = ntf_silk[0];
-      response2 = ntf_silk[1];
-      response3 = ntf_silk[2];
-      response4 = ntf_silk[3];
-      response5 = ntf_silk[4];
-      response6 = ntf_silk[5];
+      let i = 0;
 
+      for(i = 0; i < ntf_silk.length; i++){
 
-
-      callSendAPI(sender_psid, response);
-      callSendAPI2(sender_psid, response2);
-      callSendAPI3(sender_psid, response3);
-      callSendAPI4(sender_psid, response4);
-      callSendAPI5(sender_psid, response5);
-      callSendAPI6(sender_psid, response6);
+        response = ntf_silk[i];
+        callSendAPI(sender_psid, response);
+      }
     }
 
     else if (payload === 'ntf_sisal_flow') {
@@ -1808,11 +1762,13 @@ let handlePostback = async (sender_psid, received_postback) => {
     }
 
     else if (payload === 'ntf_palf_flow') {
-      response = ntf_palf[0];
-      response2 = ntf_palf[1];
+      let i = 0;
 
-      callSendAPI(sender_psid, response);
-      callSendAPI2(sender_psid, response2);
+      for(i = 0; i < ntf_palf.length; i++){
+
+        response = ntf_palf[i];
+        callSendAPI(sender_psid, response);
+      }
     }
 
     else if (payload === 'ntf_kapok_flow') {
@@ -1828,44 +1784,44 @@ let handlePostback = async (sender_psid, received_postback) => {
     }
 
     else if (payload === 'ntf_other_fib_flow') {
-      response = ntf_other_fibre[0];
-      response2 = ntf_other_fibre[1];
+      let i = 0;
 
-      callSendAPI(sender_psid, response);
-      callSendAPI2(sender_psid, response2);
+      for(i = 0; i < ntf_other_fibre.length; i++){
+
+        response = ntf_other_fibre[i];
+        callSendAPI(sender_psid, response);
+      }
     }
 
-    //subject-> ntf
+    //subject-> em
     else if (payload === 'em_flow') {
-      response = em_flow[0];
-      response2 = em_flow[1];
-      response3 = em_flow[2];
-      response4 = em_flow[3];
-      response5 = em_flow[4];
-      response6 = em_flow[5];
-      
-      callSendAPI(sender_psid, response);
-      callSendAPI2(sender_psid, response2);
-      callSendAPI3(sender_psid, response3);
-      callSendAPI4(sender_psid, response4);
-      callSendAPI5(sender_psid, response5);
-      callSendAPI6(sender_psid, response6);
+      let i = 0;
+
+      for(i = 0; i < em_flow.length; i++){
+
+        response = em_flow[i];
+        callSendAPI(sender_psid, response);
+      }
     }
 
     else if (payload === 'em_books_flow') {
-      response = em_books[0];
-      response2 = em_books[1];
-      
-      callSendAPI(sender_psid, response);
-      callSendAPI2(sender_psid, response2);
+      let i = 0;
+
+      for(i = 0; i < em_books.length; i++){
+
+        response = em_books[i];
+        callSendAPI(sender_psid, response);
+      }
     }
 
     else if (payload === 'em_ques_flow') {
-      response = em_question[0];
-      response2 = em_question[1];
-      
-      callSendAPI(sender_psid, response);
-      callSendAPI2(sender_psid, response2);
+      let i = 0;
+
+      for(i = 0; i < em_question.length; i++){
+
+        response = em_question[i];
+        callSendAPI(sender_psid, response);
+      }
     }
 
     else if (payload === 'em_math_flow') {
@@ -1881,13 +1837,13 @@ let handlePostback = async (sender_psid, received_postback) => {
     }
 
     else if (payload === 'em_heat_flow') {
-      response = em_heatTreat[0];
-      response2 = em_heatTreat[1];
-      response3 = em_heatTreat[2];
-      
-      callSendAPI(sender_psid, response);
-      callSendAPI2(sender_psid, response2);
-      callSendAPI3(sender_psid, response3);
+      let i = 0;
+
+      for(i = 0; i < em_heatTreat.length; i++){
+
+        response = em_heatTreat[i];
+        callSendAPI(sender_psid, response);
+      }
     }
 
     else if (payload === 'em_wrought_flow') {
@@ -1897,19 +1853,23 @@ let handlePostback = async (sender_psid, received_postback) => {
     }
 
     else if (payload === 'em_crystal_flow') {
-      response = em_crystal[0];
-      response2 = em_crystal[1];
-      
-      callSendAPI(sender_psid, response);
-      callSendAPI2(sender_psid, response2);
+      let i = 0;
+
+      for(i = 0; i < em_crystal.length; i++){
+
+        response = em_crystal[i];
+        callSendAPI(sender_psid, response);
+      }
     }
 
     else if (payload === 'em_iron_ceramic_flow') {
-      response = em_iron[0];
-      response2 = em_iron[1];
-      
-      callSendAPI(sender_psid, response);
-      callSendAPI2(sender_psid, response2);
+      let i = 0;
+
+      for(i = 0; i < em_iron.length; i++){
+
+        response = em_iron[i];
+        callSendAPI(sender_psid, response);
+      }
     }
 
     else if (payload === 'em_glass_flow') {
@@ -1919,11 +1879,13 @@ let handlePostback = async (sender_psid, received_postback) => {
     }
 
     else if (payload === 'em_ceramic_flow') {
-      response = em_ceramic[0];
-      response2 = em_ceramic[1];
-      
-      callSendAPI(sender_psid, response);
-      callSendAPI2(sender_psid, response2);
+      let i = 0;
+
+      for(i = 0; i < em_ceramic.length; i++){
+
+        response = em_ceramic[i];
+        callSendAPI(sender_psid, response);
+      }
     }
 
     else if (payload === 'em_corrosion_flow') {
@@ -1933,11 +1895,13 @@ let handlePostback = async (sender_psid, received_postback) => {
     }
 
     else if (payload === 'em_alloy_flow') {
-      response = em_alloy[0];
-      response2 = em_alloy[1];
-      
-      callSendAPI(sender_psid, response);
-      callSendAPI2(sender_psid, response2);
+      let i = 0;
+
+      for(i = 0; i < em_alloy.length; i++){
+
+        response = em_alloy[i];
+        callSendAPI(sender_psid, response);
+      }
     }
 
     else if (payload === 'em_composites_flow') {
@@ -1963,27 +1927,23 @@ let handlePostback = async (sender_psid, received_postback) => {
 
     //subject-> pse
     else if (payload === 'pse_flow') {
-      response = pse_flow[0];
-      response2 = pse_flow[1];
-      response3 = pse_flow[2];
-      response4 = pse_flow[3];
-      response5 = pse_flow[4];
-      
-      callSendAPI(sender_psid, response);
-      callSendAPI2(sender_psid, response2);
-      callSendAPI3(sender_psid, response3);
-      callSendAPI4(sender_psid, response4);
-      callSendAPI5(sender_psid, response5);
+      let i = 0;
+
+      for(i = 0; i < pse_flow.length; i++){
+
+        response = pse_flow[i];
+        callSendAPI(sender_psid, response);
+      }
     }
 
     else if (payload === 'pse_books_flow') {
-      response = pse_books[0];
-      response2 = pse_books[1];
-      response3 = pse_books[2];
-      
-      callSendAPI(sender_psid, response);
-      callSendAPI2(sender_psid, response2);
-      callSendAPI3(sender_psid, response3);
+      let i = 0;
+
+      for(i = 0; i < pse_books.length; i++){
+
+        response = pse_books[i];
+        callSendAPI(sender_psid, response);
+      }
     }
 
     else if (payload === 'pse_ques_flow') {
@@ -1993,107 +1953,117 @@ let handlePostback = async (sender_psid, received_postback) => {
     }
 
     else if (payload === 'pse_handnotes_flow') {
-      response = pse_handnotes[0];
-      
-      callSendAPI(sender_psid, response);
+      let i = 0;
+
+      for(i = 0; i < pse_handnotes.length; i++){
+
+        response = pse_handnotes[i];
+        callSendAPI(sender_psid, response);
+      }
     }
 
     else if (payload === 'pse_intro_flow') {
-      response = pse_intro[0];
-      response2 = pse_intro[1];
-      response3 = pse_intro[2];
-      
-      callSendAPI(sender_psid, response);
-      callSendAPI2(sender_psid, response2);
-      callSendAPI3(sender_psid, response3);
+      let i = 0;
+
+      for(i = 0; i < pse_intro.length; i++){
+
+        response = pse_intro[i];
+        callSendAPI(sender_psid, response);
+      }
     }
 
     else if (payload === 'pse_physical_struc_flow') {
-      response = pse_physical[0];
-      response2 = pse_physical[1];
-      
-      callSendAPI(sender_psid, response);
-      callSendAPI2(sender_psid, response2);
+      let i = 0;
+
+      for(i = 0; i < pse_physical.length; i++){
+
+        response = pse_physical[i];
+        callSendAPI(sender_psid, response);
+      }
     }
 
     else if (payload === 'pse_chemical_struc_flow') {
-      response = pse_chemical[0];
-      response2 = pse_chemical[1];
-      
-      callSendAPI(sender_psid, response);
-      callSendAPI2(sender_psid, response2);
+      let i = 0;
+
+      for(i = 0; i < pse_chemical.length; i++){
+
+        response = pse_chemical[i];
+        callSendAPI(sender_psid, response);
+      }
     }
 
     else if (payload === 'pse_molWei_flow') {
-      response = pse_moleWeight[0];
-      response2 = pse_moleWeight[1];
-      response3 = pse_moleWeight[2];
-      
-      callSendAPI(sender_psid, response);
-      callSendAPI2(sender_psid, response2);
-      callSendAPI3(sender_psid, response3);
+
+      let i = 0;
+
+      for(i = 0; i < pse_moleWeight.length; i++){
+
+        response = pse_moleWeight[i];
+        callSendAPI(sender_psid, response);
+      }
     }
 
     else if (payload === 'pse_step_growth_flow') {
-      response = pse_step[0];
-      response2 = pse_step[1];
-      response3 = pse_step[2];
-      
-      callSendAPI(sender_psid, response);
-      callSendAPI2(sender_psid, response2);
-      callSendAPI3(sender_psid, response3);
+
+      let i = 0;
+
+      for(i = 0; i < pse_step.length; i++){
+
+        response = pse_step[i];
+        callSendAPI(sender_psid, response);
+      }
     }
 
     else if (payload === 'pse_chain_growth_flow') {
-      response = pse_chain[0];
-      response2 = pse_chain[1];
-      response3 = pse_chain[2];
-      
-      callSendAPI(sender_psid, response);
-      callSendAPI2(sender_psid, response2);
-      callSendAPI3(sender_psid, response3);
+      let i = 0;
+
+      for(i = 0; i < pse_chain.length; i++){
+
+        response = pse_chain[i];
+        callSendAPI(sender_psid, response);
+      }
     }
 
     else if (payload === 'pse_morpho_flow') {
-      response = pse_morpho[0];
-      response2 = pse_morpho[1];
-      response3 = pse_morpho[2];
-      response4 = pse_morpho[3];
-      response5 = pse_morpho[4];
-      
-      callSendAPI(sender_psid, response);
-      callSendAPI2(sender_psid, response2);
-      callSendAPI3(sender_psid, response3);
-      callSendAPI4(sender_psid, response4);
-      callSendAPI5(sender_psid, response5);
+
+      let i = 0;
+
+      for(i = 0; i < pse_morpho.length; i++){
+
+        response = pse_morpho[i];
+        callSendAPI(sender_psid, response);
+      }
     }
 
     else if (payload === 'pse_thermal_flow') {
-      response = pse_thermal[0];
-      response2 = pse_thermal[1];
-      response3 = pse_thermal[2];
-      
-      callSendAPI(sender_psid, response);
-      callSendAPI2(sender_psid, response2);
-      callSendAPI3(sender_psid, response3);
+      let i = 0;
+
+      for(i = 0; i < pse_thermal.length; i++){
+
+        response = pse_thermal[i];
+        callSendAPI(sender_psid, response);
+      }
     }
 
     else if (payload === 'pse_degrad_flow') {
-      response = pse_degrad[0];
-      response2 = pse_degrad[1];
-      response3 = pse_degrad[2];
-      
-      callSendAPI(sender_psid, response);
-      callSendAPI2(sender_psid, response2);
-      callSendAPI3(sender_psid, response3);
+
+      let i = 0;
+
+      for(i = 0; i < pse_degrad.length; i++){
+
+        response = pse_degrad[i];
+        callSendAPI(sender_psid, response);
+      }
     }
 
     else if (payload === 'pse_polymer_tec_flow') {
-      response = pse_polyTech[0];
-      response2 = pse_polyTech[1];
-      
-      callSendAPI(sender_psid, response);
-      callSendAPI2(sender_psid, response2);
+      let i = 0;
+
+      for(i = 0; i < pse_polyTech.length; i++){
+
+        response = pse_polyTech[i];
+        callSendAPI(sender_psid, response);
+      }
     }
 
     else if (payload === 'pse_application_flow') {
@@ -2103,13 +2073,13 @@ let handlePostback = async (sender_psid, received_postback) => {
     }
 
     else if (payload === 'tpm_flow') {
-      response = tpm_flow[0];
-      response2 = tpm_flow[1];
-      response3 = tpm_flow[2];
-      
-      callSendAPI(sender_psid, response);
-      callSendAPI2(sender_psid, response2);
-      callSendAPI3(sender_psid, response3);
+      let i = 0;
+
+      for(i = 0; i < tpm_flow.length; i++){
+
+        response = tpm_flow[i];
+        callSendAPI(sender_psid, response);
+      }
     }
 
     else if (payload === 'tpm_ques_flow') {
@@ -2153,15 +2123,14 @@ let handlePostback = async (sender_psid, received_postback) => {
 
     //subject-> iae
     else if (payload === 'iae_flow') {
-      response = iae_flow[0];
-      response2 = iae_flow[1];
-      response3 = iae_flow[2];
-      response4 = iae_flow[3];
-      
-      callSendAPI(sender_psid, response);
-      callSendAPI2(sender_psid, response2);
-      callSendAPI3(sender_psid, response3);
-      callSendAPI4(sender_psid, response4);
+
+      let i = 0;
+
+      for(i = 0; i < iae_flow.length; i++){
+
+        response = iae_flow[i];
+        callSendAPI(sender_psid, response);
+      }
     }
 
     else if (payload === 'iae_books_flow') {
@@ -2177,15 +2146,14 @@ let handlePostback = async (sender_psid, received_postback) => {
     }
 
     else if (payload === 'iae_intro_flow') {
-      response = iae_intro[0];
-      response2 = iae_intro[1];
-      response3 = iae_intro[2];
-      response4 = iae_intro[3];
-      
-      callSendAPI(sender_psid, response);
-      callSendAPI2(sender_psid, response2);
-      callSendAPI3(sender_psid, response3);
-      callSendAPI4(sender_psid, response4);
+
+      let i = 0;
+
+      for(i = 0; i < iae_intro.length; i++){
+
+        response = iae_intro[i];
+        callSendAPI(sender_psid, response);
+      }
     }
 
     else if (payload === 'iae_full_slide_flow') {
@@ -2226,14 +2194,13 @@ let handlePostback = async (sender_psid, received_postback) => {
 
     //subject-> iae
     else if (payload === 'iee_flow') {
-      response = iee_flow[0];
-      response2 = iee_flow[1];
-      response3 = iee_flow[2];
-     
-      
-      callSendAPI(sender_psid, response);
-      callSendAPI2(sender_psid, response2);
-      callSendAPI3(sender_psid, response3);
+      let i = 0;
+
+      for(i = 0; i < iee_flow.length; i++){
+
+        response = iee_flow[i];
+        callSendAPI(sender_psid, response);
+      }
     }
 
     else if (payload === 'iee_books_flow') {
@@ -2285,33 +2252,23 @@ let handlePostback = async (sender_psid, received_postback) => {
     }
 
     else if (payload === 'math2_flow') {
-      response = math2_flow[0];
-      response2 = math2_flow[1];
-      response3 = math2_flow[2];
-      response4 = math2_flow[3];
-      response5 = math2_flow[4];
-      response6 = math2_flow[5];
-      response7 = math2_flow[6];
-      
-      callSendAPI(sender_psid, response);
-      callSendAPI2(sender_psid, response2);
-      callSendAPI3(sender_psid, response3);
-      callSendAPI4(sender_psid, response4);
-      callSendAPI5(sender_psid, response5);
-      callSendAPI6(sender_psid, response6);
-      callSendAPI7(sender_psid, response7);
+      let i = 0;
+
+      for(i = 0; i < math2_flow.length; i++){
+
+        response = math2_flow[i];
+        callSendAPI(sender_psid, response);
+      }
     }
 
     else if (payload === 'math2_books_flow') {
-      response = math2_books[0];
-      response2 = math2_books[1];
-      response3 = math2_books[2];
-      response4 = math2_books[3];
-      
-      callSendAPI(sender_psid, response);
-      callSendAPI2(sender_psid, response2);
-      callSendAPI3(sender_psid, response3);
-      callSendAPI4(sender_psid, response4);
+      let i = 0;
+
+      for(i = 0; i < math2_books.length; i++){
+
+        response = math2_books[i];
+        callSendAPI(sender_psid, response);
+      }
     }
 
     else if (payload === 'math2_ques_flow') {
@@ -2327,43 +2284,53 @@ let handlePostback = async (sender_psid, received_postback) => {
     }
 
     else if (payload === 'math2_moivre_flow') {
-      response = math2_moivre[0];
-      response2 = math2_moivre[1];
-      
-      callSendAPI(sender_psid, response);
-      callSendAPI2(sender_psid, response2);
+      let i = 0;
+
+      for(i = 0; i < math2_moivre.length; i++){
+
+        response = math2_moivre[i];
+        callSendAPI(sender_psid, response);
+      }
     }
 
     else if (payload === 'math2_homo_flow') {
-      response = math2_homo[0];
-      response2 = math2_homo[1];
-      
-      callSendAPI(sender_psid, response);
-      callSendAPI2(sender_psid, response2);
+      let i = 0;
+
+      for(i = 0; i < math2_homo.length; i++){
+
+        response = math2_homo[i];
+        callSendAPI(sender_psid, response);
+      }
     }
 
     else if (payload === 'math2_exact_flow') {
-      response = math2_exact[0];
-      response2 = math2_exact[1];
-      
-      callSendAPI(sender_psid, response);
-      callSendAPI2(sender_psid, response2);
+      let i = 0;
+
+      for(i = 0; i < math2_exact.length; i++){
+
+        response = math2_exact[i];
+        callSendAPI(sender_psid, response);
+      }
     }
 
     else if (payload === 'math2_lde_flow') {
-      response = math2_lde[0];
-      response2 = math2_lde[1];
-      
-      callSendAPI(sender_psid, response);
-      callSendAPI2(sender_psid, response2);
+      let i = 0;
+
+      for(i = 0; i < math2_lde.length; i++){
+
+        response = math2_lde[i];
+        callSendAPI(sender_psid, response);
+      }
     }
 
     else if (payload === 'math2_red_homo_flow') {
-      response = math2_redhomo[0];
-      response2 = math2_redhomo[1];
-      
-      callSendAPI(sender_psid, response);
-      callSendAPI2(sender_psid, response2);
+      let i = 0;
+
+      for(i = 0; i < math2_redhomo.length; i++){
+
+        response = math2_redhomo[i];
+        callSendAPI(sender_psid, response);
+      }
     }
 
     else if (payload === 'math2_dif_eqn_flow') {
@@ -2373,43 +2340,35 @@ let handlePostback = async (sender_psid, received_postback) => {
     }
 
     else if (payload === 'math2_diffeqn_note_flow') {
-      response = math2_diffeqn_note[0];
-      response2 = math2_diffeqn_note[1];
-      response3 = math2_diffeqn_note[2];
-      response4 = math2_diffeqn_note[3];
-      response5 = math2_diffeqn_note[4];
-      response6 = math2_diffeqn_note[5];
-      
-      
-      callSendAPI(sender_psid, response);
-      callSendAPI2(sender_psid, response2);
-      callSendAPI3(sender_psid, response3);
-      callSendAPI4(sender_psid, response4);
-      callSendAPI5(sender_psid, response5);
-      callSendAPI6(sender_psid, response6);
+      let i = 0;
+
+      for(i = 0; i < math2_diffeqn_note.length; i++){
+
+        response = math2_diffeqn_note[i];
+        callSendAPI(sender_psid, response);
+      }
     }
 
     else if (payload === 'math2_diffeqn_book_flow') {
-      response = math2_diffeqn_book[0];
-      response2 = math2_diffeqn_book[1];
-      response3 = math2_diffeqn_book[2];
-      response4 = math2_diffeqn_book[3];
-      response5 = math2_diffeqn_book[4];
-      
-      
-      callSendAPI(sender_psid, response);
-      callSendAPI2(sender_psid, response2);
-      callSendAPI3(sender_psid, response3);
-      callSendAPI4(sender_psid, response4);
-      callSendAPI5(sender_psid, response5);
+
+      let i = 0;
+
+      for(i = 0; i < math2_diffeqn_book.length; i++){
+
+        response = math2_diffeqn_book[i];
+        callSendAPI(sender_psid, response);
+      }
     }
 
     else if (payload === 'math2_linear_eqn_flow') {
-      response = math2_linEqn[0];
-      response2 = math2_linEqn[1];
-      
-      callSendAPI(sender_psid, response);
-      callSendAPI2(sender_psid, response2);
+
+      let i = 0;
+
+      for(i = 0; i < math2_linEqn.length; i++){
+
+        response = math2_linEqn[i];
+        callSendAPI(sender_psid, response);
+      }
     }
 
     else if (payload === 'math2_residue_flow') {
@@ -2437,92 +2396,79 @@ let handlePostback = async (sender_psid, received_postback) => {
     }
 
     else if (payload === 'math2_vector_flow') {
-      response = math2_vector[0];
-      response2 = math2_vector[1];
-      response3 = math2_vector[2];
-      response4 = math2_vector[3];
-      
-      
-      callSendAPI(sender_psid, response);
-      callSendAPI2(sender_psid, response2);
-      callSendAPI3(sender_psid, response3);
-      callSendAPI4(sender_psid, response4);
+      let i = 0;
+
+      for(i = 0; i < math2_vector.length; i++){
+
+        response = math2_vector[i];
+        callSendAPI(sender_psid, response);
+      }
     }
 
     else if (payload === 'math2_ode_flow') {
-      response = math2_ode[0];
-      response2 = math2_ode[1];
-      response3 = math2_ode[2];
-      
-      
-      callSendAPI(sender_psid, response);
-      callSendAPI2(sender_psid, response2);
-      callSendAPI3(sender_psid, response3);
+
+      let i = 0;
+
+      for(i = 0; i < math2_ode.length; i++){
+
+        response = math2_ode[i];
+        callSendAPI(sender_psid, response);
+      }
     }
 
     else if (payload === 'math2_separation_flow') {
-      response = math2_sepaVar[0];
-      response2 = math2_sepaVar[1];
-      
-      
-      callSendAPI(sender_psid, response);
-      callSendAPI2(sender_psid, response2);
+      let i = 0;
+
+      for(i = 0; i < math2_sepaVar.length; i++){
+
+        response = math2_sepaVar[i];
+        callSendAPI(sender_psid, response);
+      }
     }
 
     else if (payload === 'math2_laplace_flow') {
-      response = math2_laplace[0];
-      response2 = math2_laplace[1];
-      response3 = math2_laplace[2];
-      response4 = math2_laplace[3];
-      response5 = math2_laplace[4];
-      response6 = math2_laplace[5];
-      
-      
-      callSendAPI(sender_psid, response);
-      callSendAPI2(sender_psid, response2);
-      callSendAPI3(sender_psid, response3);
-      callSendAPI4(sender_psid, response4);
-      callSendAPI5(sender_psid, response5);
-      callSendAPI6(sender_psid, response6);
+
+      let i = 0;
+
+      for(i = 0; i < math2_laplace.length; i++){
+
+        response = math2_laplace[i];
+        callSendAPI(sender_psid, response);
+      }
     }
 
     else if (payload === 'math2_cx_num_flow') {
-      response = math2_cxNum[0];
-      response2 = math2_cxNum[1];
-      
-      
-      callSendAPI(sender_psid, response);
-      callSendAPI2(sender_psid, response2);
+
+      let i = 0;
+
+      for(i = 0; i < math2_cxNum.length; i++){
+
+        response = math2_cxNum[i];
+        callSendAPI(sender_psid, response);
+      }
     }
 
 
      //subject-> chem2
      else if (payload === 'che2_flow') {
-      response = chem2_flow[0];
-      response2 = chem2_flow[1];
-      response3 = chem2_flow[2];
-      response4 = chem2_flow[3];
-      response5 = chem2_flow[4];
-     
-      
-      callSendAPI(sender_psid, response);
-      callSendAPI2(sender_psid, response2);
-      callSendAPI3(sender_psid, response3);
-      callSendAPI4(sender_psid, response4);
-      callSendAPI5(sender_psid, response5);
+      let i = 0;
+
+      for(i = 0; i < chem2_flow.length; i++){
+
+        response = chem2_flow[i];
+        callSendAPI(sender_psid, response);
+      }
     }
 
     else if (payload === 'chem2_books_flow') {
-      response = chem2_books[0];
-      response2 = chem2_books[1];
-      response3 = chem2_books[2];
-      response4 = chem2_books[3];
-     
-      
-      callSendAPI(sender_psid, response);
-      callSendAPI2(sender_psid, response2);
-      callSendAPI3(sender_psid, response3);
-      callSendAPI4(sender_psid, response4);
+
+      let i = 0;
+
+      for(i = 0; i < chem2_books.length; i++){
+
+        response = chem2_books[i];
+        callSendAPI(sender_psid, response);
+      }
     }
 
     else if (payload === 'chem2_ques_flow') {
@@ -2532,134 +2478,101 @@ let handlePostback = async (sender_psid, received_postback) => {
     }
 
     else if (payload === 'chem2_org_meta_flow') {
-      response = chem2_orgMetalic[0];
-      response2 = chem2_orgMetalic[1];
-      response3 = chem2_orgMetalic[2];
-      
-      callSendAPI(sender_psid, response);
-      callSendAPI2(sender_psid, response2);
-      callSendAPI3(sender_psid, response3);
+
+      let i = 0;
+
+      for(i = 0; i < chem2_orgMetalic.length; i++){
+
+        response = chem2_orgMetalic[i];
+        callSendAPI(sender_psid, response);
+      }
     }
 
     else if (payload === 'chem2_carbonyl_flow') {
-      response = chem2_carbonyl[0];
-      response2 = chem2_carbonyl[1];
-      response3 = chem2_carbonyl[2];
-      response4 = chem2_carbonyl[3];
-     
-      
-      callSendAPI(sender_psid, response);
-      callSendAPI2(sender_psid, response2);
-      callSendAPI3(sender_psid, response3);
-      callSendAPI4(sender_psid, response4);
+
+      let i = 0;
+
+      for(i = 0; i < chem2_carbonyl.length; i++){
+
+        response = chem2_carbonyl[i];
+        callSendAPI(sender_psid, response);
+      }
     }
 
     else if (payload === 'chem2_org_reac_flow') {
-      response = chem2_orgReac[0];
-      response2 = chem2_orgReac[1];
-      response3 = chem2_orgReac[2];
-      response4 = chem2_orgReac[3];
-      response5 = chem2_orgReac[4];
-      response6 = chem2_orgReac[5];
-     
-      
-      callSendAPI(sender_psid, response);
-      callSendAPI2(sender_psid, response2);
-      callSendAPI3(sender_psid, response3);
-      callSendAPI4(sender_psid, response4);
-      callSendAPI5(sender_psid, response5);
-      callSendAPI6(sender_psid, response6);
+      let i = 0;
+
+      for(i = 0; i < chem2_orgReac.length; i++){
+
+        response = chem2_orgReac[i];
+        callSendAPI(sender_psid, response);
+      }
     }
 
     else if (payload === 'chem2_alc_phe_flow') {
-      response = chem2_AlcPhenol[0];
-      response2 = chem2_AlcPhenol[1];
-      response3 = chem2_AlcPhenol[2];
-      response4 = chem2_AlcPhenol[3];
-      response5 = chem2_AlcPhenol[4];
-      response6 = chem2_AlcPhenol[5];
-     
-      
-      callSendAPI(sender_psid, response);
-      callSendAPI2(sender_psid, response2);
-      callSendAPI3(sender_psid, response3);
-      callSendAPI4(sender_psid, response4);
-      callSendAPI5(sender_psid, response5);
-      callSendAPI6(sender_psid, response6);
+
+      let i = 0;
+
+      for(i = 0; i < chem2_AlcPhenol.length; i++){
+
+        response = chem2_AlcPhenol[i];
+        callSendAPI(sender_psid, response);
+      }
     }
 
     else if (payload === 'chem2_amino_flow') {
-      response = chem2_AminoAcid[0];
-      response2 = chem2_AminoAcid[1];
-      response3 = chem2_AminoAcid[2];
-      response4 = chem2_AminoAcid[3];
-      response5 = chem2_AminoAcid[4];
-      response6 = chem2_AminoAcid[5];
-     
-      
-      callSendAPI(sender_psid, response);
-      callSendAPI2(sender_psid, response2);
-      callSendAPI3(sender_psid, response3);
-      callSendAPI4(sender_psid, response4);
-      callSendAPI5(sender_psid, response5);
-      callSendAPI6(sender_psid, response6);
+
+      let i = 0;
+
+      for(i = 0; i < chem2_AminoAcid.length; i++){
+
+        response = chem2_AminoAcid[i];
+        callSendAPI(sender_psid, response);
+      }
     }
 
     else if (payload === 'chem2_carbo_flow') {
-      response = chem2_carbohydrates[0];
-      response2 = chem2_carbohydrates[1];
-      response3 = chem2_carbohydrates[2];
-      response4 = chem2_carbohydrates[3];
-      response5 = chem2_carbohydrates[4];
-     
-      
-      callSendAPI(sender_psid, response);
-      callSendAPI2(sender_psid, response2);
-      callSendAPI3(sender_psid, response3);
-      callSendAPI4(sender_psid, response4);
-      callSendAPI5(sender_psid, response5);
+
+      let i = 0;
+
+      for(i = 0; i < chem2_carbohydrates.length; i++){
+
+        response = chem2_carbohydrates[i];
+        callSendAPI(sender_psid, response);
+      }
     }
 
     else if (payload === 'chem2_color_dye_flow') {
-      response = chem2_color_dye[0];
-      response2 = chem2_color_dye[1];
-      response3 = chem2_color_dye[2];
-      response4 = chem2_color_dye[3];
-     
-      
-      callSendAPI(sender_psid, response);
-      callSendAPI2(sender_psid, response2);
-      callSendAPI3(sender_psid, response3);
-      callSendAPI4(sender_psid, response4);
+
+      let i = 0;
+
+      for(i = 0; i < chem2_color_dye.length; i++){
+
+        response = chem2_color_dye[i];
+        callSendAPI(sender_psid, response);
+      }
     }
 
     else if (payload === 'chem2_carboxylic_flow') {
-      response = chem2_carboxylic[0];
-      response2 = chem2_carboxylic[1];
-      response3 = chem2_carboxylic[2];
-      response4 = chem2_carboxylic[3];
-      response5 = chem2_carboxylic[4];
-     
-      
-      callSendAPI(sender_psid, response);
-      callSendAPI2(sender_psid, response2);
-      callSendAPI3(sender_psid, response3);
-      callSendAPI4(sender_psid, response4);
-      callSendAPI5(sender_psid, response5);
+      let i = 0;
+
+      for(i = 0; i < chem2_carboxylic.length; i++){
+
+        response = chem2_carboxylic[i];
+        callSendAPI(sender_psid, response);
+      }
     }
 
 
     else if (payload === 'chem2_amine_flow') {
-      response = chem2_amine[0];
-      response2 = chem2_amine[1];
-      response3 = chem2_amine[2];
-      response4 = chem2_amine[3];
-     
-      
-      callSendAPI(sender_psid, response);
-      callSendAPI2(sender_psid, response2);
-      callSendAPI3(sender_psid, response3);
-      callSendAPI4(sender_psid, response4);
+
+      let i = 0;
+
+      for(i = 0; i < chem2_amine.length; i++){
+
+        response = chem2_amine[i];
+        callSendAPI(sender_psid, response);
+      }
     }
 
     else if (payload === 'chem2_solubulity_flow') {
@@ -2795,19 +2708,18 @@ let handlePostback = async (sender_psid, received_postback) => {
 
 
 
-    
-
-    
-
-
-
-
-
-
-    
-    
 }
 
+//magic func
+let magicFunc = (flow) => {
+  let i = 0;
+
+  for(i = 0; i < flow.length; i++){
+
+    response = flow[i];
+    callSendAPI(sender_psid, response);
+  }
+}
 
 
 
