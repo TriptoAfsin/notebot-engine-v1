@@ -419,16 +419,6 @@ let postWebhook = (req, res) => {
 function handleMessage(sender_psid, received_message) {
 
     let response;
-    let response2;
-    let response3;
-    let response4;
-    let response5;
-    let response6;
-    let response7;
-    let response8;
-    let response9;
-    let response10;
-    
     
     //keywords
     const greets = greetWords;
@@ -672,8 +662,6 @@ function handleMessage(sender_psid, received_message) {
       callSendAPI(sender_psid, response);  
     }
     
-  
-  
     // Sends the response message
     //callSendAPI(sender_psid, response);    
   }
@@ -708,509 +696,203 @@ let handlePostback = async (sender_psid, received_postback) => {
     } 
 
     else if (payload === 'level_1') {
-        response = level_1_notes[0];
-        response2 = level_1_notes[1];
-        response3 = level_1_notes[2];
-        response4 = level_1_notes[3];
-        response5 = level_1_notes[4];
-        response6 = level_1_notes[5];
-        response7 = level_1_notes[6];
-
-
-        callSendAPI(sender_psid, response);
-        callSendAPI2(sender_psid, response2);
-        callSendAPI3(sender_psid, response3);
-        callSendAPI4(sender_psid, response4);
-        callSendAPI5(sender_psid, response5);
-        callSendAPI6(sender_psid, response6);
-        callSendAPI7(sender_psid, response7);
+      magicFunc(sender_psid, level_1_notes);
     } 
 
     else if (payload === 'level_2') {
-      response = level_2_notes[0];
-      response2 = level_2_notes[1];
-      response3 = level_2_notes[2];
-      response4 = level_2_notes[3];
-      response5 = level_2_notes[4];
-      response6 = level_2_notes[5];
-      response7 = level_2_notes[6];
-      response8 = level_2_notes[7];
-
-
-      callSendAPI(sender_psid, response);
-      callSendAPI2(sender_psid, response2);
-      callSendAPI3(sender_psid, response3);
-      callSendAPI4(sender_psid, response4);
-      callSendAPI5(sender_psid, response5);
-      callSendAPI6(sender_psid, response6);
-      callSendAPI7(sender_psid, response7);
-      callSendAPI8(sender_psid, response8);
+      magicFunc(sender_psid, level_2_notes);
   } 
     else if (payload === 'level_3') {
-      response = level_3_notes[0];
-      response2 = level_3_notes[1];
-      response3 = level_3_notes[2];
-      response4 = level_3_notes[3];
-      response5 = level_3_notes[4];
-      response6 = level_3_notes[5];
-      response7 = level_3_notes[6];
-
-
-      callSendAPI(sender_psid, response);
-      callSendAPI2(sender_psid, response2);
-      callSendAPI3(sender_psid, response3);
-      callSendAPI4(sender_psid, response4);
-      callSendAPI5(sender_psid, response5);
-      callSendAPI6(sender_psid, response6);
-      callSendAPI7(sender_psid, response7);
+      magicFunc(sender_psid, level_3_notes);
     }
     else if (payload === 'level_4') {
-      response = level_4_notes[0];
-      response2 = level_4_notes[1];
-      response3 = level_4_notes[2];
-      response4 = level_4_notes[3];
-      
-
-
-      callSendAPI(sender_psid, response);
-      callSendAPI2(sender_psid, response2);
-      callSendAPI3(sender_psid, response3);
-      callSendAPI4(sender_psid, response4);
+      magicFunc(sender_psid, level_4_notes);
     }
 
     //subject-> bce
     else if (payload === 'bce_flow') {
-      response = bce_flow[0];
-      response2 = bce_flow[1];
-      response3 = bce_flow[2];
-      response4 = bce_flow[3];
-
-      callSendAPI(sender_psid, response);
-      callSendAPI2(sender_psid, response2);
-      callSendAPI3(sender_psid, response3);
-      callSendAPI4(sender_psid, response4);
+      magicFunc(sender_psid, bce_flow);
     }
 
     else if (payload === 'all_sheets_bce_flow') {
-      response = bce_allsheets[0];
-      response2 = bce_allsheets[1];
-     
-
-      callSendAPI(sender_psid, response);
-      callSendAPI2(sender_psid, response2);
-      
+      magicFunc(sender_psid, bce_allsheets);
     }
 
     else if (payload === 'part_a_bce_flow') {
-      response = bce_part_a[0];
-      response2 = bce_part_a[1];
-     
-
-      callSendAPI(sender_psid, response);
-      callSendAPI2(sender_psid, response2);
+      magicFunc(sender_psid, bce_part_a);
     }
+
     else if (payload === 'part_b_bce_flow') {
-      response = bce_part_b[0];
-      response2 = bce_part_b[1];
-      response3 = bce_part_b[2];
-
-
-      callSendAPI(sender_psid, response);
-      callSendAPI2(sender_psid, response2);
-      callSendAPI3(sender_psid, response3);
+      magicFunc(sender_psid, bce_part_b);
     }
+
     else if (payload === 'full_ab_bce_flow') {
-      response = full_part_bce[0];
-      response2 = full_part_bce[1];
-
-
-      callSendAPI(sender_psid, response);
-      callSendAPI2(sender_psid, response2);
+      magicFunc(sender_psid, full_part_bce);
     }
+
+
     else if (payload === 'letter_bce_flow') {
-      response = bce_letter[0];
-      response2 = bce_letter[1];
-      response3 = bce_letter[2];
-
-
-      callSendAPI(sender_psid, response);
-      callSendAPI2(sender_psid, response2);
-      callSendAPI3(sender_psid, response3);
+      magicFunc(sender_psid, bce_letter);
     }
+
+
     else if (payload === 'communi_bce_flow') {
-      response = bce_comm[0];
-      response2 = bce_comm[1];
-
-
-      callSendAPI(sender_psid, response);
-      callSendAPI2(sender_psid, response2);
+      magicFunc(sender_psid, bce_comm);
     }
+
     else if (payload === 'lang_func_bce_flow') {
-      response = bce_lang_func[0];
-      response2 = bce_lang_func[1];
-
-
-      callSendAPI(sender_psid, response);
-      callSendAPI2(sender_psid, response2);
+      magicFunc(sender_psid, bce_lang_func);
     }
+
     else if (payload === 'intro_bce_flow') {
-      response = bce_intro[0];
-
-      callSendAPI(sender_psid, response);
+      magicFunc(sender_psid, bce_intro);
     }
+
     else if (payload === 'bce_ques_flow') {
-      response = bce_questions[0];
-
-      callSendAPI(sender_psid, response);
+      magicFunc(sender_psid, bce_questions);
     }
+
     else if (payload === 'report_bce_flow') {
-      response = bce_report[0];
-
-      callSendAPI(sender_psid, response);
+      magicFunc(sender_psid, bce_report);
     }
-    else if (payload === 'read_write_bce_flow') {
-      response = bce_read_writing[0];
 
-      callSendAPI(sender_psid, response);
+
+    else if (payload === 'read_write_bce_flow') {
+      magicFunc(sender_psid, bce_read_writing);
     }
 
     //subject-> cp
     else if (payload === 'cp_flow') {
-      response = cp_flow[0];
-      response2 = cp_flow[1];
-      response3 = cp_flow[2];
-      response4 = cp_flow[3];
-      response5 = cp_flow[4];
-      response6 = cp_flow[5];
-
-      callSendAPI(sender_psid, response);
-      callSendAPI2(sender_psid, response2);
-      callSendAPI3(sender_psid, response3);
-      callSendAPI4(sender_psid, response4);
-      callSendAPI5(sender_psid, response5);
-      callSendAPI6(sender_psid, response6);
+      magicFunc(sender_psid, cp_flow);
     }
 
     else if (payload === 'books_cp_flow') {
-      response = cp_books[0];
-      response2 = cp_books[1];
-      response3 = cp_books[2];
-
-      callSendAPI(sender_psid, response);
-      callSendAPI2(sender_psid, response2);
-      callSendAPI3(sender_psid, response3);
+      magicFunc(sender_psid, cp_books);
     }
-    else if (payload === 'ques_cp_flow') {
-      response = cp_ques[0];
-      response2 = cp_ques[1];
-      response3 = cp_ques[2];
-      response4 = cp_ques[3];
 
-      callSendAPI(sender_psid, response);
-      callSendAPI2(sender_psid, response2);
-      callSendAPI3(sender_psid, response3);
-      callSendAPI4(sender_psid, response4);
+    else if (payload === 'ques_cp_flow') {
+      magicFunc(sender_psid, cp_ques);
     }
 
     else if (payload === 'condition_cp_flow') {
-      response = cp_condition[0];
-     
-      callSendAPI(sender_psid, response);
+      magicFunc(sender_psid, cp_ques);
     }
 
     else if (payload === 'fundamental_cp_flow') {
-      response = cp_fundamental[0];
-     
-      callSendAPI(sender_psid, response);
+      magicFunc(sender_psid, cp_fundamental);
     }
+
     else if (payload === 'loop_cp_flow') {
-      response = cp_loops[0];
-     
-      callSendAPI(sender_psid, response);
+      magicFunc(sender_psid, cp_loops);
     }
 
     else if (payload === 'array_cp_flow') {
-      response = cp_array[0];
-      response2 = cp_array[1];
-     
-      callSendAPI(sender_psid, response);
-      callSendAPI2(sender_psid, response2);
+      magicFunc(sender_psid, cp_array);
     }
+
+
     else if (payload === 'function_cp_flow') {
-      response = cp_function[0];
-      response2 = cp_function[1];
-     
-      callSendAPI(sender_psid, response);
-      callSendAPI2(sender_psid, response2);
+      magicFunc(sender_psid, cp_function);
     }
+
+
     else if (payload === 'string_cp_flow') {
-      response = cp_string[0];
-      response2 = cp_string[1];
-     
-      callSendAPI(sender_psid, response);
-      callSendAPI2(sender_psid, response2);
+      magicFunc(sender_psid, cp_string);
     }
+
     else if (payload === 'suggestion_cp_flow') {
-      response = cp_suggestion[1];
-      callSendAPI(sender_psid, response);
+      magicFunc(sender_psid, cp_suggestion);
     }
 
 
     //subject-> chem1
     else if (payload === 'che1_flow') {
-      response = chem1_flow[0];
-      response2 = chem1_flow[1];
-      response3 = chem1_flow[2];
-      response4 = chem1_flow[3];
-
-      callSendAPI(sender_psid, response);
-      callSendAPI2(sender_psid, response2);
-      callSendAPI3(sender_psid, response3);
-      callSendAPI4(sender_psid, response4);
+      magicFunc(sender_psid, chem1_flow);
     }
 
     else if (payload === 'chem1_books_flow') {
-      response = chem1_books[0];
-      response2 = chem1_books[1];
-      response3 = chem1_books[2];
-      response4 = chem1_books[3];
-      response5 = chem1_books[4];
-
-      callSendAPI(sender_psid, response);
-      callSendAPI2(sender_psid, response2);
-      callSendAPI3(sender_psid, response3);
-      callSendAPI4(sender_psid, response4);
-      callSendAPI5(sender_psid, response5);
+      magicFunc(sender_psid, chem1_books);
     }
 
     else if (payload === 'chem1_ques_flow') {
-      response = chem1_ques[0];
-      response2 = chem1_ques[1];
-      response3 = chem1_ques[2];
-
-      callSendAPI(sender_psid, response);
-      callSendAPI2(sender_psid, response2);
-      callSendAPI3(sender_psid, response3);
+      magicFunc(sender_psid, chem1_ques);
     }
 
     else if (payload === 'chem1_periodic_flow') {
-      response = chem1_period[0];
-      response2 = chem1_period[1];
-
-      callSendAPI(sender_psid, response);
-      callSendAPI2(sender_psid, response2);
+      magicFunc(sender_psid, chem1_period);
     }
 
     else if (payload === 'chem1_dilute_flow') {
-      response = chem1_dilute[0];
-      response2 = chem1_dilute[1];
-      response3 = chem1_dilute[2];
-      response4 = chem1_dilute[3];
-      response5 = chem1_dilute[4];
-      response6 = chem1_dilute[5];
-
-      callSendAPI(sender_psid, response);
-      callSendAPI2(sender_psid, response2);
-      callSendAPI3(sender_psid, response3);
-      callSendAPI4(sender_psid, response4);
-      callSendAPI5(sender_psid, response5);
-      callSendAPI6(sender_psid, response6);
+      magicFunc(sender_psid, chem1_dilute);
     }
 
     else if (payload === 'chem1_complx_flow') {
-      response = chem1_complex[0];
-      response2 = chem1_complex[1];
-      response3 = chem1_complex[2];
-      response4 = chem1_complex[3];
-      response5 = chem1_complex[4];
-      
-
-      callSendAPI(sender_psid, response);
-      callSendAPI2(sender_psid, response2);
-      callSendAPI3(sender_psid, response3);
-      callSendAPI4(sender_psid, response4);
-      callSendAPI5(sender_psid, response5);
-      
+      magicFunc(sender_psid, chem1_complex);
     }
 
     else if (payload === 'chem1_bond_flow') {
-      response = chem1_bond[0];
-      response2 = chem1_bond[1];
-      
-
-      callSendAPI(sender_psid, response);
-      callSendAPI2(sender_psid, response2);
+      magicFunc(sender_psid, chem1_bond);
     }
 
     else if (payload === 'chem1_equi_flow') {
-      response = chem1_equilibrium[0];
-      response2 = chem1_equilibrium[1];
-      response3 = chem1_equilibrium[2];
-      response4 = chem1_equilibrium[3];
-      
-
-      callSendAPI(sender_psid, response);
-      callSendAPI2(sender_psid, response2);
-      callSendAPI3(sender_psid, response3);
-      callSendAPI4(sender_psid, response4);
+      magicFunc(sender_psid, chem1_equilibrium);
     }
 
     else if (payload === 'chem1_photo_flow') {
-      response = chem1_photo[0];
-      response2 = chem1_photo[1];
-      response3 = chem1_photo[2];
-      
-
-      callSendAPI(sender_psid, response);
-      callSendAPI2(sender_psid, response2);
-      callSendAPI3(sender_psid, response3);
+      magicFunc(sender_psid, chem1_photo);
     }
 
     else if (payload === 'chem1_analy_flow') {
-      response = chem1_analy[0];
-      response2 = chem1_analy[1];
-      response3 = chem1_analy[2];
-      response4 = chem1_analy[3];
-      response5 = chem1_analy[4];
-      
-
-      callSendAPI(sender_psid, response);
-      callSendAPI2(sender_psid, response2);
-      callSendAPI3(sender_psid, response3);
-      callSendAPI4(sender_psid, response4);
-      callSendAPI5(sender_psid, response5);
+      magicFunc(sender_psid, chem1_analy);
     }
 
     else if (payload === 'chem1_coll_flow') {
-      response = chem1_colloid[0];
-      response2 = chem1_colloid[1];
-      response3 = chem1_colloid[2];
-      
-
-      callSendAPI(sender_psid, response);
-      callSendAPI2(sender_psid, response2);
-      callSendAPI3(sender_psid, response3);
+      magicFunc(sender_psid, chem1_colloid);
     }
 
     else if (payload === 'chem1_acid_base_flow') {
-      response = chem1_acid_base[0];
-      response2 = chem1_acid_base[1];
-      
-
-      callSendAPI(sender_psid, response);
-      callSendAPI2(sender_psid, response2);
+      magicFunc(sender_psid, chem1_acid_base);
     }
 
     else if (payload === 'chem1_kinetics_flow') {
-      response = chem1_kinetic[0];
-      response2 = chem1_kinetic[1];
-      response3 = chem1_kinetic[2];
-      response4 = chem1_kinetic[3];
-      
-
-      callSendAPI(sender_psid, response);
-      callSendAPI2(sender_psid, response2);
-      callSendAPI3(sender_psid, response3);
-      callSendAPI4(sender_psid, response4);
+      magicFunc(sender_psid, chem1_kinetic);
     }
 
     //subject-> phy1
     else if (payload === 'phy1_flow') {
-      response = phy1_flow[0];
-      response2 = phy1_flow[1];
-      response3 = phy1_flow[2];
-      response4 = phy1_flow[3];
-      response5 = phy1_flow[4];
-
-      callSendAPI(sender_psid, response);
-      callSendAPI2(sender_psid, response2);
-      callSendAPI3(sender_psid, response3);
-      callSendAPI4(sender_psid, response4);
-      callSendAPI5(sender_psid, response5);
+      magicFunc(sender_psid, phy1_flow);
     }
 
     else if (payload === 'phy1_books_flow') {
-      response = phy1_books[0];
-      response2 = phy1_books[1];
-      response3 = phy1_books[2];
-
-      callSendAPI(sender_psid, response);
-      callSendAPI2(sender_psid, response2);
-      callSendAPI3(sender_psid, response3);
+      magicFunc(sender_psid, phy1_books);
     }
 
     else if (payload === 'phy1_ques_flow') {
-      response = phy1_ques[0];
-     
-      callSendAPI(sender_psid, response);
+      magicFunc(sender_psid, phy1_ques);
     }
 
     else if (payload === 'phy1_circular_flow') {
-      response = phy1_circular[0];
-      response2 = phy1_circular[1];
-      response3 = phy1_circular[2];
-      response4 = phy1_circular[3];
-
-      callSendAPI(sender_psid, response);
-      callSendAPI2(sender_psid, response2);
-      callSendAPI3(sender_psid, response3);
-      callSendAPI4(sender_psid, response4);
+      magicFunc(sender_psid, phy1_circular);
     }
 
     else if (payload === 'phy1_hydro_flow') {
-      response = phy1_hydro[0];
-      response2 = phy1_hydro[1];
-      response3 = phy1_hydro[2];
-      
-      callSendAPI(sender_psid, response);
-      callSendAPI2(sender_psid, response2);
-      callSendAPI3(sender_psid, response3);
+      magicFunc(sender_psid, phy1_hydro);
     }
 
     else if (payload === 'phy1_diffraction_flow') {
-      response = phy1_diffraction[0];
-     
-      callSendAPI(sender_psid, response);
+      magicFunc(sender_psid, phy1_diffraction);
     }
 
     else if (payload === 'phy1_interfer_flow') {
-      response = phy1_interferrence[0];
-      response2 = phy1_interferrence[1];
-      response3 = phy1_interferrence[2];
-      response4 = phy1_interferrence[3];
-      
-      callSendAPI(sender_psid, response);
-      callSendAPI2(sender_psid, response2);
-      callSendAPI3(sender_psid, response3);
-      callSendAPI4(sender_psid, response4);
+      magicFunc(sender_psid, phy1_interferrence);
     }
 
     else if (payload === 'phy1_polar_flow') {
-      response = phy1_polar[0];
-      response2 = phy1_polar[1];
-      response3 = phy1_polar[2];
-      response4 = phy1_polar[3];
-      response5 = phy1_polar[4];
-      
-      callSendAPI(sender_psid, response);
-      callSendAPI2(sender_psid, response2);
-      callSendAPI3(sender_psid, response3);
-      callSendAPI4(sender_psid, response4);
-      callSendAPI5(sender_psid, response5);
+      magicFunc(sender_psid, phy1_polar);
     }
 
     else if (payload === 'phy1_elas_flow') {
-      response = phy1_elasticity[0];
-      response2 = phy1_elasticity[1];
-      response3 = phy1_elasticity[2];
-      response4 = phy1_elasticity[3];
-      response5 = phy1_elasticity[4];
-      
-      callSendAPI(sender_psid, response);
-      callSendAPI2(sender_psid, response2);
-      callSendAPI3(sender_psid, response3);
-      callSendAPI4(sender_psid, response4);
-      callSendAPI5(sender_psid, response5);
+      magicFunc(sender_psid, phy1_elasticity);
     }
 
     else if (payload === 'phy1_visco_flow') {
@@ -1312,1104 +994,521 @@ let handlePostback = async (sender_psid, received_postback) => {
     }
 
     else if (payload === 'ntf_books_flow') {
-      let i = 0;
-
-      for(i = 0; i < ntf_books.length; i++){
-
-        response = ntf_books[i];
-        callSendAPI(sender_psid, response);
-      }
+      magicFunc(sender_psid, ntf_books);
     }
 
     else if (payload === 'ntf_hnotes_flow') {
-      let i = 0;
-
-      for(i = 0; i < ntf_hand_notes.length; i++){
-
-        response = ntf_hand_notes[i];
-        callSendAPI(sender_psid, response);
-      }
+      magicFunc(sender_psid, ntf_hand_notes);
     }
 
     else if (payload === 'ntf_ques_flow') {
-      let i = 0;
-
-      for(i = 0; i < ntf_question.length; i++){
-
-        response = ntf_question[i];
-        callSendAPI(sender_psid, response);
-      }
+      magicFunc(sender_psid, ntf_question);
     }
 
     else if (payload === 'ntf_suggestion_flow') {
-      let i = 0;
-
-      for(i = 0; i < ntf_suggestion.length; i++){
-
-        response = ntf_suggestion[i];
-        callSendAPI(sender_psid, response);
-      }
+      magicFunc(sender_psid, ntf_suggestion);
     }
 
     else if (payload === 'ntf_intro_flow') {
-      let i = 0;
-
-      for(i = 0; i < ntf_intro.length; i++){
-
-        response = ntf_intro[i];
-        callSendAPI(sender_psid, response);
-      }
+      magicFunc(sender_psid, ntf_intro);
     }
 
     else if (payload === 'ntf_cotton_flow') {
-      response = ntf_cotton[0];
-
-      callSendAPI(sender_psid, response);
+      magicFunc(sender_psid, ntf_cotton);
     }
 
     else if (payload === 'ntf_cotton_hand_flow') {
-      let i = 0;
-
-      for(i = 0; i < ntf_cotton_handNote.length; i++){
-
-        response = ntf_cotton_handNote[i];
-        callSendAPI(sender_psid, response);
-      }
+      magicFunc(sender_psid, ntf_cotton_handNote);
     }
 
     else if (payload === 'ntf_slides_flow') {
-      let i = 0;
-
-      for(i = 0; i < ntf_cotton_slide.length; i++){
-
-        response = ntf_cotton_slide[i];
-        callSendAPI(sender_psid, response);
-      }
+      magicFunc(sender_psid, ntf_cotton_slide);
     }
 
     else if (payload === 'ntf_videos_flow') {
-      response = ntf_cotton_video[0];
-
-      callSendAPI(sender_psid, response);
+      magicFunc(sender_psid, ntf_cotton_video);
     }
 
     else if (payload === 'ntf_flax_flow') {
-      let i = 0;
-
-      for(i = 0; i < ntf_flax.length; i++){
-
-        response = ntf_flax[i];
-        callSendAPI(sender_psid, response);
-      }
+      magicFunc(sender_psid, ntf_flax);
     }
 
     else if (payload === 'ntf_wool_flow') {
-      response = ntf_wool[0];
-
-      callSendAPI(sender_psid, response);
+      magicFunc(sender_psid, ntf_wool);
     }
 
     else if (payload === 'ntf_wool_hand_flow') {
-      let i = 0;
-
-      for(i = 0; i < ntf_wool_handNote.length; i++){
-
-        response = ntf_wool_handNote[i];
-        callSendAPI(sender_psid, response);
-      }
+      magicFunc(sender_psid, ntf_wool_handNote);
     }
 
     else if (payload === 'ntf_wool_slides_flow') {
-      let i = 0;
-
-      for(i = 0; i < ntf_wool_slides.length; i++){
-
-        response = ntf_wool_slides[i];
-        callSendAPI(sender_psid, response);
-      }
+      magicFunc(sender_psid, ntf_wool_slides);
     }
 
     else if (payload === 'ntf_wool_videos_flow') {
-      response = ntf_wool_videos[0];
-
-      callSendAPI(sender_psid, response);
+      magicFunc(sender_psid, ntf_wool_videos);
     }
 
     else if (payload === 'ntf_jute_flow') {
-      let i = 0;
-
-      for(i = 0; i < ntf_jute.length; i++){
-
-        response = ntf_jute[i];
-        callSendAPI(sender_psid, response);
-      }
+      magicFunc(sender_psid, ntf_jute);
     }
 
     else if (payload === 'ntf_silk_flow') {
-      let i = 0;
-
-      for(i = 0; i < ntf_silk.length; i++){
-
-        response = ntf_silk[i];
-        callSendAPI(sender_psid, response);
-      }
+      magicFunc(sender_psid, ntf_silk);
     }
 
     else if (payload === 'ntf_sisal_flow') {
-      response = ntf_sisal[0];
-
-      callSendAPI(sender_psid, response);
+      magicFunc(sender_psid, ntf_sisal);
     }
 
     else if (payload === 'ntf_hemp_flow') {
-      response = ntf_hemp[0];
-
-      callSendAPI(sender_psid, response);
+      magicFunc(sender_psid, ntf_hemp);
     }
 
     else if (payload === 'ntf_palf_flow') {
-      let i = 0;
-
-      for(i = 0; i < ntf_palf.length; i++){
-
-        response = ntf_palf[i];
-        callSendAPI(sender_psid, response);
-      }
+      magicFunc(sender_psid, ntf_palf);
     }
 
     else if (payload === 'ntf_kapok_flow') {
-      response = ntf_kapok[0];
-
-      callSendAPI(sender_psid, response);
+      magicFunc(sender_psid, ntf_kapok);
     }
 
     else if (payload === 'ntf_asbestos_flow') {
-      response = ntf_asbestos[0];
-
-      callSendAPI(sender_psid, response);
+      magicFunc(sender_psid, ntf_asbestos);
     }
 
     else if (payload === 'ntf_other_fib_flow') {
-      let i = 0;
-
-      for(i = 0; i < ntf_other_fibre.length; i++){
-
-        response = ntf_other_fibre[i];
-        callSendAPI(sender_psid, response);
-      }
+      magicFunc(sender_psid, ntf_other_fibre);
     }
 
     //subject-> em
     else if (payload === 'em_flow') {
-      let i = 0;
-
-      for(i = 0; i < em_flow.length; i++){
-
-        response = em_flow[i];
-        callSendAPI(sender_psid, response);
-      }
+      magicFunc(sender_psid, em_flow);
     }
 
     else if (payload === 'em_books_flow') {
-      let i = 0;
-
-      for(i = 0; i < em_books.length; i++){
-
-        response = em_books[i];
-        callSendAPI(sender_psid, response);
-      }
+      magicFunc(sender_psid, em_books);
     }
 
     else if (payload === 'em_ques_flow') {
-      let i = 0;
-
-      for(i = 0; i < em_question.length; i++){
-
-        response = em_question[i];
-        callSendAPI(sender_psid, response);
-      }
+      magicFunc(sender_psid, em_question);
     }
 
     else if (payload === 'em_math_flow') {
-      response = em_math[0];
-      
-      callSendAPI(sender_psid, response);
+      magicFunc(sender_psid, em_math);
     }
 
     else if (payload === 'em_blast_flow') {
-      response = em_blastFur[0];
-      
-      callSendAPI(sender_psid, response);
+      magicFunc(sender_psid, em_blastFur);
     }
 
     else if (payload === 'em_heat_flow') {
-      let i = 0;
-
-      for(i = 0; i < em_heatTreat.length; i++){
-
-        response = em_heatTreat[i];
-        callSendAPI(sender_psid, response);
-      }
+      magicFunc(sender_psid, em_heatTreat);
     }
 
     else if (payload === 'em_wrought_flow') {
-      response = em_wrought[0];
-      
-      callSendAPI(sender_psid, response);
+      magicFunc(sender_psid, em_wrought);
     }
 
     else if (payload === 'em_crystal_flow') {
-      let i = 0;
-
-      for(i = 0; i < em_crystal.length; i++){
-
-        response = em_crystal[i];
-        callSendAPI(sender_psid, response);
-      }
+      magicFunc(sender_psid, em_crystal);
     }
 
     else if (payload === 'em_iron_ceramic_flow') {
-      let i = 0;
-
-      for(i = 0; i < em_iron.length; i++){
-
-        response = em_iron[i];
-        callSendAPI(sender_psid, response);
-      }
+      magicFunc(sender_psid, em_iron);
     }
 
     else if (payload === 'em_glass_flow') {
-      response = em_glass[0];
-      
-      callSendAPI(sender_psid, response);
+      magicFunc(sender_psid, em_glass);
     }
 
     else if (payload === 'em_ceramic_flow') {
-      let i = 0;
-
-      for(i = 0; i < em_ceramic.length; i++){
-
-        response = em_ceramic[i];
-        callSendAPI(sender_psid, response);
-      }
+      magicFunc(sender_psid, em_ceramic);
     }
 
     else if (payload === 'em_corrosion_flow') {
-      response = em_corrosion[0];
-      
-      callSendAPI(sender_psid, response);
+      magicFunc(sender_psid, em_corrosion);
     }
 
     else if (payload === 'em_alloy_flow') {
-      let i = 0;
-
-      for(i = 0; i < em_alloy.length; i++){
-
-        response = em_alloy[i];
-        callSendAPI(sender_psid, response);
-      }
+      magicFunc(sender_psid, em_alloy);
     }
 
     else if (payload === 'em_composites_flow') {
-      response = em_composites[0];
-      
-      callSendAPI(sender_psid, response);
+      magicFunc(sender_psid, em_composites);
     }
 
-    //subject-> ntf
+    //subject-> bfs
     else if (payload === 'bfs_flow') {
-      response = bfs_flow[0];
-     
-      
-      callSendAPI(sender_psid, response);
+      magicFunc(sender_psid, bfs_flow);
     }
 
     else if (payload === 'bfs_lec3_flow') {
-      response = bfs_lec3[0];
-     
-      
-      callSendAPI(sender_psid, response);
+      magicFunc(sender_psid, bfs_lec3);
     }
 
     //subject-> pse
     else if (payload === 'pse_flow') {
-      let i = 0;
-
-      for(i = 0; i < pse_flow.length; i++){
-
-        response = pse_flow[i];
-        callSendAPI(sender_psid, response);
-      }
+      magicFunc(sender_psid, pse_flow);
     }
 
     else if (payload === 'pse_books_flow') {
-      let i = 0;
-
-      for(i = 0; i < pse_books.length; i++){
-
-        response = pse_books[i];
-        callSendAPI(sender_psid, response);
-      }
+      magicFunc(sender_psid, pse_books);
     }
 
     else if (payload === 'pse_ques_flow') {
-      response = pse_questions[0];
-      
-      callSendAPI(sender_psid, response);
+      magicFunc(sender_psid, pse_questions);
     }
 
     else if (payload === 'pse_handnotes_flow') {
-      let i = 0;
-
-      for(i = 0; i < pse_handnotes.length; i++){
-
-        response = pse_handnotes[i];
-        callSendAPI(sender_psid, response);
-      }
+      magicFunc(sender_psid, pse_handnotes);
     }
 
     else if (payload === 'pse_intro_flow') {
-      let i = 0;
-
-      for(i = 0; i < pse_intro.length; i++){
-
-        response = pse_intro[i];
-        callSendAPI(sender_psid, response);
-      }
+      magicFunc(sender_psid, pse_intro);
     }
 
     else if (payload === 'pse_physical_struc_flow') {
-      let i = 0;
-
-      for(i = 0; i < pse_physical.length; i++){
-
-        response = pse_physical[i];
-        callSendAPI(sender_psid, response);
-      }
+      magicFunc(sender_psid, pse_physical);
     }
 
     else if (payload === 'pse_chemical_struc_flow') {
-      let i = 0;
-
-      for(i = 0; i < pse_chemical.length; i++){
-
-        response = pse_chemical[i];
-        callSendAPI(sender_psid, response);
-      }
+      magicFunc(sender_psid, pse_chemical);
     }
 
     else if (payload === 'pse_molWei_flow') {
-
-      let i = 0;
-
-      for(i = 0; i < pse_moleWeight.length; i++){
-
-        response = pse_moleWeight[i];
-        callSendAPI(sender_psid, response);
-      }
+      magicFunc(sender_psid, pse_moleWeight);
     }
 
     else if (payload === 'pse_step_growth_flow') {
-
-      let i = 0;
-
-      for(i = 0; i < pse_step.length; i++){
-
-        response = pse_step[i];
-        callSendAPI(sender_psid, response);
-      }
+      magicFunc(sender_psid, pse_step);
     }
 
     else if (payload === 'pse_chain_growth_flow') {
-      let i = 0;
-
-      for(i = 0; i < pse_chain.length; i++){
-
-        response = pse_chain[i];
-        callSendAPI(sender_psid, response);
-      }
+      magicFunc(sender_psid, pse_chain);
     }
 
     else if (payload === 'pse_morpho_flow') {
-
-      let i = 0;
-
-      for(i = 0; i < pse_morpho.length; i++){
-
-        response = pse_morpho[i];
-        callSendAPI(sender_psid, response);
-      }
+      magicFunc(sender_psid, pse_morpho);
     }
 
     else if (payload === 'pse_thermal_flow') {
-      let i = 0;
-
-      for(i = 0; i < pse_thermal.length; i++){
-
-        response = pse_thermal[i];
-        callSendAPI(sender_psid, response);
-      }
+      magicFunc(sender_psid, pse_thermal);
     }
 
     else if (payload === 'pse_degrad_flow') {
-
-      let i = 0;
-
-      for(i = 0; i < pse_degrad.length; i++){
-
-        response = pse_degrad[i];
-        callSendAPI(sender_psid, response);
-      }
+      magicFunc(sender_psid, pse_degrad);
     }
 
     else if (payload === 'pse_polymer_tec_flow') {
-      let i = 0;
-
-      for(i = 0; i < pse_polyTech.length; i++){
-
-        response = pse_polyTech[i];
-        callSendAPI(sender_psid, response);
-      }
+      magicFunc(sender_psid, pse_polyTech);
     }
 
     else if (payload === 'pse_application_flow') {
-      response = pse_application[0];
-      
-      callSendAPI(sender_psid, response);
+      magicFunc(sender_psid, pse_application);
     }
 
     else if (payload === 'tpm_flow') {
-      let i = 0;
-
-      for(i = 0; i < tpm_flow.length; i++){
-
-        response = tpm_flow[i];
-        callSendAPI(sender_psid, response);
-      }
+      magicFunc(sender_psid, tpm_flow);
     }
 
     else if (payload === 'tpm_ques_flow') {
-      response = tpm_ques[0];
-      
-      callSendAPI(sender_psid, response);
+      magicFunc(sender_psid, tpm_ques);
     }
 
     else if (payload === 'tpm_wov_fab_wet_flow') {
-      response = tpm_fabWet[0];
-      
-      callSendAPI(sender_psid, response);
+      magicFunc(sender_psid, tpm_fabWet);
     }
 
     else if (payload === 'tpm_wov_fab_manu_flow') {
-      response = tpm_fabManu[0];
-      
-      callSendAPI(sender_psid, response);
+      magicFunc(sender_psid, tpm_fabManu);
     }
 
 
      //subject-> fmg
     else if (payload === 'fmg_flow') {
-      response = fmg_flow[0];
-      
-      callSendAPI(sender_psid, response);
+      magicFunc(sender_psid, fmg_flow);
     }
 
      //subject-> tmm
      else if (payload === 'tmm_flow') {
-      response = tmm_flow[0];
-      
-      callSendAPI(sender_psid, response);
+      magicFunc(sender_psid, tmm_flow);
     }
 
     else if (payload === 'tmm_quess_flow') {
-      response = tmm_questions[0];
-      
-      callSendAPI(sender_psid, response);
+      magicFunc(sender_psid, tmm_questions);
     }
 
     //subject-> iae
     else if (payload === 'iae_flow') {
-
-      let i = 0;
-
-      for(i = 0; i < iae_flow.length; i++){
-
-        response = iae_flow[i];
-        callSendAPI(sender_psid, response);
-      }
+      magicFunc(sender_psid, iae_flow);
     }
 
     else if (payload === 'iae_books_flow') {
-      response = iae_books[0];
-      
-      callSendAPI(sender_psid, response);
+      magicFunc(sender_psid, iae_books);
     }
 
     else if (payload === 'iae_ques_flow') {
-      response = iae_question[0];
-      
-      callSendAPI(sender_psid, response);
+      magicFunc(sender_psid, iae_question);
     }
 
     else if (payload === 'iae_intro_flow') {
-
-      let i = 0;
-
-      for(i = 0; i < iae_intro.length; i++){
-
-        response = iae_intro[i];
-        callSendAPI(sender_psid, response);
-      }
+      magicFunc(sender_psid, iae_intro);
     }
 
     else if (payload === 'iae_full_slide_flow') {
-      response = iae_fullSlide[0];
-      
-      callSendAPI(sender_psid, response);
+      magicFunc(sender_psid, iae_fullSlide);
     }
 
     else if (payload === 'iae_diff_woven_flow') {
-      response = iae_diffWov[0];
-      
-      callSendAPI(sender_psid, response);
+      magicFunc(sender_psid, iae_diffWov);
     }
 
     else if (payload === 'iae_brands_flow') {
-      response = iae_brands[0];
-      
-      callSendAPI(sender_psid, response);
+      magicFunc(sender_psid, iae_brands);
     }
 
     else if (payload === 'iae_quota_flow') {
-      response = iae_quota[0];
-      
-      callSendAPI(sender_psid, response);
+      magicFunc(sender_psid, iae_quota);
     }
 
     else if (payload === 'iae_cam_flow') {
-      response = iae_cam[0];
-      
-      callSendAPI(sender_psid, response);
+      magicFunc(sender_psid, iae_cam);
     }
 
     else if (payload === 'iae_shirt_flow') {
-      response = iae_shirt[0];
-      
-      callSendAPI(sender_psid, response);
+      magicFunc(sender_psid, iae_shirt);
     }
 
     //subject-> iae
     else if (payload === 'iee_flow') {
-      let i = 0;
-
-      for(i = 0; i < iee_flow.length; i++){
-
-        response = iee_flow[i];
-        callSendAPI(sender_psid, response);
-      }
+      magicFunc(sender_psid, iee_flow);
     }
 
     else if (payload === 'iee_books_flow') {
-      response = iee_books[0];
-      
-      callSendAPI(sender_psid, response);
+      magicFunc(sender_psid, iee_books);
     }
 
     else if (payload === 'iee_sheets_flow') {
-      response = iee_sheets[0];
-      
-      callSendAPI(sender_psid, response);
+      magicFunc(sender_psid, iee_sheets);
     }
 
     else if (payload === 'iee_handnotes_flow') {
-      response = iee_notes[0];
-      
-      callSendAPI(sender_psid, response);
+      magicFunc(sender_psid, iee_notes);
     }
 
     else if (payload === 'iee_man_env_flow') {
-      response = iee_manEnv[0];
-      
-      callSendAPI(sender_psid, response);
+      magicFunc(sender_psid, iee_manEnv);
     }
 
     else if (payload === 'iee_soil_flow') {
-      response = iee_soil[0];
-      
-      callSendAPI(sender_psid, response);
+      magicFunc(sender_psid, iee_soil);
     }
 
     else if (payload === 'iee_env_issue_flow') {
-      response = iee_envIssues[0];
-      
-      callSendAPI(sender_psid, response);
+      magicFunc(sender_psid, iee_envIssues);
     }
 
     else if (payload === 'iee_nature_env_flow') {
-      response = iee_natureEnv[0];
-      
-      callSendAPI(sender_psid, response);
+      magicFunc(sender_psid, iee_natureEnv);
     }
 
     else if (payload === 'iee_spf_upf_flow') {
-      response = iee_spf[0];
-      
-      callSendAPI(sender_psid, response);
+      magicFunc(sender_psid, iee_spf);
     }
 
     else if (payload === 'math2_flow') {
-      let i = 0;
-
-      for(i = 0; i < math2_flow.length; i++){
-
-        response = math2_flow[i];
-        callSendAPI(sender_psid, response);
-      }
+      magicFunc(sender_psid, math2_flow);
     }
 
     else if (payload === 'math2_books_flow') {
-      let i = 0;
-
-      for(i = 0; i < math2_books.length; i++){
-
-        response = math2_books[i];
-        callSendAPI(sender_psid, response);
-      }
+      magicFunc(sender_psid, math2_books);
     }
 
     else if (payload === 'math2_ques_flow') {
-      response = math2_question[0];
-      
-      callSendAPI(sender_psid, response);
+      magicFunc(sender_psid, math2_question);
     }
 
     else if (payload === 'math2_suggestion_flow') {
-      response = math2_suggestion[0];
-      
-      callSendAPI(sender_psid, response);
+      magicFunc(sender_psid, math2_suggestion);
     }
 
     else if (payload === 'math2_moivre_flow') {
-      let i = 0;
-
-      for(i = 0; i < math2_moivre.length; i++){
-
-        response = math2_moivre[i];
-        callSendAPI(sender_psid, response);
-      }
+      magicFunc(sender_psid, math2_moivre);
     }
 
     else if (payload === 'math2_homo_flow') {
-      let i = 0;
-
-      for(i = 0; i < math2_homo.length; i++){
-
-        response = math2_homo[i];
-        callSendAPI(sender_psid, response);
-      }
+      magicFunc(sender_psid, math2_homo);
     }
 
     else if (payload === 'math2_exact_flow') {
-      let i = 0;
-
-      for(i = 0; i < math2_exact.length; i++){
-
-        response = math2_exact[i];
-        callSendAPI(sender_psid, response);
-      }
+      magicFunc(sender_psid, math2_exact);
     }
 
     else if (payload === 'math2_lde_flow') {
-      let i = 0;
-
-      for(i = 0; i < math2_lde.length; i++){
-
-        response = math2_lde[i];
-        callSendAPI(sender_psid, response);
-      }
+      magicFunc(sender_psid, math2_lde);
     }
 
     else if (payload === 'math2_red_homo_flow') {
-      let i = 0;
-
-      for(i = 0; i < math2_redhomo.length; i++){
-
-        response = math2_redhomo[i];
-        callSendAPI(sender_psid, response);
-      }
+      magicFunc(sender_psid, math2_redhomo);
     }
 
     else if (payload === 'math2_dif_eqn_flow') {
-      response = math2_diffeqn[0];
-      
-      callSendAPI(sender_psid, response);
+      magicFunc(sender_psid, math2_diffeqn);
     }
 
     else if (payload === 'math2_diffeqn_note_flow') {
-      let i = 0;
-
-      for(i = 0; i < math2_diffeqn_note.length; i++){
-
-        response = math2_diffeqn_note[i];
-        callSendAPI(sender_psid, response);
-      }
+      magicFunc(sender_psid, math2_diffeqn_note);
     }
 
     else if (payload === 'math2_diffeqn_book_flow') {
-
-      let i = 0;
-
-      for(i = 0; i < math2_diffeqn_book.length; i++){
-
-        response = math2_diffeqn_book[i];
-        callSendAPI(sender_psid, response);
-      }
+      magicFunc(sender_psid, math2_diffeqn_book);
     }
 
     else if (payload === 'math2_linear_eqn_flow') {
-
-      let i = 0;
-
-      for(i = 0; i < math2_linEqn.length; i++){
-
-        response = math2_linEqn[i];
-        callSendAPI(sender_psid, response);
-      }
+      magicFunc(sender_psid, math2_linEqn);
     }
 
     else if (payload === 'math2_residue_flow') {
-      response = math2_residue[0];
-      
-      callSendAPI(sender_psid, response);
+      magicFunc(sender_psid, math2_residue);
     }
 
     else if (payload === 'math2_line_int_flow') {
-      response = math2_lineInt[0];
-      
-      callSendAPI(sender_psid, response);
+      magicFunc(sender_psid, math2_lineInt);
     }
 
     else if (payload === 'math2_method_var_flow') {
-      response = math2_methodVar[0];
-      
-      callSendAPI(sender_psid, response);
+      magicFunc(sender_psid, math2_methodVar);
     }
 
     else if (payload === 'math2_analy_func_flow') {
-      response = math2_analy[0];
-      
-      callSendAPI(sender_psid, response);
+      magicFunc(sender_psid, math2_analy);
     }
 
     else if (payload === 'math2_vector_flow') {
-      let i = 0;
-
-      for(i = 0; i < math2_vector.length; i++){
-
-        response = math2_vector[i];
-        callSendAPI(sender_psid, response);
-      }
+      magicFunc(sender_psid, math2_vector);
     }
 
     else if (payload === 'math2_ode_flow') {
-
-      let i = 0;
-
-      for(i = 0; i < math2_ode.length; i++){
-
-        response = math2_ode[i];
-        callSendAPI(sender_psid, response);
-      }
+      magicFunc(sender_psid, math2_ode);
     }
 
     else if (payload === 'math2_separation_flow') {
-      let i = 0;
-
-      for(i = 0; i < math2_sepaVar.length; i++){
-
-        response = math2_sepaVar[i];
-        callSendAPI(sender_psid, response);
-      }
+      magicFunc(sender_psid, math2_sepaVar);
     }
 
     else if (payload === 'math2_laplace_flow') {
-
-      let i = 0;
-
-      for(i = 0; i < math2_laplace.length; i++){
-
-        response = math2_laplace[i];
-        callSendAPI(sender_psid, response);
-      }
+      magicFunc(sender_psid, math2_laplace);
     }
 
     else if (payload === 'math2_cx_num_flow') {
-
-      let i = 0;
-
-      for(i = 0; i < math2_cxNum.length; i++){
-
-        response = math2_cxNum[i];
-        callSendAPI(sender_psid, response);
-      }
+      magicFunc(sender_psid, math2_cxNum);
     }
 
 
      //subject-> chem2
      else if (payload === 'che2_flow') {
-      let i = 0;
-
-      for(i = 0; i < chem2_flow.length; i++){
-
-        response = chem2_flow[i];
-        callSendAPI(sender_psid, response);
-      }
+      magicFunc(sender_psid, chem2_flow);
     }
 
     else if (payload === 'chem2_books_flow') {
-
-      let i = 0;
-
-      for(i = 0; i < chem2_books.length; i++){
-
-        response = chem2_books[i];
-        callSendAPI(sender_psid, response);
-      }
+      magicFunc(sender_psid, chem2_books);
     }
 
     else if (payload === 'chem2_ques_flow') {
-      response = chem2_question[0];
-     
-      callSendAPI(sender_psid, response);
+      magicFunc(sender_psid, chem2_question);
     }
 
     else if (payload === 'chem2_org_meta_flow') {
-
-      let i = 0;
-
-      for(i = 0; i < chem2_orgMetalic.length; i++){
-
-        response = chem2_orgMetalic[i];
-        callSendAPI(sender_psid, response);
-      }
+      magicFunc(sender_psid, chem2_orgMetalic);
     }
 
     else if (payload === 'chem2_carbonyl_flow') {
-
-      let i = 0;
-
-      for(i = 0; i < chem2_carbonyl.length; i++){
-
-        response = chem2_carbonyl[i];
-        callSendAPI(sender_psid, response);
-      }
+      magicFunc(sender_psid, chem2_carbonyl);
     }
 
     else if (payload === 'chem2_org_reac_flow') {
-      let i = 0;
-
-      for(i = 0; i < chem2_orgReac.length; i++){
-
-        response = chem2_orgReac[i];
-        callSendAPI(sender_psid, response);
-      }
+      magicFunc(sender_psid, chem2_orgReac);
     }
 
     else if (payload === 'chem2_alc_phe_flow') {
-
-      let i = 0;
-
-      for(i = 0; i < chem2_AlcPhenol.length; i++){
-
-        response = chem2_AlcPhenol[i];
-        callSendAPI(sender_psid, response);
-      }
+      magicFunc(sender_psid, chem2_AlcPhenol);
     }
 
     else if (payload === 'chem2_amino_flow') {
-
-      let i = 0;
-
-      for(i = 0; i < chem2_AminoAcid.length; i++){
-
-        response = chem2_AminoAcid[i];
-        callSendAPI(sender_psid, response);
-      }
+      magicFunc(sender_psid, chem2_AminoAcid);
     }
 
     else if (payload === 'chem2_carbo_flow') {
-
-      let i = 0;
-
-      for(i = 0; i < chem2_carbohydrates.length; i++){
-
-        response = chem2_carbohydrates[i];
-        callSendAPI(sender_psid, response);
-      }
+      magicFunc(sender_psid, chem2_carbohydrates);
     }
 
     else if (payload === 'chem2_color_dye_flow') {
-
-      let i = 0;
-
-      for(i = 0; i < chem2_color_dye.length; i++){
-
-        response = chem2_color_dye[i];
-        callSendAPI(sender_psid, response);
-      }
+      magicFunc(sender_psid, chem2_color_dye);
     }
 
     else if (payload === 'chem2_carboxylic_flow') {
-      let i = 0;
-
-      for(i = 0; i < chem2_carboxylic.length; i++){
-
-        response = chem2_carboxylic[i];
-        callSendAPI(sender_psid, response);
-      }
+      magicFunc(sender_psid, chem2_carboxylic);
     }
 
 
     else if (payload === 'chem2_amine_flow') {
-
-      let i = 0;
-
-      for(i = 0; i < chem2_amine.length; i++){
-
-        response = chem2_amine[i];
-        callSendAPI(sender_psid, response);
-      }
+      magicFunc(sender_psid, chem2_amine);
     }
 
     else if (payload === 'chem2_solubulity_flow') {
-      response = chem2_solubulity[0];
-     
-      callSendAPI(sender_psid, response);
+      magicFunc(sender_psid, chem2_solubulity);
     }
 
 
     //subject-> phy2
     else if (payload === 'phy2_flow') {
-
-      let i = 0;
-
-      for(i = 0; i < phy2_flow.length; i++){
-
-        response = phy2_flow[i];
-        callSendAPI(sender_psid, response);
-      }
+      magicFunc(sender_psid, phy2_flow);
     }
 
     else if (payload === 'phy2_books_flow') {
-
-      let i = 0;
-
-      for(i = 0; i < phy2_books.length; i++){
-
-        response = phy2_books[i];
-        callSendAPI(sender_psid, response);
-      }
+      magicFunc(sender_psid, phy2_books);
     }
 
     else if (payload === 'phy2_ques_flow') {
-      response = phy2_question[0];
-     
-      callSendAPI(sender_psid, response);
+      magicFunc(sender_psid, phy2_question);
     }
 
     else if (payload === 'phy2_kinetic_flow') {
-
-      let i = 0;
-
-      for(i = 0; i < phy2_Kinetic.length; i++){
-
-        response = phy2_Kinetic[i];
-        callSendAPI(sender_psid, response);
-      }
+      magicFunc(sender_psid, phy2_Kinetic);
     }
 
     else if (payload === 'phy2_electricity_flow') {
-      response = phy2_Elctricity[0];
-     
-      callSendAPI(sender_psid, response);
+      magicFunc(sender_psid, phy2_Elctricity);
     }
 
     else if (payload === 'phy2_electric_notes_flow') {
-
-      let i = 0;
-
-      for(i = 0; i < phy2_Elctricity_notes.length; i++){
-
-        response = phy2_Elctricity_notes[i];
-        callSendAPI(sender_psid, response);
-      }
+      magicFunc(sender_psid, phy2_Elctricity_notes);
     }
 
     else if (payload === 'phy2_electric_slides_flow') {
-
-      let i = 0;
-
-      for(i = 0; i < phy2_Elctricity_slides.length; i++){
-
-        response = phy2_Elctricity_slides[i];
-        callSendAPI(sender_psid, response);
-      }
+      magicFunc(sender_psid, phy2_Elctricity_slides);
     }
 
     else if (payload === 'phy2_thermodynamics_flow') {
-
-      let i = 0;
-
-      for(i = 0; i < phy2_Thermo.length; i++){
-
-        response = phy2_Thermo[i];
-        callSendAPI(sender_psid, response);
-      }
+      magicFunc(sender_psid, phy2_Thermo);
     }
 
     else if (payload === 'phy2_radiation_flow') {
-
-      let i = 0;
-
-      for(i = 0; i < phy2_Radiation.length; i++){
-
-        response = phy2_Radiation[i];
-        callSendAPI(sender_psid, response);
-      }
+      magicFunc(sender_psid, phy2_Radiation);
     }
 
 
     else if (payload === 'phy2_magnet_flow') {
-
-      let i = 0;
-
-      for(i = 0; i < phy2_magnet.length; i++){
-
-        response = phy2_magnet[i];
-        callSendAPI(sender_psid, response);
-      }
+      magicFunc(sender_psid, phy2_magnet);
     }
 
     else if (payload === 'phy2_modern_flow') {
-
-      let i = 0;
-
-      for(i = 0; i < phy2_modern.length; i++){
-
-        response = phy2_modern[i];
-        callSendAPI(sender_psid, response);
-      }
+      magicFunc(sender_psid, phy2_modern);
     }
 
     else if (payload === 'phy2_entropy_flow') {
-
-      let i = 0;
-
-      for(i = 0; i < phy2_entropy.length; i++){
-
-        response = phy2_entropy[i];
-        callSendAPI(sender_psid, response);
-      }
+      magicFunc(sender_psid, phy2_entropy);
     }
 
 
