@@ -730,6 +730,15 @@ function handleMessage(sender_psid, received_message) {
     //academic -> phy2
     else if (phy2.includes(received_message.text.toLowerCase())) {
 
+
+      let i = 0;
+
+      for(i = 0; i < phy2_flow.length; i++){
+        
+        response = phy2_flow[i];
+        callSendAPI(sender_psid, response);
+      }
+      /*
       response = phy2_flow[0];
       response2 = phy2_flow[1];
       response3 = phy2_flow[2];
@@ -738,6 +747,7 @@ function handleMessage(sender_psid, received_message) {
       callSendAPI2(sender_psid, response2);
       callSendAPI3(sender_psid, response3);
       callSendAPI4(sender_psid, response4);
+      */
     }
 
     //academic -> math1

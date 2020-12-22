@@ -4,7 +4,7 @@ let phy2_electric_flow = [
             "type": "template",
             "payload": {
                 "template_type": "button",
-                "text": "🟩 Select Topic for PHY-II -  ",
+                "text": "🟩 Select- ",
                 "buttons": [
                     {
                         "type": "postback",
