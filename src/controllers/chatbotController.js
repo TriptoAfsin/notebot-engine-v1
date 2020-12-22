@@ -481,6 +481,8 @@ function handleMessage(sender_psid, received_message) {
     if (greets.some(word => received_message.text.toLowerCase().includes(word))) {
       // Create the payload for a basic text message
       response = greetReplies[0];
+
+      callSendAPI(sender_psid, response);  
     }
 
 
@@ -490,17 +492,23 @@ function handleMessage(sender_psid, received_message) {
       response = {
         "text": `${loveReply[Math.floor(Math.random() * loveReply.length)]}`
       }
+
+      callSendAPI(sender_psid, response);  
     }
 
     else if (getStartedWords.some(word => received_message.text.toLowerCase().includes(word))) {
       // Create the payload for a basic text message
       response = getStartedMsg[0];
+
+      callSendAPI(sender_psid, response);  
     }
 
+    /*
     else if (test.includes(received_message.text)) {
       // Create the payload for a basic text message
       return response = testReply[0];
     }
+    */
 
 
     else if (negative.some(word => received_message.text.toLowerCase().includes(word))) {
@@ -508,6 +516,8 @@ function handleMessage(sender_psid, received_message) {
       response = {
         "text": `${sadReply[Math.floor(Math.random() * sadReply.length)]}`
       }
+
+      callSendAPI(sender_psid, response);  
     }
 
 
@@ -516,8 +526,9 @@ function handleMessage(sender_psid, received_message) {
 
       response = notesFlow[0];
       response2 = notesFlow[1];
+
+      callSendAPI(sender_psid, response);  
       callSendAPI2(sender_psid, response2)
-      
     }
 
     else if (quiz.some(word => received_message.text.toLowerCase().includes(word))) {
@@ -526,6 +537,7 @@ function handleMessage(sender_psid, received_message) {
       response2 = quizFlow[1];
       response3 = quizFlow[2];
 
+      callSendAPI(sender_psid, response);  
       callSendAPI2(sender_psid, response2)
       callSendAPI3(sender_psid, response3)
     }
@@ -540,6 +552,7 @@ function handleMessage(sender_psid, received_message) {
       response6 = level_1_notes[5];
       response7 = level_1_notes[6];
 
+      callSendAPI(sender_psid, response);  
       callSendAPI2(sender_psid, response2);
       callSendAPI3(sender_psid, response3);
       callSendAPI4(sender_psid, response4);
@@ -560,6 +573,7 @@ function handleMessage(sender_psid, received_message) {
       response7 = level_2_notes[6];
       response8 = level_2_notes[7];
 
+      callSendAPI(sender_psid, response);  
       callSendAPI2(sender_psid, response2);
       callSendAPI3(sender_psid, response3);
       callSendAPI4(sender_psid, response4);
@@ -580,6 +594,7 @@ function handleMessage(sender_psid, received_message) {
       response6 = level_3_notes[5];
       response7 = level_3_notes[6];
 
+      callSendAPI(sender_psid, response);  
       callSendAPI2(sender_psid, response2);
       callSendAPI3(sender_psid, response3);
       callSendAPI4(sender_psid, response4);
@@ -597,11 +612,10 @@ function handleMessage(sender_psid, received_message) {
       response3 = level_4_notes[2];
       response4 = level_4_notes[3];
 
+      callSendAPI(sender_psid, response);  
       callSendAPI2(sender_psid, response2);
       callSendAPI3(sender_psid, response3);
       callSendAPI4(sender_psid, response4);
-      
-      
     }
 
     //academic -> bce
@@ -612,6 +626,8 @@ function handleMessage(sender_psid, received_message) {
       response3 = bce_flow[2];
       response4 = bce_flow[3];
 
+
+      callSendAPI(sender_psid, response);  
       callSendAPI2(sender_psid, response2);
       callSendAPI3(sender_psid, response3);
       callSendAPI4(sender_psid, response4);
@@ -625,6 +641,7 @@ function handleMessage(sender_psid, received_message) {
       response3 = iae_flow[2];
       response4 = iae_flow[3];
 
+      callSendAPI(sender_psid, response);  
       callSendAPI2(sender_psid, response2);
       callSendAPI3(sender_psid, response3);
       callSendAPI4(sender_psid, response4);
@@ -637,6 +654,7 @@ function handleMessage(sender_psid, received_message) {
       response2 = iee_flow[1];
       response3 = iee_flow[2];
 
+      callSendAPI(sender_psid, response);  
       callSendAPI2(sender_psid, response2);
       callSendAPI3(sender_psid, response3);
     }
@@ -651,6 +669,8 @@ function handleMessage(sender_psid, received_message) {
       response5 = cp_flow[4];
       response6 = cp_flow[5];
 
+
+      callSendAPI(sender_psid, response);  
       callSendAPI2(sender_psid, response2);
       callSendAPI3(sender_psid, response3);
       callSendAPI4(sender_psid, response4);
@@ -666,11 +686,15 @@ function handleMessage(sender_psid, received_message) {
      //academic -> fmg
      else if (fmg.includes(received_message.text.toLowerCase())) {
       response = fmg_flow[0];
+
+      callSendAPI(sender_psid, response);  
     }
 
     //academic -> tmm
     else if (tmm.includes(received_message.text.toLowerCase())) {
       response = tmm_flow[0];
+
+      callSendAPI(sender_psid, response);  
     }
 
      //academic -> tpm
@@ -680,6 +704,7 @@ function handleMessage(sender_psid, received_message) {
       response2 = tpm_flow[1];
       response3 = tpm_flow[2];
 
+      callSendAPI(sender_psid, response);  
       callSendAPI2(sender_psid, response2);
       callSendAPI3(sender_psid, response3);
     }
@@ -692,6 +717,7 @@ function handleMessage(sender_psid, received_message) {
       response3 = chem1_flow[2];
       response4 = chem1_flow[3];
 
+      callSendAPI(sender_psid, response);  
       callSendAPI2(sender_psid, response2);
       callSendAPI3(sender_psid, response3);
       callSendAPI4(sender_psid, response4);
@@ -706,6 +732,7 @@ function handleMessage(sender_psid, received_message) {
       response4 = chem2_flow[3];
       response5 = chem2_flow[4];
 
+      callSendAPI(sender_psid, response);  
       callSendAPI2(sender_psid, response2);
       callSendAPI3(sender_psid, response3);
       callSendAPI4(sender_psid, response4);
@@ -721,6 +748,7 @@ function handleMessage(sender_psid, received_message) {
       response4 = phy1_flow[3];
       response5 = phy1_flow[4];
 
+      callSendAPI(sender_psid, response);  
       callSendAPI2(sender_psid, response2);
       callSendAPI3(sender_psid, response3);
       callSendAPI4(sender_psid, response4);
@@ -734,35 +762,37 @@ function handleMessage(sender_psid, received_message) {
       let i = 0;
 
       for(i = 0; i < phy2_flow.length; i++){
-        
+
         response = phy2_flow[i];
         callSendAPI(sender_psid, response);
       }
-      /*
-      response = phy2_flow[0];
-      response2 = phy2_flow[1];
-      response3 = phy2_flow[2];
-      response4 = phy2_flow[3];
-
-      callSendAPI2(sender_psid, response2);
-      callSendAPI3(sender_psid, response3);
-      callSendAPI4(sender_psid, response4);
-      */
     }
 
     //academic -> math1
     else if (math1.includes(received_message.text.toLowerCase())) {
 
+
+      let i = 0;
+
+      for(i = 0; i < math1_flow.length; i++){
+
+        response = math1_flow[i];
+        callSendAPI(sender_psid, response);
+      }
+
+      /*
       response = math1_flow[0];
       response2 = math1_flow[1];
       response3 = math1_flow[2];
       response4 = math1_flow[3];
       response5 = math1_flow[4];
 
+      callSendAPI(sender_psid, response);  
       callSendAPI2(sender_psid, response2);
       callSendAPI3(sender_psid, response3);
       callSendAPI4(sender_psid, response4);
       callSendAPI5(sender_psid, response5);
+      */
     }
 
     //academic -> ntf
@@ -776,7 +806,7 @@ function handleMessage(sender_psid, received_message) {
       response6 = ntf_flow[5];
       response7 = ntf_flow[6];
       
-
+      callSendAPI(sender_psid, response);  
       callSendAPI2(sender_psid, response2);
       callSendAPI3(sender_psid, response3);
       callSendAPI4(sender_psid, response4);
@@ -795,7 +825,7 @@ function handleMessage(sender_psid, received_message) {
       response5 = em_flow[4];
       response6 = em_flow[5];
       
-
+      callSendAPI(sender_psid, response);  
       callSendAPI2(sender_psid, response2);
       callSendAPI3(sender_psid, response3);
       callSendAPI4(sender_psid, response4);
@@ -806,17 +836,29 @@ function handleMessage(sender_psid, received_message) {
     //academic -> pse
     else if (pse.includes(received_message.text.toLowerCase())) {
 
+      let i = 0;
+
+      for(i = 0; i < pse_flow.length; i++){
+
+        response = pse_flow[i];
+        callSendAPI(sender_psid, response);
+      }
+
+
+      /*
       response = pse_flow[0];
       response2 = pse_flow[1];
       response3 = pse_flow[2];
       response4 = pse_flow[3];
       response5 = pse_flow[4];
       
-
+      callSendAPI(sender_psid, response);  
       callSendAPI2(sender_psid, response2);
       callSendAPI3(sender_psid, response3);
       callSendAPI4(sender_psid, response4);
       callSendAPI5(sender_psid, response5);
+
+      */
     }
 
 
@@ -824,6 +866,8 @@ function handleMessage(sender_psid, received_message) {
 
       response = labFlow[0];
       response2 = labFlow[1];
+
+      callSendAPI(sender_psid, response);  
       callSendAPI2(sender_psid, response2)
      
     }
@@ -832,19 +876,23 @@ function handleMessage(sender_psid, received_message) {
 
       response = resultFlow[0];
       response2 = resultFlow[1];
+
+      callSendAPI(sender_psid, response);  
       callSendAPI2(sender_psid, response2)
-     
     }
 
     else if (routine.some(word => received_message.text.toLowerCase().includes(word))) {
       response = routineFlow[0];
       response2 = routineFlow[1];
+
+      callSendAPI(sender_psid, response);  
       callSendAPI2(sender_psid, response2)
     }
 
     else if (syllabus.some(word => received_message.text.toLowerCase().includes(word))) {
-
       response = syllabusFlow[0];
+
+      callSendAPI(sender_psid, response);  
     }
 
     //academic -> math1
@@ -858,6 +906,7 @@ function handleMessage(sender_psid, received_message) {
       response6 = math2_flow[5];
       response7 = math2_flow[6];
 
+      callSendAPI(sender_psid, response);  
       callSendAPI2(sender_psid, response2);
       callSendAPI3(sender_psid, response3);
       callSendAPI4(sender_psid, response4);
@@ -877,6 +926,7 @@ function handleMessage(sender_psid, received_message) {
       response = {
         "text": `${loveReply[Math.floor(Math.random() * loveReply.length)]}`
       }
+      callSendAPI(sender_psid, response);  
     }
 
     
@@ -884,15 +934,15 @@ function handleMessage(sender_psid, received_message) {
 
     //default reply
     else if (received_message.text) {
-      // Create the payload for a basic text message
-      // response = response = testReply[0];
       response = defaultReply[0];
+
+      callSendAPI(sender_psid, response);  
     }
     
   
   
     // Sends the response message
-    callSendAPI(sender_psid, response);    
+    //callSendAPI(sender_psid, response);    
   }
 
 
