@@ -524,158 +524,121 @@ function handleMessage(sender_psid, received_message) {
     //academic
     else if (notes.some(word => received_message.text.toLowerCase().includes(word))) {
 
-      response = notesFlow[0];
-      response2 = notesFlow[1];
+      
+      let i = 0;
 
-      callSendAPI(sender_psid, response);  
-      callSendAPI2(sender_psid, response2)
+      for(i = 0; i < notesFlow.length; i++){
+
+        response = notesFlow[i];
+        callSendAPI(sender_psid, response);
+      }
     }
 
     else if (quiz.some(word => received_message.text.toLowerCase().includes(word))) {
 
-      response = quizFlow[0];
-      response2 = quizFlow[1];
-      response3 = quizFlow[2];
+      
+      let i = 0;
 
-      callSendAPI(sender_psid, response);  
-      callSendAPI2(sender_psid, response2)
-      callSendAPI3(sender_psid, response3)
+      for(i = 0; i < quizFlow.length; i++){
+
+        response = quizFlow[i];
+        callSendAPI(sender_psid, response);
+      }
     }
 
     else if (level1.some(word => received_message.text.toLowerCase().includes(word))) {
 
-      response = level_1_notes[0];
-      response2 = level_1_notes[1];
-      response3 = level_1_notes[2];
-      response4 = level_1_notes[3];
-      response5 = level_1_notes[4];
-      response6 = level_1_notes[5];
-      response7 = level_1_notes[6];
-
-      callSendAPI(sender_psid, response);  
-      callSendAPI2(sender_psid, response2);
-      callSendAPI3(sender_psid, response3);
-      callSendAPI4(sender_psid, response4);
-      callSendAPI5(sender_psid, response5);
-      callSendAPI6(sender_psid, response6);
-      callSendAPI7(sender_psid, response7);
       
+      let i = 0;
+
+      for(i = 0; i < level_1_notes.length; i++){
+
+        response = level_1_notes[i];
+        callSendAPI(sender_psid, response);
+      }
     }
 
     else if (level2.some(word => received_message.text.toLowerCase().includes(word))) {
 
-      response = level_2_notes[0];
-      response2 = level_2_notes[1];
-      response3 = level_2_notes[2];
-      response4 = level_2_notes[3];
-      response5 = level_2_notes[4];
-      response6 = level_2_notes[5];
-      response7 = level_2_notes[6];
-      response8 = level_2_notes[7];
-
-      callSendAPI(sender_psid, response);  
-      callSendAPI2(sender_psid, response2);
-      callSendAPI3(sender_psid, response3);
-      callSendAPI4(sender_psid, response4);
-      callSendAPI5(sender_psid, response5);
-      callSendAPI6(sender_psid, response6);
-      callSendAPI7(sender_psid, response7);
-      callSendAPI8(sender_psid, response8);
       
+      let i = 0;
+
+      for(i = 0; i < level_2_notes.length; i++){
+
+        response = level_2_notes[i];
+        callSendAPI(sender_psid, response);
+      }
     }
 
     else if (level3.some(word => received_message.text.toLowerCase().includes(word))) {
 
-      response = level_3_notes[0];
-      response2 = level_3_notes[1];
-      response3 = level_3_notes[2];
-      response4 = level_3_notes[3];
-      response5 = level_3_notes[4];
-      response6 = level_3_notes[5];
-      response7 = level_3_notes[6];
+      
+      let i = 0;
 
-      callSendAPI(sender_psid, response);  
-      callSendAPI2(sender_psid, response2);
-      callSendAPI3(sender_psid, response3);
-      callSendAPI4(sender_psid, response4);
-      callSendAPI5(sender_psid, response5);
-      callSendAPI6(sender_psid, response6);
-      callSendAPI7(sender_psid, response7);
-      
-      
+      for(i = 0; i < level_3_notes.length; i++){
+
+        response = level_3_notes[i];
+        callSendAPI(sender_psid, response);
+      }
     }
 
     else if (level4.some(word => received_message.text.toLowerCase().includes(word))) {
 
-      response = level_4_notes[0];
-      response2 = level_4_notes[1];
-      response3 = level_4_notes[2];
-      response4 = level_4_notes[3];
+      let i = 0;
 
-      callSendAPI(sender_psid, response);  
-      callSendAPI2(sender_psid, response2);
-      callSendAPI3(sender_psid, response3);
-      callSendAPI4(sender_psid, response4);
+      for(i = 0; i < level_4_notes.length; i++){
+
+        response = level_4_notes[i];
+        callSendAPI(sender_psid, response);
+      }
     }
 
     //academic -> bce
     else if (bce.some(word => received_message.text.toLowerCase().includes(word))) {
 
-      response = bce_flow[0];
-      response2 = bce_flow[1];
-      response3 = bce_flow[2];
-      response4 = bce_flow[3];
+      let i = 0;
 
+      for(i = 0; i < bce_flow.length; i++){
 
-      callSendAPI(sender_psid, response);  
-      callSendAPI2(sender_psid, response2);
-      callSendAPI3(sender_psid, response3);
-      callSendAPI4(sender_psid, response4);
+        response = bce_flow[i];
+        callSendAPI(sender_psid, response);
+      }
     }
 
     //academic -> iae
     else if (iae.includes(received_message.text.toLowerCase())) {
 
-      response = iae_flow[0];
-      response2 = iae_flow[1];
-      response3 = iae_flow[2];
-      response4 = iae_flow[3];
+      let i = 0;
 
-      callSendAPI(sender_psid, response);  
-      callSendAPI2(sender_psid, response2);
-      callSendAPI3(sender_psid, response3);
-      callSendAPI4(sender_psid, response4);
+      for(i = 0; i < iae_flow.length; i++){
+
+        response = iae_flow[i];
+        callSendAPI(sender_psid, response);
+      }
     }
 
     //academic -> iee
     else if (iee.includes(received_message.text.toLowerCase())) {
 
-      response = iee_flow[0];
-      response2 = iee_flow[1];
-      response3 = iee_flow[2];
+      let i = 0;
 
-      callSendAPI(sender_psid, response);  
-      callSendAPI2(sender_psid, response2);
-      callSendAPI3(sender_psid, response3);
+      for(i = 0; i < iee_flow.length; i++){
+
+        response = iee_flow[i];
+        callSendAPI(sender_psid, response);
+      }
     }
 
     //academic -> cp
     else if (cp.includes(received_message.text.toLowerCase())) {
 
-      response = cp_flow[0];
-      response2 = cp_flow[1];
-      response3 = cp_flow[2];
-      response4 = cp_flow[3];
-      response5 = cp_flow[4];
-      response6 = cp_flow[5];
+      let i = 0;
 
+      for(i = 0; i < cp_flow.length; i++){
 
-      callSendAPI(sender_psid, response);  
-      callSendAPI2(sender_psid, response2);
-      callSendAPI3(sender_psid, response3);
-      callSendAPI4(sender_psid, response4);
-      callSendAPI5(sender_psid, response5);
-      callSendAPI6(sender_psid, response6);
+        response = cp_flow[i];
+        callSendAPI(sender_psid, response);
+      }
     }
 
      //academic -> bfs
@@ -700,59 +663,49 @@ function handleMessage(sender_psid, received_message) {
      //academic -> tpm
      else if (tpm.includes(received_message.text.toLowerCase())) {
 
-      response = tpm_flow[0];
-      response2 = tpm_flow[1];
-      response3 = tpm_flow[2];
+      let i = 0;
 
-      callSendAPI(sender_psid, response);  
-      callSendAPI2(sender_psid, response2);
-      callSendAPI3(sender_psid, response3);
+      for(i = 0; i < tpm_flow.length; i++){
+
+        response = tpm_flow[i];
+        callSendAPI(sender_psid, response);
+      }
     }
 
      //academic -> chem1
      else if (chem1.includes(received_message.text.toLowerCase())) {
 
-      response = chem1_flow[0];
-      response2 = chem1_flow[1];
-      response3 = chem1_flow[2];
-      response4 = chem1_flow[3];
+      let i = 0;
 
-      callSendAPI(sender_psid, response);  
-      callSendAPI2(sender_psid, response2);
-      callSendAPI3(sender_psid, response3);
-      callSendAPI4(sender_psid, response4);
+      for(i = 0; i < chem1_flow.length; i++){
+
+        response = chem1_flow[i];
+        callSendAPI(sender_psid, response);
+      }
     }
 
     //academic -> chem2
     else if (chem2.includes(received_message.text.toLowerCase())) {
 
-      response = chem2_flow[0];
-      response2 = chem2_flow[1];
-      response3 = chem2_flow[2];
-      response4 = chem2_flow[3];
-      response5 = chem2_flow[4];
+      let i = 0;
 
-      callSendAPI(sender_psid, response);  
-      callSendAPI2(sender_psid, response2);
-      callSendAPI3(sender_psid, response3);
-      callSendAPI4(sender_psid, response4);
-      callSendAPI5(sender_psid, response5);
+      for(i = 0; i < chem2_flow.length; i++){
+
+        response = chem2_flow[i];
+        callSendAPI(sender_psid, response);
+      }
     }
 
      //academic -> phy1
      else if (phy1.includes(received_message.text.toLowerCase())) {
 
-      response = phy1_flow[0];
-      response2 = phy1_flow[1];
-      response3 = phy1_flow[2];
-      response4 = phy1_flow[3];
-      response5 = phy1_flow[4];
+      let i = 0;
 
-      callSendAPI(sender_psid, response);  
-      callSendAPI2(sender_psid, response2);
-      callSendAPI3(sender_psid, response3);
-      callSendAPI4(sender_psid, response4);
-      callSendAPI5(sender_psid, response5);
+      for(i = 0; i < phy1_flow.length; i++){
+
+        response = phy1_flow[i];
+        callSendAPI(sender_psid, response);
+      }
     }
 
     //academic -> phy2
@@ -770,8 +723,6 @@ function handleMessage(sender_psid, received_message) {
 
     //academic -> math1
     else if (math1.includes(received_message.text.toLowerCase())) {
-
-
       let i = 0;
 
       for(i = 0; i < math1_flow.length; i++){
@@ -779,58 +730,30 @@ function handleMessage(sender_psid, received_message) {
         response = math1_flow[i];
         callSendAPI(sender_psid, response);
       }
-
-      /*
-      response = math1_flow[0];
-      response2 = math1_flow[1];
-      response3 = math1_flow[2];
-      response4 = math1_flow[3];
-      response5 = math1_flow[4];
-
-      callSendAPI(sender_psid, response);  
-      callSendAPI2(sender_psid, response2);
-      callSendAPI3(sender_psid, response3);
-      callSendAPI4(sender_psid, response4);
-      callSendAPI5(sender_psid, response5);
-      */
     }
 
     //academic -> ntf
     else if (ntf.includes(received_message.text.toLowerCase())) {
 
-      response = ntf_flow[0];
-      response2 = ntf_flow[1];
-      response3 = ntf_flow[2];
-      response4 = ntf_flow[3];
-      response5 = ntf_flow[4];
-      response6 = ntf_flow[5];
-      response7 = ntf_flow[6];
-      
-      callSendAPI(sender_psid, response);  
-      callSendAPI2(sender_psid, response2);
-      callSendAPI3(sender_psid, response3);
-      callSendAPI4(sender_psid, response4);
-      callSendAPI5(sender_psid, response5);
-      callSendAPI6(sender_psid, response6);
-      callSendAPI7(sender_psid, response7);
+      let i = 0;
+
+      for(i = 0; i < ntf_flow.length; i++){
+
+        response = ntf_flow[i];
+        callSendAPI(sender_psid, response);
+      }
     }
 
     //academic -> em
     else if (em.includes(received_message.text.toLowerCase())) {
 
-      response = em_flow[0];
-      response2 = em_flow[1];
-      response3 = em_flow[2];
-      response4 = em_flow[3];
-      response5 = em_flow[4];
-      response6 = em_flow[5];
-      
-      callSendAPI(sender_psid, response);  
-      callSendAPI2(sender_psid, response2);
-      callSendAPI3(sender_psid, response3);
-      callSendAPI4(sender_psid, response4);
-      callSendAPI5(sender_psid, response5);
-      callSendAPI6(sender_psid, response6);
+      let i = 0;
+
+      for(i = 0; i < em_flow.length; i++){
+
+        response = em_flow[i];
+        callSendAPI(sender_psid, response);
+      }
     }
 
     //academic -> pse
@@ -843,50 +766,41 @@ function handleMessage(sender_psid, received_message) {
         response = pse_flow[i];
         callSendAPI(sender_psid, response);
       }
-
-
-      /*
-      response = pse_flow[0];
-      response2 = pse_flow[1];
-      response3 = pse_flow[2];
-      response4 = pse_flow[3];
-      response5 = pse_flow[4];
-      
-      callSendAPI(sender_psid, response);  
-      callSendAPI2(sender_psid, response2);
-      callSendAPI3(sender_psid, response3);
-      callSendAPI4(sender_psid, response4);
-      callSendAPI5(sender_psid, response5);
-
-      */
     }
 
 
     else if (lab_report.includes(received_message.text.toLowerCase())) {
 
-      response = labFlow[0];
-      response2 = labFlow[1];
+      let i = 0;
 
-      callSendAPI(sender_psid, response);  
-      callSendAPI2(sender_psid, response2)
-     
+      for(i = 0; i < labFlow.length; i++){
+
+        response = labFlow[i];
+        callSendAPI(sender_psid, response);
+      }
     }
 
     else if (result.some(word => received_message.text.toLowerCase().includes(word))) {
 
-      response = resultFlow[0];
-      response2 = resultFlow[1];
+      let i = 0;
 
-      callSendAPI(sender_psid, response);  
-      callSendAPI2(sender_psid, response2)
+      for(i = 0; i < resultFlow.length; i++){
+
+        response = resultFlow[i];
+        callSendAPI(sender_psid, response);
+      }
     }
 
     else if (routine.some(word => received_message.text.toLowerCase().includes(word))) {
-      response = routineFlow[0];
-      response2 = routineFlow[1];
 
-      callSendAPI(sender_psid, response);  
-      callSendAPI2(sender_psid, response2)
+
+      let i = 0;
+
+      for(i = 0; i < routineFlow.length; i++){
+
+        response = routineFlow[i];
+        callSendAPI(sender_psid, response);
+      }
     }
 
     else if (syllabus.some(word => received_message.text.toLowerCase().includes(word))) {
@@ -895,24 +809,16 @@ function handleMessage(sender_psid, received_message) {
       callSendAPI(sender_psid, response);  
     }
 
-    //academic -> math1
+    //academic -> math2
     else if (math2.includes(received_message.text.toLowerCase())) {
 
-      response = math2_flow[0];
-      response2 = math2_flow[1];
-      response3 = math2_flow[2];
-      response4 = math2_flow[3];
-      response5 = math2_flow[4];
-      response6 = math2_flow[5];
-      response7 = math2_flow[6];
+      let i = 0;
 
-      callSendAPI(sender_psid, response);  
-      callSendAPI2(sender_psid, response2);
-      callSendAPI3(sender_psid, response3);
-      callSendAPI4(sender_psid, response4);
-      callSendAPI5(sender_psid, response5);
-      callSendAPI6(sender_psid, response6);
-      callSendAPI7(sender_psid, response7);
+      for(i = 0; i < math2_flow.length; i++){
+
+        response = math2_flow[i];
+        callSendAPI(sender_psid, response);
+      }
     }
 
 
