@@ -526,291 +526,126 @@ function handleMessage(sender_psid, received_message) {
       magicFunc(sender_psid, notesFlow);
     }
 
-    else if (quiz.some(word => received_message.text.toLowerCase().includes(word))) {
-
-      
-      let i = 0;
-
-      for(i = 0; i < quizFlow.length; i++){
-
-        response = quizFlow[i];
-        callSendAPI(sender_psid, response);
-      }
+    else if (quiz.some(word => received_message.text.toLowerCase().includes(word))) { 
+      magicFunc(sender_psid, quizFlow);
     }
 
     else if (level1.some(word => received_message.text.toLowerCase().includes(word))) {
-
-      
-      let i = 0;
-
-      for(i = 0; i < level_1_notes.length; i++){
-
-        response = level_1_notes[i];
-        callSendAPI(sender_psid, response);
-      }
+      magicFunc(sender_psid, level_1_notes);
     }
 
     else if (level2.some(word => received_message.text.toLowerCase().includes(word))) {
-
-      
-      let i = 0;
-
-      for(i = 0; i < level_2_notes.length; i++){
-
-        response = level_2_notes[i];
-        callSendAPI(sender_psid, response);
-      }
+      magicFunc(sender_psid, level_2_notes);
     }
 
     else if (level3.some(word => received_message.text.toLowerCase().includes(word))) {
-
-      
-      let i = 0;
-
-      for(i = 0; i < level_3_notes.length; i++){
-
-        response = level_3_notes[i];
-        callSendAPI(sender_psid, response);
-      }
+      magicFunc(sender_psid, level_3_notes);
     }
 
     else if (level4.some(word => received_message.text.toLowerCase().includes(word))) {
-
-      let i = 0;
-
-      for(i = 0; i < level_4_notes.length; i++){
-
-        response = level_4_notes[i];
-        callSendAPI(sender_psid, response);
-      }
+      magicFunc(sender_psid, level_4_notes);
     }
 
     //academic -> bce
     else if (bce.some(word => received_message.text.toLowerCase().includes(word))) {
-
-      let i = 0;
-
-      for(i = 0; i < bce_flow.length; i++){
-
-        response = bce_flow[i];
-        callSendAPI(sender_psid, response);
-      }
+      magicFunc(sender_psid, bce_flow);
     }
 
     //academic -> iae
     else if (iae.includes(received_message.text.toLowerCase())) {
-
-      let i = 0;
-
-      for(i = 0; i < iae_flow.length; i++){
-
-        response = iae_flow[i];
-        callSendAPI(sender_psid, response);
-      }
+      magicFunc(sender_psid, iae_flow);
     }
 
     //academic -> iee
     else if (iee.includes(received_message.text.toLowerCase())) {
-
-      let i = 0;
-
-      for(i = 0; i < iee_flow.length; i++){
-
-        response = iee_flow[i];
-        callSendAPI(sender_psid, response);
-      }
+      magicFunc(sender_psid, iee_flow);
     }
 
     //academic -> cp
     else if (cp.includes(received_message.text.toLowerCase())) {
-
-      let i = 0;
-
-      for(i = 0; i < cp_flow.length; i++){
-
-        response = cp_flow[i];
-        callSendAPI(sender_psid, response);
-      }
+      magicFunc(sender_psid, cp_flow);
     }
 
      //academic -> bfs
     else if (bfs.includes(received_message.text.toLowerCase())) {
-      response = bfs_flow[0];
+      magicFunc(sender_psid, bfs_flow);
     }
 
      //academic -> fmg
      else if (fmg.includes(received_message.text.toLowerCase())) {
-      response = fmg_flow[0];
-
-      callSendAPI(sender_psid, response);  
+      magicFunc(sender_psid, fmg_flow);
     }
 
     //academic -> tmm
     else if (tmm.includes(received_message.text.toLowerCase())) {
-      response = tmm_flow[0];
-
-      callSendAPI(sender_psid, response);  
+      magicFunc(sender_psid, tmm_flow);
     }
 
      //academic -> tpm
      else if (tpm.includes(received_message.text.toLowerCase())) {
-
-      let i = 0;
-
-      for(i = 0; i < tpm_flow.length; i++){
-
-        response = tpm_flow[i];
-        callSendAPI(sender_psid, response);
-      }
+      magicFunc(sender_psid, tpm_flow);
     }
 
      //academic -> chem1
      else if (chem1.includes(received_message.text.toLowerCase())) {
-
-      let i = 0;
-
-      for(i = 0; i < chem1_flow.length; i++){
-
-        response = chem1_flow[i];
-        callSendAPI(sender_psid, response);
-      }
+      magicFunc(sender_psid, chem1_flow);
     }
 
     //academic -> chem2
     else if (chem2.includes(received_message.text.toLowerCase())) {
-
-      let i = 0;
-
-      for(i = 0; i < chem2_flow.length; i++){
-
-        response = chem2_flow[i];
-        callSendAPI(sender_psid, response);
-      }
+      magicFunc(sender_psid, chem2_flow);
     }
 
      //academic -> phy1
      else if (phy1.includes(received_message.text.toLowerCase())) {
-
-      let i = 0;
-
-      for(i = 0; i < phy1_flow.length; i++){
-
-        response = phy1_flow[i];
-        callSendAPI(sender_psid, response);
-      }
+      magicFunc(sender_psid, phy1_flow);
     }
 
     //academic -> phy2
     else if (phy2.includes(received_message.text.toLowerCase())) {
-
-
-      let i = 0;
-
-      for(i = 0; i < phy2_flow.length; i++){
-
-        response = phy2_flow[i];
-        callSendAPI(sender_psid, response);
-      }
+      magicFunc(sender_psid, phy2_flow);
     }
 
     //academic -> math1
     else if (math1.includes(received_message.text.toLowerCase())) {
-      let i = 0;
-
-      for(i = 0; i < math1_flow.length; i++){
-
-        response = math1_flow[i];
-        callSendAPI(sender_psid, response);
-      }
+      magicFunc(sender_psid, math1_flow);
     }
 
     //academic -> ntf
     else if (ntf.includes(received_message.text.toLowerCase())) {
-
-      let i = 0;
-
-      for(i = 0; i < ntf_flow.length; i++){
-
-        response = ntf_flow[i];
-        callSendAPI(sender_psid, response);
-      }
+      magicFunc(sender_psid, ntf_flow);
     }
 
     //academic -> em
     else if (em.includes(received_message.text.toLowerCase())) {
-
-      let i = 0;
-
-      for(i = 0; i < em_flow.length; i++){
-
-        response = em_flow[i];
-        callSendAPI(sender_psid, response);
-      }
+      magicFunc(sender_psid, em_flow);
     }
 
     //academic -> pse
     else if (pse.includes(received_message.text.toLowerCase())) {
-
-      let i = 0;
-
-      for(i = 0; i < pse_flow.length; i++){
-
-        response = pse_flow[i];
-        callSendAPI(sender_psid, response);
-      }
+      magicFunc(sender_psid, pse_flow);
     }
 
 
     else if (lab_report.includes(received_message.text.toLowerCase())) {
-
-      let i = 0;
-
-      for(i = 0; i < labFlow.length; i++){
-
-        response = labFlow[i];
-        callSendAPI(sender_psid, response);
-      }
+      magicFunc(sender_psid, labFlow);
     }
 
     else if (result.some(word => received_message.text.toLowerCase().includes(word))) {
-
-      let i = 0;
-
-      for(i = 0; i < resultFlow.length; i++){
-
-        response = resultFlow[i];
-        callSendAPI(sender_psid, response);
-      }
+      magicFunc(sender_psid, resultFlow);
     }
 
     else if (routine.some(word => received_message.text.toLowerCase().includes(word))) {
-
-
-      let i = 0;
-
-      for(i = 0; i < routineFlow.length; i++){
-
-        response = routineFlow[i];
-        callSendAPI(sender_psid, response);
-      }
+      magicFunc(sender_psid, routineFlow);
     }
 
     else if (syllabus.some(word => received_message.text.toLowerCase().includes(word))) {
-      response = syllabusFlow[0];
-
-      callSendAPI(sender_psid, response);  
+      magicFunc(sender_psid, syllabusFlow);
     }
 
     //academic -> math2
     else if (math2.includes(received_message.text.toLowerCase())) {
-
-      let i = 0;
-
-      for(i = 0; i < math2_flow.length; i++){
-
-        response = math2_flow[i];
-        callSendAPI(sender_psid, response);
-      }
+      magicFunc(sender_psid, math2_flow);
     }
 
 
