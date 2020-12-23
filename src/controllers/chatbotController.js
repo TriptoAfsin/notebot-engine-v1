@@ -329,7 +329,27 @@ const iee_spf = require("./flows/botReplies/note_levels/level_1/level_1_subs/iee
 
 
 const labFlow = require('./flows/botReplies/labFlow');
+
+//routine
 const routineFlow = require('./flows/botReplies/routineFlow');
+const routine_level1 = require('./flows/botReplies/routine_levels/level_1/level_1_routine_flow');
+const routine_l1t1 = require('./flows/botReplies/routine_levels/level_1/terms/l1t1Routine');
+const routine_l1t2 = require('./flows/botReplies/routine_levels/level_1/terms/l1t2Routine');
+const routine_level2 = require('./flows/botReplies/routine_levels/level_2/level_2_routine_flow');
+const routine_l2t1 = require('./flows/botReplies/routine_levels/level_2/terms/l2t1Routine');
+const routine_l2t2 = require('./flows/botReplies/routine_levels/level_2/terms/l2t2Routine');
+const routine_level3 = require('./flows/botReplies/routine_levels/level_3/level_3_routine_flow');
+const routine_l3t1 = require('./flows/botReplies/routine_levels/level_3/terms/l3t1Routine');
+const routine_l3t2 = require('./flows/botReplies/routine_levels/level_3/terms/l3t2Routine');
+const routine_level4 = require('./flows/botReplies/routine_levels/level_4/level_4_routine_flow');
+const routine_l4t1 = require('./flows/botReplies/routine_levels/level_4/terms/l4t1Routine');
+const routine_l4t2 = require('./flows/botReplies/routine_levels/level_4/terms/l4t2Routine');
+const routine_online_2_1 = require('./flows/botReplies/routine_levels/online_routine/level2/onlineL2T1');
+const routine_online_3_1 = require('./flows/botReplies/routine_levels/online_routine/level3/onlineL3T1');
+
+
+
+
 const resultFlow = require('./flows/botReplies/resultFlow');
 const syllabusFlow = require('./flows/botReplies/syllabusFlow');
 const phy2_electric_flow = require("./flows/botReplies/note_levels/level_1/level_1_subs/phy2/topics/electric/phy2Electric");
@@ -1500,6 +1520,50 @@ let handlePostback = async (sender_psid, received_postback) => {
 
     else if (payload === 'phy2_entropy_flow') {
       magicFunc(sender_psid, phy2_entropy);
+    }
+
+    //routine
+    else if (payload === 'online_2_1') {
+      magicFunc(sender_psid, routine_online_2_1);
+    }
+    else if (payload === 'online_3_1') {
+      magicFunc(sender_psid, routine_online_3_1);
+    }
+    else if (payload === 'routine_level_1') {
+      magicFunc(sender_psid, routine_level1);
+    }
+    else if (payload === 'routine_level_2') {
+      magicFunc(sender_psid, routine_level2);
+    }
+    else if (payload === 'routine_level_3') {
+      magicFunc(sender_psid, routine_level3);
+    }
+    else if (payload === 'routine_level_4') {
+      magicFunc(sender_psid, routine_level4);
+    }
+    else if (payload === 'l1t1Routine_flow') {
+      magicFunc(sender_psid, routine_l1t1);
+    }
+    else if (payload === 'l1t2Routine_flow') {
+      magicFunc(sender_psid, routine_l1t2);
+    }
+    else if (payload === 'l2t1Routine_flow') {
+      magicFunc(sender_psid, routine_l2t1);
+    }
+    else if (payload === 'l2t2Routine_flow') {
+      magicFunc(sender_psid, routine_l2t2);
+    }
+    else if (payload === 'l3t1Routine_flow') {
+      magicFunc(sender_psid, routine_l3t1);
+    }
+    else if (payload === 'l3t2Routine_flow') {
+      magicFunc(sender_psid, routine_l3t2);
+    }
+    else if (payload === 'l4t1Routine_flow') {
+      magicFunc(sender_psid, routine_l4t1);
+    }
+    else if (payload === 'l4t2Routine_flow') {
+      magicFunc(sender_psid, routine_l4t2);
     }
 
 
