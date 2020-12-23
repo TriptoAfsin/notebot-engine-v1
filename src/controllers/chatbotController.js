@@ -347,12 +347,22 @@ const routine_l4t2 = require('./flows/botReplies/routine_levels/level_4/terms/l4
 const routine_online_2_1 = require('./flows/botReplies/routine_levels/online_routine/level2/onlineL2T1');
 const routine_online_3_1 = require('./flows/botReplies/routine_levels/online_routine/level3/onlineL3T1');
 
-
-
-
+//results
 const resultFlow = require('./flows/botReplies/resultFlow');
+const result_Academic = require('./flows/botReplies/result_flows/academic_result/acdemicResult');
+const result_Academic_2018 = require('./flows/botReplies/result_flows/academic_result/years/2018AcaResult');
+const result_Academic_2019 = require('./flows/botReplies/result_flows/academic_result/years/2019AcaResult');
+const result_Admission = require('./flows/botReplies/result_flows/admission_result/admissionResult');
+const result_Retake = require('./flows/botReplies/result_flows/retake_result/retakeResult');
+const result_Retake_2018 = require('./flows/botReplies/result_flows/retake_result/years/retake2018Res');
+const result_Retake_2019 = require('./flows/botReplies/result_flows/retake_result/years/retake2019Res');
+const result_Affli = require('./flows/botReplies/result_flows/affli_result/affliResult');
+const result_Affli_2019 = require('./flows/botReplies/result_flows/affli_result/years/affli2019Res');
+const result_Affli_2020 = require('./flows/botReplies/result_flows/affli_result/years/affli2020Res');
+
+
+
 const syllabusFlow = require('./flows/botReplies/syllabusFlow');
-const phy2_electric_flow = require("./flows/botReplies/note_levels/level_1/level_1_subs/phy2/topics/electric/phy2Electric");
 
 
 
@@ -1564,6 +1574,38 @@ let handlePostback = async (sender_psid, received_postback) => {
     }
     else if (payload === 'l4t2Routine_flow') {
       magicFunc(sender_psid, routine_l4t2);
+    }
+
+    //results
+    else if (payload === 'result_academic') {
+      magicFunc(sender_psid, result_Academic);
+    }
+    else if (payload === 'academic_res_2019') {
+      magicFunc(sender_psid, result_Academic_2019);
+    }
+    else if (payload === 'academic_res_2018') {
+      magicFunc(sender_psid, result_Academic_2018);
+    }
+    else if (payload === 'result_admission') {
+      magicFunc(sender_psid, result_Admission);
+    }
+    else if (payload === 'result_retake') {
+      magicFunc(sender_psid, result_Retake);
+    }
+    else if (payload === 'retake_res_2019') {
+      magicFunc(sender_psid, result_Retake_2019);
+    }
+    else if (payload === 'retake_res_2018') {
+      magicFunc(sender_psid, result_Retake_2018);
+    }
+    else if (payload === 'result_affli') {
+      magicFunc(sender_psid, result_Affli);
+    }
+    else if (payload === 'afflic_res_2020') {
+      magicFunc(sender_psid, result_Affli_2020);
+    }
+    else if (payload === 'afflic_res_2019') {
+      magicFunc(sender_psid, result_Affli_2019);
     }
 
 
