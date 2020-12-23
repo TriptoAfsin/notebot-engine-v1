@@ -8,18 +8,18 @@ let result = [
                 "buttons": [
                     {
                         "type": "postback",
-                        "title": "🔴 Level 1",
-                        "payload": "level_1"
+                        "title": "🔴 Academic Result",
+                        "payload": "result_academic"
                     },
                     {
                         "type": "postback",
-                        "title": "🔴 Level 2",
-                        "payload": "level_2"
+                        "title": "🔴 Retake Result",
+                        "payload": "result_retake"
                     },
                     {
                         "type": "postback",
-                        "title": "🔴 Level 3",
-                        "payload": "level_3"
+                        "title": "🔴 Affl. Result",
+                        "payload": "result_affli"
                     }
                 ],
             },
@@ -30,18 +30,17 @@ let result = [
             "type": "template",
             "payload": {
                 "template_type": "button",
-                "text": "🔰 Choose - ",
+                "text": "⚡Admission Results - ",
                 "buttons": [
                     {
                         "type": "postback",
-                        "title": "🔴 Level 4",
-                        "payload": "level_4"
+                        "title": "🟠 BUTEX Admission",
+                        "payload": "result_admission"
                     },
                 ],
             },
         },
     }
-
 ]
 
 
