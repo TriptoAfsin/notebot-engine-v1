@@ -9,7 +9,7 @@ let affliResult = [
                     {
                         "type": "postback",
                         "title": "2020",
-                        "payload": "afflic_res_2020"
+                        "payload": "affli_res_2020"
                     },
                     {
                         "type": "postback",

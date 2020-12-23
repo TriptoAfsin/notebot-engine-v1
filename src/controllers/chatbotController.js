@@ -1601,10 +1601,10 @@ let handlePostback = async (sender_psid, received_postback) => {
     else if (payload === 'result_affli') {
       magicFunc(sender_psid, result_Affli);
     }
-    else if (payload === 'afflic_res_2020') {
+    else if (payload === 'affli_res_2020') {
       magicFunc(sender_psid, result_Affli_2020);
     }
-    else if (payload === 'afflic_res_2019') {
+    else if (payload === 'affli_res_2019') {
       magicFunc(sender_psid, result_Affli_2019);
     }
 
