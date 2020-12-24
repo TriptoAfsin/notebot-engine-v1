@@ -51,6 +51,8 @@ const tmm_words = require('./keywords/academic_words/subjects/tmmWords');
 const iae_words = require('./keywords/academic_words/subjects/iaeWords');
 //academic -> tee
 const iee_words = require('./keywords/academic_words/subjects/ieeWords');
+//academic -> epd
+const epd_words = require('./keywords/academic_words/subjects/epdWords');
 
 
 
@@ -322,6 +324,10 @@ const iee_spf = require("./flows/botReplies/note_levels/level_1/level_1_subs/iee
 
 
 
+//level4-
+//epd
+//academic flows -> math1
+const epd_flow = require("./flows/botReplies/note_levels/level_4/level_4_subs/epd/epd_flow");
 
 
 
@@ -476,6 +482,8 @@ function handleMessage(sender_psid, received_message) {
     const tmm = tmm_words;
     const iae = iae_words;
     const iee = iee_words;
+    const epd = epd_words;
+    
 
     const quiz = quiz_words;
     const lab_report = labWords;
@@ -574,6 +582,11 @@ function handleMessage(sender_psid, received_message) {
     //academic -> iae
     else if (iae.includes(received_message.text.toLowerCase())) {
       magicFunc(sender_psid, iae_flow);
+    }
+
+     //academic -> epd
+     else if (epd.includes(received_message.text.toLowerCase())) {
+      magicFunc(sender_psid, epd_flow);
     }
 
     //academic -> iee
@@ -1606,6 +1619,9 @@ let handlePostback = async (sender_psid, received_postback) => {
     }
     else if (payload === 'affli_res_2019') {
       magicFunc(sender_psid, result_Affli_2019);
+    }
+    else if (payload === 'epd_flow') {
+      magicFunc(sender_psid, epd_flow);
     }
 
 
