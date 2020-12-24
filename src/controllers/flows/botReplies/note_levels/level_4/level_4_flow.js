@@ -78,12 +78,7 @@ let level_4_note = [
                         "type": "postback",
                         "title": "B&IL",
                         "payload": "bil_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "QM",
-                        "payload": "qm_flow"
-                    },
+                    }
                 ],
             },
         },
