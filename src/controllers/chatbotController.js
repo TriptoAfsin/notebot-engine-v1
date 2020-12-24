@@ -67,6 +67,10 @@ const bs_words = require('./keywords/academic_words/subjects/bsWords');
 const bil_words = require('./keywords/academic_words/subjects/bilWords');
 
 
+//both subjs
+const bothChem_words = require('./keywords/academic_words/subjects/bothChem');
+const bothPhy_words = require('./keywords/academic_words/subjects/bothPhysics');
+const bothMath_words = require('./keywords/academic_words/subjects/bothMath');
 
 const quiz_words = require('./keywords/academic_words/quizWords');
 const labWords = require('./keywords/academic_words/labWords');
@@ -181,6 +185,10 @@ const phy2_Radiation = require("./flows/botReplies/note_levels/level_1/level_1_s
 const phy2_magnet = require("./flows/botReplies/note_levels/level_1/level_1_subs/phy2/topics/phy2Magnet");
 const phy2_modern = require("./flows/botReplies/note_levels/level_1/level_1_subs/phy2/topics/phy2Modern");
 const phy2_entropy = require("./flows/botReplies/note_levels/level_1/level_1_subs/phy2/topics/phy2Entropy");
+
+const bothPhy_flow = require("./flows/botReplies/note_levels/level_1/level_1_subs/bothPhysics");
+const bothChem_flow = require("./flows/botReplies/note_levels/level_1/level_1_subs/bothChem");
+const bothMath_flow = require("./flows/botReplies/note_levels/level_1/level_1_subs/bothMath");
 
 
 //academic flows -> math1
@@ -522,6 +530,10 @@ function handleMessage(sender_psid, received_message) {
     const hrm = hrm_words;
     const bs = bs_words;
     const bil = bil_words;
+
+    const bothChem = bothChem_words;
+    const bothMath = bothMath_words;
+    const bothPhy = bothPhy_words;
     
 
     const quiz = quiz_words;
@@ -611,6 +623,16 @@ function handleMessage(sender_psid, received_message) {
 
     else if (level4.some(word => received_message.text.toLowerCase().includes(word))) {
       magicFunc(sender_psid, level_4_notes);
+    }
+
+    else if (bothChem.some(word => received_message.text.toLowerCase().includes(word))) {
+      magicFunc(sender_psid, bothChem_flow);
+    }
+    else if (bothPhy.some(word => received_message.text.toLowerCase().includes(word))) {
+      magicFunc(sender_psid, bothPhy_flow);
+    }
+    else if (bothMath.some(word => received_message.text.toLowerCase().includes(word))) {
+      magicFunc(sender_psid, bothMath_flow);
     }
 
     //academic -> bce
