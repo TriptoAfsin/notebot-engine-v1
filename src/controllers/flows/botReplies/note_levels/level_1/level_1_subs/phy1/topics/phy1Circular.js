@@ -4,6 +4,10 @@ let phy1Circular = [
         https://drive.google.com/file/d/17mcDvnCVXekoka5BgKJuBpVr9kpScOI7/view?usp=sharing`
     },
     {
+        "text": `🔷Hand Note(Azim,TEM-46, 2020) - 
+        https://drive.google.com/file/d/11jLk7eDSoocQrTZR69_VpC1zutLhUucd/view?usp=sharing`
+    },
+    {
         "text": `🔷Hand Note(Akib, 2018) - 
         https://drive.google.com/file/d/1lPLj_asWPh9_q9J5yZ06_tMKSdPO3MH7/view?usp=drivesdk`
     },
