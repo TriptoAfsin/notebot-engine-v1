@@ -55,6 +55,8 @@ const iee_words = require('./keywords/academic_words/subjects/ieeWords');
 const epd_words = require('./keywords/academic_words/subjects/epdWords');
 //academic -> ir
 const ir_words = require('./keywords/academic_words/subjects/irWords');
+//academic -> tam
+const tam_words = require('./keywords/academic_words/subjects/tamWords');
 
 
 
@@ -335,6 +337,10 @@ const epd_flow = require("./flows/botReplies/note_levels/level_4/level_4_subs/ep
 const ir_flow = require("./flows/botReplies/note_levels/level_4/level_4_subs/ir/ir_flow");
 const ir_ir_flow = require("./flows/botReplies/note_levels/level_4/level_4_subs/ir/topics/irIndustrialRelation");
 
+//academic flows -> tam
+const tam_flow = require("./flows/botReplies/note_levels/level_4/level_4_subs/tam/tam_flow");
+const tam_intro_merch = require("./flows/botReplies/note_levels/level_4/level_4_subs/tam/topics/tamIntroMerch");
+
 
 
 
@@ -489,6 +495,7 @@ function handleMessage(sender_psid, received_message) {
     const iee = iee_words;
     const epd = epd_words;
     const ir = ir_words;
+    const tam = tam_words;
     
 
     const quiz = quiz_words;
@@ -593,6 +600,11 @@ function handleMessage(sender_psid, received_message) {
      //academic -> epd
      else if (epd.includes(received_message.text.toLowerCase())) {
       magicFunc(sender_psid, epd_flow);
+    }
+
+    //academic -> tam
+    else if (tam.includes(received_message.text.toLowerCase())) {
+      magicFunc(sender_psid, tam_flow);
     }
 
     //academic -> ir
@@ -820,7 +832,7 @@ let handlePostback = async (sender_psid, received_postback) => {
     }
 
     else if (payload === 'condition_cp_flow') {
-      magicFunc(sender_psid, cp_ques);
+      magicFunc(sender_psid, cp_condition);
     }
 
     else if (payload === 'fundamental_cp_flow') {
@@ -1643,6 +1655,14 @@ let handlePostback = async (sender_psid, received_postback) => {
     }
     else if (payload === 'ir_ir_flow') {
       magicFunc(sender_psid, ir_ir_flow);
+    }
+
+    //tam
+    else if (payload === 'tam_flow') {
+      magicFunc(sender_psid, tam_flow);
+    }
+    else if (payload === 'tam_intro_merch_flow') {
+      magicFunc(sender_psid, tam_intro_merch);
     }
 
 
