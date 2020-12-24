@@ -57,6 +57,8 @@ const epd_words = require('./keywords/academic_words/subjects/epdWords');
 const ir_words = require('./keywords/academic_words/subjects/irWords');
 //academic -> tam
 const tam_words = require('./keywords/academic_words/subjects/tamWords');
+//academic -> ppc
+const ppc4_words = require('./keywords/academic_words/subjects/ppc4Words');
 
 
 
@@ -342,6 +344,10 @@ const tam_flow = require("./flows/botReplies/note_levels/level_4/level_4_subs/ta
 const tam_intro_merch = require("./flows/botReplies/note_levels/level_4/level_4_subs/tam/topics/tamIntroMerch");
 
 
+//academic flows -> ppc
+const ppc_flow = require("./flows/botReplies/note_levels/level_4/level_4_subs/ppc/ppc_flow");
+
+
 
 
 
@@ -496,6 +502,7 @@ function handleMessage(sender_psid, received_message) {
     const epd = epd_words;
     const ir = ir_words;
     const tam = tam_words;
+    const ppc = ppc4_words;
     
 
     const quiz = quiz_words;
@@ -602,9 +609,14 @@ function handleMessage(sender_psid, received_message) {
       magicFunc(sender_psid, epd_flow);
     }
 
+     //academic -> ppc
+     else if (epd.includes(received_message.text.toLowerCase())) {
+      magicFunc(sender_psid, epd_flow);
+    }
+
     //academic -> tam
-    else if (tam.includes(received_message.text.toLowerCase())) {
-      magicFunc(sender_psid, tam_flow);
+    else if (ppc.includes(received_message.text.toLowerCase())) {
+      magicFunc(sender_psid, ppc_flow);
     }
 
     //academic -> ir
@@ -1663,6 +1675,11 @@ let handlePostback = async (sender_psid, received_postback) => {
     }
     else if (payload === 'tam_intro_merch_flow') {
       magicFunc(sender_psid, tam_intro_merch);
+    }
+
+    //ppc
+    else if (payload === 'ppc_flow') {
+      magicFunc(sender_psid, ppc_flow);
     }
 
 

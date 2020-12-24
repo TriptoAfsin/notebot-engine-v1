@@ -4,12 +4,22 @@ let ppcFlow = [
             "type": "template",
             "payload": {
                 "template_type": "button",
-                "text": "🔴 Question Banks - ",
+                "text": "🔰 Choose Topic - ",
                 "buttons": [
                     {
-                        "type": "postback",
-                        "title": "All Level 4",
-                        "payload": "qb_4_flow"
+                        "type": "web_url",
+                        "url": "https://drive.google.com/file/d/1ifGgEPw3m97_e23dUC-wl2XW-vdI4xfW/view",
+                        "title": "Capacity Palnning",
+                    },
+                    {
+                        "type": "web_url",
+                        "url": "https://drive.google.com/file/d/1Cbrgx_n00NGDq9_jWdCn6liuoAnmkQJY/view",
+                        "title": "Production System",
+                    },
+                    {
+                        "type": "web_url",
+                        "url": "https://drive.google.com/file/d/1Yky-5C2ZiAUkF2ubkvmfJE0uD2Q1QR_O/view",
+                        "title": "Production Planning",
                     }
                 ],
             },
@@ -20,70 +30,23 @@ let ppcFlow = [
             "type": "template",
             "payload": {
                 "template_type": "button",
-                "text": "🔰 Select Subject for level  4- ",
+                "text": "🔰 Choose Topic - ",
                 "buttons": [
                     {
-                        "type": "postback",
-                        "title": "EPD",
-                        "payload": "epd_flow"
+                        "type": "web_url",
+                        "url": "https://drive.google.com/file/d/1uXzSiGJelufv3999U_08KiwrOmUPVUVz/view",
+                        "title": "Forecasting",
                     },
                     {
-                        "type": "postback",
-                        "title": "IR",
-                        "payload": "ir_flow"
+                        "type": "web_url",
+                        "url": "https://drive.google.com/file/d/1L1BaTeNJd_O7p267fWtwmsaFEoHI8dQH/view",
+                        "title": "Productivity",
                     },
                     {
-                        "type": "postback",
-                        "title": "TAM",
-                        "payload": "tam_flow"
+                        "type": "web_url",
+                        "url": "https://drive.google.com/drive/folders/1eFN2SRB7OnNmsLVATGaHrSVWiDFBqTQ3",
+                        "title": "Reazaul Sir Sheets",
                     }
-                ],
-            },
-        },
-    },
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🔰 Select Subject for level 4 - ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "PPC",
-                        "payload": "ppc_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "HRM",
-                        "payload": "hrm_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "BS",
-                        "payload": "bs_flow"
-                    }
-                ],
-            },
-        },
-    },
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🔰 Select Subject for level 4 - ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "B&IL",
-                        "payload": "bil_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "QM",
-                        "payload": "qm_flow"
-                    },
                 ],
             },
         },
