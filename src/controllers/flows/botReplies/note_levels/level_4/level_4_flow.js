@@ -7,9 +7,9 @@ let level_4_note = [
                 "text": "🔴 Question Banks - ",
                 "buttons": [
                     {
-                        "type": "postback",
-                        "title": "All Level 4",
-                        "payload": "qb_4_flow"
+                        "type": "web_url",
+                        "url": "https://drive.google.com/drive/folders/1M9QjSqItJW1oZJd1RcG4yeAa41hB_dz-",
+                        "title": "All QB",
                     }
                 ],
             },
