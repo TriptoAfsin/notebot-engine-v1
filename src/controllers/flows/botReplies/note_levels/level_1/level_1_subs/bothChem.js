@@ -4,7 +4,7 @@ let bothChem_flow = [
             "type": "template",
             "payload": {
                 "template_type": "button",
-                "text": "🟩 Select Topic for PHY-I -  ",
+                "text": "🟩 Choose - ",
                 "buttons": [
                     {
                         "type": "postback",
