@@ -625,13 +625,13 @@ function handleMessage(sender_psid, received_message) {
       magicFunc(sender_psid, level_4_notes);
     }
 
-    else if (bothChem.some(word => received_message.text.toLowerCase().includes(word))) {
+    else if (bothChem.includes(received_message.text.toLowerCase())) {
       magicFunc(sender_psid, bothChem_flow);
     }
-    else if (bothPhy.some(word => received_message.text.toLowerCase().includes(word))) {
+    else if (bothPhy.includes(received_message.text.toLowerCase())) {
       magicFunc(sender_psid, bothPhy_flow);
     }
-    else if (bothMath.some(word => received_message.text.toLowerCase().includes(word))) {
+    else if (bothMath.includes(received_message.text.toLowerCase())) {
       magicFunc(sender_psid, bothMath_flow);
     }
 
