@@ -63,6 +63,8 @@ const ppc4_words = require('./keywords/academic_words/subjects/ppc4Words');
 const hrm_words = require('./keywords/academic_words/subjects/hrmWords');
 //academic -> bs
 const bs_words = require('./keywords/academic_words/subjects/bsWords');
+//academic -> bil
+const bil_words = require('./keywords/academic_words/subjects/bilWords');
 
 
 
@@ -357,6 +359,10 @@ const hrm_flow = require("./flows/botReplies/note_levels/level_4/level_4_subs/hr
 //academic flows -> bs
 const bs_flow = require("./flows/botReplies/note_levels/level_4/level_4_subs/bs/bs_flow");
 
+//academic flows -> bil
+const bil_flow = require("./flows/botReplies/note_levels/level_4/level_4_subs/bil/bil_flow");
+const bil_laborlaw = require("./flows/botReplies/note_levels/level_4/level_4_subs/bil/topics/bilLaborLaw");
+
 
 
 
@@ -515,6 +521,7 @@ function handleMessage(sender_psid, received_message) {
     const ppc = ppc4_words;
     const hrm = hrm_words;
     const bs = bs_words;
+    const bil = bil_words;
     
 
     const quiz = quiz_words;
@@ -619,6 +626,11 @@ function handleMessage(sender_psid, received_message) {
     //academic -> bs
     else if (bs.includes(received_message.text.toLowerCase())) {
       magicFunc(sender_psid, bs_flow);
+    }
+
+    //academic -> bil
+    else if (bil.includes(received_message.text.toLowerCase())) {
+      magicFunc(sender_psid, bil_flow);
     }
 
      //academic -> epd
@@ -1717,6 +1729,14 @@ let handlePostback = async (sender_psid, received_postback) => {
     //bs
     else if (payload === 'bs_flow') {
       magicFunc(sender_psid, bs_flow);
+    }
+    
+     //bil
+     else if (payload === 'bil_flow') {
+      magicFunc(sender_psid, bil_flow);
+    }
+    else if (payload === 'bil_labor_law_flow') {
+      magicFunc(sender_psid, bil_laborlaw);
     }
 
 
