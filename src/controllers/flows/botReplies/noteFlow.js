@@ -40,6 +40,48 @@ let notes = [
                 ],
             },
         },
+    },
+    {
+        "attachment": {
+            "type": "template",
+            "payload": {
+                "template_type": "button",
+                "text": "🔰 Random Books -   ",
+                "buttons": [
+                    {
+                        "type": "web_url",
+                        "url": "https://drive.google.com/drive/folders/14l4zL2oYlNgC-Nygr0spz5s_juiNSFr0",
+                        "title": "🍀ESE",
+                    },
+                ],
+            },
+        },
+    },
+    {
+        "attachment": {
+            "type": "template",
+            "payload": {
+                "template_type": "button",
+                "text": "🔰 Web Apps -  ",
+                "buttons": [
+                    {
+                        "type": "web_url",
+                        "url": "https://triptoafsin.github.io/Cloud-Lib-React/#/",
+                        "title": "Cloud lib ☁",
+                    },
+                    {
+                        "type": "web_url",
+                        "url": "https://triptoafsin.github.io/TexQuiz/",
+                        "title": "Tex Quiz",
+                    },
+                    {
+                        "type": "web_url",
+                        "url": "https://triptoafsin.github.io/CountKoto-/",
+                        "title": "Count Koto",
+                    }
+                ],
+            },
+        },
     }
 
 ]
