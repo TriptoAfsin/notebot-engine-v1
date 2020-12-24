@@ -53,6 +53,8 @@ const iae_words = require('./keywords/academic_words/subjects/iaeWords');
 const iee_words = require('./keywords/academic_words/subjects/ieeWords');
 //academic -> epd
 const epd_words = require('./keywords/academic_words/subjects/epdWords');
+//academic -> ir
+const ir_words = require('./keywords/academic_words/subjects/irWords');
 
 
 
@@ -326,9 +328,12 @@ const iee_spf = require("./flows/botReplies/note_levels/level_1/level_1_subs/iee
 
 //level4-
 //epd
-//academic flows -> math1
+//academic flows -> epd
 const epd_flow = require("./flows/botReplies/note_levels/level_4/level_4_subs/epd/epd_flow");
 
+//academic flows -> ir
+const ir_flow = require("./flows/botReplies/note_levels/level_4/level_4_subs/ir/ir_flow");
+const ir_ir_flow = require("./flows/botReplies/note_levels/level_4/level_4_subs/ir/topics/irIndustrialRelation");
 
 
 
@@ -483,6 +488,7 @@ function handleMessage(sender_psid, received_message) {
     const iae = iae_words;
     const iee = iee_words;
     const epd = epd_words;
+    const ir = ir_words;
     
 
     const quiz = quiz_words;
@@ -587,6 +593,11 @@ function handleMessage(sender_psid, received_message) {
      //academic -> epd
      else if (epd.includes(received_message.text.toLowerCase())) {
       magicFunc(sender_psid, epd_flow);
+    }
+
+    //academic -> ir
+    else if (ir.includes(received_message.text.toLowerCase())) {
+      magicFunc(sender_psid, ir_flow);
     }
 
     //academic -> iee
@@ -1620,8 +1631,18 @@ let handlePostback = async (sender_psid, received_postback) => {
     else if (payload === 'affli_res_2019') {
       magicFunc(sender_psid, result_Affli_2019);
     }
+
+    //epd
     else if (payload === 'epd_flow') {
       magicFunc(sender_psid, epd_flow);
+    }
+
+    //ir
+    else if (payload === 'ir_flow') {
+      magicFunc(sender_psid, ir_flow);
+    }
+    else if (payload === 'ir_ir_flow') {
+      magicFunc(sender_psid, ir_ir_flow);
     }
 
 
