@@ -91,6 +91,9 @@ const loveMojiReplies = require('./keywords/replies/lovemojiReply');
 const sadStuffReply = require('./keywords/replies/sadReplies');
 const greetReplies = require('./keywords/replies/greetingsReply');
 
+//global replies
+const notAvailable = require('./flows/botReplies/notAvailable');
+
 
 //keyword flows
 const notesFlow = require('./flows/botReplies/noteFlow');
@@ -1781,6 +1784,7 @@ let handlePostback = async (sender_psid, received_postback) => {
 
 
     //syllabus
+    //45
     else if (payload === 'syllabus_45') {
       magicFunc(sender_psid, syllabus_45);
     }
@@ -1813,6 +1817,10 @@ let handlePostback = async (sender_psid, received_postback) => {
     }
     else if (payload === 'syllabus_ese45_flow') {
       magicFunc(sender_psid, syllabus_45_ese);
+    }
+    //46
+    else if (payload === 'syllabus_46') {
+      magicFunc(sender_psid, notAvailable);
     }
 
 
