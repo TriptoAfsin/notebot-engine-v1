@@ -1781,6 +1781,9 @@ let handlePostback = async (sender_psid, received_postback) => {
 
 
     //syllabus
+    else if (payload === 'syllabus_45') {
+      magicFunc(sender_psid, syllabus_45);
+    }
     else if (payload === 'syllabus_ae45_flow') {
       magicFunc(sender_psid, syllabus_45_ae);
     }
