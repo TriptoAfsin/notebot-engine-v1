@@ -408,8 +408,26 @@ const result_Affli_2019 = require('./flows/botReplies/result_flows/affli_result/
 const result_Affli_2020 = require('./flows/botReplies/result_flows/affli_result/years/affli2020Res');
 
 
-
+//syllabus
 const syllabusFlow = require('./flows/botReplies/syllabusFlow');
+//45
+const syllabus_45 = require('./flows/botReplies/syllabus_batches/45/syllabus45');
+const syllabus_45_ae = require('./flows/botReplies/syllabus_batches/45/depts/ae_45/ae45Syllabus');
+const syllabus_45_ye = require('./flows/botReplies/syllabus_batches/45/depts/ye_45/ye45Syllabus');
+const syllabus_45_fe = require('./flows/botReplies/syllabus_batches/45/depts/fe_45/fe45Syllabus');
+const syllabus_45_tem = require('./flows/botReplies/syllabus_batches/45/depts/tem_45/tem45Syllabus');
+const syllabus_45_ipe = require('./flows/botReplies/syllabus_batches/45/depts/ipe_45/ipe45Syllabus');
+const syllabus_45_tfd = require('./flows/botReplies/syllabus_batches/45/depts/tfd_45/tfd45Syllabus');
+const syllabus_45_ese = require('./flows/botReplies/syllabus_batches/45/depts/ese_45/ese45Syllabus');
+const syllabus_45_tmdm = require('./flows/botReplies/syllabus_batches/45/depts/tmdm_45/tmdm45Syllabus');
+const syllabus_45_dce = require('./flows/botReplies/syllabus_batches/45/depts/dce_45/dce45Syllabus');
+const syllabus_45_wpe = require('./flows/botReplies/syllabus_batches/45/depts/wpe_45/wpe45Syllabus');
+
+
+
+
+
+
 
 
 
@@ -1759,6 +1777,39 @@ let handlePostback = async (sender_psid, received_postback) => {
     }
     else if (payload === 'bil_labor_law_flow') {
       magicFunc(sender_psid, bil_laborlaw);
+    }
+
+
+    //syllabus
+    else if (payload === 'syllabus_ae45_flow') {
+      magicFunc(sender_psid, syllabus_45_ae);
+    }
+    else if (payload === 'syllabus_fe45_flow') {
+      magicFunc(sender_psid, syllabus_45_fe);
+    }
+    else if (payload === 'syllabus_ipe45_flow') {
+      magicFunc(sender_psid, syllabus_45_ipe);
+    }
+    else if (payload === 'syllabus_tem45_flow') {
+      magicFunc(sender_psid, syllabus_45_tem);
+    }
+    else if (payload === 'syllabus_tfd45_flow') {
+      magicFunc(sender_psid, syllabus_45_tfd);
+    }
+    else if (payload === 'syllabus_ye45_flow') {
+      magicFunc(sender_psid, syllabus_45_ye);
+    }
+    else if (payload === 'syllabus_tmdm45_flow') {
+      magicFunc(sender_psid, syllabus_45_tmdm);
+    }
+    else if (payload === 'syllabus_wpe45_flow') {
+      magicFunc(sender_psid, syllabus_45_wpe);
+    }
+    else if (payload === 'syllabus_dce45_flow') {
+      magicFunc(sender_psid, syllabus_45_dce);
+    }
+    else if (payload === 'syllabus_ese45_flow') {
+      magicFunc(sender_psid, syllabus_45_ese);
     }
 
 

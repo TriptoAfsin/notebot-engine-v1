@@ -4,7 +4,7 @@ let syllabus = [
             "type": "template",
             "payload": {
                 "template_type": "button",
-                "text": "🔰 Choose - ",
+                "text": "🔰 Select Your Batch - ",
                 "buttons": [
                     {
                         "type": "postback",
