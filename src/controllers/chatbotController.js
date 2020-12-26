@@ -447,8 +447,20 @@ const mmtf_acrylic = require("./flows/botReplies/note_levels/level_2/level_2_sub
 const mmtf_vectran = require("./flows/botReplies/note_levels/level_2/level_2_subs/mmtf/topics/mmtfVectran");
 const mmtf_regenFib = require("./flows/botReplies/note_levels/level_2/level_2_subs/mmtf/topics/mmtfRegen");
 
-
-
+//ttqc
+const ttqc_flow = require("./flows/botReplies/note_levels/level_2/level_2_subs/ttqc/ttqc_flow");
+const ttqc_books = require("./flows/botReplies/note_levels/level_2/level_2_subs/ttqc/topics/ttqcBooks");
+const ttqc_notes = require("./flows/botReplies/note_levels/level_2/level_2_subs/ttqc/topics/ttqcNotes");
+const ttqc_count = require("./flows/botReplies/note_levels/level_2/level_2_subs/ttqc/topics/ttqcCount");
+const ttqc_crimp = require("./flows/botReplies/note_levels/level_2/level_2_subs/ttqc/topics/ttqcCrimp");
+const ttqc_twist = require("./flows/botReplies/note_levels/level_2/level_2_subs/ttqc/topics/ttqcTwist");
+const ttqc_intro = require("./flows/botReplies/note_levels/level_2/level_2_subs/ttqc/topics/ttqcIntro");
+const ttqc_moisture = require("./flows/botReplies/note_levels/level_2/level_2_subs/ttqc/topics/ttqcIntro");
+const ttqc_neps = require("./flows/botReplies/note_levels/level_2/level_2_subs/ttqc/topics/ttqcNeps");
+const ttqc_sampling = require("./flows/botReplies/note_levels/level_2/level_2_subs/ttqc/topics/ttqcSampling");
+const ttqc_fibre_prop = require("./flows/botReplies/note_levels/level_2/level_2_subs/ttqc/topics/ttqcFibreProp");
+const ttqc_hvi = require("./flows/botReplies/note_levels/level_2/level_2_subs/ttqc/topics/ttqcHvi");
+const ttqc_afis = require("./flows/botReplies/note_levels/level_2/level_2_subs/ttqc/topics/ttqcAfis");
 
 
 
@@ -659,6 +671,7 @@ function handleMessage(sender_psid, received_message) {
     const bil = bil_words;
     const fm1 = fm1_words;
     const mmtf = mmtf_words;
+    const ttqc = ttqc_words;
   
 
     const bothChem = bothChem_words;
@@ -773,6 +786,11 @@ function handleMessage(sender_psid, received_message) {
     //academic -> mmtf
     else if (mmtf.some(word => received_message.text.toLowerCase().includes(word))) {
       magicFunc(sender_psid, mmtf_flow);
+    }
+
+    //academic -> ttqc
+    else if (ttqc.some(word => received_message.text.toLowerCase().includes(word))) {
+      magicFunc(sender_psid, ttqc_flow);
     }
 
     //academic -> iae
@@ -1944,7 +1962,7 @@ let handlePostback = async (sender_psid, received_postback) => {
       magicFunc(sender_psid, fm1_warping);
     }
 
-    //fm1
+    //mmtf
     else if (payload === 'mmtf_flow') {
       magicFunc(sender_psid, mmtf_flow);
     }
@@ -2011,6 +2029,48 @@ let handlePostback = async (sender_psid, received_postback) => {
     else if (payload === 'mmtf_nylon_flow') {
       magicFunc(sender_psid, mmtf_nylon);
     }
+
+    //ttqc
+    else if (payload === 'ttqc_flow') {
+      magicFunc(sender_psid, ttqc_flow);
+    }
+    else if (payload === 'ttqc_books_flow') {
+      magicFunc(sender_psid, ttqc_books);
+    }
+    else if (payload === 'ttqc_hnotes_flow') {
+      magicFunc(sender_psid, ttqc_notes);
+    }
+    else if (payload === 'ttqc_count_flow') {
+      magicFunc(sender_psid, ttqc_count);
+    }
+    else if (payload === 'ttqc_crimp_flow') {
+      magicFunc(sender_psid, ttqc_crimp);
+    }
+    else if (payload === 'ttqc_twist_flow') {
+      magicFunc(sender_psid, ttqc_twist);
+    }
+    else if (payload === 'ttqc_intro_flow') {
+      magicFunc(sender_psid, ttqc_intro);
+    }
+    else if (payload === 'ttqc_mositure_flow') {
+      magicFunc(sender_psid, ttqc_moisture);
+    }
+    else if (payload === 'ttqc_neps_flow') {
+      magicFunc(sender_psid, ttqc_neps);
+    }
+    else if (payload === 'ttqc_sampling_flow') {
+      magicFunc(sender_psid, ttqc_sampling);
+    }
+    else if (payload === 'ttqc_fibre_prop_flow') {
+      magicFunc(sender_psid, ttqc_fibre_prop);
+    }
+    else if (payload === 'ttqc_hvi_flow') {
+      magicFunc(sender_psid, ttqc_hvi);
+    }
+    else if (payload === 'ttqc_afis_flow') {
+      magicFunc(sender_psid, ttqc_afis);
+    }
+
 
 
 
