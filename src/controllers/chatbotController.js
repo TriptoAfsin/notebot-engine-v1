@@ -67,6 +67,65 @@ const bs_words = require('./keywords/academic_words/subjects/bsWords');
 const bil_words = require('./keywords/academic_words/subjects/bilWords');
 //academic -> fm1
 const fm1_words = require('./keywords/academic_words/subjects/fm1Words');
+//academic -> fm2
+const fm2_words = require('./keywords/academic_words/subjects/fm2Words');
+//academic -> ctca
+const ctca_words = require('./keywords/academic_words/subjects/ctacaWords');
+//academic -> wpp
+const wpp_words = require('./keywords/academic_words/subjects/wppWords');
+//academic -> weav prep
+const weav_prep_words = require('./keywords/academic_words/subjects/weavPrepWords');
+//academic -> mp
+const mp_words = require('./keywords/academic_words/subjects/mpWords');
+//academic -> fd2
+const fd2_words = require('./keywords/academic_words/subjects/fd2Words');
+//academic -> ap1
+const ap1_words = require('./keywords/academic_words/subjects/ap1Words');
+//academic -> ap2
+const ap2_words = require('./keywords/academic_words/subjects/ap2Words');
+//academic -> am1
+const am1_words = require('./keywords/academic_words/subjects/am1Words');
+//academic -> am2
+const am2_words = require('./keywords/academic_words/subjects/am2Words');
+//academic -> stat
+const stat_words = require('./keywords/academic_words/subjects/statWords');
+//academic -> ym1
+const ym1_words = require('./keywords/academic_words/subjects/ym1Words');
+//academic -> ym2
+const ym2_words = require('./keywords/academic_words/subjects/ym2Words');
+//academic -> wp1
+const wp1_words = require('./keywords/academic_words/subjects/wp1Words');
+//academic -> wp2
+const wp2_words = require('./keywords/academic_words/subjects/wp2Words');
+//academic -> marketing
+const marketing_words = require('./keywords/academic_words/subjects/marketingWords');
+//academic -> tp
+const tp_words = require('./keywords/academic_words/subjects/tpWords');
+//academic -> ttqc
+const ttqc_words = require('./keywords/academic_words/subjects/ttqcWords');
+//academic -> fdce
+const fdce_words = require('./keywords/academic_words/subjects/fdceWords');
+//academic -> economics
+const econo_words = require('./keywords/academic_words/subjects/econoWords');
+//academic -> tqm
+const tqm_words = require('./keywords/academic_words/subjects/tqmWords');
+//academic -> tcp
+const tcp_words = require('./keywords/academic_words/subjects/tcpWords');
+//academic -> ace
+const ace_words = require('./keywords/academic_words/subjects/aceWords');
+//academic -> pd
+const pd_words = require('./keywords/academic_words/subjects/pdWords');
+//academic -> mic
+const mic_words = require('./keywords/academic_words/subjects/micWords');
+//academic -> fsd
+const fsd_words = require('./keywords/academic_words/subjects/fsdWords');
+//academic -> lss
+const lss_words = require('./keywords/academic_words/subjects/lssWords');
+//academic -> pcs
+const pcs_words = require('./keywords/academic_words/subjects/pcsWords');
+//academic -> knit1
+const knit1_words = require('./keywords/academic_words/subjects/knit1Words');
+
 
 
 //both subjs

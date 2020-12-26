@@ -16,6 +16,11 @@ let bothPhy_flow = [
                         "title": "Physics-II",
                         "payload": "phy2_flow"
                     },
+                    {
+                        "type": "postback",
+                        "title": "Textile Physics",
+                        "payload": "tp_flow"
+                    }
                 ],
             },
         },

@@ -3,8 +3,8 @@ const fm1_words = [
     "fm-i",
     "fm 1",
     "fm i",
-    "fabric manufacturing",
-    "fabric manu"
+    "fabric manufacturing 1",
+    "fabric manu 1"
 ];
 
 
