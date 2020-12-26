@@ -125,6 +125,8 @@ const lss_words = require('./keywords/academic_words/subjects/lssWords');
 const pcs_words = require('./keywords/academic_words/subjects/pcsWords');
 //academic -> knit1
 const knit1_words = require('./keywords/academic_words/subjects/knit1Words');
+//academic -> mmtf
+const mmtf_words = require('./keywords/academic_words/subjects/mmtfWords');
 
 
 
@@ -421,6 +423,33 @@ const fm1_winding = require("./flows/botReplies/note_levels/level_2/level_2_subs
 const fm1_warping = require("./flows/botReplies/note_levels/level_2/level_2_subs/fm1/topics/fm1Warping");
 
 
+//mmtf
+const mmtf_flow = require("./flows/botReplies/note_levels/level_2/level_2_subs/mmtf/mmtf_flow");
+const mmtf_books = require("./flows/botReplies/note_levels/level_2/level_2_subs/mmtf/topics/mmtfBooks");
+const mmtf_notes = require("./flows/botReplies/note_levels/level_2/level_2_subs/mmtf/topics/mmtfNotes");
+const mmtf_suggestion = require("./flows/botReplies/note_levels/level_2/level_2_subs/mmtf/topics/mmtfSuggestion");
+const mmtf_intro = require("./flows/botReplies/note_levels/level_2/level_2_subs/mmtf/topics/mmtfIntro");
+const mmtf_rayon = require("./flows/botReplies/note_levels/level_2/level_2_subs/mmtf/topics/mmtfRayon");
+const mmtf_spin_sys = require("./flows/botReplies/note_levels/level_2/level_2_subs/mmtf/topics/mmtfSpinningSys");
+const mmtf_highperf = require("./flows/botReplies/note_levels/level_2/level_2_subs/mmtf/topics/mmtfHighPerf");
+const mmtf_polyamide = require("./flows/botReplies/note_levels/level_2/level_2_subs/mmtf/topics/mmtfPolyamaide");
+const mmtf_modal = require("./flows/botReplies/note_levels/level_2/level_2_subs/mmtf/topics/mmtfModal");
+const mmtf_elastomer = require("./flows/botReplies/note_levels/level_2/level_2_subs/mmtf/topics/mmtfElastomer");
+const mmtf_polyolefin = require("./flows/botReplies/note_levels/level_2/level_2_subs/mmtf/topics/mmtfPolyolefin");
+const mmtf_carbonFib = require("./flows/botReplies/note_levels/level_2/level_2_subs/mmtf/topics/mmtfCarbonFib");
+const mmtf_acetate = require("./flows/botReplies/note_levels/level_2/level_2_subs/mmtf/topics/mmtfAcetate");
+const mmtf_biofib = require("./flows/botReplies/note_levels/level_2/level_2_subs/mmtf/topics/mmtfBioFib");
+const mmtf_lyocell = require("./flows/botReplies/note_levels/level_2/level_2_subs/mmtf/topics/mmtfLyocell");
+const mmtf_glassfib = require("./flows/botReplies/note_levels/level_2/level_2_subs/mmtf/topics/mmtfGlassFib");
+const mmtf_nylon = require("./flows/botReplies/note_levels/level_2/level_2_subs/mmtf/topics/mmtfNylon");
+const mmtf_polyester = require("./flows/botReplies/note_levels/level_2/level_2_subs/mmtf/topics/mmtfPolyester");
+const mmtf_acrylic = require("./flows/botReplies/note_levels/level_2/level_2_subs/mmtf/topics/mmtfAcrylic");
+const mmtf_vectran = require("./flows/botReplies/note_levels/level_2/level_2_subs/mmtf/topics/mmtfVectran");
+const mmtf_regenFib = require("./flows/botReplies/note_levels/level_2/level_2_subs/mmtf/topics/mmtfRegen");
+
+
+
+
 
 
 
@@ -629,6 +658,8 @@ function handleMessage(sender_psid, received_message) {
     const bs = bs_words;
     const bil = bil_words;
     const fm1 = fm1_words;
+    const mmtf = mmtf_words;
+  
 
     const bothChem = bothChem_words;
     const bothMath = bothMath_words;
@@ -737,6 +768,11 @@ function handleMessage(sender_psid, received_message) {
     //academic -> bce
     else if (bce.some(word => received_message.text.toLowerCase().includes(word))) {
       magicFunc(sender_psid, bce_flow);
+    }
+
+    //academic -> mmtf
+    else if (mmtf.some(word => received_message.text.toLowerCase().includes(word))) {
+      magicFunc(sender_psid, mmtf_flow);
     }
 
     //academic -> iae
@@ -1907,6 +1943,75 @@ let handlePostback = async (sender_psid, received_postback) => {
     else if (payload === 'fm1_warping_flow') {
       magicFunc(sender_psid, fm1_warping);
     }
+
+    //fm1
+    else if (payload === 'mmtf_flow') {
+      magicFunc(sender_psid, mmtf_flow);
+    }
+    else if (payload === 'mmtf_mmtf_books_flowflow') {
+      magicFunc(sender_psid, mmtf_books);
+    }
+    else if (payload === 'mmtf_hnotes_flow') {
+      magicFunc(sender_psid, mmtf_notes);
+    }
+    else if (payload === 'mmtf_sugg_flow') {
+      magicFunc(sender_psid, mmtf_suggestion);
+    }
+    else if (payload === 'mmtf_intro_flow') {
+      magicFunc(sender_psid, mmtf_intro);
+    }
+    else if (payload === 'mmtf_rayon_flow') {
+      magicFunc(sender_psid, mmtf_rayon);
+    }
+    else if (payload === 'mmtf_spinning_sys_flow') {
+      magicFunc(sender_psid, mmtf_spin_sys);
+    }
+    else if (payload === 'mmtf_high_perf_flow') {
+      magicFunc(sender_psid, mmtf_highperf);
+    }
+    else if (payload === 'mmtf_polyamaide_flow') {
+      magicFunc(sender_psid, mmtf_polyamide);
+    }
+    else if (payload === 'mmtf_modal_flow') {
+      magicFunc(sender_psid, mmtf_modal);
+    }
+    else if (payload === 'mmtf_elastomer_flow') {
+      magicFunc(sender_psid, mmtf_elastomer);
+    }
+    else if (payload === 'mmtf_polyolefin_flow') {
+      magicFunc(sender_psid, mmtf_polyolefin);
+    }
+    else if (payload === 'mmtf_carbon_fibre_flow') {
+      magicFunc(sender_psid, mmtf_carbonFib);
+    }
+    else if (payload === 'mmtf_acetate_flow') {
+      magicFunc(sender_psid, mmtf_acetate);
+    }
+    else if (payload === 'mmtf_bio_fibre_flow') {
+      magicFunc(sender_psid, mmtf_biofib);
+    }
+    else if (payload === 'mmtf_polyester_flow') {
+      magicFunc(sender_psid, mmtf_polyester);
+    }
+    else if (payload === 'mmtf_acrylic_flow') {
+      magicFunc(sender_psid, mmtf_acrylic);
+    }
+    else if (payload === 'mmtf_vectran_flow') {
+      magicFunc(sender_psid, mmtf_vectran);
+    }
+    else if (payload === 'mmtf_regen_protein_fibre_flow') {
+      magicFunc(sender_psid, mmtf_regenFib);
+    }
+    else if (payload === 'mmtf_glassfib_flow') {
+      magicFunc(sender_psid, mmtf_glassfib);
+    }
+    else if (payload === 'mmtf_lyocell_flow') {
+      magicFunc(sender_psid, mmtf_lyocell);
+    }
+    else if (payload === 'mmtf_nylon_flow') {
+      magicFunc(sender_psid, mmtf_nylon);
+    }
+
 
 
 
