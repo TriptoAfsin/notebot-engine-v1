@@ -7,9 +7,9 @@ let level_2_note = [
                 "text": "🔴 Question Banks - ",
                 "buttons": [
                     {
-                        "type": "postback",
-                        "title": "All Level 2",
-                        "payload": "qb_2_flow"
+                        "type": "web_url",
+                        "url": "https://drive.google.com/drive/folders/1AlmeMT52FQC02IhfvWuVPuDn8qatE_RQ",
+                        "title": "All QB",
                     }
                 ],
             },
@@ -129,12 +129,12 @@ let level_2_note = [
                     {
                         "type": "postback",
                         "title": "FM-I",
-                        "payload": "fm1_Flow"
+                        "payload": "fm1_flow"
                     },
                     {
                         "type": "postback",
                         "title": "TTQC",
-                        "payload": "ttqc_Flow"
+                        "payload": "ttqc_flow"
                     },
                     {
                         "type": "postback",

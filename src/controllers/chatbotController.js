@@ -65,6 +65,8 @@ const hrm_words = require('./keywords/academic_words/subjects/hrmWords');
 const bs_words = require('./keywords/academic_words/subjects/bsWords');
 //academic -> bil
 const bil_words = require('./keywords/academic_words/subjects/bilWords');
+//academic -> fm1
+const fm1_words = require('./keywords/academic_words/subjects/fm1Words');
 
 
 //both subjs
@@ -342,6 +344,22 @@ const iee_natureEnv = require("./flows/botReplies/note_levels/level_1/level_1_su
 const iee_spf = require("./flows/botReplies/note_levels/level_1/level_1_subs/iee/topics/ieeSPF");
 
 
+//level2
+//fm1
+const fm1_flow = require("./flows/botReplies/note_levels/level_2/level_2_subs/fm1/fm1_flow");
+const fm1_books = require("./flows/botReplies/note_levels/level_2/level_2_subs/fm1/topics/fm1Books");
+const fm1_notes = require("./flows/botReplies/note_levels/level_2/level_2_subs/fm1/topics/fm1HandNotes");
+const fm1_question = require("./flows/botReplies/note_levels/level_2/level_2_subs/fm1/topics/fm1Ques");
+const fm1_sugg = require("./flows/botReplies/note_levels/level_2/level_2_subs/fm1/topics/fm1Sugg");
+const fm1_loom = require("./flows/botReplies/note_levels/level_2/level_2_subs/fm1/topics/fm1Loom");
+const fm1_motionWeav = require("./flows/botReplies/note_levels/level_2/level_2_subs/fm1/topics/fm1MotionWeav");
+const fm1_weaving = require("./flows/botReplies/note_levels/level_2/level_2_subs/fm1/topics/fm1Weav");
+const fm1_intro = require("./flows/botReplies/note_levels/level_2/level_2_subs/fm1/topics/fm1Intro");
+const fm1_shedding = require("./flows/botReplies/note_levels/level_2/level_2_subs/fm1/topics/fm1Shedding");
+const fm1_sizing = require("./flows/botReplies/note_levels/level_2/level_2_subs/fm1/topics/fm1Sizing");
+const fm1_dobby= require("./flows/botReplies/note_levels/level_2/level_2_subs/fm1/topics/fm1Dobby");
+const fm1_winding = require("./flows/botReplies/note_levels/level_2/level_2_subs/fm1/topics/fm1Winding");
+const fm1_warping = require("./flows/botReplies/note_levels/level_2/level_2_subs/fm1/topics/fm1Warping");
 
 
 
@@ -551,6 +569,7 @@ function handleMessage(sender_psid, received_message) {
     const hrm = hrm_words;
     const bs = bs_words;
     const bil = bil_words;
+    const fm1 = fm1_words;
 
     const bothChem = bothChem_words;
     const bothMath = bothMath_words;
@@ -674,6 +693,10 @@ function handleMessage(sender_psid, received_message) {
     //academic -> bil
     else if (bil.includes(received_message.text.toLowerCase())) {
       magicFunc(sender_psid, bil_flow);
+    }
+     //academic -> fm1
+     else if (fm1.includes(received_message.text.toLowerCase())) {
+      magicFunc(sender_psid, fm1_flow);
     }
 
      //academic -> epd
@@ -1781,6 +1804,53 @@ let handlePostback = async (sender_psid, received_postback) => {
     else if (payload === 'bil_labor_law_flow') {
       magicFunc(sender_psid, bil_laborlaw);
     }
+
+    //fm1
+    else if (payload === 'fm1_flow') {
+      magicFunc(sender_psid, fm1_flow);
+    }
+    else if (payload === 'fm1_hnotes_flow') {
+      magicFunc(sender_psid, fm1_notes);
+    }
+    else if (payload === 'fm1_books_flow') {
+      magicFunc(sender_psid, fm1_books);
+    }
+    else if (payload === 'fm1_sugg_flow') {
+      magicFunc(sender_psid, fm1_sugg);
+    }
+    else if (payload === 'fm1_ques_flow') {
+      magicFunc(sender_psid, fm1_question);
+    }
+    else if (payload === 'fm1_loom_flow') {
+      magicFunc(sender_psid, fm1_loom);
+    }
+    else if (payload === 'fm1_motion_weav_flow') {
+      magicFunc(sender_psid, fm1_motionWeav);
+    }
+    else if (payload === 'fm1_intro_fm_flow') {
+      magicFunc(sender_psid, fm1_intro);
+    }
+    else if (payload === 'fm1_shedding_flow') {
+      magicFunc(sender_psid, fm1_shedding);
+    }
+    else if (payload === 'fm1_weaving_flow') {
+      magicFunc(sender_psid, fm1_weaving);
+    }
+    else if (payload === 'fm1_sizing_flow') {
+      magicFunc(sender_psid, fm1_sizing);
+    }
+    else if (payload === 'fm1_winding_flow') {
+      magicFunc(sender_psid, fm1_winding);
+    }
+    else if (payload === 'fm1_dobby_flow') {
+      magicFunc(sender_psid, fm1_dobby);
+    }
+    else if (payload === 'fm1_warping_flow') {
+      magicFunc(sender_psid, fm1_warping);
+    }
+
+
+
 
 
     //syllabus
