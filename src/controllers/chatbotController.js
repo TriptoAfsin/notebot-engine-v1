@@ -462,6 +462,22 @@ const ttqc_fibre_prop = require("./flows/botReplies/note_levels/level_2/level_2_
 const ttqc_hvi = require("./flows/botReplies/note_levels/level_2/level_2_subs/ttqc/topics/ttqcHvi");
 const ttqc_afis = require("./flows/botReplies/note_levels/level_2/level_2_subs/ttqc/topics/ttqcAfis");
 
+//stat
+const stat_flow = require("./flows/botReplies/note_levels/level_2/level_2_subs/stat/stat_flow");
+const stat_books = require("./flows/botReplies/note_levels/level_2/level_2_subs/stat/topics/statBooks");
+const stat_notes = require("./flows/botReplies/note_levels/level_2/level_2_subs/stat/topics/statNotes");
+const stat_probab = require("./flows/botReplies/note_levels/level_2/level_2_subs/stat/topics/statProbab");
+const stat_intro = require("./flows/botReplies/note_levels/level_2/level_2_subs/stat/topics/statIntro");
+const stat_central_tend = require("./flows/botReplies/note_levels/level_2/level_2_subs/stat/topics/statCentralTend");
+const stat_cv = require("./flows/botReplies/note_levels/level_2/level_2_subs/stat/topics/statCv");
+const stat_moments = require("./flows/botReplies/note_levels/level_2/level_2_subs/stat/topics/statMoments");
+const stat_shape = require("./flows/botReplies/note_levels/level_2/level_2_subs/stat/topics/statShape");
+const stat_design = require("./flows/botReplies/note_levels/level_2/level_2_subs/stat/topics/statDesignExp");
+const stat_normal = require("./flows/botReplies/note_levels/level_2/level_2_subs/stat/topics/statNormalDistri");
+const stat_binomial = require("./flows/botReplies/note_levels/level_2/level_2_subs/stat/topics/statBinomial");
+const stat_poission = require("./flows/botReplies/note_levels/level_2/level_2_subs/stat/topics/statPoission");
+const stat_regression = require("./flows/botReplies/note_levels/level_2/level_2_subs/stat/topics/statRegression");
+
 
 
 
@@ -672,6 +688,7 @@ function handleMessage(sender_psid, received_message) {
     const fm1 = fm1_words;
     const mmtf = mmtf_words;
     const ttqc = ttqc_words;
+    const stat = stat_words;
   
 
     const bothChem = bothChem_words;
@@ -786,6 +803,11 @@ function handleMessage(sender_psid, received_message) {
     //academic -> mmtf
     else if (mmtf.some(word => received_message.text.toLowerCase().includes(word))) {
       magicFunc(sender_psid, mmtf_flow);
+    }
+
+    //academic -> stat
+    else if (stat.some(word => received_message.text.toLowerCase().includes(word))) {
+      magicFunc(sender_psid, stat_flow);
     }
 
     //academic -> ttqc
@@ -2070,6 +2092,51 @@ let handlePostback = async (sender_psid, received_postback) => {
     else if (payload === 'ttqc_afis_flow') {
       magicFunc(sender_psid, ttqc_afis);
     }
+
+    //stat
+    else if (payload === 'stat_flow') {
+      magicFunc(sender_psid, stat_flow);
+    }
+    else if (payload === 'stat_books_flow') {
+      magicFunc(sender_psid, stat_books);
+    }
+    else if (payload === 'stat_hnotes_flow') {
+      magicFunc(sender_psid, stat_notes);
+    }
+    else if (payload === 'stat_probab_flow') {
+      magicFunc(sender_psid, stat_probab);
+    }
+    else if (payload === 'stat_intro_flow') {
+      magicFunc(sender_psid, stat_intro);
+    }
+    else if (payload === 'stat_central_tend_flow') {
+      magicFunc(sender_psid, stat_central_tend);
+    }
+    else if (payload === 'stat_cv_sd_flow') {
+      magicFunc(sender_psid, stat_cv);
+    }
+    else if (payload === 'stat_moments_flow') {
+      magicFunc(sender_psid, stat_moments);
+    }
+    else if (payload === 'stat_shapes_flow') {
+      magicFunc(sender_psid, stat_shape);
+    }
+    else if (payload === 'stat_design_exp_flow') {
+      magicFunc(sender_psid, stat_design);
+    }
+    else if (payload === 'stat_normal_distri_flow') {
+      magicFunc(sender_psid, stat_normal);
+    }
+    else if (payload === 'stat_binomial_distri_flow') {
+      magicFunc(sender_psid, stat_binomial);
+    }
+    else if (payload === 'stat_poission_flow') {
+      magicFunc(sender_psid, stat_poission);
+    }
+    else if (payload === 'stat_regression_flow') {
+      magicFunc(sender_psid, stat_regression);
+    }
+
 
 
 
