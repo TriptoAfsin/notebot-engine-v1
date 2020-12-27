@@ -127,6 +127,8 @@ const pcs_words = require('./keywords/academic_words/subjects/pcsWords');
 const knit1_words = require('./keywords/academic_words/subjects/knit1Words');
 //academic -> mmtf
 const mmtf_words = require('./keywords/academic_words/subjects/mmtfWords');
+//academic -> eee
+const eee_words = require('./keywords/academic_words/subjects/eeeWords');
 
 
 
@@ -479,6 +481,22 @@ const stat_poission = require("./flows/botReplies/note_levels/level_2/level_2_su
 const stat_regression = require("./flows/botReplies/note_levels/level_2/level_2_subs/stat/topics/statRegression");
 
 
+//eee
+const eee_flow = require("./flows/botReplies/note_levels/level_2/level_2_subs/eee/eee_flow");
+const eee_books = require("./flows/botReplies/note_levels/level_2/level_2_subs/eee/topics/eeeBooks");
+const eee_notes = require("./flows/botReplies/note_levels/level_2/level_2_subs/eee/topics/eeeNotes");
+const eee_ques = require("./flows/botReplies/note_levels/level_2/level_2_subs/eee/topics/eeeQues");
+const eee_ch1 = require("./flows/botReplies/note_levels/level_2/level_2_subs/eee/topics/eeeCh1");
+const eee_ch2 = require("./flows/botReplies/note_levels/level_2/level_2_subs/eee/topics/eeeCh2");
+const eee_ch3 = require("./flows/botReplies/note_levels/level_2/level_2_subs/eee/topics/eeeCh3");
+const eee_ch4 = require("./flows/botReplies/note_levels/level_2/level_2_subs/eee/topics/eeeCh4");
+const eee_ch5 = require("./flows/botReplies/note_levels/level_2/level_2_subs/eee/topics/eeeCh5");
+const eee_ch8 = require("./flows/botReplies/note_levels/level_2/level_2_subs/eee/topics/eeeCh8");
+const eee_wye = require("./flows/botReplies/note_levels/level_2/level_2_subs/eee/topics/eeeWye");
+const eee_rms = require("./flows/botReplies/note_levels/level_2/level_2_subs/eee/topics/eeeRms");
+const eee_circuit = require("./flows/botReplies/note_levels/level_2/level_2_subs/eee/topics/eeeCircuit");
+
+
 
 
 //level4-
@@ -689,6 +707,7 @@ function handleMessage(sender_psid, received_message) {
     const mmtf = mmtf_words;
     const ttqc = ttqc_words;
     const stat = stat_words;
+    const feee = eee_words ;
   
 
     const bothChem = bothChem_words;
@@ -798,6 +817,11 @@ function handleMessage(sender_psid, received_message) {
     //academic -> bce
     else if (bce.some(word => received_message.text.toLowerCase().includes(word))) {
       magicFunc(sender_psid, bce_flow);
+    }
+
+    //academic -> feee
+    else if (feee.some(word => received_message.text.toLowerCase().includes(word))) {
+      magicFunc(sender_psid, eee_flow);
     }
 
     //academic -> mmtf
@@ -2135,6 +2159,44 @@ let handlePostback = async (sender_psid, received_postback) => {
     }
     else if (payload === 'stat_regression_flow') {
       magicFunc(sender_psid, stat_regression);
+    }
+
+    //feee
+    else if (payload === 'eee_flow') {
+      magicFunc(sender_psid, eee_flow);
+    }
+    else if (payload === 'eee_hnotes_flow') {
+      magicFunc(sender_psid, eee_notes);
+    }
+    else if (payload === 'eee_ques_flow') {
+      magicFunc(sender_psid, eee_ques);
+    }
+    else if (payload === 'eee_ch1_flow') {
+      magicFunc(sender_psid, eee_ch1);
+    }
+    else if (payload === 'eee_ch2_flow') {
+      magicFunc(sender_psid, eee_ch2);
+    }
+    else if (payload === 'eee_ch3_flow') {
+      magicFunc(sender_psid, eee_ch3);
+    }
+    else if (payload === 'eee_ch4_flow') {
+      magicFunc(sender_psid, eee_ch4);
+    }
+    else if (payload === 'eee_ch5_flow') {
+      magicFunc(sender_psid, eee_ch5);
+    }
+    else if (payload === 'eee_ch8_flow') {
+      magicFunc(sender_psid, eee_ch8);
+    }
+    else if (payload === 'eee_wye_delta_flow') {
+      magicFunc(sender_psid, eee_wye);
+    }
+    else if (payload === 'eee_rms_flow') {
+      magicFunc(sender_psid, eee_rms);
+    }
+    else if (payload === 'eee_circuit_analy_flow') {
+      magicFunc(sender_psid, eee_circuit);
     }
 
 
