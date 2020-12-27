@@ -497,6 +497,24 @@ const eee_rms = require("./flows/botReplies/note_levels/level_2/level_2_subs/eee
 const eee_circuit = require("./flows/botReplies/note_levels/level_2/level_2_subs/eee/topics/eeeCircuit");
 
 
+//am1
+const am1_flow = require("./flows/botReplies/note_levels/level_2/level_2_subs/am1/am1_flow");
+const am1_books = require("./flows/botReplies/note_levels/level_2/level_2_subs/am1/topics/am1Books");
+const am1_question = require("./flows/botReplies/note_levels/level_2/level_2_subs/am1/topics/am1Ques");
+const am1_notes = require("./flows/botReplies/note_levels/level_2/level_2_subs/am1/topics/am1Notes");
+const am1_intro = require("./flows/botReplies/note_levels/level_2/level_2_subs/am1/topics/am1Intro");
+const am1_strucTex = require("./flows/botReplies/note_levels/level_2/level_2_subs/am1/topics/am1Structure");
+const am1_sizing = require("./flows/botReplies/note_levels/level_2/level_2_subs/am1/topics/am1Sizing");
+const am1_seam = require("./flows/botReplies/note_levels/level_2/level_2_subs/am1/topics/am1Seam");
+const am1_trims = require("./flows/botReplies/note_levels/level_2/level_2_subs/am1/topics/am1Trim");
+const am1_interlining = require("./flows/botReplies/note_levels/level_2/level_2_subs/am1/topics/am1Interlining");
+const am1_pattern = require("./flows/botReplies/note_levels/level_2/level_2_subs/am1/topics/am1Pattern");
+const am1_marker = require("./flows/botReplies/note_levels/level_2/level_2_subs/am1/topics/am1Marker");
+const am1_spreading = require("./flows/botReplies/note_levels/level_2/level_2_subs/am1/topics/am1Spread");
+const am1_fabricCut = require("./flows/botReplies/note_levels/level_2/level_2_subs/am1/topics/am1FabricCut");
+const am1_fabricInspection = require("./flows/botReplies/note_levels/level_2/level_2_subs/am1/topics/am1Inspection");
+
+
 
 
 //level4-
@@ -707,7 +725,8 @@ function handleMessage(sender_psid, received_message) {
     const mmtf = mmtf_words;
     const ttqc = ttqc_words;
     const stat = stat_words;
-    const feee = eee_words ;
+    const feee = eee_words;
+    const am1 = am1_words;
   
 
     const bothChem = bothChem_words;
@@ -827,6 +846,11 @@ function handleMessage(sender_psid, received_message) {
     //academic -> mmtf
     else if (mmtf.some(word => received_message.text.toLowerCase().includes(word))) {
       magicFunc(sender_psid, mmtf_flow);
+    }
+
+     //academic -> am1
+     else if (am1.some(word => received_message.text.toLowerCase().includes(word))) {
+      magicFunc(sender_psid, am1_flow);
     }
 
     //academic -> stat
@@ -2165,6 +2189,9 @@ let handlePostback = async (sender_psid, received_postback) => {
     else if (payload === 'eee_flow') {
       magicFunc(sender_psid, eee_flow);
     }
+    else if (payload === 'eee_books_flow') {
+      magicFunc(sender_psid, eee_books);
+    }
     else if (payload === 'eee_hnotes_flow') {
       magicFunc(sender_psid, eee_notes);
     }
@@ -2198,6 +2225,55 @@ let handlePostback = async (sender_psid, received_postback) => {
     else if (payload === 'eee_circuit_analy_flow') {
       magicFunc(sender_psid, eee_circuit);
     }
+
+    //am1
+    else if (payload === 'am1_flow') {
+      magicFunc(sender_psid, am1_flow);
+    }
+    else if (payload === 'am1_books_flow') {
+      magicFunc(sender_psid, am1_books);
+    }
+    else if (payload === 'am1_hnotes_flow') {
+      magicFunc(sender_psid, am1_notes);
+    }
+    else if (payload === 'am1_ques_flow') {
+      magicFunc(sender_psid, am1_question);
+    }
+    else if (payload === 'am1_intro_flow') {
+      magicFunc(sender_psid, am1_intro);
+    }
+    else if (payload === 'am1_structure_tex_flow') {
+      magicFunc(sender_psid, am1_strucTex);
+    }
+    else if (payload === 'am1_sizing_sys_flow') {
+      magicFunc(sender_psid, am1_sizing);
+    }
+    else if (payload === 'am1_seam_stitch_flow') {
+      magicFunc(sender_psid, am1_seam);
+    }
+    else if (payload === 'am1_trim_acces_flow') {
+      magicFunc(sender_psid, am1_trims);
+    }
+    else if (payload === 'am1_interlining_flow') {
+      magicFunc(sender_psid, am1_interlining);
+    }
+    else if (payload === 'am1_pattern_flow') {
+      magicFunc(sender_psid, am1_pattern);
+    }
+    else if (payload === 'am1_marker_flow') {
+      magicFunc(sender_psid, am1_marker);
+    }
+    else if (payload === 'am1_spreading_flow') {
+      magicFunc(sender_psid, am1_spreading);
+    }
+    else if (payload === 'am1_fabric_cut_flow') {
+      magicFunc(sender_psid, am1_fabricCut);
+    }
+    else if (payload === 'am1_fabricInspection_flow') {
+      magicFunc(sender_psid, am1_fabricInspection);
+    }
+    
+
 
 
 
