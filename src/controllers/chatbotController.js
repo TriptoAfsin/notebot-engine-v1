@@ -515,6 +515,41 @@ const am1_fabricCut = require("./flows/botReplies/note_levels/level_2/level_2_su
 const am1_fabricInspection = require("./flows/botReplies/note_levels/level_2/level_2_subs/am1/topics/am1Inspection");
 
 
+//marketing
+const marketing_flow = require("./flows/botReplies/note_levels/level_2/level_2_subs/marketing/marketing_flow");
+const marketing_books = require("./flows/botReplies/note_levels/level_2/level_2_subs/marketing/topics/marketBooks");
+const marketing_notes = require("./flows/botReplies/note_levels/level_2/level_2_subs/marketing/topics/marketNotes");
+const marketing_ques = require("./flows/botReplies/note_levels/level_2/level_2_subs/marketing/topics/marketQues");
+const marketing_sugg = require("./flows/botReplies/note_levels/level_2/level_2_subs/marketing/topics/marketSugg");
+const marketing_intro = require("./flows/botReplies/note_levels/level_2/level_2_subs/marketing/topics/marketIntro");
+const marketing_field = require("./flows/botReplies/note_levels/level_2/level_2_subs/marketing/topics/marketField");
+const marketing_function = require("./flows/botReplies/note_levels/level_2/level_2_subs/marketing/topics/marketFunc");
+const marketing_concept = require("./flows/botReplies/note_levels/level_2/level_2_subs/marketing/topics/marketConcept");
+const marketing_orientation = require("./flows/botReplies/note_levels/level_2/level_2_subs/marketing/topics/marketOrientation");
+const marketing_micro = require("./flows/botReplies/note_levels/level_2/level_2_subs/marketing/topics/marketMicroEnv");
+const marketing_macro = require("./flows/botReplies/note_levels/level_2/level_2_subs/marketing/topics/marketMacroEnv");
+const marketing_segment = require("./flows/botReplies/note_levels/level_2/level_2_subs/marketing/topics/marketSegment");
+const marketing_target = require("./flows/botReplies/note_levels/level_2/level_2_subs/marketing/topics/marketTargeting");
+const marketing_diffPoss = require("./flows/botReplies/note_levels/level_2/level_2_subs/marketing/topics/marketDiffPos");
+const marketing_channelDist = require("./flows/botReplies/note_levels/level_2/level_2_subs/marketing/topics/marketChannelDist");
+const marketing_retail = require("./flows/botReplies/note_levels/level_2/level_2_subs/marketing/topics/marketRetailing");
+const marketing_priceSys = require("./flows/botReplies/note_levels/level_2/level_2_subs/marketing/topics/marketPrice");
+const marketing_consumer_buyer = require("./flows/botReplies/note_levels/level_2/level_2_subs/marketing/topics/marketConsumerBuyer");
+const marketing_branding = require("./flows/botReplies/note_levels/level_2/level_2_subs/marketing/topics/marketBranding");
+const marketing_newProd = require("./flows/botReplies/note_levels/level_2/level_2_subs/marketing/topics/marketNewProduct");
+const marketing_advert = require("./flows/botReplies/note_levels/level_2/level_2_subs/marketing/topics/marketAdvert");
+const marketing_compStrat = require("./flows/botReplies/note_levels/level_2/level_2_subs/marketing/topics/marketCompetetive");
+const marketing_priceStrat = require("./flows/botReplies/note_levels/level_2/level_2_subs/marketing/topics/marketPriceStart");
+
+
+
+
+
+
+
+
+
+
 
 
 //level4-
@@ -727,6 +762,7 @@ function handleMessage(sender_psid, received_message) {
     const stat = stat_words;
     const feee = eee_words;
     const am1 = am1_words;
+    const marketing = marketing_words;
   
 
     const bothChem = bothChem_words;
@@ -861,6 +897,11 @@ function handleMessage(sender_psid, received_message) {
     //academic -> ttqc
     else if (ttqc.some(word => received_message.text.toLowerCase().includes(word))) {
       magicFunc(sender_psid, ttqc_flow);
+    }
+
+    //academic -> marketing
+    else if (marketing.some(word => received_message.text.toLowerCase().includes(word))) {
+      magicFunc(sender_psid, marketing_flow);
     }
 
     //academic -> iae
@@ -2271,6 +2312,80 @@ let handlePostback = async (sender_psid, received_postback) => {
     }
     else if (payload === 'am1_fabricInspection_flow') {
       magicFunc(sender_psid, am1_fabricInspection);
+    }
+
+     //marketing
+     else if (payload === 'marketing_flow') {
+      magicFunc(sender_psid, marketing_flow);
+    }
+    else if (payload === 'marketing_books_flow') {
+      magicFunc(sender_psid, marketing_books);
+    }
+    else if (payload === 'marketing_notes_flow') {
+      magicFunc(sender_psid, marketing_notes);
+    }
+    else if (payload === 'marketing_ques_flow') {
+      magicFunc(sender_psid, marketing_ques);
+    }
+    else if (payload === 'marketing_suggestion_flow') {
+      magicFunc(sender_psid, marketing_sugg);
+    }
+    else if (payload === 'marketing_intro_flow') {
+      magicFunc(sender_psid, marketing_intro);
+    }
+    else if (payload === 'marketing_func_flow') {
+      magicFunc(sender_psid, marketing_function);
+    }
+    else if (payload === 'marketing_field_flow') {
+      magicFunc(sender_psid, marketing_field);
+    }
+    else if (payload === 'marketing_concept_flow') {
+      magicFunc(sender_psid, marketing_concept);
+    }
+    else if (payload === 'marketing_market_orientation_flow') {
+      magicFunc(sender_psid, marketing_orientation);
+    }
+    else if (payload === 'marketing_micro_env_flow') {
+      magicFunc(sender_psid, marketing_micro);
+    }
+    else if (payload === 'marketing_macro_env_flow') {
+      magicFunc(sender_psid, marketing_macro);
+    }
+    else if (payload === 'marketing_market_segment_flow') {
+      magicFunc(sender_psid, marketing_segment);
+    }
+    else if (payload === 'marketing_market_targeting_flow') {
+      magicFunc(sender_psid, marketing_target);
+    }
+    else if (payload === 'marketing_diff_pos_flow') {
+      magicFunc(sender_psid, marketing_diffPoss);
+    }
+    else if (payload === 'marketing_channel_distri_flow') {
+      magicFunc(sender_psid, marketing_channelDist);
+    }
+    else if (payload === 'marketing_retailing_flow') {
+      magicFunc(sender_psid, marketing_retail);
+    }
+    else if (payload === 'marketing_price_sys_flow') {
+      magicFunc(sender_psid, marketing_priceSys);
+    }
+    else if (payload === 'marketing_consumer_buyer_flow') {
+      magicFunc(sender_psid, marketing_consumer_buyer);
+    }
+    else if (payload === 'marketing_branding_pack_flow') {
+      magicFunc(sender_psid, marketing_branding);
+    }
+    else if (payload === 'marketing_new_product_flow') {
+      magicFunc(sender_psid, marketing_newProd);
+    }
+    else if (payload === 'marketing_advertising_flow') {
+      magicFunc(sender_psid, marketing_advert);
+    }
+    else if (payload === 'marketing_competitive_flow') {
+      magicFunc(sender_psid, marketing_compStrat);
+    }
+    else if (payload === 'marketing_major_pricing_flow') {
+      magicFunc(sender_psid, marketing_priceStrat);
     }
     
 
