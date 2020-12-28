@@ -543,7 +543,7 @@ const marketing_advert = require("./flows/botReplies/note_levels/level_2/level_2
 const marketing_compStrat = require("./flows/botReplies/note_levels/level_2/level_2_subs/marketing/topics/marketCompetetive");
 const marketing_priceStrat = require("./flows/botReplies/note_levels/level_2/level_2_subs/marketing/topics/marketPriceStart");
 
-//marketing
+//fyt
 const fyt_flow = require("./flows/botReplies/note_levels/level_2/level_2_subs/fyt/fyt_flow");
 const fyt_books = require("./flows/botReplies/note_levels/level_2/level_2_subs/fyt/topics/fytBooks");
 const fyt_notes = require("./flows/botReplies/note_levels/level_2/level_2_subs/fyt/topics/fytNotes");
@@ -555,6 +555,17 @@ const fyt_count = require("./flows/botReplies/note_levels/level_2/level_2_subs/f
 const fyt_afis = require("./flows/botReplies/note_levels/level_2/level_2_subs/fyt/topics/fytAfis");
 const fyt_iso = require("./flows/botReplies/note_levels/level_2/level_2_subs/fyt/topics/fytIso");
 const fyt_capaOp = require("./flows/botReplies/note_levels/level_2/level_2_subs/fyt/topics/fytcapaOptical");
+
+//ctca
+const ctca_flow = require("./flows/botReplies/note_levels/level_2/level_2_subs/ctca/ctca_flow");
+const ctca_books = require("./flows/botReplies/note_levels/level_2/level_2_subs/ctca/topics/ctcaBooks");
+const ctca_sheets = require("./flows/botReplies/note_levels/level_2/level_2_subs/ctca/topics/ctcaSheets");
+const ctca_thickAgents = require("./flows/botReplies/note_levels/level_2/level_2_subs/ctca/topics/ctcaThickAgent");
+const ctca_water = require("./flows/botReplies/note_levels/level_2/level_2_subs/ctca/topics/ctcaWater");
+const ctca_surfact = require("./flows/botReplies/note_levels/level_2/level_2_subs/ctca/topics/ctcaSurfactant");
+const ctca_bleach = require("./flows/botReplies/note_levels/level_2/level_2_subs/ctca/topics/ctcaBleach");
+const ctca_solutions = require("./flows/botReplies/note_levels/level_2/level_2_subs/ctca/topics/ctcaSolutions");
+const ctca_colloid = require("./flows/botReplies/note_levels/level_2/level_2_subs/ctca/topics/ctcaColloid");
 
 
 
@@ -783,6 +794,7 @@ function handleMessage(sender_psid, received_message) {
     const am1 = am1_words;
     const marketing = marketing_words;
     const fyt = fyt_words;
+    const ctca = ctca_words;
   
 
     const bothChem = bothChem_words;
@@ -902,6 +914,11 @@ function handleMessage(sender_psid, received_message) {
     //academic -> mmtf
     else if (mmtf.some(word => received_message.text.toLowerCase().includes(word))) {
       magicFunc(sender_psid, mmtf_flow);
+    }
+
+    //academic -> ctca
+    else if (ctca.some(word => received_message.text.toLowerCase().includes(word))) {
+      magicFunc(sender_psid, ctca_flow);
     }
 
      //academic -> am1
@@ -2446,6 +2463,36 @@ let handlePostback = async (sender_psid, received_postback) => {
     }
     else if (payload === 'fyt_capaOptical_flow') {
       magicFunc(sender_psid, fyt_capaOp);
+    }
+
+
+    //ctca
+    else if (payload === 'ctca_flow') {
+      magicFunc(sender_psid, ctca_flow);
+    }
+    else if (payload === 'ctca_books_flow') {
+      magicFunc(sender_psid, ctca_books);
+    }
+    else if (payload === 'ctca_sheets_flow') {
+      magicFunc(sender_psid, ctca_sheets);
+    }
+    else if (payload === 'ctca_thickAge_flow') {
+      magicFunc(sender_psid, ctca_thickAgents);
+    }
+    else if (payload === 'ctca_water_flow') {
+      magicFunc(sender_psid, ctca_water);
+    }
+    else if (payload === 'ctca_surfactants_flow') {
+      magicFunc(sender_psid, ctca_surfact);
+    }
+    else if (payload === 'ctca_bleach_flow') {
+      magicFunc(sender_psid, ctca_bleach);
+    }
+    else if (payload === 'ctca_solutions_flow') {
+      magicFunc(sender_psid, ctca_solutions);
+    }
+    else if (payload === 'ctca_colloid_flow') {
+      magicFunc(sender_psid, ctca_colloid);
     }
     
 
