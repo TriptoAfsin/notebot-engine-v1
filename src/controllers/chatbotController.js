@@ -129,6 +129,8 @@ const knit1_words = require('./keywords/academic_words/subjects/knit1Words');
 const mmtf_words = require('./keywords/academic_words/subjects/mmtfWords');
 //academic -> eee
 const eee_words = require('./keywords/academic_words/subjects/eeeWords');
+//academic -> fyt
+const fyt_words = require('./keywords/academic_words/subjects/fytWords');
 
 
 
@@ -541,6 +543,23 @@ const marketing_advert = require("./flows/botReplies/note_levels/level_2/level_2
 const marketing_compStrat = require("./flows/botReplies/note_levels/level_2/level_2_subs/marketing/topics/marketCompetetive");
 const marketing_priceStrat = require("./flows/botReplies/note_levels/level_2/level_2_subs/marketing/topics/marketPriceStart");
 
+//marketing
+const fyt_flow = require("./flows/botReplies/note_levels/level_2/level_2_subs/fyt/fyt_flow");
+const fyt_books = require("./flows/botReplies/note_levels/level_2/level_2_subs/fyt/topics/fytBooks");
+const fyt_notes = require("./flows/botReplies/note_levels/level_2/level_2_subs/fyt/topics/fytNotes");
+const fyt_sugg = require("./flows/botReplies/note_levels/level_2/level_2_subs/fyt/topics/fytSugg");
+const fyt_number = require("./flows/botReplies/note_levels/level_2/level_2_subs/fyt/topics/fytNumbering");
+const fyt_twist = require("./flows/botReplies/note_levels/level_2/level_2_subs/fyt/topics/fytTwist");
+const fyt_evenness = require("./flows/botReplies/note_levels/level_2/level_2_subs/fyt/topics/fytEvenness");
+const fyt_count = require("./flows/botReplies/note_levels/level_2/level_2_subs/fyt/topics/fytCounting");
+const fyt_afis = require("./flows/botReplies/note_levels/level_2/level_2_subs/fyt/topics/fytAfis");
+const fyt_iso = require("./flows/botReplies/note_levels/level_2/level_2_subs/fyt/topics/fytIso");
+const fyt_capaOp = require("./flows/botReplies/note_levels/level_2/level_2_subs/fyt/topics/fytcapaOptical");
+
+
+
+
+
 
 
 
@@ -763,6 +782,7 @@ function handleMessage(sender_psid, received_message) {
     const feee = eee_words;
     const am1 = am1_words;
     const marketing = marketing_words;
+    const fyt = fyt_words;
   
 
     const bothChem = bothChem_words;
@@ -892,6 +912,11 @@ function handleMessage(sender_psid, received_message) {
     //academic -> stat
     else if (stat.some(word => received_message.text.toLowerCase().includes(word))) {
       magicFunc(sender_psid, stat_flow);
+    }
+
+    //academic -> fyt
+    else if (fyt.some(word => received_message.text.toLowerCase().includes(word))) {
+      magicFunc(sender_psid, fyt_flow);
     }
 
     //academic -> ttqc
@@ -2386,6 +2411,41 @@ let handlePostback = async (sender_psid, received_postback) => {
     }
     else if (payload === 'marketing_major_pricing_flow') {
       magicFunc(sender_psid, marketing_priceStrat);
+    }
+
+     //fyt
+     else if (payload === 'fyt_flow') {
+      magicFunc(sender_psid, fyt_flow);
+    }
+    else if (payload === 'fyt_books_flow') {
+      magicFunc(sender_psid, fyt_books);
+    }
+    else if (payload === 'fyt_hnotes_flow') {
+      magicFunc(sender_psid, fyt_notes);
+    }
+    else if (payload === 'fyt_sugg_flow') {
+      magicFunc(sender_psid, fyt_sugg);
+    }
+    else if (payload === 'fyt_yarnNum_flow') {
+      magicFunc(sender_psid, fyt_number);
+    }
+    else if (payload === 'fyt_yarnTwist_flow') {
+      magicFunc(sender_psid, fyt_twist);
+    }
+    else if (payload === 'fyt_evennessTester_flow') {
+      magicFunc(sender_psid, fyt_evenness);
+    }
+    else if (payload === 'fyt_yarnCounting_flow') {
+      magicFunc(sender_psid, fyt_count);
+    }
+    else if (payload === 'fyt_afis_flow') {
+      magicFunc(sender_psid, fyt_afis);
+    }
+    else if (payload === 'fyt_iso_flow') {
+      magicFunc(sender_psid, fyt_iso);
+    }
+    else if (payload === 'fyt_capaOptical_flow') {
+      magicFunc(sender_psid, fyt_capaOp);
     }
     
 
