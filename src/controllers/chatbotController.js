@@ -614,6 +614,23 @@ const sss2_notes = require("./flows/botReplies/note_levels/level_2/level_2_subs/
 const sss2_ringFrame = require("./flows/botReplies/note_levels/level_2/level_2_subs/sss2/topics/sss2Ringframe");
 
 
+//ym1
+const ym1_flow = require("./flows/botReplies/note_levels/level_2/level_2_subs/ym1/ym1_flow");
+const ym1_intro = require("./flows/botReplies/note_levels/level_2/level_2_subs/ym1/topics/ym1Intro");
+const ym1_indeter = require("./flows/botReplies/note_levels/level_2/level_2_subs/ym1/topics/ym1Indeterminer");
+const ym1_blowroom = require("./flows/botReplies/note_levels/level_2/level_2_subs/ym1/topics/ym1Blowroom");
+const ym1_mixBlend = require("./flows/botReplies/note_levels/level_2/level_2_subs/ym1/topics/ym1MixBlend");
+const ym1_fibreProp = require("./flows/botReplies/note_levels/level_2/level_2_subs/ym1/topics/ym1FibreProp");
+const ym1_yarnCondi = require("./flows/botReplies/note_levels/level_2/level_2_subs/ym1/topics/ym1YarnCond");
+const ym1_comber = require("./flows/botReplies/note_levels/level_2/level_2_subs/ym1/topics/ym1Comber");
+const ym1_ringFrame = require("./flows/botReplies/note_levels/level_2/level_2_subs/ym1/topics/ym1RingFrame");
+const ym1_speedFrame = require("./flows/botReplies/note_levels/level_2/level_2_subs/ym1/topics/ym1SpeedFrame");
+const ym1_carding = require("./flows/botReplies/note_levels/level_2/level_2_subs/ym1/topics/ym1Carding");
+const ym1_drawFrame = require("./flows/botReplies/note_levels/level_2/level_2_subs/ym1/topics/ym1Drawframe");
+const ym1_winding = require("./flows/botReplies/note_levels/level_2/level_2_subs/ym1/topics/ym1Winding");
+const ym1_lapFormer = require("./flows/botReplies/note_levels/level_2/level_2_subs/ym1/topics/ym1LapFormer");
+
+
 
 
 
@@ -844,6 +861,7 @@ function handleMessage(sender_psid, received_message) {
     const fme = fme_words;
     const sss1 = sss1_words;
     const sss2 = sss2_words;
+    const ym1 = ym1_words;
   
 
     const bothChem = bothChem_words;
@@ -968,6 +986,11 @@ function handleMessage(sender_psid, received_message) {
     //academic -> sss2
     else if (sss2.some(word => received_message.text.toLowerCase().includes(word))) {
       magicFunc(sender_psid, sss2_flow);
+    }
+
+    //academic -> ym1
+    else if (ym1.some(word => received_message.text.toLowerCase().includes(word))) {
+      magicFunc(sender_psid, ym1_flow);
     }
 
     //academic -> mmtf
@@ -2660,6 +2683,53 @@ let handlePostback = async (sender_psid, received_postback) => {
     else if (payload === 'sss2_ringFrame_flow') {
       magicFunc(sender_psid, sss2_ringFrame);
     }
+
+
+    //ym1
+    else if (payload === 'ym1_flow') {
+      magicFunc(sender_psid, ym1_flow);
+    }
+    else if (payload === 'ym1_intro_flow') {
+      magicFunc(sender_psid, ym1_intro);
+    }
+    else if (payload === 'ym1_indeterminer_flow') {
+      magicFunc(sender_psid, ym1_indeter);
+    }
+    else if (payload === 'ym1_blowroom_flow') {
+      magicFunc(sender_psid, ym1_blowroom);
+    }
+    else if (payload === 'ym1_mixing_blend_flow') {
+      magicFunc(sender_psid, ym1_mixBlend);
+    }
+    else if (payload === 'ym1_fibreProp_flow') {
+      magicFunc(sender_psid, ym1_fibreProp);
+    }
+    else if (payload === 'ym1_yarnCondi_flow') {
+      magicFunc(sender_psid, ym1_yarnCondi);
+    }
+    else if (payload === 'ym1_comber_flow') {
+      magicFunc(sender_psid, ym1_comber);
+    }
+    else if (payload === 'ym1_drawFrame_flow') {
+      magicFunc(sender_psid, ym1_drawFrame);
+    }
+    else if (payload === 'ym1_winding_flow') {
+      magicFunc(sender_psid, ym1_winding);
+    }
+    else if (payload === 'ym1_lapFormer_flow') {
+      magicFunc(sender_psid, ym1_lapFormer);
+    }
+    else if (payload === 'ym1_carding_flow') {
+      magicFunc(sender_psid, ym1_carding);
+    }
+    else if (payload === 'ym1_ringFrame_flow') {
+      magicFunc(sender_psid, ym1_ringFrame);
+    }
+    else if (payload === 'ym1_speedFrame_flow') {
+      magicFunc(sender_psid, ym1_speedFrame);
+    }
+    
+
   
 
     
