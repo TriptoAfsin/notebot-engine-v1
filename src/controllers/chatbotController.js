@@ -133,6 +133,10 @@ const eee_words = require('./keywords/academic_words/subjects/eeeWords');
 const fyt_words = require('./keywords/academic_words/subjects/fytWords');
 //academic -> fme
 const fme_words = require('./keywords/academic_words/subjects/fmeWords');
+//academic -> sss1
+const sss1_words = require('./keywords/academic_words/subjects/sss1Words');
+//academic -> sss2
+const sss2_words = require('./keywords/academic_words/subjects/sss2Words');
 
 
 
@@ -595,6 +599,16 @@ const fme_momentofInnertia = require("./flows/botReplies/note_levels/level_2/lev
 const fme_column = require("./flows/botReplies/note_levels/level_2/level_2_subs/fme/topics/fmeColumn");
 
 
+//sss1
+const sss1_flow = require("./flows/botReplies/note_levels/level_2/level_2_subs/sss1/sss1_flow");
+const sss1_books = require("./flows/botReplies/note_levels/level_2/level_2_subs/sss1/topics/sss1Books");
+const sss1_blowRoom = require("./flows/botReplies/note_levels/level_2/level_2_subs/sss1/topics/sss1BlowRoom");
+const sss1_DrawFrame = require("./flows/botReplies/note_levels/level_2/level_2_subs/sss1/topics/sss1DrawFrame");
+const sss1_Carding = require("./flows/botReplies/note_levels/level_2/level_2_subs/sss1/topics/sss1Carding");
+const sss1_intro = require("./flows/botReplies/note_levels/level_2/level_2_subs/sss1/topics/sss1Intro");
+const sss1_introFib = require("./flows/botReplies/note_levels/level_2/level_2_subs/sss1/topics/sss1IntroFib");
+
+
 
 
 
@@ -823,6 +837,7 @@ function handleMessage(sender_psid, received_message) {
     const fyt = fyt_words;
     const ctca = ctca_words;
     const fme = fme_words;
+    const sss1 = sss1_words;
   
 
     const bothChem = bothChem_words;
@@ -937,6 +952,11 @@ function handleMessage(sender_psid, received_message) {
     //academic -> feee
     else if (feee.some(word => received_message.text.toLowerCase().includes(word))) {
       magicFunc(sender_psid, eee_flow);
+    }
+
+    //academic -> sss1
+    else if (sss1.some(word => received_message.text.toLowerCase().includes(word))) {
+      magicFunc(sender_psid, sss1_flow);
     }
 
     //academic -> mmtf
@@ -2594,6 +2614,29 @@ let handlePostback = async (sender_psid, received_postback) => {
     }
     else if (payload === 'fme_cloumn_flow') {
       magicFunc(sender_psid, fme_column);
+    }
+
+    //sss1
+    else if (payload === 'sss1_flow') {
+      magicFunc(sender_psid, sss1_flow);
+    }
+    else if (payload === 'sss1_books_flow') {
+      magicFunc(sender_psid, sss1_books);
+    }
+    else if (payload === 'sss1_blowRoom_flow') {
+      magicFunc(sender_psid, sss1_blowRoom);
+    }
+    else if (payload === 'sss1_drawFrame_flow') {
+      magicFunc(sender_psid, sss1_DrawFrame);
+    }
+    else if (payload === 'sss1_carding_flow') {
+      magicFunc(sender_psid, sss1_Carding);
+    }
+    else if (payload === 'sss1_intro_flow') {
+      magicFunc(sender_psid, sss1_intro);
+    }
+    else if (payload === 'sss1_introFibre_flow') {
+      magicFunc(sender_psid, sss1_introFib);
     }
   
 
