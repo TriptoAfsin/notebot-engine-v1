@@ -608,6 +608,11 @@ const sss1_Carding = require("./flows/botReplies/note_levels/level_2/level_2_sub
 const sss1_intro = require("./flows/botReplies/note_levels/level_2/level_2_subs/sss1/topics/sss1Intro");
 const sss1_introFib = require("./flows/botReplies/note_levels/level_2/level_2_subs/sss1/topics/sss1IntroFib");
 
+//sss2
+const sss2_flow = require("./flows/botReplies/note_levels/level_2/level_2_subs/sss2/sss2_flow");
+const sss2_notes = require("./flows/botReplies/note_levels/level_2/level_2_subs/sss2/topics/sss2Notes");
+const sss2_ringFrame = require("./flows/botReplies/note_levels/level_2/level_2_subs/sss2/topics/sss2Ringframe");
+
 
 
 
@@ -838,6 +843,7 @@ function handleMessage(sender_psid, received_message) {
     const ctca = ctca_words;
     const fme = fme_words;
     const sss1 = sss1_words;
+    const sss2 = sss2_words;
   
 
     const bothChem = bothChem_words;
@@ -957,6 +963,11 @@ function handleMessage(sender_psid, received_message) {
     //academic -> sss1
     else if (sss1.some(word => received_message.text.toLowerCase().includes(word))) {
       magicFunc(sender_psid, sss1_flow);
+    }
+
+    //academic -> sss2
+    else if (sss2.some(word => received_message.text.toLowerCase().includes(word))) {
+      magicFunc(sender_psid, sss2_flow);
     }
 
     //academic -> mmtf
@@ -2637,6 +2648,17 @@ let handlePostback = async (sender_psid, received_postback) => {
     }
     else if (payload === 'sss1_introFibre_flow') {
       magicFunc(sender_psid, sss1_introFib);
+    }
+
+    //sss2
+    else if (payload === 'sss2_flow') {
+      magicFunc(sender_psid, sss2_flow);
+    }
+    else if (payload === 'sss2_notes_flow') {
+      magicFunc(sender_psid, sss2_notes);
+    }
+    else if (payload === 'sss2_ringFrame_flow') {
+      magicFunc(sender_psid, sss2_ringFrame);
     }
   
 
