@@ -131,6 +131,8 @@ const mmtf_words = require('./keywords/academic_words/subjects/mmtfWords');
 const eee_words = require('./keywords/academic_words/subjects/eeeWords');
 //academic -> fyt
 const fyt_words = require('./keywords/academic_words/subjects/fytWords');
+//academic -> fme
+const fme_words = require('./keywords/academic_words/subjects/fmeWords');
 
 
 
@@ -568,6 +570,31 @@ const ctca_solutions = require("./flows/botReplies/note_levels/level_2/level_2_s
 const ctca_colloid = require("./flows/botReplies/note_levels/level_2/level_2_subs/ctca/topics/ctcaColloid");
 
 
+//fme
+const fme_flow = require("./flows/botReplies/note_levels/level_2/level_2_subs/fme/fme_flow");
+const fme_books = require("./flows/botReplies/note_levels/level_2/level_2_subs/fme/topics/fmeBooks");
+const fme_notes = require("./flows/botReplies/note_levels/level_2/level_2_subs/fme/topics/fmeNotes");
+const fme_ques = require("./flows/botReplies/note_levels/level_2/level_2_subs/fme/topics/fmeQues");
+const fme_sugg = require("./flows/botReplies/note_levels/level_2/level_2_subs/fme/topics/fmeSugg");
+const fme_boiler = require("./flows/botReplies/note_levels/level_2/level_2_subs/fme/topics/fmeBoiler");
+const fme_powerRefre = require("./flows/botReplies/note_levels/level_2/level_2_subs/fme/topics/fmePowerRef");
+const fme_steamTurb = require("./flows/botReplies/note_levels/level_2/level_2_subs/fme/topics/fmeSteamTurb");
+const fme_thermalEng = require("./flows/botReplies/note_levels/level_2/level_2_subs/fme/topics/fmeThermalEng");
+const fme_fluidMecha = require("./flows/botReplies/note_levels/level_2/level_2_subs/fme/topics/fmeFluidMech");
+const fme_energyProc = require("./flows/botReplies/note_levels/level_2/level_2_subs/fme/topics/fmeEnergProc");
+const fme_solid = require("./flows/botReplies/note_levels/level_2/level_2_subs/fme/topics/fmeSolid");
+const fme_gearTrain = require("./flows/botReplies/note_levels/level_2/level_2_subs/fme/topics/fmeGearTrain");
+const fme_pumpCompressor = require("./flows/botReplies/note_levels/level_2/level_2_subs/fme/topics/fmePump");
+const fme_stress = require("./flows/botReplies/note_levels/level_2/level_2_subs/fme/topics/fmeStress");
+const fme_enginePetrol = require("./flows/botReplies/note_levels/level_2/level_2_subs/fme/topics/fmeEnginePetrol");
+const fme_engineCombus = require("./flows/botReplies/note_levels/level_2/level_2_subs/fme/topics/fmeEngineCombus");
+const fme_beam = require("./flows/botReplies/note_levels/level_2/level_2_subs/fme/topics/fmeBeam");
+const fme_belt = require("./flows/botReplies/note_levels/level_2/level_2_subs/fme/topics/fmeBelt");
+const fme_centroid = require("./flows/botReplies/note_levels/level_2/level_2_subs/fme/topics/fmeCentroid");
+const fme_momentofInnertia = require("./flows/botReplies/note_levels/level_2/level_2_subs/fme/topics/fmeMomentInnertia");
+const fme_column = require("./flows/botReplies/note_levels/level_2/level_2_subs/fme/topics/fmeColumn");
+
+
 
 
 
@@ -795,6 +822,7 @@ function handleMessage(sender_psid, received_message) {
     const marketing = marketing_words;
     const fyt = fyt_words;
     const ctca = ctca_words;
+    const fme = fme_words;
   
 
     const bothChem = bothChem_words;
@@ -949,6 +977,11 @@ function handleMessage(sender_psid, received_message) {
     //academic -> iae
     else if (iae.includes(received_message.text.toLowerCase())) {
       magicFunc(sender_psid, iae_flow);
+    }
+
+    //academic -> fme
+    else if (fme.includes(received_message.text.toLowerCase())) {
+      magicFunc(sender_psid, fme_flow);
     }
 
     //academic -> bs
@@ -2494,6 +2527,76 @@ let handlePostback = async (sender_psid, received_postback) => {
     else if (payload === 'ctca_colloid_flow') {
       magicFunc(sender_psid, ctca_colloid);
     }
+
+    //fme
+    else if (payload === 'fme_flow') {
+      magicFunc(sender_psid, fme_flow);
+    }
+    else if (payload === 'fme_books_flow') {
+      magicFunc(sender_psid, fme_books);
+    }
+    else if (payload === 'fme_notes_flow') {
+      magicFunc(sender_psid, fme_notes);
+    }
+    else if (payload === 'fme_ques_flow') {
+      magicFunc(sender_psid, fme_ques);
+    }
+    else if (payload === 'fme_sugg_flow') {
+      magicFunc(sender_psid, fme_sugg);
+    }
+    else if (payload === 'fme_boiler_flow') {
+      magicFunc(sender_psid, fme_boiler);
+    }
+    else if (payload === 'fme_powerRefre_flow') {
+      magicFunc(sender_psid, fme_powerRefre);
+    }
+    else if (payload === 'fme_steam_flow') {
+      magicFunc(sender_psid, fme_steamTurb);
+    }
+    else if (payload === 'fme_thermalEng_flow') {
+      magicFunc(sender_psid, fme_thermalEng);
+    }
+    else if (payload === 'fme_fluidMecha_flow') {
+      magicFunc(sender_psid, fme_fluidMecha);
+    }
+    else if (payload === 'fme_energyProcess_flow') {
+      magicFunc(sender_psid, fme_energyProc);
+    }
+    else if (payload === 'fme_solid_flow') {
+      magicFunc(sender_psid, fme_solid);
+    }
+    else if (payload === 'fme_gearTrain_flow') {
+      magicFunc(sender_psid, fme_gearTrain);
+    }
+    else if (payload === 'fme_pumpCompressor_flow') {
+      magicFunc(sender_psid, fme_pumpCompressor);
+    }
+    else if (payload === 'fme_stressStrain_flow') {
+      magicFunc(sender_psid, fme_stress);
+    }
+    else if (payload === 'fme_enginePetrol_flow') {
+      magicFunc(sender_psid, fme_enginePetrol);
+    }
+    else if (payload === 'fme_engineCombus_flow') {
+      magicFunc(sender_psid, fme_engineCombus);
+    }
+    else if (payload === 'fme_beam_flow') {
+      magicFunc(sender_psid, fme_beam);
+    }
+    else if (payload === 'fme_belt_flow') {
+      magicFunc(sender_psid, fme_belt);
+    }
+    else if (payload === 'fme_centroid_flow') {
+      magicFunc(sender_psid, fme_centroid);
+    }
+    else if (payload === 'fme_momentInnertia_flow') {
+      magicFunc(sender_psid, fme_momentofInnertia);
+    }
+    else if (payload === 'fme_cloumn_flow') {
+      magicFunc(sender_psid, fme_column);
+    }
+  
+
     
 
 
