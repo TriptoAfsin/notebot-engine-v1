@@ -630,6 +630,15 @@ const ym1_drawFrame = require("./flows/botReplies/note_levels/level_2/level_2_su
 const ym1_winding = require("./flows/botReplies/note_levels/level_2/level_2_subs/ym1/topics/ym1Winding");
 const ym1_lapFormer = require("./flows/botReplies/note_levels/level_2/level_2_subs/ym1/topics/ym1LapFormer");
 
+//fdce
+const fdce_flow = require("./flows/botReplies/note_levels/level_2/level_2_subs/fdce/fdce_flow");
+const fdce_DyesPig = require("./flows/botReplies/note_levels/level_2/level_2_subs/fdce/topics/fdceDyesPig");
+const fdce_Chroamto = require("./flows/botReplies/note_levels/level_2/level_2_subs/fdce/topics/fdceChromato");
+const fdce_Polarity = require("./flows/botReplies/note_levels/level_2/level_2_subs/fdce/topics/fdcePolarity");
+const fdce_SepaPuri = require("./flows/botReplies/note_levels/level_2/level_2_subs/fdce/topics/fdceSeparationPuri");
+const fdce_BalanceChem = require("./flows/botReplies/note_levels/level_2/level_2_subs/fdce/topics/fdceBalancingChem");
+const fdce_filtrationMethod = require("./flows/botReplies/note_levels/level_2/level_2_subs/fdce/topics/fdceFiltrationMethod");
+
 
 
 
@@ -862,6 +871,7 @@ function handleMessage(sender_psid, received_message) {
     const sss1 = sss1_words;
     const sss2 = sss2_words;
     const ym1 = ym1_words;
+    const fdce = fdce_words;
   
 
     const bothChem = bothChem_words;
@@ -971,6 +981,11 @@ function handleMessage(sender_psid, received_message) {
     //academic -> bce
     else if (bce.some(word => received_message.text.toLowerCase().includes(word))) {
       magicFunc(sender_psid, bce_flow);
+    }
+
+     //academic -> fdce
+     else if (fdce.some(word => received_message.text.toLowerCase().includes(word))) {
+      magicFunc(sender_psid, fdce_flow);
     }
 
     //academic -> feee
@@ -2727,6 +2742,29 @@ let handlePostback = async (sender_psid, received_postback) => {
     }
     else if (payload === 'ym1_speedFrame_flow') {
       magicFunc(sender_psid, ym1_speedFrame);
+    }
+
+     //fdce
+    else if (payload === 'fdce_flow') {
+      magicFunc(sender_psid, fdce_flow);
+    }
+    else if (payload === 'fdce_dyesPigments_flow') {
+      magicFunc(sender_psid, fdce_DyesPig);
+    }
+    else if (payload === 'fdce_chromatography_flow') {
+      magicFunc(sender_psid, fdce_Chroamto);
+    }
+    else if (payload === 'fdce_polarity_flow') {
+      magicFunc(sender_psid, fdce_Polarity);
+    }
+    else if (payload === 'fdce_sepaPurifi_flow') {
+      magicFunc(sender_psid, fdce_SepaPuri);
+    }
+    else if (payload === 'fdce_balancingChem_flow') {
+      magicFunc(sender_psid, fdce_BalanceChem);
+    }
+    else if (payload === 'fdce_filtration_flow') {
+      magicFunc(sender_psid, fdce_filtrationMethod);
     }
     
 
