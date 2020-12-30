@@ -639,6 +639,25 @@ const fdce_SepaPuri = require("./flows/botReplies/note_levels/level_2/level_2_su
 const fdce_BalanceChem = require("./flows/botReplies/note_levels/level_2/level_2_subs/fdce/topics/fdceBalancingChem");
 const fdce_filtrationMethod = require("./flows/botReplies/note_levels/level_2/level_2_subs/fdce/topics/fdceFiltrationMethod");
 
+//tp
+const tp_flow = require("./flows/botReplies/note_levels/level_2/level_2_subs/tp/tp_flow");
+const tp_books = require("./flows/botReplies/note_levels/level_2/level_2_subs/tp/topics/tpBooks");
+const tp_notes = require("./flows/botReplies/note_levels/level_2/level_2_subs/tp/topics/tpNotes");
+const tp_sugg = require("./flows/botReplies/note_levels/level_2/level_2_subs/tp/topics/tpSugg");
+const tp_questions = require("./flows/botReplies/note_levels/level_2/level_2_subs/tp/topics/tpQues");
+const tp_swelling = require("./flows/botReplies/note_levels/level_2/level_2_subs/tp/topics/tpSwelling");
+const tp_friction = require("./flows/botReplies/note_levels/level_2/level_2_subs/tp/topics/tpFriction");
+const tp_yarnJamming = require("./flows/botReplies/note_levels/level_2/level_2_subs/tp/topics/tpYarnJamming");
+const tp_Optical = require("./flows/botReplies/note_levels/level_2/level_2_subs/tp/topics/tpOptical");
+const tp_fibreMig = require("./flows/botReplies/note_levels/level_2/level_2_subs/tp/topics/tpfibMigration");
+const tp_tehrmalProp = require("./flows/botReplies/note_levels/level_2/level_2_subs/tp/topics/tpThermalProp");
+const tp_fibreDraw = require("./flows/botReplies/note_levels/level_2/level_2_subs/tp/topics/tpFibreDraw");
+const tp_xray = require("./flows/botReplies/note_levels/level_2/level_2_subs/tp/topics/tpXray");
+const tp_yarnStructure = require("./flows/botReplies/note_levels/level_2/level_2_subs/tp/topics/tpYarnStruc");
+const tp_fabricGeometry = require("./flows/botReplies/note_levels/level_2/level_2_subs/tp/topics/tpFabgeometry");
+const tp_tensileProp = require("./flows/botReplies/note_levels/level_2/level_2_subs/tp/topics/tpTensileProp");
+
+
 
 
 
@@ -872,6 +891,7 @@ function handleMessage(sender_psid, received_message) {
     const sss2 = sss2_words;
     const ym1 = ym1_words;
     const fdce = fdce_words;
+    const tp = tp_words;
   
 
     const bothChem = bothChem_words;
@@ -1051,6 +1071,11 @@ function handleMessage(sender_psid, received_message) {
     //academic -> fme
     else if (fme.includes(received_message.text.toLowerCase())) {
       magicFunc(sender_psid, fme_flow);
+    }
+
+    //academic -> tp
+    else if (tp.includes(received_message.text.toLowerCase())) {
+      magicFunc(sender_psid, tp_flow);
     }
 
     //academic -> bs
@@ -2765,6 +2790,57 @@ let handlePostback = async (sender_psid, received_postback) => {
     }
     else if (payload === 'fdce_filtration_flow') {
       magicFunc(sender_psid, fdce_filtrationMethod);
+    }
+
+
+     //tp
+    else if (payload === 'tp_flow') {
+      magicFunc(sender_psid, tp_flow);
+    }
+    else if (payload === 'tp_books_flow') {
+      magicFunc(sender_psid, tp_books);
+    }
+    else if (payload === 'tp_notes_flow') {
+      magicFunc(sender_psid, tp_notes);
+    }
+    else if (payload === 'tp_sugg_flow') {
+      magicFunc(sender_psid, tp_sugg);
+    }
+    else if (payload === 'tp_ques_flow') {
+      magicFunc(sender_psid, tp_questions);
+    }
+    else if (payload === 'tp_swelling_flow') {
+      magicFunc(sender_psid, tp_swelling);
+    }
+    else if (payload === 'tp_friction_flow') {
+      magicFunc(sender_psid, tp_friction);
+    }
+    else if (payload === 'tp_yarnJamming_flow') {
+      magicFunc(sender_psid, tp_yarnJamming);
+    }
+    else if (payload === 'tp_optical_flow') {
+      magicFunc(sender_psid, tp_Optical);
+    }
+    else if (payload === 'tp_fibreMig_flow') {
+      magicFunc(sender_psid, tp_fibreMig);
+    }
+    else if (payload === 'tp_thermalProp_flow') {
+      magicFunc(sender_psid, tp_tehrmalProp);
+    }
+    else if (payload === 'tp_fibredraw_flow') {
+      magicFunc(sender_psid, tp_fibreDraw);
+    }
+    else if (payload === 'tp_x_ray_flow') {
+      magicFunc(sender_psid, tp_xray);
+    }
+    else if (payload === 'tp_yarnStructure_flow') {
+      magicFunc(sender_psid, tp_yarnStructure);
+    }
+    else if (payload === 'tp_fabgemometry_flow') {
+      magicFunc(sender_psid, tp_fabricGeometry);
+    }
+    else if (payload === 'tp_tensile_flow') {
+      magicFunc(sender_psid, tp_tensileProp);
     }
     
 
