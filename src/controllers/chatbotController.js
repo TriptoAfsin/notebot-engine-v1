@@ -947,7 +947,7 @@ function handleMessage(sender_psid, received_message) {
     
     
     // Check if the message
-    if (greets.some(word => received_message.text.toLowerCase().includes(word))) {
+    if (wordIncludes(greets, received_message)) {
       // Create the payload for a basic text message
       response = greetReplies[0];
 
@@ -956,9 +956,9 @@ function handleMessage(sender_psid, received_message) {
 
 
 
-    else if (positive.some(word => received_message.text.toLowerCase().includes(word))) {
+    else if (wordIncludes(positive, received_message)) {
       response = {
-        "text": `${loveReply[Math.floor(Math.random() * loveReply.length)]}`
+        "text": `${randomPicker(loveReply)}`
       }
 
       callSendAPI(sender_psid, response);  
@@ -986,10 +986,10 @@ function handleMessage(sender_psid, received_message) {
     */
 
 
-    else if (negative.some(word => received_message.text.toLowerCase().includes(word))) {
+    else if (wordIncludes(negative, received_message)) {
       // Create the payload for a basic text message
       response = {
-        "text": `${sadReply[Math.floor(Math.random() * sadReply.length)]}`
+        "text": `${randomPicker(sadReply)}`
       }
 
       callSendAPI(sender_psid, response);  
