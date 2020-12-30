@@ -137,6 +137,8 @@ const fme_words = require('./keywords/academic_words/subjects/fmeWords');
 const sss1_words = require('./keywords/academic_words/subjects/sss1Words');
 //academic -> sss2
 const sss2_words = require('./keywords/academic_words/subjects/sss2Words');
+//academic -> weavPrepWords
+const weavPrep_words = require('./keywords/academic_words/subjects/weavPrepWords');
 
 
 
@@ -670,6 +672,11 @@ const wpp_desizing = require("./flows/botReplies/note_levels/level_2/level_2_sub
 const fd2_flow = require("./flows/botReplies/note_levels/level_2/level_2_subs/fd2/fd2_flow");
 
 
+//weav_prep
+const weavPrep_flow = require("./flows/botReplies/note_levels/level_2/level_2_subs/weaving_prep/weaving_prep_flow");
+const weavPrep_books = require("./flows/botReplies/note_levels/level_2/level_2_subs/weaving_prep/topics/weavBooks")
+
+
 
 
 
@@ -905,6 +912,7 @@ function handleMessage(sender_psid, received_message) {
     const tp = tp_words;
     const wpp = wpp_words;
     const fd2 = fd2_words;
+    const weavPrep = weavPrep_words;
   
 
     const bothChem = bothChem_words;
@@ -1019,6 +1027,11 @@ function handleMessage(sender_psid, received_message) {
      //academic -> fd2
      else if (fd2.some(word => received_message.text.toLowerCase().includes(word))) {
       magicFunc(sender_psid, fd2_flow);
+    }
+
+    //academic -> weaving prep
+    else if (weavPrep.some(word => received_message.text.toLowerCase().includes(word))) {
+      magicFunc(sender_psid, weavPrep_flow);
     }
 
     //academic -> wpp
@@ -2887,6 +2900,15 @@ let handlePostback = async (sender_psid, received_postback) => {
        //fd2
        else if (payload === 'fd2_flow') {
         magicFunc(sender_psid, fd2_flow);
+      }
+
+
+       //weav prep
+       else if (payload === 'weav_prep_flow') {
+        magicFunc(sender_psid, weavPrep_flow);
+      }
+      else if (payload === 'weav_books_flow') {
+        magicFunc(sender_psid, weavPrep_books);
       }
     
 
