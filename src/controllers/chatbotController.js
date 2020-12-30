@@ -964,7 +964,7 @@ function handleMessage(sender_psid, received_message) {
       callSendAPI(sender_psid, response);  
     }
 
-    else if (toss.some(word => received_message.text.toLowerCase().includes(word))) {
+    else if (wordIncludes(toss, received_message)) {
       response = {
         "text": `${tossReplies[Math.floor(Math.random() * tossReplies.length)]}`
       }
@@ -2990,6 +2990,24 @@ let magicFunc = (sender_psid ,flow) => {
     callSendAPI(sender_psid, response);
   }
 }
+
+//wordDetectorFunctions
+//word includes
+let wordIncludes = (keywordArray, received_message) => {
+  return keywordArray.some(word => received_message.text.toLowerCase().includes(word));
+}
+
+//word is
+let wordIs = (keywordArray, received_message) => {
+  return keywordArray.includes(received_message.text.toLowerCase());
+}
+
+//randomPicker Function
+let randomPicker = (replyArray) => {
+  return replyArray[Math.floor(Math.random() * replyArray.length)];
+}
+
+
 
 
 
