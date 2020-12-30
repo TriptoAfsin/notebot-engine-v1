@@ -161,6 +161,10 @@ const getStartedMsg = require('./flows/botReplies/welcome/getStarted');
 const testReply = require('./keywords/replies/testReply');
 
 
+//toss
+const tossWords = require('./keywords/tossWords');
+const tossReplies = require('./keywords/replies/tossReply');
+
 //reply words
 const loveMojiReplies = require('./keywords/replies/lovemojiReply');
 const sadStuffReply = require('./keywords/replies/sadReplies');
@@ -913,6 +917,7 @@ function handleMessage(sender_psid, received_message) {
     const wpp = wpp_words;
     const fd2 = fd2_words;
     const weavPrep = weavPrep_words;
+
   
 
     const bothChem = bothChem_words;
@@ -933,6 +938,7 @@ function handleMessage(sender_psid, received_message) {
     const sadReply = sadStuffReply;
     const positive = positiveKeywords;
     const negative = negativeKeywords;
+    const toss = tossWords;
 
     const getStartedWords = ["Get Started", "get satrted", "Get started", "get Started"];
 
@@ -951,7 +957,6 @@ function handleMessage(sender_psid, received_message) {
 
 
     else if (positive.some(word => received_message.text.toLowerCase().includes(word))) {
-      // Create the payload for a basic text message
       response = {
         "text": `${loveReply[Math.floor(Math.random() * loveReply.length)]}`
       }
@@ -959,8 +964,15 @@ function handleMessage(sender_psid, received_message) {
       callSendAPI(sender_psid, response);  
     }
 
+    else if (toss.some(word => received_message.text.toLowerCase().includes(word))) {
+      response = {
+        "text": `${tossReplies[Math.floor(Math.random() * tossReplies.length)]}`
+      }
+
+      callSendAPI(sender_psid, response);  
+    }
+
     else if (getStartedWords.some(word => received_message.text.toLowerCase().includes(word))) {
-      // Create the payload for a basic text message
       response = getStartedMsg[0];
 
       callSendAPI(sender_psid, response);  
