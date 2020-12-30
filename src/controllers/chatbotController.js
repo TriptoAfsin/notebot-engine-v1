@@ -1037,228 +1037,223 @@ function handleMessage(sender_psid, received_message) {
     }
 
      //academic -> fd2
-     else if (fd2.some(word => received_message.text.toLowerCase().includes(word))) {
+     else if (wordIncludes(fd2, received_message)) {
       magicFunc(sender_psid, fd2_flow);
     }
 
     //academic -> weaving prep
-    else if (weavPrep.some(word => received_message.text.toLowerCase().includes(word))) {
+    else if (wordIncludes(weavPrep, received_message)) {
       magicFunc(sender_psid, weavPrep_flow);
     }
 
     //academic -> wpp
-    else if (wpp.some(word => received_message.text.toLowerCase().includes(word))) {
+    else if (wordIncludes(wpp, received_message)) {
       magicFunc(sender_psid, wpp_flow);
     }
 
      //academic -> fdce
-     else if (fdce.some(word => received_message.text.toLowerCase().includes(word))) {
+     else if (wordIncludes(fdce, received_message)) {
       magicFunc(sender_psid, fdce_flow);
     }
 
     //academic -> feee
-    else if (feee.some(word => received_message.text.toLowerCase().includes(word))) {
+    else if (wordIncludes(feee, received_message)) {
       magicFunc(sender_psid, eee_flow);
     }
 
     //academic -> sss1
-    else if (sss1.some(word => received_message.text.toLowerCase().includes(word))) {
+    else if (wordIncludes(sss1, received_message)) {
       magicFunc(sender_psid, sss1_flow);
     }
 
     //academic -> sss2
-    else if (sss2.some(word => received_message.text.toLowerCase().includes(word))) {
+    else if (wordIncludes(sss2, received_message)) {
       magicFunc(sender_psid, sss2_flow);
     }
 
     //academic -> ym1
-    else if (ym1.some(word => received_message.text.toLowerCase().includes(word))) {
+    else if (wordIncludes(ym1, received_message)) {
       magicFunc(sender_psid, ym1_flow);
     }
 
     //academic -> mmtf
-    else if (mmtf.some(word => received_message.text.toLowerCase().includes(word))) {
+    else if (wordIncludes(mmtf, received_message)) {
       magicFunc(sender_psid, mmtf_flow);
     }
 
     //academic -> ctca
-    else if (ctca.some(word => received_message.text.toLowerCase().includes(word))) {
+    else if (wordIncludes(ctca, received_message)) {
       magicFunc(sender_psid, ctca_flow);
     }
 
      //academic -> am1
-     else if (am1.some(word => received_message.text.toLowerCase().includes(word))) {
+     else if (wordIncludes(am1, received_message)) {
       magicFunc(sender_psid, am1_flow);
     }
 
     //academic -> stat
-    else if (stat.some(word => received_message.text.toLowerCase().includes(word))) {
+    else if (wordIncludes(stat, received_message)) {
       magicFunc(sender_psid, stat_flow);
     }
 
     //academic -> fyt
-    else if (fyt.some(word => received_message.text.toLowerCase().includes(word))) {
+    else if (wordIncludes(fyt, received_message)) {
       magicFunc(sender_psid, fyt_flow);
     }
 
     //academic -> ttqc
-    else if (ttqc.some(word => received_message.text.toLowerCase().includes(word))) {
+    else if (wordIncludes(ttqc, received_message)) {
       magicFunc(sender_psid, ttqc_flow);
     }
 
     //academic -> marketing
-    else if (marketing.some(word => received_message.text.toLowerCase().includes(word))) {
+    else if (wordIncludes(marketing, received_message)) {
       magicFunc(sender_psid, marketing_flow);
     }
 
     //academic -> iae
-    else if (iae.includes(received_message.text.toLowerCase())) {
+    else if (wordIs(iae, received_message)) {
       magicFunc(sender_psid, iae_flow);
     }
 
     //academic -> fme
-    else if (fme.includes(received_message.text.toLowerCase())) {
+    else if (wordIs(fme, received_message)) {
       magicFunc(sender_psid, fme_flow);
     }
 
     //academic -> tp
-    else if (tp.includes(received_message.text.toLowerCase())) {
+    else if (wordIs(tp, received_message)) {
       magicFunc(sender_psid, tp_flow);
     }
 
     //academic -> bs
-    else if (bs.includes(received_message.text.toLowerCase())) {
+    else if (wordIs(bs, received_message)) {
       magicFunc(sender_psid, bs_flow);
     }
 
     //academic -> bil
-    else if (bil.includes(received_message.text.toLowerCase())) {
+    else if (wordIs(bil, received_message)) {
       magicFunc(sender_psid, bil_flow);
     }
      //academic -> fm1
-     else if (fm1.includes(received_message.text.toLowerCase())) {
+     else if (wordIncludes(fm1, received_message)) {
       magicFunc(sender_psid, fm1_flow);
     }
 
      //academic -> epd
-     else if (epd.includes(received_message.text.toLowerCase())) {
-      magicFunc(sender_psid, epd_flow);
-    }
-
-     //academic -> ppc
-     else if (epd.includes(received_message.text.toLowerCase())) {
+     else if (wordIs(epd, received_message)) {
       magicFunc(sender_psid, epd_flow);
     }
 
     //academic -> ppc
-    else if (ppc.includes(received_message.text.toLowerCase())) {
+    else if (wordIncludes(ppc, received_message)) {
       magicFunc(sender_psid, ppc_flow);
     }
 
      //academic -> tam
-     else if (tam.includes(received_message.text.toLowerCase())) {
+     else if (wordIs(tam, received_message)) {
       magicFunc(sender_psid, tam_flow);
     }
 
      //academic -> hrm
-     else if (hrm.includes(received_message.text.toLowerCase())) {
+     else if (wordIs(hrm, received_message)) {
       magicFunc(sender_psid, hrm_flow);
     }
 
     //academic -> ir
-    else if (ir.includes(received_message.text.toLowerCase())) {
+    else if (wordIs(ir, received_message)) {
       magicFunc(sender_psid, ir_flow);
     }
 
     //academic -> iee
-    else if (iee.includes(received_message.text.toLowerCase())) {
+    else if (wordIs(iee, received_message)) {
       magicFunc(sender_psid, iee_flow);
     }
 
     //academic -> cp
-    else if (cp.includes(received_message.text.toLowerCase())) {
+    else if (wordIs(cp, received_message)) {
       magicFunc(sender_psid, cp_flow);
     }
 
      //academic -> bfs
-    else if (bfs.includes(received_message.text.toLowerCase())) {
+    else if (wordIs(bfs, received_message)) {
       magicFunc(sender_psid, bfs_flow);
     }
 
      //academic -> fmg
-     else if (fmg.includes(received_message.text.toLowerCase())) {
+     else if (wordIncludes(fmg, received_message)) {
       magicFunc(sender_psid, fmg_flow);
     }
 
     //academic -> tmm
-    else if (tmm.includes(received_message.text.toLowerCase())) {
+    else if (wordIncludes(tmm, received_message)) {
       magicFunc(sender_psid, tmm_flow);
     }
 
      //academic -> tpm
-     else if (tpm.includes(received_message.text.toLowerCase())) {
+     else if (wordIncludes(tpm, received_message)) {
       magicFunc(sender_psid, tpm_flow);
     }
 
      //academic -> chem1
-     else if (chem1.includes(received_message.text.toLowerCase())) {
+     else if (wordIncludes(chem1, received_message)) {
       magicFunc(sender_psid, chem1_flow);
     }
 
     //academic -> chem2
-    else if (chem2.includes(received_message.text.toLowerCase())) {
+    else if (wordIncludes(chem2, received_message)) {
       magicFunc(sender_psid, chem2_flow);
     }
 
      //academic -> phy1
-     else if (phy1.includes(received_message.text.toLowerCase())) {
+     else if (wordIncludes(phy1, received_message)) {
       magicFunc(sender_psid, phy1_flow);
     }
 
     //academic -> phy2
-    else if (phy2.includes(received_message.text.toLowerCase())) {
+    else if (wordIncludes(phy2, received_message)) {
       magicFunc(sender_psid, phy2_flow);
     }
 
     //academic -> math1
-    else if (math1.includes(received_message.text.toLowerCase())) {
+    else if (wordIncludes(math1, received_message)) {
       magicFunc(sender_psid, math1_flow);
     }
 
     //academic -> ntf
-    else if (ntf.includes(received_message.text.toLowerCase())) {
+    else if (wordIncludes(ntf, received_message)) {
       magicFunc(sender_psid, ntf_flow);
     }
 
     //academic -> em
-    else if (em.includes(received_message.text.toLowerCase())) {
+    else if (wordIs(em, received_message)) {
       magicFunc(sender_psid, em_flow);
     }
 
     //academic -> pse
-    else if (pse.includes(received_message.text.toLowerCase())) {
+    else if (wordIncludes(pse, received_message)) {
       magicFunc(sender_psid, pse_flow);
     }
 
 
-    else if (lab_report.includes(received_message.text.toLowerCase())) {
+    else if (wordIncludes(lab_report, received_message)) {
       magicFunc(sender_psid, labFlow);
     }
 
-    else if (result.some(word => received_message.text.toLowerCase().includes(word))) {
+    else if (wordIncludes(result, received_message)) {
       magicFunc(sender_psid, resultFlow);
     }
 
-    else if (routine.some(word => received_message.text.toLowerCase().includes(word))) {
+    else if (wordIncludes(routine, received_message)) {
       magicFunc(sender_psid, routineFlow);
     }
 
-    else if (syllabus.some(word => received_message.text.toLowerCase().includes(word))) {
+    else if (wordIncludes(syllabus, received_message)) {
       magicFunc(sender_psid, syllabusFlow);
     }
 
     //academic -> math2
-    else if (math2.includes(received_message.text.toLowerCase())) {
+    else if (wordIncludes(math2, received_message)) {
       magicFunc(sender_psid, math2_flow);
     }
 
@@ -1268,10 +1263,10 @@ function handleMessage(sender_psid, received_message) {
 
 
     //emoji
-    else if (loveMoji.some(word => received_message.text.includes(word))) {
+    else if (wordIncludes(loveMoji, received_message)) {
       // Create the payload for a basic text message
       response = {
-        "text": `${loveReply[Math.floor(Math.random() * loveReply.length)]}`
+        "text": `${randomPicker(loveReply)}`
       }
       callSendAPI(sender_psid, response);  
     }
