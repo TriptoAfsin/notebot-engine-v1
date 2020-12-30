@@ -666,6 +666,10 @@ const wpp_singeing = require("./flows/botReplies/note_levels/level_2/level_2_sub
 const wpp_desizing = require("./flows/botReplies/note_levels/level_2/level_2_subs/wpp/topics/wppDesizing");
 
 
+//fd2
+const fd2_flow = require("./flows/botReplies/note_levels/level_2/level_2_subs/fd2/fd2_flow");
+
+
 
 
 
@@ -899,7 +903,8 @@ function handleMessage(sender_psid, received_message) {
     const ym1 = ym1_words;
     const fdce = fdce_words;
     const tp = tp_words;
-    const wpp = wpp_words;;
+    const wpp = wpp_words;
+    const fd2 = fd2_words;
   
 
     const bothChem = bothChem_words;
@@ -1011,7 +1016,12 @@ function handleMessage(sender_psid, received_message) {
       magicFunc(sender_psid, bce_flow);
     }
 
-    //academic -> bce
+     //academic -> fd2
+     else if (fd2.some(word => received_message.text.toLowerCase().includes(word))) {
+      magicFunc(sender_psid, fd2_flow);
+    }
+
+    //academic -> wpp
     else if (wpp.some(word => received_message.text.toLowerCase().includes(word))) {
       magicFunc(sender_psid, wpp_flow);
     }
@@ -2872,6 +2882,11 @@ let handlePostback = async (sender_psid, received_postback) => {
       }
       else if (payload === 'wpp_desizing_flow') {
         magicFunc(sender_psid, wpp_desizing);
+      }
+
+       //fd2
+       else if (payload === 'fd2_flow') {
+        magicFunc(sender_psid, fd2_flow);
       }
     
 
