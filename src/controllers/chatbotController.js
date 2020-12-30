@@ -658,6 +658,13 @@ const tp_fabricGeometry = require("./flows/botReplies/note_levels/level_2/level_
 const tp_tensileProp = require("./flows/botReplies/note_levels/level_2/level_2_subs/tp/topics/tpTensileProp");
 
 
+//wpp
+const wpp_flow = require("./flows/botReplies/note_levels/level_2/level_2_subs/wpp/wpp_flow");
+const wpp_ques = require("./flows/botReplies/note_levels/level_2/level_2_subs/wpp/topics/wppQues");
+const wpp_pretreatment = require("./flows/botReplies/note_levels/level_2/level_2_subs/wpp/topics/wppPretreatment");
+const wpp_singeing = require("./flows/botReplies/note_levels/level_2/level_2_subs/wpp/topics/wppSingeing");
+const wpp_desizing = require("./flows/botReplies/note_levels/level_2/level_2_subs/wpp/topics/wppDesizing");
+
 
 
 
@@ -892,6 +899,7 @@ function handleMessage(sender_psid, received_message) {
     const ym1 = ym1_words;
     const fdce = fdce_words;
     const tp = tp_words;
+    const wpp = wpp_words;;
   
 
     const bothChem = bothChem_words;
@@ -1001,6 +1009,11 @@ function handleMessage(sender_psid, received_message) {
     //academic -> bce
     else if (bce.some(word => received_message.text.toLowerCase().includes(word))) {
       magicFunc(sender_psid, bce_flow);
+    }
+
+    //academic -> bce
+    else if (wpp.some(word => received_message.text.toLowerCase().includes(word))) {
+      magicFunc(sender_psid, wpp_flow);
     }
 
      //academic -> fdce
@@ -2842,6 +2855,24 @@ let handlePostback = async (sender_psid, received_postback) => {
     else if (payload === 'tp_tensile_flow') {
       magicFunc(sender_psid, tp_tensileProp);
     }
+
+
+      //wpp
+      else if (payload === 'wpp_flow') {
+        magicFunc(sender_psid, wpp_flow);
+      }
+      else if (payload === 'wpp_quess_flow') {
+        magicFunc(sender_psid, wpp_ques);
+      }
+      else if (payload === 'wpp_pretreatment_flow') {
+        magicFunc(sender_psid, wpp_pretreatment);
+      }
+      else if (payload === 'wpp_singeing_flow') {
+        magicFunc(sender_psid, wpp_singeing);
+      }
+      else if (payload === 'wpp_desizing_flow') {
+        magicFunc(sender_psid, wpp_desizing);
+      }
     
 
   
