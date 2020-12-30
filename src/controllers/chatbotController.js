@@ -972,7 +972,7 @@ function handleMessage(sender_psid, received_message) {
       callSendAPI(sender_psid, response);  
     }
 
-    else if (getStartedWords.some(word => received_message.text.toLowerCase().includes(word))) {
+    else if (wordIncludes(getStartedWords, received_message)) {
       response = getStartedMsg[0];
 
       callSendAPI(sender_psid, response);  
@@ -997,11 +997,11 @@ function handleMessage(sender_psid, received_message) {
 
 
     //academic
-    else if (notes.some(word => received_message.text.toLowerCase().includes(word))) {
+    else if (wordIncludes(notes, received_message)) {
       magicFunc(sender_psid, notesFlow);
     }
 
-    else if (quiz.some(word => received_message.text.toLowerCase().includes(word))) { 
+    else if (wordIncludes(quiz, received_message)) { 
       magicFunc(sender_psid, quizFlow);
     }
 
