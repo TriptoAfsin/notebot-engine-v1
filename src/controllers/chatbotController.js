@@ -966,7 +966,7 @@ function handleMessage(sender_psid, received_message) {
 
     else if (wordIncludes(toss, received_message)) {
       response = {
-        "text": `${tossReplies[Math.floor(Math.random() * tossReplies.length)]}`
+        "text": `${randomPicker(tossReplies)}`
       }
 
       callSendAPI(sender_psid, response);  
