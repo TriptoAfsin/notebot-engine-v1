@@ -1005,34 +1005,34 @@ function handleMessage(sender_psid, received_message) {
       magicFunc(sender_psid, quizFlow);
     }
 
-    else if (level1.some(word => received_message.text.toLowerCase().includes(word))) {
+    else if (wordIncludes(level1, received_message)) {
       magicFunc(sender_psid, level_1_notes);
     }
 
-    else if (level2.some(word => received_message.text.toLowerCase().includes(word))) {
+    else if (wordIncludes(level2, received_message)) {
       magicFunc(sender_psid, level_2_notes);
     }
 
-    else if (level3.some(word => received_message.text.toLowerCase().includes(word))) {
+    else if (wordIncludes(level3, received_message)) {
       magicFunc(sender_psid, level_3_notes);
     }
 
-    else if (level4.some(word => received_message.text.toLowerCase().includes(word))) {
+    else if (wordIncludes(level4, received_message)) {
       magicFunc(sender_psid, level_4_notes);
     }
 
-    else if (bothChem.includes(received_message.text.toLowerCase())) {
+    else if (wordIs(bothChem, received_message)) {
       magicFunc(sender_psid, bothChem_flow);
     }
-    else if (bothPhy.includes(received_message.text.toLowerCase())) {
+    else if (wordIs(bothPhy, received_message)) {
       magicFunc(sender_psid, bothPhy_flow);
     }
-    else if (bothMath.includes(received_message.text.toLowerCase())) {
+    else if (wordIs(bothMath, received_message)) {
       magicFunc(sender_psid, bothMath_flow);
     }
 
     //academic -> bce
-    else if (bce.some(word => received_message.text.toLowerCase().includes(word))) {
+    else if (wordIncludes(bce, received_message)) {
       magicFunc(sender_psid, bce_flow);
     }
 
