@@ -694,6 +694,61 @@ const ap1_markerMaking = require("./flows/botReplies/note_levels/level_2/level_2
 const ap1_sewingThread = require("./flows/botReplies/note_levels/level_2/level_2_subs/ap1/topics/ap1SewingTherad");
 
 
+//wp1
+const wp1_flow = require("./flows/botReplies/note_levels/level_2/level_2_subs/wp1/wp1_flow");
+const wp1_books = require("./flows/botReplies/note_levels/level_2/level_2_subs/wp1/topics/wp1Books");
+const wp1_notes = require("./flows/botReplies/note_levels/level_2/level_2_subs/wp1/topics/wp1Notes");
+const wp1_ques = require("./flows/botReplies/note_levels/level_2/level_2_subs/wp1/topics/wp1Questions");
+const wp1_introWP = require("./flows/botReplies/note_levels/level_2/level_2_subs/wp1/topics/wp1Intro");
+const wp1_water = require("./flows/botReplies/note_levels/level_2/level_2_subs/wp1/topics/wp1Water");
+const wp1_introDye = require("./flows/botReplies/note_levels/level_2/level_2_subs/wp1/topics/wp1IntroDye");
+const wp1_generalConcepts = require("./flows/botReplies/note_levels/level_2/level_2_subs/wp1/topics/wp1GeneralConcepts");
+const wp1_colorFastness = require("./flows/botReplies/note_levels/level_2/level_2_subs/wp1/topics/wp1ColorFastness");
+const wp1_stripping = require("./flows/botReplies/note_levels/level_2/level_2_subs/wp1/topics/wp1Stripping");
+const wp1_singeing = require("./flows/botReplies/note_levels/level_2/level_2_subs/wp1/topics/wp1Singeing");
+const wp1_scouring = require("./flows/botReplies/note_levels/level_2/level_2_subs/wp1/topics/wp1Scouring");
+const wp1_pigment = require("./flows/botReplies/note_levels/level_2/level_2_subs/wp1/topics/wp1Pigment");
+const wp1_TexFinish = require("./flows/botReplies/note_levels/level_2/level_2_subs/wp1/topics/wp1TexFinishing");
+const wp1_vatDyes = require("./flows/botReplies/note_levels/level_2/level_2_subs/wp1/topics/wp1VatDye");
+const wp1_desizing = require("./flows/botReplies/note_levels/level_2/level_2_subs/wp1/topics/wp1Desizing");
+const wp1_basicDye = require("./flows/botReplies/note_levels/level_2/level_2_subs/wp1/topics/wp1BasicDye");
+const wp1_acidDye = require("./flows/botReplies/note_levels/level_2/level_2_subs/wp1/topics/wp1AcidDye");
+const wp1_bleaching = require("./flows/botReplies/note_levels/level_2/level_2_subs/wp1/topics/wp1Bleaching");
+const wp1_disperse = require("./flows/botReplies/note_levels/level_2/level_2_subs/wp1/topics/wp1DisperseDye");
+const wp1_kierBoiler = require("./flows/botReplies/note_levels/level_2/level_2_subs/wp1/topics/wp1KierBoiler");
+const wp1_dyeingFault = require("./flows/botReplies/note_levels/level_2/level_2_subs/wp1/topics/wp1DyeingFault");
+const wp1_reactiveDye = require("./flows/botReplies/note_levels/level_2/level_2_subs/wp1/topics/wp1ReactiveDye");
+const wp1_directDye = require("./flows/botReplies/note_levels/level_2/level_2_subs/wp1/topics/wp1DirectDye");
+const wp1_jiggerMachine = require("./flows/botReplies/note_levels/level_2/level_2_subs/wp1/topics/wp1JiggerMachine");
+const wp1_colorTest = require("./flows/botReplies/note_levels/level_2/level_2_subs/wp1/topics/wp1ColorTest");
+const wp1_folding = require("./flows/botReplies/note_levels/level_2/level_2_subs/wp1/topics/wp1FoldingTest");
+const wp1_washingMc = require("./flows/botReplies/note_levels/level_2/level_2_subs/wp1/topics/wp1WashingMachine");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -934,6 +989,7 @@ function handleMessage(sender_psid, received_message) {
     const fd2 = fd2_words;
     const weavPrep = weavPrep_words;
     const ap1 = ap1_words;
+    const wp1 = wp1_words;
 
   
 
@@ -1081,6 +1137,11 @@ function handleMessage(sender_psid, received_message) {
     //academic -> feee
     else if (wordIncludes(feee, received_message)) {
       magicFunc(sender_psid, eee_flow);
+    }
+
+    //academic -> WP1
+    else if (wordIncludes(wp1, received_message)) {
+      magicFunc(sender_psid, wp1_flow);
     }
 
     //academic -> sss1
@@ -2974,6 +3035,93 @@ let handlePostback = async (sender_psid, received_postback) => {
       else if (payload === 'ap1_sewingTherad_flow') {
         magicFunc(sender_psid, ap1_sewingThread);
       }
+
+
+        //wp1
+        else if (payload === 'wp1_flow') {
+          magicFunc(sender_psid, wp1_flow);
+        }
+        else if (payload === 'wp1_books_flow') {
+          magicFunc(sender_psid, wp1_books);
+        }
+        else if (payload === 'wp1_notes_flow') {
+          magicFunc(sender_psid, wp1_notes);
+        }
+        else if (payload === 'wp1_ques_flow') {
+          magicFunc(sender_psid, wp1_ques);
+        }
+        else if (payload === 'wp1_intro_flow') {
+          magicFunc(sender_psid, wp1_introWP);
+        }
+        else if (payload === 'wp1_water_flow') {
+          magicFunc(sender_psid, wp1_water);
+        }
+        else if (payload === 'wp1_introDye_flow') {
+          magicFunc(sender_psid, wp1_introDye);
+        }
+        else if (payload === 'wp1_generalConcepts_flow') {
+          magicFunc(sender_psid, wp1_generalConcepts);
+        }
+        else if (payload === 'wp1_colorFastness_flow') {
+          magicFunc(sender_psid, wp1_colorFastness);
+        }
+        else if (payload === 'wp1_stripping_flow') {
+          magicFunc(sender_psid, wp1_stripping);
+        }
+        else if (payload === 'wp1_singeing_flow') {
+          magicFunc(sender_psid, wp1_singeing);
+        }
+        else if (payload === 'wp1_scouring_flow') {
+          magicFunc(sender_psid, wp1_scouring);
+        }
+        else if (payload === 'wp1_pigment_flow') {
+          magicFunc(sender_psid, wp1_pigment);
+        }
+        else if (payload === 'wp1_textileFinishing_flow') {
+          magicFunc(sender_psid, wp1_TexFinish);
+        }
+        else if (payload === 'wp1_vatDyes_flow') {
+          magicFunc(sender_psid, wp1_vatDyes);
+        }
+        else if (payload === 'wp1_desizing_flow') {
+          magicFunc(sender_psid, wp1_desizing);
+        }
+        else if (payload === 'wp1_basicDye_flow') {
+          magicFunc(sender_psid, wp1_basicDye);
+        }
+        else if (payload === 'wp1_acidDye_flow') {
+          magicFunc(sender_psid, wp1_acidDye);
+        }
+        else if (payload === 'wp1_bleaching_flow') {
+          magicFunc(sender_psid, wp1_bleaching);
+        }
+        else if (payload === 'wp1_disperseDye_flow') {
+          magicFunc(sender_psid, wp1_disperse);
+        }
+        else if (payload === 'wp1_kierBoiler_flow') {
+          magicFunc(sender_psid, wp1_kierBoiler);
+        }
+        else if (payload === 'wp1_dyeingFault_flow') {
+          magicFunc(sender_psid, wp1_dyeingFault);
+        }
+        else if (payload === 'wp1_reactiveDye_flow') {
+          magicFunc(sender_psid, wp1_reactiveDye);
+        }
+        else if (payload === 'wp1_directDye_flow') {
+          magicFunc(sender_psid, wp1_directDye);
+        }
+        else if (payload === 'wp1_jiggerMachine_flow') {
+          magicFunc(sender_psid, wp1_jiggerMachine);
+        }
+        else if (payload === 'wp1_colorTest_flow') {
+          magicFunc(sender_psid, wp1_colorTest);
+        }
+        else if (payload === 'wp1_foldingTest_flow') {
+          magicFunc(sender_psid, wp1_folding);
+        }
+        else if (payload === 'wp1_washingMachine_flow') {
+          magicFunc(sender_psid, wp1_washingMc);
+        }
     
 
   
