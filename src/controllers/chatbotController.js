@@ -725,6 +725,23 @@ const wp1_folding = require("./flows/botReplies/note_levels/level_2/level_2_subs
 const wp1_washingMc = require("./flows/botReplies/note_levels/level_2/level_2_subs/wp1/topics/wp1WashingMachine");
 
 
+//mp
+const mp_flow = require("./flows/botReplies/note_levels/level_2/level_2_subs/mp/mp_flow");
+const mp_defects = require("./flows/botReplies/note_levels/level_2/level_2_subs/mp/topics/mpDefects");
+const mp_lathe = require("./flows/botReplies/note_levels/level_2/level_2_subs/mp/topics/mpLathe");
+const mp_milling = require("./flows/botReplies/note_levels/level_2/level_2_subs/mp/topics/mpMilling");
+const mp_welding = require("./flows/botReplies/note_levels/level_2/level_2_subs/mp/topics/mpWelding");
+const mp_hotCold = require("./flows/botReplies/note_levels/level_2/level_2_subs/mp/topics/mphotCold");
+const mp_ceramics = require("./flows/botReplies/note_levels/level_2/level_2_subs/mp/topics/mpCeramics");
+const mp_plastic = require("./flows/botReplies/note_levels/level_2/level_2_subs/mp/topics/mpPlastic");
+const mp_slideways = require("./flows/botReplies/note_levels/level_2/level_2_subs/mp/topics/mpSlideways");
+const mp_shaperMc = require("./flows/botReplies/note_levels/level_2/level_2_subs/mp/topics/mpShapermc");
+const mp_edm = require("./flows/botReplies/note_levels/level_2/level_2_subs/mp/topics/mpEDM");
+const mp_nonConv = require("./flows/botReplies/note_levels/level_2/level_2_subs/mp/topics/mpNonConv");
+const mp_machineEconomics = require("./flows/botReplies/note_levels/level_2/level_2_subs/mp/topics/mpMCEconomics");
+const mp_casting = require("./flows/botReplies/note_levels/level_2/level_2_subs/mp/topics/mpCasting");
+
+
 
 
 
@@ -990,6 +1007,7 @@ function handleMessage(sender_psid, received_message) {
   const weavPrep = weavPrep_words;
   const ap1 = ap1_words;
   const wp1 = wp1_words;
+  const mp = mp_words;
 
 
 
@@ -1122,6 +1140,11 @@ function handleMessage(sender_psid, received_message) {
   //academic -> ap1
   else if (wordIncludes(ap1, received_message)) {
     magicFunc(sender_psid, ap1_flow);
+  }
+
+  //academic -> mp
+  else if (wordIncludes(mp, received_message)) {
+    magicFunc(sender_psid, mp_flow);
   }
 
   //academic -> wpp
@@ -3121,6 +3144,54 @@ let handlePostback = async (sender_psid, received_postback) => {
   }
   else if (payload === 'wp1_washingMachine_flow') {
     magicFunc(sender_psid, wp1_washingMc);
+  }
+
+
+  //mp
+  else if (payload === 'mp_flow') {
+    magicFunc(sender_psid, mp_flow);
+  }
+  else if (payload === 'mp_defects_flow') {
+    magicFunc(sender_psid, mp_defects);
+  }
+  else if (payload === 'mp_latheMc_flow') {
+    magicFunc(sender_psid, mp_lathe);
+  }
+  else if (payload === 'mp_millingMc_flow') {
+    magicFunc(sender_psid, mp_milling);
+  }
+  else if (payload === 'mp_castingVideo_flow') {
+    magicFunc(sender_psid, mp_casting);
+  }
+  else if (payload === 'mp_welding_flow') {
+    magicFunc(sender_psid, mp_welding);
+  }
+  else if (payload === 'mp_hotCold_flow') {
+    magicFunc(sender_psid, mp_hotCold);
+  }
+  else if (payload === 'mp_ceramics_flow') {
+    magicFunc(sender_psid, mp_ceramics);
+  }
+  else if (payload === 'mp_plastic_flow') {
+    magicFunc(sender_psid, mp_plastic);
+  }
+  else if (payload === 'mp_slideways_flow') {
+    magicFunc(sender_psid, mp_slideways);
+  }
+  else if (payload === 'mp_shaperMc_flow') {
+    magicFunc(sender_psid, mp_shaperMc);
+  }
+  else if (payload === 'mp_edm_flow') {
+    magicFunc(sender_psid, mp_edm);
+  }
+  else if (payload === 'mp_non_conventional_flow') {
+    magicFunc(sender_psid, mp_nonConv);
+  }
+  else if (payload === 'mp_mcEconomics_flow') {
+    magicFunc(sender_psid, mp_machineEconomics);
+  }
+  else if (payload === 'mp_casting_flow') {
+    magicFunc(sender_psid, mp_casting);
   }
 
 
