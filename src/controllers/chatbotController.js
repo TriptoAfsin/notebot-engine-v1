@@ -678,7 +678,23 @@ const fd2_flow = require("./flows/botReplies/note_levels/level_2/level_2_subs/fd
 
 //weav_prep
 const weavPrep_flow = require("./flows/botReplies/note_levels/level_2/level_2_subs/weaving_prep/weaving_prep_flow");
-const weavPrep_books = require("./flows/botReplies/note_levels/level_2/level_2_subs/weaving_prep/topics/weavBooks")
+const weavPrep_books = require("./flows/botReplies/note_levels/level_2/level_2_subs/weaving_prep/topics/weavBooks");
+
+//ap-i
+const ap1_flow = require("./flows/botReplies/note_levels/level_2/level_2_subs/ap1/ap1_flow");
+const ap1_books = require("./flows/botReplies/note_levels/level_2/level_2_subs/ap1/topics/ap1Books");
+const ap1_Ques = require("./flows/botReplies/note_levels/level_2/level_2_subs/ap1/topics/ap1Ques");
+const ap1_Sizing = require("./flows/botReplies/note_levels/level_2/level_2_subs/ap1/topics/ap1Sizing");
+const ap1_Trimming = require("./flows/botReplies/note_levels/level_2/level_2_subs/ap1/topics/ap1Trim");
+const ap1_Interling = require("./flows/botReplies/note_levels/level_2/level_2_subs/ap1/topics/ap1Interlining");
+const ap1_fabricCutting = require("./flows/botReplies/note_levels/level_2/level_2_subs/ap1/topics/ap1FabricCut");
+const ap1_patternMaking = require("./flows/botReplies/note_levels/level_2/level_2_subs/ap1/topics/ap1PatternMaking");
+const ap1_fabricSpreading = require("./flows/botReplies/note_levels/level_2/level_2_subs/ap1/topics/ap1FabricSpreading");
+const ap1_markerMaking = require("./flows/botReplies/note_levels/level_2/level_2_subs/ap1/topics/ap1MarkerMaking");
+const ap1_sewingThread = require("./flows/botReplies/note_levels/level_2/level_2_subs/ap1/topics/ap1SewingTherad");
+
+
+
 
 
 
@@ -917,6 +933,7 @@ function handleMessage(sender_psid, received_message) {
     const wpp = wpp_words;
     const fd2 = fd2_words;
     const weavPrep = weavPrep_words;
+    const ap1 = ap1_words;
 
   
 
@@ -1044,6 +1061,11 @@ function handleMessage(sender_psid, received_message) {
     //academic -> weaving prep
     else if (wordIncludes(weavPrep, received_message)) {
       magicFunc(sender_psid, weavPrep_flow);
+    }
+
+    //academic -> ap1
+    else if (wordIncludes(ap1, received_message)) {
+      magicFunc(sender_psid, ap1_flow);
     }
 
     //academic -> wpp
@@ -1220,6 +1242,12 @@ function handleMessage(sender_psid, received_message) {
       magicFunc(sender_psid, math1_flow);
     }
 
+     //academic -> math2
+     else if (wordIncludes(math2, received_message)) {
+      magicFunc(sender_psid, math2_flow);
+    }
+
+
     //academic -> ntf
     else if (wordIncludes(ntf, received_message)) {
       magicFunc(sender_psid, ntf_flow);
@@ -1252,11 +1280,7 @@ function handleMessage(sender_psid, received_message) {
       magicFunc(sender_psid, syllabusFlow);
     }
 
-    //academic -> math2
-    else if (wordIncludes(math2, received_message)) {
-      magicFunc(sender_psid, math2_flow);
-    }
-
+   
 
 
 
@@ -1280,9 +1304,6 @@ function handleMessage(sender_psid, received_message) {
 
       callSendAPI(sender_psid, response);  
     }
-    
-    // Sends the response message
-    //callSendAPI(sender_psid, response);    
   }
 
 
@@ -2916,6 +2937,42 @@ let handlePostback = async (sender_psid, received_postback) => {
       }
       else if (payload === 'weav_books_flow') {
         magicFunc(sender_psid, weavPrep_books);
+      }
+
+
+       //ap1
+      else if (payload === 'ap1_flow') {
+        magicFunc(sender_psid, ap1_flow);
+      }
+      else if (payload === 'ap1_books_flow') {
+        magicFunc(sender_psid, ap1_books);
+      }
+      else if (payload === 'ap1_ques_flow') {
+        magicFunc(sender_psid, ap1_Ques);
+      }
+      else if (payload === 'ap1_sizing_flow') {
+        magicFunc(sender_psid, ap1_Sizing);
+      }
+      else if (payload === 'ap1_trimmimg_flow') {
+        magicFunc(sender_psid, ap1_Trimming);
+      }
+      else if (payload === 'ap1_interlining_flow') {
+        magicFunc(sender_psid, ap1_Interling);
+      }
+      else if (payload === 'ap1_fabricCut_flow') {
+        magicFunc(sender_psid, ap1_fabricCutting);
+      }
+      else if (payload === 'ap1_patternMaking_flow') {
+        magicFunc(sender_psid, ap1_patternMaking);
+      }
+      else if (payload === 'ap1_fabricSpreading_flow') {
+        magicFunc(sender_psid, ap1_fabricSpreading);
+      }
+      else if (payload === 'ap1_markerMaking_flow') {
+        magicFunc(sender_psid, ap1_markerMaking);
+      }
+      else if (payload === 'ap1_sewingTherad_flow') {
+        magicFunc(sender_psid, ap1_sewingThread);
       }
     
 

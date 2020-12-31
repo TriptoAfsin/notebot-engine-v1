@@ -8,7 +8,7 @@ let am1Books = [
         https://drive.google.com/open?id=1M4x6DZ1Sb9eN3n2ELZRncPDcQ9bzJx82`
     },
     {
-        "text": `🔷nterlining(6)-
+        "text": `🔷Interlining(6)-
         https://drive.google.com/file/d/16mhOxHS4NqOC913Z8bmd4WJmV7G1YOQp/view?usp=sharing`
     }
 ]
