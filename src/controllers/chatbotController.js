@@ -434,7 +434,7 @@ const fm1_weaving = require("./flows/botReplies/note_levels/level_2/level_2_subs
 const fm1_intro = require("./flows/botReplies/note_levels/level_2/level_2_subs/fm1/topics/fm1Intro");
 const fm1_shedding = require("./flows/botReplies/note_levels/level_2/level_2_subs/fm1/topics/fm1Shedding");
 const fm1_sizing = require("./flows/botReplies/note_levels/level_2/level_2_subs/fm1/topics/fm1Sizing");
-const fm1_dobby= require("./flows/botReplies/note_levels/level_2/level_2_subs/fm1/topics/fm1Dobby");
+const fm1_dobby = require("./flows/botReplies/note_levels/level_2/level_2_subs/fm1/topics/fm1Dobby");
 const fm1_winding = require("./flows/botReplies/note_levels/level_2/level_2_subs/fm1/topics/fm1Winding");
 const fm1_warping = require("./flows/botReplies/note_levels/level_2/level_2_subs/fm1/topics/fm1Warping");
 
@@ -858,76 +858,76 @@ const syllabus_45_wpe = require('./flows/botReplies/syllabus_batches/45/depts/wp
 const MY_VERIFY_TOKEN = process.env.MY_VERIFY_TOKEN;
 
 let testMsg = (req, res) => {
-    return res.status(200).send(`Hello from notebot engine v1 ✔✔\n here are some routes - \n/profile\n/homepage`)
+  return res.status(200).send(`Hello from notebot engine v1 ✔✔\n here are some routes - \n/profile\n/homepage`)
 }
 
 //get webhook
 let getWebhook = (req, res) => {
 
-    // Your verify token. Should be a random string.
-    let VERIFY_TOKEN = MY_VERIFY_TOKEN;
+  // Your verify token. Should be a random string.
+  let VERIFY_TOKEN = MY_VERIFY_TOKEN;
 
-    // Parse the query params
-    let mode = req.query['hub.mode'];
-    let token = req.query['hub.verify_token'];
-    let challenge = req.query['hub.challenge'];
+  // Parse the query params
+  let mode = req.query['hub.mode'];
+  let token = req.query['hub.verify_token'];
+  let challenge = req.query['hub.challenge'];
 
-    // Checks if a token and mode is in the query string of the request
-    if (mode && token) {
+  // Checks if a token and mode is in the query string of the request
+  if (mode && token) {
 
-        // Checks the mode and token sent is correct
-        if (mode === 'subscribe' && token === VERIFY_TOKEN) {
+    // Checks the mode and token sent is correct
+    if (mode === 'subscribe' && token === VERIFY_TOKEN) {
 
-            // Responds with the challenge token from the request
-            console.log('WEBHOOK_VERIFIED');
-            res.status(200).send(challenge);
+      // Responds with the challenge token from the request
+      console.log('WEBHOOK_VERIFIED');
+      res.status(200).send(challenge);
 
-        }
-        else {
-            // Responds with '403 Forbidden' if verify tokens do not match
-            res.sendStatus(403);
-        }
     }
+    else {
+      // Responds with '403 Forbidden' if verify tokens do not match
+      res.sendStatus(403);
+    }
+  }
 }
 
 
 //post webhook
 let postWebhook = (req, res) => {
 
-    let body = req.body;
+  let body = req.body;
 
-    // Checks this is an event from a page subscription
-    if (body.object === 'page') {
+  // Checks this is an event from a page subscription
+  if (body.object === 'page') {
 
-        // Iterates over each entry - there may be multiple if batched
-        body.entry.forEach(function(entry) {
+    // Iterates over each entry - there may be multiple if batched
+    body.entry.forEach(function (entry) {
 
-            // Gets the message. entry.messaging is an array, but 
-            // will only ever contain one message, so we get index 0
-            let webhook_event = entry.messaging[0];
-            console.log(webhook_event);
+      // Gets the message. entry.messaging is an array, but 
+      // will only ever contain one message, so we get index 0
+      let webhook_event = entry.messaging[0];
+      console.log(webhook_event);
 
-            // Get the sender PSID
-            let sender_psid = webhook_event.sender.id;
-            console.log('Sender PSID: ' + sender_psid);
+      // Get the sender PSID
+      let sender_psid = webhook_event.sender.id;
+      console.log('Sender PSID: ' + sender_psid);
 
-            // Check if the event is a message or postback and
-            // pass the event to the appropriate handler function
-            if (webhook_event.message) {
-                handleMessage(sender_psid, webhook_event.message);
-            } else if (webhook_event.postback) {
-                handlePostback(sender_psid, webhook_event.postback);
-            }
-        });
+      // Check if the event is a message or postback and
+      // pass the event to the appropriate handler function
+      if (webhook_event.message) {
+        handleMessage(sender_psid, webhook_event.message);
+      } else if (webhook_event.postback) {
+        handlePostback(sender_psid, webhook_event.postback);
+      }
+    });
 
     // Returns a '200 OK' response to all requests
-        res.status(200).send('EVENT_RECEIVED');
-  } 
-    else {
-        // Returns a '404 Not Found' if event is not from a page subscription
-        res.sendStatus(404);
-    } 
-    
+    res.status(200).send('EVENT_RECEIVED');
+  }
+  else {
+    // Returns a '404 Not Found' if event is not from a page subscription
+    res.sendStatus(404);
+  }
+
 }
 
 
@@ -935,437 +935,437 @@ let postWebhook = (req, res) => {
 // Handles messages events
 function handleMessage(sender_psid, received_message) {
 
-    let response;
-    
-    //keywords
-    const greets = greetWords;
-
-    //academic
-    const notes = noteWords;
-    const level1 = level_1_note_words;
-    const level2 = level_2_note_words;
-    const level3 = level_3_note_words;
-    const level4 = level_4_note_words;
-    const bce = bce_words;
-    const chem1 = chem1_words;
-    const chem2 = chem2_words;
-    const phy1 = phy1_words;
-    const phy2 = phy2_words;
-    const math1 = math1_words;
-    const math2 = math2_words;
-    const cp = cp_words;
-    const ntf = ntf_words;
-    const em = em_words;
-    const bfs = bfs_words;
-    const pse = pse_words;
-    const tpm = tpm_words;
-    const fmg = fmg_words;
-    const tmm = tmm_words;
-    const iae = iae_words;
-    const iee = iee_words;
-    const epd = epd_words;
-    const ir = ir_words;
-    const tam = tam_words;
-    const ppc = ppc4_words;
-    const hrm = hrm_words;
-    const bs = bs_words;
-    const bil = bil_words;
-    const fm1 = fm1_words;
-    const mmtf = mmtf_words;
-    const ttqc = ttqc_words;
-    const stat = stat_words;
-    const feee = eee_words;
-    const am1 = am1_words;
-    const marketing = marketing_words;
-    const fyt = fyt_words;
-    const ctca = ctca_words;
-    const fme = fme_words;
-    const sss1 = sss1_words;
-    const sss2 = sss2_words;
-    const ym1 = ym1_words;
-    const fdce = fdce_words;
-    const tp = tp_words;
-    const wpp = wpp_words;
-    const fd2 = fd2_words;
-    const weavPrep = weavPrep_words;
-    const ap1 = ap1_words;
-    const wp1 = wp1_words;
-
-  
-
-    const bothChem = bothChem_words;
-    const bothMath = bothMath_words;
-    const bothPhy = bothPhy_words;
-    
-
-    const quiz = quiz_words;
-    const lab_report = labWords;
-    const result = resultWords;
-    const routine = routineWords;
-    const syllabus = syllabusWords;
-
-
-    const greetReply = greetReplies;
-    const loveMoji = loveMojis;
-    const loveReply = loveMojiReplies;
-    const sadReply = sadStuffReply;
-    const positive = positiveKeywords;
-    const negative = negativeKeywords;
-    const toss = tossWords;
-
-    const getStartedWords = ["Get Started", "get satrted", "Get started", "get Started"];
-
-    const test = ["test", "Test"];
-
-    
-    
-    // Check if the message
-    if (wordIncludes(greets, received_message)) {
-      // Create the payload for a basic text message
-      response = greetReplies[0];
-
-      callSendAPI(sender_psid, response);  
-    }
-
-
-
-    else if (wordIncludes(positive, received_message)) {
-      response = {
-        "text": `${randomPicker(loveReply)}`
-      }
-
-      callSendAPI(sender_psid, response);  
-    }
-
-    else if (wordIncludes(toss, received_message)) {
-      response = {
-        "text": `${randomPicker(tossReplies)}`
-      }
-
-      callSendAPI(sender_psid, response);  
-    }
-
-    else if (wordIncludes(getStartedWords, received_message)) {
-      response = getStartedMsg[0];
-
-      callSendAPI(sender_psid, response);  
-    }
-
-    /*
-    else if (test.includes(received_message.text)) {
-      // Create the payload for a basic text message
-      return response = testReply[0];
-    }
-    */
-
-
-    else if (wordIncludes(negative, received_message)) {
-      // Create the payload for a basic text message
-      response = {
-        "text": `${randomPicker(sadReply)}`
-      }
-
-      callSendAPI(sender_psid, response);  
-    }
-
-
-    //academic
-    else if (wordIncludes(notes, received_message)) {
-      magicFunc(sender_psid, notesFlow);
-    }
-
-    else if (wordIncludes(quiz, received_message)) { 
-      magicFunc(sender_psid, quizFlow);
-    }
-
-    else if (wordIncludes(level1, received_message)) {
-      magicFunc(sender_psid, level_1_notes);
-    }
-
-    else if (wordIncludes(level2, received_message)) {
-      magicFunc(sender_psid, level_2_notes);
-    }
-
-    else if (wordIncludes(level3, received_message)) {
-      magicFunc(sender_psid, level_3_notes);
-    }
-
-    else if (wordIncludes(level4, received_message)) {
-      magicFunc(sender_psid, level_4_notes);
-    }
-
-    else if (wordIs(bothChem, received_message)) {
-      magicFunc(sender_psid, bothChem_flow);
-    }
-    else if (wordIs(bothPhy, received_message)) {
-      magicFunc(sender_psid, bothPhy_flow);
-    }
-    else if (wordIs(bothMath, received_message)) {
-      magicFunc(sender_psid, bothMath_flow);
-    }
-
-    //academic -> bce
-    else if (wordIncludes(bce, received_message)) {
-      magicFunc(sender_psid, bce_flow);
-    }
-
-     //academic -> fd2
-     else if (wordIncludes(fd2, received_message)) {
-      magicFunc(sender_psid, fd2_flow);
-    }
-
-    //academic -> weaving prep
-    else if (wordIncludes(weavPrep, received_message)) {
-      magicFunc(sender_psid, weavPrep_flow);
-    }
-
-    //academic -> ap1
-    else if (wordIncludes(ap1, received_message)) {
-      magicFunc(sender_psid, ap1_flow);
-    }
-
-    //academic -> wpp
-    else if (wordIncludes(wpp, received_message)) {
-      magicFunc(sender_psid, wpp_flow);
-    }
-
-     //academic -> fdce
-     else if (wordIncludes(fdce, received_message)) {
-      magicFunc(sender_psid, fdce_flow);
-    }
-
-    //academic -> feee
-    else if (wordIncludes(feee, received_message)) {
-      magicFunc(sender_psid, eee_flow);
-    }
-
-    //academic -> WP1
-    else if (wordIncludes(wp1, received_message)) {
-      magicFunc(sender_psid, wp1_flow);
-    }
-
-    //academic -> sss1
-    else if (wordIncludes(sss1, received_message)) {
-      magicFunc(sender_psid, sss1_flow);
-    }
-
-    //academic -> sss2
-    else if (wordIncludes(sss2, received_message)) {
-      magicFunc(sender_psid, sss2_flow);
-    }
-
-    //academic -> ym1
-    else if (wordIncludes(ym1, received_message)) {
-      magicFunc(sender_psid, ym1_flow);
-    }
-
-    //academic -> mmtf
-    else if (wordIncludes(mmtf, received_message)) {
-      magicFunc(sender_psid, mmtf_flow);
-    }
-
-    //academic -> ctca
-    else if (wordIncludes(ctca, received_message)) {
-      magicFunc(sender_psid, ctca_flow);
-    }
-
-     //academic -> am1
-     else if (wordIncludes(am1, received_message)) {
-      magicFunc(sender_psid, am1_flow);
-    }
-
-    //academic -> stat
-    else if (wordIncludes(stat, received_message)) {
-      magicFunc(sender_psid, stat_flow);
-    }
-
-    //academic -> fyt
-    else if (wordIncludes(fyt, received_message)) {
-      magicFunc(sender_psid, fyt_flow);
-    }
-
-    //academic -> ttqc
-    else if (wordIncludes(ttqc, received_message)) {
-      magicFunc(sender_psid, ttqc_flow);
-    }
-
-    //academic -> marketing
-    else if (wordIncludes(marketing, received_message)) {
-      magicFunc(sender_psid, marketing_flow);
-    }
-
-    //academic -> iae
-    else if (wordIs(iae, received_message)) {
-      magicFunc(sender_psid, iae_flow);
-    }
-
-    //academic -> fme
-    else if (wordIs(fme, received_message)) {
-      magicFunc(sender_psid, fme_flow);
-    }
-
-    //academic -> tp
-    else if (wordIs(tp, received_message)) {
-      magicFunc(sender_psid, tp_flow);
-    }
-
-    //academic -> bs
-    else if (wordIs(bs, received_message)) {
-      magicFunc(sender_psid, bs_flow);
-    }
-
-    //academic -> bil
-    else if (wordIs(bil, received_message)) {
-      magicFunc(sender_psid, bil_flow);
-    }
-     //academic -> fm1
-     else if (wordIncludes(fm1, received_message)) {
-      magicFunc(sender_psid, fm1_flow);
-    }
-
-     //academic -> epd
-     else if (wordIs(epd, received_message)) {
-      magicFunc(sender_psid, epd_flow);
-    }
-
-    //academic -> ppc
-    else if (wordIncludes(ppc, received_message)) {
-      magicFunc(sender_psid, ppc_flow);
-    }
-
-     //academic -> tam
-     else if (wordIs(tam, received_message)) {
-      magicFunc(sender_psid, tam_flow);
-    }
-
-     //academic -> hrm
-     else if (wordIs(hrm, received_message)) {
-      magicFunc(sender_psid, hrm_flow);
-    }
-
-    //academic -> ir
-    else if (wordIs(ir, received_message)) {
-      magicFunc(sender_psid, ir_flow);
-    }
-
-    //academic -> iee
-    else if (wordIs(iee, received_message)) {
-      magicFunc(sender_psid, iee_flow);
-    }
-
-    //academic -> cp
-    else if (wordIs(cp, received_message)) {
-      magicFunc(sender_psid, cp_flow);
-    }
-
-     //academic -> bfs
-    else if (wordIs(bfs, received_message)) {
-      magicFunc(sender_psid, bfs_flow);
-    }
-
-     //academic -> fmg
-     else if (wordIncludes(fmg, received_message)) {
-      magicFunc(sender_psid, fmg_flow);
-    }
-
-    //academic -> tmm
-    else if (wordIncludes(tmm, received_message)) {
-      magicFunc(sender_psid, tmm_flow);
-    }
-
-     //academic -> tpm
-     else if (wordIncludes(tpm, received_message)) {
-      magicFunc(sender_psid, tpm_flow);
-    }
-
-     //academic -> chem1
-     else if (wordIncludes(chem1, received_message)) {
-      magicFunc(sender_psid, chem1_flow);
-    }
-
-    //academic -> chem2
-    else if (wordIncludes(chem2, received_message)) {
-      magicFunc(sender_psid, chem2_flow);
-    }
-
-     //academic -> phy1
-     else if (wordIncludes(phy1, received_message)) {
-      magicFunc(sender_psid, phy1_flow);
-    }
-
-    //academic -> phy2
-    else if (wordIncludes(phy2, received_message)) {
-      magicFunc(sender_psid, phy2_flow);
-    }
-
-    //academic -> math1
-    else if (wordIncludes(math1, received_message)) {
-      magicFunc(sender_psid, math1_flow);
-    }
-
-     //academic -> math2
-     else if (wordIncludes(math2, received_message)) {
-      magicFunc(sender_psid, math2_flow);
-    }
-
-
-    //academic -> ntf
-    else if (wordIncludes(ntf, received_message)) {
-      magicFunc(sender_psid, ntf_flow);
-    }
-
-    //academic -> em
-    else if (wordIs(em, received_message)) {
-      magicFunc(sender_psid, em_flow);
-    }
-
-    //academic -> pse
-    else if (wordIncludes(pse, received_message)) {
-      magicFunc(sender_psid, pse_flow);
-    }
-
-
-    else if (wordIncludes(lab_report, received_message)) {
-      magicFunc(sender_psid, labFlow);
-    }
-
-    else if (wordIncludes(result, received_message)) {
-      magicFunc(sender_psid, resultFlow);
-    }
-
-    else if (wordIncludes(routine, received_message)) {
-      magicFunc(sender_psid, routineFlow);
-    }
-
-    else if (wordIncludes(syllabus, received_message)) {
-      magicFunc(sender_psid, syllabusFlow);
-    }
-
-   
-
-
-
-
-
-    //emoji
-    else if (wordIncludes(loveMoji, received_message)) {
-      // Create the payload for a basic text message
-      response = {
-        "text": `${randomPicker(loveReply)}`
-      }
-      callSendAPI(sender_psid, response);  
-    }
-
-    
-    
-
-    //default reply
-    else if (received_message.text) {
-      response = defaultReply[0];
-
-      callSendAPI(sender_psid, response);  
-    }
+  let response;
+
+  //keywords
+  const greets = greetWords;
+
+  //academic
+  const notes = noteWords;
+  const level1 = level_1_note_words;
+  const level2 = level_2_note_words;
+  const level3 = level_3_note_words;
+  const level4 = level_4_note_words;
+  const bce = bce_words;
+  const chem1 = chem1_words;
+  const chem2 = chem2_words;
+  const phy1 = phy1_words;
+  const phy2 = phy2_words;
+  const math1 = math1_words;
+  const math2 = math2_words;
+  const cp = cp_words;
+  const ntf = ntf_words;
+  const em = em_words;
+  const bfs = bfs_words;
+  const pse = pse_words;
+  const tpm = tpm_words;
+  const fmg = fmg_words;
+  const tmm = tmm_words;
+  const iae = iae_words;
+  const iee = iee_words;
+  const epd = epd_words;
+  const ir = ir_words;
+  const tam = tam_words;
+  const ppc = ppc4_words;
+  const hrm = hrm_words;
+  const bs = bs_words;
+  const bil = bil_words;
+  const fm1 = fm1_words;
+  const mmtf = mmtf_words;
+  const ttqc = ttqc_words;
+  const stat = stat_words;
+  const feee = eee_words;
+  const am1 = am1_words;
+  const marketing = marketing_words;
+  const fyt = fyt_words;
+  const ctca = ctca_words;
+  const fme = fme_words;
+  const sss1 = sss1_words;
+  const sss2 = sss2_words;
+  const ym1 = ym1_words;
+  const fdce = fdce_words;
+  const tp = tp_words;
+  const wpp = wpp_words;
+  const fd2 = fd2_words;
+  const weavPrep = weavPrep_words;
+  const ap1 = ap1_words;
+  const wp1 = wp1_words;
+
+
+
+  const bothChem = bothChem_words;
+  const bothMath = bothMath_words;
+  const bothPhy = bothPhy_words;
+
+
+  const quiz = quiz_words;
+  const lab_report = labWords;
+  const result = resultWords;
+  const routine = routineWords;
+  const syllabus = syllabusWords;
+
+
+  const greetReply = greetReplies;
+  const loveMoji = loveMojis;
+  const loveReply = loveMojiReplies;
+  const sadReply = sadStuffReply;
+  const positive = positiveKeywords;
+  const negative = negativeKeywords;
+  const toss = tossWords;
+
+  const getStartedWords = ["Get Started", "get satrted", "Get started", "get Started"];
+
+  const test = ["test", "Test"];
+
+
+
+  // Check if the message
+  if (wordIncludes(greets, received_message)) {
+    // Create the payload for a basic text message
+    response = greetReplies[0];
+
+    callSendAPI(sender_psid, response);
   }
+
+
+
+  else if (wordIncludes(positive, received_message)) {
+    response = {
+      "text": `${randomPicker(loveReply)}`
+    }
+
+    callSendAPI(sender_psid, response);
+  }
+
+  else if (wordIncludes(toss, received_message)) {
+    response = {
+      "text": `${randomPicker(tossReplies)}`
+    }
+
+    callSendAPI(sender_psid, response);
+  }
+
+  else if (wordIncludes(getStartedWords, received_message)) {
+    response = getStartedMsg[0];
+
+    callSendAPI(sender_psid, response);
+  }
+
+  /*
+  else if (test.includes(received_message.text)) {
+    // Create the payload for a basic text message
+    return response = testReply[0];
+  }
+  */
+
+
+  else if (wordIncludes(negative, received_message)) {
+    // Create the payload for a basic text message
+    response = {
+      "text": `${randomPicker(sadReply)}`
+    }
+
+    callSendAPI(sender_psid, response);
+  }
+
+
+  //academic
+  else if (wordIncludes(notes, received_message)) {
+    magicFunc(sender_psid, notesFlow);
+  }
+
+  else if (wordIncludes(quiz, received_message)) {
+    magicFunc(sender_psid, quizFlow);
+  }
+
+  else if (wordIncludes(level1, received_message)) {
+    magicFunc(sender_psid, level_1_notes);
+  }
+
+  else if (wordIncludes(level2, received_message)) {
+    magicFunc(sender_psid, level_2_notes);
+  }
+
+  else if (wordIncludes(level3, received_message)) {
+    magicFunc(sender_psid, level_3_notes);
+  }
+
+  else if (wordIncludes(level4, received_message)) {
+    magicFunc(sender_psid, level_4_notes);
+  }
+
+  else if (wordIs(bothChem, received_message)) {
+    magicFunc(sender_psid, bothChem_flow);
+  }
+  else if (wordIs(bothPhy, received_message)) {
+    magicFunc(sender_psid, bothPhy_flow);
+  }
+  else if (wordIs(bothMath, received_message)) {
+    magicFunc(sender_psid, bothMath_flow);
+  }
+
+  //academic -> bce
+  else if (wordIncludes(bce, received_message)) {
+    magicFunc(sender_psid, bce_flow);
+  }
+
+  //academic -> fd2
+  else if (wordIncludes(fd2, received_message)) {
+    magicFunc(sender_psid, fd2_flow);
+  }
+
+  //academic -> weaving prep
+  else if (wordIncludes(weavPrep, received_message)) {
+    magicFunc(sender_psid, weavPrep_flow);
+  }
+
+  //academic -> ap1
+  else if (wordIncludes(ap1, received_message)) {
+    magicFunc(sender_psid, ap1_flow);
+  }
+
+  //academic -> wpp
+  else if (wordIncludes(wpp, received_message)) {
+    magicFunc(sender_psid, wpp_flow);
+  }
+
+  //academic -> fdce
+  else if (wordIncludes(fdce, received_message)) {
+    magicFunc(sender_psid, fdce_flow);
+  }
+
+  //academic -> feee
+  else if (wordIncludes(feee, received_message)) {
+    magicFunc(sender_psid, eee_flow);
+  }
+
+  //academic -> WP1
+  else if (wordIncludes(wp1, received_message)) {
+    magicFunc(sender_psid, wp1_flow);
+  }
+
+  //academic -> sss1
+  else if (wordIncludes(sss1, received_message)) {
+    magicFunc(sender_psid, sss1_flow);
+  }
+
+  //academic -> sss2
+  else if (wordIncludes(sss2, received_message)) {
+    magicFunc(sender_psid, sss2_flow);
+  }
+
+  //academic -> ym1
+  else if (wordIncludes(ym1, received_message)) {
+    magicFunc(sender_psid, ym1_flow);
+  }
+
+  //academic -> mmtf
+  else if (wordIncludes(mmtf, received_message)) {
+    magicFunc(sender_psid, mmtf_flow);
+  }
+
+  //academic -> ctca
+  else if (wordIncludes(ctca, received_message)) {
+    magicFunc(sender_psid, ctca_flow);
+  }
+
+  //academic -> am1
+  else if (wordIncludes(am1, received_message)) {
+    magicFunc(sender_psid, am1_flow);
+  }
+
+  //academic -> stat
+  else if (wordIncludes(stat, received_message)) {
+    magicFunc(sender_psid, stat_flow);
+  }
+
+  //academic -> fyt
+  else if (wordIncludes(fyt, received_message)) {
+    magicFunc(sender_psid, fyt_flow);
+  }
+
+  //academic -> ttqc
+  else if (wordIncludes(ttqc, received_message)) {
+    magicFunc(sender_psid, ttqc_flow);
+  }
+
+  //academic -> marketing
+  else if (wordIncludes(marketing, received_message)) {
+    magicFunc(sender_psid, marketing_flow);
+  }
+
+  //academic -> iae
+  else if (wordIs(iae, received_message)) {
+    magicFunc(sender_psid, iae_flow);
+  }
+
+  //academic -> fme
+  else if (wordIs(fme, received_message)) {
+    magicFunc(sender_psid, fme_flow);
+  }
+
+  //academic -> tp
+  else if (wordIs(tp, received_message)) {
+    magicFunc(sender_psid, tp_flow);
+  }
+
+  //academic -> bs
+  else if (wordIs(bs, received_message)) {
+    magicFunc(sender_psid, bs_flow);
+  }
+
+  //academic -> bil
+  else if (wordIs(bil, received_message)) {
+    magicFunc(sender_psid, bil_flow);
+  }
+  //academic -> fm1
+  else if (wordIncludes(fm1, received_message)) {
+    magicFunc(sender_psid, fm1_flow);
+  }
+
+  //academic -> epd
+  else if (wordIs(epd, received_message)) {
+    magicFunc(sender_psid, epd_flow);
+  }
+
+  //academic -> ppc
+  else if (wordIncludes(ppc, received_message)) {
+    magicFunc(sender_psid, ppc_flow);
+  }
+
+  //academic -> tam
+  else if (wordIs(tam, received_message)) {
+    magicFunc(sender_psid, tam_flow);
+  }
+
+  //academic -> hrm
+  else if (wordIs(hrm, received_message)) {
+    magicFunc(sender_psid, hrm_flow);
+  }
+
+  //academic -> ir
+  else if (wordIs(ir, received_message)) {
+    magicFunc(sender_psid, ir_flow);
+  }
+
+  //academic -> iee
+  else if (wordIs(iee, received_message)) {
+    magicFunc(sender_psid, iee_flow);
+  }
+
+  //academic -> cp
+  else if (wordIs(cp, received_message)) {
+    magicFunc(sender_psid, cp_flow);
+  }
+
+  //academic -> bfs
+  else if (wordIs(bfs, received_message)) {
+    magicFunc(sender_psid, bfs_flow);
+  }
+
+  //academic -> fmg
+  else if (wordIncludes(fmg, received_message)) {
+    magicFunc(sender_psid, fmg_flow);
+  }
+
+  //academic -> tmm
+  else if (wordIncludes(tmm, received_message)) {
+    magicFunc(sender_psid, tmm_flow);
+  }
+
+  //academic -> tpm
+  else if (wordIncludes(tpm, received_message)) {
+    magicFunc(sender_psid, tpm_flow);
+  }
+
+  //academic -> chem1
+  else if (wordIncludes(chem1, received_message)) {
+    magicFunc(sender_psid, chem1_flow);
+  }
+
+  //academic -> chem2
+  else if (wordIncludes(chem2, received_message)) {
+    magicFunc(sender_psid, chem2_flow);
+  }
+
+  //academic -> phy1
+  else if (wordIncludes(phy1, received_message)) {
+    magicFunc(sender_psid, phy1_flow);
+  }
+
+  //academic -> phy2
+  else if (wordIncludes(phy2, received_message)) {
+    magicFunc(sender_psid, phy2_flow);
+  }
+
+  //academic -> math1
+  else if (wordIncludes(math1, received_message)) {
+    magicFunc(sender_psid, math1_flow);
+  }
+
+  //academic -> math2
+  else if (wordIncludes(math2, received_message)) {
+    magicFunc(sender_psid, math2_flow);
+  }
+
+
+  //academic -> ntf
+  else if (wordIncludes(ntf, received_message)) {
+    magicFunc(sender_psid, ntf_flow);
+  }
+
+  //academic -> em
+  else if (wordIs(em, received_message)) {
+    magicFunc(sender_psid, em_flow);
+  }
+
+  //academic -> pse
+  else if (wordIncludes(pse, received_message)) {
+    magicFunc(sender_psid, pse_flow);
+  }
+
+
+  else if (wordIncludes(lab_report, received_message)) {
+    magicFunc(sender_psid, labFlow);
+  }
+
+  else if (wordIncludes(result, received_message)) {
+    magicFunc(sender_psid, resultFlow);
+  }
+
+  else if (wordIncludes(routine, received_message)) {
+    magicFunc(sender_psid, routineFlow);
+  }
+
+  else if (wordIncludes(syllabus, received_message)) {
+    magicFunc(sender_psid, syllabusFlow);
+  }
+
+
+
+
+
+
+
+  //emoji
+  else if (wordIncludes(loveMoji, received_message)) {
+    // Create the payload for a basic text message
+    response = {
+      "text": `${randomPicker(loveReply)}`
+    }
+    callSendAPI(sender_psid, response);
+  }
+
+
+
+
+  //default reply
+  else if (received_message.text) {
+    response = defaultReply[0];
+
+    callSendAPI(sender_psid, response);
+  }
+}
 
 
 
@@ -1374,1817 +1374,1817 @@ let handlePostback = async (sender_psid, received_postback) => {
 
   let response;
 
-    // Get the payload for the postback
-    let payload = received_postback.payload;
-
-    // Set the response based on the postback payload
-    if (payload === 'GET_STARTED') {
-      //getting username
-      let username = await chatBotService.getFacebookUserInfo(sender_psid);
-
-      console.log(username);
-      response = getStartedMsg[0];
-      callSendAPI(sender_psid, response);
-    } 
+  // Get the payload for the postback
+  let payload = received_postback.payload;
+
+  // Set the response based on the postback payload
+  if (payload === 'GET_STARTED') {
+    //getting username
+    let username = await chatBotService.getFacebookUserInfo(sender_psid);
+
+    console.log(username);
+    response = getStartedMsg[0];
+    callSendAPI(sender_psid, response);
+  }
 
-    else if (payload === 'level_1') {
-      magicFunc(sender_psid, level_1_notes);
-    } 
+  else if (payload === 'level_1') {
+    magicFunc(sender_psid, level_1_notes);
+  }
 
-    else if (payload === 'level_2') {
-      magicFunc(sender_psid, level_2_notes);
-  } 
-    else if (payload === 'level_3') {
-      magicFunc(sender_psid, level_3_notes);
-    }
-    else if (payload === 'level_4') {
-      magicFunc(sender_psid, level_4_notes);
-    }
+  else if (payload === 'level_2') {
+    magicFunc(sender_psid, level_2_notes);
+  }
+  else if (payload === 'level_3') {
+    magicFunc(sender_psid, level_3_notes);
+  }
+  else if (payload === 'level_4') {
+    magicFunc(sender_psid, level_4_notes);
+  }
 
-    //subject-> bce
-    else if (payload === 'bce_flow') {
-      magicFunc(sender_psid, bce_flow);
-    }
+  //subject-> bce
+  else if (payload === 'bce_flow') {
+    magicFunc(sender_psid, bce_flow);
+  }
 
-    else if (payload === 'all_sheets_bce_flow') {
-      magicFunc(sender_psid, bce_allsheets);
-    }
+  else if (payload === 'all_sheets_bce_flow') {
+    magicFunc(sender_psid, bce_allsheets);
+  }
 
-    else if (payload === 'part_a_bce_flow') {
-      magicFunc(sender_psid, bce_part_a);
-    }
+  else if (payload === 'part_a_bce_flow') {
+    magicFunc(sender_psid, bce_part_a);
+  }
 
-    else if (payload === 'part_b_bce_flow') {
-      magicFunc(sender_psid, bce_part_b);
-    }
+  else if (payload === 'part_b_bce_flow') {
+    magicFunc(sender_psid, bce_part_b);
+  }
 
-    else if (payload === 'full_ab_bce_flow') {
-      magicFunc(sender_psid, full_part_bce);
-    }
+  else if (payload === 'full_ab_bce_flow') {
+    magicFunc(sender_psid, full_part_bce);
+  }
 
 
-    else if (payload === 'letter_bce_flow') {
-      magicFunc(sender_psid, bce_letter);
-    }
+  else if (payload === 'letter_bce_flow') {
+    magicFunc(sender_psid, bce_letter);
+  }
 
 
-    else if (payload === 'communi_bce_flow') {
-      magicFunc(sender_psid, bce_comm);
-    }
+  else if (payload === 'communi_bce_flow') {
+    magicFunc(sender_psid, bce_comm);
+  }
 
-    else if (payload === 'lang_func_bce_flow') {
-      magicFunc(sender_psid, bce_lang_func);
-    }
+  else if (payload === 'lang_func_bce_flow') {
+    magicFunc(sender_psid, bce_lang_func);
+  }
 
-    else if (payload === 'intro_bce_flow') {
-      magicFunc(sender_psid, bce_intro);
-    }
+  else if (payload === 'intro_bce_flow') {
+    magicFunc(sender_psid, bce_intro);
+  }
 
-    else if (payload === 'bce_ques_flow') {
-      magicFunc(sender_psid, bce_questions);
-    }
+  else if (payload === 'bce_ques_flow') {
+    magicFunc(sender_psid, bce_questions);
+  }
 
-    else if (payload === 'report_bce_flow') {
-      magicFunc(sender_psid, bce_report);
-    }
+  else if (payload === 'report_bce_flow') {
+    magicFunc(sender_psid, bce_report);
+  }
 
 
-    else if (payload === 'read_write_bce_flow') {
-      magicFunc(sender_psid, bce_read_writing);
-    }
+  else if (payload === 'read_write_bce_flow') {
+    magicFunc(sender_psid, bce_read_writing);
+  }
 
-    //subject-> cp
-    else if (payload === 'cp_flow') {
-      magicFunc(sender_psid, cp_flow);
-    }
+  //subject-> cp
+  else if (payload === 'cp_flow') {
+    magicFunc(sender_psid, cp_flow);
+  }
 
-    else if (payload === 'books_cp_flow') {
-      magicFunc(sender_psid, cp_books);
-    }
+  else if (payload === 'books_cp_flow') {
+    magicFunc(sender_psid, cp_books);
+  }
 
-    else if (payload === 'ques_cp_flow') {
-      magicFunc(sender_psid, cp_ques);
-    }
+  else if (payload === 'ques_cp_flow') {
+    magicFunc(sender_psid, cp_ques);
+  }
 
-    else if (payload === 'condition_cp_flow') {
-      magicFunc(sender_psid, cp_condition);
-    }
+  else if (payload === 'condition_cp_flow') {
+    magicFunc(sender_psid, cp_condition);
+  }
 
-    else if (payload === 'fundamental_cp_flow') {
-      magicFunc(sender_psid, cp_fundamental);
-    }
+  else if (payload === 'fundamental_cp_flow') {
+    magicFunc(sender_psid, cp_fundamental);
+  }
 
-    else if (payload === 'loop_cp_flow') {
-      magicFunc(sender_psid, cp_loops);
-    }
+  else if (payload === 'loop_cp_flow') {
+    magicFunc(sender_psid, cp_loops);
+  }
 
-    else if (payload === 'array_cp_flow') {
-      magicFunc(sender_psid, cp_array);
-    }
+  else if (payload === 'array_cp_flow') {
+    magicFunc(sender_psid, cp_array);
+  }
 
 
-    else if (payload === 'function_cp_flow') {
-      magicFunc(sender_psid, cp_function);
-    }
+  else if (payload === 'function_cp_flow') {
+    magicFunc(sender_psid, cp_function);
+  }
 
 
-    else if (payload === 'string_cp_flow') {
-      magicFunc(sender_psid, cp_string);
-    }
+  else if (payload === 'string_cp_flow') {
+    magicFunc(sender_psid, cp_string);
+  }
 
-    else if (payload === 'suggestion_cp_flow') {
-      magicFunc(sender_psid, cp_suggestion);
-    }
+  else if (payload === 'suggestion_cp_flow') {
+    magicFunc(sender_psid, cp_suggestion);
+  }
 
 
-    //subject-> chem1
-    else if (payload === 'che1_flow') {
-      magicFunc(sender_psid, chem1_flow);
-    }
+  //subject-> chem1
+  else if (payload === 'che1_flow') {
+    magicFunc(sender_psid, chem1_flow);
+  }
 
-    else if (payload === 'chem1_books_flow') {
-      magicFunc(sender_psid, chem1_books);
-    }
+  else if (payload === 'chem1_books_flow') {
+    magicFunc(sender_psid, chem1_books);
+  }
 
-    else if (payload === 'chem1_ques_flow') {
-      magicFunc(sender_psid, chem1_ques);
-    }
+  else if (payload === 'chem1_ques_flow') {
+    magicFunc(sender_psid, chem1_ques);
+  }
 
-    else if (payload === 'chem1_periodic_flow') {
-      magicFunc(sender_psid, chem1_period);
-    }
+  else if (payload === 'chem1_periodic_flow') {
+    magicFunc(sender_psid, chem1_period);
+  }
 
-    else if (payload === 'chem1_dilute_flow') {
-      magicFunc(sender_psid, chem1_dilute);
-    }
+  else if (payload === 'chem1_dilute_flow') {
+    magicFunc(sender_psid, chem1_dilute);
+  }
 
-    else if (payload === 'chem1_complx_flow') {
-      magicFunc(sender_psid, chem1_complex);
-    }
+  else if (payload === 'chem1_complx_flow') {
+    magicFunc(sender_psid, chem1_complex);
+  }
 
-    else if (payload === 'chem1_bond_flow') {
-      magicFunc(sender_psid, chem1_bond);
-    }
+  else if (payload === 'chem1_bond_flow') {
+    magicFunc(sender_psid, chem1_bond);
+  }
 
-    else if (payload === 'chem1_equi_flow') {
-      magicFunc(sender_psid, chem1_equilibrium);
-    }
+  else if (payload === 'chem1_equi_flow') {
+    magicFunc(sender_psid, chem1_equilibrium);
+  }
 
-    else if (payload === 'chem1_photo_flow') {
-      magicFunc(sender_psid, chem1_photo);
-    }
+  else if (payload === 'chem1_photo_flow') {
+    magicFunc(sender_psid, chem1_photo);
+  }
 
-    else if (payload === 'chem1_analy_flow') {
-      magicFunc(sender_psid, chem1_analy);
-    }
+  else if (payload === 'chem1_analy_flow') {
+    magicFunc(sender_psid, chem1_analy);
+  }
 
-    else if (payload === 'chem1_coll_flow') {
-      magicFunc(sender_psid, chem1_colloid);
-    }
+  else if (payload === 'chem1_coll_flow') {
+    magicFunc(sender_psid, chem1_colloid);
+  }
 
-    else if (payload === 'chem1_acid_base_flow') {
-      magicFunc(sender_psid, chem1_acid_base);
-    }
+  else if (payload === 'chem1_acid_base_flow') {
+    magicFunc(sender_psid, chem1_acid_base);
+  }
 
-    else if (payload === 'chem1_kinetics_flow') {
-      magicFunc(sender_psid, chem1_kinetic);
-    }
+  else if (payload === 'chem1_kinetics_flow') {
+    magicFunc(sender_psid, chem1_kinetic);
+  }
 
-    //subject-> phy1
-    else if (payload === 'phy1_flow') {
-      magicFunc(sender_psid, phy1_flow);
-    }
+  //subject-> phy1
+  else if (payload === 'phy1_flow') {
+    magicFunc(sender_psid, phy1_flow);
+  }
 
-    else if (payload === 'phy1_books_flow') {
-      magicFunc(sender_psid, phy1_books);
-    }
+  else if (payload === 'phy1_books_flow') {
+    magicFunc(sender_psid, phy1_books);
+  }
 
-    else if (payload === 'phy1_ques_flow') {
-      magicFunc(sender_psid, phy1_ques);
-    }
+  else if (payload === 'phy1_ques_flow') {
+    magicFunc(sender_psid, phy1_ques);
+  }
 
-    else if (payload === 'phy1_circular_flow') {
-      magicFunc(sender_psid, phy1_circular);
-    }
+  else if (payload === 'phy1_circular_flow') {
+    magicFunc(sender_psid, phy1_circular);
+  }
 
-    else if (payload === 'phy1_hydro_flow') {
-      magicFunc(sender_psid, phy1_hydro);
-    }
+  else if (payload === 'phy1_hydro_flow') {
+    magicFunc(sender_psid, phy1_hydro);
+  }
 
-    else if (payload === 'phy1_diffraction_flow') {
-      magicFunc(sender_psid, phy1_diffraction);
-    }
+  else if (payload === 'phy1_diffraction_flow') {
+    magicFunc(sender_psid, phy1_diffraction);
+  }
 
-    else if (payload === 'phy1_interfer_flow') {
-      magicFunc(sender_psid, phy1_interferrence);
-    }
+  else if (payload === 'phy1_interfer_flow') {
+    magicFunc(sender_psid, phy1_interferrence);
+  }
 
-    else if (payload === 'phy1_polar_flow') {
-      magicFunc(sender_psid, phy1_polar);
-    }
+  else if (payload === 'phy1_polar_flow') {
+    magicFunc(sender_psid, phy1_polar);
+  }
 
-    else if (payload === 'phy1_elas_flow') {
-      magicFunc(sender_psid, phy1_elasticity);
-    }
+  else if (payload === 'phy1_elas_flow') {
+    magicFunc(sender_psid, phy1_elasticity);
+  }
 
-    else if (payload === 'phy1_visco_flow') {
-      magicFunc(sender_psid, phy1_viscosity);
-    }
+  else if (payload === 'phy1_visco_flow') {
+    magicFunc(sender_psid, phy1_viscosity);
+  }
 
-    else if (payload === 'phy1_surface_flow') {
-      magicFunc(sender_psid, phy1_surface);
-    }
+  else if (payload === 'phy1_surface_flow') {
+    magicFunc(sender_psid, phy1_surface);
+  }
 
-    //subject-> math1
-    else if (payload === 'math1_flow') {
-      magicFunc(sender_psid, math1_flow);
-    }
+  //subject-> math1
+  else if (payload === 'math1_flow') {
+    magicFunc(sender_psid, math1_flow);
+  }
 
-    else if (payload === 'math1_books_flow') {
-      magicFunc(sender_psid, math1_books);
-    }
+  else if (payload === 'math1_books_flow') {
+    magicFunc(sender_psid, math1_books);
+  }
 
-    else if (payload === 'math1_ques_flow') {
-      magicFunc(sender_psid, math1_question);
-    }
+  else if (payload === 'math1_ques_flow') {
+    magicFunc(sender_psid, math1_question);
+  }
 
-    else if (payload === 'math1_solve18_flow') {
-      magicFunc(sender_psid, math1_solve);
-    }
+  else if (payload === 'math1_solve18_flow') {
+    magicFunc(sender_psid, math1_solve);
+  }
 
-    else if (payload === 'math1_diff_solve_flow') {
-      magicFunc(sender_psid, math1_solve_diff);
+  else if (payload === 'math1_diff_solve_flow') {
+    magicFunc(sender_psid, math1_solve_diff);
 
-    }
+  }
 
-    else if (payload === 'math1_coord_solve_flow') {
-      magicFunc(sender_psid, math1_solve_coord);
-    }
+  else if (payload === 'math1_coord_solve_flow') {
+    magicFunc(sender_psid, math1_solve_coord);
+  }
 
-    else if (payload === 'math1_integreation_solve_flow') {
-      magicFunc(sender_psid, math1_solve_integre);
-    }
+  else if (payload === 'math1_integreation_solve_flow') {
+    magicFunc(sender_psid, math1_solve_integre);
+  }
 
-    
-    else if (payload === 'math1_linear_solve_flow') {
-      magicFunc(sender_psid, math1_solve_linear);
-    }
 
-    else if (payload === 'math1_conv_div_flow') {
-      magicFunc(sender_psid, math1_convergence);
-    }
+  else if (payload === 'math1_linear_solve_flow') {
+    magicFunc(sender_psid, math1_solve_linear);
+  }
 
-    else if (payload === 'math1_exapnsion_flow') {
-      magicFunc(sender_psid, math1_expansion);
-    }
+  else if (payload === 'math1_conv_div_flow') {
+    magicFunc(sender_psid, math1_convergence);
+  }
 
-    else if (payload === 'math1_diff_flow') {
-      magicFunc(sender_psid, math1_differntitation);
-    }
+  else if (payload === 'math1_exapnsion_flow') {
+    magicFunc(sender_psid, math1_expansion);
+  }
 
-    else if (payload === 'math1_integre_flow') {
-      magicFunc(sender_psid, math1_integration);
-    }
+  else if (payload === 'math1_diff_flow') {
+    magicFunc(sender_psid, math1_differntitation);
+  }
 
-    else if (payload === 'math1_extreme_flow') {
-      magicFunc(sender_psid, math1_extrema);
-    }
+  else if (payload === 'math1_integre_flow') {
+    magicFunc(sender_psid, math1_integration);
+  }
 
-    else if (payload === 'math1_conics_flow') {
-      magicFunc(sender_psid, math1_conics);
-    }
+  else if (payload === 'math1_extreme_flow') {
+    magicFunc(sender_psid, math1_extrema);
+  }
 
-    else if (payload === 'math1_vector_flow') {
-      magicFunc(sender_psid, math1_vector);
-    }
+  else if (payload === 'math1_conics_flow') {
+    magicFunc(sender_psid, math1_conics);
+  }
 
-    else if (payload === 'math1_matrix_flow') {
-      magicFunc(sender_psid, math1_matrix);
-    }
+  else if (payload === 'math1_vector_flow') {
+    magicFunc(sender_psid, math1_vector);
+  }
 
-    else if (payload === 'math1_co_ord_flow') {
-      magicFunc(sender_psid, math1_coOrd);
-    }
+  else if (payload === 'math1_matrix_flow') {
+    magicFunc(sender_psid, math1_matrix);
+  }
 
-    else if (payload === 'math1_linear_flow') {
-      magicFunc(sender_psid, math1_linear);
-    }
+  else if (payload === 'math1_co_ord_flow') {
+    magicFunc(sender_psid, math1_coOrd);
+  }
 
-    else if (payload === 'math1_change_axes_flow') {
-      magicFunc(sender_psid, math1_axes);
-    }
+  else if (payload === 'math1_linear_flow') {
+    magicFunc(sender_psid, math1_linear);
+  }
 
-    //quizflow
-    else if (payload === 'quiz_flow') {
-      magicFunc(sender_psid, quizFlow);
-    }
+  else if (payload === 'math1_change_axes_flow') {
+    magicFunc(sender_psid, math1_axes);
+  }
 
+  //quizflow
+  else if (payload === 'quiz_flow') {
+    magicFunc(sender_psid, quizFlow);
+  }
 
-    //subject-> ntf
-    else if (payload === 'ntf_flow') {
-      magicFunc(sender_psid, ntf_flow);
-    }
 
-    else if (payload === 'ntf_books_flow') {
-      magicFunc(sender_psid, ntf_books);
-    }
+  //subject-> ntf
+  else if (payload === 'ntf_flow') {
+    magicFunc(sender_psid, ntf_flow);
+  }
 
-    else if (payload === 'ntf_hnotes_flow') {
-      magicFunc(sender_psid, ntf_hand_notes);
-    }
+  else if (payload === 'ntf_books_flow') {
+    magicFunc(sender_psid, ntf_books);
+  }
 
-    else if (payload === 'ntf_ques_flow') {
-      magicFunc(sender_psid, ntf_question);
-    }
+  else if (payload === 'ntf_hnotes_flow') {
+    magicFunc(sender_psid, ntf_hand_notes);
+  }
 
-    else if (payload === 'ntf_suggestion_flow') {
-      magicFunc(sender_psid, ntf_suggestion);
-    }
+  else if (payload === 'ntf_ques_flow') {
+    magicFunc(sender_psid, ntf_question);
+  }
 
-    else if (payload === 'ntf_intro_flow') {
-      magicFunc(sender_psid, ntf_intro);
-    }
+  else if (payload === 'ntf_suggestion_flow') {
+    magicFunc(sender_psid, ntf_suggestion);
+  }
 
-    else if (payload === 'ntf_cotton_flow') {
-      magicFunc(sender_psid, ntf_cotton);
-    }
+  else if (payload === 'ntf_intro_flow') {
+    magicFunc(sender_psid, ntf_intro);
+  }
 
-    else if (payload === 'ntf_cotton_hand_flow') {
-      magicFunc(sender_psid, ntf_cotton_handNote);
-    }
+  else if (payload === 'ntf_cotton_flow') {
+    magicFunc(sender_psid, ntf_cotton);
+  }
 
-    else if (payload === 'ntf_slides_flow') {
-      magicFunc(sender_psid, ntf_cotton_slide);
-    }
+  else if (payload === 'ntf_cotton_hand_flow') {
+    magicFunc(sender_psid, ntf_cotton_handNote);
+  }
 
-    else if (payload === 'ntf_videos_flow') {
-      magicFunc(sender_psid, ntf_cotton_video);
-    }
+  else if (payload === 'ntf_slides_flow') {
+    magicFunc(sender_psid, ntf_cotton_slide);
+  }
 
-    else if (payload === 'ntf_flax_flow') {
-      magicFunc(sender_psid, ntf_flax);
-    }
+  else if (payload === 'ntf_videos_flow') {
+    magicFunc(sender_psid, ntf_cotton_video);
+  }
 
-    else if (payload === 'ntf_wool_flow') {
-      magicFunc(sender_psid, ntf_wool);
-    }
+  else if (payload === 'ntf_flax_flow') {
+    magicFunc(sender_psid, ntf_flax);
+  }
 
-    else if (payload === 'ntf_wool_hand_flow') {
-      magicFunc(sender_psid, ntf_wool_handNote);
-    }
+  else if (payload === 'ntf_wool_flow') {
+    magicFunc(sender_psid, ntf_wool);
+  }
 
-    else if (payload === 'ntf_wool_slides_flow') {
-      magicFunc(sender_psid, ntf_wool_slides);
-    }
+  else if (payload === 'ntf_wool_hand_flow') {
+    magicFunc(sender_psid, ntf_wool_handNote);
+  }
 
-    else if (payload === 'ntf_wool_videos_flow') {
-      magicFunc(sender_psid, ntf_wool_videos);
-    }
+  else if (payload === 'ntf_wool_slides_flow') {
+    magicFunc(sender_psid, ntf_wool_slides);
+  }
 
-    else if (payload === 'ntf_jute_flow') {
-      magicFunc(sender_psid, ntf_jute);
-    }
+  else if (payload === 'ntf_wool_videos_flow') {
+    magicFunc(sender_psid, ntf_wool_videos);
+  }
 
-    else if (payload === 'ntf_silk_flow') {
-      magicFunc(sender_psid, ntf_silk);
-    }
+  else if (payload === 'ntf_jute_flow') {
+    magicFunc(sender_psid, ntf_jute);
+  }
 
-    else if (payload === 'ntf_sisal_flow') {
-      magicFunc(sender_psid, ntf_sisal);
-    }
+  else if (payload === 'ntf_silk_flow') {
+    magicFunc(sender_psid, ntf_silk);
+  }
 
-    else if (payload === 'ntf_hemp_flow') {
-      magicFunc(sender_psid, ntf_hemp);
-    }
+  else if (payload === 'ntf_sisal_flow') {
+    magicFunc(sender_psid, ntf_sisal);
+  }
 
-    else if (payload === 'ntf_palf_flow') {
-      magicFunc(sender_psid, ntf_palf);
-    }
+  else if (payload === 'ntf_hemp_flow') {
+    magicFunc(sender_psid, ntf_hemp);
+  }
 
-    else if (payload === 'ntf_kapok_flow') {
-      magicFunc(sender_psid, ntf_kapok);
-    }
+  else if (payload === 'ntf_palf_flow') {
+    magicFunc(sender_psid, ntf_palf);
+  }
 
-    else if (payload === 'ntf_asbestos_flow') {
-      magicFunc(sender_psid, ntf_asbestos);
-    }
+  else if (payload === 'ntf_kapok_flow') {
+    magicFunc(sender_psid, ntf_kapok);
+  }
 
-    else if (payload === 'ntf_other_fib_flow') {
-      magicFunc(sender_psid, ntf_other_fibre);
-    }
+  else if (payload === 'ntf_asbestos_flow') {
+    magicFunc(sender_psid, ntf_asbestos);
+  }
 
-    //subject-> em
-    else if (payload === 'em_flow') {
-      magicFunc(sender_psid, em_flow);
-    }
+  else if (payload === 'ntf_other_fib_flow') {
+    magicFunc(sender_psid, ntf_other_fibre);
+  }
 
-    else if (payload === 'em_books_flow') {
-      magicFunc(sender_psid, em_books);
-    }
+  //subject-> em
+  else if (payload === 'em_flow') {
+    magicFunc(sender_psid, em_flow);
+  }
 
-    else if (payload === 'em_ques_flow') {
-      magicFunc(sender_psid, em_question);
-    }
+  else if (payload === 'em_books_flow') {
+    magicFunc(sender_psid, em_books);
+  }
 
-    else if (payload === 'em_math_flow') {
-      magicFunc(sender_psid, em_math);
-    }
+  else if (payload === 'em_ques_flow') {
+    magicFunc(sender_psid, em_question);
+  }
 
-    else if (payload === 'em_blast_flow') {
-      magicFunc(sender_psid, em_blastFur);
-    }
+  else if (payload === 'em_math_flow') {
+    magicFunc(sender_psid, em_math);
+  }
 
-    else if (payload === 'em_heat_flow') {
-      magicFunc(sender_psid, em_heatTreat);
-    }
+  else if (payload === 'em_blast_flow') {
+    magicFunc(sender_psid, em_blastFur);
+  }
 
-    else if (payload === 'em_wrought_flow') {
-      magicFunc(sender_psid, em_wrought);
-    }
+  else if (payload === 'em_heat_flow') {
+    magicFunc(sender_psid, em_heatTreat);
+  }
 
-    else if (payload === 'em_crystal_flow') {
-      magicFunc(sender_psid, em_crystal);
-    }
+  else if (payload === 'em_wrought_flow') {
+    magicFunc(sender_psid, em_wrought);
+  }
 
-    else if (payload === 'em_iron_ceramic_flow') {
-      magicFunc(sender_psid, em_iron);
-    }
+  else if (payload === 'em_crystal_flow') {
+    magicFunc(sender_psid, em_crystal);
+  }
 
-    else if (payload === 'em_glass_flow') {
-      magicFunc(sender_psid, em_glass);
-    }
+  else if (payload === 'em_iron_ceramic_flow') {
+    magicFunc(sender_psid, em_iron);
+  }
 
-    else if (payload === 'em_ceramic_flow') {
-      magicFunc(sender_psid, em_ceramic);
-    }
+  else if (payload === 'em_glass_flow') {
+    magicFunc(sender_psid, em_glass);
+  }
 
-    else if (payload === 'em_corrosion_flow') {
-      magicFunc(sender_psid, em_corrosion);
-    }
+  else if (payload === 'em_ceramic_flow') {
+    magicFunc(sender_psid, em_ceramic);
+  }
 
-    else if (payload === 'em_alloy_flow') {
-      magicFunc(sender_psid, em_alloy);
-    }
+  else if (payload === 'em_corrosion_flow') {
+    magicFunc(sender_psid, em_corrosion);
+  }
 
-    else if (payload === 'em_composites_flow') {
-      magicFunc(sender_psid, em_composites);
-    }
+  else if (payload === 'em_alloy_flow') {
+    magicFunc(sender_psid, em_alloy);
+  }
 
-    //subject-> bfs
-    else if (payload === 'bfs_flow') {
-      magicFunc(sender_psid, bfs_flow);
-    }
+  else if (payload === 'em_composites_flow') {
+    magicFunc(sender_psid, em_composites);
+  }
 
-    else if (payload === 'bfs_lec3_flow') {
-      magicFunc(sender_psid, bfs_lec3);
-    }
+  //subject-> bfs
+  else if (payload === 'bfs_flow') {
+    magicFunc(sender_psid, bfs_flow);
+  }
 
-    //subject-> pse
-    else if (payload === 'pse_flow') {
-      magicFunc(sender_psid, pse_flow);
-    }
+  else if (payload === 'bfs_lec3_flow') {
+    magicFunc(sender_psid, bfs_lec3);
+  }
 
-    else if (payload === 'pse_books_flow') {
-      magicFunc(sender_psid, pse_books);
-    }
+  //subject-> pse
+  else if (payload === 'pse_flow') {
+    magicFunc(sender_psid, pse_flow);
+  }
 
-    else if (payload === 'pse_ques_flow') {
-      magicFunc(sender_psid, pse_questions);
-    }
+  else if (payload === 'pse_books_flow') {
+    magicFunc(sender_psid, pse_books);
+  }
 
-    else if (payload === 'pse_handnotes_flow') {
-      magicFunc(sender_psid, pse_handnotes);
-    }
+  else if (payload === 'pse_ques_flow') {
+    magicFunc(sender_psid, pse_questions);
+  }
 
-    else if (payload === 'pse_intro_flow') {
-      magicFunc(sender_psid, pse_intro);
-    }
+  else if (payload === 'pse_handnotes_flow') {
+    magicFunc(sender_psid, pse_handnotes);
+  }
 
-    else if (payload === 'pse_physical_struc_flow') {
-      magicFunc(sender_psid, pse_physical);
-    }
+  else if (payload === 'pse_intro_flow') {
+    magicFunc(sender_psid, pse_intro);
+  }
 
-    else if (payload === 'pse_chemical_struc_flow') {
-      magicFunc(sender_psid, pse_chemical);
-    }
+  else if (payload === 'pse_physical_struc_flow') {
+    magicFunc(sender_psid, pse_physical);
+  }
 
-    else if (payload === 'pse_molWei_flow') {
-      magicFunc(sender_psid, pse_moleWeight);
-    }
+  else if (payload === 'pse_chemical_struc_flow') {
+    magicFunc(sender_psid, pse_chemical);
+  }
 
-    else if (payload === 'pse_step_growth_flow') {
-      magicFunc(sender_psid, pse_step);
-    }
+  else if (payload === 'pse_molWei_flow') {
+    magicFunc(sender_psid, pse_moleWeight);
+  }
 
-    else if (payload === 'pse_chain_growth_flow') {
-      magicFunc(sender_psid, pse_chain);
-    }
+  else if (payload === 'pse_step_growth_flow') {
+    magicFunc(sender_psid, pse_step);
+  }
 
-    else if (payload === 'pse_morpho_flow') {
-      magicFunc(sender_psid, pse_morpho);
-    }
+  else if (payload === 'pse_chain_growth_flow') {
+    magicFunc(sender_psid, pse_chain);
+  }
 
-    else if (payload === 'pse_thermal_flow') {
-      magicFunc(sender_psid, pse_thermal);
-    }
+  else if (payload === 'pse_morpho_flow') {
+    magicFunc(sender_psid, pse_morpho);
+  }
 
-    else if (payload === 'pse_degrad_flow') {
-      magicFunc(sender_psid, pse_degrad);
-    }
+  else if (payload === 'pse_thermal_flow') {
+    magicFunc(sender_psid, pse_thermal);
+  }
 
-    else if (payload === 'pse_polymer_tec_flow') {
-      magicFunc(sender_psid, pse_polyTech);
-    }
+  else if (payload === 'pse_degrad_flow') {
+    magicFunc(sender_psid, pse_degrad);
+  }
 
-    else if (payload === 'pse_application_flow') {
-      magicFunc(sender_psid, pse_application);
-    }
+  else if (payload === 'pse_polymer_tec_flow') {
+    magicFunc(sender_psid, pse_polyTech);
+  }
 
-    else if (payload === 'tpm_flow') {
-      magicFunc(sender_psid, tpm_flow);
-    }
+  else if (payload === 'pse_application_flow') {
+    magicFunc(sender_psid, pse_application);
+  }
 
-    else if (payload === 'tpm_ques_flow') {
-      magicFunc(sender_psid, tpm_ques);
-    }
+  else if (payload === 'tpm_flow') {
+    magicFunc(sender_psid, tpm_flow);
+  }
 
-    else if (payload === 'tpm_wov_fab_wet_flow') {
-      magicFunc(sender_psid, tpm_fabWet);
-    }
+  else if (payload === 'tpm_ques_flow') {
+    magicFunc(sender_psid, tpm_ques);
+  }
 
-    else if (payload === 'tpm_wov_fab_manu_flow') {
-      magicFunc(sender_psid, tpm_fabManu);
-    }
+  else if (payload === 'tpm_wov_fab_wet_flow') {
+    magicFunc(sender_psid, tpm_fabWet);
+  }
 
+  else if (payload === 'tpm_wov_fab_manu_flow') {
+    magicFunc(sender_psid, tpm_fabManu);
+  }
 
-     //subject-> fmg
-    else if (payload === 'fmg_flow') {
-      magicFunc(sender_psid, fmg_flow);
-    }
 
-     //subject-> tmm
-     else if (payload === 'tmm_flow') {
-      magicFunc(sender_psid, tmm_flow);
-    }
+  //subject-> fmg
+  else if (payload === 'fmg_flow') {
+    magicFunc(sender_psid, fmg_flow);
+  }
 
-    else if (payload === 'tmm_quess_flow') {
-      magicFunc(sender_psid, tmm_questions);
-    }
+  //subject-> tmm
+  else if (payload === 'tmm_flow') {
+    magicFunc(sender_psid, tmm_flow);
+  }
 
-    //subject-> iae
-    else if (payload === 'iae_flow') {
-      magicFunc(sender_psid, iae_flow);
-    }
+  else if (payload === 'tmm_quess_flow') {
+    magicFunc(sender_psid, tmm_questions);
+  }
 
-    else if (payload === 'iae_books_flow') {
-      magicFunc(sender_psid, iae_books);
-    }
+  //subject-> iae
+  else if (payload === 'iae_flow') {
+    magicFunc(sender_psid, iae_flow);
+  }
 
-    else if (payload === 'iae_ques_flow') {
-      magicFunc(sender_psid, iae_question);
-    }
+  else if (payload === 'iae_books_flow') {
+    magicFunc(sender_psid, iae_books);
+  }
 
-    else if (payload === 'iae_intro_flow') {
-      magicFunc(sender_psid, iae_intro);
-    }
+  else if (payload === 'iae_ques_flow') {
+    magicFunc(sender_psid, iae_question);
+  }
 
-    else if (payload === 'iae_full_slide_flow') {
-      magicFunc(sender_psid, iae_fullSlide);
-    }
+  else if (payload === 'iae_intro_flow') {
+    magicFunc(sender_psid, iae_intro);
+  }
 
-    else if (payload === 'iae_diff_woven_flow') {
-      magicFunc(sender_psid, iae_diffWov);
-    }
+  else if (payload === 'iae_full_slide_flow') {
+    magicFunc(sender_psid, iae_fullSlide);
+  }
 
-    else if (payload === 'iae_brands_flow') {
-      magicFunc(sender_psid, iae_brands);
-    }
+  else if (payload === 'iae_diff_woven_flow') {
+    magicFunc(sender_psid, iae_diffWov);
+  }
 
-    else if (payload === 'iae_quota_flow') {
-      magicFunc(sender_psid, iae_quota);
-    }
+  else if (payload === 'iae_brands_flow') {
+    magicFunc(sender_psid, iae_brands);
+  }
 
-    else if (payload === 'iae_cam_flow') {
-      magicFunc(sender_psid, iae_cam);
-    }
+  else if (payload === 'iae_quota_flow') {
+    magicFunc(sender_psid, iae_quota);
+  }
 
-    else if (payload === 'iae_shirt_flow') {
-      magicFunc(sender_psid, iae_shirt);
-    }
+  else if (payload === 'iae_cam_flow') {
+    magicFunc(sender_psid, iae_cam);
+  }
 
-    //subject-> iae
-    else if (payload === 'iee_flow') {
-      magicFunc(sender_psid, iee_flow);
-    }
+  else if (payload === 'iae_shirt_flow') {
+    magicFunc(sender_psid, iae_shirt);
+  }
 
-    else if (payload === 'iee_books_flow') {
-      magicFunc(sender_psid, iee_books);
-    }
+  //subject-> iae
+  else if (payload === 'iee_flow') {
+    magicFunc(sender_psid, iee_flow);
+  }
 
-    else if (payload === 'iee_sheets_flow') {
-      magicFunc(sender_psid, iee_sheets);
-    }
+  else if (payload === 'iee_books_flow') {
+    magicFunc(sender_psid, iee_books);
+  }
 
-    else if (payload === 'iee_handnotes_flow') {
-      magicFunc(sender_psid, iee_notes);
-    }
+  else if (payload === 'iee_sheets_flow') {
+    magicFunc(sender_psid, iee_sheets);
+  }
 
-    else if (payload === 'iee_man_env_flow') {
-      magicFunc(sender_psid, iee_manEnv);
-    }
+  else if (payload === 'iee_handnotes_flow') {
+    magicFunc(sender_psid, iee_notes);
+  }
 
-    else if (payload === 'iee_soil_flow') {
-      magicFunc(sender_psid, iee_soil);
-    }
+  else if (payload === 'iee_man_env_flow') {
+    magicFunc(sender_psid, iee_manEnv);
+  }
 
-    else if (payload === 'iee_env_issue_flow') {
-      magicFunc(sender_psid, iee_envIssues);
-    }
+  else if (payload === 'iee_soil_flow') {
+    magicFunc(sender_psid, iee_soil);
+  }
 
-    else if (payload === 'iee_nature_env_flow') {
-      magicFunc(sender_psid, iee_natureEnv);
-    }
+  else if (payload === 'iee_env_issue_flow') {
+    magicFunc(sender_psid, iee_envIssues);
+  }
 
-    else if (payload === 'iee_spf_upf_flow') {
-      magicFunc(sender_psid, iee_spf);
-    }
+  else if (payload === 'iee_nature_env_flow') {
+    magicFunc(sender_psid, iee_natureEnv);
+  }
 
-    else if (payload === 'math2_flow') {
-      magicFunc(sender_psid, math2_flow);
-    }
+  else if (payload === 'iee_spf_upf_flow') {
+    magicFunc(sender_psid, iee_spf);
+  }
 
-    else if (payload === 'math2_books_flow') {
-      magicFunc(sender_psid, math2_books);
-    }
+  else if (payload === 'math2_flow') {
+    magicFunc(sender_psid, math2_flow);
+  }
 
-    else if (payload === 'math2_ques_flow') {
-      magicFunc(sender_psid, math2_question);
-    }
+  else if (payload === 'math2_books_flow') {
+    magicFunc(sender_psid, math2_books);
+  }
 
-    else if (payload === 'math2_suggestion_flow') {
-      magicFunc(sender_psid, math2_suggestion);
-    }
+  else if (payload === 'math2_ques_flow') {
+    magicFunc(sender_psid, math2_question);
+  }
 
-    else if (payload === 'math2_moivre_flow') {
-      magicFunc(sender_psid, math2_moivre);
-    }
+  else if (payload === 'math2_suggestion_flow') {
+    magicFunc(sender_psid, math2_suggestion);
+  }
 
-    else if (payload === 'math2_homo_flow') {
-      magicFunc(sender_psid, math2_homo);
-    }
+  else if (payload === 'math2_moivre_flow') {
+    magicFunc(sender_psid, math2_moivre);
+  }
 
-    else if (payload === 'math2_exact_flow') {
-      magicFunc(sender_psid, math2_exact);
-    }
+  else if (payload === 'math2_homo_flow') {
+    magicFunc(sender_psid, math2_homo);
+  }
 
-    else if (payload === 'math2_lde_flow') {
-      magicFunc(sender_psid, math2_lde);
-    }
+  else if (payload === 'math2_exact_flow') {
+    magicFunc(sender_psid, math2_exact);
+  }
 
-    else if (payload === 'math2_red_homo_flow') {
-      magicFunc(sender_psid, math2_redhomo);
-    }
+  else if (payload === 'math2_lde_flow') {
+    magicFunc(sender_psid, math2_lde);
+  }
 
-    else if (payload === 'math2_dif_eqn_flow') {
-      magicFunc(sender_psid, math2_diffeqn);
-    }
+  else if (payload === 'math2_red_homo_flow') {
+    magicFunc(sender_psid, math2_redhomo);
+  }
 
-    else if (payload === 'math2_diffeqn_note_flow') {
-      magicFunc(sender_psid, math2_diffeqn_note);
-    }
+  else if (payload === 'math2_dif_eqn_flow') {
+    magicFunc(sender_psid, math2_diffeqn);
+  }
 
-    else if (payload === 'math2_diffeqn_book_flow') {
-      magicFunc(sender_psid, math2_diffeqn_book);
-    }
+  else if (payload === 'math2_diffeqn_note_flow') {
+    magicFunc(sender_psid, math2_diffeqn_note);
+  }
 
-    else if (payload === 'math2_linear_eqn_flow') {
-      magicFunc(sender_psid, math2_linEqn);
-    }
+  else if (payload === 'math2_diffeqn_book_flow') {
+    magicFunc(sender_psid, math2_diffeqn_book);
+  }
 
-    else if (payload === 'math2_residue_flow') {
-      magicFunc(sender_psid, math2_residue);
-    }
+  else if (payload === 'math2_linear_eqn_flow') {
+    magicFunc(sender_psid, math2_linEqn);
+  }
 
-    else if (payload === 'math2_line_int_flow') {
-      magicFunc(sender_psid, math2_lineInt);
-    }
+  else if (payload === 'math2_residue_flow') {
+    magicFunc(sender_psid, math2_residue);
+  }
 
-    else if (payload === 'math2_method_var_flow') {
-      magicFunc(sender_psid, math2_methodVar);
-    }
+  else if (payload === 'math2_line_int_flow') {
+    magicFunc(sender_psid, math2_lineInt);
+  }
 
-    else if (payload === 'math2_analy_func_flow') {
-      magicFunc(sender_psid, math2_analy);
-    }
+  else if (payload === 'math2_method_var_flow') {
+    magicFunc(sender_psid, math2_methodVar);
+  }
 
-    else if (payload === 'math2_vector_flow') {
-      magicFunc(sender_psid, math2_vector);
-    }
+  else if (payload === 'math2_analy_func_flow') {
+    magicFunc(sender_psid, math2_analy);
+  }
 
-    else if (payload === 'math2_ode_flow') {
-      magicFunc(sender_psid, math2_ode);
-    }
+  else if (payload === 'math2_vector_flow') {
+    magicFunc(sender_psid, math2_vector);
+  }
 
-    else if (payload === 'math2_separation_flow') {
-      magicFunc(sender_psid, math2_sepaVar);
-    }
+  else if (payload === 'math2_ode_flow') {
+    magicFunc(sender_psid, math2_ode);
+  }
 
-    else if (payload === 'math2_laplace_flow') {
-      magicFunc(sender_psid, math2_laplace);
-    }
+  else if (payload === 'math2_separation_flow') {
+    magicFunc(sender_psid, math2_sepaVar);
+  }
 
-    else if (payload === 'math2_cx_num_flow') {
-      magicFunc(sender_psid, math2_cxNum);
-    }
+  else if (payload === 'math2_laplace_flow') {
+    magicFunc(sender_psid, math2_laplace);
+  }
 
+  else if (payload === 'math2_cx_num_flow') {
+    magicFunc(sender_psid, math2_cxNum);
+  }
 
-     //subject-> chem2
-     else if (payload === 'che2_flow') {
-      magicFunc(sender_psid, chem2_flow);
-    }
 
-    else if (payload === 'chem2_books_flow') {
-      magicFunc(sender_psid, chem2_books);
-    }
+  //subject-> chem2
+  else if (payload === 'che2_flow') {
+    magicFunc(sender_psid, chem2_flow);
+  }
 
-    else if (payload === 'chem2_ques_flow') {
-      magicFunc(sender_psid, chem2_question);
-    }
+  else if (payload === 'chem2_books_flow') {
+    magicFunc(sender_psid, chem2_books);
+  }
 
-    else if (payload === 'chem2_org_meta_flow') {
-      magicFunc(sender_psid, chem2_orgMetalic);
-    }
+  else if (payload === 'chem2_ques_flow') {
+    magicFunc(sender_psid, chem2_question);
+  }
 
-    else if (payload === 'chem2_carbonyl_flow') {
-      magicFunc(sender_psid, chem2_carbonyl);
-    }
+  else if (payload === 'chem2_org_meta_flow') {
+    magicFunc(sender_psid, chem2_orgMetalic);
+  }
 
-    else if (payload === 'chem2_org_reac_flow') {
-      magicFunc(sender_psid, chem2_orgReac);
-    }
-
-    else if (payload === 'chem2_alc_phe_flow') {
-      magicFunc(sender_psid, chem2_AlcPhenol);
-    }
-
-    else if (payload === 'chem2_amino_flow') {
-      magicFunc(sender_psid, chem2_AminoAcid);
-    }
-
-    else if (payload === 'chem2_carbo_flow') {
-      magicFunc(sender_psid, chem2_carbohydrates);
-    }
-
-    else if (payload === 'chem2_color_dye_flow') {
-      magicFunc(sender_psid, chem2_color_dye);
-    }
-
-    else if (payload === 'chem2_carboxylic_flow') {
-      magicFunc(sender_psid, chem2_carboxylic);
-    }
-
-
-    else if (payload === 'chem2_amine_flow') {
-      magicFunc(sender_psid, chem2_amine);
-    }
-
-    else if (payload === 'chem2_solubulity_flow') {
-      magicFunc(sender_psid, chem2_solubulity);
-    }
-
-
-    //subject-> phy2
-    else if (payload === 'phy2_flow') {
-      magicFunc(sender_psid, phy2_flow);
-    }
-
-    else if (payload === 'phy2_books_flow') {
-      magicFunc(sender_psid, phy2_books);
-    }
-
-    else if (payload === 'phy2_ques_flow') {
-      magicFunc(sender_psid, phy2_question);
-    }
-
-    else if (payload === 'phy2_kinetic_flow') {
-      magicFunc(sender_psid, phy2_Kinetic);
-    }
-
-    else if (payload === 'phy2_electricity_flow') {
-      magicFunc(sender_psid, phy2_Elctricity);
-    }
-
-    else if (payload === 'phy2_electric_notes_flow') {
-      magicFunc(sender_psid, phy2_Elctricity_notes);
-    }
-
-    else if (payload === 'phy2_electric_slides_flow') {
-      magicFunc(sender_psid, phy2_Elctricity_slides);
-    }
-
-    else if (payload === 'phy2_thermodynamics_flow') {
-      magicFunc(sender_psid, phy2_Thermo);
-    }
-
-    else if (payload === 'phy2_radiation_flow') {
-      magicFunc(sender_psid, phy2_Radiation);
-    }
-
-
-    else if (payload === 'phy2_magnet_flow') {
-      magicFunc(sender_psid, phy2_magnet);
-    }
-
-    else if (payload === 'phy2_modern_flow') {
-      magicFunc(sender_psid, phy2_modern);
-    }
-
-    else if (payload === 'phy2_entropy_flow') {
-      magicFunc(sender_psid, phy2_entropy);
-    }
-
-    //routine
-    else if (payload === 'online_2_1') {
-      magicFunc(sender_psid, routine_online_2_1);
-    }
-    else if (payload === 'online_3_1') {
-      magicFunc(sender_psid, routine_online_3_1);
-    }
-    else if (payload === 'routine_level_1') {
-      magicFunc(sender_psid, routine_level1);
-    }
-    else if (payload === 'routine_level_2') {
-      magicFunc(sender_psid, routine_level2);
-    }
-    else if (payload === 'routine_level_3') {
-      magicFunc(sender_psid, routine_level3);
-    }
-    else if (payload === 'routine_level_4') {
-      magicFunc(sender_psid, routine_level4);
-    }
-    else if (payload === 'l1t1Routine_flow') {
-      magicFunc(sender_psid, routine_l1t1);
-    }
-    else if (payload === 'l1t2Routine_flow') {
-      magicFunc(sender_psid, routine_l1t2);
-    }
-    else if (payload === 'l2t1Routine_flow') {
-      magicFunc(sender_psid, routine_l2t1);
-    }
-    else if (payload === 'l2t2Routine_flow') {
-      magicFunc(sender_psid, routine_l2t2);
-    }
-    else if (payload === 'l3t1Routine_flow') {
-      magicFunc(sender_psid, routine_l3t1);
-    }
-    else if (payload === 'l3t2Routine_flow') {
-      magicFunc(sender_psid, routine_l3t2);
-    }
-    else if (payload === 'l4t1Routine_flow') {
-      magicFunc(sender_psid, routine_l4t1);
-    }
-    else if (payload === 'l4t2Routine_flow') {
-      magicFunc(sender_psid, routine_l4t2);
-    }
-
-    //results
-    else if (payload === 'result_academic') {
-      magicFunc(sender_psid, result_Academic);
-    }
-    else if (payload === 'academic_res_2019') {
-      magicFunc(sender_psid, result_Academic_2019);
-    }
-    else if (payload === 'academic_res_2018') {
-      magicFunc(sender_psid, result_Academic_2018);
-    }
-    else if (payload === 'result_admission') {
-      magicFunc(sender_psid, result_Admission);
-    }
-    else if (payload === 'result_retake') {
-      magicFunc(sender_psid, result_Retake);
-    }
-    else if (payload === 'retake_res_2019') {
-      magicFunc(sender_psid, result_Retake_2019);
-    }
-    else if (payload === 'retake_res_2018') {
-      magicFunc(sender_psid, result_Retake_2018);
-    }
-    else if (payload === 'result_affli') {
-      magicFunc(sender_psid, result_Affli);
-    }
-    else if (payload === 'affli_res_2020') {
-      magicFunc(sender_psid, result_Affli_2020);
-    }
-    else if (payload === 'affli_res_2019') {
-      magicFunc(sender_psid, result_Affli_2019);
-    }
-
-    //epd
-    else if (payload === 'epd_flow') {
-      magicFunc(sender_psid, epd_flow);
-    }
-
-    //ir
-    else if (payload === 'ir_flow') {
-      magicFunc(sender_psid, ir_flow);
-    }
-    else if (payload === 'ir_ir_flow') {
-      magicFunc(sender_psid, ir_ir_flow);
-    }
-
-    //tam
-    else if (payload === 'tam_flow') {
-      magicFunc(sender_psid, tam_flow);
-    }
-    else if (payload === 'tam_intro_merch_flow') {
-      magicFunc(sender_psid, tam_intro_merch);
-    }
-
-    //ppc
-    else if (payload === 'ppc_flow') {
-      magicFunc(sender_psid, ppc_flow);
-    }
-
-    //hrm
-    else if (payload === 'hrm_flow') {
-      magicFunc(sender_psid, hrm_flow);
-    }
-
-    //bs
-    else if (payload === 'bs_flow') {
-      magicFunc(sender_psid, bs_flow);
-    }
-    
-     //bil
-     else if (payload === 'bil_flow') {
-      magicFunc(sender_psid, bil_flow);
-    }
-    else if (payload === 'bil_labor_law_flow') {
-      magicFunc(sender_psid, bil_laborlaw);
-    }
-
-    //fm1
-    else if (payload === 'fm1_flow') {
-      magicFunc(sender_psid, fm1_flow);
-    }
-    else if (payload === 'fm1_hnotes_flow') {
-      magicFunc(sender_psid, fm1_notes);
-    }
-    else if (payload === 'fm1_books_flow') {
-      magicFunc(sender_psid, fm1_books);
-    }
-    else if (payload === 'fm1_sugg_flow') {
-      magicFunc(sender_psid, fm1_sugg);
-    }
-    else if (payload === 'fm1_ques_flow') {
-      magicFunc(sender_psid, fm1_question);
-    }
-    else if (payload === 'fm1_loom_flow') {
-      magicFunc(sender_psid, fm1_loom);
-    }
-    else if (payload === 'fm1_motion_weav_flow') {
-      magicFunc(sender_psid, fm1_motionWeav);
-    }
-    else if (payload === 'fm1_intro_fm_flow') {
-      magicFunc(sender_psid, fm1_intro);
-    }
-    else if (payload === 'fm1_shedding_flow') {
-      magicFunc(sender_psid, fm1_shedding);
-    }
-    else if (payload === 'fm1_weaving_flow') {
-      magicFunc(sender_psid, fm1_weaving);
-    }
-    else if (payload === 'fm1_sizing_flow') {
-      magicFunc(sender_psid, fm1_sizing);
-    }
-    else if (payload === 'fm1_winding_flow') {
-      magicFunc(sender_psid, fm1_winding);
-    }
-    else if (payload === 'fm1_dobby_flow') {
-      magicFunc(sender_psid, fm1_dobby);
-    }
-    else if (payload === 'fm1_warping_flow') {
-      magicFunc(sender_psid, fm1_warping);
-    }
-
-    //mmtf
-    else if (payload === 'mmtf_flow') {
-      magicFunc(sender_psid, mmtf_flow);
-    }
-    else if (payload === 'mmtf_mmtf_books_flowflow') {
-      magicFunc(sender_psid, mmtf_books);
-    }
-    else if (payload === 'mmtf_hnotes_flow') {
-      magicFunc(sender_psid, mmtf_notes);
-    }
-    else if (payload === 'mmtf_sugg_flow') {
-      magicFunc(sender_psid, mmtf_suggestion);
-    }
-    else if (payload === 'mmtf_intro_flow') {
-      magicFunc(sender_psid, mmtf_intro);
-    }
-    else if (payload === 'mmtf_rayon_flow') {
-      magicFunc(sender_psid, mmtf_rayon);
-    }
-    else if (payload === 'mmtf_spinning_sys_flow') {
-      magicFunc(sender_psid, mmtf_spin_sys);
-    }
-    else if (payload === 'mmtf_high_perf_flow') {
-      magicFunc(sender_psid, mmtf_highperf);
-    }
-    else if (payload === 'mmtf_polyamaide_flow') {
-      magicFunc(sender_psid, mmtf_polyamide);
-    }
-    else if (payload === 'mmtf_modal_flow') {
-      magicFunc(sender_psid, mmtf_modal);
-    }
-    else if (payload === 'mmtf_elastomer_flow') {
-      magicFunc(sender_psid, mmtf_elastomer);
-    }
-    else if (payload === 'mmtf_polyolefin_flow') {
-      magicFunc(sender_psid, mmtf_polyolefin);
-    }
-    else if (payload === 'mmtf_carbon_fibre_flow') {
-      magicFunc(sender_psid, mmtf_carbonFib);
-    }
-    else if (payload === 'mmtf_acetate_flow') {
-      magicFunc(sender_psid, mmtf_acetate);
-    }
-    else if (payload === 'mmtf_bio_fibre_flow') {
-      magicFunc(sender_psid, mmtf_biofib);
-    }
-    else if (payload === 'mmtf_polyester_flow') {
-      magicFunc(sender_psid, mmtf_polyester);
-    }
-    else if (payload === 'mmtf_acrylic_flow') {
-      magicFunc(sender_psid, mmtf_acrylic);
-    }
-    else if (payload === 'mmtf_vectran_flow') {
-      magicFunc(sender_psid, mmtf_vectran);
-    }
-    else if (payload === 'mmtf_regen_protein_fibre_flow') {
-      magicFunc(sender_psid, mmtf_regenFib);
-    }
-    else if (payload === 'mmtf_glassfib_flow') {
-      magicFunc(sender_psid, mmtf_glassfib);
-    }
-    else if (payload === 'mmtf_lyocell_flow') {
-      magicFunc(sender_psid, mmtf_lyocell);
-    }
-    else if (payload === 'mmtf_nylon_flow') {
-      magicFunc(sender_psid, mmtf_nylon);
-    }
-
-    //ttqc
-    else if (payload === 'ttqc_flow') {
-      magicFunc(sender_psid, ttqc_flow);
-    }
-    else if (payload === 'ttqc_books_flow') {
-      magicFunc(sender_psid, ttqc_books);
-    }
-    else if (payload === 'ttqc_hnotes_flow') {
-      magicFunc(sender_psid, ttqc_notes);
-    }
-    else if (payload === 'ttqc_count_flow') {
-      magicFunc(sender_psid, ttqc_count);
-    }
-    else if (payload === 'ttqc_crimp_flow') {
-      magicFunc(sender_psid, ttqc_crimp);
-    }
-    else if (payload === 'ttqc_twist_flow') {
-      magicFunc(sender_psid, ttqc_twist);
-    }
-    else if (payload === 'ttqc_intro_flow') {
-      magicFunc(sender_psid, ttqc_intro);
-    }
-    else if (payload === 'ttqc_mositure_flow') {
-      magicFunc(sender_psid, ttqc_moisture);
-    }
-    else if (payload === 'ttqc_neps_flow') {
-      magicFunc(sender_psid, ttqc_neps);
-    }
-    else if (payload === 'ttqc_sampling_flow') {
-      magicFunc(sender_psid, ttqc_sampling);
-    }
-    else if (payload === 'ttqc_fibre_prop_flow') {
-      magicFunc(sender_psid, ttqc_fibre_prop);
-    }
-    else if (payload === 'ttqc_hvi_flow') {
-      magicFunc(sender_psid, ttqc_hvi);
-    }
-    else if (payload === 'ttqc_afis_flow') {
-      magicFunc(sender_psid, ttqc_afis);
-    }
-
-    //stat
-    else if (payload === 'stat_flow') {
-      magicFunc(sender_psid, stat_flow);
-    }
-    else if (payload === 'stat_books_flow') {
-      magicFunc(sender_psid, stat_books);
-    }
-    else if (payload === 'stat_hnotes_flow') {
-      magicFunc(sender_psid, stat_notes);
-    }
-    else if (payload === 'stat_probab_flow') {
-      magicFunc(sender_psid, stat_probab);
-    }
-    else if (payload === 'stat_intro_flow') {
-      magicFunc(sender_psid, stat_intro);
-    }
-    else if (payload === 'stat_central_tend_flow') {
-      magicFunc(sender_psid, stat_central_tend);
-    }
-    else if (payload === 'stat_cv_sd_flow') {
-      magicFunc(sender_psid, stat_cv);
-    }
-    else if (payload === 'stat_moments_flow') {
-      magicFunc(sender_psid, stat_moments);
-    }
-    else if (payload === 'stat_shapes_flow') {
-      magicFunc(sender_psid, stat_shape);
-    }
-    else if (payload === 'stat_design_exp_flow') {
-      magicFunc(sender_psid, stat_design);
-    }
-    else if (payload === 'stat_normal_distri_flow') {
-      magicFunc(sender_psid, stat_normal);
-    }
-    else if (payload === 'stat_binomial_distri_flow') {
-      magicFunc(sender_psid, stat_binomial);
-    }
-    else if (payload === 'stat_poission_flow') {
-      magicFunc(sender_psid, stat_poission);
-    }
-    else if (payload === 'stat_regression_flow') {
-      magicFunc(sender_psid, stat_regression);
-    }
-
-    //feee
-    else if (payload === 'eee_flow') {
-      magicFunc(sender_psid, eee_flow);
-    }
-    else if (payload === 'eee_books_flow') {
-      magicFunc(sender_psid, eee_books);
-    }
-    else if (payload === 'eee_hnotes_flow') {
-      magicFunc(sender_psid, eee_notes);
-    }
-    else if (payload === 'eee_ques_flow') {
-      magicFunc(sender_psid, eee_ques);
-    }
-    else if (payload === 'eee_ch1_flow') {
-      magicFunc(sender_psid, eee_ch1);
-    }
-    else if (payload === 'eee_ch2_flow') {
-      magicFunc(sender_psid, eee_ch2);
-    }
-    else if (payload === 'eee_ch3_flow') {
-      magicFunc(sender_psid, eee_ch3);
-    }
-    else if (payload === 'eee_ch4_flow') {
-      magicFunc(sender_psid, eee_ch4);
-    }
-    else if (payload === 'eee_ch5_flow') {
-      magicFunc(sender_psid, eee_ch5);
-    }
-    else if (payload === 'eee_ch8_flow') {
-      magicFunc(sender_psid, eee_ch8);
-    }
-    else if (payload === 'eee_wye_delta_flow') {
-      magicFunc(sender_psid, eee_wye);
-    }
-    else if (payload === 'eee_rms_flow') {
-      magicFunc(sender_psid, eee_rms);
-    }
-    else if (payload === 'eee_circuit_analy_flow') {
-      magicFunc(sender_psid, eee_circuit);
-    }
-
-    //am1
-    else if (payload === 'am1_flow') {
-      magicFunc(sender_psid, am1_flow);
-    }
-    else if (payload === 'am1_books_flow') {
-      magicFunc(sender_psid, am1_books);
-    }
-    else if (payload === 'am1_hnotes_flow') {
-      magicFunc(sender_psid, am1_notes);
-    }
-    else if (payload === 'am1_ques_flow') {
-      magicFunc(sender_psid, am1_question);
-    }
-    else if (payload === 'am1_intro_flow') {
-      magicFunc(sender_psid, am1_intro);
-    }
-    else if (payload === 'am1_structure_tex_flow') {
-      magicFunc(sender_psid, am1_strucTex);
-    }
-    else if (payload === 'am1_sizing_sys_flow') {
-      magicFunc(sender_psid, am1_sizing);
-    }
-    else if (payload === 'am1_seam_stitch_flow') {
-      magicFunc(sender_psid, am1_seam);
-    }
-    else if (payload === 'am1_trim_acces_flow') {
-      magicFunc(sender_psid, am1_trims);
-    }
-    else if (payload === 'am1_interlining_flow') {
-      magicFunc(sender_psid, am1_interlining);
-    }
-    else if (payload === 'am1_pattern_flow') {
-      magicFunc(sender_psid, am1_pattern);
-    }
-    else if (payload === 'am1_marker_flow') {
-      magicFunc(sender_psid, am1_marker);
-    }
-    else if (payload === 'am1_spreading_flow') {
-      magicFunc(sender_psid, am1_spreading);
-    }
-    else if (payload === 'am1_fabric_cut_flow') {
-      magicFunc(sender_psid, am1_fabricCut);
-    }
-    else if (payload === 'am1_fabricInspection_flow') {
-      magicFunc(sender_psid, am1_fabricInspection);
-    }
-
-     //marketing
-     else if (payload === 'marketing_flow') {
-      magicFunc(sender_psid, marketing_flow);
-    }
-    else if (payload === 'marketing_books_flow') {
-      magicFunc(sender_psid, marketing_books);
-    }
-    else if (payload === 'marketing_notes_flow') {
-      magicFunc(sender_psid, marketing_notes);
-    }
-    else if (payload === 'marketing_ques_flow') {
-      magicFunc(sender_psid, marketing_ques);
-    }
-    else if (payload === 'marketing_suggestion_flow') {
-      magicFunc(sender_psid, marketing_sugg);
-    }
-    else if (payload === 'marketing_intro_flow') {
-      magicFunc(sender_psid, marketing_intro);
-    }
-    else if (payload === 'marketing_func_flow') {
-      magicFunc(sender_psid, marketing_function);
-    }
-    else if (payload === 'marketing_field_flow') {
-      magicFunc(sender_psid, marketing_field);
-    }
-    else if (payload === 'marketing_concept_flow') {
-      magicFunc(sender_psid, marketing_concept);
-    }
-    else if (payload === 'marketing_market_orientation_flow') {
-      magicFunc(sender_psid, marketing_orientation);
-    }
-    else if (payload === 'marketing_micro_env_flow') {
-      magicFunc(sender_psid, marketing_micro);
-    }
-    else if (payload === 'marketing_macro_env_flow') {
-      magicFunc(sender_psid, marketing_macro);
-    }
-    else if (payload === 'marketing_market_segment_flow') {
-      magicFunc(sender_psid, marketing_segment);
-    }
-    else if (payload === 'marketing_market_targeting_flow') {
-      magicFunc(sender_psid, marketing_target);
-    }
-    else if (payload === 'marketing_diff_pos_flow') {
-      magicFunc(sender_psid, marketing_diffPoss);
-    }
-    else if (payload === 'marketing_channel_distri_flow') {
-      magicFunc(sender_psid, marketing_channelDist);
-    }
-    else if (payload === 'marketing_retailing_flow') {
-      magicFunc(sender_psid, marketing_retail);
-    }
-    else if (payload === 'marketing_price_sys_flow') {
-      magicFunc(sender_psid, marketing_priceSys);
-    }
-    else if (payload === 'marketing_consumer_buyer_flow') {
-      magicFunc(sender_psid, marketing_consumer_buyer);
-    }
-    else if (payload === 'marketing_branding_pack_flow') {
-      magicFunc(sender_psid, marketing_branding);
-    }
-    else if (payload === 'marketing_new_product_flow') {
-      magicFunc(sender_psid, marketing_newProd);
-    }
-    else if (payload === 'marketing_advertising_flow') {
-      magicFunc(sender_psid, marketing_advert);
-    }
-    else if (payload === 'marketing_competitive_flow') {
-      magicFunc(sender_psid, marketing_compStrat);
-    }
-    else if (payload === 'marketing_major_pricing_flow') {
-      magicFunc(sender_psid, marketing_priceStrat);
-    }
-
-     //fyt
-     else if (payload === 'fyt_flow') {
-      magicFunc(sender_psid, fyt_flow);
-    }
-    else if (payload === 'fyt_books_flow') {
-      magicFunc(sender_psid, fyt_books);
-    }
-    else if (payload === 'fyt_hnotes_flow') {
-      magicFunc(sender_psid, fyt_notes);
-    }
-    else if (payload === 'fyt_sugg_flow') {
-      magicFunc(sender_psid, fyt_sugg);
-    }
-    else if (payload === 'fyt_yarnNum_flow') {
-      magicFunc(sender_psid, fyt_number);
-    }
-    else if (payload === 'fyt_yarnTwist_flow') {
-      magicFunc(sender_psid, fyt_twist);
-    }
-    else if (payload === 'fyt_evennessTester_flow') {
-      magicFunc(sender_psid, fyt_evenness);
-    }
-    else if (payload === 'fyt_yarnCounting_flow') {
-      magicFunc(sender_psid, fyt_count);
-    }
-    else if (payload === 'fyt_afis_flow') {
-      magicFunc(sender_psid, fyt_afis);
-    }
-    else if (payload === 'fyt_iso_flow') {
-      magicFunc(sender_psid, fyt_iso);
-    }
-    else if (payload === 'fyt_capaOptical_flow') {
-      magicFunc(sender_psid, fyt_capaOp);
-    }
-
-
-    //ctca
-    else if (payload === 'ctca_flow') {
-      magicFunc(sender_psid, ctca_flow);
-    }
-    else if (payload === 'ctca_books_flow') {
-      magicFunc(sender_psid, ctca_books);
-    }
-    else if (payload === 'ctca_sheets_flow') {
-      magicFunc(sender_psid, ctca_sheets);
-    }
-    else if (payload === 'ctca_thickAge_flow') {
-      magicFunc(sender_psid, ctca_thickAgents);
-    }
-    else if (payload === 'ctca_water_flow') {
-      magicFunc(sender_psid, ctca_water);
-    }
-    else if (payload === 'ctca_surfactants_flow') {
-      magicFunc(sender_psid, ctca_surfact);
-    }
-    else if (payload === 'ctca_bleach_flow') {
-      magicFunc(sender_psid, ctca_bleach);
-    }
-    else if (payload === 'ctca_solutions_flow') {
-      magicFunc(sender_psid, ctca_solutions);
-    }
-    else if (payload === 'ctca_colloid_flow') {
-      magicFunc(sender_psid, ctca_colloid);
-    }
-
-    //fme
-    else if (payload === 'fme_flow') {
-      magicFunc(sender_psid, fme_flow);
-    }
-    else if (payload === 'fme_books_flow') {
-      magicFunc(sender_psid, fme_books);
-    }
-    else if (payload === 'fme_notes_flow') {
-      magicFunc(sender_psid, fme_notes);
-    }
-    else if (payload === 'fme_ques_flow') {
-      magicFunc(sender_psid, fme_ques);
-    }
-    else if (payload === 'fme_sugg_flow') {
-      magicFunc(sender_psid, fme_sugg);
-    }
-    else if (payload === 'fme_boiler_flow') {
-      magicFunc(sender_psid, fme_boiler);
-    }
-    else if (payload === 'fme_powerRefre_flow') {
-      magicFunc(sender_psid, fme_powerRefre);
-    }
-    else if (payload === 'fme_steam_flow') {
-      magicFunc(sender_psid, fme_steamTurb);
-    }
-    else if (payload === 'fme_thermalEng_flow') {
-      magicFunc(sender_psid, fme_thermalEng);
-    }
-    else if (payload === 'fme_fluidMecha_flow') {
-      magicFunc(sender_psid, fme_fluidMecha);
-    }
-    else if (payload === 'fme_energyProcess_flow') {
-      magicFunc(sender_psid, fme_energyProc);
-    }
-    else if (payload === 'fme_solid_flow') {
-      magicFunc(sender_psid, fme_solid);
-    }
-    else if (payload === 'fme_gearTrain_flow') {
-      magicFunc(sender_psid, fme_gearTrain);
-    }
-    else if (payload === 'fme_pumpCompressor_flow') {
-      magicFunc(sender_psid, fme_pumpCompressor);
-    }
-    else if (payload === 'fme_stressStrain_flow') {
-      magicFunc(sender_psid, fme_stress);
-    }
-    else if (payload === 'fme_enginePetrol_flow') {
-      magicFunc(sender_psid, fme_enginePetrol);
-    }
-    else if (payload === 'fme_engineCombus_flow') {
-      magicFunc(sender_psid, fme_engineCombus);
-    }
-    else if (payload === 'fme_beam_flow') {
-      magicFunc(sender_psid, fme_beam);
-    }
-    else if (payload === 'fme_belt_flow') {
-      magicFunc(sender_psid, fme_belt);
-    }
-    else if (payload === 'fme_centroid_flow') {
-      magicFunc(sender_psid, fme_centroid);
-    }
-    else if (payload === 'fme_momentInnertia_flow') {
-      magicFunc(sender_psid, fme_momentofInnertia);
-    }
-    else if (payload === 'fme_cloumn_flow') {
-      magicFunc(sender_psid, fme_column);
-    }
-
-    //sss1
-    else if (payload === 'sss1_flow') {
-      magicFunc(sender_psid, sss1_flow);
-    }
-    else if (payload === 'sss1_books_flow') {
-      magicFunc(sender_psid, sss1_books);
-    }
-    else if (payload === 'sss1_blowRoom_flow') {
-      magicFunc(sender_psid, sss1_blowRoom);
-    }
-    else if (payload === 'sss1_drawFrame_flow') {
-      magicFunc(sender_psid, sss1_DrawFrame);
-    }
-    else if (payload === 'sss1_carding_flow') {
-      magicFunc(sender_psid, sss1_Carding);
-    }
-    else if (payload === 'sss1_intro_flow') {
-      magicFunc(sender_psid, sss1_intro);
-    }
-    else if (payload === 'sss1_introFibre_flow') {
-      magicFunc(sender_psid, sss1_introFib);
-    }
-
-    //sss2
-    else if (payload === 'sss2_flow') {
-      magicFunc(sender_psid, sss2_flow);
-    }
-    else if (payload === 'sss2_notes_flow') {
-      magicFunc(sender_psid, sss2_notes);
-    }
-    else if (payload === 'sss2_ringFrame_flow') {
-      magicFunc(sender_psid, sss2_ringFrame);
-    }
-
-
-    //ym1
-    else if (payload === 'ym1_flow') {
-      magicFunc(sender_psid, ym1_flow);
-    }
-    else if (payload === 'ym1_intro_flow') {
-      magicFunc(sender_psid, ym1_intro);
-    }
-    else if (payload === 'ym1_indeterminer_flow') {
-      magicFunc(sender_psid, ym1_indeter);
-    }
-    else if (payload === 'ym1_blowroom_flow') {
-      magicFunc(sender_psid, ym1_blowroom);
-    }
-    else if (payload === 'ym1_mixing_blend_flow') {
-      magicFunc(sender_psid, ym1_mixBlend);
-    }
-    else if (payload === 'ym1_fibreProp_flow') {
-      magicFunc(sender_psid, ym1_fibreProp);
-    }
-    else if (payload === 'ym1_yarnCondi_flow') {
-      magicFunc(sender_psid, ym1_yarnCondi);
-    }
-    else if (payload === 'ym1_comber_flow') {
-      magicFunc(sender_psid, ym1_comber);
-    }
-    else if (payload === 'ym1_drawFrame_flow') {
-      magicFunc(sender_psid, ym1_drawFrame);
-    }
-    else if (payload === 'ym1_winding_flow') {
-      magicFunc(sender_psid, ym1_winding);
-    }
-    else if (payload === 'ym1_lapFormer_flow') {
-      magicFunc(sender_psid, ym1_lapFormer);
-    }
-    else if (payload === 'ym1_carding_flow') {
-      magicFunc(sender_psid, ym1_carding);
-    }
-    else if (payload === 'ym1_ringFrame_flow') {
-      magicFunc(sender_psid, ym1_ringFrame);
-    }
-    else if (payload === 'ym1_speedFrame_flow') {
-      magicFunc(sender_psid, ym1_speedFrame);
-    }
-
-     //fdce
-    else if (payload === 'fdce_flow') {
-      magicFunc(sender_psid, fdce_flow);
-    }
-    else if (payload === 'fdce_dyesPigments_flow') {
-      magicFunc(sender_psid, fdce_DyesPig);
-    }
-    else if (payload === 'fdce_chromatography_flow') {
-      magicFunc(sender_psid, fdce_Chroamto);
-    }
-    else if (payload === 'fdce_polarity_flow') {
-      magicFunc(sender_psid, fdce_Polarity);
-    }
-    else if (payload === 'fdce_sepaPurifi_flow') {
-      magicFunc(sender_psid, fdce_SepaPuri);
-    }
-    else if (payload === 'fdce_balancingChem_flow') {
-      magicFunc(sender_psid, fdce_BalanceChem);
-    }
-    else if (payload === 'fdce_filtration_flow') {
-      magicFunc(sender_psid, fdce_filtrationMethod);
-    }
-
-
-     //tp
-    else if (payload === 'tp_flow') {
-      magicFunc(sender_psid, tp_flow);
-    }
-    else if (payload === 'tp_books_flow') {
-      magicFunc(sender_psid, tp_books);
-    }
-    else if (payload === 'tp_notes_flow') {
-      magicFunc(sender_psid, tp_notes);
-    }
-    else if (payload === 'tp_sugg_flow') {
-      magicFunc(sender_psid, tp_sugg);
-    }
-    else if (payload === 'tp_ques_flow') {
-      magicFunc(sender_psid, tp_questions);
-    }
-    else if (payload === 'tp_swelling_flow') {
-      magicFunc(sender_psid, tp_swelling);
-    }
-    else if (payload === 'tp_friction_flow') {
-      magicFunc(sender_psid, tp_friction);
-    }
-    else if (payload === 'tp_yarnJamming_flow') {
-      magicFunc(sender_psid, tp_yarnJamming);
-    }
-    else if (payload === 'tp_optical_flow') {
-      magicFunc(sender_psid, tp_Optical);
-    }
-    else if (payload === 'tp_fibreMig_flow') {
-      magicFunc(sender_psid, tp_fibreMig);
-    }
-    else if (payload === 'tp_thermalProp_flow') {
-      magicFunc(sender_psid, tp_tehrmalProp);
-    }
-    else if (payload === 'tp_fibredraw_flow') {
-      magicFunc(sender_psid, tp_fibreDraw);
-    }
-    else if (payload === 'tp_x_ray_flow') {
-      magicFunc(sender_psid, tp_xray);
-    }
-    else if (payload === 'tp_yarnStructure_flow') {
-      magicFunc(sender_psid, tp_yarnStructure);
-    }
-    else if (payload === 'tp_fabgemometry_flow') {
-      magicFunc(sender_psid, tp_fabricGeometry);
-    }
-    else if (payload === 'tp_tensile_flow') {
-      magicFunc(sender_psid, tp_tensileProp);
-    }
-
-
-      //wpp
-      else if (payload === 'wpp_flow') {
-        magicFunc(sender_psid, wpp_flow);
-      }
-      else if (payload === 'wpp_quess_flow') {
-        magicFunc(sender_psid, wpp_ques);
-      }
-      else if (payload === 'wpp_pretreatment_flow') {
-        magicFunc(sender_psid, wpp_pretreatment);
-      }
-      else if (payload === 'wpp_singeing_flow') {
-        magicFunc(sender_psid, wpp_singeing);
-      }
-      else if (payload === 'wpp_desizing_flow') {
-        magicFunc(sender_psid, wpp_desizing);
-      }
-
-       //fd2
-       else if (payload === 'fd2_flow') {
-        magicFunc(sender_psid, fd2_flow);
-      }
-
-
-       //weav prep
-       else if (payload === 'weav_prep_flow') {
-        magicFunc(sender_psid, weavPrep_flow);
-      }
-      else if (payload === 'weav_books_flow') {
-        magicFunc(sender_psid, weavPrep_books);
-      }
-
-
-       //ap1
-      else if (payload === 'ap1_flow') {
-        magicFunc(sender_psid, ap1_flow);
-      }
-      else if (payload === 'ap1_books_flow') {
-        magicFunc(sender_psid, ap1_books);
-      }
-      else if (payload === 'ap1_ques_flow') {
-        magicFunc(sender_psid, ap1_Ques);
-      }
-      else if (payload === 'ap1_sizing_flow') {
-        magicFunc(sender_psid, ap1_Sizing);
-      }
-      else if (payload === 'ap1_trimmimg_flow') {
-        magicFunc(sender_psid, ap1_Trimming);
-      }
-      else if (payload === 'ap1_interlining_flow') {
-        magicFunc(sender_psid, ap1_Interling);
-      }
-      else if (payload === 'ap1_fabricCut_flow') {
-        magicFunc(sender_psid, ap1_fabricCutting);
-      }
-      else if (payload === 'ap1_patternMaking_flow') {
-        magicFunc(sender_psid, ap1_patternMaking);
-      }
-      else if (payload === 'ap1_fabricSpreading_flow') {
-        magicFunc(sender_psid, ap1_fabricSpreading);
-      }
-      else if (payload === 'ap1_markerMaking_flow') {
-        magicFunc(sender_psid, ap1_markerMaking);
-      }
-      else if (payload === 'ap1_sewingTherad_flow') {
-        magicFunc(sender_psid, ap1_sewingThread);
-      }
-
-
-        //wp1
-        else if (payload === 'wp1_flow') {
-          magicFunc(sender_psid, wp1_flow);
-        }
-        else if (payload === 'wp1_books_flow') {
-          magicFunc(sender_psid, wp1_books);
-        }
-        else if (payload === 'wp1_notes_flow') {
-          magicFunc(sender_psid, wp1_notes);
-        }
-        else if (payload === 'wp1_ques_flow') {
-          magicFunc(sender_psid, wp1_ques);
-        }
-        else if (payload === 'wp1_intro_flow') {
-          magicFunc(sender_psid, wp1_introWP);
-        }
-        else if (payload === 'wp1_water_flow') {
-          magicFunc(sender_psid, wp1_water);
-        }
-        else if (payload === 'wp1_introDye_flow') {
-          magicFunc(sender_psid, wp1_introDye);
-        }
-        else if (payload === 'wp1_generalConcepts_flow') {
-          magicFunc(sender_psid, wp1_generalConcepts);
-        }
-        else if (payload === 'wp1_colorFastness_flow') {
-          magicFunc(sender_psid, wp1_colorFastness);
-        }
-        else if (payload === 'wp1_stripping_flow') {
-          magicFunc(sender_psid, wp1_stripping);
-        }
-        else if (payload === 'wp1_singeing_flow') {
-          magicFunc(sender_psid, wp1_singeing);
-        }
-        else if (payload === 'wp1_scouring_flow') {
-          magicFunc(sender_psid, wp1_scouring);
-        }
-        else if (payload === 'wp1_pigment_flow') {
-          magicFunc(sender_psid, wp1_pigment);
-        }
-        else if (payload === 'wp1_textileFinishing_flow') {
-          magicFunc(sender_psid, wp1_TexFinish);
-        }
-        else if (payload === 'wp1_vatDyes_flow') {
-          magicFunc(sender_psid, wp1_vatDyes);
-        }
-        else if (payload === 'wp1_desizing_flow') {
-          magicFunc(sender_psid, wp1_desizing);
-        }
-        else if (payload === 'wp1_basicDye_flow') {
-          magicFunc(sender_psid, wp1_basicDye);
-        }
-        else if (payload === 'wp1_acidDye_flow') {
-          magicFunc(sender_psid, wp1_acidDye);
-        }
-        else if (payload === 'wp1_bleaching_flow') {
-          magicFunc(sender_psid, wp1_bleaching);
-        }
-        else if (payload === 'wp1_disperseDye_flow') {
-          magicFunc(sender_psid, wp1_disperse);
-        }
-        else if (payload === 'wp1_kierBoiler_flow') {
-          magicFunc(sender_psid, wp1_kierBoiler);
-        }
-        else if (payload === 'wp1_dyeingFault_flow') {
-          magicFunc(sender_psid, wp1_dyeingFault);
-        }
-        else if (payload === 'wp1_reactiveDye_flow') {
-          magicFunc(sender_psid, wp1_reactiveDye);
-        }
-        else if (payload === 'wp1_directDye_flow') {
-          magicFunc(sender_psid, wp1_directDye);
-        }
-        else if (payload === 'wp1_jiggerMachine_flow') {
-          magicFunc(sender_psid, wp1_jiggerMachine);
-        }
-        else if (payload === 'wp1_colorTest_flow') {
-          magicFunc(sender_psid, wp1_colorTest);
-        }
-        else if (payload === 'wp1_foldingTest_flow') {
-          magicFunc(sender_psid, wp1_folding);
-        }
-        else if (payload === 'wp1_washingMachine_flow') {
-          magicFunc(sender_psid, wp1_washingMc);
-        }
-    
-
-  
-
-    
-
-
-
-
-
-
-
-
-
-    //syllabus
-    //45
-    else if (payload === 'syllabus_45') {
-      magicFunc(sender_psid, syllabus_45);
-    }
-    else if (payload === 'syllabus_ae45_flow') {
-      magicFunc(sender_psid, syllabus_45_ae);
-    }
-    else if (payload === 'syllabus_fe45_flow') {
-      magicFunc(sender_psid, syllabus_45_fe);
-    }
-    else if (payload === 'syllabus_ipe45_flow') {
-      magicFunc(sender_psid, syllabus_45_ipe);
-    }
-    else if (payload === 'syllabus_tem45_flow') {
-      magicFunc(sender_psid, syllabus_45_tem);
-    }
-    else if (payload === 'syllabus_tfd45_flow') {
-      magicFunc(sender_psid, syllabus_45_tfd);
-    }
-    else if (payload === 'syllabus_ye45_flow') {
-      magicFunc(sender_psid, syllabus_45_ye);
-    }
-    else if (payload === 'syllabus_tmdm45_flow') {
-      magicFunc(sender_psid, syllabus_45_tmdm);
-    }
-    else if (payload === 'syllabus_wpe45_flow') {
-      magicFunc(sender_psid, syllabus_45_wpe);
-    }
-    else if (payload === 'syllabus_dce45_flow') {
-      magicFunc(sender_psid, syllabus_45_dce);
-    }
-    else if (payload === 'syllabus_ese45_flow') {
-      magicFunc(sender_psid, syllabus_45_ese);
-    }
-    //46
-    else if (payload === 'syllabus_46') {
-      magicFunc(sender_psid, notAvailable);
-    }
+  else if (payload === 'chem2_carbonyl_flow') {
+    magicFunc(sender_psid, chem2_carbonyl);
+  }
+
+  else if (payload === 'chem2_org_reac_flow') {
+    magicFunc(sender_psid, chem2_orgReac);
+  }
+
+  else if (payload === 'chem2_alc_phe_flow') {
+    magicFunc(sender_psid, chem2_AlcPhenol);
+  }
+
+  else if (payload === 'chem2_amino_flow') {
+    magicFunc(sender_psid, chem2_AminoAcid);
+  }
+
+  else if (payload === 'chem2_carbo_flow') {
+    magicFunc(sender_psid, chem2_carbohydrates);
+  }
+
+  else if (payload === 'chem2_color_dye_flow') {
+    magicFunc(sender_psid, chem2_color_dye);
+  }
+
+  else if (payload === 'chem2_carboxylic_flow') {
+    magicFunc(sender_psid, chem2_carboxylic);
+  }
+
+
+  else if (payload === 'chem2_amine_flow') {
+    magicFunc(sender_psid, chem2_amine);
+  }
+
+  else if (payload === 'chem2_solubulity_flow') {
+    magicFunc(sender_psid, chem2_solubulity);
+  }
+
+
+  //subject-> phy2
+  else if (payload === 'phy2_flow') {
+    magicFunc(sender_psid, phy2_flow);
+  }
+
+  else if (payload === 'phy2_books_flow') {
+    magicFunc(sender_psid, phy2_books);
+  }
+
+  else if (payload === 'phy2_ques_flow') {
+    magicFunc(sender_psid, phy2_question);
+  }
+
+  else if (payload === 'phy2_kinetic_flow') {
+    magicFunc(sender_psid, phy2_Kinetic);
+  }
+
+  else if (payload === 'phy2_electricity_flow') {
+    magicFunc(sender_psid, phy2_Elctricity);
+  }
+
+  else if (payload === 'phy2_electric_notes_flow') {
+    magicFunc(sender_psid, phy2_Elctricity_notes);
+  }
+
+  else if (payload === 'phy2_electric_slides_flow') {
+    magicFunc(sender_psid, phy2_Elctricity_slides);
+  }
+
+  else if (payload === 'phy2_thermodynamics_flow') {
+    magicFunc(sender_psid, phy2_Thermo);
+  }
+
+  else if (payload === 'phy2_radiation_flow') {
+    magicFunc(sender_psid, phy2_Radiation);
+  }
+
+
+  else if (payload === 'phy2_magnet_flow') {
+    magicFunc(sender_psid, phy2_magnet);
+  }
+
+  else if (payload === 'phy2_modern_flow') {
+    magicFunc(sender_psid, phy2_modern);
+  }
+
+  else if (payload === 'phy2_entropy_flow') {
+    magicFunc(sender_psid, phy2_entropy);
+  }
+
+  //routine
+  else if (payload === 'online_2_1') {
+    magicFunc(sender_psid, routine_online_2_1);
+  }
+  else if (payload === 'online_3_1') {
+    magicFunc(sender_psid, routine_online_3_1);
+  }
+  else if (payload === 'routine_level_1') {
+    magicFunc(sender_psid, routine_level1);
+  }
+  else if (payload === 'routine_level_2') {
+    magicFunc(sender_psid, routine_level2);
+  }
+  else if (payload === 'routine_level_3') {
+    magicFunc(sender_psid, routine_level3);
+  }
+  else if (payload === 'routine_level_4') {
+    magicFunc(sender_psid, routine_level4);
+  }
+  else if (payload === 'l1t1Routine_flow') {
+    magicFunc(sender_psid, routine_l1t1);
+  }
+  else if (payload === 'l1t2Routine_flow') {
+    magicFunc(sender_psid, routine_l1t2);
+  }
+  else if (payload === 'l2t1Routine_flow') {
+    magicFunc(sender_psid, routine_l2t1);
+  }
+  else if (payload === 'l2t2Routine_flow') {
+    magicFunc(sender_psid, routine_l2t2);
+  }
+  else if (payload === 'l3t1Routine_flow') {
+    magicFunc(sender_psid, routine_l3t1);
+  }
+  else if (payload === 'l3t2Routine_flow') {
+    magicFunc(sender_psid, routine_l3t2);
+  }
+  else if (payload === 'l4t1Routine_flow') {
+    magicFunc(sender_psid, routine_l4t1);
+  }
+  else if (payload === 'l4t2Routine_flow') {
+    magicFunc(sender_psid, routine_l4t2);
+  }
+
+  //results
+  else if (payload === 'result_academic') {
+    magicFunc(sender_psid, result_Academic);
+  }
+  else if (payload === 'academic_res_2019') {
+    magicFunc(sender_psid, result_Academic_2019);
+  }
+  else if (payload === 'academic_res_2018') {
+    magicFunc(sender_psid, result_Academic_2018);
+  }
+  else if (payload === 'result_admission') {
+    magicFunc(sender_psid, result_Admission);
+  }
+  else if (payload === 'result_retake') {
+    magicFunc(sender_psid, result_Retake);
+  }
+  else if (payload === 'retake_res_2019') {
+    magicFunc(sender_psid, result_Retake_2019);
+  }
+  else if (payload === 'retake_res_2018') {
+    magicFunc(sender_psid, result_Retake_2018);
+  }
+  else if (payload === 'result_affli') {
+    magicFunc(sender_psid, result_Affli);
+  }
+  else if (payload === 'affli_res_2020') {
+    magicFunc(sender_psid, result_Affli_2020);
+  }
+  else if (payload === 'affli_res_2019') {
+    magicFunc(sender_psid, result_Affli_2019);
+  }
+
+  //epd
+  else if (payload === 'epd_flow') {
+    magicFunc(sender_psid, epd_flow);
+  }
+
+  //ir
+  else if (payload === 'ir_flow') {
+    magicFunc(sender_psid, ir_flow);
+  }
+  else if (payload === 'ir_ir_flow') {
+    magicFunc(sender_psid, ir_ir_flow);
+  }
+
+  //tam
+  else if (payload === 'tam_flow') {
+    magicFunc(sender_psid, tam_flow);
+  }
+  else if (payload === 'tam_intro_merch_flow') {
+    magicFunc(sender_psid, tam_intro_merch);
+  }
+
+  //ppc
+  else if (payload === 'ppc_flow') {
+    magicFunc(sender_psid, ppc_flow);
+  }
+
+  //hrm
+  else if (payload === 'hrm_flow') {
+    magicFunc(sender_psid, hrm_flow);
+  }
+
+  //bs
+  else if (payload === 'bs_flow') {
+    magicFunc(sender_psid, bs_flow);
+  }
+
+  //bil
+  else if (payload === 'bil_flow') {
+    magicFunc(sender_psid, bil_flow);
+  }
+  else if (payload === 'bil_labor_law_flow') {
+    magicFunc(sender_psid, bil_laborlaw);
+  }
+
+  //fm1
+  else if (payload === 'fm1_flow') {
+    magicFunc(sender_psid, fm1_flow);
+  }
+  else if (payload === 'fm1_hnotes_flow') {
+    magicFunc(sender_psid, fm1_notes);
+  }
+  else if (payload === 'fm1_books_flow') {
+    magicFunc(sender_psid, fm1_books);
+  }
+  else if (payload === 'fm1_sugg_flow') {
+    magicFunc(sender_psid, fm1_sugg);
+  }
+  else if (payload === 'fm1_ques_flow') {
+    magicFunc(sender_psid, fm1_question);
+  }
+  else if (payload === 'fm1_loom_flow') {
+    magicFunc(sender_psid, fm1_loom);
+  }
+  else if (payload === 'fm1_motion_weav_flow') {
+    magicFunc(sender_psid, fm1_motionWeav);
+  }
+  else if (payload === 'fm1_intro_fm_flow') {
+    magicFunc(sender_psid, fm1_intro);
+  }
+  else if (payload === 'fm1_shedding_flow') {
+    magicFunc(sender_psid, fm1_shedding);
+  }
+  else if (payload === 'fm1_weaving_flow') {
+    magicFunc(sender_psid, fm1_weaving);
+  }
+  else if (payload === 'fm1_sizing_flow') {
+    magicFunc(sender_psid, fm1_sizing);
+  }
+  else if (payload === 'fm1_winding_flow') {
+    magicFunc(sender_psid, fm1_winding);
+  }
+  else if (payload === 'fm1_dobby_flow') {
+    magicFunc(sender_psid, fm1_dobby);
+  }
+  else if (payload === 'fm1_warping_flow') {
+    magicFunc(sender_psid, fm1_warping);
+  }
+
+  //mmtf
+  else if (payload === 'mmtf_flow') {
+    magicFunc(sender_psid, mmtf_flow);
+  }
+  else if (payload === 'mmtf_mmtf_books_flowflow') {
+    magicFunc(sender_psid, mmtf_books);
+  }
+  else if (payload === 'mmtf_hnotes_flow') {
+    magicFunc(sender_psid, mmtf_notes);
+  }
+  else if (payload === 'mmtf_sugg_flow') {
+    magicFunc(sender_psid, mmtf_suggestion);
+  }
+  else if (payload === 'mmtf_intro_flow') {
+    magicFunc(sender_psid, mmtf_intro);
+  }
+  else if (payload === 'mmtf_rayon_flow') {
+    magicFunc(sender_psid, mmtf_rayon);
+  }
+  else if (payload === 'mmtf_spinning_sys_flow') {
+    magicFunc(sender_psid, mmtf_spin_sys);
+  }
+  else if (payload === 'mmtf_high_perf_flow') {
+    magicFunc(sender_psid, mmtf_highperf);
+  }
+  else if (payload === 'mmtf_polyamaide_flow') {
+    magicFunc(sender_psid, mmtf_polyamide);
+  }
+  else if (payload === 'mmtf_modal_flow') {
+    magicFunc(sender_psid, mmtf_modal);
+  }
+  else if (payload === 'mmtf_elastomer_flow') {
+    magicFunc(sender_psid, mmtf_elastomer);
+  }
+  else if (payload === 'mmtf_polyolefin_flow') {
+    magicFunc(sender_psid, mmtf_polyolefin);
+  }
+  else if (payload === 'mmtf_carbon_fibre_flow') {
+    magicFunc(sender_psid, mmtf_carbonFib);
+  }
+  else if (payload === 'mmtf_acetate_flow') {
+    magicFunc(sender_psid, mmtf_acetate);
+  }
+  else if (payload === 'mmtf_bio_fibre_flow') {
+    magicFunc(sender_psid, mmtf_biofib);
+  }
+  else if (payload === 'mmtf_polyester_flow') {
+    magicFunc(sender_psid, mmtf_polyester);
+  }
+  else if (payload === 'mmtf_acrylic_flow') {
+    magicFunc(sender_psid, mmtf_acrylic);
+  }
+  else if (payload === 'mmtf_vectran_flow') {
+    magicFunc(sender_psid, mmtf_vectran);
+  }
+  else if (payload === 'mmtf_regen_protein_fibre_flow') {
+    magicFunc(sender_psid, mmtf_regenFib);
+  }
+  else if (payload === 'mmtf_glassfib_flow') {
+    magicFunc(sender_psid, mmtf_glassfib);
+  }
+  else if (payload === 'mmtf_lyocell_flow') {
+    magicFunc(sender_psid, mmtf_lyocell);
+  }
+  else if (payload === 'mmtf_nylon_flow') {
+    magicFunc(sender_psid, mmtf_nylon);
+  }
+
+  //ttqc
+  else if (payload === 'ttqc_flow') {
+    magicFunc(sender_psid, ttqc_flow);
+  }
+  else if (payload === 'ttqc_books_flow') {
+    magicFunc(sender_psid, ttqc_books);
+  }
+  else if (payload === 'ttqc_hnotes_flow') {
+    magicFunc(sender_psid, ttqc_notes);
+  }
+  else if (payload === 'ttqc_count_flow') {
+    magicFunc(sender_psid, ttqc_count);
+  }
+  else if (payload === 'ttqc_crimp_flow') {
+    magicFunc(sender_psid, ttqc_crimp);
+  }
+  else if (payload === 'ttqc_twist_flow') {
+    magicFunc(sender_psid, ttqc_twist);
+  }
+  else if (payload === 'ttqc_intro_flow') {
+    magicFunc(sender_psid, ttqc_intro);
+  }
+  else if (payload === 'ttqc_mositure_flow') {
+    magicFunc(sender_psid, ttqc_moisture);
+  }
+  else if (payload === 'ttqc_neps_flow') {
+    magicFunc(sender_psid, ttqc_neps);
+  }
+  else if (payload === 'ttqc_sampling_flow') {
+    magicFunc(sender_psid, ttqc_sampling);
+  }
+  else if (payload === 'ttqc_fibre_prop_flow') {
+    magicFunc(sender_psid, ttqc_fibre_prop);
+  }
+  else if (payload === 'ttqc_hvi_flow') {
+    magicFunc(sender_psid, ttqc_hvi);
+  }
+  else if (payload === 'ttqc_afis_flow') {
+    magicFunc(sender_psid, ttqc_afis);
+  }
+
+  //stat
+  else if (payload === 'stat_flow') {
+    magicFunc(sender_psid, stat_flow);
+  }
+  else if (payload === 'stat_books_flow') {
+    magicFunc(sender_psid, stat_books);
+  }
+  else if (payload === 'stat_hnotes_flow') {
+    magicFunc(sender_psid, stat_notes);
+  }
+  else if (payload === 'stat_probab_flow') {
+    magicFunc(sender_psid, stat_probab);
+  }
+  else if (payload === 'stat_intro_flow') {
+    magicFunc(sender_psid, stat_intro);
+  }
+  else if (payload === 'stat_central_tend_flow') {
+    magicFunc(sender_psid, stat_central_tend);
+  }
+  else if (payload === 'stat_cv_sd_flow') {
+    magicFunc(sender_psid, stat_cv);
+  }
+  else if (payload === 'stat_moments_flow') {
+    magicFunc(sender_psid, stat_moments);
+  }
+  else if (payload === 'stat_shapes_flow') {
+    magicFunc(sender_psid, stat_shape);
+  }
+  else if (payload === 'stat_design_exp_flow') {
+    magicFunc(sender_psid, stat_design);
+  }
+  else if (payload === 'stat_normal_distri_flow') {
+    magicFunc(sender_psid, stat_normal);
+  }
+  else if (payload === 'stat_binomial_distri_flow') {
+    magicFunc(sender_psid, stat_binomial);
+  }
+  else if (payload === 'stat_poission_flow') {
+    magicFunc(sender_psid, stat_poission);
+  }
+  else if (payload === 'stat_regression_flow') {
+    magicFunc(sender_psid, stat_regression);
+  }
+
+  //feee
+  else if (payload === 'eee_flow') {
+    magicFunc(sender_psid, eee_flow);
+  }
+  else if (payload === 'eee_books_flow') {
+    magicFunc(sender_psid, eee_books);
+  }
+  else if (payload === 'eee_hnotes_flow') {
+    magicFunc(sender_psid, eee_notes);
+  }
+  else if (payload === 'eee_ques_flow') {
+    magicFunc(sender_psid, eee_ques);
+  }
+  else if (payload === 'eee_ch1_flow') {
+    magicFunc(sender_psid, eee_ch1);
+  }
+  else if (payload === 'eee_ch2_flow') {
+    magicFunc(sender_psid, eee_ch2);
+  }
+  else if (payload === 'eee_ch3_flow') {
+    magicFunc(sender_psid, eee_ch3);
+  }
+  else if (payload === 'eee_ch4_flow') {
+    magicFunc(sender_psid, eee_ch4);
+  }
+  else if (payload === 'eee_ch5_flow') {
+    magicFunc(sender_psid, eee_ch5);
+  }
+  else if (payload === 'eee_ch8_flow') {
+    magicFunc(sender_psid, eee_ch8);
+  }
+  else if (payload === 'eee_wye_delta_flow') {
+    magicFunc(sender_psid, eee_wye);
+  }
+  else if (payload === 'eee_rms_flow') {
+    magicFunc(sender_psid, eee_rms);
+  }
+  else if (payload === 'eee_circuit_analy_flow') {
+    magicFunc(sender_psid, eee_circuit);
+  }
+
+  //am1
+  else if (payload === 'am1_flow') {
+    magicFunc(sender_psid, am1_flow);
+  }
+  else if (payload === 'am1_books_flow') {
+    magicFunc(sender_psid, am1_books);
+  }
+  else if (payload === 'am1_hnotes_flow') {
+    magicFunc(sender_psid, am1_notes);
+  }
+  else if (payload === 'am1_ques_flow') {
+    magicFunc(sender_psid, am1_question);
+  }
+  else if (payload === 'am1_intro_flow') {
+    magicFunc(sender_psid, am1_intro);
+  }
+  else if (payload === 'am1_structure_tex_flow') {
+    magicFunc(sender_psid, am1_strucTex);
+  }
+  else if (payload === 'am1_sizing_sys_flow') {
+    magicFunc(sender_psid, am1_sizing);
+  }
+  else if (payload === 'am1_seam_stitch_flow') {
+    magicFunc(sender_psid, am1_seam);
+  }
+  else if (payload === 'am1_trim_acces_flow') {
+    magicFunc(sender_psid, am1_trims);
+  }
+  else if (payload === 'am1_interlining_flow') {
+    magicFunc(sender_psid, am1_interlining);
+  }
+  else if (payload === 'am1_pattern_flow') {
+    magicFunc(sender_psid, am1_pattern);
+  }
+  else if (payload === 'am1_marker_flow') {
+    magicFunc(sender_psid, am1_marker);
+  }
+  else if (payload === 'am1_spreading_flow') {
+    magicFunc(sender_psid, am1_spreading);
+  }
+  else if (payload === 'am1_fabric_cut_flow') {
+    magicFunc(sender_psid, am1_fabricCut);
+  }
+  else if (payload === 'am1_fabricInspection_flow') {
+    magicFunc(sender_psid, am1_fabricInspection);
+  }
+
+  //marketing
+  else if (payload === 'marketing_flow') {
+    magicFunc(sender_psid, marketing_flow);
+  }
+  else if (payload === 'marketing_books_flow') {
+    magicFunc(sender_psid, marketing_books);
+  }
+  else if (payload === 'marketing_notes_flow') {
+    magicFunc(sender_psid, marketing_notes);
+  }
+  else if (payload === 'marketing_ques_flow') {
+    magicFunc(sender_psid, marketing_ques);
+  }
+  else if (payload === 'marketing_suggestion_flow') {
+    magicFunc(sender_psid, marketing_sugg);
+  }
+  else if (payload === 'marketing_intro_flow') {
+    magicFunc(sender_psid, marketing_intro);
+  }
+  else if (payload === 'marketing_func_flow') {
+    magicFunc(sender_psid, marketing_function);
+  }
+  else if (payload === 'marketing_field_flow') {
+    magicFunc(sender_psid, marketing_field);
+  }
+  else if (payload === 'marketing_concept_flow') {
+    magicFunc(sender_psid, marketing_concept);
+  }
+  else if (payload === 'marketing_market_orientation_flow') {
+    magicFunc(sender_psid, marketing_orientation);
+  }
+  else if (payload === 'marketing_micro_env_flow') {
+    magicFunc(sender_psid, marketing_micro);
+  }
+  else if (payload === 'marketing_macro_env_flow') {
+    magicFunc(sender_psid, marketing_macro);
+  }
+  else if (payload === 'marketing_market_segment_flow') {
+    magicFunc(sender_psid, marketing_segment);
+  }
+  else if (payload === 'marketing_market_targeting_flow') {
+    magicFunc(sender_psid, marketing_target);
+  }
+  else if (payload === 'marketing_diff_pos_flow') {
+    magicFunc(sender_psid, marketing_diffPoss);
+  }
+  else if (payload === 'marketing_channel_distri_flow') {
+    magicFunc(sender_psid, marketing_channelDist);
+  }
+  else if (payload === 'marketing_retailing_flow') {
+    magicFunc(sender_psid, marketing_retail);
+  }
+  else if (payload === 'marketing_price_sys_flow') {
+    magicFunc(sender_psid, marketing_priceSys);
+  }
+  else if (payload === 'marketing_consumer_buyer_flow') {
+    magicFunc(sender_psid, marketing_consumer_buyer);
+  }
+  else if (payload === 'marketing_branding_pack_flow') {
+    magicFunc(sender_psid, marketing_branding);
+  }
+  else if (payload === 'marketing_new_product_flow') {
+    magicFunc(sender_psid, marketing_newProd);
+  }
+  else if (payload === 'marketing_advertising_flow') {
+    magicFunc(sender_psid, marketing_advert);
+  }
+  else if (payload === 'marketing_competitive_flow') {
+    magicFunc(sender_psid, marketing_compStrat);
+  }
+  else if (payload === 'marketing_major_pricing_flow') {
+    magicFunc(sender_psid, marketing_priceStrat);
+  }
+
+  //fyt
+  else if (payload === 'fyt_flow') {
+    magicFunc(sender_psid, fyt_flow);
+  }
+  else if (payload === 'fyt_books_flow') {
+    magicFunc(sender_psid, fyt_books);
+  }
+  else if (payload === 'fyt_hnotes_flow') {
+    magicFunc(sender_psid, fyt_notes);
+  }
+  else if (payload === 'fyt_sugg_flow') {
+    magicFunc(sender_psid, fyt_sugg);
+  }
+  else if (payload === 'fyt_yarnNum_flow') {
+    magicFunc(sender_psid, fyt_number);
+  }
+  else if (payload === 'fyt_yarnTwist_flow') {
+    magicFunc(sender_psid, fyt_twist);
+  }
+  else if (payload === 'fyt_evennessTester_flow') {
+    magicFunc(sender_psid, fyt_evenness);
+  }
+  else if (payload === 'fyt_yarnCounting_flow') {
+    magicFunc(sender_psid, fyt_count);
+  }
+  else if (payload === 'fyt_afis_flow') {
+    magicFunc(sender_psid, fyt_afis);
+  }
+  else if (payload === 'fyt_iso_flow') {
+    magicFunc(sender_psid, fyt_iso);
+  }
+  else if (payload === 'fyt_capaOptical_flow') {
+    magicFunc(sender_psid, fyt_capaOp);
+  }
+
+
+  //ctca
+  else if (payload === 'ctca_flow') {
+    magicFunc(sender_psid, ctca_flow);
+  }
+  else if (payload === 'ctca_books_flow') {
+    magicFunc(sender_psid, ctca_books);
+  }
+  else if (payload === 'ctca_sheets_flow') {
+    magicFunc(sender_psid, ctca_sheets);
+  }
+  else if (payload === 'ctca_thickAge_flow') {
+    magicFunc(sender_psid, ctca_thickAgents);
+  }
+  else if (payload === 'ctca_water_flow') {
+    magicFunc(sender_psid, ctca_water);
+  }
+  else if (payload === 'ctca_surfactants_flow') {
+    magicFunc(sender_psid, ctca_surfact);
+  }
+  else if (payload === 'ctca_bleach_flow') {
+    magicFunc(sender_psid, ctca_bleach);
+  }
+  else if (payload === 'ctca_solutions_flow') {
+    magicFunc(sender_psid, ctca_solutions);
+  }
+  else if (payload === 'ctca_colloid_flow') {
+    magicFunc(sender_psid, ctca_colloid);
+  }
+
+  //fme
+  else if (payload === 'fme_flow') {
+    magicFunc(sender_psid, fme_flow);
+  }
+  else if (payload === 'fme_books_flow') {
+    magicFunc(sender_psid, fme_books);
+  }
+  else if (payload === 'fme_notes_flow') {
+    magicFunc(sender_psid, fme_notes);
+  }
+  else if (payload === 'fme_ques_flow') {
+    magicFunc(sender_psid, fme_ques);
+  }
+  else if (payload === 'fme_sugg_flow') {
+    magicFunc(sender_psid, fme_sugg);
+  }
+  else if (payload === 'fme_boiler_flow') {
+    magicFunc(sender_psid, fme_boiler);
+  }
+  else if (payload === 'fme_powerRefre_flow') {
+    magicFunc(sender_psid, fme_powerRefre);
+  }
+  else if (payload === 'fme_steam_flow') {
+    magicFunc(sender_psid, fme_steamTurb);
+  }
+  else if (payload === 'fme_thermalEng_flow') {
+    magicFunc(sender_psid, fme_thermalEng);
+  }
+  else if (payload === 'fme_fluidMecha_flow') {
+    magicFunc(sender_psid, fme_fluidMecha);
+  }
+  else if (payload === 'fme_energyProcess_flow') {
+    magicFunc(sender_psid, fme_energyProc);
+  }
+  else if (payload === 'fme_solid_flow') {
+    magicFunc(sender_psid, fme_solid);
+  }
+  else if (payload === 'fme_gearTrain_flow') {
+    magicFunc(sender_psid, fme_gearTrain);
+  }
+  else if (payload === 'fme_pumpCompressor_flow') {
+    magicFunc(sender_psid, fme_pumpCompressor);
+  }
+  else if (payload === 'fme_stressStrain_flow') {
+    magicFunc(sender_psid, fme_stress);
+  }
+  else if (payload === 'fme_enginePetrol_flow') {
+    magicFunc(sender_psid, fme_enginePetrol);
+  }
+  else if (payload === 'fme_engineCombus_flow') {
+    magicFunc(sender_psid, fme_engineCombus);
+  }
+  else if (payload === 'fme_beam_flow') {
+    magicFunc(sender_psid, fme_beam);
+  }
+  else if (payload === 'fme_belt_flow') {
+    magicFunc(sender_psid, fme_belt);
+  }
+  else if (payload === 'fme_centroid_flow') {
+    magicFunc(sender_psid, fme_centroid);
+  }
+  else if (payload === 'fme_momentInnertia_flow') {
+    magicFunc(sender_psid, fme_momentofInnertia);
+  }
+  else if (payload === 'fme_cloumn_flow') {
+    magicFunc(sender_psid, fme_column);
+  }
+
+  //sss1
+  else if (payload === 'sss1_flow') {
+    magicFunc(sender_psid, sss1_flow);
+  }
+  else if (payload === 'sss1_books_flow') {
+    magicFunc(sender_psid, sss1_books);
+  }
+  else if (payload === 'sss1_blowRoom_flow') {
+    magicFunc(sender_psid, sss1_blowRoom);
+  }
+  else if (payload === 'sss1_drawFrame_flow') {
+    magicFunc(sender_psid, sss1_DrawFrame);
+  }
+  else if (payload === 'sss1_carding_flow') {
+    magicFunc(sender_psid, sss1_Carding);
+  }
+  else if (payload === 'sss1_intro_flow') {
+    magicFunc(sender_psid, sss1_intro);
+  }
+  else if (payload === 'sss1_introFibre_flow') {
+    magicFunc(sender_psid, sss1_introFib);
+  }
+
+  //sss2
+  else if (payload === 'sss2_flow') {
+    magicFunc(sender_psid, sss2_flow);
+  }
+  else if (payload === 'sss2_notes_flow') {
+    magicFunc(sender_psid, sss2_notes);
+  }
+  else if (payload === 'sss2_ringFrame_flow') {
+    magicFunc(sender_psid, sss2_ringFrame);
+  }
+
+
+  //ym1
+  else if (payload === 'ym1_flow') {
+    magicFunc(sender_psid, ym1_flow);
+  }
+  else if (payload === 'ym1_intro_flow') {
+    magicFunc(sender_psid, ym1_intro);
+  }
+  else if (payload === 'ym1_indeterminer_flow') {
+    magicFunc(sender_psid, ym1_indeter);
+  }
+  else if (payload === 'ym1_blowroom_flow') {
+    magicFunc(sender_psid, ym1_blowroom);
+  }
+  else if (payload === 'ym1_mixing_blend_flow') {
+    magicFunc(sender_psid, ym1_mixBlend);
+  }
+  else if (payload === 'ym1_fibreProp_flow') {
+    magicFunc(sender_psid, ym1_fibreProp);
+  }
+  else if (payload === 'ym1_yarnCondi_flow') {
+    magicFunc(sender_psid, ym1_yarnCondi);
+  }
+  else if (payload === 'ym1_comber_flow') {
+    magicFunc(sender_psid, ym1_comber);
+  }
+  else if (payload === 'ym1_drawFrame_flow') {
+    magicFunc(sender_psid, ym1_drawFrame);
+  }
+  else if (payload === 'ym1_winding_flow') {
+    magicFunc(sender_psid, ym1_winding);
+  }
+  else if (payload === 'ym1_lapFormer_flow') {
+    magicFunc(sender_psid, ym1_lapFormer);
+  }
+  else if (payload === 'ym1_carding_flow') {
+    magicFunc(sender_psid, ym1_carding);
+  }
+  else if (payload === 'ym1_ringFrame_flow') {
+    magicFunc(sender_psid, ym1_ringFrame);
+  }
+  else if (payload === 'ym1_speedFrame_flow') {
+    magicFunc(sender_psid, ym1_speedFrame);
+  }
+
+  //fdce
+  else if (payload === 'fdce_flow') {
+    magicFunc(sender_psid, fdce_flow);
+  }
+  else if (payload === 'fdce_dyesPigments_flow') {
+    magicFunc(sender_psid, fdce_DyesPig);
+  }
+  else if (payload === 'fdce_chromatography_flow') {
+    magicFunc(sender_psid, fdce_Chroamto);
+  }
+  else if (payload === 'fdce_polarity_flow') {
+    magicFunc(sender_psid, fdce_Polarity);
+  }
+  else if (payload === 'fdce_sepaPurifi_flow') {
+    magicFunc(sender_psid, fdce_SepaPuri);
+  }
+  else if (payload === 'fdce_balancingChem_flow') {
+    magicFunc(sender_psid, fdce_BalanceChem);
+  }
+  else if (payload === 'fdce_filtration_flow') {
+    magicFunc(sender_psid, fdce_filtrationMethod);
+  }
+
+
+  //tp
+  else if (payload === 'tp_flow') {
+    magicFunc(sender_psid, tp_flow);
+  }
+  else if (payload === 'tp_books_flow') {
+    magicFunc(sender_psid, tp_books);
+  }
+  else if (payload === 'tp_notes_flow') {
+    magicFunc(sender_psid, tp_notes);
+  }
+  else if (payload === 'tp_sugg_flow') {
+    magicFunc(sender_psid, tp_sugg);
+  }
+  else if (payload === 'tp_ques_flow') {
+    magicFunc(sender_psid, tp_questions);
+  }
+  else if (payload === 'tp_swelling_flow') {
+    magicFunc(sender_psid, tp_swelling);
+  }
+  else if (payload === 'tp_friction_flow') {
+    magicFunc(sender_psid, tp_friction);
+  }
+  else if (payload === 'tp_yarnJamming_flow') {
+    magicFunc(sender_psid, tp_yarnJamming);
+  }
+  else if (payload === 'tp_optical_flow') {
+    magicFunc(sender_psid, tp_Optical);
+  }
+  else if (payload === 'tp_fibreMig_flow') {
+    magicFunc(sender_psid, tp_fibreMig);
+  }
+  else if (payload === 'tp_thermalProp_flow') {
+    magicFunc(sender_psid, tp_tehrmalProp);
+  }
+  else if (payload === 'tp_fibredraw_flow') {
+    magicFunc(sender_psid, tp_fibreDraw);
+  }
+  else if (payload === 'tp_x_ray_flow') {
+    magicFunc(sender_psid, tp_xray);
+  }
+  else if (payload === 'tp_yarnStructure_flow') {
+    magicFunc(sender_psid, tp_yarnStructure);
+  }
+  else if (payload === 'tp_fabgemometry_flow') {
+    magicFunc(sender_psid, tp_fabricGeometry);
+  }
+  else if (payload === 'tp_tensile_flow') {
+    magicFunc(sender_psid, tp_tensileProp);
+  }
+
+
+  //wpp
+  else if (payload === 'wpp_flow') {
+    magicFunc(sender_psid, wpp_flow);
+  }
+  else if (payload === 'wpp_quess_flow') {
+    magicFunc(sender_psid, wpp_ques);
+  }
+  else if (payload === 'wpp_pretreatment_flow') {
+    magicFunc(sender_psid, wpp_pretreatment);
+  }
+  else if (payload === 'wpp_singeing_flow') {
+    magicFunc(sender_psid, wpp_singeing);
+  }
+  else if (payload === 'wpp_desizing_flow') {
+    magicFunc(sender_psid, wpp_desizing);
+  }
+
+  //fd2
+  else if (payload === 'fd2_flow') {
+    magicFunc(sender_psid, fd2_flow);
+  }
+
+
+  //weav prep
+  else if (payload === 'weav_prep_flow') {
+    magicFunc(sender_psid, weavPrep_flow);
+  }
+  else if (payload === 'weav_books_flow') {
+    magicFunc(sender_psid, weavPrep_books);
+  }
+
+
+  //ap1
+  else if (payload === 'ap1_flow') {
+    magicFunc(sender_psid, ap1_flow);
+  }
+  else if (payload === 'ap1_books_flow') {
+    magicFunc(sender_psid, ap1_books);
+  }
+  else if (payload === 'ap1_ques_flow') {
+    magicFunc(sender_psid, ap1_Ques);
+  }
+  else if (payload === 'ap1_sizing_flow') {
+    magicFunc(sender_psid, ap1_Sizing);
+  }
+  else if (payload === 'ap1_trimmimg_flow') {
+    magicFunc(sender_psid, ap1_Trimming);
+  }
+  else if (payload === 'ap1_interlining_flow') {
+    magicFunc(sender_psid, ap1_Interling);
+  }
+  else if (payload === 'ap1_fabricCut_flow') {
+    magicFunc(sender_psid, ap1_fabricCutting);
+  }
+  else if (payload === 'ap1_patternMaking_flow') {
+    magicFunc(sender_psid, ap1_patternMaking);
+  }
+  else if (payload === 'ap1_fabricSpreading_flow') {
+    magicFunc(sender_psid, ap1_fabricSpreading);
+  }
+  else if (payload === 'ap1_markerMaking_flow') {
+    magicFunc(sender_psid, ap1_markerMaking);
+  }
+  else if (payload === 'ap1_sewingTherad_flow') {
+    magicFunc(sender_psid, ap1_sewingThread);
+  }
+
+
+  //wp1
+  else if (payload === 'wp1_flow') {
+    magicFunc(sender_psid, wp1_flow);
+  }
+  else if (payload === 'wp1_books_flow') {
+    magicFunc(sender_psid, wp1_books);
+  }
+  else if (payload === 'wp1_notes_flow') {
+    magicFunc(sender_psid, wp1_notes);
+  }
+  else if (payload === 'wp1_ques_flow') {
+    magicFunc(sender_psid, wp1_ques);
+  }
+  else if (payload === 'wp1_intro_flow') {
+    magicFunc(sender_psid, wp1_introWP);
+  }
+  else if (payload === 'wp1_water_flow') {
+    magicFunc(sender_psid, wp1_water);
+  }
+  else if (payload === 'wp1_introDye_flow') {
+    magicFunc(sender_psid, wp1_introDye);
+  }
+  else if (payload === 'wp1_generalConcepts_flow') {
+    magicFunc(sender_psid, wp1_generalConcepts);
+  }
+  else if (payload === 'wp1_colorFastness_flow') {
+    magicFunc(sender_psid, wp1_colorFastness);
+  }
+  else if (payload === 'wp1_stripping_flow') {
+    magicFunc(sender_psid, wp1_stripping);
+  }
+  else if (payload === 'wp1_singeing_flow') {
+    magicFunc(sender_psid, wp1_singeing);
+  }
+  else if (payload === 'wp1_scouring_flow') {
+    magicFunc(sender_psid, wp1_scouring);
+  }
+  else if (payload === 'wp1_pigment_flow') {
+    magicFunc(sender_psid, wp1_pigment);
+  }
+  else if (payload === 'wp1_textileFinishing_flow') {
+    magicFunc(sender_psid, wp1_TexFinish);
+  }
+  else if (payload === 'wp1_vatDyes_flow') {
+    magicFunc(sender_psid, wp1_vatDyes);
+  }
+  else if (payload === 'wp1_desizing_flow') {
+    magicFunc(sender_psid, wp1_desizing);
+  }
+  else if (payload === 'wp1_basicDye_flow') {
+    magicFunc(sender_psid, wp1_basicDye);
+  }
+  else if (payload === 'wp1_acidDye_flow') {
+    magicFunc(sender_psid, wp1_acidDye);
+  }
+  else if (payload === 'wp1_bleaching_flow') {
+    magicFunc(sender_psid, wp1_bleaching);
+  }
+  else if (payload === 'wp1_disperseDye_flow') {
+    magicFunc(sender_psid, wp1_disperse);
+  }
+  else if (payload === 'wp1_kierBoiler_flow') {
+    magicFunc(sender_psid, wp1_kierBoiler);
+  }
+  else if (payload === 'wp1_dyeingFault_flow') {
+    magicFunc(sender_psid, wp1_dyeingFault);
+  }
+  else if (payload === 'wp1_reactiveDye_flow') {
+    magicFunc(sender_psid, wp1_reactiveDye);
+  }
+  else if (payload === 'wp1_directDye_flow') {
+    magicFunc(sender_psid, wp1_directDye);
+  }
+  else if (payload === 'wp1_jiggerMachine_flow') {
+    magicFunc(sender_psid, wp1_jiggerMachine);
+  }
+  else if (payload === 'wp1_colorTest_flow') {
+    magicFunc(sender_psid, wp1_colorTest);
+  }
+  else if (payload === 'wp1_foldingTest_flow') {
+    magicFunc(sender_psid, wp1_folding);
+  }
+  else if (payload === 'wp1_washingMachine_flow') {
+    magicFunc(sender_psid, wp1_washingMc);
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  //syllabus
+  //45
+  else if (payload === 'syllabus_45') {
+    magicFunc(sender_psid, syllabus_45);
+  }
+  else if (payload === 'syllabus_ae45_flow') {
+    magicFunc(sender_psid, syllabus_45_ae);
+  }
+  else if (payload === 'syllabus_fe45_flow') {
+    magicFunc(sender_psid, syllabus_45_fe);
+  }
+  else if (payload === 'syllabus_ipe45_flow') {
+    magicFunc(sender_psid, syllabus_45_ipe);
+  }
+  else if (payload === 'syllabus_tem45_flow') {
+    magicFunc(sender_psid, syllabus_45_tem);
+  }
+  else if (payload === 'syllabus_tfd45_flow') {
+    magicFunc(sender_psid, syllabus_45_tfd);
+  }
+  else if (payload === 'syllabus_ye45_flow') {
+    magicFunc(sender_psid, syllabus_45_ye);
+  }
+  else if (payload === 'syllabus_tmdm45_flow') {
+    magicFunc(sender_psid, syllabus_45_tmdm);
+  }
+  else if (payload === 'syllabus_wpe45_flow') {
+    magicFunc(sender_psid, syllabus_45_wpe);
+  }
+  else if (payload === 'syllabus_dce45_flow') {
+    magicFunc(sender_psid, syllabus_45_dce);
+  }
+  else if (payload === 'syllabus_ese45_flow') {
+    magicFunc(sender_psid, syllabus_45_ese);
+  }
+  //46
+  else if (payload === 'syllabus_46') {
+    magicFunc(sender_psid, notAvailable);
+  }
 
 
 
 }
 
 //magic func
-let magicFunc = (sender_psid ,flow) => {
+let magicFunc = (sender_psid, flow) => {
   let i = 0;
 
-  for(i = 0; i < flow.length; i++){
+  for (i = 0; i < flow.length; i++) {
 
     response = flow[i];
     callSendAPI(sender_psid, response);
@@ -3214,27 +3214,27 @@ let randomPicker = (replyArray) => {
 
 // Sends response messages via the Send API
 function callSendAPI(sender_psid, response) {
-    // Construct the message body
-    let request_body = {
-      "recipient": {
-        "id": sender_psid
-      },
-      "message": response
+  // Construct the message body
+  let request_body = {
+    "recipient": {
+      "id": sender_psid
+    },
+    "message": response
+  }
+
+  // Send the HTTP request to the Messenger Platform
+  request({
+    "uri": "https://graph.facebook.com/v7.0/me/messages",
+    "qs": { "access_token": process.env.PAGE_ACCESS_TOKEN },
+    "method": "POST",
+    "json": request_body
+  }, (err, res, body) => {
+    if (!err) {
+      console.log('message sent!')
+    } else {
+      console.error("Unable to send message:" + err);
     }
-  
-    // Send the HTTP request to the Messenger Platform
-    request({
-      "uri": "https://graph.facebook.com/v7.0/me/messages",
-      "qs": { "access_token": process.env.PAGE_ACCESS_TOKEN },
-      "method": "POST",
-      "json": request_body
-    }, (err, res, body) => {
-      if (!err) {
-        console.log('message sent!')
-      } else {
-        console.error("Unable to send message:" + err);
-      }
-    }); 
+  });
 }
 
 
@@ -3246,7 +3246,7 @@ function callSendAPI(sender_psid, response) {
 
 
 module.exports = {
-    testMsg: testMsg,
-    getWebhook: getWebhook,
-    postWebhook: postWebhook
+  testMsg: testMsg,
+  getWebhook: getWebhook,
+  postWebhook: postWebhook
 }
