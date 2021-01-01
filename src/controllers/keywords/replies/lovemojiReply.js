@@ -10,7 +10,8 @@ let lovemojiReply = [
      "Thanks 😍", 
      "❤❤❤", 
      "😊", 
-     "😃"
+     "😃",
+     "😍😍😍"
 ];
 
 module.exports = lovemojiReply;
