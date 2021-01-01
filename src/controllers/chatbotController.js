@@ -745,31 +745,13 @@ const mp_casting = require("./flows/botReplies/note_levels/level_2/level_2_subs/
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//level3
+//PD
+const pd_flow = require("./flows/botReplies/note_levels/level_3/level_3_subs/pd/pd_flow");
+const pd_intro = require("./flows/botReplies/note_levels/level_3/level_3_subs/pd/topics/pdIntro");
+const pd_understandingCustomer = require("./flows/botReplies/note_levels/level_3/level_3_subs/pd/topics/pdUnderstandingCustomer");
+const pd_planDesign = require("./flows/botReplies/note_levels/level_3/level_3_subs/pd/topics/pdPlanningDesign");
+const pd_qualityFunc = require("./flows/botReplies/note_levels/level_3/level_3_subs/pd/topics/pdQualityFunc");
 
 
 
@@ -1008,6 +990,7 @@ function handleMessage(sender_psid, received_message) {
   const ap1 = ap1_words;
   const wp1 = wp1_words;
   const mp = mp_words;
+  const pd = pd_words;
 
 
 
@@ -1225,6 +1208,11 @@ function handleMessage(sender_psid, received_message) {
   //academic -> fme
   else if (wordIs(fme, received_message)) {
     magicFunc(sender_psid, fme_flow);
+  }
+
+  //academic -> pd
+  else if (wordIs(pd, received_message)) {
+    magicFunc(sender_psid, pd_flow);
   }
 
   //academic -> tp
@@ -3192,6 +3180,24 @@ let handlePostback = async (sender_psid, received_postback) => {
   }
   else if (payload === 'mp_casting_flow') {
     magicFunc(sender_psid, mp_casting);
+  }
+
+
+  //pd
+  else if (payload === 'pd_flow') {
+    magicFunc(sender_psid, pd_flow);
+  }
+  else if (payload === 'pd_intro_flow') {
+    magicFunc(sender_psid, pd_intro);
+  }
+  else if (payload === 'pd_understandingCustomer_flow') {
+    magicFunc(sender_psid, pd_understandingCustomer);
+  }
+  else if (payload === 'pd_planningDesign_flow') {
+    magicFunc(sender_psid, pd_planDesign);
+  }
+  else if (payload === 'pd_qualityFunc_flow') {
+    magicFunc(sender_psid, pd_qualityFunc);
   }
 
 
