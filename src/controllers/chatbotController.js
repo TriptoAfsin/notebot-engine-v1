@@ -139,6 +139,8 @@ const sss1_words = require('./keywords/academic_words/subjects/sss1Words');
 const sss2_words = require('./keywords/academic_words/subjects/sss2Words');
 //academic -> weavPrepWords
 const weavPrep_words = require('./keywords/academic_words/subjects/weavPrepWords');
+//academic -> acm
+const acm_words = require('./keywords/academic_words/subjects/acmWords');
 
 
 
@@ -760,6 +762,15 @@ const ace_introControlSys = require("./flows/botReplies/note_levels/level_3/leve
 const ace_modleingFreq = require("./flows/botReplies/note_levels/level_3/level_3_subs/ace/topics/aceModleingFreq");
 
 
+//acm
+const acm_flow = require("./flows/botReplies/note_levels/level_3/level_3_subs/acm/acm_flow");
+const acm_books = require("./flows/botReplies/note_levels/level_3/level_3_subs/acm/topics/acmBooks");
+const acm_introCost = require("./flows/botReplies/note_levels/level_3/level_3_subs/acm/topics/acmIntroCost");
+const acm_InterestedUsers = require("./flows/botReplies/note_levels/level_3/level_3_subs/acm/topics/acmInterestedUsers");
+const acm_accountingAction = require("./flows/botReplies/note_levels/level_3/level_3_subs/acm/topics/acmAccountingAction");
+const acm_recordingProcess = require("./flows/botReplies/note_levels/level_3/level_3_subs/acm/topics/acmRecordingProcess");
+
+
 
 
 
@@ -998,6 +1009,7 @@ function handleMessage(sender_psid, received_message) {
   const mp = mp_words;
   const pd = pd_words;
   const ace = ace_words;
+  const acm = acm_words;
 
 
 
@@ -1225,6 +1237,11 @@ function handleMessage(sender_psid, received_message) {
   //academic -> ace
   else if (wordIs(ace, received_message)) {
     magicFunc(sender_psid, ace_flow);
+  }
+
+  //academic -> acm
+  else if (wordIs(acm, received_message)) {
+    magicFunc(sender_psid, acm_flow);
   }
 
   //academic -> tp
@@ -3222,6 +3239,26 @@ let handlePostback = async (sender_psid, received_postback) => {
   }
   else if (payload === 'ace_modleingFreq_flow') {
     magicFunc(sender_psid, ace_modleingFreq);
+  }
+
+  //acm
+  else if (payload === 'acm_flow') {
+    magicFunc(sender_psid, acm_flow);
+  }
+  else if (payload === 'acm_book_flow') {
+    magicFunc(sender_psid, acm_books);
+  }
+  else if (payload === 'acm_introCostManage_flow') {
+    magicFunc(sender_psid, acm_introCost);
+  }
+  else if (payload === 'acm_interestedUsers_flow') {
+    magicFunc(sender_psid, acm_InterestedUsers);
+  }
+  else if (payload === 'acm_accountingAction_flow') {
+    magicFunc(sender_psid, acm_accountingAction);
+  }
+  else if (payload === 'acm_recordingProcess_flow') {
+    magicFunc(sender_psid, acm_recordingProcess);
   }
 
 
