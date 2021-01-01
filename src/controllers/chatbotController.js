@@ -772,6 +772,15 @@ const acm_recordingProcess = require("./flows/botReplies/note_levels/level_3/lev
 
 
 
+//mic
+const mic_flow = require("./flows/botReplies/note_levels/level_3/level_3_subs/mic/mic_flow");
+const mic_books = require("./flows/botReplies/note_levels/level_3/level_3_subs/mic/topics/micBooks");
+const mic_Ch1 = require("./flows/botReplies/note_levels/level_3/level_3_subs/mic/topics/micCh1");
+const mic_Ch2 = require("./flows/botReplies/note_levels/level_3/level_3_subs/mic/topics/micCh2");
+const mic_Ch4 = require("./flows/botReplies/note_levels/level_3/level_3_subs/mic/topics/micCh4");
+
+
+
 
 
 
@@ -1010,6 +1019,8 @@ function handleMessage(sender_psid, received_message) {
   const pd = pd_words;
   const ace = ace_words;
   const acm = acm_words;
+  const mic = mic_words;
+
 
 
 
@@ -1237,6 +1248,11 @@ function handleMessage(sender_psid, received_message) {
   //academic -> ace
   else if (wordIs(ace, received_message)) {
     magicFunc(sender_psid, ace_flow);
+  }
+
+  //academic -> mic
+  else if (wordIs(mic, received_message)) {
+    magicFunc(sender_psid, mic_flow);
   }
 
   //academic -> acm
@@ -3259,6 +3275,24 @@ let handlePostback = async (sender_psid, received_postback) => {
   }
   else if (payload === 'acm_recordingProcess_flow') {
     magicFunc(sender_psid, acm_recordingProcess);
+  }
+
+
+   //mic
+   else if (payload === 'mic_flow') {
+    magicFunc(sender_psid, mic_flow);
+  }
+  else if (payload === 'mic_book_flow') {
+    magicFunc(sender_psid, mic_books);
+  }
+  else if (payload === 'mic_ch1_flow') {
+    magicFunc(sender_psid, mic_Ch1);
+  }
+  else if (payload === 'mic_ch2_flow') {
+    magicFunc(sender_psid, mic_Ch2);
+  }
+  else if (payload === 'mic_ch4_flow') {
+    magicFunc(sender_psid, mic_Ch4);
   }
 
 
