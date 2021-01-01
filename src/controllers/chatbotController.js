@@ -754,6 +754,12 @@ const pd_planDesign = require("./flows/botReplies/note_levels/level_3/level_3_su
 const pd_qualityFunc = require("./flows/botReplies/note_levels/level_3/level_3_subs/pd/topics/pdQualityFunc");
 
 
+//ace
+const ace_flow = require("./flows/botReplies/note_levels/level_3/level_3_subs/ace/ace_flow");
+const ace_introControlSys = require("./flows/botReplies/note_levels/level_3/level_3_subs/ace/topics/aceIntroControlSys");
+const ace_modleingFreq = require("./flows/botReplies/note_levels/level_3/level_3_subs/ace/topics/aceModleingFreq");
+
+
 
 
 
@@ -991,6 +997,7 @@ function handleMessage(sender_psid, received_message) {
   const wp1 = wp1_words;
   const mp = mp_words;
   const pd = pd_words;
+  const ace = ace_words;
 
 
 
@@ -1213,6 +1220,11 @@ function handleMessage(sender_psid, received_message) {
   //academic -> pd
   else if (wordIs(pd, received_message)) {
     magicFunc(sender_psid, pd_flow);
+  }
+
+  //academic -> ace
+  else if (wordIs(ace, received_message)) {
+    magicFunc(sender_psid, ace_flow);
   }
 
   //academic -> tp
@@ -3198,6 +3210,18 @@ let handlePostback = async (sender_psid, received_postback) => {
   }
   else if (payload === 'pd_qualityFunc_flow') {
     magicFunc(sender_psid, pd_qualityFunc);
+  }
+
+
+  //ace
+  else if (payload === 'ace_flow') {
+    magicFunc(sender_psid, ace_flow);
+  }
+  else if (payload === 'ace_introSys_flow') {
+    magicFunc(sender_psid, ace_introControlSys);
+  }
+  else if (payload === 'ace_modleingFreq_flow') {
+    magicFunc(sender_psid, ace_modleingFreq);
   }
 
 
