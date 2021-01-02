@@ -1,5 +1,6 @@
 const im_words = [
     "im", 
+    "industrial management"
 ];
 
 

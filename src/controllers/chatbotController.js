@@ -141,6 +141,8 @@ const sss2_words = require('./keywords/academic_words/subjects/sss2Words');
 const weavPrep_words = require('./keywords/academic_words/subjects/weavPrepWords');
 //academic -> acm
 const acm_words = require('./keywords/academic_words/subjects/acmWords');
+//academic -> im
+const im_words = require('./keywords/academic_words/subjects/imWords');
 
 
 
@@ -804,6 +806,25 @@ const lss_drawFrame = require("./flows/botReplies/note_levels/level_3/level_3_su
 const lss_Spreader = require("./flows/botReplies/note_levels/level_3/level_3_subs/lss/topics/lssSpreader");
 
 
+//im
+const im_flow = require("./flows/botReplies/note_levels/level_3/level_3_subs/im/im_flow");
+const im_lecture = require("./flows/botReplies/note_levels/level_3/level_3_subs/im/topics/lecture/imLecture");
+const im_lectureMaeen = require("./flows/botReplies/note_levels/level_3/level_3_subs/im/topics/lecture/lectureSirs/imMaeen");
+const im_lectureMunir = require("./flows/botReplies/note_levels/level_3/level_3_subs/im/topics/lecture/lectureSirs/imMunir");
+const im_lec1 = require("./flows/botReplies/note_levels/level_3/level_3_subs/im/topics/imLec1");
+const im_lec2 = require("./flows/botReplies/note_levels/level_3/level_3_subs/im/topics/imLec2");
+const im_lec3 = require("./flows/botReplies/note_levels/level_3/level_3_subs/im/topics/imLec3");
+const im_lec4 = require("./flows/botReplies/note_levels/level_3/level_3_subs/im/topics/imLec4");
+const im_market = require("./flows/botReplies/note_levels/level_3/level_3_subs/im/topics/imMarket");
+const im_marketMix = require("./flows/botReplies/note_levels/level_3/level_3_subs/im/topics/imMarketMix");
+const im_projectFeasa = require("./flows/botReplies/note_levels/level_3/level_3_subs/im/topics/imProjectFeasa");
+const im_natureScope = require("./flows/botReplies/note_levels/level_3/level_3_subs/im/topics/imNatureScope");
+const im_ManageFunc = require("./flows/botReplies/note_levels/level_3/level_3_subs/im/topics/imMangeFunc");
+const im_IndusManage = require("./flows/botReplies/note_levels/level_3/level_3_subs/im/topics/imIndusMange");
+const im_TechManage = require("./flows/botReplies/note_levels/level_3/level_3_subs/im/topics/imTechMange");
+const im_ProdManage = require("./flows/botReplies/note_levels/level_3/level_3_subs/im/topics/imProdMange");
+
+
 
 
 
@@ -1051,6 +1072,7 @@ function handleMessage(sender_psid, received_message) {
   const tqm = tqm_words;
   const pcs = pcs_words;
   const lss = lss_words;
+  const im = im_words;
 
 
 
@@ -1284,6 +1306,11 @@ function handleMessage(sender_psid, received_message) {
   //academic -> iae
   else if (wordIs(iae, received_message)) {
     magicFunc(sender_psid, iae_flow);
+  }
+
+  //academic -> im
+  else if (wordIs(im, received_message)) {
+    magicFunc(sender_psid, im_flow);
   }
 
   //academic -> fme
@@ -3392,6 +3419,57 @@ let handlePostback = async (sender_psid, received_postback) => {
   }
   else if (payload === 'lss_spreader_flow') {
     magicFunc(sender_psid, lss_Spreader);
+  }
+
+
+  //im
+  else if (payload === 'im_flow') {
+    magicFunc(sender_psid, im_flow);
+  }
+  else if (payload === 'im_lecture_flow') {
+    magicFunc(sender_psid, im_lecture);
+  }
+  else if (payload === 'im_munirSir_flow') {
+    magicFunc(sender_psid, im_lectureMunir);
+  }
+  else if (payload === 'im_maeenSir_flow') {
+    magicFunc(sender_psid, im_lectureMaeen);
+  }
+  else if (payload === 'im_lec1_flow') {
+    magicFunc(sender_psid, im_lec1);
+  }
+  else if (payload === 'im_lec2_flow') {
+    magicFunc(sender_psid, im_lec2);
+  }
+  else if (payload === 'im_lec3_flow') {
+    magicFunc(sender_psid, im_lec3);
+  }
+  else if (payload === 'im_lec4_flow') {
+    magicFunc(sender_psid, im_lec4);
+  }
+  else if (payload === 'im_market_flow') {
+    magicFunc(sender_psid, im_market);
+  }
+  else if (payload === 'im_marketMix_flow') {
+    magicFunc(sender_psid, im_marketMix);
+  }
+  else if (payload === 'im_projectFeasible_flow') {
+    magicFunc(sender_psid, im_projectFeasa);
+  }
+  else if (payload === 'im_natureScope_flow') {
+    magicFunc(sender_psid, im_natureScope);
+  }
+  else if (payload === 'im_managementFunc_flow') {
+    magicFunc(sender_psid, im_ManageFunc);
+  }
+  else if (payload === 'im_indusManage_flow') {
+    magicFunc(sender_psid, im_IndusManage);
+  }
+  else if (payload === 'im_techManage_flow') {
+    magicFunc(sender_psid, im_TechManage);
+  }
+  else if (payload === 'im_prodMange_flow') {
+    magicFunc(sender_psid, im_ProdManage);
   }
 
 
