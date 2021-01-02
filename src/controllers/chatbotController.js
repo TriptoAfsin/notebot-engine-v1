@@ -798,6 +798,12 @@ const pcs_flow = require("./flows/botReplies/note_levels/level_3/level_3_subs/pc
 const pcs_books = require("./flows/botReplies/note_levels/level_3/level_3_subs/pcs/topics/pcsBooks");
 
 
+//lss
+const lss_flow = require("./flows/botReplies/note_levels/level_3/level_3_subs/lss/lss_flow");
+const lss_drawFrame = require("./flows/botReplies/note_levels/level_3/level_3_subs/lss/topics/lssDrawframe");
+const lss_Spreader = require("./flows/botReplies/note_levels/level_3/level_3_subs/lss/topics/lssSpreader");
+
+
 
 
 
@@ -1044,6 +1050,7 @@ function handleMessage(sender_psid, received_message) {
   const fsd = fsd_words;
   const tqm = tqm_words;
   const pcs = pcs_words;
+  const lss = lss_words;
 
 
 
@@ -1242,6 +1249,11 @@ function handleMessage(sender_psid, received_message) {
   //academic -> pcs
   else if (wordIncludes(pcs, received_message)) {
     magicFunc(sender_psid, pcs_flow);
+  }
+
+  //academic -> lss
+  else if (wordIncludes(lss, received_message)) {
+    magicFunc(sender_psid, lss_flow);
   }
 
   //academic -> am1
@@ -3368,6 +3380,18 @@ let handlePostback = async (sender_psid, received_postback) => {
   }
   else if (payload === 'pcs_books_flow') {
     magicFunc(sender_psid, pcs_books);
+  }
+
+
+  //lss
+  else if (payload === 'lss_flow') {
+    magicFunc(sender_psid, lss_flow);
+  }
+  else if (payload === 'lss_drawFrame_flow') {
+    magicFunc(sender_psid, lss_drawFrame);
+  }
+  else if (payload === 'lss_spreader_flow') {
+    magicFunc(sender_psid, lss_Spreader);
   }
 
 
