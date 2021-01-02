@@ -1,5 +1,7 @@
 const mic_words = [
-    "mic"
+    "mic",
+    "ipe 303",
+    "ipe303"
 ];
 
 

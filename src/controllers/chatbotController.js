@@ -780,6 +780,12 @@ const mic_Ch2 = require("./flows/botReplies/note_levels/level_3/level_3_subs/mic
 const mic_Ch4 = require("./flows/botReplies/note_levels/level_3/level_3_subs/mic/topics/micCh4");
 
 
+//fsd
+const fsd_flow = require("./flows/botReplies/note_levels/level_3/level_3_subs/fsd/fsd_flow");
+const fsd_intro = require("./flows/botReplies/note_levels/level_3/level_3_subs/fsd/topics/fsdIntro");
+const fsd_plainWeave = require("./flows/botReplies/note_levels/level_3/level_3_subs/fsd/topics/fsdPlainWeave");
+
+
 
 
 
@@ -1020,6 +1026,7 @@ function handleMessage(sender_psid, received_message) {
   const ace = ace_words;
   const acm = acm_words;
   const mic = mic_words;
+  const fsd = fsd_words;
 
 
 
@@ -1173,6 +1180,11 @@ function handleMessage(sender_psid, received_message) {
   //academic -> feee
   else if (wordIncludes(feee, received_message)) {
     magicFunc(sender_psid, eee_flow);
+  }
+
+  //academic -> fsd
+  else if (wordIncludes(fsd, received_message)) {
+    magicFunc(sender_psid, fsd_flow);
   }
 
   //academic -> WP1
@@ -3279,7 +3291,7 @@ let handlePostback = async (sender_psid, received_postback) => {
 
 
    //mic
-   else if (payload === 'mic_flow') {
+  else if (payload === 'mic_flow') {
     magicFunc(sender_psid, mic_flow);
   }
   else if (payload === 'mic_book_flow') {
@@ -3293,6 +3305,18 @@ let handlePostback = async (sender_psid, received_postback) => {
   }
   else if (payload === 'mic_ch4_flow') {
     magicFunc(sender_psid, mic_Ch4);
+  }
+
+
+  //fsd
+  else if (payload === 'fsd_flow') {
+    magicFunc(sender_psid, fsd_flow);
+  }
+  else if (payload === 'fsd_intro_flow') {
+    magicFunc(sender_psid, fsd_intro);
+  }
+  else if (payload === 'fsd_plainWeave_flow') {
+    magicFunc(sender_psid, fsd_plainWeave);
   }
 
 
