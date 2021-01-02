@@ -1,5 +1,6 @@
 const pcs_words = [
     "pcs",
+    "process spin"
 ];
 
 

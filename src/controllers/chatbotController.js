@@ -793,6 +793,11 @@ const tqm_continuosImprove = require("./flows/botReplies/note_levels/level_3/lev
 const tqm_qualityRelia = require("./flows/botReplies/note_levels/level_3/level_3_subs/tqm/topics/tqmQualityReliability");
 
 
+//pcs
+const pcs_flow = require("./flows/botReplies/note_levels/level_3/level_3_subs/pcs/pcs_flow");
+const pcs_books = require("./flows/botReplies/note_levels/level_3/level_3_subs/pcs/topics/pcsBooks");
+
+
 
 
 
@@ -1038,6 +1043,7 @@ function handleMessage(sender_psid, received_message) {
   const mic = mic_words;
   const fsd = fsd_words;
   const tqm = tqm_words;
+  const pcs = pcs_words;
 
 
 
@@ -1231,6 +1237,11 @@ function handleMessage(sender_psid, received_message) {
   //academic -> ctca
   else if (wordIncludes(ctca, received_message)) {
     magicFunc(sender_psid, ctca_flow);
+  }
+
+  //academic -> pcs
+  else if (wordIncludes(pcs, received_message)) {
+    magicFunc(sender_psid, pcs_flow);
   }
 
   //academic -> am1
@@ -3348,6 +3359,15 @@ let handlePostback = async (sender_psid, received_postback) => {
   }
   else if (payload === 'tqm_continuous_flow') {
     magicFunc(sender_psid, tqm_continuosImprove);
+  }
+
+
+  //pcs
+  else if (payload === 'pcs_flow') {
+    magicFunc(sender_psid, pcs_flow);
+  }
+  else if (payload === 'pcs_books_flow') {
+    magicFunc(sender_psid, pcs_books);
   }
 
 
