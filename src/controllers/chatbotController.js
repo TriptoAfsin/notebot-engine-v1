@@ -786,6 +786,16 @@ const fsd_intro = require("./flows/botReplies/note_levels/level_3/level_3_subs/f
 const fsd_plainWeave = require("./flows/botReplies/note_levels/level_3/level_3_subs/fsd/topics/fsdPlainWeave");
 
 
+//tqm
+const tqm_flow = require("./flows/botReplies/note_levels/level_3/level_3_subs/tqm/tqm_flow");
+const tqm_totalQm = require("./flows/botReplies/note_levels/level_3/level_3_subs/tqm/topics/tqmTotalQm");
+const tqm_continuosImprove = require("./flows/botReplies/note_levels/level_3/level_3_subs/tqm/topics/tqmContinuousImprove");
+const tqm_qualityRelia = require("./flows/botReplies/note_levels/level_3/level_3_subs/tqm/topics/tqmQualityReliability");
+
+
+
+
+
 
 
 
@@ -1027,6 +1037,7 @@ function handleMessage(sender_psid, received_message) {
   const acm = acm_words;
   const mic = mic_words;
   const fsd = fsd_words;
+  const tqm = tqm_words;
 
 
 
@@ -1150,6 +1161,11 @@ function handleMessage(sender_psid, received_message) {
   //academic -> fd2
   else if (wordIncludes(fd2, received_message)) {
     magicFunc(sender_psid, fd2_flow);
+  }
+
+  //academic -> tqm
+  else if (wordIncludes(tqm, received_message)) {
+    magicFunc(sender_psid, tqm_flow);
   }
 
   //academic -> weaving prep
@@ -3317,6 +3333,21 @@ let handlePostback = async (sender_psid, received_postback) => {
   }
   else if (payload === 'fsd_plainWeave_flow') {
     magicFunc(sender_psid, fsd_plainWeave);
+  }
+
+
+  //tqm
+  else if (payload === 'tqm_flow') {
+    magicFunc(sender_psid, tqm_flow);
+  }
+  else if (payload === 'tqm_totalQm_flow') {
+    magicFunc(sender_psid, tqm_totalQm);
+  }
+  else if (payload === 'tqm_qualityReliability_flow') {
+    magicFunc(sender_psid, tqm_qualityRelia);
+  }
+  else if (payload === 'tqm_continuous_flow') {
+    magicFunc(sender_psid, tqm_continuosImprove);
   }
 
 
