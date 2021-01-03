@@ -863,6 +863,11 @@ const fm2_BasicWarp = require("./flows/botReplies/note_levels/level_3/level_3_su
 const fm2_Misc = require("./flows/botReplies/note_levels/level_3/level_3_subs/fm2/topics/fm2Misc");
 
 
+//knit1
+const knit1_flow = require("./flows/botReplies/note_levels/level_3/level_3_subs/knit1/knit_flow");
+const knit1_Lec = require("./flows/botReplies/note_levels/level_3/level_3_subs/knit1/topics/knitLec");
+
+
 
 
 
@@ -1116,6 +1121,7 @@ function handleMessage(sender_psid, received_message) {
   const economics = econo_words;
   const ym2 = ym2_words;
   const fm2 = fm2_words;
+  const knit1 = knit1_words;
 
 
 
@@ -1249,6 +1255,11 @@ function handleMessage(sender_psid, received_message) {
   //academic -> tqm
   else if (wordIncludes(tqm, received_message)) {
     magicFunc(sender_psid, tqm_flow);
+  }
+
+  //academic -> knit1
+  else if (wordIncludes(knit1, received_message)) {
+    magicFunc(sender_psid, knit1_flow);
   }
 
   //academic -> weaving prep
@@ -3622,6 +3633,15 @@ let handlePostback = async (sender_psid, received_postback) => {
   }
   else if (payload === 'fm2_misc_flow') {
     magicFunc(sender_psid, fm2_Misc);
+  }
+
+
+  //knit1
+  else if (payload === 'kint1_flow') {
+    magicFunc(sender_psid, knit1_flow);
+  }
+  else if (payload === 'knit_lecture_flow') {
+    magicFunc(sender_psid, knit1_Lec);
   }
 
 
