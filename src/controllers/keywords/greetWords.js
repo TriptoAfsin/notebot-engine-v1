@@ -5,7 +5,9 @@ const greets = [
     "Hey", 
     "Hi", 
     "Whatsup", 
-    "Hello"
+    "Hello",
+    "Hlw",
+    "Hallo"
 ];
 
 

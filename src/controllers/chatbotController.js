@@ -1156,7 +1156,6 @@ function handleMessage(sender_psid, received_message) {
   if (wordIncludes(greets, received_message)) {
     // Create the payload for a basic text message
     response = greetReplies[0];
-
     callSendAPI(sender_psid, response);
   }
 
