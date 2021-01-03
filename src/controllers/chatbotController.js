@@ -825,6 +825,11 @@ const im_TechManage = require("./flows/botReplies/note_levels/level_3/level_3_su
 const im_ProdManage = require("./flows/botReplies/note_levels/level_3/level_3_subs/im/topics/imProdMange");
 
 
+//tcp
+const tcp_flow = require("./flows/botReplies/note_levels/level_3/level_3_subs/tcp/tcp_flow");
+const tcp_kpc = require("./flows/botReplies/note_levels/level_3/level_3_subs/tcp/topics/tcpKpc");
+
+
 
 
 
@@ -1073,6 +1078,7 @@ function handleMessage(sender_psid, received_message) {
   const pcs = pcs_words;
   const lss = lss_words;
   const im = im_words;
+  const tcp = tcp_words;
 
 
 
@@ -1221,6 +1227,11 @@ function handleMessage(sender_psid, received_message) {
   //academic -> wpp
   else if (wordIncludes(wpp, received_message)) {
     magicFunc(sender_psid, wpp_flow);
+  }
+
+  //academic -> tcp
+  else if (wordIncludes(tcp, received_message)) {
+    magicFunc(sender_psid, tcp_flow);
   }
 
   //academic -> fdce
@@ -3470,6 +3481,14 @@ let handlePostback = async (sender_psid, received_postback) => {
   }
   else if (payload === 'im_prodMange_flow') {
     magicFunc(sender_psid, im_ProdManage);
+  }
+
+  //tcp
+  else if (payload === 'tcp_flow') {
+    magicFunc(sender_psid, tcp_flow);
+  }
+  else if (payload === 'tcp_kpc_flow') {
+    magicFunc(sender_psid, tcp_kpc);
   }
 
 
