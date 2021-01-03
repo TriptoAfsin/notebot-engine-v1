@@ -830,6 +830,14 @@ const tcp_flow = require("./flows/botReplies/note_levels/level_3/level_3_subs/tc
 const tcp_kpc = require("./flows/botReplies/note_levels/level_3/level_3_subs/tcp/topics/tcpKpc");
 
 
+//am2
+const am2_flow = require("./flows/botReplies/note_levels/level_3/level_3_subs/am2/am2_flow");
+const am2_books = require("./flows/botReplies/note_levels/level_3/level_3_subs/am2/topics/am2Books");
+const am2_classLec = require("./flows/botReplies/note_levels/level_3/level_3_subs/am2/topics/am2ClassLecture");
+const am2_lineBalancing = require("./flows/botReplies/note_levels/level_3/level_3_subs/am2/topics/am2LineBalancing");
+const am2_excel = require("./flows/botReplies/note_levels/level_3/level_3_subs/am2/topics/am2CostingExcel");
+
+
 
 
 
@@ -1079,6 +1087,7 @@ function handleMessage(sender_psid, received_message) {
   const lss = lss_words;
   const im = im_words;
   const tcp = tcp_words;
+  const am2 = am2_words;
 
 
 
@@ -1292,6 +1301,11 @@ function handleMessage(sender_psid, received_message) {
   //academic -> am1
   else if (wordIncludes(am1, received_message)) {
     magicFunc(sender_psid, am1_flow);
+  }
+
+  //academic -> am2
+  else if (wordIncludes(am2, received_message)) {
+    magicFunc(sender_psid, am2_flow);
   }
 
   //academic -> stat
@@ -3489,6 +3503,24 @@ let handlePostback = async (sender_psid, received_postback) => {
   }
   else if (payload === 'tcp_kpc_flow') {
     magicFunc(sender_psid, tcp_kpc);
+  }
+
+
+  //am2
+  else if (payload === 'am2_flow') {
+    magicFunc(sender_psid, am2_flow);
+  }
+  else if (payload === 'am2_books_flow') {
+    magicFunc(sender_psid, am2_books);
+  }
+  else if (payload === 'am2_classlec_flow') {
+    magicFunc(sender_psid, am2_classLec);
+  }
+  else if (payload === 'am2_lineBalancing_flow') {
+    magicFunc(sender_psid, am2_lineBalancing);
+  }
+  else if (payload === 'am2_costingExcel_flow') {
+    magicFunc(sender_psid, am2_excel);
   }
 
 
