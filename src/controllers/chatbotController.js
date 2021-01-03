@@ -844,6 +844,16 @@ const econo_Books = require("./flows/botReplies/note_levels/level_3/level_3_subs
 const econo_ClassLec = require("./flows/botReplies/note_levels/level_3/level_3_subs/econo/topics/econoClassLec");
 
 
+//ym2
+const ym2_flow = require("./flows/botReplies/note_levels/level_3/level_3_subs/ym2/ym2_flow");
+const ym2_books = require("./flows/botReplies/note_levels/level_3/level_3_subs/ym2/topics/ym2Books");
+const ym2_ClassLec = require("./flows/botReplies/note_levels/level_3/level_3_subs/ym2/topics/ym2ClassLec");
+const ym2_Notes = require("./flows/botReplies/note_levels/level_3/level_3_subs/ym2/topics/ym2Notes");
+const ym2_rotor = require("./flows/botReplies/note_levels/level_3/level_3_subs/ym2/topics/ym2Rotor");
+const ym2_Spinning = require("./flows/botReplies/note_levels/level_3/level_3_subs/ym2/topics/ym2Spinning");
+const ym2_specialYarns = require("./flows/botReplies/note_levels/level_3/level_3_subs/ym2/topics/ym2SpecialYarns");
+
+
 
 
 
@@ -1095,6 +1105,7 @@ function handleMessage(sender_psid, received_message) {
   const tcp = tcp_words;
   const am2 = am2_words;
   const economics = econo_words;
+  const ym2 = ym2_words;
 
 
 
@@ -1288,6 +1299,11 @@ function handleMessage(sender_psid, received_message) {
   //academic -> ym1
   else if (wordIncludes(ym1, received_message)) {
     magicFunc(sender_psid, ym1_flow);
+  }
+
+  //academic -> ym2
+  else if (wordIncludes(ym2, received_message)) {
+    magicFunc(sender_psid, ym2_flow);
   }
 
   //academic -> mmtf
@@ -3545,6 +3561,30 @@ let handlePostback = async (sender_psid, received_postback) => {
   }
   else if (payload === 'econo_classlec_flow') {
     magicFunc(sender_psid, econo_ClassLec);
+  }
+
+
+  //ym2
+  else if (payload === 'ym2_flow') {
+    magicFunc(sender_psid, ym2_flow);
+  }
+  else if (payload === 'ym2_books_flow') {
+    magicFunc(sender_psid, ym2_books);
+  }
+  else if (payload === 'ym2_classlec_flow') {
+    magicFunc(sender_psid, ym2_ClassLec);
+  }
+  else if (payload === 'ym2_note_flow') {
+    magicFunc(sender_psid, ym2_Notes);
+  }
+  else if (payload === 'ym2_rotor_flow') {
+    magicFunc(sender_psid, ym2_rotor);
+  }
+  else if (payload === 'ym2_spinning_flow') {
+    magicFunc(sender_psid, ym2_Spinning);
+  }
+  else if (payload === 'ym2_specialYarns_flow') {
+    magicFunc(sender_psid, ym2_specialYarns);
   }
 
 
