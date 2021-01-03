@@ -854,6 +854,15 @@ const ym2_Spinning = require("./flows/botReplies/note_levels/level_3/level_3_sub
 const ym2_specialYarns = require("./flows/botReplies/note_levels/level_3/level_3_subs/ym2/topics/ym2SpecialYarns");
 
 
+//fm2
+const fm2_flow = require("./flows/botReplies/note_levels/level_3/level_3_subs/fm2/fm2_flow");
+const fm2_Books = require("./flows/botReplies/note_levels/level_3/level_3_subs/fm2/topics/fm2Books");
+const fm2_ClassLec = require("./flows/botReplies/note_levels/level_3/level_3_subs/fm2/topics/fm2ClassLec");
+const fm2_Notes = require("./flows/botReplies/note_levels/level_3/level_3_subs/fm2/topics/fm2Notes");
+const fm2_BasicWarp = require("./flows/botReplies/note_levels/level_3/level_3_subs/fm2/topics/fm2BasicWarp");
+const fm2_Misc = require("./flows/botReplies/note_levels/level_3/level_3_subs/fm2/topics/fm2Misc");
+
+
 
 
 
@@ -1106,6 +1115,7 @@ function handleMessage(sender_psid, received_message) {
   const am2 = am2_words;
   const economics = econo_words;
   const ym2 = ym2_words;
+  const fm2 = fm2_words;
 
 
 
@@ -1405,9 +1415,15 @@ function handleMessage(sender_psid, received_message) {
   else if (wordIs(bil, received_message)) {
     magicFunc(sender_psid, bil_flow);
   }
+
   //academic -> fm1
   else if (wordIncludes(fm1, received_message)) {
     magicFunc(sender_psid, fm1_flow);
+  }
+
+  //academic -> fm2
+  else if (wordIncludes(fm2, received_message)) {
+    magicFunc(sender_psid, fm2_flow);
   }
 
   //academic -> epd
@@ -3585,6 +3601,27 @@ let handlePostback = async (sender_psid, received_postback) => {
   }
   else if (payload === 'ym2_specialYarns_flow') {
     magicFunc(sender_psid, ym2_specialYarns);
+  }
+
+
+  //fm2
+  else if (payload === 'fm2_flow') {
+    magicFunc(sender_psid, fm2_flow);
+  }
+  else if (payload === 'fm2_books_flow') {
+    magicFunc(sender_psid, fm2_Books);
+  }
+  else if (payload === 'fm2_classlec_flow') {
+    magicFunc(sender_psid, fm2_ClassLec);
+  }
+  else if (payload === 'fm2_note_flow') {
+    magicFunc(sender_psid, fm2_Notes);
+  }
+  else if (payload === 'fm2_basicWarp_flow') {
+    magicFunc(sender_psid, fm2_BasicWarp);
+  }
+  else if (payload === 'fm2_misc_flow') {
+    magicFunc(sender_psid, fm2_Misc);
   }
 
 
