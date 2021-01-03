@@ -838,6 +838,12 @@ const am2_lineBalancing = require("./flows/botReplies/note_levels/level_3/level_
 const am2_excel = require("./flows/botReplies/note_levels/level_3/level_3_subs/am2/topics/am2CostingExcel");
 
 
+//economics
+const econo_flow = require("./flows/botReplies/note_levels/level_3/level_3_subs/econo/econo_flow");
+const econo_Books = require("./flows/botReplies/note_levels/level_3/level_3_subs/econo/topics/econoBooks");
+const econo_ClassLec = require("./flows/botReplies/note_levels/level_3/level_3_subs/econo/topics/econoClassLec");
+
+
 
 
 
@@ -1088,6 +1094,7 @@ function handleMessage(sender_psid, received_message) {
   const im = im_words;
   const tcp = tcp_words;
   const am2 = am2_words;
+  const economics = econo_words;
 
 
 
@@ -1206,6 +1213,11 @@ function handleMessage(sender_psid, received_message) {
   //academic -> bce
   else if (wordIncludes(bce, received_message)) {
     magicFunc(sender_psid, bce_flow);
+  }
+
+  //academic -> economics
+  else if (wordIncludes(economics, received_message)) {
+    magicFunc(sender_psid, econo_flow);
   }
 
   //academic -> fd2
@@ -3521,6 +3533,18 @@ let handlePostback = async (sender_psid, received_postback) => {
   }
   else if (payload === 'am2_costingExcel_flow') {
     magicFunc(sender_psid, am2_excel);
+  }
+
+
+  //economics
+  else if (payload === 'econo_flow') {
+    magicFunc(sender_psid, econo_flow);
+  }
+  else if (payload === 'econo_books_flow') {
+    magicFunc(sender_psid, econo_Books);
+  }
+  else if (payload === 'econo_classlec_flow') {
+    magicFunc(sender_psid, econo_ClassLec);
   }
 
 

@@ -77,7 +77,7 @@ let am2Flow = [
             "type": "template",
             "payload": {
                 "template_type": "button",
-                "text": "🔰 Select Topics for AM-I - ",
+                "text": "🔰 Select Topics for AM-II - ",
                 "buttons": [
                     {
                         "type": "web_url",
