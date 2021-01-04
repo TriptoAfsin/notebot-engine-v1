@@ -1,6 +1,6 @@
 ## Backend engine for Notebot 2021
 
-<p align="center"><img src="https://i.imgur.com/7OzOu1k.png" width="256px"></img></p>
+<p align="center"><img src="./logo-v1.png" width="256px"></img></p>
 
 ### About:
 This is a messenger chatbot made for <a href="https://www.butex.edu.bd/">BUTEX(Bangladesh University of Textiles)</a> to deliver study materials 24x7
