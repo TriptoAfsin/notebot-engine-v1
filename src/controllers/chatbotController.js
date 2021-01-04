@@ -868,6 +868,14 @@ const knit1_flow = require("./flows/botReplies/note_levels/level_3/level_3_subs/
 const knit1_Lec = require("./flows/botReplies/note_levels/level_3/level_3_subs/knit1/topics/knitLec");
 
 
+//ap2
+const ap2_flow = require("./flows/botReplies/note_levels/level_3/level_3_subs/ap2/ap2_flow");
+const ap2_folding = require("./flows/botReplies/note_levels/level_3/level_3_subs/ap2/topics/ap2FoldingPackage");
+const ap2_Stitch = require("./flows/botReplies/note_levels/level_3/level_3_subs/ap2/topics/ap2Stitch");
+const ap2_LockStitch = require("./flows/botReplies/note_levels/level_3/level_3_subs/ap2/topics/ap2LockStitch");
+const ap2_Pressing = require("./flows/botReplies/note_levels/level_3/level_3_subs/ap2/topics/ap2Pressing");
+
+
 
 
 
@@ -1105,6 +1113,7 @@ function handleMessage(sender_psid, received_message) {
   const fd2 = fd2_words;
   const weavPrep = weavPrep_words;
   const ap1 = ap1_words;
+  const ap2 = ap2_words;
   const wp1 = wp1_words;
   const mp = mp_words;
   const pd = pd_words;
@@ -1269,6 +1278,11 @@ function handleMessage(sender_psid, received_message) {
   //academic -> ap1
   else if (wordIncludes(ap1, received_message)) {
     magicFunc(sender_psid, ap1_flow);
+  }
+
+  //academic -> ap2
+  else if (wordIncludes(ap2, received_message)) {
+    magicFunc(sender_psid, ap2_flow);
   }
 
   //academic -> mp
@@ -3641,6 +3655,24 @@ let handlePostback = async (sender_psid, received_postback) => {
   }
   else if (payload === 'knit_lecture_flow') {
     magicFunc(sender_psid, knit1_Lec);
+  }
+
+
+  //ap2
+  else if (payload === 'ap2_flow') {
+    magicFunc(sender_psid, ap2_flow);
+  }
+  else if (payload === 'ap2_folding_flow') {
+    magicFunc(sender_psid, ap2_folding);
+  }
+  else if (payload === 'ap2_stitch_flow') {
+    magicFunc(sender_psid, ap2_Stitch);
+  }
+  else if (payload === 'ap2_lockStitch_flow') {
+    magicFunc(sender_psid, ap2_LockStitch);
+  }
+  else if (payload === 'ap2_pressingFinish_flow') {
+    magicFunc(sender_psid, ap2_Pressing);
   }
 
 
