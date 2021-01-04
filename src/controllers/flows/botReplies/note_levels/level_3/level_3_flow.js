@@ -55,8 +55,8 @@ let level_3_note = [
                     },
                     {
                         "type": "postback",
-                        "title": "WM-II",
-                        "payload": "wm2_flow"
+                        "title": "WP-II",
+                        "payload": "wp2_flow"
                     },
                     {
                         "type": "postback",
