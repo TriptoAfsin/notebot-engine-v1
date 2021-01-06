@@ -3,7 +3,7 @@ let phy1_lab_flow = [
         "attachment":{
             "type":"image", 
             "payload":{
-              "is_reusable": true,
+              "is_reusable": false,
               "url":"https://manybot-thumbnails.s3.eu-central-1.amazonaws.com/fb243958719599028/ca/big_43439688e574c75733a93d3207ce0c16.png"
             }
           }
