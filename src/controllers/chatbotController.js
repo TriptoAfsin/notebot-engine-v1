@@ -927,7 +927,7 @@ const bil_laborlaw = require("./flows/botReplies/note_levels/level_4/level_4_sub
 
 
 
-const labFlow = require('./flows/botReplies/labFlow');
+
 
 //routine
 const routineFlow = require('./flows/botReplies/routineFlow');
@@ -976,6 +976,11 @@ const syllabus_45_dce = require('./flows/botReplies/syllabus_batches/45/depts/dc
 const syllabus_45_wpe = require('./flows/botReplies/syllabus_batches/45/depts/wpe_45/wpe45Syllabus');
 
 
+//lab
+const labFlow = require('./flows/botReplies/labFlow');
+const labFlow_level1 = require('./flows/botReplies/lab_levels/level_1/level_1_lab_flow');
+const labFlow_level2 = require('./flows/botReplies/lab_levels/level_2/level_2_lab_flow');
+const labFlow_level3 = require('./flows/botReplies/lab_levels/level_3/level_3_lab_flow');
 
 
 
@@ -3750,6 +3755,21 @@ let handlePostback = async (sender_psid, received_postback) => {
   //46
   else if (payload === 'syllabus_46') {
     magicFunc(sender_psid, notAvailable);
+  }
+
+
+  //lab report 
+  else if (payload === 'reports_flow') {
+    magicFunc(sender_psid, labFlow);
+  }
+  else if (payload === 'level_1_lab') {
+    magicFunc(sender_psid, labFlow_level1);
+  }
+  else if (payload === 'level_2_lab') {
+    magicFunc(sender_psid, labFlow_level2);
+  }
+  else if (payload === 'level_3_lab') {
+    magicFunc(sender_psid, labFlow_level3);
   }
 
 
