@@ -1188,7 +1188,7 @@ function handleMessage(sender_psid, received_message) {
 
   const test = ["test", "Test"];
 
-  /*
+  
   
   
   if (wordIncludes(greets, received_message)) {
@@ -1612,7 +1612,7 @@ function handleMessage(sender_psid, received_message) {
 
 
   
-  */
+  
 
   //default reply
   if (received_message.text) {
