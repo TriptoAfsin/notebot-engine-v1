@@ -1184,7 +1184,7 @@ function handleMessage(sender_psid, received_message) {
   const test = ["test", "Test"];
 
 
-  /*
+  
   // Check if the message
   if (wordIncludes(greets, received_message)) {
     // Create the payload for a basic text message
@@ -1606,10 +1606,10 @@ function handleMessage(sender_psid, received_message) {
 
 
 
-  */
+  
 
   //default reply
-  if (received_message.text) {
+  else if (received_message.text) {
     response = defaultReply[0];
 
     callSendAPI(sender_psid, response);
