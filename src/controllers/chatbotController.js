@@ -993,6 +993,16 @@ const labFlow_che1_Titration = require('./flows/botReplies/lab_levels/level_1/le
 
 //phy1
 const labFlow_phy1 = require('./flows/botReplies/lab_levels/level_1/level_1_lab_subs/phy_1/phy_1LabFlow');
+const labFlow_phy1_m1 = require('./flows/botReplies/lab_levels/level_1/level_1_lab_subs/phy_1/phy_1_lab_topics/phy1LabM1');
+const labFlow_phy1_m2 = require('./flows/botReplies/lab_levels/level_1/level_1_lab_subs/phy_1/phy_1_lab_topics/phy1LabM2');
+const labFlow_phy1_m3 = require('./flows/botReplies/lab_levels/level_1/level_1_lab_subs/phy_1/phy_1_lab_topics/phy1LabM3');
+const labFlow_phy1_m4 = require('./flows/botReplies/lab_levels/level_1/level_1_lab_subs/phy_1/phy_1_lab_topics/phy1LabM4');
+const labFlow_phy1_m5 = require('./flows/botReplies/lab_levels/level_1/level_1_lab_subs/phy_1/phy_1_lab_topics/phy1LabM5');
+const labFlow_phy1_m6 = require('./flows/botReplies/lab_levels/level_1/level_1_lab_subs/phy_1/phy_1_lab_topics/phy1LabM6');
+const labFlow_phy1_o1 = require('./flows/botReplies/lab_levels/level_1/level_1_lab_subs/phy_1/phy_1_lab_topics/phy1LabO1');
+const labFlow_phy1_o2 = require('./flows/botReplies/lab_levels/level_1/level_1_lab_subs/phy_1/phy_1_lab_topics/phy1LabO2');
+const labFlow_phy1_o3 = require('./flows/botReplies/lab_levels/level_1/level_1_lab_subs/phy_1/phy_1_lab_topics/phy1LabO3');
+const labFlow_phy1_o4 = require('./flows/botReplies/lab_levels/level_1/level_1_lab_subs/phy_1/phy_1_lab_topics/phy1LabO4');
 
 
 
@@ -3817,6 +3827,36 @@ let handlePostback = async (sender_psid, received_postback) => {
   //lab -> phy1
   else if (payload === 'phy1_lab_flow') {
     magicFunc(sender_psid, labFlow_phy1);
+  }
+  else if (payload === 'phy1_m1_flow') {
+    magicFunc(sender_psid, labFlow_phy1_m1);
+  }
+  else if (payload === 'phy1_m2_flow') {
+    magicFunc(sender_psid, labFlow_phy1_m2);
+  }
+  else if (payload === 'phy1_m3_flow') {
+    magicFunc(sender_psid, labFlow_phy1_m3);
+  }
+  else if (payload === 'phy1_m4_flow') {
+    magicFunc(sender_psid, labFlow_phy1_m4);
+  }
+  else if (payload === 'phy1_m5_flow') {
+    magicFunc(sender_psid, labFlow_phy1_m5);
+  }
+  else if (payload === 'phy1_m6_flow') {
+    magicFunc(sender_psid, labFlow_phy1_m6);
+  }
+  else if (payload === 'phy1_o1_flow') {
+    magicFunc(sender_psid, labFlow_phy1_o1);
+  }
+  else if (payload === 'phy1_o2_flow') {
+    magicFunc(sender_psid, labFlow_phy1_o2);
+  }
+  else if (payload === 'phy1_o3_flow') {
+    magicFunc(sender_psid, labFlow_phy1_o3);
+  }
+  else if (payload === 'phy1_o4_flow') {
+    magicFunc(sender_psid, labFlow_phy1_o4);
   }
 
 
