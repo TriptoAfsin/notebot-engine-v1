@@ -1615,7 +1615,7 @@ function handleMessage(sender_psid, received_message) {
   
 
   //default reply
-  if (received_message.text) {
+  else if (received_message.text) {
     response = defaultReply[0];
 
     callSendAPI(sender_psid, response);
@@ -1623,6 +1623,18 @@ function handleMessage(sender_psid, received_message) {
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+/*--------------------------------------------------------*/
 
 // Handles messaging_postbacks events(button response)
 let handlePostback = async (sender_psid, received_postback) => {
