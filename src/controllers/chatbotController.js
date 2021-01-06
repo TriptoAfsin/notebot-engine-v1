@@ -1061,9 +1061,14 @@ let postWebhook = (req, res) => {
       // Check if the event is a message or postback and
       // pass the event to the appropriate handler function
       if (webhook_event.message) {
-        return handleMessage(sender_psid, webhook_event.message);
+        if(webhook_event.message.is_echo){
+          return console.log("echo called");
+        }
+        else{
+          handleMessage(sender_psid, webhook_event.message);
+        }
       } else if (webhook_event.postback) {
-        return handlePostback(sender_psid, webhook_event.postback);
+        handlePostback(sender_psid, webhook_event.postback);
       }
     });
 
@@ -1183,9 +1188,9 @@ function handleMessage(sender_psid, received_message) {
 
   const test = ["test", "Test"];
 
-
+  /*
   
-  // Check if the message
+  
   if (wordIncludes(greets, received_message)) {
     // Create the payload for a basic text message
     response = greetReplies[0];
@@ -1607,9 +1612,10 @@ function handleMessage(sender_psid, received_message) {
 
 
   
+  */
 
   //default reply
-  else if (received_message.text) {
+  if (received_message.text) {
     response = defaultReply[0];
 
     callSendAPI(sender_psid, response);
