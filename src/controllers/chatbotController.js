@@ -982,7 +982,7 @@ const labFlow_level1 = require('./flows/botReplies/lab_levels/level_1/level_1_la
 const labFlow_level2 = require('./flows/botReplies/lab_levels/level_2/level_2_lab_flow');
 const labFlow_level3 = require('./flows/botReplies/lab_levels/level_3/level_3_lab_flow');
 
-//che1
+//lab->che1
 const labFlow_che1 = require('./flows/botReplies/lab_levels/level_1/level_1_lab_subs/che_1/che1LabFlow');
 const labFlow_che1_procedure = require('./flows/botReplies/lab_levels/level_1/level_1_lab_subs/che_1/che1_lab_topics/che1labProcedure');
 const labFlow_che1_acidRad = require('./flows/botReplies/lab_levels/level_1/level_1_lab_subs/che_1/che1_lab_topics/che1labAcidRad');
@@ -991,7 +991,7 @@ const labFlow_che1_Mohr = require('./flows/botReplies/lab_levels/level_1/level_1
 const labFlow_che1_WetTest = require('./flows/botReplies/lab_levels/level_1/level_1_lab_subs/che_1/che1_lab_topics/che1labWet');
 const labFlow_che1_Titration = require('./flows/botReplies/lab_levels/level_1/level_1_lab_subs/che_1/che1_lab_topics/che1labTitration');
 
-//phy1
+//lab->phy1
 const labFlow_phy1 = require('./flows/botReplies/lab_levels/level_1/level_1_lab_subs/phy_1/phy_1LabFlow');
 const labFlow_phy1_m1 = require('./flows/botReplies/lab_levels/level_1/level_1_lab_subs/phy_1/phy_1_lab_topics/phy1LabM1');
 const labFlow_phy1_m2 = require('./flows/botReplies/lab_levels/level_1/level_1_lab_subs/phy_1/phy_1_lab_topics/phy1LabM2');
@@ -1003,6 +1003,12 @@ const labFlow_phy1_o1 = require('./flows/botReplies/lab_levels/level_1/level_1_l
 const labFlow_phy1_o2 = require('./flows/botReplies/lab_levels/level_1/level_1_lab_subs/phy_1/phy_1_lab_topics/phy1LabO2');
 const labFlow_phy1_o3 = require('./flows/botReplies/lab_levels/level_1/level_1_lab_subs/phy_1/phy_1_lab_topics/phy1LabO3');
 const labFlow_phy1_o4 = require('./flows/botReplies/lab_levels/level_1/level_1_lab_subs/phy_1/phy_1_lab_topics/phy1LabO4');
+
+//lab->bce
+const labFlow_bce = require('./flows/botReplies/lab_levels/level_1/level_1_lab_subs/bce/bceLabFlow');
+const labFlow_bceReading = require('./flows/botReplies/lab_levels/level_1/level_1_lab_subs/bce/bce_lab_topics/bceLabRead');
+const labFlow_bceLsiteing = require('./flows/botReplies/lab_levels/level_1/level_1_lab_subs/bce/bce_lab_topics/bceLabListen');
+const labFlow_bceLabSheet = require('./flows/botReplies/lab_levels/level_1/level_1_lab_subs/bce/bce_lab_topics/bceLabSheet');
 
 
 
@@ -3857,6 +3863,21 @@ let handlePostback = async (sender_psid, received_postback) => {
   }
   else if (payload === 'phy1_o4_flow') {
     magicFunc(sender_psid, labFlow_phy1_o4);
+  }
+
+
+  //lab -> bce
+  else if (payload === 'bce_lab_flow') {
+    magicFunc(sender_psid, labFlow_bce);
+  }
+  else if (payload === 'bce_lab_read_flow') {
+    magicFunc(sender_psid, labFlow_bceReading);
+  }
+  else if (payload === 'bce_lab_listen_flow') {
+    magicFunc(sender_psid, labFlow_bceLsiteing);
+  }
+  else if (payload === 'bce_lab_sheet_flow') {
+    magicFunc(sender_psid, labFlow_bceLabSheet);
   }
 
 
