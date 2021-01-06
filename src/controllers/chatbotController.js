@@ -982,6 +982,14 @@ const labFlow_level1 = require('./flows/botReplies/lab_levels/level_1/level_1_la
 const labFlow_level2 = require('./flows/botReplies/lab_levels/level_2/level_2_lab_flow');
 const labFlow_level3 = require('./flows/botReplies/lab_levels/level_3/level_3_lab_flow');
 
+//che1
+const labFlow_che1 = require('./flows/botReplies/lab_levels/level_1/level_1_lab_subs/che_1/che1LabFlow');
+const labFlow_che1_procedure = require('./flows/botReplies/lab_levels/level_1/level_1_lab_subs/che_1/che1_lab_topics/che1labProcedure');
+const labFlow_che1_acidRad = require('./flows/botReplies/lab_levels/level_1/level_1_lab_subs/che_1/che1_lab_topics/che1labAcidRad');
+const labFlow_che1_basicRad = require('./flows/botReplies/lab_levels/level_1/level_1_lab_subs/che_1/che1_lab_topics/che1labBasicRad');
+const labFlow_che1_Mohr = require('./flows/botReplies/lab_levels/level_1/level_1_lab_subs/che_1/che1_lab_topics/che1labMohr');
+const labFlow_che1_WetTest = require('./flows/botReplies/lab_levels/level_1/level_1_lab_subs/che_1/che1_lab_topics/che1labWet');
+const labFlow_che1_Titration = require('./flows/botReplies/lab_levels/level_1/level_1_lab_subs/che_1/che1_lab_topics/che1labTitration');
 
 
 
@@ -3772,6 +3780,28 @@ let handlePostback = async (sender_psid, received_postback) => {
     magicFunc(sender_psid, labFlow_level3);
   }
 
+  //lab -> che1
+  else if (payload === 'che1_lab_flow') {
+    magicFunc(sender_psid, labFlow_che1);
+  }
+  else if (payload === 'che1_procedureSheet_flow') {
+    magicFunc(sender_psid, labFlow_che1_procedure);
+  }
+  else if (payload === 'che1_acidRadical_flow') {
+    magicFunc(sender_psid, labFlow_che1_acidRad);
+  }
+  else if (payload === 'che1_basicRadical_flow') {
+    magicFunc(sender_psid, labFlow_che1_basicRad);
+  }
+  else if (payload === 'che1_mohrsSalt_flow') {
+    magicFunc(sender_psid, labFlow_che1_Mohr);
+  }
+  else if (payload === 'che1_wetTest_flow') {
+    magicFunc(sender_psid, labFlow_che1_WetTest);
+  }
+  else if (payload === 'che1_titration_flow') {
+    magicFunc(sender_psid, labFlow_che1_Titration);
+  }
 
 
 }
