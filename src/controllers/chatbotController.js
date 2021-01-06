@@ -991,6 +991,10 @@ const labFlow_che1_Mohr = require('./flows/botReplies/lab_levels/level_1/level_1
 const labFlow_che1_WetTest = require('./flows/botReplies/lab_levels/level_1/level_1_lab_subs/che_1/che1_lab_topics/che1labWet');
 const labFlow_che1_Titration = require('./flows/botReplies/lab_levels/level_1/level_1_lab_subs/che_1/che1_lab_topics/che1labTitration');
 
+//phy1
+const labFlow_phy1 = require('./flows/botReplies/lab_levels/level_1/level_1_lab_subs/phy_1/phy_1LabFlow');
+
+
 
 
 
@@ -3801,6 +3805,12 @@ let handlePostback = async (sender_psid, received_postback) => {
   }
   else if (payload === 'che1_titration_flow') {
     magicFunc(sender_psid, labFlow_che1_Titration);
+  }
+
+
+  //lab -> phy1
+  else if (payload === 'phy1_lab_flow') {
+    magicFunc(sender_psid, labFlow_phy1);
   }
 
 
