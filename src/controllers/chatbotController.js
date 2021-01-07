@@ -1047,6 +1047,9 @@ const labFlow_bceReading = require('./flows/botReplies/lab_levels/level_1/level_
 const labFlow_bceLsiteing = require('./flows/botReplies/lab_levels/level_1/level_1_lab_subs/bce/bce_lab_topics/bceLabListen');
 const labFlow_bceLabSheet = require('./flows/botReplies/lab_levels/level_1/level_1_lab_subs/bce/bce_lab_topics/bceLabSheet');
 
+//lab->ed
+const labFlow_ed = require('./flows/botReplies/lab_levels/level_1/level_1_lab_subs/ed/edLabFlow');
+
 
 
 
@@ -4005,14 +4008,18 @@ let handlePostback = async (sender_psid, received_postback) => {
   }
 
 
+  //lab -> ed
+  else if (payload === 'ed_lab_flow') {
+    magicFunc(sender_psid, labFlow_ed);
+  }
+
+
 }
 
 //magic func
 let magicFunc = (sender_psid, flow) => {
   let i = 0;
-
   for (i = 0; i < flow.length; i++) {
-
     response = flow[i];
     callSendAPI(sender_psid, response);
   }

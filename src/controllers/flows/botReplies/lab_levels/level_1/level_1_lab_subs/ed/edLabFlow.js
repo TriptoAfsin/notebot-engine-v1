@@ -1,25 +1,67 @@
-let lab = [
+let ed_lab_flow = [
     {
         "attachment": {
             "type": "template",
             "payload": {
                 "template_type": "button",
-                "text": "🔰 Choose - ",
+                "text": "📌 Books & Assignments - ",
                 "buttons": [
                     {
-                        "type": "postback",
-                        "title": "🟣 Level 1",
-                        "payload": "level_1"
+                        "type": "web_url",
+                        "url": "https://drive.google.com/file/d/1LrsCg8VDgRUPtGsV7W_mgA81WCsBSy1r/view?usp=sharing",
+                        "title": "ED Assign.",
                     },
                     {
-                        "type": "postback",
-                        "title": "🟣 Level 2",
-                        "payload": "level_2"
+                        "type": "web_url",
+                        "url": "https://drive.google.com/drive/folders/1xNKsfDATBlQUt7ycfcYdkNC61UnJhv0i",
+                        "title": "Book",
+                    }
+                ],
+            },
+        },
+    },
+    {
+        "attachment": {
+            "type": "template",
+            "payload": {
+                "template_type": "button",
+                "text": "🔰 Select -  ",
+                "buttons": [
+                    {
+                        "type": "web_url",
+                        "url": "https://drive.google.com/file/d/1jrfGhEhjxbgRsqWKS4PJ9HhJzgIsmi6w/view?usp=sharing",
+                        "title": "Lecture 1",
                     },
                     {
-                        "type": "postback",
-                        "title": "🟣 Level 3",
-                        "payload": "level_3"
+                        "type": "web_url",
+                        "url": "https://drive.google.com/file/d/0B5vBcvWdtgOuZDh6R2V5T243Q2VaZ0FpNXNKOXFFREo0c05j/view",
+                        "title": "Lecture 2",
+                    },
+                    {
+                        "type": "web_url",
+                        "url": "https://drive.google.com/file/d/140-9jttFF_dRMeczR8SBnNMHz_W1GSDf/view?usp=drivesdk",
+                        "title": "Lecture 3",
+                    }
+                ],
+            },
+        },
+    },
+    {
+        "attachment": {
+            "type": "template",
+            "payload": {
+                "template_type": "button",
+                "text": "🔰 Select -  ",
+                "buttons": [
+                    {
+                        "type": "web_url",
+                        "url": "https://drive.google.com/file/d/16uKWBvwM_5ycg9g_hGncQe6UEESex3Sx/view?usp=drivesdk",
+                        "title": "Sectional Vi.",
+                    },
+                    {
+                        "type": "web_url",
+                        "url": "https://drive.google.com/file/d/1Nlz2LWCb_tXAt9R_dowPrWKA2GW4K6eD/view?usp=drivesdk",
+                        "title": "Auxiliary V.",
                     }
                 ],
             },
@@ -29,6 +71,4 @@ let lab = [
 
 
 
-
-
-module.exports = lab;
+module.exports = ed_lab_flow;
