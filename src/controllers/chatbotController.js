@@ -1062,6 +1062,13 @@ const labFlow_cp_Fibonacchi = require('./flows/botReplies/lab_levels/level_1/lev
 const labFlow_cp_ch_1_3 = require('./flows/botReplies/lab_levels/level_1/level_1_lab_subs/cp/cp_lab_topics/cpLabCh1_3');
 
 
+//lab-> ap1
+const labFlow_ap1 = require('./flows/botReplies/lab_levels/level_1/level_1_lab_subs/ap_1/ap1LabFlow');
+const labFlow_ap1_interline = require('./flows/botReplies/lab_levels/level_1/level_1_lab_subs/ap_1/ap1_lab_topics/ap1labInterlining');
+const labFlow_ap1_stdBody = require('./flows/botReplies/lab_levels/level_1/level_1_lab_subs/ap_1/ap1_lab_topics/ap1LabStdBody');
+const labFlow_ap1_continuousFusing = require('./flows/botReplies/lab_levels/level_1/level_1_lab_subs/ap_1/ap1_lab_topics/ap1LabContinuousFusing');
+const labFlow_ap1_straightKnife = require('./flows/botReplies/lab_levels/level_1/level_1_lab_subs/ap_1/ap1_lab_topics/ap1LabStraightKnife');
+
 
 
 
@@ -4058,6 +4065,23 @@ let handlePostback = async (sender_psid, received_postback) => {
   }
   else if (payload === 'cp_lab_Chapter') {
     magicFunc(sender_psid, labFlow_cp_ch_1_3);
+  }
+
+  //lab -> ap1
+  else if (payload === 'ap1_lab_flow') {
+    magicFunc(sender_psid, labFlow_ap1);
+  }
+  else if (payload === 'ap1_lab_attachingInterline_flow') {
+    magicFunc(sender_psid, labFlow_ap1_interline);
+  }
+  else if (payload === 'ap1_lab_standardBody_flow') {
+    magicFunc(sender_psid, labFlow_ap1_stdBody);
+  }
+  else if (payload === 'ap1_lab_continuousFusing_flow') {
+    magicFunc(sender_psid, labFlow_ap1_continuousFusing);
+  }
+  else if (payload === 'ap1_lab_straightKnife_flow') {
+    magicFunc(sender_psid, labFlow_ap1_straightKnife);
   }
 
 
