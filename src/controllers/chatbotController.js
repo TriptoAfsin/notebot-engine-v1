@@ -1070,6 +1070,24 @@ const labFlow_ap1_continuousFusing = require('./flows/botReplies/lab_levels/leve
 const labFlow_ap1_straightKnife = require('./flows/botReplies/lab_levels/level_1/level_1_lab_subs/ap_1/ap1_lab_topics/ap1LabStraightKnife');
 
 
+//lab-> msp
+const labFlow_msp = require('./flows/botReplies/lab_levels/level_1/level_1_lab_subs/msp/mspLabFlow');
+const labFlow_msp_layout = require('./flows/botReplies/lab_levels/level_1/level_1_lab_subs/msp/msp_lab_topics/mspLabLayout');
+const labFlow_msp_handTools = require('./flows/botReplies/lab_levels/level_1/level_1_lab_subs/msp/msp_lab_topics/mspLabHandTools');
+const labFlow_msp_GrindingMc = require('./flows/botReplies/lab_levels/level_1/level_1_lab_subs/msp/msp_lab_topics/mspLabGrindingMC');
+const labFlow_msp_LatheMc = require('./flows/botReplies/lab_levels/level_1/level_1_lab_subs/msp/msp_lab_topics/mspLabLathe');
+const labFlow_msp_SqKey = require('./flows/botReplies/lab_levels/level_1/level_1_lab_subs/msp/msp_lab_topics/mspLabsqKey');
+const labFlow_msp_mathcingParts = require('./flows/botReplies/lab_levels/level_1/level_1_lab_subs/msp/msp_lab_topics/mspLabMatchingParts');
+const labFlow_msp_MillingMC = require('./flows/botReplies/lab_levels/level_1/level_1_lab_subs/msp/msp_lab_topics/mspLabMilling');
+const labFlow_msp_DrillingMc = require('./flows/botReplies/lab_levels/level_1/level_1_lab_subs/msp/msp_lab_topics/mspLabDrilling');
+const labFlow_msp_Shaper = require('./flows/botReplies/lab_levels/level_1/level_1_lab_subs/msp/msp_lab_topics/mspLabShaper');
+const labFlow_msp_Welding = require('./flows/botReplies/lab_levels/level_1/level_1_lab_subs/msp/msp_lab_topics/mspLabWelding');
+const labFlow_msp_IntroLight = require('./flows/botReplies/lab_levels/level_1/level_1_lab_subs/msp/msp_lab_topics/mspLabIntroLight');
+const labFlow_msp_ArcWeld = require('./flows/botReplies/lab_levels/level_1/level_1_lab_subs/msp/msp_lab_topics/mspLabArcWelding');
+const labFlow_msp_manuAsm = require('./flows/botReplies/lab_levels/level_1/level_1_lab_subs/msp/msp_lab_topics/mspLabManuAssm');
+const labFlow_msp_quiz = require('./flows/botReplies/lab_levels/level_1/level_1_lab_subs/msp/msp_lab_topics/mspLabmspQuiz');
+
+
 
 
 
@@ -4082,6 +4100,53 @@ let handlePostback = async (sender_psid, received_postback) => {
   }
   else if (payload === 'ap1_lab_straightKnife_flow') {
     magicFunc(sender_psid, labFlow_ap1_straightKnife);
+  }
+
+  //lab -> msp
+  else if (payload === 'msp_lab_flow') {
+    magicFunc(sender_psid, labFlow_msp);
+  }
+  else if (payload === 'msp_lab_layout_flow') {
+    magicFunc(sender_psid, labFlow_msp_layout);
+  }
+  else if (payload === 'msp_lab_handTools_flow') {
+    magicFunc(sender_psid, labFlow_msp_handTools);
+  }
+  else if (payload === 'msp_lab_grindingMC_flow') {
+    magicFunc(sender_psid, labFlow_msp_GrindingMc);
+  }
+  else if (payload === 'msp_lab_lathe_flow') {
+    magicFunc(sender_psid, labFlow_msp_LatheMc);
+  }
+  else if (payload === 'msp_lab_sqKey_flow') {
+    magicFunc(sender_psid, labFlow_msp_SqKey);
+  }
+  else if (payload === 'msp_lab_matchingParts_flow') {
+    magicFunc(sender_psid, labFlow_msp_mathcingParts);
+  }
+  else if (payload === 'msp_lab_milling_flow') {
+    magicFunc(sender_psid, labFlow_msp_MillingMC);
+  }
+  else if (payload === 'msp_lab_drilling_flow') {
+    magicFunc(sender_psid, labFlow_msp_DrillingMc);
+  }
+  else if (payload === 'msp_lab_shaper_flow') {
+    magicFunc(sender_psid, labFlow_msp_Shaper);
+  }
+  else if (payload === 'msp_lab_welding_flow') {
+    magicFunc(sender_psid, labFlow_msp_Welding);
+  }
+  else if (payload === 'msp_lab_introLight_flow') {
+    magicFunc(sender_psid, labFlow_msp_IntroLight);
+  }
+  else if (payload === 'msp_lab_arcWelding_flow') {
+    magicFunc(sender_psid, labFlow_msp_ArcWeld);
+  }
+  else if (payload === 'msp_lab_manuAssm_flow') {
+    magicFunc(sender_psid, labFlow_msp_manuAsm);
+  }
+  else if (payload === 'msp_lab_mspQuiz_flow') {
+    magicFunc(sender_psid, labFlow_msp_quiz);
   }
 
 
