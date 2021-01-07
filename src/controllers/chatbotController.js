@@ -1050,6 +1050,24 @@ const labFlow_bceLabSheet = require('./flows/botReplies/lab_levels/level_1/level
 //lab->ed
 const labFlow_ed = require('./flows/botReplies/lab_levels/level_1/level_1_lab_subs/ed/edLabFlow');
 
+//lab->cp
+const labFlow_cp = require('./flows/botReplies/lab_levels/level_1/level_1_lab_subs/cp/cpLabFlow');
+const labFlow_cp_intro = require('./flows/botReplies/lab_levels/level_1/level_1_lab_subs/cp/cp_lab_topics/cpLabIntro');
+const labFlow_cp_Conditional = require('./flows/botReplies/lab_levels/level_1/level_1_lab_subs/cp/cp_lab_topics/cpLabCondition');
+const labFlow_cp_Arithmetic = require('./flows/botReplies/lab_levels/level_1/level_1_lab_subs/cp/cp_lab_topics/cpLabArithmetic');
+const labFlow_cp_sumofSeries = require('./flows/botReplies/lab_levels/level_1/level_1_lab_subs/cp/cp_lab_topics/cpLabSumSeries');
+const labFlow_cp_Array = require('./flows/botReplies/lab_levels/level_1/level_1_lab_subs/cp/cp_lab_topics/cpLabArray');
+const labFlow_cp_RecursionFactorial = require('./flows/botReplies/lab_levels/level_1/level_1_lab_subs/cp/cp_lab_topics/cpLabRecursionFacto');
+const labFlow_cp_Fibonacchi = require('./flows/botReplies/lab_levels/level_1/level_1_lab_subs/cp/cp_lab_topics/cpLabRecursionFibo');
+const labFlow_cp_ch_1_3 = require('./flows/botReplies/lab_levels/level_1/level_1_lab_subs/cp/cp_lab_topics/cpLabCh1_3');
+
+
+
+
+
+
+
+
 
 
 
@@ -4012,6 +4030,36 @@ let handlePostback = async (sender_psid, received_postback) => {
   else if (payload === 'ed_lab_flow') {
     magicFunc(sender_psid, labFlow_ed);
   }
+
+  //lab -> cp
+  else if (payload === 'cp_lab_flows') {
+    magicFunc(sender_psid, labFlow_cp);
+  }
+  else if (payload === 'cp_lab_intro') {
+    magicFunc(sender_psid, labFlow_cp_intro);
+  }
+  else if (payload === 'cp_lab_condition') {
+    magicFunc(sender_psid, labFlow_cp_Conditional);
+  }
+  else if (payload === 'cp_lab_arithmetic') {
+    magicFunc(sender_psid, labFlow_cp_Arithmetic);
+  }
+  else if (payload === 'cp_lab_sumSeries') {
+    magicFunc(sender_psid, labFlow_cp_sumofSeries);
+  }
+  else if (payload === 'cp_lab_array') {
+    magicFunc(sender_psid, labFlow_cp_Array);
+  }
+  else if (payload === 'cp_lab_recursionFactorial') {
+    magicFunc(sender_psid, labFlow_cp_RecursionFactorial);
+  }
+  else if (payload === 'cp_lab_recursionFibo') {
+    magicFunc(sender_psid, labFlow_cp_Fibonacchi);
+  }
+  else if (payload === 'cp_lab_Chapter') {
+    magicFunc(sender_psid, labFlow_cp_ch_1_3);
+  }
+
 
 
 }
