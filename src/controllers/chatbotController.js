@@ -993,6 +993,23 @@ const labFlow_che1_Mohr = require('./flows/botReplies/lab_levels/level_1/level_1
 const labFlow_che1_WetTest = require('./flows/botReplies/lab_levels/level_1/level_1_lab_subs/che_1/che1_lab_topics/che1labWet');
 const labFlow_che1_Titration = require('./flows/botReplies/lab_levels/level_1/level_1_lab_subs/che_1/che1_lab_topics/che1labTitration');
 
+//lab->che1
+const labFlow_che2 = require('./flows/botReplies/lab_levels/level_1/level_1_lab_subs/che_2/che2LabFlow');
+const labFlow_che2_physicalProp = require('./flows/botReplies/lab_levels/level_1/level_1_lab_subs/che_2/che2_lab_topics/che2LabPhysicalProp');
+const labFlow_che2_lassigne1 = require('./flows/botReplies/lab_levels/level_1/level_1_lab_subs/che_2/che2_lab_topics/che2LabLassaigne1');
+const labFlow_che2_lassigne2 = require('./flows/botReplies/lab_levels/level_1/level_1_lab_subs/che_2/che2_lab_topics/che2LabLassaigne2');
+const labFlow_che2_solubillityTest = require('./flows/botReplies/lab_levels/level_1/level_1_lab_subs/che_2/che2_lab_topics/che2LabSolubility');
+const labFlow_che2_alcoholIdentify = require('./flows/botReplies/lab_levels/level_1/level_1_lab_subs/che_2/che2_lab_topics/che2LabAlcoholidentity');
+const labFlow_che2_H2O2 = require('./flows/botReplies/lab_levels/level_1/level_1_lab_subs/che_2/che2_lab_topics/che2LabStrengthH2O2');
+const labFlow_che2_Fe2 = require('./flows/botReplies/lab_levels/level_1/level_1_lab_subs/che_2/che2_lab_topics/che2LabAmountFe2');
+const labFlow_che2_carbonylIdentify = require('./flows/botReplies/lab_levels/level_1/level_1_lab_subs/che_2/che2_lab_topics/che2LabCarbonyl');
+const labFlow_che2_nIdentity = require('./flows/botReplies/lab_levels/level_1/level_1_lab_subs/che_2/che2_lab_topics/che2LabNidentity');
+const labFlow_che2_Na2Co3 = require('./flows/botReplies/lab_levels/level_1/level_1_lab_subs/che_2/che2_lab_topics/che2LabAmountNa2Co3');
+const labFlow_che2_Carboxylic = require('./flows/botReplies/lab_levels/level_1/level_1_lab_subs/che_2/che2_lab_topics/che2LabCarboxylic');
+
+
+
+
 //lab->phy1
 const labFlow_phy1 = require('./flows/botReplies/lab_levels/level_1/level_1_lab_subs/phy_1/phy_1LabFlow');
 const labFlow_phy1_m1 = require('./flows/botReplies/lab_levels/level_1/level_1_lab_subs/phy_1/phy_1_lab_topics/phy1LabM1');
@@ -1006,7 +1023,7 @@ const labFlow_phy1_o2 = require('./flows/botReplies/lab_levels/level_1/level_1_l
 const labFlow_phy1_o3 = require('./flows/botReplies/lab_levels/level_1/level_1_lab_subs/phy_1/phy_1_lab_topics/phy1LabO3');
 const labFlow_phy1_o4 = require('./flows/botReplies/lab_levels/level_1/level_1_lab_subs/phy_1/phy_1_lab_topics/phy1LabO4');
 
-//lab->bce
+//lab->phy2
 const labFlow_phy2 = require('./flows/botReplies/lab_levels/level_1/level_1_lab_subs/phy_2/phy2_lab_flow');
 const labFlow_phy2_e1 = require('./flows/botReplies/lab_levels/level_1/level_1_lab_subs/phy_2/phy2_lab_topics/phy2LabE1');
 const labFlow_phy2_e2 = require('./flows/botReplies/lab_levels/level_1/level_1_lab_subs/phy_2/phy2_lab_topics/phy2LabE2');
@@ -3946,6 +3963,45 @@ let handlePostback = async (sender_psid, received_postback) => {
   }
   else if (payload === 'phy2_lab_h3_flow') {
     magicFunc(sender_psid, labFlow_phy2_h3);
+  }
+
+
+  //lab -> che2
+  else if (payload === 'che2_lab_flow') {
+    magicFunc(sender_psid, labFlow_che2);
+  }
+  else if (payload === 'che2_lab_physicalProp_flow') {
+    magicFunc(sender_psid, labFlow_che2_physicalProp);
+  }
+  else if (payload === 'che2_lab_lassaignesTest_flow') {
+    magicFunc(sender_psid, labFlow_che2_lassigne1);
+  }
+  else if (payload === 'che2_lab_solubilityTest_flow') {
+    magicFunc(sender_psid, labFlow_che2_solubillityTest);
+  }
+  else if (payload === 'che2_lab_alcoholIdentify_flow') {
+    magicFunc(sender_psid, labFlow_che2_alcoholIdentify);
+  }
+  else if (payload === 'che2_lab_lassaignesTest2_flow') {
+    magicFunc(sender_psid, labFlow_che2_lassigne2);
+  }
+  else if (payload === 'che2_lab_h2o2_flow') {
+    magicFunc(sender_psid, labFlow_che2_H2O2);
+  }
+  else if (payload === 'che2_lab_amountofFe2_flow') {
+    magicFunc(sender_psid, labFlow_che2_Fe2);
+  }
+  else if (payload === 'che2_lab_carbonylIdentify_flow') {
+    magicFunc(sender_psid, labFlow_che2_carbonylIdentify);
+  }
+  else if (payload === 'che2_lab_Nidentity_flow') {
+    magicFunc(sender_psid, labFlow_che2_nIdentity);
+  }
+  else if (payload === 'che2_lab_amountna2co3_flow') {
+    magicFunc(sender_psid, labFlow_che2_Na2Co3);
+  }
+  else if (payload === 'che2_lab_carboxylicIdentity_flow') {
+    magicFunc(sender_psid, labFlow_che2_Carboxylic);
   }
 
 
