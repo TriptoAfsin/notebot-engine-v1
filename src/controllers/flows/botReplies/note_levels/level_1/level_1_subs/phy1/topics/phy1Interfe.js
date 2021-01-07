@@ -14,8 +14,11 @@ let phy1Inter = [
     {
         "text": `🔷 Class lecture(Rafsan, 2019)-
         https://drive.google.com/file/d/11NzB3kgkohHjCM5W3PRZnD3qyH_vZzxG/view?usp=sharing`
+    },
+    {
+        "text": `🔷 Hand Note(Nafis,IPE-46, 2021)-
+        https://drive.google.com/file/d/1Uf4fAnREdDst8OYaNJqx4VmGCAuC63KQ/view?usp=sharing`
     }
-   
 ]
 
 

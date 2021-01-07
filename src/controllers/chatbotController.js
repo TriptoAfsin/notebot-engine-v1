@@ -762,6 +762,8 @@ const pd_qualityFunc = require("./flows/botReplies/note_levels/level_3/level_3_s
 const ace_flow = require("./flows/botReplies/note_levels/level_3/level_3_subs/ace/ace_flow");
 const ace_introControlSys = require("./flows/botReplies/note_levels/level_3/level_3_subs/ace/topics/aceIntroControlSys");
 const ace_modleingFreq = require("./flows/botReplies/note_levels/level_3/level_3_subs/ace/topics/aceModleingFreq");
+const ace_timeResponse = require("./flows/botReplies/note_levels/level_3/level_3_subs/ace/topics/aceTimeResponse");
+const ace_Sensors = require("./flows/botReplies/note_levels/level_3/level_3_subs/ace/topics/aceSensors");
 
 
 //acm
@@ -3477,6 +3479,12 @@ let handlePostback = async (sender_psid, received_postback) => {
   }
   else if (payload === 'ace_modleingFreq_flow') {
     magicFunc(sender_psid, ace_modleingFreq);
+  }
+  else if (payload === 'ace_timeResponse_flow') {
+    magicFunc(sender_psid, ace_timeResponse);
+  }
+  else if (payload === 'ace_sensors_flow') {
+    magicFunc(sender_psid, ace_Sensors);
   }
 
   //acm
