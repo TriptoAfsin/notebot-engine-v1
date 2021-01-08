@@ -1096,6 +1096,23 @@ const labFlow_am1_AllReport = require('./flows/botReplies/lab_levels/level_2/lev
 
 
 
+//lab-> wp1
+const labFlow_wp1 = require('./flows/botReplies/lab_levels/level_2/level_2_lab_subs/wp_1/wp1LabFlow');
+const labFlow_wp1_1 = require('./flows/botReplies/lab_levels/level_2/level_2_lab_subs/wp_1/wp1_lab_topics/wp1Lab1Layout');
+const labFlow_wp1_2 = require('./flows/botReplies/lab_levels/level_2/level_2_lab_subs/wp_1/wp1_lab_topics/wp1Lab2AlkScour');
+const labFlow_wp1_3 = require('./flows/botReplies/lab_levels/level_2/level_2_lab_subs/wp_1/wp1_lab_topics/wp1Lab3CombCot');
+const labFlow_wp1_4 = require('./flows/botReplies/lab_levels/level_2/level_2_lab_subs/wp_1/wp1_lab_topics/wp1Lab4CombJute');
+const labFlow_wp1_5 = require('./flows/botReplies/lab_levels/level_2/level_2_lab_subs/wp_1/wp1_lab_topics/wp1Lab5Direct');
+const labFlow_wp1_6 = require('./flows/botReplies/lab_levels/level_2/level_2_lab_subs/wp_1/wp1_lab_topics/wp1Lab6Reactive');
+const labFlow_wp1_7 = require('./flows/botReplies/lab_levels/level_2/level_2_lab_subs/wp_1/wp1_lab_topics/wp1Lab7Disperse');
+const labFlow_wp1_8 = require('./flows/botReplies/lab_levels/level_2/level_2_lab_subs/wp_1/wp1_lab_topics/wp1Lab8Acid');
+const labFlow_wp1_9 = require('./flows/botReplies/lab_levels/level_2/level_2_lab_subs/wp_1/wp1_lab_topics/wp1Lab9Basic');
+const labFlow_wp1_10 = require('./flows/botReplies/lab_levels/level_2/level_2_lab_subs/wp_1/wp1_lab_topics/wp1Lab10Vat');
+const labFlow_wp1_11 = require('./flows/botReplies/lab_levels/level_2/level_2_lab_subs/wp_1/wp1_lab_topics/wp1Lab11Rubbing');
+const labFlow_wp1_12 = require('./flows/botReplies/lab_levels/level_2/level_2_lab_subs/wp_1/wp1_lab_topics/wp1Lab12PigmentCot');
+
+
+
 
 
 
@@ -4170,6 +4187,47 @@ let handlePostback = async (sender_psid, received_postback) => {
   }
   else if (payload === 'am1_lab_AllReport_flow') {
     magicFunc(sender_psid, labFlow_am1_AllReport);
+  }
+
+  //lab -> wp1
+  else if (payload === 'wp1_lab_flow') {
+    magicFunc(sender_psid, labFlow_wp1);
+  }
+  else if (payload === 'wp1_lab_layout_flow') {
+    magicFunc(sender_psid, labFlow_wp1_1);
+  }
+  else if (payload === 'wp1_lab_alkScouring_flow') {
+    magicFunc(sender_psid, labFlow_wp1_2);
+  }
+  else if (payload === 'wp1_lab_combinedScouringCotton_flow') {
+    magicFunc(sender_psid, labFlow_wp1_3);
+  }
+  else if (payload === 'wp1_lab_combinedScouringJute_flow') {
+    magicFunc(sender_psid, labFlow_wp1_4);
+  }
+  else if (payload === 'wp1_lab_directDye_flow') {
+    magicFunc(sender_psid, labFlow_wp1_5);
+  }
+  else if (payload === 'wp1_lab_reactiveDye_flow') {
+    magicFunc(sender_psid, labFlow_wp1_6);
+  }
+  else if (payload === 'wp1_lab_disperseDye_flow') {
+    magicFunc(sender_psid, labFlow_wp1_7);
+  }
+  else if (payload === 'wp1_lab_acidDye_flow') {
+    magicFunc(sender_psid, labFlow_wp1_8);
+  }
+  else if (payload === 'wp1_lab_basicDye_flow') {
+    magicFunc(sender_psid, labFlow_wp1_9);
+  }
+  else if (payload === 'wp1_lab_vatDye_flow') {
+    magicFunc(sender_psid, labFlow_wp1_10);
+  }
+  else if (payload === 'wp1_lab_rubbing_flow') {
+    magicFunc(sender_psid, labFlow_wp1_11);
+  }
+  else if (payload === 'wp1_lab_pigmentCotton_flow') {
+    magicFunc(sender_psid, labFlow_wp1_12);
   }
 
 
