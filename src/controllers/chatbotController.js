@@ -1112,6 +1112,11 @@ const labFlow_wp1_11 = require('./flows/botReplies/lab_levels/level_2/level_2_la
 const labFlow_wp1_12 = require('./flows/botReplies/lab_levels/level_2/level_2_lab_subs/wp_1/wp1_lab_topics/wp1Lab12PigmentCot');
 
 
+//lab-> sss1
+const labFlow_sss1 = require('./flows/botReplies/lab_levels/level_2/level_2_lab_subs/sss_1/sss1LabFlow');
+const labFlow_sss1_layout = require('./flows/botReplies/lab_levels/level_2/level_2_lab_subs/sss_1/sss1_lab_topics/sss1LabLayout');
+
+
 
 
 
@@ -4228,6 +4233,15 @@ let handlePostback = async (sender_psid, received_postback) => {
   }
   else if (payload === 'wp1_lab_pigmentCotton_flow') {
     magicFunc(sender_psid, labFlow_wp1_12);
+  }
+
+
+  //lab -> sss1
+  else if (payload === 'sss1_lab_flow') {
+    magicFunc(sender_psid, labFlow_sss1);
+  }
+  else if (payload === 'sss1_lab_layoutPlan_flow') {
+    magicFunc(sender_psid, labFlow_sss1_layout);
   }
 
 
