@@ -4,7 +4,7 @@ let ap1_lab_flow = [
             "type": "template",
             "payload": {
                 "template_type": "button",
-                "text": "⚡ All Combined - ",
+                "text": "🔰 Select Experiment for AP-I - ",
                 "buttons": [
                     {
                         "type": "web_url",
@@ -30,7 +30,7 @@ let ap1_lab_flow = [
             "type": "template",
             "payload": {
                 "template_type": "button",
-                "text": "⚡ All Combined - ",
+                "text": "🔰 Select Experiment for AP-I - ",
                 "buttons": [
                     {
                         "type": "web_url",
