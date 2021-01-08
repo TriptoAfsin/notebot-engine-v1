@@ -1088,6 +1088,14 @@ const labFlow_msp_manuAsm = require('./flows/botReplies/lab_levels/level_1/level
 const labFlow_msp_quiz = require('./flows/botReplies/lab_levels/level_1/level_1_lab_subs/msp/msp_lab_topics/mspLabmspQuiz');
 
 
+//lab-> am1
+const labFlow_am1 = require('./flows/botReplies/lab_levels/level_2/level_2_lab_subs/am_1/am1LabFlow');
+const labFlow_am1_layOut = require('./flows/botReplies/lab_levels/level_2/level_2_lab_subs/am_1/am1_lab_topics/am1LabLayout');
+const labFlow_am1_StdBody = require('./flows/botReplies/lab_levels/level_2/level_2_lab_subs/am_1/am1_lab_topics/am1LabStdBody');
+const labFlow_am1_AllReport = require('./flows/botReplies/lab_levels/level_2/level_2_lab_subs/am_1/am1_lab_topics/am1LabReportAll');
+
+
+
 
 
 
@@ -4147,6 +4155,21 @@ let handlePostback = async (sender_psid, received_postback) => {
   }
   else if (payload === 'msp_lab_mspQuiz_flow') {
     magicFunc(sender_psid, labFlow_msp_quiz);
+  }
+
+
+  //lab -> am1
+  else if (payload === 'am1_lab_flow') {
+    magicFunc(sender_psid, labFlow_am1);
+  }
+  else if (payload === 'am1_lab_layoutPlan_flow') {
+    magicFunc(sender_psid, labFlow_am1_layOut);
+  }
+  else if (payload === 'am1_lab_standardBody_flow') {
+    magicFunc(sender_psid, labFlow_am1_StdBody);
+  }
+  else if (payload === 'am1_lab_AllReport_flow') {
+    magicFunc(sender_psid, labFlow_am1_AllReport);
   }
 
 

@@ -1,4 +1,4 @@
-let che1_lab_flow = [
+let ap1_lab_flow = [
     {
         "attachment": {
             "type": "template",
@@ -45,4 +45,4 @@ let che1_lab_flow = [
 
 
 
-module.exports = che1_lab_flow;
+module.exports = ap1_lab_flow;
