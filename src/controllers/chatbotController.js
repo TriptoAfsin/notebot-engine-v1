@@ -1117,6 +1117,10 @@ const labFlow_sss1 = require('./flows/botReplies/lab_levels/level_2/level_2_lab_
 const labFlow_sss1_layout = require('./flows/botReplies/lab_levels/level_2/level_2_lab_subs/sss_1/sss1_lab_topics/sss1LabLayout');
 
 
+//lab-> sss2
+const labFlow_sss2 = require('./flows/botReplies/lab_levels/level_2/level_2_lab_subs/sss_2/sss2LabFlow');
+
+
 //lab-> fe204
 const labFlow_fe204 = require('./flows/botReplies/lab_levels/level_2/level_2_lab_subs/fe_204_wpp/fe_wppLabFlow');
 
@@ -4269,6 +4273,12 @@ let handlePostback = async (sender_psid, received_postback) => {
   //lab -> pm1
   else if (payload === 'pm1_lab_flow') {
     magicFunc(sender_psid, labFlow_pm1);
+  }
+
+
+   //lab -> sss2
+   else if (payload === 'sss2_lab_flow') {
+    magicFunc(sender_psid, labFlow_sss2);
   }
 
 
