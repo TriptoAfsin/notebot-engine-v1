@@ -45,7 +45,7 @@ let level_2_lab = [
                     {
                         "type": "postback",
                         "title": "Fe-204: WPP",
-                        "payload": "fee_wpp_lab_flow"
+                        "payload": "fe_wpp_lab_flow"
                     }
                 ],
             },
