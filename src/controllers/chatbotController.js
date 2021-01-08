@@ -1121,6 +1121,10 @@ const labFlow_sss1_layout = require('./flows/botReplies/lab_levels/level_2/level
 const labFlow_fe204 = require('./flows/botReplies/lab_levels/level_2/level_2_lab_subs/fe_204_wpp/fe_wppLabFlow');
 
 
+//lab-> ap1_2
+const labFlow_ap1_2 = require('./flows/botReplies/lab_levels/level_2/level_2_lab_subs/ap_1/ap1LabFlow');
+
+
 
 
 
@@ -4251,6 +4255,11 @@ let handlePostback = async (sender_psid, received_postback) => {
   //lab -> fe204
   else if (payload === 'fe_wpp_lab_flow') {
     magicFunc(sender_psid, labFlow_fe204);
+  }
+
+   //lab -> ap1_2
+   else if (payload === 'ap1_lev2_lab_flow') {
+    magicFunc(sender_psid, labFlow_ap1_2);
   }
 
 

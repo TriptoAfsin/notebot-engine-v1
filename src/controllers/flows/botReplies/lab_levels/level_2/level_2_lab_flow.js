@@ -92,7 +92,7 @@ let level_2_lab = [
                     {
                         "type": "postback",
                         "title": "AP-I",
-                        "payload": "ap1_lab_flow"
+                        "payload": "ap1_lev2_lab_flow"
                     },
                     {
                         "type": "postback",
