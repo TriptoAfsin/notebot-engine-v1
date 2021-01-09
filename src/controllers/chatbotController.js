@@ -1137,6 +1137,20 @@ const labFlow_pm1 = require('./flows/botReplies/lab_levels/level_2/level_2_lab_s
 const labFlow_wpe202 = require('./flows/botReplies/lab_levels/level_2/level_2_lab_subs/wpe_202/wpe202LabFlow');
 
 
+//lab-> ym1
+const labFlow_ym1 = require('./flows/botReplies/lab_levels/level_2/level_2_lab_subs/ym_1/ym1LabFlow');
+const labFlow_ym1_layout = require('./flows/botReplies/lab_levels/level_2/level_2_lab_subs/ym_1/ym1_lab_topics/ym1LabLayout');
+const labFlow_ym1_principle = require('./flows/botReplies/lab_levels/level_2/level_2_lab_subs/ym_1/ym1_lab_topics/ym1LabPrincipleSSS');
+const labFlow_ym1_baleOpener = require('./flows/botReplies/lab_levels/level_2/level_2_lab_subs/ym_1/ym1_lab_topics/ym1LabBaleOpener');
+const labFlow_ym1_Porcupine = require('./flows/botReplies/lab_levels/level_2/level_2_lab_subs/ym_1/ym1_lab_topics/ym1LabPorcupine');
+const labFlow_ym1_RingFrame = require('./flows/botReplies/lab_levels/level_2/level_2_lab_subs/ym_1/ym1_lab_topics/ym1LabRingFrame');
+const labFlow_ym1_Simplex = require('./flows/botReplies/lab_levels/level_2/level_2_lab_subs/ym_1/ym1_lab_topics/ym1LabSimplex');
+const labFlow_ym1_Comber = require('./flows/botReplies/lab_levels/level_2/level_2_lab_subs/ym_1/ym1_lab_topics/ym1LabComber');
+const labFlow_ym1_Drawframe = require('./flows/botReplies/lab_levels/level_2/level_2_lab_subs/ym_1/ym1_lab_topics/ym1LabDrawFrame');
+const labFlow_ym1_Carding = require('./flows/botReplies/lab_levels/level_2/level_2_lab_subs/ym_1/ym1_lab_topics/ym1LabCarding');
+
+
+
 
 
 
@@ -4289,6 +4303,40 @@ let handlePostback = async (sender_psid, received_postback) => {
   else if (payload === 'wpe_wpp_lab_flow') {
     magicFunc(sender_psid, labFlow_wpe202);
   }
+
+
+  //lab -> ym1
+  else if (payload === 'ym1_lab_flow') {
+    magicFunc(sender_psid, labFlow_ym1);
+  }
+  else if (payload === 'ym1_lab_layout_flow') {
+    magicFunc(sender_psid, labFlow_ym1_layout);
+  }
+  else if (payload === 'ym1_lab_pricipleSSS_flow') {
+    magicFunc(sender_psid, labFlow_ym1_principle);
+  }
+  else if (payload === 'ym1_lab_baleOpener_flow') {
+    magicFunc(sender_psid, labFlow_ym1_baleOpener);
+  }
+  else if (payload === 'ym1_lab_porcupine_flow') {
+    magicFunc(sender_psid, labFlow_ym1_Porcupine);
+  }
+  else if (payload === 'ym1_lab_ringFrame_flow') {
+    magicFunc(sender_psid, labFlow_ym1_RingFrame);
+  }
+  else if (payload === 'ym1_lab_simplex_flow') {
+    magicFunc(sender_psid, labFlow_ym1_Simplex);
+  }
+  else if (payload === 'ym1_lab_comber_flow') {
+    magicFunc(sender_psid, labFlow_ym1_Comber);
+  }
+  else if (payload === 'ym1_lab_drawFrame_flow') {
+    magicFunc(sender_psid, labFlow_ym1_Drawframe);
+  }
+  else if (payload === 'ym1_lab_carding_flow') {
+    magicFunc(sender_psid, labFlow_ym1_Carding);
+  }
+
 
 
 
