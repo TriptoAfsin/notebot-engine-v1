@@ -1150,6 +1150,20 @@ const labFlow_ym1_Drawframe = require('./flows/botReplies/lab_levels/level_2/lev
 const labFlow_ym1_Carding = require('./flows/botReplies/lab_levels/level_2/level_2_lab_subs/ym_1/ym1_lab_topics/ym1LabCarding');
 
 
+//lab-> fm1
+const labFlow_fm1 = require('./flows/botReplies/lab_levels/level_2/level_2_lab_subs/fm_1/fm1LabFlow');
+const labFlow_fm1_layout = require('./flows/botReplies/lab_levels/level_2/level_2_lab_subs/fm_1/fm1_lab_topics/fm1LabLayout');
+const labFlow_fm1_Tappet = require('./flows/botReplies/lab_levels/level_2/level_2_lab_subs/fm_1/fm1_lab_topics/fm1LabTappet');
+const labFlow_fm1_Looming = require('./flows/botReplies/lab_levels/level_2/level_2_lab_subs/fm_1/fm1_lab_topics/fm1LabLooming');
+const labFlow_fm1_Package = require('./flows/botReplies/lab_levels/level_2/level_2_lab_subs/fm_1/fm1_lab_topics/fm1LabPackagae');
+const labFlow_fm1_CheeseWind = require('./flows/botReplies/lab_levels/level_2/level_2_lab_subs/fm_1/fm1_lab_topics/fm1LabCheese');
+const labFlow_fm1_HighSpeedWarp = require('./flows/botReplies/lab_levels/level_2/level_2_lab_subs/fm_1/fm1_lab_topics/fm1LabHighSpeed');
+const labFlow_fm1_SectionalWarp = require('./flows/botReplies/lab_levels/level_2/level_2_lab_subs/fm_1/fm1_lab_topics/fm1LabSectionalWarping');
+const labFlow_fm1_6_ConvSizing = require('./flows/botReplies/lab_levels/level_2/level_2_lab_subs/fm_1/fm1_lab_topics/fm1LabConvSizing');
+const labFlow_fm1_Dobby = require('./flows/botReplies/lab_levels/level_2/level_2_lab_subs/fm_1/fm1_lab_topics/fm1LabDobby');
+const labFlow_fm1_Sizing = require('./flows/botReplies/lab_levels/level_2/level_2_lab_subs/fm_1/fm1_lab_topics/fm1LabSizing');
+
+
 
 
 
@@ -4335,6 +4349,42 @@ let handlePostback = async (sender_psid, received_postback) => {
   }
   else if (payload === 'ym1_lab_carding_flow') {
     magicFunc(sender_psid, labFlow_ym1_Carding);
+  }
+
+
+  //lab -> fm1
+  else if (payload === 'fm1_lab_flow') {
+    magicFunc(sender_psid, labFlow_fm1);
+  }
+  else if (payload === 'fm1_lab_layout_flow') {
+    magicFunc(sender_psid, labFlow_fm1_layout);
+  }
+  else if (payload === 'fm1_lab_tappetShedding_flow') {
+    magicFunc(sender_psid, labFlow_fm1_Tappet);
+  }
+  else if (payload === 'fm1_lab_looming_flow') {
+    magicFunc(sender_psid, labFlow_fm1_Looming);
+  }
+  else if (payload === 'fm1_lab_package_flow') {
+    magicFunc(sender_psid, labFlow_fm1_Package);
+  }
+  else if (payload === 'fm1_lab_cheesWinding_flow') {
+    magicFunc(sender_psid, labFlow_fm1_CheeseWind);
+  }
+  else if (payload === 'fm1_lab_highSpeedWarp_flow') {
+    magicFunc(sender_psid, labFlow_fm1_HighSpeedWarp);
+  }
+  else if (payload === 'fm1_lab_sectionalWarping_flow') {
+    magicFunc(sender_psid, labFlow_fm1_SectionalWarp);
+  }
+  else if (payload === 'fm1_lab_conventionalSizing_flow') {
+    magicFunc(sender_psid, labFlow_fm1_6_ConvSizing);
+  }
+  else if (payload === 'fm1_lab_dobby_flow') {
+    magicFunc(sender_psid, labFlow_fm1_Dobby);
+  }
+  else if (payload === 'fm1_lab_sizing_flow') {
+    magicFunc(sender_psid, labFlow_fm1_Sizing);
   }
 
 
