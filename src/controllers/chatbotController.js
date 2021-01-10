@@ -1164,6 +1164,21 @@ const labFlow_fm1_Dobby = require('./flows/botReplies/lab_levels/level_2/level_2
 const labFlow_fm1_Sizing = require('./flows/botReplies/lab_levels/level_2/level_2_lab_subs/fm_1/fm1_lab_topics/fm1LabSizing');
 
 
+//lab-> ttqc
+const labFlow_ttqc = require('./flows/botReplies/lab_levels/level_2/level_2_lab_subs/ttqc/ttqcLabFlow');
+const labFlow_ttqc_atmos = require('./flows/botReplies/lab_levels/level_2/level_2_lab_subs/ttqc/ttqc_lab_topics/ttqcLabAtmos');
+const labFlow_ttqc_fibreFineness = require('./flows/botReplies/lab_levels/level_2/level_2_lab_subs/ttqc/ttqc_lab_topics/ttqcLabFibFine');
+const labFlow_ttqc_effectiveLength = require('./flows/botReplies/lab_levels/level_2/level_2_lab_subs/ttqc/ttqc_lab_topics/ttqcLabEffectiveLength');
+const labFlow_ttqc_FibreLengthIden = require('./flows/botReplies/lab_levels/level_2/level_2_lab_subs/ttqc/ttqc_lab_topics/ttqcLabFibreLength');
+const labFlow_ttqc_CountSliCsp = require('./flows/botReplies/lab_levels/level_2/level_2_lab_subs/ttqc/ttqc_lab_topics/ttqcLabSliCsp');
+const labFlow_ttqc_tpiCount = require('./flows/botReplies/lab_levels/level_2/level_2_lab_subs/ttqc/ttqc_lab_topics/ttqcLabTpiCount');
+const labFlow_ttqc_CspTpi = require('./flows/botReplies/lab_levels/level_2/level_2_lab_subs/ttqc/ttqc_lab_topics/ttqcLabCspTpi');
+const labFlow_ttqc_Thick = require('./flows/botReplies/lab_levels/level_2/level_2_lab_subs/ttqc/ttqc_lab_topics/ttqcLabThick');
+const labFlow_ttqc_FibreFineMaturity = require('./flows/botReplies/lab_levels/level_2/level_2_lab_subs/ttqc/ttqc_lab_topics/ttqcLabFibreFineMaturity');
+const labFlow_ttqc_SliverRoving = require('./flows/botReplies/lab_levels/level_2/level_2_lab_subs/ttqc/ttqc_lab_topics/ttqcLabSliverRoving');
+const labFlow_ttqc_bundleStrength = require('./flows/botReplies/lab_levels/level_2/level_2_lab_subs/ttqc/ttqc_lab_topics/ttqcLabBundleStrength');
+
+
 
 
 
@@ -4385,6 +4400,44 @@ let handlePostback = async (sender_psid, received_postback) => {
   }
   else if (payload === 'fm1_lab_sizing_flow') {
     magicFunc(sender_psid, labFlow_fm1_Sizing);
+  }
+
+
+  else if (payload === 'ttqc_lab_flow') {
+    magicFunc(sender_psid, labFlow_ttqc);
+  }
+  else if (payload === 'ttqc_lab_atmosphere_flow') {
+    magicFunc(sender_psid, labFlow_ttqc_atmos);
+  }
+  else if (payload === 'ttqc_lab_fiberFineness_flow') {
+    magicFunc(sender_psid, labFlow_ttqc_fibreFineness);
+  }
+  else if (payload === 'ttqc_lab_effectiveLength_flow') {
+    magicFunc(sender_psid, labFlow_ttqc_effectiveLength);
+  }
+  else if (payload === 'ttqc_lab_fibreLength_flow') {
+    magicFunc(sender_psid, labFlow_ttqc_FibreLengthIden);
+  }
+  else if (payload === 'ttqc_lab_count_csp_flow') {
+    magicFunc(sender_psid, labFlow_ttqc_CountSliCsp);
+  }
+  else if (payload === 'ttqc_lab_tpiCount_flow') {
+    magicFunc(sender_psid, labFlow_ttqc_tpiCount);
+  }
+  else if (payload === 'ttqc_lab_csp_tpi_flow') {
+    magicFunc(sender_psid, labFlow_ttqc_CspTpi);
+  }
+  else if (payload === 'ttqc_lab_thickCrimp_flow') {
+    magicFunc(sender_psid, labFlow_ttqc_Thick);
+  }
+  else if (payload === 'ttqc_lab_fibreFineMaturity_flow') {
+    magicFunc(sender_psid, labFlow_ttqc_FibreFineMaturity);
+  }
+  else if (payload === 'ttqc_lab_sliverRoving_flow') {
+    magicFunc(sender_psid, labFlow_ttqc_SliverRoving);
+  }
+  else if (payload === 'ttqc_lab_bundleStrength_flow') {
+    magicFunc(sender_psid, labFlow_ttqc_bundleStrength);
   }
 
 
