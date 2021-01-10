@@ -1190,6 +1190,19 @@ const labFlow_mp_InjectionMoulding = require('./flows/botReplies/lab_levels/leve
 const labFlow_mp_sandMolding = require('./flows/botReplies/lab_levels/level_2/level_2_lab_subs/mp/mp_lab_topics/mpSandMold');
 
 
+//lab-> fme
+const labFlow_fme = require('./flows/botReplies/lab_levels/level_2/level_2_lab_subs/fme/fmeLabFlow');
+const labFlow_fme_AirComp = require('./flows/botReplies/lab_levels/level_2/level_2_lab_subs/fme/fme_lab_topics/fmeLabAirComp');
+const labFlow_fme_steamTurbine = require('./flows/botReplies/lab_levels/level_2/level_2_lab_subs/fme/fme_lab_topics/fmeLabSteamTurbine');
+const labFlow_fme_PetrolDisel = require('./flows/botReplies/lab_levels/level_2/level_2_lab_subs/fme/fme_lab_topics/fmeLabPetrolDisel');
+const labFlow_fme_Boiler = require('./flows/botReplies/lab_levels/level_2/level_2_lab_subs/fme/fme_lab_topics/fmeLabBoiler');
+const labFlow_fme_BoilerMounting = require('./flows/botReplies/lab_levels/level_2/level_2_lab_subs/fme/fme_lab_topics/fmeLabBoilerMounting');
+const labFlow_fme_ReciPump = require('./flows/botReplies/lab_levels/level_2/level_2_lab_subs/fme/fme_lab_topics/fmeLabReciPump');
+const labFlow_fme_CentriPump = require('./flows/botReplies/lab_levels/level_2/level_2_lab_subs/fme/fme_lab_topics/fmeLabCentriPump');
+const labFlow_fme_DiselEngine = require('./flows/botReplies/lab_levels/level_2/level_2_lab_subs/fme/fme_lab_topics/fmeLabDiselEng');
+const labFlow_fme_ICEngine = require('./flows/botReplies/lab_levels/level_2/level_2_lab_subs/fme/fme_lab_topics/fmeLabICEng');
+
+
 
 
 
@@ -4478,6 +4491,39 @@ let handlePostback = async (sender_psid, received_postback) => {
   }
   else if (payload === 'mp_lab_sandMold_flow') {
     magicFunc(sender_psid, labFlow_mp_sandMolding);
+  }
+
+
+  //lab -> fme
+  else if (payload === 'fme_lab_flow') {
+    magicFunc(sender_psid, labFlow_fme);
+  }
+  else if (payload === 'fme_lab_airCompressor_flow') {
+    magicFunc(sender_psid, labFlow_fme_AirComp);
+  }
+  else if (payload === 'fme_lab_steamTurbine_flow') {
+    magicFunc(sender_psid, labFlow_fme_steamTurbine);
+  }
+  else if (payload === 'fme_lab_petrolDisel_flow') {
+    magicFunc(sender_psid, labFlow_fme_PetrolDisel);
+  }
+  else if (payload === 'fme_lab_boiler_flow') {
+    magicFunc(sender_psid, labFlow_fme_Boiler);
+  }
+  else if (payload === 'fme_lab_boilerMOunting_flow') {
+    magicFunc(sender_psid, labFlow_fme_BoilerMounting);
+  }
+  else if (payload === 'fme_lab_reciPump_flow') {
+    magicFunc(sender_psid, labFlow_fme_ReciPump);
+  }
+  else if (payload === 'fme_lab_centriPump_flow') {
+    magicFunc(sender_psid, labFlow_fme_CentriPump);
+  }
+  else if (payload === 'fme_lab_diselEng_flow') {
+    magicFunc(sender_psid, labFlow_fme_DiselEngine);
+  }
+  else if (payload === 'fme_lab_icEngine_flow') {
+    magicFunc(sender_psid, labFlow_fme_ICEngine);
   }
 
 

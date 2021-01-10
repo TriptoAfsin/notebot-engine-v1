@@ -1,15 +1,15 @@
-let mp_lab_flow = [
+let fme_lab_flow = [
     {
         "attachment": {
             "type": "template",
             "payload": {
                 "template_type": "button",
-                "text": "⚡ Select Experiment for MP -  ",
+                "text": "📌All Report (2019-2020, Naimur)-  ",
                 "buttons": [
                     {
                         "type": "web_url",
-                        "url": "https://drive.google.com/file/d/10k2Xuts_y8zgum2BhLCCcPdbbF4xdBDx/view",
-                        "title": "General Guidline",
+                        "url": "https://drive.google.com/file/d/1E_RNhj87kifJFY6JNjM8BQkgxh2fbBF4/view",
+                        "title": "☄️Download",
                     }
                 ],
             },
@@ -20,22 +20,12 @@ let mp_lab_flow = [
             "type": "template",
             "payload": {
                 "template_type": "button",
-                "text": "🔰 Select Experiment for MP -  ",
+                "text": "📌Lab Viva Note(Akib, 2020)-  ",
                 "buttons": [
                     {
-                        "type": "postback",
-                        "title": "Exp 1: Lathe MC",
-                        "payload": "mp_lab_lathe_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Exp3: Milling M/C",
-                        "payload": "mp_lab_milling_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Exp 5:CNC Mill",
-                        "payload": "mp_lab_cncMill_flow"
+                        "type": "web_url",
+                        "url": "https://drive.google.com/file/d/1UE87DBj9yhI6_NQDeHwdPMz4Bzw6s-tI/view",
+                        "title": "☄️Download",
                     }
                 ],
             },
@@ -46,22 +36,22 @@ let mp_lab_flow = [
             "type": "template",
             "payload": {
                 "template_type": "button",
-                "text": "🔰 Select Experiment for MP -  ",
+                "text": "🔰 Select Experiment for FME -  ",
                 "buttons": [
                     {
                         "type": "postback",
-                        "title": "Chips Temp.",
-                        "payload": "mp_lab_chipsTemp_flow"
+                        "title": "Air Compress.",
+                        "payload": "fme_lab_airCompressor_flow"
                     },
                     {
                         "type": "postback",
-                        "title": "Jack Screw",
-                        "payload": "mp_lab_jackScrew_flow"
+                        "title": "Steam Turbine",
+                        "payload": "fme_lab_steamTurbine_flow"
                     },
                     {
                         "type": "postback",
-                        "title": "Exp 7:Inj. Mold",
-                        "payload": "mp_lab_injectionMoulding_flow"
+                        "title": "Petrol & Disel",
+                        "payload": "fme_lab_petrolDisel_flow"
                     }
                 ],
             },
@@ -72,12 +62,64 @@ let mp_lab_flow = [
             "type": "template",
             "payload": {
                 "template_type": "button",
-                "text": "🔰 Select Experiment for MP -  ",
+                "text": "🔰 Select Experiment for FME -  ",
                 "buttons": [
                     {
                         "type": "postback",
-                        "title": "Exp10:Sand Mold",
-                        "payload": "mp_lab_sandMold_flow"
+                        "title": "Boiler",
+                        "payload": "fme_lab_boiler_flow"
+                    },
+                    {
+                        "type": "postback",
+                        "title": "Boiler Mounting",
+                        "payload": "fme_lab_boilerMOunting_flow"
+                    },
+                    {
+                        "type": "web_url",
+                        "url": "https://drive.google.com/file/d/19q4C6I0BogOAIxPpmT5_wP05BetjPxiG/view",
+                        "title": "Ex8: UTM",
+                    }
+                ],
+            },
+        },
+    },
+    {
+        "attachment": {
+            "type": "template",
+            "payload": {
+                "template_type": "button",
+                "text": "🔰 Select Experiment for FME -  ",
+                "buttons": [
+                    {
+                        "type": "postback",
+                        "title": "Reci.. Pump",
+                        "payload": "fme_lab_reciPump_flow"
+                    },
+                    {
+                        "type": "postback",
+                        "title": "Centri.. Pump",
+                        "payload": "fme_lab_centriPump_flow"
+                    },
+                    {
+                        "type": "postback",
+                        "title": "Disel Engine",
+                        "payload": "fme_lab_diselEng_flow"
+                    }
+                ],
+            },
+        },
+    },
+    {
+        "attachment": {
+            "type": "template",
+            "payload": {
+                "template_type": "button",
+                "text": "🔰 Select Experiment for FME -  ",
+                "buttons": [
+                    {
+                        "type": "postback",
+                        "title": "IC Engine(new)",
+                        "payload": "fme_lab_icEngine_flow"
                     }
                 ],
             },
@@ -87,4 +129,4 @@ let mp_lab_flow = [
 
 
 
-module.exports = mp_lab_flow;
+module.exports = fme_lab_flow;
