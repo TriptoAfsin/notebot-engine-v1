@@ -8,7 +8,7 @@ let fm1_lab_flow = [
                 "buttons": [
                     {
                         "type": "web_url",
-                        "url": "hhttps://drive.google.com/file/d/1FEbPctE5twrOgtjp47ei-Na9S0VPhNdg/view",
+                        "url": "https://drive.google.com/file/d/1FEbPctE5twrOgtjp47ei-Na9S0VPhNdg/view",
                         "title": "DownAll Report(Imran)",
                     }
                 ],

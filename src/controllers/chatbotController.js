@@ -1179,6 +1179,18 @@ const labFlow_ttqc_SliverRoving = require('./flows/botReplies/lab_levels/level_2
 const labFlow_ttqc_bundleStrength = require('./flows/botReplies/lab_levels/level_2/level_2_lab_subs/ttqc/ttqc_lab_topics/ttqcLabBundleStrength');
 
 
+//lab-> mp
+const labFlow_mp = require('./flows/botReplies/lab_levels/level_2/level_2_lab_subs/mp/mpLabFlow');
+const labFlow_mp_Lathe = require('./flows/botReplies/lab_levels/level_2/level_2_lab_subs/mp/mp_lab_topics/mpLathe');
+const labFlow_mp_CncMilling = require('./flows/botReplies/lab_levels/level_2/level_2_lab_subs/mp/mp_lab_topics/mpCncMill');
+const labFlow_mp_Milling = require('./flows/botReplies/lab_levels/level_2/level_2_lab_subs/mp/mp_lab_topics/mpMilling');
+const labFlow_mp_ChipsTemp = require('./flows/botReplies/lab_levels/level_2/level_2_lab_subs/mp/mp_lab_topics/mpChipsTemp');
+const labFlow_mp_JackScrew = require('./flows/botReplies/lab_levels/level_2/level_2_lab_subs/mp/mp_lab_topics/mpJackScrew');
+const labFlow_mp_InjectionMoulding = require('./flows/botReplies/lab_levels/level_2/level_2_lab_subs/mp/mp_lab_topics/mpInjectionMold');
+const labFlow_mp_sandMolding = require('./flows/botReplies/lab_levels/level_2/level_2_lab_subs/mp/mp_lab_topics/mpSandMold');
+
+
+
 
 
 
@@ -4403,6 +4415,7 @@ let handlePostback = async (sender_psid, received_postback) => {
   }
 
 
+  //lab -> ttqc
   else if (payload === 'ttqc_lab_flow') {
     magicFunc(sender_psid, labFlow_ttqc);
   }
@@ -4438,6 +4451,33 @@ let handlePostback = async (sender_psid, received_postback) => {
   }
   else if (payload === 'ttqc_lab_bundleStrength_flow') {
     magicFunc(sender_psid, labFlow_ttqc_bundleStrength);
+  }
+
+
+  //lab -> mp
+  else if (payload === 'mp_lab_flow') {
+    magicFunc(sender_psid, labFlow_mp);
+  }
+  else if (payload === 'mp_lab_lathe_flow') {
+    magicFunc(sender_psid, labFlow_mp_Lathe);
+  }
+  else if (payload === 'mp_lab_milling_flow') {
+    magicFunc(sender_psid, labFlow_mp_Milling);
+  }
+  else if (payload === 'mp_lab_cncMill_flow') {
+    magicFunc(sender_psid, labFlow_mp_CncMilling);
+  }
+  else if (payload === 'mp_lab_chipsTemp_flow') {
+    magicFunc(sender_psid, labFlow_mp_ChipsTemp);
+  }
+  else if (payload === 'mp_lab_jackScrew_flow') {
+    magicFunc(sender_psid, labFlow_mp_JackScrew);
+  }
+  else if (payload === 'mp_lab_injectionMoulding_flow') {
+    magicFunc(sender_psid, labFlow_mp_InjectionMoulding);
+  }
+  else if (payload === 'mp_lab_sandMold_flow') {
+    magicFunc(sender_psid, labFlow_mp_sandMolding);
   }
 
 
