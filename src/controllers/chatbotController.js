@@ -1203,6 +1203,24 @@ const labFlow_fme_DiselEngine = require('./flows/botReplies/lab_levels/level_2/l
 const labFlow_fme_ICEngine = require('./flows/botReplies/lab_levels/level_2/level_2_lab_subs/fme/fme_lab_topics/fmeLabICEng');
 
 
+//lab-> feee
+const labFlow_feee = require('./flows/botReplies/lab_levels/level_2/level_2_lab_subs/feee/feeeLabFlow');
+const labFlow_feee_Multimetre = require('./flows/botReplies/lab_levels/level_2/level_2_lab_subs/feee/feee_lab_topics/feeeLabMultimetre');
+const labFlow_feee_Ohms = require('./flows/botReplies/lab_levels/level_2/level_2_lab_subs/feee/feee_lab_topics/feeeLabOhmsLaw');
+const labFlow_feee_Kirchoff = require('./flows/botReplies/lab_levels/level_2/level_2_lab_subs/feee/feee_lab_topics/feeelabKirchoffs');
+const labFlow_feee_RC = require('./flows/botReplies/lab_levels/level_2/level_2_lab_subs/feee/feee_lab_topics/feeeLabRCCkt');
+const labFlow_feee_RL = require('./flows/botReplies/lab_levels/level_2/level_2_lab_subs/feee/feee_lab_topics/feeeLabRLCkt');
+const labFlow_feee_RLC = require('./flows/botReplies/lab_levels/level_2/level_2_lab_subs/feee/feee_lab_topics/feeeLabRLCCkt');
+const labFlow_feee_carbonResistor = require('./flows/botReplies/lab_levels/level_2/level_2_lab_subs/feee/feee_lab_topics/feeeLabCarbonResis');
+const labFlow_feee_FanRegulator = require('./flows/botReplies/lab_levels/level_2/level_2_lab_subs/feee/feee_lab_topics/feeeLabFanRegulator');
+const labFlow_feee_WiringTubelight = require('./flows/botReplies/lab_levels/level_2/level_2_lab_subs/feee/feee_lab_topics/feeeLabWiringTubelight');
+const labFlow_feee_FullBridge = require('./flows/botReplies/lab_levels/level_2/level_2_lab_subs/feee/feee_lab_topics/feeeLabFullBridge');
+const labFlow_feee_Fuse = require('./flows/botReplies/lab_levels/level_2/level_2_lab_subs/feee/feee_lab_topics/feeeLabFuseSwitch');
+const labFlow_feee_Oscillo = require('./flows/botReplies/lab_levels/level_2/level_2_lab_subs/feee/feee_lab_topics/feeeLabOscillosc');
+const labFlow_feee_wireGauge = require('./flows/botReplies/lab_levels/level_2/level_2_lab_subs/feee/feee_lab_topics/feeeLabWireGauge');
+const labFlow_feee_2WayLightSwitch = require('./flows/botReplies/lab_levels/level_2/level_2_lab_subs/feee/feee_lab_topics/feeeLab2waySwitch');
+
+
 
 
 
@@ -4524,6 +4542,54 @@ let handlePostback = async (sender_psid, received_postback) => {
   }
   else if (payload === 'fme_lab_icEngine_flow') {
     magicFunc(sender_psid, labFlow_fme_ICEngine);
+  }
+
+
+  //lab -> feee
+  else if (payload === 'feee_lab_flow') {
+    magicFunc(sender_psid, labFlow_feee);
+  }
+  else if (payload === 'feee_lab_multiMetre_flow') {
+    magicFunc(sender_psid, labFlow_feee_Multimetre);
+  }
+  else if (payload === 'feee_lab_ohmslaw_flow') {
+    magicFunc(sender_psid, labFlow_feee_Ohms);
+  }
+  else if (payload === 'feee_lab_kirchoffsLaw_flow') {
+    magicFunc(sender_psid, labFlow_feee_Kirchoff);
+  }
+  else if (payload === 'feee_lab_rcCirct_flow') {
+    magicFunc(sender_psid, labFlow_feee_RC);
+  }
+  else if (payload === 'feee_lab_rlCirct_flow') {
+    magicFunc(sender_psid, labFlow_feee_RL);
+  }
+  else if (payload === 'feee_lab_rlcCirct_flow') {
+    magicFunc(sender_psid, labFlow_feee_RLC);
+  }
+  else if (payload === 'feee_lab_carbonResistor_flow') {
+    magicFunc(sender_psid, labFlow_feee_carbonResistor);
+  }
+  else if (payload === 'feee_lab_fanRegulator_flow') {
+    magicFunc(sender_psid, labFlow_feee_FanRegulator);
+  }
+  else if (payload === 'feee_lab_wiringTubelight_flow') {
+    magicFunc(sender_psid, labFlow_feee_WiringTubelight);
+  }
+  else if (payload === 'feee_lab_fullBridgeRect_flow') {
+    magicFunc(sender_psid, labFlow_feee_FullBridge);
+  }
+  else if (payload === 'feee_lab_fuseSwitch_flow') {
+    magicFunc(sender_psid, labFlow_feee_Fuse);
+  }
+  else if (payload === 'feee_lab_Oscillosc_flow') {
+    magicFunc(sender_psid, labFlow_feee_Oscillo);
+  }
+  else if (payload === 'feee_lab_wireGauge_flow') {
+    magicFunc(sender_psid, labFlow_feee_wireGauge);
+  }
+  else if (payload === 'feee_lab_2waySwitch_flow') {
+    magicFunc(sender_psid, labFlow_feee_2WayLightSwitch);
   }
 
 
