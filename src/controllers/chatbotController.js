@@ -1221,6 +1221,12 @@ const labFlow_feee_wireGauge = require('./flows/botReplies/lab_levels/level_2/le
 const labFlow_feee_2WayLightSwitch = require('./flows/botReplies/lab_levels/level_2/level_2_lab_subs/feee/feee_lab_topics/feeeLab2waySwitch');
 
 
+//lab level 3
+//lab-> textile coloration
+const labFlow_texColor = require('./flows/botReplies/lab_levels/level_3/level_3_lab_subs/textile_coloration_1/texColorLabFlow');
+
+
+
 
 
 
@@ -4590,6 +4596,12 @@ let handlePostback = async (sender_psid, received_postback) => {
   }
   else if (payload === 'feee_lab_2waySwitch_flow') {
     magicFunc(sender_psid, labFlow_feee_2WayLightSwitch);
+  }
+
+
+   //lab -> tex color
+   else if (payload === 'texColor_lab_flow') {
+    magicFunc(sender_psid, labFlow_texColor);
   }
 
 
