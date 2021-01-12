@@ -29,7 +29,7 @@ let dce45Syllabus = [
                 "buttons": [
                     {
                         "type": "web_url",
-                        "url": "https://triptoafsin.github.io/sample-default-pages/willBeSoonAvailable.html",
+                        "url": "https://drive.google.com/file/d/1dgMemARdQn5DOm607kJSL1sXpML2i7Nu/view",
                         "title": "L 2,1",
                     },
                     {
@@ -50,7 +50,7 @@ let dce45Syllabus = [
                 "buttons": [
                     {
                         "type": "web_url",
-                        "url": "https://triptoafsin.github.io/sample-default-pages/willBeSoonAvailable.html",
+                        "url": "https://drive.google.com/file/d/1dwduNPeuezE90AfRtB2FPyyohkfWMhXR/view",
                         "title": "L 3,1",
                     },
                     {
