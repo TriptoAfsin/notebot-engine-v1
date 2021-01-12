@@ -1226,6 +1226,14 @@ const labFlow_feee_2WayLightSwitch = require('./flows/botReplies/lab_levels/leve
 const labFlow_texColor = require('./flows/botReplies/lab_levels/level_3/level_3_lab_subs/textile_coloration_1/texColorLabFlow');
 
 
+//lab-> fsd
+const labFlow_fsd = require('./flows/botReplies/lab_levels/level_3/level_3_lab_subs/fsd/fsdLabFlow');
+
+
+//lab-> lss
+const labFlow_lss = require('./flows/botReplies/lab_levels/level_3/level_3_lab_subs/lss/lssLabFlow');
+
+
 
 
 
@@ -4599,9 +4607,20 @@ let handlePostback = async (sender_psid, received_postback) => {
   }
 
 
-   //lab -> tex color
-   else if (payload === 'texColor_lab_flow') {
+  //lab -> tex color
+  else if (payload === 'texColor_lab_flow') {
     magicFunc(sender_psid, labFlow_texColor);
+  }
+
+  //lab -> fsd
+  else if (payload === 'fsd_lab_flow') {
+    magicFunc(sender_psid, labFlow_fsd);
+  }
+
+
+  //lab -> lss
+  else if (payload === 'lss_lab_flow') {
+    magicFunc(sender_psid, labFlow_lss);
   }
 
 
