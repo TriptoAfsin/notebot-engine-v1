@@ -4,7 +4,7 @@ let ap2_lab_flow = [
             "type": "template",
             "payload": {
                 "template_type": "button",
-                "text": "🔰 Select Experiment for Apparel Washing - ",
+                "text": "🔰 Select Experiment for AP-II - ",
                 "buttons": [
                     {
                         "type": "web_url",

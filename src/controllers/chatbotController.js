@@ -1253,6 +1253,13 @@ const labFlow_ym2 = require('./flows/botReplies/lab_levels/level_3/level_3_lab_s
 const labFlow_ap2 = require('./flows/botReplies/lab_levels/level_3/level_3_lab_subs/ap_2/ap2LabFlow');
 
 
+//lab-> fm2
+const labFlow_fm2 = require('./flows/botReplies/lab_levels/level_3/level_3_lab_subs/fm_2/fm2LabFlow');
+const labFlow_fm2_1 = require('./flows/botReplies/lab_levels/level_3/level_3_lab_subs/fm_2/fm2_lab_topics/fm2Lab1Layout');
+const labFlow_fm2_4 = require('./flows/botReplies/lab_levels/level_3/level_3_lab_subs/fm_2/fm2_lab_topics/fm2Lab4HandSocks');
+const labFlow_fm2_5 = require('./flows/botReplies/lab_levels/level_3/level_3_lab_subs/fm_2/fm2_lab_topics/fm2Lab5SingleJersey');
+
+
 
 
 
@@ -4665,6 +4672,21 @@ let handlePostback = async (sender_psid, received_postback) => {
   //lab -> ap2
   else if (payload === 'ap2_lab_flow') {
     magicFunc(sender_psid, labFlow_ap2);
+  }
+
+
+  //lab -> fm2
+  else if (payload === 'fm2_lab_flow') {
+    magicFunc(sender_psid, labFlow_fm2);
+  }
+  else if (payload === 'fm2_lab_1_flow') {
+    magicFunc(sender_psid, labFlow_fm2_1);
+  }
+  else if (payload === 'fm2_lab_4_flow') {
+    magicFunc(sender_psid, labFlow_fm2_4);
+  }
+  else if (payload === 'fm2_lab_5_flow') {
+    magicFunc(sender_psid, labFlow_fm2_5);
   }
 
 
