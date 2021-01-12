@@ -1238,6 +1238,10 @@ const labFlow_lss = require('./flows/botReplies/lab_levels/level_3/level_3_lab_s
 const labFlow_wp2 = require('./flows/botReplies/lab_levels/level_3/level_3_lab_subs/wp_2/wp2LabFlow');
 
 
+//lab-> am2
+const labFlow_am2 = require('./flows/botReplies/lab_levels/level_3/level_3_lab_subs/am_2/am2LabFlow');
+
+
 
 
 
@@ -4630,6 +4634,11 @@ let handlePostback = async (sender_psid, received_postback) => {
   //lab -> wp2
   else if (payload === 'wp2_lab_flow') {
     magicFunc(sender_psid, labFlow_wp2);
+  }
+
+  //lab -> am2
+  else if (payload === 'am2_lab_flow') {
+    magicFunc(sender_psid, labFlow_am2);
   }
 
 
