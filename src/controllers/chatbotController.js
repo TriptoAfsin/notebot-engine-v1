@@ -13,7 +13,12 @@ const negativeKeywords = require('./keywords/negativeKeywords');
 //emojis
 const loveMojis = require('./keywords/loveMoji.js');
 const animalMojis = require('./keywords/animalMoji');
+const flirtMojis = require('./keywords/flirtMoji');
 
+
+//flirt
+const flirtWords = require('./keywords/flirtWords');
+const flirtReply = require('./keywords/replies/flirtReply');
 
 //greet
 const greetWords = require('./keywords/greetWords');
@@ -1465,9 +1470,11 @@ function handleMessage(sender_psid, received_message) {
   //emojis
   const loveMoji = loveMojis;
   const loveReply = loveMojiReplies;
-
   const animalMoji = animalMojis;
+  const flirtMoji = flirtMojis;
 
+  //flirt
+  const flirtWord = flirtWords;
 
   //help
   const help = helpWords;
@@ -1509,9 +1516,26 @@ function handleMessage(sender_psid, received_message) {
     response = {
       "text": `${randomPicker(animalMoji)}`
     }
-
     callSendAPI(sender_psid, response);
   }
+
+  //flirt
+  else if (wordIncludes(flirtMoji, received_message)) {
+    response = {
+      "text": `${randomPicker(flirtReply)}`
+    }
+    callSendAPI(sender_psid, response);
+  }
+
+  else if (wordIncludes(flirtWord, received_message)) {
+    response = {
+      "text": `${randomPicker(flirtReply)}`
+    }
+    callSendAPI(sender_psid, response);
+  }
+
+
+  //help
 
   else if (wordIncludes(help, received_message)) {
     response = help_flow[0];
