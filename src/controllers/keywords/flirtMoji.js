@@ -1,6 +1,9 @@
-const flirt = [
-
+const flirtMoji = [
+    "💋",
+    "👄",
+    "😘",
+    "😙"
 ];
 
 
-module.exports = flirt;
+module.exports = flirtMoji;
