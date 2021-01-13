@@ -4744,6 +4744,12 @@ let handlePostback = async (sender_psid, received_postback) => {
   }
 
 
+  //help
+  else if (payload === 'help_payload') {
+    magicFunc(sender_psid, help_flow);
+  }
+
+
 
 
 

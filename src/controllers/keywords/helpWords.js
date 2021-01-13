@@ -1,4 +1,5 @@
 const help = [
+    "Help",
     "help",
     "how to",
     "সাহায্য"
