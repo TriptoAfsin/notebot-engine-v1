@@ -1,5 +1,12 @@
 require("dotenv").config();
 let dayjs = require('dayjs');
+let utc = require('dayjs/plugin/utc'); // dependent on utc plugin
+let timezone = require('dayjs/plugin/timezone');
+
+dayjs.extend(utc);
+dayjs.extend(timezone);
+
+dayjs.tz.setDefault("Bangladesh/Dhaka");
 
 
 
