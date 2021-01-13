@@ -1,6 +1,6 @@
 require("dotenv").config();
 let dayjs = require('dayjs');
-dayjs.extend(customParseFormat);
+
 
 
 const request = require('request');
