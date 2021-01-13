@@ -9,8 +9,21 @@ const chatBotService = require('../services/chatBotService');
 //keywords
 const positiveKeywords = require('./keywords/positiveKeywords');
 const negativeKeywords = require('./keywords/negativeKeywords');
+
+//emojis
 const loveMojis = require('./keywords/loveMoji.js');
+const animalMojis = require('./keywords/animalMoji');
+
+
+//greet
 const greetWords = require('./keywords/greetWords');
+
+
+//help
+const helpWords = require('./keywords/helpWords');
+
+
+
 //academic
 const noteWords = require('./keywords/academic_words/noteWords');
 const level_1_note_words = require('./keywords/academic_words/level1_word_note');
@@ -1261,6 +1274,9 @@ const labFlow_fm2_5 = require('./flows/botReplies/lab_levels/level_3/level_3_lab
 
 
 
+//help flow
+const help_flow = require('./flows/helpFlow');
+
 
 
 
@@ -1446,9 +1462,21 @@ function handleMessage(sender_psid, received_message) {
   const syllabus = syllabusWords;
 
 
-  const greetReply = greetReplies;
+  //emojis
   const loveMoji = loveMojis;
   const loveReply = loveMojiReplies;
+
+  const animalMoji = animalMojis;
+
+
+  //help
+  const help = helpWords;
+
+
+
+  const greetReply = greetReplies;
+  
+  
   const sadReply = sadStuffReply;
   const positive = positiveKeywords;
   const negative = negativeKeywords;
@@ -1477,6 +1505,29 @@ function handleMessage(sender_psid, received_message) {
     callSendAPI(sender_psid, response);
   }
 
+  else if (wordIncludes(animalMoji, received_message)) {
+    response = {
+      "text": `${randomPicker(animalMoji)}`
+    }
+
+    callSendAPI(sender_psid, response);
+  }
+
+  else if (wordIncludes(help, received_message)) {
+    response = help_flow[0];
+
+    callSendAPI(sender_psid, response);
+  }
+
+
+
+
+
+
+
+
+
+  //toss
   else if (wordIncludes(toss, received_message)) {
     response = {
       "text": `${randomPicker(tossReplies)}`
@@ -4017,6 +4068,9 @@ let handlePostback = async (sender_psid, received_postback) => {
 
 
   //syllabus
+  else if (payload === 'syllabus_flow') {
+    magicFunc(sender_psid, syllabusFlow);
+  }
   //45
   else if (payload === 'syllabus_45') {
     magicFunc(sender_psid, syllabus_45);
