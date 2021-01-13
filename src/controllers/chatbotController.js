@@ -40,6 +40,10 @@ const helpWords = require('./keywords/helpWords');
 const creatorWords = require('./keywords/creatorWords');
 const creatorFlow = require('./keywords/replies/creatorReply');
 
+//tripto
+const triptoWords = require('./keywords/triptoWords');
+const triptoReplies = require('./keywords/replies/triptoReply');
+
 
 //reply words
 const loveMojiReplies = require('./keywords/replies/lovemojiReply');
@@ -1493,6 +1497,9 @@ function handleMessage(sender_psid, received_message) {
   //name
   const yourName = nameWords;
 
+  //tripto
+  const tripto = triptoWords;
+
   //flirt
   const flirtWord = flirtWords;
 
@@ -1572,6 +1579,15 @@ function handleMessage(sender_psid, received_message) {
   else if (wordIncludes(yourName, received_message)) {
     response = {
       "text": `${randomPicker(nameReply)}`
+    }
+    callSendAPI(sender_psid, response);
+  }
+
+  //tripto
+
+  else if (wordIncludes(tripto, received_message)) {
+    response = {
+      "text": `${randomPicker(triptoReplies)}`
     }
     callSendAPI(sender_psid, response);
   }

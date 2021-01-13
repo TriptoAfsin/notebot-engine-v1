@@ -4,7 +4,8 @@ const name = [
     "ডাকবো",
     "ডাকব",
     "পরিচয়",
-    "bot"
+    "bot",
+    "nam"
 ]
 
 module.exports = name;
