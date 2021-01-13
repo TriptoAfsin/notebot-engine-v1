@@ -1,5 +1,6 @@
 require("dotenv").config();
 let dayjs = require('dayjs');
+dayjs.extend(customParseFormat);
 
 
 const request = require('request');
@@ -1600,7 +1601,7 @@ function handleMessage(sender_psid, received_message) {
   //date
   else if (wordIncludes(dateInfo, received_message)) {
     response = {
-      "text": `${dayjs().format()}`
+      "text": `${dayjs("12-25-1995", "MM-DD-YYYY")}`
     }
     callSendAPI(sender_psid, response);
   }
