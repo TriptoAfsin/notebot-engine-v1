@@ -1899,7 +1899,7 @@ function handleMessage(sender_psid, received_message) {
   }
 
 
-  else if (wordIncludes(lab_report, received_message)) {
+  else if (wordIs(lab_report, received_message)) {
     magicFunc(sender_psid, labFlow);
   }
 

@@ -1,7 +1,7 @@
 const help = [
     {
-        "text": `⛳Usgae Instruction -\n🌠For using Notes📗-\n1. just type any of these words - note, নোট, চোথা\n🌠For Routine 📃-\n1. Type  "routine" and send it
-        \n🌠For Lab Report 🧾-\n 1. just type any of these words - report, lab, রিপোর্ট\n🌠For Result 📑-\n1. just type any of these words - result etc
+        "text": `⛳Usgae Instruction -\n\n🌠For using Notes📗-\n1. just type any of these words - note, নোট, চোথা\n\n🌠For Routine 📃-\n\n1. Type  "routine" and send it
+        \n\n🌠For Lab Report 🧾-\n 1. just type any of these words - report, lab, রিপোর্ট\n🌠For Result 📑-\n1. just type any of these words - result etc
         `,
         "quick_replies": [
             {

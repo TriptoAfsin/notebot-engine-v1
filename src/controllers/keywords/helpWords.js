@@ -1,6 +1,7 @@
 const help = [
     "help",
-    "how to"
+    "how to",
+    "সাহায্য"
 ]
 
 module.exports = help;
