@@ -6,7 +6,7 @@ let timezone = require('dayjs/plugin/timezone');
 dayjs.extend(utc);
 dayjs.extend(timezone);
 
-dayjs.tz.setDefault("Bangladesh/Dhaka");
+dayjs.tz.setDefault("Asia/Dhaka");
 
 
 
