@@ -1601,7 +1601,7 @@ function handleMessage(sender_psid, received_message) {
   //date
   else if (wordIncludes(dateInfo, received_message)) {
     response = {
-      "text": `${dayjs("12-25-1995", "MM-DD-YYYY")}`
+      "text": `${dayjs().format()}`
     }
     callSendAPI(sender_psid, response);
   }
