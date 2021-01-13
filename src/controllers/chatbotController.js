@@ -20,6 +20,12 @@ const flirtMojis = require('./keywords/flirtMoji');
 const flirtWords = require('./keywords/flirtWords');
 const flirtReply = require('./keywords/replies/flirtReply');
 
+
+
+//swear words
+const swearWords = require('./keywords/swearWords');
+const swearReply = require('./keywords/replies/swearReply');
+
 //greet
 const greetWords = require('./keywords/greetWords');
 
@@ -191,6 +197,8 @@ const tossReplies = require('./keywords/replies/tossReply');
 const loveMojiReplies = require('./keywords/replies/lovemojiReply');
 const sadStuffReply = require('./keywords/replies/sadReplies');
 const greetReplies = require('./keywords/replies/greetingsReply');
+
+
 
 //global replies
 const notAvailable = require('./flows/botReplies/notAvailable');
@@ -1476,6 +1484,9 @@ function handleMessage(sender_psid, received_message) {
   //flirt
   const flirtWord = flirtWords;
 
+  //swear
+  const swearWord = swearWords;
+
   //help
   const help = helpWords;
 
@@ -1534,6 +1545,14 @@ function handleMessage(sender_psid, received_message) {
     callSendAPI(sender_psid, response);
   }
 
+  //swears
+  else if (wordIncludes(swearWord, received_message)) {
+    response = {
+      "text": `${randomPicker(swearReply)}`
+    }
+    callSendAPI(sender_psid, response);
+  }
+
 
   //help
 
@@ -1542,8 +1561,6 @@ function handleMessage(sender_psid, received_message) {
 
     callSendAPI(sender_psid, response);
   }
-
-
 
 
 
