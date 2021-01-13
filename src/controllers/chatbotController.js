@@ -15,6 +15,9 @@ const loveMojis = require('./keywords/loveMoji.js');
 const animalMojis = require('./keywords/animalMoji');
 const flirtMojis = require('./keywords/flirtMoji');
 
+//name
+const nameWords = require('./keywords/yorNameWords.js');
+const nameReply = require('./keywords/replies/yourNameReplies');
 
 //flirt
 const flirtWords = require('./keywords/flirtWords');
@@ -33,6 +36,15 @@ const greetWords = require('./keywords/greetWords');
 //help
 const helpWords = require('./keywords/helpWords');
 
+//creator
+const creatorWords = require('./keywords/creatorWords');
+const creatorFlow = require('./keywords/replies/creatorReply');
+
+
+//reply words
+const loveMojiReplies = require('./keywords/replies/lovemojiReply');
+const sadStuffReply = require('./keywords/replies/sadReplies');
+const greetReplies = require('./keywords/replies/greetingsReply');
 
 
 //academic
@@ -193,10 +205,7 @@ const testReply = require('./keywords/replies/testReply');
 const tossWords = require('./keywords/tossWords');
 const tossReplies = require('./keywords/replies/tossReply');
 
-//reply words
-const loveMojiReplies = require('./keywords/replies/lovemojiReply');
-const sadStuffReply = require('./keywords/replies/sadReplies');
-const greetReplies = require('./keywords/replies/greetingsReply');
+
 
 
 
@@ -1481,6 +1490,9 @@ function handleMessage(sender_psid, received_message) {
   const animalMoji = animalMojis;
   const flirtMoji = flirtMojis;
 
+  //name
+  const yourName = nameWords;
+
   //flirt
   const flirtWord = flirtWords;
 
@@ -1489,6 +1501,9 @@ function handleMessage(sender_psid, received_message) {
 
   //help
   const help = helpWords;
+
+  //creator
+  const creator = creatorWords;
 
 
 
@@ -1553,13 +1568,26 @@ function handleMessage(sender_psid, received_message) {
     callSendAPI(sender_psid, response);
   }
 
+  //your name
+  else if (wordIncludes(yourName, received_message)) {
+    response = {
+      "text": `${randomPicker(nameReply)}`
+    }
+    callSendAPI(sender_psid, response);
+  }
+
 
   //help
 
   else if (wordIncludes(help, received_message)) {
     response = help_flow[0];
-
     callSendAPI(sender_psid, response);
+  }
+
+
+  //creator 
+  else if (wordIncludes(creator, received_message)) {
+    magicFunc(sender_psid, creatorFlow);
   }
 
 
