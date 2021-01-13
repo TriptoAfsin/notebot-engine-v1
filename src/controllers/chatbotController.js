@@ -1,4 +1,5 @@
 require("dotenv").config();
+let dayjs = require('dayjs');
 
 
 const request = require('request');
@@ -24,7 +25,6 @@ const flirtWords = require('./keywords/flirtWords');
 const flirtReply = require('./keywords/replies/flirtReply');
 
 
-
 //swear words
 const swearWords = require('./keywords/swearWords');
 const swearReply = require('./keywords/replies/swearReply');
@@ -43,6 +43,9 @@ const creatorFlow = require('./keywords/replies/creatorReply');
 //tripto
 const triptoWords = require('./keywords/triptoWords');
 const triptoReplies = require('./keywords/replies/triptoReply');
+
+//date
+const dateWords = require('./keywords/dateWords');
 
 
 //reply words
@@ -1512,6 +1515,9 @@ function handleMessage(sender_psid, received_message) {
   //creator
   const creator = creatorWords;
 
+  //date
+  const dateInfo = dateWords;
+
 
 
   const greetReply = greetReplies;
@@ -1584,10 +1590,17 @@ function handleMessage(sender_psid, received_message) {
   }
 
   //tripto
-
   else if (wordIncludes(tripto, received_message)) {
     response = {
       "text": `${randomPicker(triptoReplies)}`
+    }
+    callSendAPI(sender_psid, response);
+  }
+
+  //date
+  else if (wordIncludes(dateInfo, received_message)) {
+    response = {
+      "text": `${dayjs().format()}`
     }
     callSendAPI(sender_psid, response);
   }
