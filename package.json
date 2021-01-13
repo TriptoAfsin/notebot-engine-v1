@@ -12,6 +12,7 @@
   "author": "TriptoAfsin",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.21.1",
     "body-parser": "^1.19.0",
     "dayjs": "^1.10.3",
     "dotenv": "^8.2.0",

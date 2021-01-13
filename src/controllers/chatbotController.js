@@ -1,12 +1,5 @@
 require("dotenv").config();
-let dayjs = require('dayjs');
-let utc = require('dayjs/plugin/utc'); // dependent on utc plugin
-let timezone = require('dayjs/plugin/timezone');
-
-dayjs.extend(utc);
-dayjs.extend(timezone);
-
-dayjs.tz.setDefault("Asia/Dhaka");
+const axios = require('axios');
 
 
 
@@ -1607,10 +1600,15 @@ function handleMessage(sender_psid, received_message) {
 
   //date
   else if (wordIncludes(dateInfo, received_message)) {
-    response = {
-      "text": `${dayjs().toDate()}`
-    }
-    callSendAPI(sender_psid, response);
+    axios.get('https://worldtimeapi.org/api/timezone/Asia/Dhaka').then(resp => {
+      console.log(resp.data.datetime);
+
+      response = {
+        "text": `${resp.data.datetime}`
+      }
+      callSendAPI(sender_psid, response);
+
+    }); 
   }
 
 
