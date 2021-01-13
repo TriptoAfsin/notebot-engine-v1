@@ -1601,13 +1601,11 @@ function handleMessage(sender_psid, received_message) {
   //date
   else if (wordIncludes(dateInfo, received_message)) {
     axios.get('https://worldtimeapi.org/api/timezone/Asia/Dhaka').then(resp => {
-      console.log(resp.data.datetime);
-
+      //console.log(resp.data.datetime);
       response = {
         "text": `${resp.data.datetime}`
       }
       callSendAPI(sender_psid, response);
-
     }); 
   }
 
