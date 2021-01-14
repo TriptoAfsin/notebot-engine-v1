@@ -1,6 +1,12 @@
 require("dotenv").config();
 const axios = require('axios');
 
+const imgBlockGen = require('./genrators/imgBlockGen');
+const webBtnBlockGen = require('./genrators/webBtnBlockGen');
+const textBlockGen = require('./genrators/textBlockGen');
+const payloadBtnBlockGen = require('./genrators/payloadBtnGen');
+const groupedBtnBlockGen = require('./genrators/grroupedButtonBlockGen');
+
 
 
 const request = require('request');
@@ -47,6 +53,9 @@ const triptoReplies = require('./keywords/replies/triptoReply');
 
 //date
 const dateWords = require('./keywords/dateWords');
+
+//corona
+const coronaWords = require('./keywords/coronaWords');
 
 
 //reply words
@@ -1519,6 +1528,9 @@ function handleMessage(sender_psid, received_message) {
   //date
   const dateInfo = dateWords;
 
+  //corona
+  const corona = coronaWords;
+
 
 
   const greetReply = greetReplies;
@@ -1605,6 +1617,15 @@ function handleMessage(sender_psid, received_message) {
       response = {
         "text": `${resp.data.datetime}\nN.B: It's the time of Dhaka, Bangladesh`
       }
+      callSendAPI(sender_psid, response);
+    }); 
+  }
+
+  //corona
+  else if (wordIncludes(corona, received_message)) {
+    axios.get('https://corona.lmao.ninja/v3/covid-19/countries/bangladesh').then(resp => {
+      //console.log(`⚫ Total Cases: ${resp.data.cases}\n🔴 Total Deaths: ${resp.data.deaths}\n\n🔵 New Cases Today: ${resp.data.todayCases}\n🟠 Deaths Today: ${resp.data.todayDeaths}\n🟢 Recovered Today: ${resp.data.todayRecovered}`);
+      response = textBlockGen(`⚫ Total Cases: ${resp.data.cases}\n🔴 Total Deaths: ${resp.data.deaths}\n\n🔵 New Cases Today: ${resp.data.todayCases}\n🟠 Deaths Today: ${resp.data.todayDeaths}\n🟢 Recovered Today: ${resp.data.todayRecovered}`)
       callSendAPI(sender_psid, response);
     }); 
   }
