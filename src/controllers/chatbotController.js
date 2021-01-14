@@ -43,6 +43,9 @@ const greetWords = require('./keywords/greetWords');
 //help
 const helpWords = require('./keywords/helpWords');
 
+//phone
+const phoneWords = require('./keywords/phoneWords');
+
 //creator
 const creatorWords = require('./keywords/creatorWords');
 const creatorFlow = require('./keywords/replies/creatorReply');
@@ -1596,9 +1599,7 @@ function handleMessage(sender_psid, received_message) {
 
   //your name
   else if (wordIncludes(yourName, received_message)) {
-    response = {
-      "text": `${randomPicker(nameReply)}`
-    }
+    response = textBlockGen(`${randomPicker(nameReply)}`);
     callSendAPI(sender_psid, response);
   }
 
@@ -1613,10 +1614,7 @@ function handleMessage(sender_psid, received_message) {
   //date
   else if (wordIncludes(dateInfo, received_message)) {
     axios.get('https://worldtimeapi.org/api/timezone/Asia/Dhaka').then(resp => {
-      //console.log(resp.data.datetime);
-      response = {
-        "text": `${resp.data.datetime}\nN.B: It's the time of Dhaka, Bangladesh`
-      }
+      response = textBlockGen(`${resp.data.datetime}\nN.B: It's the time of Dhaka, Bangladesh`);
       callSendAPI(sender_psid, response);
     }); 
   }
@@ -1635,6 +1633,17 @@ function handleMessage(sender_psid, received_message) {
 
   else if (wordIncludes(help, received_message)) {
     response = help_flow[0];
+    callSendAPI(sender_psid, response);
+  }
+
+  //phone
+  else if (wordIncludes(phoneWords, received_message)) {
+    response = groupedBtnBlockGen(
+      `🔰BUTEX PhoneBook - `,
+      [
+        webBtnBlockGen(`🌍Visit Here`, `https://triptoafsin.github.io/BUTEX-PhoneBook/`)
+      ]
+    )
     callSendAPI(sender_psid, response);
   }
 
