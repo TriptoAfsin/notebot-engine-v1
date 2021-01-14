@@ -1603,7 +1603,7 @@ function handleMessage(sender_psid, received_message) {
     axios.get('https://worldtimeapi.org/api/timezone/Asia/Dhaka').then(resp => {
       //console.log(resp.data.datetime);
       response = {
-        "text": `${resp.data.datetime}\n N.B: It's the time of Dhaka, Bangladesh`
+        "text": `${resp.data.datetime}\nN.B: It's the time of Dhaka, Bangladesh`
       }
       callSendAPI(sender_psid, response);
     }); 
