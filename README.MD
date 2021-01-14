@@ -26,6 +26,30 @@ Moreover, this bot has casual talking abilities and other functionalities
 
 5. The bot matches **keywords** and sends specific **flows**
 
+### Internal Tools - 
+**1. Word Detection:** I've made two function to match keyword - 
+    
+    1. wordIncludes(arrayToMatch, received_message) : finds just match
+
+    2. wordIs(arrayToMatch, received_message) : finds exact match
+
+**2. Randomizer :** ``` randomPicker(arrayToRandomize) ```
+
+**3. Magic Function 😂 :** ``` magicFunc(sender_psid, flowToSend) ``` This function was a technical breakthrough 
+
+**4. Block genrators:** Facebook's graphql has specific format to send objects, you can't make error here, the text messages, images, buttons etc whatever the bot sents is an object, so I made generators to genrate block of objects for texts, image, button etc. Few examples - 
+
+        1. textBlockGen("Pass texts here")
+
+        2. imgBlockGen("Image URL")
+
+        3. groupedBtnBlockGen(headerText, BtnObjArr)
+
+                - Web URL Buttons: webBtnBlockGen(title, url)
+                - Flow Buttons: webBtnBlockGen(title, payload)
+
+
+
 ### Wanna contribute?
 
 Feel free to clone this repo for your own projects or contribute to this project 😃

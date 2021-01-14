@@ -1641,7 +1641,7 @@ function handleMessage(sender_psid, received_message) {
     response = groupedBtnBlockGen(
       `🔰BUTEX PhoneBook - `,
       [
-        webBtnBlockGen(`🌍Visit Here`, `https://triptoafsin.github.io/BUTEX-PhoneBook/`)
+        webBtnBlockGen(`🌍 Visit Here`, `https://triptoafsin.github.io/BUTEX-PhoneBook/`)
       ]
     )
     callSendAPI(sender_psid, response);
