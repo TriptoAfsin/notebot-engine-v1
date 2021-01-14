@@ -1,9 +1,7 @@
+let textBlockGen = require("../../../../../../../genrators/textBlockGen");
+
 let intro_bce = [
-    {
-        "text": `🔷Salah Uddin Sir(Sheet) - 
-        https://drive.google.com/file/d/1veIWxPZE395HrL6lnFw_r4wFIfGnE3gI/view?usp=sharing`
-    },
-   
+    textBlockGen(`🔷Salah Uddin Sir(Sheet) - \n\nhttps://drive.google.com/file/d/1veIWxPZE395HrL6lnFw_r4wFIfGnE3gI/view?usp=sharing`),
 ]
 
 

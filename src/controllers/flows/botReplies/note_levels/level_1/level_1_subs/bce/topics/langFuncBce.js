@@ -1,13 +1,9 @@
+let textBlockGen = require("../../../../../../../genrators/textBlockGen");
+
+
 let langfunc_bce = [
-    {
-        "text": `🔷 Sheet - 
-        https://drive.google.com/file/d/1lNU1CR3f_AM4soaDgskQYPcMrHgfArKn/view?usp=sharing`
-    },
-    {
-        "text": `🔷Functions of language -  
-        https://drive.google.com/file/d/13vf_JYRxPdIcHFJ-1gNImh27gyiLhizP/view?usp=drivesdk`
-    }
-   
+    textBlockGen(`🔷 Sheet - \n\nhttps://drive.google.com/file/d/1lNU1CR3f_AM4soaDgskQYPcMrHgfArKn/view?usp=sharing`),
+    textBlockGen(`🔷Functions of language - \n\nhttps://drive.google.com/file/d/13vf_JYRxPdIcHFJ-1gNImh27gyiLhizP/view?usp=drivesdk`)
 ]
 
 
