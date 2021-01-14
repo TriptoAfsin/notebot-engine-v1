@@ -37,7 +37,7 @@ Moreover, this bot has casual talking abilities and other functionalities
 
 **3. Magic Function 😂 :** ``` magicFunc(sender_psid, flowToSend) ``` This function was a technical breakthrough 
 
-**4. Block genrators:** Facebook's graphql has specific format to send objects, you can't make error here, the text messages, images, buttons etc whatever the bot sents is an object, so I made generators to genrate block of objects for texts, image, button etc. Few examples - 
+**4. Block genrators:** Facebook's graphql has specific format to send objects, you can't make error here, the text messages, images, buttons etc whatever the bot sends is an object, so I made generators to genarate block of objects for texts, image, button etc. Few examples - 
 
         1. textBlockGen("Pass texts here")
 
