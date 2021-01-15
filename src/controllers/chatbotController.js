@@ -83,6 +83,15 @@ const creatorFlow = require('./keywords/replies/creatorReply');
 const triptoWords = require('./keywords/triptoWords');
 const triptoReplies = require('./keywords/replies/triptoReply');
 
+
+//jokes
+const jokeWords = require('./keywords/jokeWords');
+const jokeFlow = require('./flows/botReplies/entertainFlows/jokesFlow');
+
+//quote
+const motivateWords = require('./keywords/motivateWords');
+const quotesFlow = require('./flows/botReplies/entertainFlows/quotesFlow');
+
 //date
 const dateWords = require('./keywords/dateWords');
 
@@ -1683,6 +1692,18 @@ function handleMessage(sender_psid, received_message) {
     magicFunc(sender_psid, creatorFlow);
   }
 
+  //jokes
+  else if (wordIncludes(jokeWords, received_message)) {
+    response = randomPicker(jokeFlow);
+    callSendAPI(sender_psid, response);
+  }
+
+  //motivate
+  else if (wordIncludes(motivateWords, received_message)) {
+    response = randomPicker(quotesFlow);
+    callSendAPI(sender_psid, response);
+  }
+
 
   //yes
   else if (wordIncludes(yesWords, received_message)) {
@@ -1740,6 +1761,7 @@ function handleMessage(sender_psid, received_message) {
 
     callSendAPI(sender_psid, response);
   }
+
 
   else if (wordIncludes(getStartedWords, received_message)) {
     response = getStartedMsg[0];
@@ -4946,6 +4968,18 @@ let handlePostback = async (sender_psid, received_postback) => {
   }
   else if (payload === 'fm2_lab_5_flow') {
     magicFunc(sender_psid, labFlow_fm2_5);
+  }
+
+  //quotes
+  else if (payload === 'another_quote_flow') {
+    response = randomPicker(quotesFlow);
+    callSendAPI(sender_psid, response);
+  }
+
+  //jokes
+  else if (payload === 'another_joke_flow') {
+    response = randomPicker(jokeFlow);
+    callSendAPI(sender_psid, response);
   }
 
 
