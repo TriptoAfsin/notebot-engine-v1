@@ -1865,7 +1865,7 @@ function handleMessage(sender_psid, received_message) {
   }
 
   //academic -> marketing
-  else if (wordIncludes(marketing, received_message)) {
+  else if (wordIs(marketing, received_message)) {
     magicFunc(sender_psid, marketing_flow);
   }
 
