@@ -67,6 +67,14 @@ const thanksReplies = require('./keywords/replies/thanksReply');
 const sorryWords = require('./keywords/sorryWords');
 const sorryReplies = require('./keywords/replies/sorryReply');
 
+//songs
+const songWords = require('./keywords/songWords');
+const songFlow = require('./flows/botReplies/entertainFlows/songsFlow');
+
+//depressed
+const depressedWords = require('./keywords/depressedWords');
+const depressedFlow = require('./flows/botReplies/entertainFlows/depressedFlow');
+
 
 
 //help
@@ -1776,6 +1784,16 @@ function handleMessage(sender_psid, received_message) {
     }
 
     callSendAPI(sender_psid, response);
+  }
+
+  //songs
+  else if (wordIncludes(songWords, received_message)) {
+    magicFunc(sender_psid, songFlow);
+  }
+
+  //depressed
+  else if (wordIncludes(depressedWords, received_message)) {
+    magicFunc(sender_psid, depressedFlow);
   }
 
 
@@ -4980,6 +4998,11 @@ let handlePostback = async (sender_psid, received_postback) => {
   else if (payload === 'another_joke_flow') {
     response = randomPicker(jokeFlow);
     callSendAPI(sender_psid, response);
+  }
+
+  //songs
+  else if (payload === 'another_song_flow') {
+    magicFunc(sender_psid, songFlow);
   }
 
 
