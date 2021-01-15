@@ -39,6 +39,35 @@ const swearReply = require('./keywords/replies/swearReply');
 //greet
 const greetWords = require('./keywords/greetWords');
 
+//yes
+const yesWords = require('./keywords/yesTypeWords');
+const yesReplies = require('./keywords/replies/yesTypeReply');
+
+//no
+const noWords = require('./keywords/noTypeWords');
+const noReplies = require('./keywords/replies/noTypeReply');
+
+//sameToYou
+const sameWords = require('./keywords/sameToYouWords');
+const sameReplies = require('./keywords/replies/sameToYouReply');
+
+//sadMoji
+const sadMojis = require('./keywords/sadMoji');
+const sadMojiReplies = require('./keywords/replies/sadMojiReply');
+
+//bye
+const byeWords = require('./keywords/byeWords');
+const byeReplies = require('./keywords/replies/byeReply');
+
+//thanks
+const thanksWords = require('./keywords/thanksWords');
+const thanksReplies = require('./keywords/replies/thanksReply');
+
+//sorry
+const sorryWords = require('./keywords/sorryWords');
+const sorryReplies = require('./keywords/replies/sorryReply');
+
+
 
 //help
 const helpWords = require('./keywords/helpWords');
@@ -1619,6 +1648,8 @@ function handleMessage(sender_psid, received_message) {
     }); 
   }
 
+
+
   //corona
   else if (wordIncludes(corona, received_message)) {
     axios.get('https://corona.lmao.ninja/v3/covid-19/countries/bangladesh').then(resp => {
@@ -1630,7 +1661,6 @@ function handleMessage(sender_psid, received_message) {
 
 
   //help
-
   else if (wordIncludes(help, received_message)) {
     response = help_flow[0];
     callSendAPI(sender_psid, response);
@@ -1651,6 +1681,49 @@ function handleMessage(sender_psid, received_message) {
   //creator 
   else if (wordIncludes(creator, received_message)) {
     magicFunc(sender_psid, creatorFlow);
+  }
+
+
+  //yes
+  else if (wordIncludes(yesWords, received_message)) {
+    response = textBlockGen(`${randomPicker(yesReplies)}`)
+    callSendAPI(sender_psid, response);
+  }
+
+  //no
+  else if (wordIs(noWords, received_message)) {
+    response = textBlockGen(`${randomPicker(noReplies)}`)
+    callSendAPI(sender_psid, response);
+  }
+
+  //sameToYou
+  else if (wordIncludes(sameWords, received_message)) {
+    response = textBlockGen(`${randomPicker(sameReplies)}`)
+    callSendAPI(sender_psid, response);
+  }
+
+  //sadMoji
+  else if (wordIncludes(sadMojis, received_message)) {
+    response = textBlockGen(`${randomPicker(sadMojiReplies)}`)
+    callSendAPI(sender_psid, response);
+  }
+
+  //bye
+  else if (wordIncludes(byeWords, received_message)) {
+    response = textBlockGen(`${randomPicker(byeReplies)}`)
+    callSendAPI(sender_psid, response);
+  }
+
+  //thanks
+  else if (wordIncludes(thanksWords, received_message)) {
+    response = textBlockGen(`${randomPicker(thanksReplies)}`)
+    callSendAPI(sender_psid, response);
+  }
+
+   //sorry
+   else if (wordIncludes(sorryWords, received_message)) {
+    response = textBlockGen(`${randomPicker(sorryReplies)}`)
+    callSendAPI(sender_psid, response);
   }
 
 
