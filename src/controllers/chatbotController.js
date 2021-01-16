@@ -55,6 +55,18 @@ const sameReplies = require('./keywords/replies/sameToYouReply');
 const sadMojis = require('./keywords/sadMoji');
 const sadMojiReplies = require('./keywords/replies/sadMojiReply');
 
+//doingWhat
+const doingWords = require('./keywords/doingWhatWords');
+const doingReplies = require('./keywords/replies/doingReply');
+
+//Home
+const homeWords = require('./keywords/homeWords');
+const homeReplies = require('./keywords/replies/homeReplies');
+
+//How are u
+const howAreYouWords = require('./keywords/howAreUWords');
+const howAreYouReplies = require('./keywords/replies/howAreYouReplies');
+
 //bye
 const byeWords = require('./keywords/byeWords');
 const byeReplies = require('./keywords/replies/byeReply');
@@ -1749,11 +1761,31 @@ function handleMessage(sender_psid, received_message) {
     callSendAPI(sender_psid, response);
   }
 
-   //sorry
-   else if (wordIncludes(sorryWords, received_message)) {
+  //sorry
+  else if (wordIncludes(sorryWords, received_message)) {
     response = textBlockGen(`${randomPicker(sorryReplies)}`)
     callSendAPI(sender_psid, response);
   }
+
+  //home
+  else if (wordIncludes(homeWords, received_message)) {
+    response = textBlockGen(`${randomPicker(homeReplies)}`)
+    callSendAPI(sender_psid, response);
+  }
+
+  //doing
+  else if (wordIncludes(doingWords, received_message)) {
+    response = textBlockGen(`${randomPicker(doingReplies)}`)
+    callSendAPI(sender_psid, response);
+  }
+
+
+  //how are you
+  else if (wordIncludes(howAreYouWords, received_message)) {
+    response = textBlockGen(`${randomPicker(howAreYouReplies)}`)
+    callSendAPI(sender_psid, response);
+  }
+
 
 
 
