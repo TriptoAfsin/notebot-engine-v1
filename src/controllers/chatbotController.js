@@ -31,6 +31,10 @@ const nameReply = require('./keywords/replies/yourNameReplies');
 const flirtWords = require('./keywords/flirtWords');
 const flirtReply = require('./keywords/replies/flirtReply');
 
+//gfbf
+const gfBfWords = require('./keywords/gfBfWords');
+const gfBfReply = require('./keywords/replies/gfBfReplies');
+
 
 //swear words
 const swearWords = require('./keywords/swearWords');
@@ -1793,6 +1797,13 @@ function handleMessage(sender_psid, received_message) {
   //how are you
   else if (wordIncludes(howAreYouWords, received_message)) {
     response = textBlockGen(`${randomPicker(howAreYouReplies)}`)
+    callSendAPI(sender_psid, response);
+  }
+
+
+  //gfBf
+  else if (wordIncludes(gfBfWords, received_message)) {
+    response = textBlockGen(`${randomPicker(gfBfReply)}`)
     callSendAPI(sender_psid, response);
   }
 
