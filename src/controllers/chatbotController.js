@@ -67,6 +67,10 @@ const doingReplies = require('./keywords/replies/doingReply');
 const loveWords = require('./keywords/loveWords');
 const loveReplies = require('./keywords/replies/loveWordsReply');
 
+//happy
+const happyWords = require('./keywords/happyWords');
+const happyReplies = require('./keywords/replies/happyReplies');
+
 //Home
 const homeWords = require('./keywords/homeWords');
 const homeReplies = require('./keywords/replies/homeReplies');
@@ -1642,24 +1646,18 @@ function handleMessage(sender_psid, received_message) {
 
   //flirt
   else if (wordIncludes(flirtMoji, received_message)) {
-    response = {
-      "text": `${randomPicker(flirtReply)}`
-    }
+    response = textBlockGen(`${randomPicker(flirtReply)}`);
     callSendAPI(sender_psid, response);
   }
 
   else if (wordIncludes(flirtWord, received_message)) {
-    response = {
-      "text": `${randomPicker(flirtReply)}`
-    }
+    response = textBlockGen(`${randomPicker(flirtReply)}`);
     callSendAPI(sender_psid, response);
   }
 
   //swears
   else if (wordIncludes(swearWord, received_message)) {
-    response = {
-      "text": `${randomPicker(swearReply)}`
-    }
+    response = textBlockGen(`${randomPicker(swearReply)}`);
     callSendAPI(sender_psid, response);
   }
 
@@ -1671,9 +1669,13 @@ function handleMessage(sender_psid, received_message) {
 
   //tripto
   else if (wordIncludes(tripto, received_message)) {
-    response = {
-      "text": `${randomPicker(triptoReplies)}`
-    }
+    response = textBlockGen(`${randomPicker(triptoReplies)}`);
+    callSendAPI(sender_psid, response);
+  }
+
+  //tripto
+  else if (wordIncludes(happyWords, received_message)) {
+    response = textBlockGen(`${randomPicker(happyReplies)}`);
     callSendAPI(sender_psid, response);
   }
 
