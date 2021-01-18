@@ -8,4 +8,4 @@ const bhaiReplies = [
 ];
 
 
-module.exports = byeReplies;
+module.exports = bhaiReplies;
