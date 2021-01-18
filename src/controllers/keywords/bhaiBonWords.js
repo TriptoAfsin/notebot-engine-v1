@@ -16,7 +16,12 @@ let bhaiBon = [
     "আপু",
     "আপি",
     "appi",
-    "bhaiya"
+    "bhaiya",
+    "mama",
+    "mamu",
+    "bodda",
+    "বদদা",
+    "মমা"
 ]
 
 
