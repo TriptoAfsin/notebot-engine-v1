@@ -93,6 +93,14 @@ const howAreYouReplies = require('./keywords/replies/howAreYouReplies');
 const byeWords = require('./keywords/byeWords');
 const byeReplies = require('./keywords/replies/byeReply');
 
+//senti
+const sentiWords = require('./keywords/sentiWords');
+const sentiReplies = require('./keywords/replies/sentiReply');
+
+//gg
+const ggWord = require('./keywords/ggWord');
+const ggReply = require('./keywords/replies/ggReply');
+
 //thanks
 const thanksWords = require('./keywords/thanksWords');
 const thanksReplies = require('./keywords/replies/thanksReply');
@@ -1688,6 +1696,18 @@ function handleMessage(sender_psid, received_message) {
   //swears
   else if (wordIncludes(swearWord, received_message)) {
     response = textBlockGen(`${randomPicker(swearReply)}`);
+    callSendAPI(sender_psid, response);
+  }
+
+  //senti
+  else if (wordIncludes(sentiWords, received_message)) {
+    response = textBlockGen(`${randomPicker(sentiReplies)}`);
+    callSendAPI(sender_psid, response);
+  }
+
+  //gg
+  else if (wordIs(ggWord, received_message)) {
+    response = textBlockGen(`${randomPicker(ggReply)}`);
     callSendAPI(sender_psid, response);
   }
 
