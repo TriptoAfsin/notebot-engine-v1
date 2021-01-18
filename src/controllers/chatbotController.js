@@ -1474,11 +1474,11 @@ let postWebhook = (req, res) => {
       // Gets the message. entry.messaging is an array, but 
       // will only ever contain one message, so we get index 0
       let webhook_event = entry.messaging[0];
-      console.log(webhook_event);
+      console.log(`WebHook Event: ${webhook_event}`);
 
       // Get the sender PSID
       let sender_psid = webhook_event.sender.id;
-      console.log('Sender PSID: ' + sender_psid);
+      console.log('👤Sender PSID: ' + sender_psid);
 
       // Check if the event is a message or postback and
       // pass the event to the appropriate handler function
@@ -2324,7 +2324,7 @@ let handlePostback = async (sender_psid, received_postback) => {
     //getting username
     let username = await chatBotService.getFacebookUserInfo(sender_psid);
 
-    console.log(username);
+    console.log(`Username: ${username}`);
     response = getStartedMsg[0];
     callSendAPI(sender_psid, response);
   }
