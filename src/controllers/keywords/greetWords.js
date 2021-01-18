@@ -3,7 +3,6 @@ const greets = [
     "hi", 
     "hey", 
     "hey", 
-    "hi", 
     "whatsup", 
     "hello",
     "hlw",

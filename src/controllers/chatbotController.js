@@ -42,14 +42,24 @@ const swearReply = require('./keywords/replies/swearReply');
 
 //greet
 const greetWords = require('./keywords/greetWords');
+const hiWords = require('./keywords/onlyHiWord');
 
 //yes
 const yesWords = require('./keywords/yesTypeWords');
 const yesReplies = require('./keywords/replies/yesTypeReply');
 
+//okaywords
+const okayWords = require('./keywords/okayWords');
+const onlyOkay = require('./keywords/onlyok');
+const okayReplies = require('./keywords/replies/okayReply');
+
 //no
 const noWords = require('./keywords/noTypeWords');
 const noReplies = require('./keywords/replies/noTypeReply');
+
+//bhai
+const bhaiWords = require('./keywords/bhaiBonWords');
+const bhaiReplies = require('./keywords/replies/bhaiReply');
 
 //sameToYou
 const sameWords = require('./keywords/sameToYouWords');
@@ -1623,25 +1633,44 @@ function handleMessage(sender_psid, received_message) {
   
   
   if (wordIncludes(greets, received_message)) {
-    // Create the payload for a basic text message
+    response = greetReplies[0];
+    callSendAPI(sender_psid, response);
+  }
+
+  else if (wordIs(hiWords, received_message)) {
     response = greetReplies[0];
     callSendAPI(sender_psid, response);
   }
 
 
+  //bhai
+  else if (wordIncludes(bhaiWords, received_message)) {
+    response = textBlockGen(`${randomPicker(bhaiReplies)}`);
+    callSendAPI(sender_psid, response);
+  }
+
+  //okay
+  else if (wordIncludes(okayWords, received_message)) {
+    response = textBlockGen(`${randomPicker(okayReplies)}`);
+    callSendAPI(sender_psid, response);
+  }
+
+  else if (wordIs(onlyOkay, received_message)) {
+    response = textBlockGen(`${randomPicker(okayReplies)}`);
+    callSendAPI(sender_psid, response);
+  }
+
+
+
+
 
   else if (wordIncludes(positive, received_message)) {
-    response = {
-      "text": `${randomPicker(loveReply)}`
-    }
-
+    response = textBlockGen(`${randomPicker(loveReply)}`);
     callSendAPI(sender_psid, response);
   }
 
   else if (wordIncludes(animalMoji, received_message)) {
-    response = {
-      "text": `${randomPicker(animalMoji)}`
-    }
+    response = textBlockGen(`${randomPicker(animalMoji)}`);
     callSendAPI(sender_psid, response);
   }
 
