@@ -1,11 +1,13 @@
 const lab = [
     "report", 
-    "lab", 
     "experiment", 
     "lab report", 
     "practical", 
     "রিপোর্ট", 
-    "ল্যাব"
+    "ল্যাব",
+    "lab reports📋",
+    "lab reports"
+
 ];
 
 

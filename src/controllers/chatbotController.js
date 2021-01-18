@@ -279,6 +279,7 @@ const bothMath_words = require('./keywords/academic_words/subjects/bothMath');
 
 const quiz_words = require('./keywords/academic_words/quizWords');
 const labWords = require('./keywords/academic_words/labWords');
+const onlylabWord = require('./keywords/academic_words/onlyLabWord');
 
 const routineWords = require('./keywords/academic_words/routineWords');
 const resultWords = require('./keywords/academic_words/resultWords');
@@ -1673,7 +1674,7 @@ function handleMessage(sender_psid, received_message) {
     callSendAPI(sender_psid, response);
   }
 
-  //tripto
+  //happy
   else if (wordIncludes(happyWords, received_message)) {
     response = textBlockGen(`${randomPicker(happyReplies)}`);
     callSendAPI(sender_psid, response);
@@ -2199,7 +2200,11 @@ function handleMessage(sender_psid, received_message) {
   }
 
 
-  else if (wordIs(lab_report, received_message)) {
+  else if (wordIncludes(lab_report, received_message)) {
+    magicFunc(sender_psid, labFlow);
+  }
+
+  else if (wordIs(onlylabWord, received_message)) {
     magicFunc(sender_psid, labFlow);
   }
 
