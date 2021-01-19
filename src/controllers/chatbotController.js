@@ -81,6 +81,10 @@ const loveReplies = require('./keywords/replies/loveWordsReply');
 const happyWords = require('./keywords/happyWords');
 const happyReplies = require('./keywords/replies/happyReplies');
 
+//chill
+const chillWords = require('./keywords/chillWords');
+const chillReplies = require('./keywords/replies/chillReply');
+
 //Home
 const homeWords = require('./keywords/homeWords');
 const homeReplies = require('./keywords/replies/homeReplies');
@@ -1842,6 +1846,12 @@ function handleMessage(sender_psid, received_message) {
   //doing
   else if (wordIncludes(doingWords, received_message)) {
     response = textBlockGen(`${randomPicker(doingReplies)}`)
+    callSendAPI(sender_psid, response);
+  }
+
+  //chill
+  else if (wordIncludes(chillWords, received_message)) {
+    response = textBlockGen(`${randomPicker(chillReplies)}`)
     callSendAPI(sender_psid, response);
   }
 
