@@ -3,6 +3,7 @@ const chillWords = [
     "pera nai", 
     "পেরা নাই", 
     "চিল",
+    "pera"
 ];
 
 

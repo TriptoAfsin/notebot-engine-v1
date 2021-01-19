@@ -1,6 +1,5 @@
 const greets = [
     "hello", 
-    "hi", 
     "hey", 
     "hey", 
     "whatsup", 
