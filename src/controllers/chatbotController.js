@@ -1695,9 +1695,12 @@ function handleMessage(sender_psid, received_message) {
   const test = ["test", "Test"];
 
   
+  if (!received_message.text) {
+    response = defaultReply[0];
+    callSendAPI(sender_psid, response);
+  }
   
-  
-  if (wordIncludes(greets, received_message)) {
+  else if (wordIncludes(greets, received_message)) {
     response = greetReplies[0];
     callSendAPI(sender_psid, response);
   }
