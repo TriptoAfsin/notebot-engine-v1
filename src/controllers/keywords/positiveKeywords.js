@@ -18,7 +18,9 @@ const positive = [
      "sabash",
      "সাব্বাস",
      "cool",
-     "awsome"
+     "awsome",
+     "well",
+     "fine"
 ]
 
 module.exports = positive;
