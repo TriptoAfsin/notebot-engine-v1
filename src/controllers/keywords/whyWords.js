@@ -1,7 +1,6 @@
 const whyWords = [
     "keno",
     "why",
-    "how",
     "where",
     "when",
     "কেন",

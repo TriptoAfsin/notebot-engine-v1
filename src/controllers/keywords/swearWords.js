@@ -25,7 +25,6 @@ const swearWords = [
     "dick",
     "ধোন",
     "dhon",
-    "ass",
     "rape",
     "bitch",
     "cunt",
