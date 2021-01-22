@@ -36,7 +36,7 @@ const swearWords = [
     "vuski",
     "kanke",
     "kanke mage",
-    "chodna"
+    "chodna",
 ];
 
 

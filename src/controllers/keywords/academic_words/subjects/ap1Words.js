@@ -3,6 +3,7 @@ const ap1_words = [
     "ap-i",
     "ap 1",
     "ap i",
+    "ap-1",
     "apparel production 1"
 ];
 

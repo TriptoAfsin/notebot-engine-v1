@@ -1,6 +1,7 @@
 const gg = [
     "gg",
-    "good game"
+    "good game",
+    "ggwp"
 ];
 
 

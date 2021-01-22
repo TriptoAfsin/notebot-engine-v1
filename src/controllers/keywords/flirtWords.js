@@ -9,7 +9,15 @@ const flirtWords = [
     "চুম্মা",
     "chumma",
     "ador",
-    "আদর"
+    "আদর",
+    "nude",
+    "Darling",
+    "honey",
+    "janu",
+    "babu",
+    "জানু",
+    "বাবু",
+    "সোনা"
 ];
 
 

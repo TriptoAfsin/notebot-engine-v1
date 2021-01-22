@@ -13,6 +13,12 @@ const positive = [
      "জোস",
      "জোশ",
      "সেরা",
+     "congo",
+     "অভিনন্দন",
+     "sabash",
+     "সাব্বাস",
+     "cool",
+     "awsome"
 ]
 
 module.exports = positive;

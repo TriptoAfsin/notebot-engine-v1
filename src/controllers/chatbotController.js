@@ -73,6 +73,59 @@ const sadMojiReplies = require('./keywords/replies/sadMojiReply');
 const doingWords = require('./keywords/doingWhatWords');
 const doingReplies = require('./keywords/replies/doingReply');
 
+//boyGirl
+const boyGirlWords = require('./keywords/boyGirlWords');
+const boyGirlReplies = require('./keywords/replies/boyGirlReply');
+
+//bujho
+const bujhoWords = require('./keywords/bujhoWords');
+const bujhoReplies = require('./keywords/replies/bujhoReply');
+
+//can Do
+const canDoWords = require('./keywords/canDoWords');
+const canDoReplies = require('./keywords/replies/canDoReply');
+
+//food
+const foodWords = require('./keywords/foodWords');
+const khawaWords = require('./keywords/khawaWords');
+const foodReplies = require('./keywords/replies/foodReplies');
+
+//treat
+const treatWords = require('./keywords/treatWords');
+const treatReplies = require('./keywords/replies/treatReply');
+
+//laugh
+const laughWords = require('./keywords/laughWords');
+const laughReplies = require('./keywords/replies/laughReply');
+
+//mair
+const mairWords = require('./keywords/mairWords');
+const mairReplies = require('./keywords/replies/mairReply');
+
+//shala
+const shalaWords = require('./keywords/shalaWords');
+const shalaReplies = require('./keywords/replies/shalaReplies');
+
+//sleep
+const sleepWords = require('./keywords/sleepWords');
+const sleepReplies = require('./keywords/replies/sleepReply');
+
+//smoking
+const smokingWords = require('./keywords/smokingWords');
+const smokingReplies = require('./keywords/replies/smokingReply');
+
+//why
+const whyWords = require('./keywords/whyWords');
+const whyReplies = require('./keywords/replies/whyReply');
+
+//life
+const lifeWords = require('./keywords/lifeWords');
+const lifeReplies = require('./keywords/replies/lifeReply');
+
+//drug
+const drugWords = require('./keywords/drugWords');
+const drugReplies = require('./keywords/replies/drugReply');
+
 //love
 const loveWords = require('./keywords/loveWords');
 const loveReplies = require('./keywords/replies/loveWordsReply');
@@ -1727,6 +1780,78 @@ function handleMessage(sender_psid, received_message) {
     callSendAPI(sender_psid, response);
   }
 
+  //boy girl
+  else if (wordIncludes(boyGirlWords, received_message)) {
+    response = textBlockGen(`${randomPicker(boyGirlReplies)}`);
+    callSendAPI(sender_psid, response);
+  }
+
+  //bujho
+  else if (wordIncludes(bujhoWords, received_message)) {
+    response = textBlockGen(`${randomPicker(bujhoReplies)}`);
+    callSendAPI(sender_psid, response);
+  }
+
+  //food
+  else if (wordIncludes(foodWords, received_message) || wordIncludes(khawaWords, received_message)) {
+    response = textBlockGen(`${randomPicker(foodReplies)}`);
+    callSendAPI(sender_psid, response);
+  }
+
+  //treat
+  else if (wordIncludes(treatWords, received_message)) {
+    response = textBlockGen(`${randomPicker(treatReplies)}`);
+    callSendAPI(sender_psid, response);
+  }
+
+  //laugh
+  else if (wordIncludes(laughWords, received_message)) {
+    response = textBlockGen(`${randomPicker(laughReplies)}`);
+    callSendAPI(sender_psid, response);
+  }
+
+  //mair
+  else if (wordIncludes(mairWords, received_message)) {
+    response = textBlockGen(`${randomPicker(mairReplies)}`);
+    callSendAPI(sender_psid, response);
+  }
+
+  //shala
+  else if (wordIncludes(shalaWords, received_message)) {
+    response = textBlockGen(`${randomPicker(shalaReplies)}`);
+    callSendAPI(sender_psid, response);
+  }
+
+  //sleep
+  else if (wordIncludes(sleepWords, received_message)) {
+    response = textBlockGen(`${randomPicker(sleepReplies)}`);
+    callSendAPI(sender_psid, response);
+  }
+
+  //smoking
+  else if (wordIncludes(smokingWords, received_message)) {
+    response = textBlockGen(`${randomPicker(smokingReplies)}`);
+    callSendAPI(sender_psid, response);
+  }
+
+  //why
+  else if (wordIncludes(whyWords, received_message)) {
+    response = textBlockGen(`${randomPicker(whyReplies)}`);
+    callSendAPI(sender_psid, response);
+  }
+
+  //life
+  else if (wordIncludes(lifeWords, received_message)) {
+    response = textBlockGen(`${randomPicker(lifeReplies)}`);
+    callSendAPI(sender_psid, response);
+  }
+
+  //drug
+  else if (wordIncludes(drugWords, received_message)) {
+    response = textBlockGen(`${randomPicker(drugReplies)}`);
+    callSendAPI(sender_psid, response);
+  }
+
   //happy
   else if (wordIncludes(happyWords, received_message)) {
     response = textBlockGen(`${randomPicker(happyReplies)}`);
@@ -1756,6 +1881,13 @@ function handleMessage(sender_psid, received_message) {
   //help
   else if (wordIncludes(help, received_message)) {
     response = help_flow[0];
+    callSendAPI(sender_psid, response);
+  }
+
+
+  //can DO
+  else if (wordIncludes(canDoWords, received_message)) {
+    response = canDoReplies[0];
     callSendAPI(sender_psid, response);
   }
 
