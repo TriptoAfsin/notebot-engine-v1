@@ -1,5 +1,6 @@
 const hiWords = [
     "hi",
+    "hy"
 ];
 
 

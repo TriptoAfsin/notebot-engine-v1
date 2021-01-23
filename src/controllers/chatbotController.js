@@ -118,6 +118,18 @@ const smokingReplies = require('./keywords/replies/smokingReply');
 const whyWords = require('./keywords/whyWords');
 const whyReplies = require('./keywords/replies/whyReply');
 
+//when
+const whenWords = require('./keywords/whenWords');
+const whenReplies = require('./keywords/replies/whenReply');
+
+//seniorJunior
+const seniorJuniorWords = require('./keywords/seniorJuniorWords');
+const seniorJuniorReplies = require('./keywords/replies/seniorJuniorReply');
+
+//submit
+const submitWords = require('./keywords/submitWords');
+const submitReplies = require('./keywords/replies/submissionReply');
+
 //life
 const lifeWords = require('./keywords/lifeWords');
 const lifeReplies = require('./keywords/replies/lifeReply');
@@ -344,7 +356,8 @@ const weavPrep_words = require('./keywords/academic_words/subjects/weavPrepWords
 const acm_words = require('./keywords/academic_words/subjects/acmWords');
 //academic -> im
 const im_words = require('./keywords/academic_words/subjects/imWords');
-
+//academic -> ecb
+const ecb_words = require('./keywords/academic_words/subjects/ecbWords');
 
 
 //both subjs
@@ -400,6 +413,14 @@ const bce_read_writing = require('./flows/botReplies/note_levels/level_1/level_1
 const bce_intro = require('./flows/botReplies/note_levels/level_1/level_1_subs/bce/topics/introBce');
 const bce_lang_func = require('./flows/botReplies/note_levels/level_1/level_1_subs/bce/topics/langFuncBce');
 const bce_comm = require('./flows/botReplies/note_levels/level_1/level_1_subs/bce/topics/communicationBce');
+
+
+
+//academic flows -> ecb
+const ecb_flow = require('./flows/botReplies/note_levels/level_1/level_1_subs/ecb/ecb_flow');
+const ecb_flow_Notes = require('./flows/botReplies/note_levels/level_1/level_1_subs/ecb/topics/ecbHandNote');
+const ecb_flow_Intro = require('./flows/botReplies/note_levels/level_1/level_1_subs/ecb/topics/ecbIntro');
+
 
 //academic flows -> cp
 const cp_flow = require("./flows/botReplies/note_levels/level_1/level_1_subs/cp/cp_flow");
@@ -1861,6 +1882,24 @@ function handleMessage(sender_psid, received_message) {
     callSendAPI(sender_psid, response);
   }
 
+  //when
+  else if (wordIncludes(whenWords, received_message)) {
+    response = textBlockGen(`${randomPicker(whenReplies)}`);
+    callSendAPI(sender_psid, response);
+  }
+
+  //seniorJunior
+  else if (wordIncludes(seniorJuniorWords, received_message)) {
+    response = textBlockGen(`${randomPicker(seniorJuniorReplies)}`);
+    callSendAPI(sender_psid, response);
+  }
+
+  //submission
+  else if (wordIncludes(submitWords, received_message)) {
+    response = textBlockGen(`${randomPicker(submitReplies)}`);
+    callSendAPI(sender_psid, response);
+  }
+
   //date
   else if (wordIncludes(dateInfo, received_message)) {
     axios.get('https://worldtimeapi.org/api/timezone/Asia/Dhaka').then(resp => {
@@ -2365,6 +2404,11 @@ function handleMessage(sender_psid, received_message) {
   //academic -> phy2
   else if (wordIncludes(phy2, received_message)) {
     magicFunc(sender_psid, phy2_flow);
+  }
+
+  //academic -> ecb
+  else if (wordIncludes(ecb_words, received_message)) {
+    magicFunc(sender_psid, ecb_flow);
   }
 
   //academic -> math1
@@ -3058,6 +3102,22 @@ let handlePostback = async (sender_psid, received_postback) => {
   else if (payload === 'iae_shirt_flow') {
     magicFunc(sender_psid, iae_shirt);
   }
+
+  //subject-> ecb
+  else if (payload === 'ecb_flow') {
+    magicFunc(sender_psid, ecb_flow);
+  }
+
+  else if (payload === 'ecb_handNote_flow') {
+    magicFunc(sender_psid, ecb_flow_Notes);
+  }
+
+  else if (payload === 'ecb_intro_flow') {
+    magicFunc(sender_psid, ecb_flow_Intro);
+  }
+
+
+
 
   //subject-> iae
   else if (payload === 'iee_flow') {

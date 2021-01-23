@@ -14,7 +14,9 @@ const greets = [
     "হ্যালো",
     "wassup",
     "ki obostha",
-    "kire"
+    "kire",
+    "salam",
+    "সালাম"
 ];
 
 
