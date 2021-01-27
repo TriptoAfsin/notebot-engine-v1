@@ -2070,7 +2070,7 @@ function handleMessage(sender_psid, received_message) {
 
   //problemIssues(Download)
   else if (wordIncludes(problemWords, received_message)) {
-    response = problemReply[0]
+    response = textBlockGen(`${randomPicker(problemReply)}`)
     callSendAPI(sender_psid, response);
   }
 
