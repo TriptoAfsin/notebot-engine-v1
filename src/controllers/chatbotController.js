@@ -14,6 +14,31 @@ const request = require('request');
 //services
 const chatBotService = require('../services/chatBotService');
 
+//bothSubj Words
+const bothYMWords = require('./keywords/academic_words/subjects/bothYM');
+const bothAMWords = require('./keywords/academic_words/subjects/bothAM');
+const bothAPWords = require('./keywords/academic_words/subjects/bothAP');
+const bothWPWords = require('./keywords/academic_words/subjects/bothWP');
+
+//bothSubj flows
+const bothWPFlow = require('./flows/botReplies/note_levels/level_2/bothWPFlow');
+const bothAMFlow = require('./flows/botReplies/note_levels/level_2/bothAMFlow');
+const bothAPFlow = require('./flows/botReplies/note_levels/level_2/bothAPFlow');
+const bothYMFlow = require('./flows/botReplies/note_levels/level_2/bothYMFlow');
+
+
+//BooksQues
+const booksQues = require('./keywords/academic_words/booksQuestionWords');
+
+const booksQuesFlow = require('./flows/botReplies/note_levels/booksQuesFlow');
+
+
+//ProblemIssue Words
+const problemWords = require('./keywords/problemIssueWords');
+
+const problemReply = require('./keywords/replies/problemReply');
+
+
 //keywords
 const positiveKeywords = require('./keywords/positiveKeywords');
 const negativeKeywords = require('./keywords/negativeKeywords');
@@ -2043,6 +2068,14 @@ function handleMessage(sender_psid, received_message) {
     callSendAPI(sender_psid, response);
   }
 
+  //problemIssues(Download)
+  else if (wordIncludes(problemWords, received_message)) {
+    response = problemReply[0]
+    callSendAPI(sender_psid, response);
+  }
+
+
+
 
 
 
@@ -2093,6 +2126,32 @@ function handleMessage(sender_psid, received_message) {
 
   else if (wordIncludes(quiz, received_message)) {
     magicFunc(sender_psid, quizFlow);
+  }
+
+  //booksQues
+  else if (wordIncludes(booksQues, received_message)) {
+    magicFunc(sender_psid, booksQuesFlow);
+  }
+
+  //bothSubj
+  //bothYM
+  else if (wordIs(bothYMWords, received_message)) {
+    magicFunc(sender_psid, bothYMFlow);
+  }
+
+  //bothWP
+  else if (wordIs(bothWPWords, received_message)) {
+    magicFunc(sender_psid, bothWPFlow);
+  }
+
+  //bothAM
+  else if (wordIs(bothAMWords, received_message)) {
+    magicFunc(sender_psid, bothAMFlow);
+  }
+
+  //bothAP
+  else if (wordIs(bothAPWords, received_message)) {
+    magicFunc(sender_psid, bothAPFlow);
   }
 
   else if (wordIncludes(level1, received_message)) {
@@ -2516,6 +2575,10 @@ let handlePostback = async (sender_psid, received_postback) => {
     console.log(`Username: ${username}`);
     response = getStartedMsg[0];
     callSendAPI(sender_psid, response);
+  }
+
+  else if (payload === 'notes_flow') {
+    magicFunc(sender_psid, notesFlow);
   }
 
   else if (payload === 'level_1') {

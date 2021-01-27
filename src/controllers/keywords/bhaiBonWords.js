@@ -21,7 +21,7 @@ let bhaiBon = [
     "mamu",
     "bodda",
     "বদদা",
-    "মমা"
+    "মামা"
 ]
 
 

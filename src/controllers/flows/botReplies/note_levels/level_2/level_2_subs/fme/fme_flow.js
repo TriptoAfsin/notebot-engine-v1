@@ -1,249 +1,82 @@
+let grroupedButtonBlockGen = require("../../../../../../genrators/grroupedButtonBlockGen");
+let webBtnBlockGen = require("../../../../../../genrators/webBtnBlockGen");
+let payloadBtnGen = require("../../../../../../genrators/payloadBtnGen");
+
+
 let fmeFlow = [
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "📌 Hand Note(Maruf)-   ",
-                "buttons": [
-                    {
-                        "type": "web_url",
-                        "url": "https://drive.google.com/file/d/1EeU6E0nZjv5NRkqffBmqyhbN7_fWPsQO/view",
-                        "title": "Fluid, Inertia, pump",
-                    },
-                    {
-                        "type": "web_url",
-                        "url": "https://drive.google.com/file/d/1_7NG9crXx7UnRVaNvGfqqFHt55veiBup/view",
-                        "title": "Heat, Refrieg.",
-                    },
-                    {
-                        "type": "web_url",
-                        "url": "https://drive.google.com/file/d/1TxVKfihV6599YEcdivAK-Xwi-FfsMTa-/view",
-                        "title": "Solid",
-                    }
-                ],
-            },
-        },
-    },
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "📌 Hand Note(Nahid, 2020)-",
-                "buttons": [
-                    {
-                        "type": "web_url",
-                        "url": "https://drive.google.com/file/d/1tbFqkVmg9g-O-XGUeAaCM4bXF7NE6xHW/view",
-                        "title": "Part A",
-                    },
-                    {
-                        "type": "web_url",
-                        "url": "https://drive.google.com/file/d/1vSKjJ5FtAsvcv-JBAJ0F9gz_XWg_4Old/view",
-                        "title": "Part B",
-                    }
-                ],
-            },
-        },
-    },
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🔰 Select Topics for FME - ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "Books",
-                        "payload": "fme_books_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Hand Notes",
-                        "payload": "fme_notes_flow"
-                    },
-                    {
-                        "type": "web_url",
-                        "url": "https://drive.google.com/file/d/1dcOpCnVPaebDJUXIvNqFPmzgzFi9MQaK/view",
-                        "title": "Data Sheet(Steam Ta)",
-                    }
-                ],
-            },
-        },
-    },
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🔰 Select Topics for FME - ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "Questions",
-                        "payload": "fme_ques_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Suggestions",
-                        "payload": "fme_sugg_flow"
-                    }
-                ],
-            },
-        },
-    },
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🔰 Select Topics for FME - ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "Boiler",
-                        "payload": "fme_boiler_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Power & Refre.",
-                        "payload": "fme_powerRefre_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Steam Turbine",
-                        "payload": "fme_steam_flow"
-                    }
-                ],
-            },
-        },
-    },
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🔰 Select Topics for FME - ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "Thermal Engineering",
-                        "payload": "fme_thermalEng_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Fluid Mechanics",
-                        "payload": "fme_fluidMecha_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Energy Process",
-                        "payload": "fme_energyProcess_flow"
-                    }
-                ],
-            },
-        },
-    },
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🔰 Select Topics for FME - ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "Solid",
-                        "payload": "fme_solid_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Gear Train",
-                        "payload": "fme_gearTrain_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Pump & Compre.",
-                        "payload": "fme_pumpCompressor_flow"
-                    }
-                ],
-            },
-        },
-    },
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🔰 Select Topics for FME - ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "Stress Strain",
-                        "payload": "fme_stressStrain_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Engine(Petrol, Disel",
-                        "payload": "fme_enginePetrol_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Engine(Combus..)",
-                        "payload": "fme_engineCombus_flow"
-                    }
-                ],
-            },
-        },
-    },
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🔰 Select Topics for FME - ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "Beam(New)",
-                        "payload": "fme_beam_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Belt(New)",
-                        "payload": "fme_belt_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Centroid(New)",
-                        "payload": "fme_centroid_flow"
-                    }
-                ],
-            },
-        },
-    },
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🔰 Select Topics for FME - ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "Moment of Inertia",
-                        "payload": "fme_momentInnertia_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Column(New)",
-                        "payload": "fme_cloumn_flow"
-                    }
-                ],
-            },
-        },
-    }
+
+    grroupedButtonBlockGen(`📌Full Hand Note(Maruf)-`,
+        [
+            webBtnBlockGen("Fluid, Inertia, pump", "https://drive.google.com/file/d/1EeU6E0nZjv5NRkqffBmqyhbN7_fWPsQO/view"),
+            webBtnBlockGen("Heat, Refrieg.", "https://drive.google.com/file/d/1_7NG9crXx7UnRVaNvGfqqFHt55veiBup/view"),
+            webBtnBlockGen("Solid", "https://drive.google.com/file/d/1TxVKfihV6599YEcdivAK-Xwi-FfsMTa-/view")
+        ]
+    ),
+    grroupedButtonBlockGen(`📌Full Hand Note(Nahid,AE-44, 2020)-`,
+        [
+            webBtnBlockGen("Part A", "https://drive.google.com/file/d/1tbFqkVmg9g-O-XGUeAaCM4bXF7NE6xHW/view"),
+            webBtnBlockGen("Part B", "https://drive.google.com/file/d/1vSKjJ5FtAsvcv-JBAJ0F9gz_XWg_4Old/view")
+        ]
+    ),
+    grroupedButtonBlockGen(`📌Full Hand Note(Akib,AE-44,2020)-`,
+        [
+            webBtnBlockGen("Part A", "https://drive.google.com/file/d/1Gz7ihBrmSQSlirefPZ2aQVgX_CETC_AW/view?usp=sharing"),
+        ]
+    ),
+    grroupedButtonBlockGen(`🔰 Select Topics for FME - `,
+        [
+            webBtnBlockGen("Data Sheet(Steam Ta)", "https://drive.google.com/file/d/1dcOpCnVPaebDJUXIvNqFPmzgzFi9MQaK/view"),
+            payloadBtnGen("Books","fme_books_flow"),
+            payloadBtnGen("Hand Notes","fme_notes_flow")
+        ]
+    ),
+    grroupedButtonBlockGen(`🔰 Select Topics for FME - `,
+        [
+            payloadBtnGen("Questions","fme_ques_flow"),
+            payloadBtnGen("Suggestions","fme_sugg_flow")
+        ]
+    ),
+    grroupedButtonBlockGen(`🔰 Select Topics for FME - `,
+        [
+            payloadBtnGen("Boiler","fme_boiler_flow"),
+            payloadBtnGen("Power & Refre.","fme_powerRefre_flow"),
+            payloadBtnGen("Steam Turbine","fme_steam_flow")
+        ]
+    ),
+    grroupedButtonBlockGen(`🔰 Select Topics for FME - `,
+        [
+            payloadBtnGen("Thermal Engineering","fme_thermalEng_flow"),
+            payloadBtnGen("Fluid Mechanics","fme_fluidMecha_flow"),
+            payloadBtnGen("Energy Process","fme_energyProcess_flow")
+        ]
+    ),
+    grroupedButtonBlockGen(`🔰 Select Topics for FME - `,
+        [
+            payloadBtnGen("Solid","fme_solid_flow"),
+            payloadBtnGen("Gear Train","fme_gearTrain_flow"),
+            payloadBtnGen("Pump & Compre.","fme_pumpCompressor_flow")
+        ]
+    ),
+    grroupedButtonBlockGen(`🔰 Select Topics for FME - `,
+        [
+            payloadBtnGen("Stress Strain","fme_stressStrain_flow"),
+            payloadBtnGen("Engine(Petrol, Disel","fme_enginePetrol_flow"),
+            payloadBtnGen("Engine(Combus..)","fme_engineCombus_flow")
+        ]
+    ),
+    grroupedButtonBlockGen(`🔰 Select Topics for FME - `,
+        [
+            payloadBtnGen("Beam(New)","fme_beam_flow"),
+            payloadBtnGen("Belt(New)","fme_belt_flow"),
+            payloadBtnGen("Centroid(New)","fme_centroid_flow")
+        ]
+    ),
+    grroupedButtonBlockGen(`🔰 Select Topics for FME - `,
+        [
+            payloadBtnGen("Moment of Inertia","fme_momentInnertia_flow"),
+            payloadBtnGen("Column(New)","fme_cloumn_flow")
+        ]
+    )
 ]
 
 

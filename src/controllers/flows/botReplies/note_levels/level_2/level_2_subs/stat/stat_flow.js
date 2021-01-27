@@ -1,161 +1,55 @@
+let grroupedButtonBlockGen = require("../../../../../../genrators/grroupedButtonBlockGen");
+let webBtnBlockGen = require("../../../../../../genrators/webBtnBlockGen");
+let payloadBtnGen = require("../../../../../../genrators/payloadBtnGen");
+
+
+
 let statFlow = [
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "📌 Full Hand Notes - ",
-                "buttons": [
-                    {
-                        "type": "web_url",
-                        "url": "https://drive.google.com/file/d/1buy5jwu1gR44OYS_srTuviCwpAEuPuq7/view",
-                        "title": "Nahid(2020)",
-                    },
-                    {
-                        "type": "web_url",
-                        "url": "https://drive.google.com/file/d/1HsUaV_Y4AGjOXAMe4bjHO5y7Ooun9Da-/view",
-                        "title": "Rifat(B, 2020)",
-                    }
-                ],
-            },
-        },
-    },
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "📌 Stat Assignment 2020(Rabbi Sir)- ",
-                "buttons": [
-                    {
-                        "type": "web_url",
-                        "url": "https://drive.google.com/file/d/1VTjqvPRw5cAxlDnOselChSK1VgClMVbj/view",
-                        "title": "⚡ Download",
-                    }
-                ],
-            },
-        },
-    },
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🔰 Select Topics for Stat - ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "Books",
-                        "payload": "stat_books_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Hand Notes",
-                        "payload": "stat_hnotes_flow"
-                    },
-                ],
-            },
-        },
-    },
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🔰 Select Topics for Stat - ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "Probability",
-                        "payload": "stat_probab_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Introduction",
-                        "payload": "stat_intro_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Central Tendency",
-                        "payload": "stat_central_tend_flow"
-                    }
-                ],
-            },
-        },
-    },
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🔰 Select Topics for Stat - ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "CV, SD, Varia",
-                        "payload": "stat_cv_sd_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Moments",
-                        "payload": "stat_moments_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Shape Charc.",
-                        "payload": "stat_shapes_flow"
-                    }
-                ],
-            },
-        },
-    },
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🔰 Select Topics for Stat - ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "Design of Exp",
-                        "payload": "stat_design_exp_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Normal Distri..",
-                        "payload": "stat_normal_distri_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Binomial Distri",
-                        "payload": "stat_binomial_distri_flow"
-                    }
-                ],
-            },
-        },
-    },
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🔰 Select Topics for Stat - ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "Poission Distri",
-                        "payload": "stat_poission_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Regression",
-                        "payload": "stat_regression_flow"
-                    }
-                ],
-            },
-        },
-    }
+    grroupedButtonBlockGen(`📌 Full Hand Notes -`,
+        [
+            webBtnBlockGen("Nahid(2020)", "https://drive.google.com/file/d/1buy5jwu1gR44OYS_srTuviCwpAEuPuq7/view"),
+            webBtnBlockGen("Rifat(B, 2020)", "https://drive.google.com/file/d/1HsUaV_Y4AGjOXAMe4bjHO5y7Ooun9Da-/view")
+        ]
+    ),
+    grroupedButtonBlockGen(`📌 Stat Assignment 2020(Rabbi Sir)- `,
+        [
+            webBtnBlockGen("⚡ Download", "https://drive.google.com/file/d/1VTjqvPRw5cAxlDnOselChSK1VgClMVbj/view"),
+            webBtnBlockGen("🟢 Solve(Nahid)", "https://drive.google.com/file/d/1Ew41DTFlO9ixg7DDNaQz-9eR7EnSlHkv/view?usp=sharing")
+        ]
+    ),
+    grroupedButtonBlockGen(`🔰 Select Topics for Stat - `,
+        [
+            payloadBtnGen("Books", "stat_books_flow"),
+            payloadBtnGen("Hand Notes", "stat_hnotes_flow")
+        ]
+    ),
+    grroupedButtonBlockGen(`🔰 Select Topics for Stat - `,
+        [
+            payloadBtnGen("Probability", "stat_probab_flow"),
+            payloadBtnGen("Introduction", "stat_intro_flow"),
+            payloadBtnGen("Central Tendency", "stat_central_tend_flow")
+        ]
+    ),
+    grroupedButtonBlockGen(`🔰 Select Topics for Stat - `,
+        [
+            payloadBtnGen("CV, SD, Varia", "stat_cv_sd_flow"),
+            payloadBtnGen("Moments", "stat_moments_flow"),
+            payloadBtnGen("Shape Charc.", "stat_shapes_flow")
+        ]
+    ),
+    grroupedButtonBlockGen(`🔰 Select Topics for Stat - `,
+        [
+            payloadBtnGen("Design of Exp", "stat_design_exp_flow"),
+            payloadBtnGen("Normal Distri..", "stat_normal_distri_flow"),
+            payloadBtnGen("Binomial Distri", "stat_binomial_distri_flow")
+        ]
+    ),
+    grroupedButtonBlockGen(`🔰 Select Topics for Stat - `,
+        [
+            payloadBtnGen("Poission Distri", "stat_poission_flow"),
+            payloadBtnGen("Regression", "stat_regression_flow"),
+        ]
+    )
 ]
 
 
