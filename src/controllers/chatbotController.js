@@ -688,6 +688,15 @@ const fm1_sizing = require("./flows/botReplies/note_levels/level_2/level_2_subs/
 const fm1_dobby = require("./flows/botReplies/note_levels/level_2/level_2_subs/fm1/topics/fm1Dobby");
 const fm1_winding = require("./flows/botReplies/note_levels/level_2/level_2_subs/fm1/topics/fm1Winding");
 const fm1_warping = require("./flows/botReplies/note_levels/level_2/level_2_subs/fm1/topics/fm1Warping");
+const fm1_Tappet = require("./flows/botReplies/note_levels/level_2/level_2_subs/fm1/topics/fm1Tappet");
+const fm1_Picking = require("./flows/botReplies/note_levels/level_2/level_2_subs/fm1/topics/fm1Picking");
+const fm1_Beatup = require("./flows/botReplies/note_levels/level_2/level_2_subs/fm1/topics/fm1Beatup");
+const fm1_Selvedge = require("./flows/botReplies/note_levels/level_2/level_2_subs/fm1/topics/fm1Selvedge");
+const fm1_Takeup = require("./flows/botReplies/note_levels/level_2/level_2_subs/fm1/topics/fm1Takeup");
+const fm1_Letoff = require("./flows/botReplies/note_levels/level_2/level_2_subs/fm1/topics/fm1Letoff");
+const fm1_Denim = require("./flows/botReplies/note_levels/level_2/level_2_subs/fm1/topics/fm1Denim");
+const fm1_StopMotion = require("./flows/botReplies/note_levels/level_2/level_2_subs/fm1/topics/fm1StopMotion");
+const fm1_Jacquard = require("./flows/botReplies/note_levels/level_2/level_2_subs/fm1/topics/fm1Jacquard");
 
 
 //mmtf
@@ -3575,6 +3584,33 @@ let handlePostback = async (sender_psid, received_postback) => {
   }
   else if (payload === 'fm1_warping_flow') {
     magicFunc(sender_psid, fm1_warping);
+  }
+  else if (payload === 'fm1_tappet_flow') {
+    magicFunc(sender_psid, fm1_Tappet);
+  }
+  else if (payload === 'fm1_picking_flow') {
+    magicFunc(sender_psid, fm1_Picking);
+  }
+  else if (payload === 'fm1_beatup_flow') {
+    magicFunc(sender_psid, fm1_Beatup);
+  }
+  else if (payload === 'fm1_selvedgeFaults_flow') {
+    magicFunc(sender_psid, fm1_Selvedge);
+  }
+  else if (payload === 'fm1_takeup_flow') {
+    magicFunc(sender_psid, fm1_Takeup);
+  }
+  else if (payload === 'fm1_letOff_flow') {
+    magicFunc(sender_psid, fm1_Letoff);
+  }
+  else if (payload === 'fm1_denim_flow') {
+    magicFunc(sender_psid, fm1_Denim);
+  }
+  else if (payload === 'fm1_stopMotion_flow') {
+    magicFunc(sender_psid, fm1_StopMotion);
+  }
+  else if (payload === 'fm1_jacquard_flow') {
+    magicFunc(sender_psid, fm1_Jacquard);
   }
 
   //mmtf
