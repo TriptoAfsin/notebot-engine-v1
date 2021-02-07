@@ -1,145 +1,54 @@
+let grroupedButtonBlockGen = require("../../../../../../genrators/grroupedButtonBlockGen");
+let webBtnBlockGen = require("../../../../../../genrators/webBtnBlockGen");
+let payloadBtnGen = require("../../../../../../genrators/payloadBtnGen");
+
+
 let ym1Flow = [
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "📌 Question Bank Solve -   ",
-                "buttons": [
-                    {
-                        "type": "web_url",
-                        "url": "https://drive.google.com/file/d/1BKv0ypkstPNvGxxRTMllSOpPU0ZD77d-/view",
-                        "title": "Part A(Tiasha)",
-                    },
-                    {
-                        "type": "web_url",
-                        "url": "https://drive.google.com/file/d/1_vsRTuexZ1qtwuiPFlr2BaBTLVYtnOJH/view",
-                        "title": "Part B(Tiasha)",
-                    }
-                ],
-            },
-        },
-    },
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🔰 Select Topics for YM-I - ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "Intro to YM",
-                        "payload": "ym1_intro_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Indeterminer Stress",
-                        "payload": "ym1_indeterminer_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Blowroom",
-                        "payload": "ym1_blowroom_flow"
-                    }
-                ],
-            },
-        },
-    },
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🔰 Select Topics for YM-I - ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "Mixing & Blend",
-                        "payload": "ym1_mixing_blend_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Fibre Prop.",
-                        "payload": "ym1_fibreProp_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Yarn Condi.",
-                        "payload": "ym1_yarnCondi_flow"
-                    }
-                ],
-            },
-        },
-    },
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🔰 Select Topics for YM-I - ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "Comber",
-                        "payload": "ym1_comber_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Draw Frame",
-                        "payload": "ym1_drawFrame_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Winding",
-                        "payload": "ym1_winding_flow"
-                    }
-                ],
-            },
-        },
-    },
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🔰 Select Topics for YM-I - ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "Lap Former",
-                        "payload": "ym1_lapFormer_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Carding",
-                        "payload": "ym1_carding_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Ring Frame",
-                        "payload": "ym1_ringFrame_flow"
-                    }
-                ],
-            },
-        },
-    },
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🔰 Select Topics for YM-I - ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "Speed Frame",
-                        "payload": "ym1_speedFrame_flow"
-                    }
-                ],
-            },
-        },
-    }
+    grroupedButtonBlockGen(
+        `📌 Question Bank Solve -   `,
+        [
+            webBtnBlockGen("Part A(Tiasha)","https://drive.google.com/file/d/1BKv0ypkstPNvGxxRTMllSOpPU0ZD77d-/view"),
+            webBtnBlockGen("Part B(Tiasha)","https://drive.google.com/file/d/1_vsRTuexZ1qtwuiPFlr2BaBTLVYtnOJH/view"),
+        ]
+    ),
+    grroupedButtonBlockGen(
+        `🔰 Select Topics for YM-I - `,
+        [
+            payloadBtnGen("Intro to YM","ym1_intro_flow"),
+            payloadBtnGen("Indeterminer Stress","ym1_indeterminer_flow"),
+            payloadBtnGen("Blowroom","ym1_blowroom_flow")
+        ]
+    ),
+    grroupedButtonBlockGen(
+        `🔰 Select Topics for YM-I - `,
+        [
+            payloadBtnGen("Mixing & Blend","ym1_mixing_blend_flow"),
+            payloadBtnGen("Fibre Prop.","ym1_fibreProp_flow"),
+            payloadBtnGen("Yarn Condi.","ym1_yarnCondi_flow")
+        ]
+    ),
+    grroupedButtonBlockGen(
+        `🔰 Select Topics for YM-I - `,
+        [
+            payloadBtnGen("Comber","ym1_comber_flow"),
+            payloadBtnGen("Draw Frame","ym1_drawFrame_flow"),
+            payloadBtnGen("Winding","ym1_winding_flow")
+        ]
+    ),
+    grroupedButtonBlockGen(
+        `🔰 Select Topics for YM-I - `,
+        [
+            payloadBtnGen("Lap Former","ym1_lapFormer_flow"),
+            payloadBtnGen("Carding","ym1_carding_flow"),
+            payloadBtnGen("Ring Frame","ym1_ringFrame_flow")
+        ]
+    ),
+    grroupedButtonBlockGen(
+        `🔰 Select Topics for YM-I - `,
+        [
+            payloadBtnGen("Speed/Simplex","ym1_speedFrame_flow"),
+        ]
+    )
 ]
 
 
