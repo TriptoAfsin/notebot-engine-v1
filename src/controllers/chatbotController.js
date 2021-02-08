@@ -1029,6 +1029,7 @@ const acm_introCost = require("./flows/botReplies/note_levels/level_3/level_3_su
 const acm_InterestedUsers = require("./flows/botReplies/note_levels/level_3/level_3_subs/acm/topics/acmInterestedUsers");
 const acm_accountingAction = require("./flows/botReplies/note_levels/level_3/level_3_subs/acm/topics/acmAccountingAction");
 const acm_recordingProcess = require("./flows/botReplies/note_levels/level_3/level_3_subs/acm/topics/acmRecordingProcess");
+const acm_CostBehav = require("./flows/botReplies/note_levels/level_3/level_3_subs/acm/topics/acmCostBehav");
 
 
 
@@ -1132,6 +1133,7 @@ const ap2_folding = require("./flows/botReplies/note_levels/level_3/level_3_subs
 const ap2_Stitch = require("./flows/botReplies/note_levels/level_3/level_3_subs/ap2/topics/ap2Stitch");
 const ap2_LockStitch = require("./flows/botReplies/note_levels/level_3/level_3_subs/ap2/topics/ap2LockStitch");
 const ap2_Pressing = require("./flows/botReplies/note_levels/level_3/level_3_subs/ap2/topics/ap2Pressing");
+const ap2_InspectionQuality = require("./flows/botReplies/note_levels/level_3/level_3_subs/ap2/topics/ap2InspectionQuality");
 
 
 //wp2
@@ -2584,6 +2586,19 @@ let handlePostback = async (sender_psid, received_postback) => {
     console.log(`Username: ${username}`);
     response = getStartedMsg[0];
     callSendAPI(sender_psid, response);
+  }
+
+  // Previous button detection
+  else if(wordIncludes(['act:'], payload)){
+    response = groupedBtnBlockGen(
+      `⚠ You've tapped a button from the previous version\nPlease choose these options again - `,
+      [
+        payloadBtnBlockGen("📘 Notes","notes_flow"),
+        payloadBtnBlockGen("🆘 Help","help_payload"),
+      ]
+    );
+
+    magicFunc(sender_psid, response);
   }
 
   else if (payload === 'notes_flow') {
@@ -4472,6 +4487,9 @@ let handlePostback = async (sender_psid, received_postback) => {
   else if (payload === 'acm_recordingProcess_flow') {
     magicFunc(sender_psid, acm_recordingProcess);
   }
+  else if (payload === 'acm_CostBehav_flow') {
+    magicFunc(sender_psid, acm_CostBehav);
+  }
 
 
    //mic
@@ -4698,6 +4716,9 @@ let handlePostback = async (sender_psid, received_postback) => {
   }
   else if (payload === 'ap2_pressingFinish_flow') {
     magicFunc(sender_psid, ap2_Pressing);
+  }
+  else if (payload === 'ap2_Inspection_flow') {
+    magicFunc(sender_psid, ap2_InspectionQuality);
   }
 
 

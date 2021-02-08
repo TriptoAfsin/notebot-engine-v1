@@ -5,17 +5,25 @@ let payloadBtnGen = require("../../../../genrators/payloadBtnGen");
 
 let onlineClass = [
     grroupedButtonBlockGen(
-        `🔰 Choose Level -`,
+        `🔰 Choose Course - `,
         [
-            payloadBtnGen("1","onlineClass_level1"),
-            payloadBtnGen("2","onlineClass_level2"),
-            payloadBtnGen("3","onlineClass_level3")
+            payloadBtnGen("FSD","onlineClass_level3_FSD"),
+            payloadBtnGen("TQM","onlineClass_level3_TQM"),
+            payloadBtnGen("ACM","onlineClass_level3_ACM")
         ]
     ),
     grroupedButtonBlockGen(
-        `🔰 Choose Level -`,
+        `🔰 Choose Course - `,
         [
-            payloadBtnGen("4","onlineClass_level4"),
+            payloadBtnGen("Product Design","onlineClass_level3_PD"),
+            payloadBtnGen("MIC","onlineClass_level3_MIC"),
+            payloadBtnGen("ACE","onlineClass_level3_ACE"),
+        ]
+    ),
+    grroupedButtonBlockGen(
+        `🔰 Choose Course - `,
+        [
+            payloadBtnGen("AP-II","onlineClass_level3_ap2"),
         ]
     ),
 ]

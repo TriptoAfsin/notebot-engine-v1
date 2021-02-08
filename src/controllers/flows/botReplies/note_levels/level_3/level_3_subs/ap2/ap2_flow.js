@@ -53,6 +53,11 @@ let ap2Flow = [
                         "title": "Pressing & Finish..",
                         "payload": "ap2_pressingFinish_flow"
                     },
+                    {
+                        "type": "postback",
+                        "title": "Apparel Inspec.",
+                        "payload": "ap2_Inspection_flow"
+                    }
                 ],
             },
         },
