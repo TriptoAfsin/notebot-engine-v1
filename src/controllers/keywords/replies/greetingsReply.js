@@ -33,11 +33,6 @@ let greetReplies = [
             },
             {
                 "content_type": "text",
-                "title": "Test ☢",
-                "payload": "ACT::052c22a603140979cbe8a3f3f32fc159"
-            },
-            {
-                "content_type": "text",
                 "title": "Syllabus 📘",
                 "payload": "syllabus_flow"
             },
