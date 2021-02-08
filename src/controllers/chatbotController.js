@@ -2589,6 +2589,7 @@ let handlePostback = async (sender_psid, received_postback) => {
   }
 
   // Previous button detection
+  /*
   else if(wordIncludes(['act:'], payload)){
     response = groupedBtnBlockGen(
       `⚠ You've tapped a button from the previous version\nPlease choose these options again - `,
@@ -2600,6 +2601,7 @@ let handlePostback = async (sender_psid, received_postback) => {
 
     magicFunc(sender_psid, response);
   }
+  */
 
   else if (payload === 'notes_flow') {
     magicFunc(sender_psid, notesFlow);
