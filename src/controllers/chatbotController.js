@@ -2589,8 +2589,8 @@ let handlePostback = async (sender_psid, received_postback) => {
   }
 
   // Previous button detection
-  /*
-  else if(wordIncludes(['act:'], payload)){
+  //sample prev payload: ACT::052c22a603140979cbe8a3f3f32fc159
+  else if(payloadIncludes(['act::'], payload)){
     response = groupedBtnBlockGen(
       `⚠ You've tapped a button from the previous version\nPlease choose these options again - `,
       [
@@ -2601,7 +2601,7 @@ let handlePostback = async (sender_psid, received_postback) => {
 
     magicFunc(sender_psid, response);
   }
-  */
+  
 
   else if (payload === 'notes_flow') {
     magicFunc(sender_psid, notesFlow);
@@ -5467,7 +5467,12 @@ let magicFunc = (sender_psid, flow) => {
 //wordDetectorFunctions
 //word includes
 let wordIncludes = (keywordArray, received_message) => {
-  return keywordArray.some(word => received_message.text.toLowerCase().includes(word));
+  return keywordArray.some(word => received_message.text.toLowerCase().includes(word)); //received_message is an object
+}
+
+//payload include
+let payloadIncludes = (keywordArray, payload) => {
+  return keywordArray.some(word => payload.toLowerCase().includes(word));  //payload is a string
 }
 
 //word is
