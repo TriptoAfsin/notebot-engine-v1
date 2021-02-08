@@ -2591,6 +2591,7 @@ let handlePostback = async (sender_psid, received_postback) => {
   // Previous button detection
   //sample prev payload: ACT::052c22a603140979cbe8a3f3f32fc159
   else if(payloadIncludes(['act::'], payload)){
+    console.log("🟢 Prev customer detected");
     response = groupedBtnBlockGen(
       `⚠ You've tapped a button from the previous version\nPlease choose these options again - `,
       [
