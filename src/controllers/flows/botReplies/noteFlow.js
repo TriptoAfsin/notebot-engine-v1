@@ -1,89 +1,40 @@
-let notes = [
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🔰 Choose - ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "🟢 Level 1",
-                        "payload": "level_1"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "🟢 Level 2",
-                        "payload": "level_2"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "🟢 Level 3",
-                        "payload": "level_3"
-                    }
-                ],
-            },
-        },
-    },
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🔰 Choose - ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "🟢 Level 4",
-                        "payload": "level_4"
-                    },
-                ],
-            },
-        },
-    },
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🔰 Random Books -   ",
-                "buttons": [
-                    {
-                        "type": "web_url",
-                        "url": "https://drive.google.com/drive/folders/14l4zL2oYlNgC-Nygr0spz5s_juiNSFr0",
-                        "title": "🍀ESE",
-                    },
-                ],
-            },
-        },
-    },
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🔰 Web Apps -  ",
-                "buttons": [
-                    {
-                        "type": "web_url",
-                        "url": "https://triptoafsin.github.io/Cloud-Lib-React/#/",
-                        "title": "Cloud lib ☁",
-                    },
-                    {
-                        "type": "web_url",
-                        "url": "https://triptoafsin.github.io/TexQuiz/",
-                        "title": "Tex Quiz",
-                    },
-                    {
-                        "type": "web_url",
-                        "url": "https://triptoafsin.github.io/CountKoto-/",
-                        "title": "Count Koto",
-                    }
-                ],
-            },
-        },
-    }
+let grroupedButtonBlockGen = require("../../genrators/grroupedButtonBlockGen");
+let webBtnBlockGen = require("../../genrators/webBtnBlockGen");
+let payloadBtnGen = require("../../genrators/payloadBtnGen");
 
+
+
+
+let notes = [
+
+    grroupedButtonBlockGen(
+        `🔰 Choose - `,
+        [
+            payloadBtnGen("🟢 Level 1", "level_1"),
+            payloadBtnGen("🟢 Level 2", "level_2"),
+            payloadBtnGen("🟢 Level 3", "level_3")
+        ]
+    ),
+    grroupedButtonBlockGen(
+        `🔰 Choose - `,
+        [
+            payloadBtnGen("🟢 Level 4", "level_4"),
+        ]
+    ),
+    grroupedButtonBlockGen(
+        `🔰 Random Books - `,
+        [
+            webBtnBlockGen("🍀 ESE", "https://drive.google.com/drive/folders/14l4zL2oYlNgC-Nygr0spz5s_juiNSFr0"),
+        ]
+    ),
+    grroupedButtonBlockGen(
+        `🔰 Web Apps - `,
+        [
+            webBtnBlockGen("Cloud lib ☁", "https://triptoafsin.github.io/Cloud-Lib-React/#/"),
+            webBtnBlockGen("Tex Quiz", "https://triptoafsin.github.io/TexQuiz/"),
+            webBtnBlockGen("Count Koto", "https://triptoafsin.github.io/CountKoto-/")
+        ]
+    ),
 ]
 
 

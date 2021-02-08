@@ -14,6 +14,10 @@ const request = require('request');
 //services
 const chatBotService = require('../services/chatBotService');
 
+
+//prevCustomer
+ const prevUserFlow = require('./flows/botReplies/prevCustomerReply');
+
 //bothSubj Words
 const bothYMWords = require('./keywords/academic_words/subjects/bothYM');
 const bothAMWords = require('./keywords/academic_words/subjects/bothAM');
@@ -1538,6 +1542,7 @@ const help_flow = require('./flows/helpFlow');
 
 
 
+
 const MY_VERIFY_TOKEN = process.env.MY_VERIFY_TOKEN;
 
 let testMsg = (req, res) => {
@@ -2592,15 +2597,7 @@ let handlePostback = async (sender_psid, received_postback) => {
   //sample prev payload: ACT::052c22a603140979cbe8a3f3f32fc159
   else if(payloadIncludes(['act::'], payload)){
     console.log("🟢 Prev customer detected");
-    response = groupedBtnBlockGen(
-      `⚠ You've tapped a button from the previous version\nPlease choose these options again - `,
-      [
-        payloadBtnBlockGen("📘 Notes","notes_flow"),
-        payloadBtnBlockGen("🆘 Help","help_payload"),
-      ]
-    );
-
-    magicFunc(sender_psid, response);
+    magicFunc(sender_psid, prevUserFlow);
   }
   
 
