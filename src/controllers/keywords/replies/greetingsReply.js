@@ -13,29 +13,34 @@ let greetReplies = [
         "text": `${greetText[Math.floor(Math.random()*greetText.length)]}`,
         "quick_replies": [{
                 "content_type": "text",
-                "title": "Notes📗",
+                "title": "Notes 📗",
                 "payload": "notes_flow"
             },
             {
                 "content_type": "text",
-                "title": "Routine📅",
+                "title": "Routine 📅",
                 "payload": "routine_flow"
             },
             {
                 "content_type": "text",
-                "title": "Results📝",
+                "title": "Results 📝",
                 "payload": "result_flow"
             },
             {
                 "content_type": "text",
-                "title": "Lab Reports📋",
+                "title": "Lab Reports 📋",
                 "payload": "reports_flow"
             },
             {
                 "content_type": "text",
-                "title": "Syllabus📘",
+                "title": "Test ☢",
+                "payload": "ACT::052c22a603140979cbe8a3f3f32fc159"
+            },
+            {
+                "content_type": "text",
+                "title": "Syllabus 📘",
                 "payload": "syllabus_flow"
-            }
+            },
         ]
     }
 ]
