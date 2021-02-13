@@ -4966,7 +4966,7 @@ let handlePostback = async (sender_psid, received_postback) => {
   }
 
   //lab -> cp
-  else if (payload === 'cp_lab_flows') {
+  else if (payload === 'cp_lab_flow') {
     magicFunc(sender_psid, labFlow_cp);
   }
   else if (payload === 'cp_lab_intro') {
