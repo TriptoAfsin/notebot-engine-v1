@@ -1,182 +1,57 @@
-let level_1_note = [
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🔴 Question Banks - ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "All Level 1",
-                        "payload": "qb_1_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Aff. Clg..",
-                        "payload": "afli_qb_flow"
-                    },
-                ],
-            },
-        },
-    },
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🔰 Select Subject for level 1 - ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "Math-I",
-                        "payload": "math1_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Physics-I",
-                        "payload": "phy1_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Chemistry-I",
-                        "payload": "che1_flow"
-                    }
-                ],
-            },
-        },
-    },
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🔰 Select Subject for level 1 - ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "Math-II",
-                        "payload": "math2_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Physics-II",
-                        "payload": "phy2_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Chemistry-II",
-                        "payload": "che2_flow"
-                    }
-                ],
-            },
-        },
-    },
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🔰 Select Subject for level 1 - ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "EM",
-                        "payload": "em_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "PSE",
-                        "payload": "pse_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "CP",
-                        "payload": "cp_flow"
-                    }
-                ],
-            },
-        },
-    },
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🔰 Select Subject for level 1 - ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "NTF",
-                        "payload": "ntf_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "BCE",
-                        "payload": "bce_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "TPM",
-                        "payload": "tpm_flow"
-                    }
-                ],
-            },
-        },
-    },
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🔰 Select Subject for level 1 - ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "IAE",
-                        "payload": "iae_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "TMM",
-                        "payload": "tmm_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "FMG",
-                        "payload": "fmg_flow"
-                    }
-                ],
-            },
-        },
-    },
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🔰 Select Subject for level 1 - ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "BFS",
-                        "payload": "bfs_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "IEE",
-                        "payload": "iee_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "ECB",
-                        "payload": "ecb_flow"
-                    }
-                ],
-            },
-        },
-    }
+let grroupedButtonBlockGen = require("../../../../genrators/grroupedButtonBlockGen");
+let webBtnBlockGen = require("../../../../genrators/webBtnBlockGen");
+let payloadBtnGen = require("../../../../genrators/payloadBtnGen");
 
+
+let level_1_note = [
+    grroupedButtonBlockGen(`🔴 Question Banks - `,
+        [
+            webBtnBlockGen("All Level 1", "https://drive.google.com/drive/folders/1XSV3_96TvLXmkqnhK6zFQQ67jCj4_NzL"),
+            webBtnBlockGen("Aff. Clg..", "https://drive.google.com/file/d/11g0SLE_iMcPJCf3S8-nBKkdbOu6OLN5B/view")
+        ]
+    ),
+    grroupedButtonBlockGen(`🔰 Select Subject for level 1 - `,
+        [
+            payloadBtnGen("Math-I", "math1_flow"),
+            payloadBtnGen("Physics-I", "phy1_flow"),
+            payloadBtnGen("Chemistry-I", "che1_flow")
+        ]
+    ),
+    grroupedButtonBlockGen(`🔰 Select Subject for level 1 - `,
+        [
+            payloadBtnGen("Math-II", "math2_flow"),
+            payloadBtnGen("Physics-II", "phy2_flow"),
+            payloadBtnGen("Chemistry-II", "che2_flow")
+        ]
+    ),
+    grroupedButtonBlockGen(`🔰 Select Subject for level 1 - `,
+        [
+            payloadBtnGen("EM", "em_flow"),
+            payloadBtnGen("PSE", "pse_flow"),
+            payloadBtnGen("CP", "cp_flow")
+        ]
+    ),
+    grroupedButtonBlockGen(`🔰 Select Subject for level 1 - `,
+        [
+            payloadBtnGen("NTF", "ntf_flow"),
+            payloadBtnGen("BCE", "bce_flow"),
+            payloadBtnGen("TPM", "tpm_flow")
+        ]
+    ),
+    grroupedButtonBlockGen(`🔰 Select Subject for level 1 - `,
+        [
+            payloadBtnGen("IAE", "iae_flow"),
+            payloadBtnGen("TMM", "tmm_flow"),
+            payloadBtnGen("FMG", "fmg_flow")
+        ]
+    ),
+    grroupedButtonBlockGen(`🔰 Select Subject for level 1 - `,
+        [
+            payloadBtnGen("BFS", "bfs_flow"),
+            payloadBtnGen("IEE", "iee_flow"),
+            payloadBtnGen("ECB", "ecb_flow")
+        ]
+    )
 ]
 
 
