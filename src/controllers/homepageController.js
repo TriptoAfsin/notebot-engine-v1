@@ -46,8 +46,8 @@ let setUpUserFacebookProfile = (req, res) => {
                     },
                     {
                         "type": "web_url",
-                        "title": "Visit Our Page 👍",
-                        "url": "https://www.facebook.com/butex.notebot2.0",
+                        "title": "NoteBOT Web 🌍",
+                        "url": "https://notebot.netlify.app/#/",
                         "webview_height_ratio": "full"
                     }
                 ]
