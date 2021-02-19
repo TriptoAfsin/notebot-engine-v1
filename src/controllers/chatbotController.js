@@ -1532,21 +1532,24 @@ const help_flow = require('./flows/helpFlow');
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 const MY_VERIFY_TOKEN = process.env.MY_VERIFY_TOKEN;
 
+
+
+
 let testMsg = (req, res) => {
-  return res.status(200).send(`Hello from notebot engine v1 ✔✔\n here are some routes - \n/profile\n/homepage`)
+  let serverStatus = {
+    isServerRunning: true,
+    url: req.protocol + '://' + req.get('host') + req.originalUrl,
+    paths: [
+      "/profile",
+      "/homepage"
+    ],
+    botStatus: false,
+    msg: "Service is offline due to business verification issues",
+  }
+  //return res.status(200).send(`Hello from notebot engine v1 ✔✔\n here are some routes - \n/profile\n/homepage`)
+  return res.status(200).json(serverStatus);
 }
 
 //get webhook
