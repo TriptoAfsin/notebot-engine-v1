@@ -1538,6 +1538,7 @@ const MY_VERIFY_TOKEN = process.env.MY_VERIFY_TOKEN;
 
 
 let testMsg = (req, res) => {
+  res.header("Access-Control-Allow-Origin", "*");
   let serverStatus = {
     isServerRunning: true,
     url: req.protocol + '://' + req.get('host') + req.originalUrl,
