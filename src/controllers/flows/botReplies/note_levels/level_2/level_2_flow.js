@@ -1,203 +1,64 @@
-let level_2_note = [
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🔴 Question Banks - ",
-                "buttons": [
-                    {
-                        "type": "web_url",
-                        "url": "https://drive.google.com/drive/folders/1AlmeMT52FQC02IhfvWuVPuDn8qatE_RQ",
-                        "title": "All QB",
-                    }
-                ],
-            },
-        },
-    },
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🔰 Select Subject for level 2 - ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "EEE",
-                        "payload": "eee_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "TP",
-                        "payload": "tp_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "WP-I",
-                        "payload": "wp1_flow"
-                    }
-                ],
-            },
-        },
-    },
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🔰 Select Subject for level 2 - ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "Marketing(FM)",
-                        "payload": "marketing_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "FYT",
-                        "payload": "fyt_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "SSS-II",
-                        "payload": "sss2_flow"
-                    }
-                ],
-            },
-        },
-    },
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🔰 Select Subject for level 2 - ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "SSS-I",
-                        "payload": "sss1_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "MMTF",
-                        "payload": "mmtf_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "FME",
-                        "payload": "fme_flow"
-                    }
-                ],
-            },
-        },
-    },
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🔰 Select Subject for level 2 - ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "AM-I",
-                        "payload": "am1_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Stat",
-                        "payload": "stat_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "YM-I",
-                        "payload": "ym1_flow"
-                    }
-                ],
-            },
-        },
-    },
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🔰 Select Subject for level 2 - ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "FM-I",
-                        "payload": "fm1_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "TTQC",
-                        "payload": "ttqc_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "FDCE",
-                        "payload": "fdce_flow"
-                    }
-                ],
-            },
-        },
-    },
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🔰 Select Subject for level 2 - ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "MP",
-                        "payload": "mp_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "FD-II",
-                        "payload": "fd2_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "AP-I",
-                        "payload": "ap1_flow"
-                    }
-                ],
-            },
-        },
-    },
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🔰 Select Subject for level 2 - ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "CTCA",
-                        "payload": "ctca_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "WPP",
-                        "payload": "wpp_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Weaving Preparatory",
-                        "payload": "weav_prep_flow"
-                    }
-                ],
-            },
-        },
-    }
+let grroupedButtonBlockGen = require("../../../../genrators/grroupedButtonBlockGen");
+let webBtnBlockGen = require("../../../../genrators/webBtnBlockGen");
+let payloadBtnGen = require("../../../../genrators/payloadBtnGen");
 
+
+let level_2_note = [
+    grroupedButtonBlockGen(`🔴 Question Banks -`,
+        [
+            webBtnBlockGen("All QB", "https://drive.google.com/drive/folders/1AlmeMT52FQC02IhfvWuVPuDn8qatE_RQ"),
+            webBtnBlockGen("New(Till 2019)", "https://drive.google.com/file/d/1ce4mTpJ0S0yi8tYQvvEGn_4BtlbcjI6m/view?usp=sharing")
+        ]
+    ),
+    grroupedButtonBlockGen(`🔰 Select Subject for level 2 -`,
+        [
+            payloadBtnGen("EEE", "eee_flow"),
+            payloadBtnGen("TP", "tp_flow"),
+            payloadBtnGen("WP-I", "wp1_flow")
+        ]
+    ),
+    grroupedButtonBlockGen(`🔰 Select Subject for level 2 -`,
+        [
+            payloadBtnGen("Marketing(FM)", "marketing_flow"),
+            payloadBtnGen("FYT", "fyt_flow"),
+            payloadBtnGen("SSS-II", "sss2_flow")
+        ]
+    ),
+    grroupedButtonBlockGen(`🔰 Select Subject for level 2 -`,
+        [
+            payloadBtnGen("SSS-I", "sss1_flow"),
+            payloadBtnGen("MMTF", "mmtf_flow"),
+            payloadBtnGen("FME", "fme_flow")
+        ]
+    ),
+    grroupedButtonBlockGen(`🔰 Select Subject for level 2 -`,
+        [
+            payloadBtnGen("AM-I", "am1_flow"),
+            payloadBtnGen("Stat", "stat_flow"),
+            payloadBtnGen("YM-I", "ym1_flow")
+        ]
+    ),
+    grroupedButtonBlockGen(`🔰 Select Subject for level 2 -`,
+        [
+            payloadBtnGen("FM-I", "fm1_flow"),
+            payloadBtnGen("TTQC", "ttqc_flow"),
+            payloadBtnGen("FDCE", "fdce_flow")
+        ]
+    ),
+    grroupedButtonBlockGen(`🔰 Select Subject for level 2 -`,
+        [
+            payloadBtnGen("MP", "mp_flow"),
+            payloadBtnGen("FD-II", "fd2_flow"),
+            payloadBtnGen("AP-I", "ap1_flow")
+        ]
+    ),
+    grroupedButtonBlockGen(`🔰 Select Subject for level 2 -`,
+        [
+            payloadBtnGen("CTCA", "ctca_flow"),
+            payloadBtnGen("WPP", "wpp_flow"),
+            payloadBtnGen("Weaving Preparatory", "weav_prep_flow")
+        ]
+    )
 ]
 
 

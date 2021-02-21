@@ -13,6 +13,12 @@ let fm1Flow = [
         ]
     ),
     grroupedButtonBlockGen(
+        `📌 Full Hand Notes(Akib, 2021) - `,
+        [
+            webBtnBlockGen("Part-B(Akib)","https://drive.google.com/file/d/10Zjl_bwl4IYPRb_j9phM1ERXtu5tuQOD/view"),
+        ]
+    ),
+    grroupedButtonBlockGen(
         `🔰 Select Topics for FM-I - `,
         [
             payloadBtnGen("Hand Notes","fm1_hnotes_flow"),

@@ -1546,8 +1546,8 @@ let testMsg = (req, res) => {
       "/profile",
       "/homepage"
     ],
-    botStatus: false,
-    msg: "Service is offline due to business verification issues",
+    botStatus: true,
+    msg: "All serveices are running as expected",
   }
   //return res.status(200).send(`Hello from notebot engine v1 ✔✔\n here are some routes - \n/profile\n/homepage`)
   return res.status(200).json(serverStatus);
