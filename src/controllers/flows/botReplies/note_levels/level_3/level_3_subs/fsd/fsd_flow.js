@@ -12,15 +12,6 @@ let fsdFlow = [
             payloadBtnGen("Plain Weave", "fsd_plainWeave_flow"),
         ]
     ),
-    cardGenerator(
-        "https://i.imgur.com/MY7JBCn.png",
-        "Card Title",
-        "Card Subtitle",
-        "https://notebot.netlify.app/#/",
-        [
-            webBtnBlockGen("Visit Here", "https://notebot.netlify.app/#/")
-        ]
-    )
 ]
 
 
