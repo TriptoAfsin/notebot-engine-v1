@@ -6,6 +6,7 @@ const webBtnBlockGen = require('./genrators/webBtnBlockGen');
 const textBlockGen = require('./genrators/textBlockGen');
 const payloadBtnBlockGen = require('./genrators/payloadBtnGen');
 const groupedBtnBlockGen = require('./genrators/grroupedButtonBlockGen');
+const cardGenerator = require('./genrators/cardGenerator');
 
 
 
@@ -1775,7 +1776,6 @@ function handleMessage(sender_psid, received_message) {
     response = greetReplies[0];
     callSendAPI(sender_psid, response);
   }
-
 
   //bhai
   else if (wordIncludes(bhaiWords, received_message)) {
