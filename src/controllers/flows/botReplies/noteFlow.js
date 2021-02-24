@@ -1,12 +1,21 @@
 let grroupedButtonBlockGen = require("../../genrators/grroupedButtonBlockGen");
 let webBtnBlockGen = require("../../genrators/webBtnBlockGen");
 let payloadBtnGen = require("../../genrators/payloadBtnGen");
+let cardGen = require("../../genrators/cardGenerator");
 
 
 
 
 let notes = [
-
+    cardGen(
+        "https://i.imgur.com/IqOcaUt.png",
+        "Hindol - হিন্দোল",
+        "Buy hand-painted sunglasses, unique cigarette boxes & lighters , notepads",
+        "https://www.facebook.com/104570641674654/posts/110296657768719/",
+        [
+            webBtnBlockGen("Visit Us", "https://www.facebook.com/104570641674654/posts/110296657768719/")
+        ]
+    ),
     grroupedButtonBlockGen(
         `🔰 Choose - `,
         [
