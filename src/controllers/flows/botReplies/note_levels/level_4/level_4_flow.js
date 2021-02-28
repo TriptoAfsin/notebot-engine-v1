@@ -1,88 +1,45 @@
+let grroupedButtonBlockGen = require("../../../../genrators/grroupedButtonBlockGen");
+let webBtnBlockGen = require("../../../../genrators/webBtnBlockGen");
+let payloadBtnGen = require("../../../../genrators/payloadBtnGen");
+
+
 let level_4_note = [
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🔴 Question Banks - ",
-                "buttons": [
-                    {
-                        "type": "web_url",
-                        "url": "https://drive.google.com/drive/folders/1M9QjSqItJW1oZJd1RcG4yeAa41hB_dz-",
-                        "title": "All QB",
-                    }
-                ],
-            },
-        },
-    },
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🔰 Select Subject for level  4- ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "EPD",
-                        "payload": "epd_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "IR",
-                        "payload": "ir_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "TAM",
-                        "payload": "tam_flow"
-                    }
-                ],
-            },
-        },
-    },
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🔰 Select Subject for level 4 - ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "PPC",
-                        "payload": "ppc_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "HRM",
-                        "payload": "hrm_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "BS",
-                        "payload": "bs_flow"
-                    }
-                ],
-            },
-        },
-    },
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🔰 Select Subject for level 4 - ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "B&IL",
-                        "payload": "bil_flow"
-                    }
-                ],
-            },
-        },
-    },
+    grroupedButtonBlockGen(
+        `🔴 Question Banks -`,
+        [
+            webBtnBlockGen("All QB", "https://drive.google.com/drive/folders/1M9QjSqItJW1oZJd1RcG4yeAa41hB_dz-")
+        ]
+    ),
+    grroupedButtonBlockGen(
+        `🔰 Select Subject for level 4 -`,
+        [
+            payloadBtnGen("EPD", "epd_flow"),
+            payloadBtnGen("IR", "ir_flow"),
+            payloadBtnGen("TAM", "tam_flow")
+        ]
+    ), 
+    grroupedButtonBlockGen(
+        `🔰 Select Subject for level 4 -`,
+        [
+            payloadBtnGen("PPC", "ppc_flow"),
+            payloadBtnGen("HRM", "hrm_flow"),
+            payloadBtnGen("BS", "bs_flow")
+        ]
+    ), 
+    grroupedButtonBlockGen(
+        `🔰 Select Subject for level 4 -`,
+        [
+            payloadBtnGen("B&IL", "bil_flow"),
+            payloadBtnGen("HRM", "hrm_flow"),
+            payloadBtnGen("BS", "bs_flow")
+        ]
+    ), 
+    grroupedButtonBlockGen(
+        `🟣 Final Viva, Industrial Attachments Resources -`,
+        [
+            webBtnBlockGen("Drive Folder", "https://drive.google.com/drive/folders/1m-WnO6hdaJ2W7cRJ0v5UdKarvKen4hCM?usp=sharing"),
+        ]
+    ), 
 ]
 
 

@@ -1,67 +1,32 @@
+let grroupedButtonBlockGen = require("../../../../../../genrators/grroupedButtonBlockGen");
+let webBtnBlockGen = require("../../../../../../genrators/webBtnBlockGen");
+let payloadBtnGen = require("../../../../../../genrators/payloadBtnGen");
+let cardGenerator = require("../../../../../../genrators/cardGenerator");
+
+
 let acmFlow = [
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🔰 Select Topics for ACM - ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "Books",
-                        "payload": "acm_book_flow"
-                    }
-                ],
-            },
-        },
-    },
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🔰 Select Topics for ACM - ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "Intro to Cost Ma.",
-                        "payload": "acm_introCostManage_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Interested users .",
-                        "payload": "acm_interestedUsers_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Accounting in action",
-                        "payload": "acm_accountingAction_flow"
-                    }
-                ],
-            },
-        },
-    },
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🔰 Select Topics for ACM - ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "The recording pro.",
-                        "payload": "acm_recordingProcess_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Cost Behav.",
-                        "payload": "acm_CostBehav_flow"
-                    }
-                ],
-            },
-        },
-    }
+    grroupedButtonBlockGen(
+        `🔰 Select Topics for ACM - `,
+        [
+            payloadBtnGen("Books", "acm_book_flow")
+        ]
+    ),
+    grroupedButtonBlockGen(
+        `🔰 Select Topics for ACM - `,
+        [
+            payloadBtnGen("Intro to Cost Ma.", "acm_introCostManage_flow"),
+            payloadBtnGen("Interested users .", "acm_interestedUsers_flow"),
+            payloadBtnGen("Accounting in action", "acm_accountingAction_flow")
+        ]
+    ),
+    grroupedButtonBlockGen(
+        `🔰 Select Topics for ACM - `,
+        [
+            payloadBtnGen("The recording pro.", "acm_recordingProcess_flow"),
+            payloadBtnGen("Cost Behav.", "acm_CostBehav_flow"),
+            payloadBtnGen("Acc..for merch.", "acm_accMerchendizing_flow")
+        ]
+    ),
 ]
 
 
