@@ -1,108 +1,42 @@
+let grroupedButtonBlockGen = require("../../../../../../genrators/grroupedButtonBlockGen");
+let webBtnBlockGen = require("../../../../../../genrators/webBtnBlockGen");
+let payloadBtnGen = require("../../../../../../genrators/payloadBtnGen");
+let cardGenerator = require("../../../../../../genrators/cardGenerator");
+
+
 let chem1_flow = [
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🟩 Select Topics for CHE-I -  ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "Books",
-                        "payload": "chem1_books_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Questions",
-                        "payload": "chem1_ques_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Periodic Properties",
-                        "payload": "chem1_periodic_flow"
-                    }
-                ],
-            },
-        },
-    },
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🟩 Select Topics for CHE-I - ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "Dilute Solution",
-                        "payload": "chem1_dilute_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Complex Compound",
-                        "payload": "chem1_complx_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Chemical Bond",
-                        "payload": "chem1_bond_flow"
-                    }
-                ],
-            },
-        },
-    },
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🟩 Select Topics for CHE-I - ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "Chemical Kinetics",
-                        "payload": "chem1_kinetics_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Chemical Equilibrium",
-                        "payload": "chem1_equi_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Photo Chemistry",
-                        "payload": "chem1_photo_flow"
-                    }
-                ],
-            },
-        },
-    },
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🟩 Select Topics for CHE-I - ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "Analytical Analysis",
-                        "payload": "chem1_analy_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Colloid",
-                        "payload": "chem1_coll_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Acid & Base",
-                        "payload": "chem1_acid_base_flow"
-                    }
-                ],
-            },
-        },
-    },
+    grroupedButtonBlockGen(
+        "🔰 Select Topics for CHE-I -",
+        [
+            payloadBtnGen("Books", "chem1_books_flow"),
+            payloadBtnGen("Questions", "chem1_ques_flow"),
+            payloadBtnGen("Periodic Properties", "chem1_periodic_flow")
+        ]
+    ),
+    grroupedButtonBlockGen(
+        "🔰 Select Topics for CHE-I -",
+        [
+            payloadBtnGen("Dilute Solution", "chem1_dilute_flow"),
+            payloadBtnGen("Complex Compound", "chem1_complx_flow"),
+            payloadBtnGen("Chemical Bond", "chem1_bond_flow")
+        ]
+    ),
+    grroupedButtonBlockGen(
+        "🔰 Select Topics for CHE-I -",
+        [
+            payloadBtnGen("Chemical Kinetics", "chem1_kinetics_flow"),
+            payloadBtnGen("Chemical Equilibrium", "chem1_equi_flow"),
+            payloadBtnGen("Photo Chemistry", "chem1_photo_flow")
+        ]
+    ),
+    grroupedButtonBlockGen(
+        "🔰 Select Topics for CHE-I -",
+        [
+            payloadBtnGen("Analytical Analysis", "chem1_analy_flow"),
+            payloadBtnGen("Colloid", "chem1_coll_flow"),
+            payloadBtnGen("Acid & Base", "chem1_acid_base_flow")
+        ]
+    ),
 ]
 
 
