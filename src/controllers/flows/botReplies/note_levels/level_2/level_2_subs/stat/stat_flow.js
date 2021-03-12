@@ -11,6 +11,11 @@ let statFlow = [
             webBtnBlockGen("Rifat(B, 2020)", "https://drive.google.com/file/d/1HsUaV_Y4AGjOXAMe4bjHO5y7Ooun9Da-/view")
         ]
     ),
+    grroupedButtonBlockGen(`📌 Full Hand Notes(Akib, 2021) -`,
+        [
+            webBtnBlockGen("Part B", "https://drive.google.com/file/d/1--X2Nlu-XpmtD5mkD23I_kT09QFcwodB/view"),
+        ]
+    ),
     grroupedButtonBlockGen(`📌 Stat Assignment 2020(Rabbi Sir)- `,
         [
             webBtnBlockGen("⚡ Download", "https://drive.google.com/file/d/1VTjqvPRw5cAxlDnOselChSK1VgClMVbj/view"),
