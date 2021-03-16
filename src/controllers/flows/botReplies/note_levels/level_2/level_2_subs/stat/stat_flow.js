@@ -13,6 +13,7 @@ let statFlow = [
     ),
     grroupedButtonBlockGen(`📌 Full Hand Notes(Akib, 2021) -`,
         [
+            webBtnBlockGen("Part A", "https://drive.google.com/file/d/10wu1HmCZYwC4JAWQtWkBN-ZTnlCczydF/view"),
             webBtnBlockGen("Part B", "https://drive.google.com/file/d/1--X2Nlu-XpmtD5mkD23I_kT09QFcwodB/view"),
         ]
     ),
