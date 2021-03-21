@@ -14,174 +14,53 @@ let level_3_note = [
             webBtnBlockGen("🔴 Order Now!", "https://www.facebook.com/kathpencil.butex/posts/1643017485885654")
         ]
     ),
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🔴 Question Banks - ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "All Level 3",
-                        "payload": "qb_3_flow"
-                    }
-                ],
-            },
-        },
-    },
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🔰 Select Subject for level 3 - ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "Economics",
-                        "payload": "econo_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "TCP",
-                        "payload": "tcp_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "AM-II",
-                        "payload": "am2_flow"
-                    }
-                ],
-            },
-        },
-    },
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🔰 Select Subject for level 3 - ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "IM (new)",
-                        "payload": "im_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "WP-II",
-                        "payload": "wp2_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "FM-II",
-                        "payload": "fm2_flow"
-                    }
-                ],
-            },
-        },
-    },
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🔰 Select Subject for level 3 - ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "YM-II",
-                        "payload": "ym2_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "PCS",
-                        "payload": "pcs_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "LSS",
-                        "payload": "lss_flow"
-                    }
-                ],
-            },
-        },
-    },
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🔰 Select Subject for level 3 - ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "Knitting-I",
-                        "payload": "kint1_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "FSD",
-                        "payload": "fsd_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "AP-II",
-                        "payload": "ap2_flow"
-                    }
-                ],
-            },
-        },
-    },
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🔰 Select Subject for level 3 - ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "ACE",
-                        "payload": "ace_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "PD",
-                        "payload": "pd_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "MIC",
-                        "payload": "mic_flow"
-                    }
-                ],
-            },
-        },
-    },
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🔰 Select Subject for level 3 - ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "ACM",
-                        "payload": "acm_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "TQM",
-                        "payload": "tqm_flow"
-                    },
-                ],
-            },
-        },
-    },
-
+    grroupedButtonBlockGen(`🔴 Question Banks -`,
+        [
+            webBtnBlockGen("All QB", "https://drive.google.com/drive/folders/1nhPHYnDC1JZFl0TwaYxeFB2dbo8aGf9J"),
+        ]
+    ),
+    grroupedButtonBlockGen(`🔰 Select Subject for level 3 -`,
+        [
+            payloadBtnGen("Economics", "econo_flow"),
+            payloadBtnGen("TCP", "tcp_flow"),
+            payloadBtnGen("AM-II", "am2_flow")
+        ]
+    ),
+    grroupedButtonBlockGen(`🔰 Select Subject for level 3 -`,
+        [
+            payloadBtnGen("IM (new)", "im_flow"),
+            payloadBtnGen("WP-II", "wp2_flow"),
+            payloadBtnGen("FM-II", "fm2_flow")
+        ]
+    ),
+    grroupedButtonBlockGen(`🔰 Select Subject for level 3 -`,
+        [
+            payloadBtnGen("YM-II", "ym2_flow"),
+            payloadBtnGen("PCS", "pcs_flow"),
+            payloadBtnGen("LSS", "lss_flow")
+        ]
+    ),
+    grroupedButtonBlockGen(`🔰 Select Subject for level 3 -`,
+        [
+            payloadBtnGen("Knitting-I", "kint1_flow"),
+            payloadBtnGen("FSD", "fsd_flow"),
+            payloadBtnGen("AP-II", "ap2_flow")
+        ]
+    ),
+    grroupedButtonBlockGen(`🔰 Select Subject for level 3 -`,
+        [
+            payloadBtnGen("ACE", "ace_flow"),
+            payloadBtnGen("PD", "pd_flow"),
+            payloadBtnGen("MIC", "mic_flow")
+        ]
+    ),
+    grroupedButtonBlockGen(`🔰 Select Subject for level 3 -`,
+        [
+            payloadBtnGen("ACM", "acm_flow"),
+            payloadBtnGen("TQM", "tqm_flow"),
+            payloadBtnGen("MIC", "mic_flow")
+        ]
+    )
 ]
 
 
