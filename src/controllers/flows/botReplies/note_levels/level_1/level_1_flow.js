@@ -1,9 +1,19 @@
 let grroupedButtonBlockGen = require("../../../../genrators/grroupedButtonBlockGen");
 let webBtnBlockGen = require("../../../../genrators/webBtnBlockGen");
 let payloadBtnGen = require("../../../../genrators/payloadBtnGen");
+let cardGen = require("../../../../genrators/cardGenerator");
 
 
 let level_1_note = [
+    cardGen(
+        "https://i.imgur.com/JJRZaJI.jpg",
+        "কাঠপেন্সিল",
+        "Buy Comfy Solid Color T-Shirts at only 250TK",
+        "https://www.facebook.com/kathpencil.butex/posts/1643017485885654",
+        [
+            webBtnBlockGen("🔴 Order Now!", "https://www.facebook.com/kathpencil.butex/posts/1643017485885654")
+        ]
+    ),
     grroupedButtonBlockGen(`🔴 Question Banks - `,
         [
             webBtnBlockGen("All Level 1", "https://drive.google.com/drive/folders/1XSV3_96TvLXmkqnhK6zFQQ67jCj4_NzL"),
