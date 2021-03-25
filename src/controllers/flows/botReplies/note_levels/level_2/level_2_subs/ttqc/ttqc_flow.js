@@ -1,166 +1,59 @@
+let grroupedButtonBlockGen = require("../../../../../../genrators/grroupedButtonBlockGen");
+let webBtnBlockGen = require("../../../../../../genrators/webBtnBlockGen");
+let payloadBtnGen = require("../../../../../../genrators/payloadBtnGen");
+
+
 let ttqcFlow = [
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "📌 Full Hand Notes - ",
-                "buttons": [
-                    {
-                        "type": "web_url",
-                        "url": "https://drive.google.com/file/d/117BxjlWQoCQDxpHPjPKK2LnwJ9ZOf0GT/view",
-                        "title": "Nahid(A,2020)",
-                    },
-                    {
-                        "type": "web_url",
-                        "url": "https://drive.google.com/file/d/10tgBY4GOUW4uG1JSLaI4gGfNXmtsuHVl/view",
-                        "title": "Nahid(B, 2020)",
-                    },
-                    {
-                        "type": "web_url",
-                        "url": "https://drive.google.com/file/d/1OBMtlEA2Tdivk5oKHfTUjuluBbGp96Rn/view?usp=sharing",
-                        "title": "Rifat(2020)",
-                    }
-                ],
-            },
-        },
-    },
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🔰 Select Topics for TTQC - ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "Books",
-                        "payload": "ttqc_books_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Hand Notes",
-                        "payload": "ttqc_hnotes_flow"
-                    },
-                    {
-                        "type": "web_url",
-                        "url": "https://drive.google.com/drive/folders/1QZ2EQKlzUNk4tXYzfsdzXjXbtwTlobZc",
-                        "title": "Sheets",
-                    }
-                ],
-            },
-        },
-    },
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🔰 Select Topics for TTQC - ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "Count",
-                        "payload": "ttqc_count_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Crimp",
-                        "payload": "ttqc_crimp_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Twist",
-                        "payload": "ttqc_twist_flow"
-                    }
-                ],
-            },
-        },
-    },
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🔰 Select Topics for TTQC - ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "Intro to TTQC",
-                        "payload": "ttqc_intro_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Moisture, RH",
-                        "payload": "ttqc_mositure_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Neps",
-                        "payload": "ttqc_neps_flow"
-                    }
-                ],
-            },
-        },
-    },
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🔰 Select Topics for TTQC - ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "Sampling",
-                        "payload": "ttqc_sampling_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Fibre Pro.",
-                        "payload": "ttqc_fibre_prop_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "HVI",
-                        "payload": "ttqc_hvi_flow"
-                    }
-                ],
-            },
-        },
-    },
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🔰 Select Topics for TTQC - ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "AFIS",
-                        "payload": "ttqc_afis_flow"
-                    },
-                ],
-            },
-        },
-    },
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "⚡ Online Count Converter -  ",
-                "buttons": [
-                    {
-                        "type": "web_url",
-                        "url": "https://triptoafsin.github.io/CountKoto-/",
-                        "title": "🌎Count Koto",
-                    },
-                ],
-            },
-        },
-    }
+    grroupedButtonBlockGen(`📌 Full Hand Notes -`,
+        [
+            webBtnBlockGen("Nahid(A,2020)", "https://drive.google.com/file/d/117BxjlWQoCQDxpHPjPKK2LnwJ9ZOf0GT/view"),
+            webBtnBlockGen("Nahid(B, 2020)", "https://drive.google.com/file/d/10tgBY4GOUW4uG1JSLaI4gGfNXmtsuHVl/view"),
+            webBtnBlockGen("Rifat(2020)", "https://drive.google.com/file/d/1OBMtlEA2Tdivk5oKHfTUjuluBbGp96Rn/view?usp=sharing")
+        ]
+    ),
+    grroupedButtonBlockGen(`📌 Akib's Hand Notes -`,
+        [
+            webBtnBlockGen("Part-A", "https://drive.google.com/file/d/1-4EA5mbfL1vJ8KCkPxlI0XLLhAabvsfG/view"),
+        ]
+    ),
+    grroupedButtonBlockGen(`🔰 Select Topics for TTQC -`,
+        [
+            payloadBtnGen("Books", "ttqc_books_flow"),
+            payloadBtnGen("Hand Notes", "ttqc_hnotes_flow"),
+            webBtnBlockGen("Sheets", "https://drive.google.com/drive/folders/1QZ2EQKlzUNk4tXYzfsdzXjXbtwTlobZc")
+        ]
+    ),
+    grroupedButtonBlockGen(`🔰 Select Topics for TTQC -`,
+        [
+            payloadBtnGen("Count", "ttqc_count_flow"),
+            payloadBtnGen("Crimp", "ttqc_crimp_flow"),
+            payloadBtnGen("Twist", "ttqc_twist_flow")
+        ]
+    ),
+    grroupedButtonBlockGen(`🔰 Select Topics for TTQC -`,
+        [
+            payloadBtnGen("Intro to TTQC", "ttqc_intro_flow"),
+            payloadBtnGen("Moisture, RH", "ttqc_mositure_flow"),
+            payloadBtnGen("Neps", "ttqc_neps_flow")
+        ]
+    ),
+    grroupedButtonBlockGen(`🔰 Select Topics for TTQC -`,
+        [
+            payloadBtnGen("Sampling", "ttqc_sampling_flow"),
+            payloadBtnGen("Fibre Pro.", "ttqc_fibre_prop_flow"),
+            payloadBtnGen("HVI", "ttqc_hvi_flow")
+        ]
+    ),
+    grroupedButtonBlockGen(`🔰 Select Topics for TTQC -`,
+        [
+            payloadBtnGen("AFIS", "ttqc_afis_flow"),
+        ]
+    ),
+    grroupedButtonBlockGen(`⚡ Online Count Converter -`,
+        [
+            webBtnBlockGen("🌎Count Koto", "https://triptoafsin.github.io/CountKoto-/"),
+        ]
+    )
 ]
 
 

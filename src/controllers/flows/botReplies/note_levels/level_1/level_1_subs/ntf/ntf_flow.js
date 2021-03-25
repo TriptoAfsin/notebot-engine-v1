@@ -1,181 +1,60 @@
+let grroupedButtonBlockGen = require("../../../../../../genrators/grroupedButtonBlockGen");
+let webBtnBlockGen = require("../../../../../../genrators/webBtnBlockGen");
+let payloadBtnGen = require("../../../../../../genrators/payloadBtnGen");
+
+
+
 let ntf_flow = [
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "📌 Hand Notes & Questions -  ",
-                "buttons": [
-                    {
-                        "type": "web_url",
-                        "url": "https://drive.google.com/file/d/16xe5aLVA1cTGM2aEJXmEbmG527Ewz7Hb/view?usp=sharing",
-                        "title": "Important Que.",
-                    },
-                    {
-                        "type": "web_url",
-                        "url": "https://drive.google.com/file/d/1ssWOEjOj1qJrfRO_sKM3uqit1zIbBOKT/view?usp=sharing",
-                        "title": "Short Note",
-                    },
-                    {
-                        "type": "web_url",
-                        "url": "https://drive.google.com/file/d/19JIpGWPQVP9SWFHfZdisdvNgaSlwxaW5/view?usp=drivesdk",
-                        "title": "Full Note",
-                    }
-                ],
-            },
-        },
-    },
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🟩 Select Topic for NTF -  ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "Books",
-                        "payload": "ntf_books_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Hand Notes",
-                        "payload": "ntf_hnotes_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Questions",
-                        "payload": "ntf_ques_flow"
-                    }
-                ],
-            },
-        },
-    },
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🟩 Select Topic for NTF - ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "Suggestions/Solve",
-                        "payload": "ntf_suggestion_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Intro to NTF",
-                        "payload": "ntf_intro_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Cotton Fibre",
-                        "payload": "ntf_cotton_flow"
-                    }
-                ],
-            },
-        },
-    },
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🟩 Select Topic for NTF -  ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "Flax Fibre",
-                        "payload": "ntf_flax_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Wool Fibre",
-                        "payload": "ntf_wool_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Jute Fibre",
-                        "payload": "ntf_jute_flow"
-                    }
-                ],
-            },
-        },
-    },
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🟩 Select Topic for NTF - ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "Silk Fibre",
-                        "payload": "ntf_silk_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Sisal",
-                        "payload": "ntf_sisal_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Hemp",
-                        "payload": "ntf_hemp_flow"
-                    }
-                ],
-            },
-        },
-    },
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🟩 Select Topic for NTF - ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "PALF",
-                        "payload": "ntf_palf_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Kapok",
-                        "payload": "ntf_kapok_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Asbestos",
-                        "payload": "ntf_asbestos_flow"
-                    }
-                ],
-            },
-        },
-    },
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🟩 Select Topic for NTF - ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "Other Fibres",
-                        "payload": "ntf_other_fib_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Play Quiz",
-                        "payload": "quiz_flow"
-                    },
-                ],
-            },
-        },
-    }
+
+    grroupedButtonBlockGen(`📌 Hand Notes & Questions -`,
+        [
+            webBtnBlockGen("Important Que.", "https://drive.google.com/file/d/16xe5aLVA1cTGM2aEJXmEbmG527Ewz7Hb/view?usp=sharing"),
+            webBtnBlockGen("Short Note", "https://drive.google.com/file/d/1ssWOEjOj1qJrfRO_sKM3uqit1zIbBOKT/view?usp=sharing"),
+            webBtnBlockGen("Full Note", "https://drive.google.com/file/d/19JIpGWPQVP9SWFHfZdisdvNgaSlwxaW5/view?usp=drivesdk")
+        ]
+    ),
+
+    grroupedButtonBlockGen(`🔰 Select Topics for NTF -`,
+        [
+            payloadBtnGen("Books", "ntf_books_flow"),
+            payloadBtnGen("Hand Notes", "ntf_hnotes_flow"),
+            payloadBtnGen("Questions", "ntf_ques_flow")
+        ]
+    ),
+    grroupedButtonBlockGen(`🔰 Select Topics for NTF -`,
+        [
+            payloadBtnGen("Suggestions/Solve", "ntf_suggestion_flow"),
+            payloadBtnGen("Intro to NTF", "ntf_intro_flow"),
+            payloadBtnGen("Cotton Fibre", "ntf_cotton_flow")
+        ]
+    ),
+    grroupedButtonBlockGen(`🔰 Select Topics for NTF -`,
+        [
+            payloadBtnGen("Flax Fibre", "ntf_flax_flow"),
+            payloadBtnGen("Wool Fibre", "ntf_wool_flow"),
+            payloadBtnGen("Jute Fibre", "ntf_jute_flow")
+        ]
+    ),
+    grroupedButtonBlockGen(`🔰 Select Topics for NTF -`,
+        [
+            payloadBtnGen("Silk Fibre", "ntf_silk_flow"),
+            payloadBtnGen("Sisal", "ntf_sisal_flow"),
+            payloadBtnGen("Hemp", "ntf_hemp_flow")
+        ]
+    ),
+    grroupedButtonBlockGen(`🔰 Select Topics for NTF -`,
+        [
+            payloadBtnGen("PALF", "ntf_palf_flow"),
+            payloadBtnGen("Kapok", "ntf_kapok_flow"),
+            payloadBtnGen("Asbestos", "ntf_asbestos_flow")
+        ]
+    ),
+    grroupedButtonBlockGen(`🔰 Select Topics for NTF -`,
+        [
+            payloadBtnGen("Other Fibres", "ntf_other_fib_flow"),
+            payloadBtnGen("Play Quiz", "quiz_flow"),
+        ]
+    )
 ]
 
 
