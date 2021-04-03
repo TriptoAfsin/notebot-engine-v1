@@ -12,6 +12,12 @@ let ym1Flow = [
         ]
     ),
     grroupedButtonBlockGen(
+        `📌 Akib's Hand Notes -   `,
+        [
+            webBtnBlockGen("Part A","https://drive.google.com/file/d/1LtfOtf5NkgwEFfcSdfSzFiBTnFdc_N3G/view"),
+        ]
+    ),
+    grroupedButtonBlockGen(
         `🔰 Select Topics for YM-I - `,
         [
             payloadBtnGen("Intro to YM","ym1_intro_flow"),
