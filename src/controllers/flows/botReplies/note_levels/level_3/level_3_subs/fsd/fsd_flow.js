@@ -6,6 +6,12 @@ let cardGenerator = require("../../../../../../genrators/cardGenerator");
 
 let fsdFlow = [
     grroupedButtonBlockGen(
+        `📌 Select Topics for FSD - `,
+        [
+            webBtnBlockGen("Belal Sir Book", "https://drive.google.com/file/d/1J8FZQuyRVOxXJcK1PMmbs3gE3OHmLrrW/view?usp=sharing"),
+        ]
+    ),
+    grroupedButtonBlockGen(
         `🔰 Select Topics for FSD - `,
         [
             payloadBtnGen("Intro to FSD", "fsd_intro_flow"),

@@ -1,20 +1,22 @@
+let grroupedButtonBlockGen = require("../../../../../../genrators/grroupedButtonBlockGen");
+let webBtnBlockGen = require("../../../../../../genrators/webBtnBlockGen");
+let payloadBtnGen = require("../../../../../../genrators/payloadBtnGen");
+let cardGenerator = require("../../../../../../genrators/cardGenerator");
+
+
 let knit1Flow = [
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🔰 Select Topics for Knitting-I - ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "Lecture",
-                        "payload": "knit_lecture_flow"
-                    },
-                ],
-            },
-        },
-    }
+    grroupedButtonBlockGen(
+        `📌 Select Topics for Knitting-I - `,
+        [
+            webBtnBlockGen("Belal Sir Book", "https://drive.google.com/file/d/1J8FZQuyRVOxXJcK1PMmbs3gE3OHmLrrW/view?usp=sharing"),
+        ]
+    ),
+    grroupedButtonBlockGen(
+        `🔰 Select Topics for Knitting-I - `,
+        [
+            payloadBtnGen("Lecture", "knit_lecture_flow"),
+        ]
+    ),
 ]
 
 
