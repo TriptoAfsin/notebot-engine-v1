@@ -1,46 +1,24 @@
+let grroupedButtonBlockGen = require("../../genrators/grroupedButtonBlockGen");
+let webBtnBlockGen = require("../../genrators/webBtnBlockGen");
+let payloadBtnGen = require("../../genrators/payloadBtnGen");
+let cardGenerator = require("../../genrators/cardGenerator");
+
+
 let result = [
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🔰 Choose - ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "🔴 Academic Result",
-                        "payload": "result_academic"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "🔴 Retake Result",
-                        "payload": "result_retake"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "🔴 Affl. Result",
-                        "payload": "result_affli"
-                    }
-                ],
-            },
-        },
-    },
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "⚡Admission Results - ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "🟠 BUTEX Admission",
-                        "payload": "result_admission"
-                    },
-                ],
-            },
-        },
-    }
+    grroupedButtonBlockGen(
+        "🔰 Choose -",
+        [
+            payloadBtnGen("🔴 Academic Result", "result_academic"),
+            payloadBtnGen("🔴 Retake Result", "result_retake"),
+            payloadBtnGen("🔴 Affl. Result", "result_affli")
+        ]
+    ),
+    grroupedButtonBlockGen(
+        "⚡Admission Results -",
+        [
+            payloadBtnGen("🟠 BUTEX Admission", "result_admission"),
+        ]
+    )
 ]
 
 

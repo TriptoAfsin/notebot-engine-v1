@@ -1963,6 +1963,8 @@ function handleMessage(sender_psid, received_message) {
 
   //corona
   else if (wordIncludes(corona, received_message)) {
+    let loadingResponse = textBlockGen("🟡 Wait looking for latest updates ...");
+    callSendAPI(sender_psid, loadingResponse);
     axios.get('https://corona.lmao.ninja/v3/covid-19/countries/bangladesh').then(resp => {
       //console.log(`⚫ Total Cases: ${resp.data.cases}\n🔴 Total Deaths: ${resp.data.deaths}\n\n🔵 New Cases Today: ${resp.data.todayCases}\n🟠 Deaths Today: ${resp.data.todayDeaths}\n🟢 Recovered Today: ${resp.data.todayRecovered}`);
       response = textBlockGen(`⚫ Total Cases: ${resp.data.cases}\n🔴 Total Deaths: ${resp.data.deaths}\n\n🔵 New Cases Today: ${resp.data.todayCases}\n🟠 Deaths Today: ${resp.data.todayDeaths}\n🟢 Recovered Today: ${resp.data.todayRecovered}`)
@@ -1972,7 +1974,7 @@ function handleMessage(sender_psid, received_message) {
 
   //notice
   else if (wordIncludes(noticeWords, received_message)) {
-    let loadingResponse = textBlockGen("Wait looking for latest notices ...");
+    let loadingResponse = textBlockGen("🟡 Wait looking for latest notices ...");
     callSendAPI(sender_psid, loadingResponse);
     let Feed = require('rss-to-json');
     const rssUrl = "https://www.butex.edu.bd/feed"
