@@ -247,6 +247,9 @@ const dateWords = require('./keywords/dateWords');
 //corona
 const coronaWords = require('./keywords/coronaWords');
 
+//notice words
+const noticeWords = require('./keywords/noticeWords');
+
 
 //reply words
 const loveMojiReplies = require('./keywords/replies/lovemojiReply');
@@ -1751,6 +1754,7 @@ function handleMessage(sender_psid, received_message) {
 
 
 
+
   const greetReply = greetReplies;
   
   
@@ -1964,6 +1968,33 @@ function handleMessage(sender_psid, received_message) {
       response = textBlockGen(`⚫ Total Cases: ${resp.data.cases}\n🔴 Total Deaths: ${resp.data.deaths}\n\n🔵 New Cases Today: ${resp.data.todayCases}\n🟠 Deaths Today: ${resp.data.todayDeaths}\n🟢 Recovered Today: ${resp.data.todayRecovered}`)
       callSendAPI(sender_psid, response);
     }); 
+  }
+
+  //notice
+  else if (wordIncludes(noticeWords, received_message)) {
+    let Feed = require('rss-to-json');
+    const rssUrl = "https://www.butex.edu.bd/feed"
+    try {
+      Feed.load(rssUrl, function (err, rss) {
+        let topRss = [];
+        let topRssAmount = 3
+        for (let i = 0; i < topRssAmount; i++) {
+          topRss.push(rss.items[i])
+        }
+        response = groupedBtnBlockGen(
+          "📌 Latest Notices - ",
+          [
+            webBtnBlockGen(`${topRss[0].title}`, `${topRss[0].link}`),
+            webBtnBlockGen(`${topRss[1].title}`, `${topRss[1].link}`),
+            webBtnBlockGen(`${topRss[2].title}`, `${topRss[2].link}`)
+          ]
+        )
+        callSendAPI(sender_psid, response);
+      });
+    } catch (e) {
+      response = textBlockGen("Failed to load latest notices");
+      callSendAPI(sender_psid, response);
+    }
   }
 
 
