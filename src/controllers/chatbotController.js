@@ -1985,15 +1985,13 @@ function handleMessage(sender_psid, received_message) {
         for (let i = 0; i < topRssAmount; i++) {
           topRss.push(rss.items[i])
         }
-        response = groupedBtnBlockGen(
-          "📌 Latest Notices - ",
-          [
-            webBtnBlockGen(`${topRss[0].title}`, `${topRss[0].link}`),
-            webBtnBlockGen(`${topRss[1].title}`, `${topRss[1].link}`),
-            webBtnBlockGen(`${topRss[2].title}`, `${topRss[2].link}`)
-          ]
-        )
-        callSendAPI(sender_psid, response);
+        response = [
+          textBlockGen(`🟣 ${topRss[0].title} - \n\n${topRss[0].link}`),
+          textBlockGen(`🟣 ${topRss[1].title} - \n\n${topRss[1].link}`),
+          textBlockGen(`🟣 ${topRss[2].title} - \n\n${topRss[2].link}`)
+
+        ]
+        magicFunc(sender_psid, response)
       });
     } catch (e) {
       response = textBlockGen("Failed to load latest notices");
