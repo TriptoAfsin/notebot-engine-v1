@@ -1972,6 +1972,8 @@ function handleMessage(sender_psid, received_message) {
 
   //notice
   else if (wordIncludes(noticeWords, received_message)) {
+    let loadingResponse = textBlockGen("Wait looking for latest notices ...");
+    callSendAPI(sender_psid, loadingResponse);
     let Feed = require('rss-to-json');
     const rssUrl = "https://www.butex.edu.bd/feed"
     try {
