@@ -1987,10 +1987,24 @@ function handleMessage(sender_psid, received_message) {
         topRss.push(rss.items[i])
       }
       response = [
-        textBlockGen(`🟣 ${topRss[0].title} - \n\n${topRss[0].link}`),
-        textBlockGen(`🟣 ${topRss[1].title} - \n\n${topRss[1].link}`),
-        textBlockGen(`🟣 ${topRss[2].title} - \n\n${topRss[2].link}`)
-
+        groupedBtnBlockGen(
+          `🟣 ${topRss[0].title} -`,
+          [
+            webBtnBlockGen("Visit 🌐", `${topRss[0].link}`)
+          ]
+        ),
+        groupedBtnBlockGen(
+          `🟣 ${topRss[1].title} -`,
+          [
+            webBtnBlockGen("Visit 🌐", `${topRss[1].link}`)
+          ]
+        ),
+        groupedBtnBlockGen(
+          `🟣 ${topRss[2].title} -`,
+          [
+            webBtnBlockGen("Visit 🌐", `${topRss[2].link}`)
+          ]
+        ),
       ]
       magicFunc(sender_psid, response)
     }).catch(err => callSendAPI(sender_psid, erroResponse));
