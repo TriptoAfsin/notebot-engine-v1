@@ -17,7 +17,7 @@ const chatBotService = require('../services/chatBotService');
 
 
 //prevCustomer
- const prevUserFlow = require('./flows/botReplies/prevCustomerReply');
+const prevUserFlow = require('./flows/botReplies/prevCustomerReply');
 
 //bothSubj Words
 const bothYMWords = require('./keywords/academic_words/subjects/bothYM');
@@ -1756,8 +1756,8 @@ function handleMessage(sender_psid, received_message) {
 
 
   const greetReply = greetReplies;
-  
-  
+
+
   const sadReply = sadStuffReply;
   const positive = positiveKeywords;
   const negative = negativeKeywords;
@@ -1767,12 +1767,12 @@ function handleMessage(sender_psid, received_message) {
 
   const test = ["test", "Test"];
 
-  
+
   if (!received_message.text) {
     response = defaultReply[0];
     callSendAPI(sender_psid, response);
   }
-  
+
   else if (wordIncludes(greets, received_message)) {
     response = greetReplies[0];
     callSendAPI(sender_psid, response);
@@ -1956,7 +1956,7 @@ function handleMessage(sender_psid, received_message) {
     axios.get('https://worldtimeapi.org/api/timezone/Asia/Dhaka').then(resp => {
       response = textBlockGen(`${resp.data.datetime}\nN.B: It's the time of Dhaka, Bangladesh`);
       callSendAPI(sender_psid, response);
-    }); 
+    });
   }
 
 
@@ -1969,34 +1969,31 @@ function handleMessage(sender_psid, received_message) {
       //console.log(`⚫ Total Cases: ${resp.data.cases}\n🔴 Total Deaths: ${resp.data.deaths}\n\n🔵 New Cases Today: ${resp.data.todayCases}\n🟠 Deaths Today: ${resp.data.todayDeaths}\n🟢 Recovered Today: ${resp.data.todayRecovered}`);
       response = textBlockGen(`⚫ Total Cases: ${resp.data.cases}\n🔴 Total Deaths: ${resp.data.deaths}\n\n🔵 New Cases Today: ${resp.data.todayCases}\n🟠 Deaths Today: ${resp.data.todayDeaths}\n🟢 Recovered Today: ${resp.data.todayRecovered}`)
       callSendAPI(sender_psid, response);
-    }); 
+    });
   }
 
   //notice
   else if (wordIncludes(noticeWords, received_message)) {
     let loadingResponse = textBlockGen("🟡 Wait looking for latest notices ...");
+    let erroResponse = textBlockGen("❌ Failed to retrieve latest notices 😓\n\nTry again");
     callSendAPI(sender_psid, loadingResponse);
     let Feed = require('rss-to-json');
-    const rssUrl = "https://www.butex.edu.bd/feed"
-    try {
-      Feed.load(rssUrl, function (err, rss) {
-        let topRss = [];
-        let topRssAmount = 3
-        for (let i = 0; i < topRssAmount; i++) {
-          topRss.push(rss.items[i])
-        }
-        response = [
-          textBlockGen(`🟣 ${topRss[0].title} - \n\n${topRss[0].link}`),
-          textBlockGen(`🟣 ${topRss[1].title} - \n\n${topRss[1].link}`),
-          textBlockGen(`🟣 ${topRss[2].title} - \n\n${topRss[2].link}`)
+    const rssUrl = "https://www.butex.edu.bd/feed";
+    let topRss = [];
+    let topRssAmount = 3
+    // Promise
+    Feed.load(rssUrl).then(rss => {
+      for (let i = 0; i < topRssAmount; i++) {
+        topRss.push(rss.items[i])
+      }
+      response = [
+        textBlockGen(`🟣 ${topRss[0].title} - \n\n${topRss[0].link}`),
+        textBlockGen(`🟣 ${topRss[1].title} - \n\n${topRss[1].link}`),
+        textBlockGen(`🟣 ${topRss[2].title} - \n\n${topRss[2].link}`)
 
-        ]
-        magicFunc(sender_psid, response)
-      });
-    } catch (e) {
-      response = textBlockGen("Failed to load latest notices");
-      callSendAPI(sender_psid, response);
-    }
+      ]
+      magicFunc(sender_psid, response)
+    }).catch(err => callSendAPI(sender_psid, erroResponse));
   }
 
 
@@ -2589,8 +2586,8 @@ function handleMessage(sender_psid, received_message) {
 
 
 
-  
-  
+
+
 
   //default reply
   else if (received_message.text) {
@@ -2634,11 +2631,11 @@ let handlePostback = async (sender_psid, received_postback) => {
 
   // Previous button detection
   //sample prev payload: ACT::052c22a603140979cbe8a3f3f32fc159
-  else if(payloadIncludes(['act::'], payload)){
+  else if (payloadIncludes(['act::'], payload)) {
     console.log("🟢 Prev customer detected");
     magicFunc(sender_psid, prevUserFlow);
   }
-  
+
 
   else if (payload === 'notes_flow') {
     magicFunc(sender_psid, notesFlow);
@@ -4537,7 +4534,7 @@ let handlePostback = async (sender_psid, received_postback) => {
   }
 
 
-   //mic
+  //mic
   else if (payload === 'mic_flow') {
     magicFunc(sender_psid, mic_flow);
   }
