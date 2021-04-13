@@ -1963,7 +1963,7 @@ function handleMessage(sender_psid, received_message) {
 
   //corona
   else if (wordIncludes(corona, received_message)) {
-    let loadingResponse = textBlockGen("🟡 Wait looking for latest updates ...");
+    let loadingResponse = textBlockGen("🟡 Please wait, looking for latest updates ...");
     callSendAPI(sender_psid, loadingResponse);
     axios.get('https://corona.lmao.ninja/v3/covid-19/countries/bangladesh').then(resp => {
       //console.log(`⚫ Total Cases: ${resp.data.cases}\n🔴 Total Deaths: ${resp.data.deaths}\n\n🔵 New Cases Today: ${resp.data.todayCases}\n🟠 Deaths Today: ${resp.data.todayDeaths}\n🟢 Recovered Today: ${resp.data.todayRecovered}`);
@@ -1974,7 +1974,7 @@ function handleMessage(sender_psid, received_message) {
 
   //notice
   else if (wordIncludes(noticeWords, received_message)) {
-    let loadingResponse = textBlockGen("🟡 Wait looking for latest notices ...");
+    let loadingResponse = textBlockGen("🟡 Please wait, looking for latest notices ...");
     let erroResponse = textBlockGen("❌ Failed to retrieve latest notices 😓\n\nTry again");
     callSendAPI(sender_psid, loadingResponse);
     let Feed = require('rss-to-json');
@@ -1986,26 +1986,17 @@ function handleMessage(sender_psid, received_message) {
       for (let i = 0; i < topRssAmount; i++) {
         topRss.push(rss.items[i])
       }
-      response = [
-        groupedBtnBlockGen(
-          `🟣 ${topRss[0].title} -`,
-          [
-            webBtnBlockGen("Visit 🌐", `${topRss[0].link}`)
-          ]
-        ),
-        groupedBtnBlockGen(
-          `🟣 ${topRss[1].title} -`,
-          [
-            webBtnBlockGen("Visit 🌐", `${topRss[1].link}`)
-          ]
-        ),
-        groupedBtnBlockGen(
-          `🟣 ${topRss[2].title} -`,
-          [
-            webBtnBlockGen("Visit 🌐", `${topRss[2].link}`)
-          ]
-        ),
-      ]
+      let response = [];
+      for (let i = 0; i < topRssAmount; i++) {
+        response.push(
+          groupedBtnBlockGen(
+            `🟣 ${topRss[i].title} -`,
+            [
+              webBtnBlockGen("Visit 🌐", `${topRss[i].link}`)
+            ]
+          )
+        )
+      }
       magicFunc(sender_psid, response)
     }).catch(err => callSendAPI(sender_psid, erroResponse));
   }
