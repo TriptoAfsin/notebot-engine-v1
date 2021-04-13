@@ -1991,7 +1991,7 @@ function handleMessage(sender_psid, received_message) {
         let myDate = new Date(topRss[i].published);
         response.push(
           groupedBtnBlockGen(
-            `🟣 Date:${myDate.getDate()}/${myDate.getMonth()}/${myDate.getFullYear()}\n${topRss[i].title} -`,
+            `🟣 Date:${myDate.getDate()}/${myDate.getMonth()}/${myDate.getFullYear()}\n\n${topRss[i].title} -`,
             [
               webBtnBlockGen("Visit 🌐", `${topRss[i].link}`)
             ]
