@@ -620,6 +620,7 @@ const em_ceramic = require("./flows/botReplies/note_levels/level_1/level_1_subs/
 const em_corrosion = require("./flows/botReplies/note_levels/level_1/level_1_subs/em/topics/emCorrosion");
 const em_alloy = require("./flows/botReplies/note_levels/level_1/level_1_subs/em/topics/emAlloy");
 const em_composites = require("./flows/botReplies/note_levels/level_1/level_1_subs/em/topics/emComposites");
+const em_plastic = require("./flows/botReplies/note_levels/level_1/level_1_subs/em/topics/emPlastic");
 
 
 //academic flows -> pse
@@ -3048,6 +3049,10 @@ let handlePostback = async (sender_psid, received_postback) => {
 
   else if (payload === 'em_math_flow') {
     magicFunc(sender_psid, em_math);
+  }
+
+  else if (payload === 'em_plastic_flow') {
+    magicFunc(sender_psid, em_plastic);
   }
 
   else if (payload === 'em_blast_flow') {
