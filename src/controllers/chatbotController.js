@@ -1122,6 +1122,7 @@ const ym2_Notes = require("./flows/botReplies/note_levels/level_3/level_3_subs/y
 const ym2_rotor = require("./flows/botReplies/note_levels/level_3/level_3_subs/ym2/topics/ym2Rotor");
 const ym2_Spinning = require("./flows/botReplies/note_levels/level_3/level_3_subs/ym2/topics/ym2Spinning");
 const ym2_specialYarns = require("./flows/botReplies/note_levels/level_3/level_3_subs/ym2/topics/ym2SpecialYarns");
+const ym2_IntroSpin = require("./flows/botReplies/note_levels/level_3/level_3_subs/ym2/topics/ym2IntroSpin");
 
 
 //fm2
@@ -4721,6 +4722,9 @@ let handlePostback = async (sender_psid, received_postback) => {
   }
   else if (payload === 'ym2_specialYarns_flow') {
     magicFunc(sender_psid, ym2_specialYarns);
+  }
+  else if (payload === 'ym2_introSpin_flow') {
+    magicFunc(sender_psid, ym2_IntroSpin);
   }
 
 
