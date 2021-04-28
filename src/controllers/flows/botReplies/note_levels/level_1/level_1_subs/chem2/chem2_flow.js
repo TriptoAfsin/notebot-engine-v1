@@ -1,129 +1,50 @@
+let grroupedButtonBlockGen = require("../../../../../../genrators/grroupedButtonBlockGen");
+let webBtnBlockGen = require("../../../../../../genrators/webBtnBlockGen");
+let payloadBtnGen = require("../../../../../../genrators/payloadBtnGen");
+let cardGenerator = require("../../../../../../genrators/cardGenerator");
+
+
 let chem2_flow = [
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "📌 Hand Note -  ",
-                "buttons": [
-                    {
-                        "type": "web_url",
-                        "url": "https://drive.google.com/file/d/12LLcW92t1BTLFENL9DQH9xkJOvn0VIVe/view?usp=sharing",
-                        "title": "Hand Note(Maruf)",
-                    },
-                    {
-                        "type": "web_url",
-                        "url": "https://drive.google.com/file/d/1CzG8tPqz50-Byx72oGolh0u72Hx--rZM/view?usp=sharing",
-                        "title": "Important Rea.",
-                    }
-                ],
-            },
-        },
-    },
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🟩 Select Topic for CHE-II -  ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "Books",
-                        "payload": "chem2_books_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Questions",
-                        "payload": "chem2_ques_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Organ Metalic Com.",
-                        "payload": "chem2_org_meta_flow"
-                    }
-                ],
-            },
-        },
-    },
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🟩 Select Topic for CHE-II -  ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "Carbonyl Comp.",
-                        "payload": "chem2_carbonyl_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Organic Reaction Me",
-                        "payload": "chem2_org_reac_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Alcohol & Phenol",
-                        "payload": "chem2_alc_phe_flow"
-                    }
-                ],
-            },
-        },
-    },
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🟩 Select Topic for CHE-II -  ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "Amino Acid",
-                        "payload": "chem2_amino_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Carbohydrates",
-                        "payload": "chem2_carbo_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Color, Dye, Pigment",
-                        "payload": "chem2_color_dye_flow"
-                    }
-                ],
-            },
-        },
-    },
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🟩 Select Topic for CHE-II -  ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "Carboxylic Acid",
-                        "payload": "chem2_carboxylic_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Amine",
-                        "payload": "chem2_amine_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Solubulity Boiling",
-                        "payload": "chem2_solubulity_flow"
-                    }
-                ],
-            },
-        },
-    }
+    grroupedButtonBlockGen("📌 Hand Note -",
+        [
+            webBtnBlockGen("Hand Note(Maruf)", "https://drive.google.com/file/d/12LLcW92t1BTLFENL9DQH9xkJOvn0VIVe/view?usp=sharing"),
+            webBtnBlockGen("Hand Note(Hasibul)", "https://drive.google.com/file/d/19XzX0HOyJjE7pHBxaO8LIEqt2apDB_Xg/view?usp=sharing"),
+            webBtnBlockGen("Important Rea.", "https://drive.google.com/file/d/1CzG8tPqz50-Byx72oGolh0u72Hx--rZM/view?usp=sharing"),
+
+        ]
+    ),
+    grroupedButtonBlockGen("🔰 Select Topic for CHE-II - ",
+        [
+            payloadBtnGen("Books", "chem2_books_flow"),
+            payloadBtnGen("Questions", "chem2_ques_flow"),
+            payloadBtnGen("Organ Metalic Com.", "chem2_org_meta_flow"),
+
+        ]
+    ),
+    grroupedButtonBlockGen("🔰 Select Topic for CHE-II - ",
+        [
+            payloadBtnGen("Carbonyl Comp.", "chem2_carbonyl_flow"),
+            payloadBtnGen("Organic Reaction Me", "chem2_org_reac_flow"),
+            payloadBtnGen("Alcohol & Phenol", "chem2_alc_phe_flow"),
+
+        ]
+    ),
+    grroupedButtonBlockGen("🔰 Select Topic for CHE-II - ",
+        [
+            payloadBtnGen("Amino Acid", "chem2_amino_flow"),
+            payloadBtnGen("Carbohydrates", "chem2_carbo_flow"),
+            payloadBtnGen("Color, Dye, Pigment", "chem2_color_dye_flow"),
+
+        ]
+    ),
+    grroupedButtonBlockGen("🔰 Select Topic for CHE-II - ",
+        [
+            payloadBtnGen("Carboxylic Acid", "chem2_carboxylic_flow"),
+            payloadBtnGen("Amine", "chem2_amine_flow"),
+            payloadBtnGen("Solubulity Boiling", "chem2_solubulity_flow"),
+
+        ]
+    ),
 ]
 
 

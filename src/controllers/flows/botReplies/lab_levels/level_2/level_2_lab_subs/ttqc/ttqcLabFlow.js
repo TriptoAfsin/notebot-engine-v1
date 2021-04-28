@@ -1,119 +1,43 @@
+let grroupedButtonBlockGen = require("../../../../../../genrators/grroupedButtonBlockGen");
+let webBtnBlockGen = require("../../../../../../genrators/webBtnBlockGen");
+let payloadBtnGen = require("../../../../../../genrators/payloadBtnGen");
+let cardGenerator = require("../../../../../../genrators/cardGenerator");
+
+
 let ttqc_lab_flow = [
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "⚡ All Lab Report(Naimur, 2020)- ",
-                "buttons": [
-                    {
-                        "type": "web_url",
-                        "url": "https://drive.google.com/file/d/1wS3qCMrRrujFQiRjEKtiVDAn-YnSuIsQ/view",
-                        "title": "Download",
-                    }
-                ],
-            },
-        },
-    },
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🔰 Select Experiment for TTQC -  ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "1(Atmospheric Cond.)",
-                        "payload": "ttqc_lab_atmosphere_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "2(Fiber Fineness)",
-                        "payload": "ttqc_lab_fiberFineness_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "3(Effective length)",
-                        "payload": "ttqc_lab_effectiveLength_flow"
-                    }
-                ],
-            },
-        },
-    },
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🔰 Select Experiment for TTQC -  ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "Fibre Length.. Iden",
-                        "payload": "ttqc_lab_fibreLength_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Count of Sli..,CSP",
-                        "payload": "ttqc_lab_count_csp_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "TPI & Count",
-                        "payload": "ttqc_lab_tpiCount_flow"
-                    }
-                ],
-            },
-        },
-    },
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🔰 Select Experiment for TTQC -  ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "CSP & TPI",
-                        "payload": "ttqc_lab_csp_tpi_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Thick.., Crimp,GSM",
-                        "payload": "ttqc_lab_thickCrimp_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Fibre Fine..Maturi",
-                        "payload": "ttqc_lab_fibreFineMaturity_flow"
-                    }
-                ],
-            },
-        },
-    },
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🔰 Select Experiment for TTQC -  ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "4(Sliver Roving)",
-                        "payload": "ttqc_lab_sliverRoving_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "5(Bundle Strength)",
-                        "payload": "ttqc_lab_bundleStrength_flow"
-                    }
-                ],
-            },
-        },
-    }
+    grroupedButtonBlockGen("⚡ All Report - ",
+        [
+            webBtnBlockGen("Naimur, 2019", "https://drive.google.com/file/d/1wS3qCMrRrujFQiRjEKtiVDAn-YnSuIsQ/view"),
+            webBtnBlockGen("Hasibul, 2019", "https://drive.google.com/file/d/1l3LJpOCMGnIvol3MQ7RxS6CHjYdTuuqD/view?usp=sharing"),
+        ]
+    ),
+    grroupedButtonBlockGen("🔰 Select Experiment for TTQC - ",
+        [
+            payloadBtnGen("1(Atmospheric Cond.)", "ttqc_lab_atmosphere_flow"),
+            payloadBtnGen("2(Fiber Fineness)", "ttqc_lab_fiberFineness_flow"),
+            payloadBtnGen("3(Effective length)", "ttqc_lab_effectiveLength_flow"),
+        ]
+    ),
+    grroupedButtonBlockGen("🔰 Select Experiment for TTQC - ",
+        [
+            payloadBtnGen("Fibre Length.. Iden", "ttqc_lab_fibreLength_flow"),
+            payloadBtnGen("Count of Sli..,CSP", "ttqc_lab_count_csp_flow"),
+            payloadBtnGen("TPI & Count", "ttqc_lab_tpiCount_flow"),
+        ]
+    ),
+    grroupedButtonBlockGen("🔰 Select Experiment for TTQC - ",
+        [
+            payloadBtnGen("CSP & TPI", "ttqc_lab_csp_tpi_flow"),
+            payloadBtnGen("Thick.., Crimp,GSM", "ttqc_lab_thickCrimp_flow"),
+            payloadBtnGen("Fibre Fine..Maturi", "ttqc_lab_fibreFineMaturity_flow"),
+        ]
+    ),
+    grroupedButtonBlockGen("🔰 Select Experiment for TTQC - ",
+        [
+            payloadBtnGen("4(Sliver Roving)", "ttqc_lab_sliverRoving_flow"),
+            payloadBtnGen("5(Bundle Strength)", "ttqc_lab_bundleStrength_flow"),
+        ]
+    ),
 ]
 
 
