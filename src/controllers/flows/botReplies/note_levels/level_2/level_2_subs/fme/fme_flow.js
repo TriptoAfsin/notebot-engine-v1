@@ -20,7 +20,8 @@ let fmeFlow = [
     ),
     grroupedButtonBlockGen(`📌Full Hand Note(Akib,AE-44,2020)-`,
         [
-            webBtnBlockGen("Part A", "https://drive.google.com/file/d/1Gz7ihBrmSQSlirefPZ2aQVgX_CETC_AW/view?usp=sharing"),
+            webBtnBlockGen("Part A", "https://drive.google.com/file/d/1-4SddFXr6M6UlaMNplsNQElkaEdjwVaJ/view"),
+            webBtnBlockGen("Part B", "https://drive.google.com/file/d/1Gz7ihBrmSQSlirefPZ2aQVgX_CETC_AW/view?usp=sharing"),
         ]
     ),
     grroupedButtonBlockGen(`🔰 Select Topics for FME - `,
