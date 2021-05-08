@@ -8,13 +8,14 @@ let ym1Flow = [
         `📌 Question Bank Solve -   `,
         [
             webBtnBlockGen("Part A(Tiasha)","https://drive.google.com/file/d/1BKv0ypkstPNvGxxRTMllSOpPU0ZD77d-/view"),
-            webBtnBlockGen("Part B(Tiasha)","https://drive.google.com/file/d/1_vsRTuexZ1qtwuiPFlr2BaBTLVYtnOJH/view"),
+            webBtnBlockGen("Part B(Tiasha)","https://drive.google.com/file/d/1-R7HoLO03jd5801KCseWvljwSSZHBv1c/view"),
         ]
     ),
     grroupedButtonBlockGen(
         `📌 Akib's Hand Notes -   `,
         [
             webBtnBlockGen("Part A","https://drive.google.com/file/d/1LtfOtf5NkgwEFfcSdfSzFiBTnFdc_N3G/view"),
+            webBtnBlockGen("Part B","https://drive.google.com/file/d/1LtfOtf5NkgwEFfcSdfSzFiBTnFdc_N3G/view"),
         ]
     ),
     grroupedButtonBlockGen(
