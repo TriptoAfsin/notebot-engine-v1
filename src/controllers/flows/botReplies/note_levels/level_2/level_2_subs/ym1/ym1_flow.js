@@ -15,7 +15,7 @@ let ym1Flow = [
         `📌 Akib's Hand Notes -   `,
         [
             webBtnBlockGen("Part A","https://drive.google.com/file/d/1LtfOtf5NkgwEFfcSdfSzFiBTnFdc_N3G/view"),
-            webBtnBlockGen("Part B","https://drive.google.com/file/d/1LtfOtf5NkgwEFfcSdfSzFiBTnFdc_N3G/view"),
+            webBtnBlockGen("Part B","https://drive.google.com/file/d/1-R7HoLO03jd5801KCseWvljwSSZHBv1c/view"),
         ]
     ),
     grroupedButtonBlockGen(
