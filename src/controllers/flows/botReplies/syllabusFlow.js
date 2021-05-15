@@ -1,26 +1,18 @@
-let syllabus = [
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🔰 Select Your Batch - ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "🔵 46",
-                        "payload": "syllabus_46"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "🔵 45",
-                        "payload": "syllabus_45"
-                    }
-                ],
-            },
-        },
-    },
+let grroupedButtonBlockGen = require("../../genrators/grroupedButtonBlockGen");
+let webBtnBlockGen = require("../../genrators/webBtnBlockGen");
+let payloadBtnGen = require("../../genrators/payloadBtnGen");
+let cardGen = require("../../genrators/cardGenerator");
 
+
+
+let syllabus = [
+    grroupedButtonBlockGen(
+        "🔰 Select Your Batch -",
+        [
+            payloadBtnGen("🔵 46", "syllabus_46"),
+            payloadBtnGen("🔵 45", "syllabus_45"),
+        ]
+    ),
 ]
 
 

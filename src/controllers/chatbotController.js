@@ -295,6 +295,8 @@ const fmg_words = require('./keywords/academic_words/subjects/fmgWords');
 const tmm_words = require('./keywords/academic_words/subjects/tmmWords');
 //academic -> iae
 const iae_words = require('./keywords/academic_words/subjects/iaeWords');
+//academic -> om
+const om_words = require('./keywords/academic_words/subjects/omWords');
 //academic -> tee
 const iee_words = require('./keywords/academic_words/subjects/ieeWords');
 //academic -> epd
@@ -416,6 +418,10 @@ const testReply = require('./keywords/replies/testReply');
 //toss
 const tossWords = require('./keywords/tossWords');
 const tossReplies = require('./keywords/replies/tossReply');
+
+//useful tools words
+const usefullToolsWords = require('./keywords/usefulToolsWords');
+const usefullToolsFlow = require('./flows/botReplies/usefulFlow');
 
 
 
@@ -1041,6 +1047,13 @@ const acm_accountingAction = require("./flows/botReplies/note_levels/level_3/lev
 const acm_recordingProcess = require("./flows/botReplies/note_levels/level_3/level_3_subs/acm/topics/acmRecordingProcess");
 const acm_CostBehav = require("./flows/botReplies/note_levels/level_3/level_3_subs/acm/topics/acmCostBehav");
 const acm_accMerchendizing = require("./flows/botReplies/note_levels/level_3/level_3_subs/acm/topics/acmAccForMerchendizing");
+
+//om
+const om_flow = require("./flows/botReplies/note_levels/level_3/level_3_subs/om/om_flow");
+const om_ch1 = require("./flows/botReplies/note_levels/level_3/level_3_subs/om/topics/ch1OmFlow");
+const om_ch2 = require("./flows/botReplies/note_levels/level_3/level_3_subs/om/topics/ch2OMFlow");
+const om_ch3 = require("./flows/botReplies/note_levels/level_3/level_3_subs/om/topics/ch3OMFlow");
+
 
 
 
@@ -2168,6 +2181,11 @@ function handleMessage(sender_psid, received_message) {
     callSendAPI(sender_psid, response);
   }
 
+  //usefulTools
+  else if (wordIncludes(usefullToolsWords, received_message)) {
+    magicFunc(sender_psid, usefullToolsFlow);
+  }
+
   //songs
   else if (wordIncludes(songWords, received_message)) {
     magicFunc(sender_psid, songFlow);
@@ -2423,6 +2441,11 @@ function handleMessage(sender_psid, received_message) {
   //academic -> acm
   else if (wordIs(acm, received_message)) {
     magicFunc(sender_psid, acm_flow);
+  }
+
+  //academic -> om
+  else if (wordIs(om_words, received_message)) {
+    magicFunc(sender_psid, om_flow);
   }
 
   //academic -> tp
@@ -4543,6 +4566,20 @@ let handlePostback = async (sender_psid, received_postback) => {
   }
   else if (payload === 'acm_accMerchendizing_flow') {
     magicFunc(sender_psid, acm_accMerchendizing);
+  }
+
+  //om
+  else if (payload === 'om_flow') {
+    magicFunc(sender_psid, om_flow);
+  }
+  else if (payload === 'om_ch1_flow') {
+    magicFunc(sender_psid, om_ch1);
+  }
+  else if (payload === 'om_ch2_flow') {
+    magicFunc(sender_psid, om_ch2);
+  }
+  else if (payload === 'om_ch3_flow') {
+    magicFunc(sender_psid, om_ch3);
   }
 
 

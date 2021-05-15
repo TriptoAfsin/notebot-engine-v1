@@ -1,68 +1,30 @@
-let routines = [
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🔰 Online Class Routine(New)- ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "🔵 L2,1 ",
-                        "payload": "online_2_1"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "🔵 L3,1",
-                        "payload": "online_3_1"
-                    },
-                ],
-            },
-        },
-    },
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🔰 Choose - ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "🔵 Level 1",
-                        "payload": "routine_level_1"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "🔵 Level 2",
-                        "payload": "routine_level_2"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "🔵 Level 3",
-                        "payload": "routine_level_3"
-                    }
-                ],
-            },
-        },
-    },
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🔰 Choose - ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "🔵 Level 4",
-                        "payload": "routine_level_4"
-                    },
-                ],
-            },
-        },
-    }
+let grroupedButtonBlockGen = require("../../genrators/grroupedButtonBlockGen");
+let webBtnBlockGen = require("../../genrators/webBtnBlockGen");
+let payloadBtnGen = require("../../genrators/payloadBtnGen");
+let cardGen = require("../../genrators/cardGenerator");
 
+let routines = [
+    grroupedButtonBlockGen(
+        "🔰 Online Class Routine(New)-",
+        [
+            payloadBtnGen("🔵 L2,1 ", "online_2_1"),
+            payloadBtnGen("🔵 L3,1 ", "online_3_1"),
+        ]
+    ),
+    grroupedButtonBlockGen(
+        "🔰 Choose(Academic) -",
+        [
+            payloadBtnGen("🔵 Level 1", "routine_level_1"),
+            payloadBtnGen("🔵 Level 2", "routine_level_2"),
+            payloadBtnGen("🔵 Level 3", "routine_level_3"),
+        ]
+    ),
+    grroupedButtonBlockGen(
+        "🔰 Choose(Academic) -",
+        [
+            payloadBtnGen("🔵 Level 4", "routine_level_4"),
+        ]
+    ),
 ]
 
 
