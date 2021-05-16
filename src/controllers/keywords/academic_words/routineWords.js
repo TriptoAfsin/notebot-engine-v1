@@ -5,7 +5,8 @@ const routine = [
     "রুটিন", 
     "শিডিউল", 
     "সিডিউল", 
-    "schedule"
+    "schedule",
+    "routin"
 ];
 
 
