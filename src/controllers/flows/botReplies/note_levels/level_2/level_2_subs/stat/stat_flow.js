@@ -5,6 +5,12 @@ let payloadBtnGen = require("../../../../../../genrators/payloadBtnGen");
 
 
 let statFlow = [
+    grroupedButtonBlockGen(`⭐ STAT Tables - `,
+        [
+            webBtnBlockGen("Normal Table", "https://drive.google.com/file/d/1xcenjNMM1DJUmFkrAxfScg7e6WwJunCL/view?usp=sharing"),
+            webBtnBlockGen("Z, T Table", "https://drive.google.com/file/d/13eqSeHVGlDfJ8kLwvBBvSYo2uZJwZ6iR/view?usp=sharing")
+        ]
+    ),
     grroupedButtonBlockGen(`📌 Full Hand Notes -`,
         [
             webBtnBlockGen("Nahid(2020)", "https://drive.google.com/file/d/1buy5jwu1gR44OYS_srTuviCwpAEuPuq7/view"),
