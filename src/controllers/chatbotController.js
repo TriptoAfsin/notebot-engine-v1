@@ -2610,12 +2610,6 @@ function handleMessage(sender_psid, received_message) {
     magicFunc(sender_psid, syllabusFlow);
   }
 
-
-
-
-
-
-
   //emoji
   else if (wordIncludes(loveMoji, received_message)) {
     // Create the payload for a basic text message
@@ -2627,13 +2621,9 @@ function handleMessage(sender_psid, received_message) {
 
 
 
-
-
-
   //default reply
   else if (received_message.text) {
-    response = defaultReply[0];
-
+    response = defaultReply[Math.floor(Math.random()*defaultReply.length)];
     callSendAPI(sender_psid, response);
   }
 }
