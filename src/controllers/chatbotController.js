@@ -164,6 +164,10 @@ const submitReplies = require('./keywords/replies/submissionReply');
 const lifeWords = require('./keywords/lifeWords');
 const lifeReplies = require('./keywords/replies/lifeReply');
 
+//linkWords
+const linkWords = require('./keywords/linkWords');
+const linkReplies = require('./keywords/replies/linkReplies');
+
 //drug
 const drugWords = require('./keywords/drugWords');
 const drugReplies = require('./keywords/replies/drugReply');
@@ -1933,6 +1937,12 @@ function handleMessage(sender_psid, received_message) {
   //life
   else if (wordIncludes(lifeWords, received_message)) {
     response = textBlockGen(`${randomPicker(lifeReplies)}`);
+    callSendAPI(sender_psid, response);
+  }
+
+  //link
+  else if (wordIncludes(linkWords, received_message)) {
+    response = textBlockGen(`${randomPicker(linkReplies)}`);
     callSendAPI(sender_psid, response);
   }
 
