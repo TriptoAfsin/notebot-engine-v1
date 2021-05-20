@@ -34,36 +34,16 @@ const defaultReply = [
             quickReply("Lab Reports📋", "reports_flow")
         ]
     ),
-    {
-        "text": `🔴 Sorry I didn't understand you, here are few some suggestions -`,
-        "quick_replies": [{
-                "content_type": "text",
-                "title": "Help😥",
-                "payload": "help_flow"
-            },
-            {
-                "content_type": "text",
-                "title": "Notes📗",
-                "payload": "notes_flow"
-            },
-            {
-                "content_type": "text",
-                "title": "Routine📅",
-                "payload": "routine_flow"
-            },
-            {
-                "content_type": "text",
-                "title": "Results📝",
-                "payload": "result_flow"
-            },
-            {
-                "content_type": "text",
-                "title": "Lab Reports📋",
-                "payload": "reports_flow"
-            }
-
+    quickReplyBlockGen(
+        "🔴 Sorry I didn't understand you, here are few some suggestions -",
+        [
+            quickReply("Help😥", "help_flow"),
+            quickReply("Notes📗", "notes_flow"),
+            quickReply("Routine📅", "routine_flow"),
+            quickReply("Results📝", "result_flow"),
+            quickReply("Lab Reports📋", "reports_flow")
         ]
-    },
+    ),
 ]
 
 
