@@ -39,6 +39,11 @@ let setUpUserFacebookProfile = (req, res) => {
                         "payload": "help_payload"
                     },
                     {
+                        "type": "postback",
+                        "title": "Donate 💰",
+                        "payload": "donation_payload"
+                    },
+                    {
                         "type": "web_url",
                         "title": "Submit Notes📗",
                         "url": "https://goo.gl/forms/akfj9X8vxuoj2xQg2",

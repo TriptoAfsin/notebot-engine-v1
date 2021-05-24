@@ -91,6 +91,14 @@ const noReplies = require('./keywords/replies/noTypeReply');
 const bhaiWords = require('./keywords/bhaiBonWords');
 const bhaiReplies = require('./keywords/replies/bhaiReply');
 
+//hot
+const hotWords = require('./keywords/hotWords');
+const hotReplies = require('./keywords/replies/hotReplies');
+
+//cold
+const coldWords = require('./keywords/coldWords');
+const coldReplies = require('./keywords/replies/coldReply');
+
 //sameToYou
 const sameWords = require('./keywords/sameToYouWords');
 const sameReplies = require('./keywords/replies/sameToYouReply');
@@ -426,6 +434,14 @@ const tossReplies = require('./keywords/replies/tossReply');
 //useful tools words
 const usefullToolsWords = require('./keywords/usefulToolsWords');
 const usefullToolsFlow = require('./flows/botReplies/usefulFlow');
+
+
+//donation words
+const donationWords = require('./keywords/donationWords');
+const donationFlow = require('./flows/botReplies/donation/donationFlow');
+const donation_bKash = require('./flows/botReplies/donation/bkashDonation');
+const donation_nagad = require('./flows/botReplies/donation/nagadDonation');
+const donation_surecash = require('./flows/botReplies/donation/surecashDonation');
 
 
 
@@ -1809,6 +1825,18 @@ function handleMessage(sender_psid, received_message) {
     callSendAPI(sender_psid, response);
   }
 
+  //hot
+  else if (wordIncludes(hotWords, received_message)) {
+    response = textBlockGen(`${randomPicker(hotReplies)}`);
+    callSendAPI(sender_psid, response);
+  }
+
+  //cold
+  else if (wordIncludes(coldWords, received_message)) {
+    response = textBlockGen(`${randomPicker(coldReplies)}`);
+    callSendAPI(sender_psid, response);
+  }
+
   //okay
   else if (wordIncludes(okayWords, received_message)) {
     response = textBlockGen(`${randomPicker(okayReplies)}`);
@@ -2195,6 +2223,11 @@ function handleMessage(sender_psid, received_message) {
   //usefulTools
   else if (wordIncludes(usefullToolsWords, received_message)) {
     magicFunc(sender_psid, usefullToolsFlow);
+  }
+
+  //donation
+  else if (wordIncludes(donationWords, received_message)) {
+    magicFunc(sender_psid, donationFlow);
   }
 
   //songs
@@ -5536,6 +5569,20 @@ let handlePostback = async (sender_psid, received_postback) => {
   //songs
   else if (payload === 'another_song_flow') {
     magicFunc(sender_psid, songFlow);
+  }
+
+  //donation
+  else if (payload === 'donation_payload') {
+    magicFunc(sender_psid, donationFlow);
+  }
+  else if (payload === 'bkash_donation') {
+    magicFunc(sender_psid, donation_bKash);
+  }
+  else if (payload === 'nagad_donation') {
+    magicFunc(sender_psid, donation_nagad);
+  }
+  else if (payload === 'surecash_donation') {
+    magicFunc(sender_psid, donation_surecash);
   }
 
 
