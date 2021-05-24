@@ -50,6 +50,7 @@ let em_flow = [
         [
             payloadBtnGen("Composites", "em_composites_flow"),
             payloadBtnGen("Plastic", "em_plastic_flow"),
+            payloadBtnGen("Phase Diagrams", "em_phaseDiag_flow"),
         ]
     ),
 ]

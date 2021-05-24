@@ -631,6 +631,7 @@ const em_corrosion = require("./flows/botReplies/note_levels/level_1/level_1_sub
 const em_alloy = require("./flows/botReplies/note_levels/level_1/level_1_subs/em/topics/emAlloy");
 const em_composites = require("./flows/botReplies/note_levels/level_1/level_1_subs/em/topics/emComposites");
 const em_plastic = require("./flows/botReplies/note_levels/level_1/level_1_subs/em/topics/emPlastic");
+const em_phaseDiag = require("./flows/botReplies/note_levels/level_1/level_1_subs/em/topics/emPhaseDiag");
 
 
 //academic flows -> pse
@@ -3077,6 +3078,10 @@ let handlePostback = async (sender_psid, received_postback) => {
 
   else if (payload === 'em_plastic_flow') {
     magicFunc(sender_psid, em_plastic);
+  }
+
+  else if (payload === 'em_phaseDiag_flow') {
+    magicFunc(sender_psid, em_phaseDiag);
   }
 
   else if (payload === 'em_blast_flow') {
