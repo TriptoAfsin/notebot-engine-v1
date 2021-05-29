@@ -5,12 +5,17 @@ let cardGenerator = require("../../../../../../genrators/cardGenerator");
 
 
 let chem2_flow = [
-    grroupedButtonBlockGen("📌 Hand Note -",
+    grroupedButtonBlockGen("📌 Hand Notes -",
         [
             webBtnBlockGen("Hand Note(Maruf)", "https://drive.google.com/file/d/12LLcW92t1BTLFENL9DQH9xkJOvn0VIVe/view?usp=sharing"),
             webBtnBlockGen("Hand Note(Hasibul)", "https://drive.google.com/file/d/19XzX0HOyJjE7pHBxaO8LIEqt2apDB_Xg/view?usp=sharing"),
             webBtnBlockGen("Important Rea.", "https://drive.google.com/file/d/1CzG8tPqz50-Byx72oGolh0u72Hx--rZM/view?usp=sharing"),
 
+        ]
+    ),
+    grroupedButtonBlockGen("📌 Hand Notes -",
+        [
+            webBtnBlockGen("Hand Note(Rushad, FE-45, 2021)", "https://drive.google.com/file/d/1VzbsuNV1WRoPdfGAJ7DO-sWZQGELvNx_/view?usp=sharing"),
         ]
     ),
     grroupedButtonBlockGen("🔰 Select Topic for CHE-II - ",
