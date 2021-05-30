@@ -15,7 +15,7 @@ let chem2_flow = [
     ),
     grroupedButtonBlockGen("📌 Hand Notes -",
         [
-            webBtnBlockGen("Hand Note(Rushad, FE-45, 2021)", "https://drive.google.com/file/d/1VzbsuNV1WRoPdfGAJ7DO-sWZQGELvNx_/view?usp=sharing"),
+            webBtnBlockGen("Rushad(2021)", "https://drive.google.com/file/d/1VzbsuNV1WRoPdfGAJ7DO-sWZQGELvNx_/view?usp=sharing"),
         ]
     ),
     grroupedButtonBlockGen("🔰 Select Topic for CHE-II - ",

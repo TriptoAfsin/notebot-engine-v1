@@ -11,7 +11,7 @@ let phy2_flow = [
         [
             webBtnBlockGen("Maruf(2019)", "https://drive.google.com/file/d/1fIgUIBddhWxMaS7hKrKViD5eNNhvhtXL/view"),
             webBtnBlockGen("Hasibul(2019)", "https://drive.google.com/file/d/18SqLs8J-wnMhdfALqaklgj21hGCqDxLc/view"),
-            webBtnBlockGen("Rushad(FE-45,2021)", "https://drive.google.com/file/d/1HGf21qAypMgltBJRwslTJ5NcIjB8M2pL/view?usp=sharing")
+            webBtnBlockGen("Rushad(2021)", "https://drive.google.com/file/d/1HGf21qAypMgltBJRwslTJ5NcIjB8M2pL/view?usp=sharing")
         ]
     ),
     grroupedButtonBlockGen("🔰 Select Topic for PHY-II -",

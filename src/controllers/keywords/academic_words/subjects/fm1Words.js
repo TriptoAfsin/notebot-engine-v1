@@ -4,7 +4,8 @@ const fm1_words = [
     "fm 1",
     "fm i",
     "fabric manufacturing 1",
-    "fabric manu 1"
+    "fabric manu 1",
+    "fm-1"
 ];
 
 
