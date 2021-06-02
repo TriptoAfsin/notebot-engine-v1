@@ -14,6 +14,7 @@ let ttqcFlow = [
     grroupedButtonBlockGen(`📌 Akib's Hand Notes -`,
         [
             webBtnBlockGen("Part-A", "https://drive.google.com/file/d/1-4EA5mbfL1vJ8KCkPxlI0XLLhAabvsfG/view"),
+            webBtnBlockGen("Part-B", "https://drive.google.com/file/d/1-T7jwixZSNlWn16zOQHxKpGXL90h_om6/view"),
         ]
     ),
     grroupedButtonBlockGen(`🔰 Select Topics for TTQC -`,
