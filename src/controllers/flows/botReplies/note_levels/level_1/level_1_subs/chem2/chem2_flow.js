@@ -18,6 +18,11 @@ let chem2_flow = [
             webBtnBlockGen("Rushad(2021)", "https://drive.google.com/file/d/1VzbsuNV1WRoPdfGAJ7DO-sWZQGELvNx_/view?usp=sharing"),
         ]
     ),
+    grroupedButtonBlockGen("📌 QB Solve - ",
+        [
+            webBtnBlockGen("By AE-45", "https://drive.google.com/file/d/1kV5Jfj-JFY_9GjTO7uu4L6_vcZn3EOUK/view?usp=sharing"),
+        ]
+    ),
     grroupedButtonBlockGen("🔰 Select Topic for CHE-II - ",
         [
             payloadBtnGen("Books", "chem2_books_flow"),
