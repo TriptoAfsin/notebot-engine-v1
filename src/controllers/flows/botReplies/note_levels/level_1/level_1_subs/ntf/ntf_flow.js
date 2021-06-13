@@ -13,6 +13,11 @@ let ntf_flow = [
             webBtnBlockGen("Full Note", "https://drive.google.com/file/d/19JIpGWPQVP9SWFHfZdisdvNgaSlwxaW5/view?usp=drivesdk")
         ]
     ),
+    grroupedButtonBlockGen(`⭐ All Properties Short Note -`,
+        [
+            webBtnBlockGen("Nadia(2021)", "https://drive.google.com/file/d/1FqA7R5jziHOHPiTUUyXuoWxmIg99M99j/view?usp=sharing"),
+        ]
+    ),
 
     grroupedButtonBlockGen(`🔰 Select Topics for NTF -`,
         [
