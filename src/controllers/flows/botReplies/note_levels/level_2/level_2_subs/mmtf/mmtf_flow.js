@@ -9,7 +9,7 @@ let mmtfFlow = [
         [
             webBtnBlockGen("Maruf(2020)", "https://drive.google.com/file/d/1mU864Zkt8PGN5Ebs6RV1QJ5AJfYm8ZZA/view"),
             webBtnBlockGen("Nahid(2020, A)", "https://drive.google.com/file/d/1yv4UeJ0X_-bIoNG0KBXzVuxAq5l0WXXT/view"),
-            webBtnBlockGen("Nahid(2021, B)", "https://drive.google.com/file/d/13fwAwSOCh74lB680kK7by00QtG_qEkPX/view?usp=sharing")
+            webBtnBlockGen("Nahid(2021, B )", "https://drive.google.com/file/d/13fwAwSOCh74lB680kK7by00QtG_qEkPX/view?usp=sharing")
         ]
     ),
     grroupedButtonBlockGen(

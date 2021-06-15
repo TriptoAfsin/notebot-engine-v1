@@ -15,6 +15,7 @@ let fm1Flow = [
     grroupedButtonBlockGen(
         `📌 Full Hand Notes(Akib, 2021) - `,
         [
+            webBtnBlockGen("Part-A(Akib)","https://drive.google.com/file/d/1FHbZSTiRa7cosKdP8zuLn5l0vmg7vRH_/view"),
             webBtnBlockGen("Part-B(Akib)","https://drive.google.com/file/d/10Zjl_bwl4IYPRb_j9phM1ERXtu5tuQOD/view"),
         ]
     ),
