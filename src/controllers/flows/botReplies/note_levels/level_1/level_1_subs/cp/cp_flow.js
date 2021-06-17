@@ -1,135 +1,60 @@
+let grroupedButtonBlockGen = require("../../../../../../genrators/grroupedButtonBlockGen");
+let webBtnBlockGen = require("../../../../../../genrators/webBtnBlockGen");
+let payloadBtnGen = require("../../../../../../genrators/payloadBtnGen");
+
+
+
+
 let cp_flow = [
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "📌 Practical Practises with Solve(Mim, 2020)- -",
-                "buttons": [
-                    {
-                        "type": "web_url",
-                        "url": "https://drive.google.com/file/d/1YTSL0vZbTkmEzY3SgusNhwnR6oJqoKr9/view?usp=sharing",
-                        "title": "​☄️Downlaod",
-                    },
-                ],
-            },
-        },
-    },
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "📌 Full Hand Notes - ",
-                "buttons": [
-                    {
-                        "type": "web_url",
-                        "url": "https://drive.google.com/file/d/1KtSiUvkUbWY4gZSARRWqQsD9umXjMy7x/view?usp=sharing",
-                        "title": "Saidul(2019)",
-                    },
-                    {
-                        "type": "web_url",
-                        "url": "https://drive.google.com/file/d/1VJJGdyJPeh6NjtxvLE2RZUlkwj7wiTcE/view?usp=sharing",
-                        "title": "Rohim(SKTEC,2019)",
-                    },
-                    {
-                        "type": "web_url",
-                        "url": "https://drive.google.com/file/d/1ptln03o9lpFsh23L7SIVI2KnuzUK8SsD/view?usp=sharing",
-                        "title": "Tripto(2018)",
-                    },
-                ],
-            },
-        },
-    },
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🟩 Select Topic for CP -  ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "Books",
-                        "payload": "books_cp_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Questions",
-                        "payload": "ques_cp_flow"
-                    },
-                ],
-            },
-        },
-    },
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🟩 Select Topic for CP -  ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "Conditional Statem.",
-                        "payload": "condition_cp_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Computer Fundam..",
-                        "payload": "fundamental_cp_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Loop",
-                        "payload": "loop_cp_flow"
-                    }
-                ],
-            },
-        },
-    },
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🟩 Select Topic for CP -  ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "Array",
-                        "payload": "array_cp_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Function",
-                        "payload": "function_cp_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "String",
-                        "payload": "string_cp_flow"
-                    }
-                ],
-            },
-        },
-    },
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🟩Useful Suggestion ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "Suggestion 🟢",
-                        "payload": "suggestion_cp_flow"
-                    },
-                ],
-            },
-        },
-    }
+    grroupedButtonBlockGen(
+        "📌 Practical Practices with Solve(Mim, 2020)-",
+        [
+            webBtnBlockGen("☄️Download", "https://drive.google.com/file/d/1YTSL0vZbTkmEzY3SgusNhwnR6oJqoKr9/view?usp=sharing")
+        ]
+    ),
+    grroupedButtonBlockGen(
+        "📌 Full Hand Notes -",
+        [
+            webBtnBlockGen("Saidul(2019)", "https://drive.google.com/file/d/1KtSiUvkUbWY4gZSARRWqQsD9umXjMy7x/view?usp=sharing"),
+            webBtnBlockGen("Rohim(SKTEC,2019)", "https://drive.google.com/file/d/1VJJGdyJPeh6NjtxvLE2RZUlkwj7wiTcE/view?usp=sharing"),
+            webBtnBlockGen("Tripto(2018)", "https://drive.google.com/file/d/1ptln03o9lpFsh23L7SIVI2KnuzUK8SsD/view?usp=sharing")
+        ]
+    ),
+    grroupedButtonBlockGen(
+        "📌 Full Hand Notes -",
+        [
+            webBtnBlockGen("Urmi(2021)", "https://drive.google.com/file/d/1AvCKT4q5fvQdq9C_W0OrwE7_pHmMuwOd/view?usp=sharing"),
+        ]
+    ),
+    grroupedButtonBlockGen(
+        "🔰 Select Topic for CP -",
+        [
+            payloadBtnGen("Books", "books_cp_flow"),
+            payloadBtnGen("Questions", "ques_cp_flow"),
+        ]
+    ),
+    grroupedButtonBlockGen(
+        "🔰 Select Topic for CP -",
+        [
+            payloadBtnGen("Computer Fundam..", "fundamental_cp_flow"),
+            payloadBtnGen("Conditional Statem.", "condition_cp_flow"),
+            payloadBtnGen("Loop", "loop_cp_flow"),
+        ]
+    ),
+    grroupedButtonBlockGen(
+        "🔰 Select Topic for CP -",
+        [
+            payloadBtnGen("Array", "array_cp_flow"),
+            payloadBtnGen("Function", "function_cp_flow"),
+            payloadBtnGen("String", "string_cp_flow"),
+        ]
+    ),
+    grroupedButtonBlockGen(
+        "⭐ Useful Suggestion",
+        [
+            payloadBtnGen("Suggestion 🟢", "suggestion_cp_flow"),
+        ]
+    ),
 ]
 
 

@@ -1,103 +1,47 @@
+let grroupedButtonBlockGen = require("../../../../../../genrators/grroupedButtonBlockGen");
+let webBtnBlockGen = require("../../../../../../genrators/webBtnBlockGen");
+let payloadBtnGen = require("../../../../../../genrators/payloadBtnGen");
+
+
+
 let bce_flow = [
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🟩 Select Topic For BCE - ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "Questions",
-                        "payload": "bce_ques_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "All Sheets",
-                        "payload": "all_sheets_bce_flow"
-                    },
-                ],
-            },
-        },
-    },
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "📌 Full Hand Notes - ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "Part A",
-                        "payload": "part_a_bce_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Part B",
-                        "payload": "part_b_bce_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Full(A+B)",
-                        "payload": "full_ab_bce_flow"
-                    }
-                ],
-            },
-        },
-    },
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🟩 Select Topic For BCE - ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "Intro to Language",
-                        "payload": "intro_bce_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Language Functions",
-                        "payload": "lang_func_bce_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Communication",
-                        "payload": "communi_bce_flow"
-                    }
-                ],
-            },
-        },
-    },
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🟩 Select Topic For BCE - ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "Business Letter",
-                        "payload": "letter_bce_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Business Report",
-                        "payload": "report_bce_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Reading,Writing..",
-                        "payload": "read_write_bce_flow"
-                    }
-                ],
-            },
-        },
-    },
+    grroupedButtonBlockGen(
+        "🔰 Select Topic For BCE -",
+        [
+            payloadBtnGen("Questions", "bce_ques_flow"),
+            payloadBtnGen("All Sheets", "all_sheets_bce_flow"),
+        ]
+    ),
+    grroupedButtonBlockGen(
+        "📌 Full Hand Notes -",
+        [
+            payloadBtnGen("Part A", "part_a_bce_flow"),
+            payloadBtnGen("Part B", "part_b_bce_flow"),
+            payloadBtnGen("Full(A+B)", "full_ab_bce_flow"),
+        ]
+    ),
+    grroupedButtonBlockGen(
+        "📌 Full Hand Notes -",
+        [
+            webBtnBlockGen("Rafsan(2021)", "https://drive.google.com/file/d/1SO8FI9elSj0CT0VPV3WcX2SPhpbZV_p6/view?usp=sharing"),
+        ]
+    ),
+    grroupedButtonBlockGen(
+        "🔰 Select Topic For BCE -",
+        [
+            payloadBtnGen("Intro to Language", "intro_bce_flow"),
+            payloadBtnGen("Language Functions", "lang_func_bce_flow"),
+            payloadBtnGen("Communication", "communi_bce_flow"),
+        ]
+    ),
+    grroupedButtonBlockGen(
+        "🔰 Select Topic For BCE -",
+        [
+            payloadBtnGen("Business Letter", "letter_bce_flow"),
+            payloadBtnGen("Business Report", "report_bce_flow"),
+            payloadBtnGen("Reading,Writing..", "read_write_bce_flow"),
+        ]
+    ),
 ]
 
 
