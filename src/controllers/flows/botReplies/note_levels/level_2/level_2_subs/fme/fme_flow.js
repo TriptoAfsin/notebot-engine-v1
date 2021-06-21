@@ -15,7 +15,7 @@ let fmeFlow = [
     grroupedButtonBlockGen(`📌Full Hand Note(Nahid,AE-44, 2020)-`,
         [
             webBtnBlockGen("Part A", "https://drive.google.com/file/d/1tbFqkVmg9g-O-XGUeAaCM4bXF7NE6xHW/view"),
-            webBtnBlockGen("Part B", "https://drive.google.com/file/d/1vSKjJ5FtAsvcv-JBAJ0F9gz_XWg_4Old/view")
+            webBtnBlockGen("Part B", "https://drive.google.com/file/d/18W-ask6cB34n6hI2BD7olZ_i-acM8Jp4/view")
         ]
     ),
     grroupedButtonBlockGen(`📌Full Hand Note(Akib,AE-44,2020)-`,

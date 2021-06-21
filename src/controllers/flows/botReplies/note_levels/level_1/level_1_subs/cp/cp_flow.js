@@ -3,8 +3,6 @@ let webBtnBlockGen = require("../../../../../../genrators/webBtnBlockGen");
 let payloadBtnGen = require("../../../../../../genrators/payloadBtnGen");
 
 
-
-
 let cp_flow = [
     grroupedButtonBlockGen(
         "📌 Practical Practices with Solve(Mim, 2020)-",
