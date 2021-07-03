@@ -1,21 +1,13 @@
+let textBlockGen = require("../../../../../../../genrators/textBlockGen");
+
+
+
 let math1Integre = [
-    {
-        "text": `🔷Hand Note Full (Akib, 2018) - 
-        https://drive.google.com/file/d/1G6knLSoifRLnljugeSSLte8YvZzHAb0x/view`
-    },
-    {
-        "text": `🔷Rules(1-10),Gamma-Beta, Partial(Tripto)-
-        https://drive.google.com/file/d/1AysunFQthF0CW7k6H8i3rbPz31_iZRRn/view?usp=sharing`
-    },
-    {
-        "text": `🔷Volume -
-        https://drive.google.com/file/d/1fMQOkXdJk8SFBqRRkwoVQbMSCV0gjYS4/view?usp=sharing`
-    },
-    {
-        "text": `🔷 Rectification - 
-        https://drive.google.com/file/d/1-fRlqPuxNKMY4F6D6G4wJK8ENI22_X8i/view?usp=sharing`
-    }
-   
+    textBlockGen(`🔷 Hand Note Full (Akib, 2018) - \n\nhttps://drive.google.com/file/d/1G6knLSoifRLnljugeSSLte8YvZzHAb0x/view`),
+    textBlockGen(`🔷 Hand Note Full (Ripa,TFD-46,2021) - \n\nhttps://drive.google.com/file/d/1DAkT9S5jhHFjQwSnJ7zVrxIreVf20N6V/view?usp=sharing`),
+    textBlockGen(`🔷 Rules(1-10),Gamma-Beta, Partial(Tripto)-\n\nhttps://drive.google.com/file/d/1AysunFQthF0CW7k6H8i3rbPz31_iZRRn/view?usp=sharing`),
+    textBlockGen(`🔷 Volume -\n\nhttps://drive.google.com/file/d/1fMQOkXdJk8SFBqRRkwoVQbMSCV0gjYS4/view?usp=sharing`),
+    textBlockGen(`🔷 Rectification - \n\nhttps://drive.google.com/file/d/1-fRlqPuxNKMY4F6D6G4wJK8ENI22_X8i/view?usp=sharing`),
 ]
 
 

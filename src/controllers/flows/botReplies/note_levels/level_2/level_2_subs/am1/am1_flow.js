@@ -17,6 +17,7 @@ let am1Flow = [
         "📌 Full Hand Notes",
         [
             webBtnBlockGen("Maruf(2021)", "https://drive.google.com/file/d/1PtuUUaa1EbmazOEpa6GyjEuBEpr2d2zl/view?usp=sharing"),
+            webBtnBlockGen("Adee(2021)", "https://drive.google.com/file/d/1d31uMCWKBwqayCsMcLcDDKfRoX47fbH2/view?usp=sharing"),
         ]
     ),
     grroupedButtonBlockGen(

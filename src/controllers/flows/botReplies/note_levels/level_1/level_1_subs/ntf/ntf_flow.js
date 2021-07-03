@@ -5,7 +5,11 @@ let payloadBtnGen = require("../../../../../../genrators/payloadBtnGen");
 
 
 let ntf_flow = [
-
+    grroupedButtonBlockGen(`📌 Hand Notes & Questions -`,
+        [
+            webBtnBlockGen("Wasy(2021)", "https://drive.google.com/file/d/1DmMmmwzpUErfcn3yeG58tnXg7bzXJ0PR/view?usp=sharing"),
+        ]
+    ),
     grroupedButtonBlockGen(`📌 Hand Notes & Questions -`,
         [
             webBtnBlockGen("Important Que.", "https://drive.google.com/file/d/16xe5aLVA1cTGM2aEJXmEbmG527Ewz7Hb/view?usp=sharing"),
