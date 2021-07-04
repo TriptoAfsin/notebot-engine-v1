@@ -19,15 +19,16 @@ let cp_flow = [
     grroupedButtonBlockGen(
         "📌 Full Hand Notes -",
         [
-            webBtnBlockGen("Saidul(2019)", "https://drive.google.com/file/d/1KtSiUvkUbWY4gZSARRWqQsD9umXjMy7x/view?usp=sharing"),
-            webBtnBlockGen("Rohim(SKTEC,2019)", "https://drive.google.com/file/d/1VJJGdyJPeh6NjtxvLE2RZUlkwj7wiTcE/view?usp=sharing"),
-            webBtnBlockGen("Tripto(2018)", "https://drive.google.com/file/d/1ptln03o9lpFsh23L7SIVI2KnuzUK8SsD/view?usp=sharing")
+            webBtnBlockGen("Urmi(2021)", "https://drive.google.com/file/d/1AvCKT4q5fvQdq9C_W0OrwE7_pHmMuwOd/view?usp=sharing"),
+            webBtnBlockGen("Sobuj(2021)", "https://drive.google.com/file/d/1L_WkLg6EsBlgN6IIpb_nXBL3zlLVqQD4/view?usp=sharing"),
         ]
     ),
     grroupedButtonBlockGen(
         "📌 Full Hand Notes -",
         [
-            webBtnBlockGen("Urmi(2021)", "https://drive.google.com/file/d/1AvCKT4q5fvQdq9C_W0OrwE7_pHmMuwOd/view?usp=sharing"),
+            webBtnBlockGen("Saidul(2019)", "https://drive.google.com/file/d/1KtSiUvkUbWY4gZSARRWqQsD9umXjMy7x/view?usp=sharing"),
+            webBtnBlockGen("Rohim(SKTEC,2019)", "https://drive.google.com/file/d/1VJJGdyJPeh6NjtxvLE2RZUlkwj7wiTcE/view?usp=sharing"),
+            webBtnBlockGen("Tripto(2018)", "https://drive.google.com/file/d/1ptln03o9lpFsh23L7SIVI2KnuzUK8SsD/view?usp=sharing")
         ]
     ),
     grroupedButtonBlockGen(
