@@ -1,124 +1,61 @@
+let grroupedButtonBlockGen = require("../../../../../../genrators/grroupedButtonBlockGen");
+let webBtnBlockGen = require("../../../../../../genrators/webBtnBlockGen");
+let payloadBtnGen = require("../../../../../../genrators/payloadBtnGen");
+
+
+
+
 let eeeFlow = [
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "📌 ♦Asad Sir's Slide♦ -  ",
-                "buttons": [
-                    {
-                        "type": "web_url",
-                        "url": "https://drive.google.com/file/d/16mFkXWt7gAeeYpCpcQp-dQLf43Jocdpx/view?usp=sharing",
-                        "title": "⚡ Downlaod",
-                    }
-                ],
-            },
-        },
-    },
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🔰 Select Topics for FEEE - ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "Books",
-                        "payload": "eee_books_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Hand Notes",
-                        "payload": "eee_hnotes_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Questions",
-                        "payload": "eee_ques_flow"
-                    }
-                ],
-            },
-        },
-    },
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🔰 Select Topics for FEEE - ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "Ch 1",
-                        "payload": "eee_ch1_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Ch 2:Method of An",
-                        "payload": "eee_ch2_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Ch 3",
-                        "payload": "eee_ch3_flow"
-                    }
-                ],
-            },
-        },
-    },
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🔰 Select Topics for FEEE - ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "Ch 4:3 & 1 Phase Sys",
-                        "payload": "eee_ch4_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Ch 5: Electronics",
-                        "payload": "eee_ch5_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Ch 8: Power System",
-                        "payload": "eee_ch8_flow"
-                    }
-                ],
-            },
-        },
-    },
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🔰 Select Topics for FEEE - ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "Wye-Delta",
-                        "payload": "eee_wye_delta_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "RMS",
-                        "payload": "eee_rms_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Circuit Analysis",
-                        "payload": "eee_circuit_analy_flow"
-                    }
-                ],
-            },
-        },
-    },
+    grroupedButtonBlockGen(
+        "📌 ♦Asad Sir's Slide♦ -",
+        [
+            webBtnBlockGen("⚡ Downlaod", "https://drive.google.com/file/d/16mFkXWt7gAeeYpCpcQp-dQLf43Jocdpx/view?usp=sharing")
+        ]
+    ),
+    grroupedButtonBlockGen(
+        "📌 Full Hand Notes",
+        [
+            webBtnBlockGen("Adee(2021)", "https://drive.google.com/file/d/1KgIfMMCIu33dd7wUZfefJXGso1_Hiiwl/view?usp=sharing")
+        ]
+    ),
+    grroupedButtonBlockGen(
+        "🔰 Select Topics for FEEE -",
+        [
+            payloadBtnGen("Books", "eee_books_flow"),
+            payloadBtnGen("Hand Notes", "eee_hnotes_flow"),
+            payloadBtnGen("Questions", "eee_ques_flow"),
+        ]
+    ),
+    grroupedButtonBlockGen(
+        "🔰 Select Topics for FEEE -",
+        [
+            payloadBtnGen("Ch 1", "eee_ch1_flow"),
+            payloadBtnGen("Ch 2:Method of An", "eee_ch2_flow"),
+            payloadBtnGen("Ch 3", "eee_ch3_flow"),
+        ]
+    ),
+    grroupedButtonBlockGen(
+        "🔰 Select Topics for FEEE -",
+        [
+            payloadBtnGen("Ch 4:3 & 1 Phase Sys", "eee_ch4_flow"),
+            payloadBtnGen("Ch 5: Electronics", "eee_ch5_flow"),
+            payloadBtnGen("Ch 8: Power System", "eee_ch8_flow"),
+        ]
+    ),
+    grroupedButtonBlockGen(
+        "🔰 Select Topics for FEEE -",
+        [
+            webBtnBlockGen("Sensor(2021)", "https://drive.google.com/file/d/1ZPdioYHOByOck6kcAVRUdgfngUxNxody/view?usp=sharing"),
+        ]
+    ),
+    grroupedButtonBlockGen(
+        "🔰 Select Topics for FEEE -",
+        [
+            payloadBtnGen("Wye-Delta", "eee_wye_delta_flow"),
+            payloadBtnGen("RMS", "eee_rms_flow"),
+            payloadBtnGen("Circuit Analysis", "eee_circuit_analy_flow"),
+        ]
+    ),
 ]
 
 
