@@ -14,7 +14,7 @@
   "dependencies": {
     "axios": "^0.21.1",
     "body-parser": "^1.19.0",
-    "dayjs": "^1.10.4",
+    "dayjs": "^1.10.5",
     "dotenv": "^8.6.0",
     "ejs": "^3.1.6",
     "express": "^4.17.1",
@@ -22,9 +22,9 @@
     "rss-to-json": "^1.1.3"
   },
   "devDependencies": {
-    "@babel/core": "^7.14.2",
-    "@babel/node": "^7.14.2",
-    "@babel/preset-env": "^7.14.2",
-    "nodemon": "^2.0.7"
+    "@babel/core": "^7.14.6",
+    "@babel/node": "^7.14.7",
+    "@babel/preset-env": "^7.14.7",
+    "nodemon": "^2.0.9"
   }
 }
