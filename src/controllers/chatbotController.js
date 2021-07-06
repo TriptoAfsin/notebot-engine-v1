@@ -2026,6 +2026,7 @@ function handleMessage(sender_psid, received_message) {
     });
   }
 
+  //🔴 Notice doesn't work in cPanel
   //notice
   else if (wordIncludes(noticeWords, received_message)) {
     let loadingResponse = textBlockGen("🟡 Please wait, looking for latest notices ...");

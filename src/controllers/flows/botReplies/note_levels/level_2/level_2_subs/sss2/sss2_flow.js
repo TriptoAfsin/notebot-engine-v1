@@ -8,7 +8,7 @@ let payloadBtnGen = require("../../../../../../genrators/payloadBtnGen");
 
 let sss2Flow = [
     grroupedButtonBlockGen(
-        "📌 Chapter Wise Notes(Muntasir, 44, 2021)",
+        "📌 Chapter Wise Notes(Sabbir Azim, 44, 2021)",
         [
             webBtnBlockGen("Download(Folder)", "https://drive.google.com/drive/folders/1ivgk5L4Ww0WxIfIxYWjEvhOb4CuR1mFQ?usp=sharing")
         ]
