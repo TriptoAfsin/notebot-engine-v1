@@ -1,9 +1,10 @@
 let grroupedButtonBlockGen = require("../../../../../../genrators/grroupedButtonBlockGen");
 let webBtnBlockGen = require("../../../../../../genrators/webBtnBlockGen");
 let payloadBtnGen = require("../../../../../../genrators/payloadBtnGen");
-
+let bondiFlow = require("../../../../sponsoredFlows/bondiCard");
 
 let phy1_flow = [
+    bondiFlow,
     grroupedButtonBlockGen(`📌Combined Note- `,
         [
             webBtnBlockGen("PHY-I(Maruf,2018)", "https://drive.google.com/file/d/18pOu9YN1fE6czSgwbWyX4rFhvxp0df4Y/view?usp=sharing"),

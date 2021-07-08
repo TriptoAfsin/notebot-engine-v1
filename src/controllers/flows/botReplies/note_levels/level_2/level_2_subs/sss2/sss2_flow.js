@@ -1,12 +1,14 @@
 let grroupedButtonBlockGen = require("../../../../../../genrators/grroupedButtonBlockGen");
 let webBtnBlockGen = require("../../../../../../genrators/webBtnBlockGen");
 let payloadBtnGen = require("../../../../../../genrators/payloadBtnGen");
+let bondiFlow = require("../../../../sponsoredFlows/bondiCard");
 
 
 
 
 
 let sss2Flow = [
+    bondiFlow,
     grroupedButtonBlockGen(
         "📌 Chapter Wise Notes(Sabbir Azim, 44, 2021)",
         [

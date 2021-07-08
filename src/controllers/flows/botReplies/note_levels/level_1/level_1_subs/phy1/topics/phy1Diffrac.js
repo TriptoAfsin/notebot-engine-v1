@@ -1,8 +1,9 @@
+let textBlockGen = require("../../../../../../../genrators/textBlockGen");
+
+
 let phy1Diffrac = [
-    {
-        "text": `🔷 Hand Note(Tripto, 2018)-
-        https://drive.google.com/file/d/1iiaEAMGEL-9eFsjSc1TylmCcK9LRR50i/view?usp=sharing`
-    },
+    textBlockGen(`🔷 Hand Note(Tripto, 2018)-\n\nhttps://drive.google.com/file/d/1iiaEAMGEL-9eFsjSc1TylmCcK9LRR50i/view?usp=sharing`),
+    textBlockGen(`🔷 Hand Note(Shafiul,DCE-46,2021)-\n\nhttps://drive.google.com/file/d/1YOn5CkE2l8T8EZBXqapEJrD9zmXoz_M1/view?usp=sharing`),
 ]
 
 

@@ -1,12 +1,13 @@
 let grroupedButtonBlockGen = require("../../../../../../genrators/grroupedButtonBlockGen");
 let webBtnBlockGen = require("../../../../../../genrators/webBtnBlockGen");
 let payloadBtnGen = require("../../../../../../genrators/payloadBtnGen");
-let cardGenerator = require("../../../../../../genrators/cardGenerator");
+let bondiFlow = require("../../../../sponsoredFlows/bondiCard");
 
 
 
 
 let phy2_flow = [
+    bondiFlow,
     grroupedButtonBlockGen("📌 Combined Note -",
         [
             webBtnBlockGen("Maruf(2019)", "https://drive.google.com/file/d/1fIgUIBddhWxMaS7hKrKViD5eNNhvhtXL/view"),

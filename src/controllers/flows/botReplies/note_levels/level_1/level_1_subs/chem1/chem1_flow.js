@@ -1,10 +1,12 @@
 let grroupedButtonBlockGen = require("../../../../../../genrators/grroupedButtonBlockGen");
 let webBtnBlockGen = require("../../../../../../genrators/webBtnBlockGen");
 let payloadBtnGen = require("../../../../../../genrators/payloadBtnGen");
-let cardGenerator = require("../../../../../../genrators/cardGenerator");
+let cardGen = require("../../../../../../genrators/cardGenerator");
+let bondiFlow = require("../../../../sponsoredFlows/bondiCard");
 
 
 let chem1_flow = [
+    bondiFlow,
     grroupedButtonBlockGen(
         "🔰 Select Topics for CHE-I -",
         [

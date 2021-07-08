@@ -1,11 +1,20 @@
 let grroupedButtonBlockGen = require("../../../../../../genrators/grroupedButtonBlockGen");
 let webBtnBlockGen = require("../../../../../../genrators/webBtnBlockGen");
 let payloadBtnGen = require("../../../../../../genrators/payloadBtnGen");
-
+let cardGen = require("../../../../../../genrators/cardGenerator");
 
 
 
 let eeeFlow = [
+    cardGen(
+        "https://i.imgur.com/fQZqOwW.png",
+        "বন্দী পাঠশালা",
+        "BUTEX NoteBOT is now powered by Bondi Pathshala 😀",
+        "https://www.facebook.com/bp.liveclass",
+        [
+            webBtnBlockGen("Visit 🌍", "https://www.facebook.com/bp.liveclass")
+        ]
+    ),
     grroupedButtonBlockGen(
         "📌 ♦Asad Sir's Slide♦ -",
         [

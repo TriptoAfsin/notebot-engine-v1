@@ -1,9 +1,12 @@
 let grroupedButtonBlockGen = require("../../../../../../genrators/grroupedButtonBlockGen");
 let webBtnBlockGen = require("../../../../../../genrators/webBtnBlockGen");
 let payloadBtnGen = require("../../../../../../genrators/payloadBtnGen");
+let cardGen = require("../../../../../../genrators/cardGenerator");
+let bondiFlow = require("../../../../sponsoredFlows/bondiCard");
 
 
 let marketingFlow = [
+    bondiFlow,
     grroupedButtonBlockGen(
         "📌 All Class Lecture(2019) -",
         [
