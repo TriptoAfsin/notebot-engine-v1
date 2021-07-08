@@ -1,57 +1,31 @@
+let grroupedButtonBlockGen = require("../../../../../../genrators/grroupedButtonBlockGen");
+let webBtnBlockGen = require("../../../../../../genrators/webBtnBlockGen");
+let payloadBtnGen = require("../../../../../../genrators/payloadBtnGen");
+let bondiFlow = require("../../../../sponsoredFlows/bondiCard");
+
+
+
 let tpm_flow = [
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "📌Part A Note(Imran, 2019)-",
-                "buttons": [
-                    {
-                        "type": "web_url",
-                        "url": "https://drive.google.com/file/d/1DU-9bYRe7evvp5u8stZJnkvoXv7pziyU/view?usp=sharing",
-                        "title": "☄️ Downlaod ☄️",
-                    }
-                ],
-            },
-        },
-    },
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🟩 Select Topics for TPM -  ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "Questions",
-                        "payload": "tpm_ques_flow"
-                    }
-                ],
-            },
-        },
-    },
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🟩 Select Topics for TPM -  ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "Woven Fab Wet..",
-                        "payload": "tpm_wov_fab_wet_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Woven Fab Manu Pro",
-                        "payload": "tpm_wov_fab_manu_flow"
-                    }
-                ],
-            },
-        },
-    },
+    bondiFlow,
+    grroupedButtonBlockGen(
+        "📌Part A Note(Imran, 2019)-",
+        [
+            webBtnBlockGen("☄️ Download ☄️", "https://drive.google.com/file/d/1DU-9bYRe7evvp5u8stZJnkvoXv7pziyU/view?usp=sharing")
+        ]
+    ),
+    grroupedButtonBlockGen(
+        "🔰 Select Topics for TPM -",
+        [
+            payloadBtnGen("Questions", "tpm_ques_flow")
+        ]
+    ),
+    grroupedButtonBlockGen(
+        "🔰 Select Topics for TPM -",
+        [
+            payloadBtnGen("Woven Fab Wet..", "tpm_wov_fab_wet_flow"),
+            payloadBtnGen("Woven Fab Manu Pro", "tpm_wov_fab_manu_flow")
+        ]
+    ),
 ]
 
 

@@ -1,129 +1,51 @@
+let grroupedButtonBlockGen = require("../../../../../../genrators/grroupedButtonBlockGen");
+let webBtnBlockGen = require("../../../../../../genrators/webBtnBlockGen");
+let payloadBtnGen = require("../../../../../../genrators/payloadBtnGen");
+let bondiFlow = require("../../../../sponsoredFlows/bondiCard");
+
+
+
 let math1_flow = [
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🟩 Select Topic for Math-I -  ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "Books",
-                        "payload": "math1_books_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Questions",
-                        "payload": "math1_ques_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Solve(2018)",
-                        "payload": "math1_solve18_flow"
-                    }
-                ],
-            },
-        },
-    },
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🟩 Select Topic for Math-I -  ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "Convergence/Di.",
-                        "payload": "math1_conv_div_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Expansion of Fun.",
-                        "payload": "math1_exapnsion_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Differentiation",
-                        "payload": "math1_diff_flow"
-                    }
-                ],
-            },
-        },
-    },
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🟩 Select Topic for Math-I - ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "Integration",
-                        "payload": "math1_integre_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Extrema",
-                        "payload": "math1_extreme_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Conics",
-                        "payload": "math1_conics_flow"
-                    }
-                ],
-            },
-        },
-    },
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🟩 Select Topic for Math-I -  ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "Vector Space",
-                        "payload": "math1_vector_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Matrix",
-                        "payload": "math1_matrix_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Co-ord geometry",
-                        "payload": "math1_co_ord_flow"
-                    }
-                ],
-            },
-        },
-    },
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🟩 Select Topic for Math-I - ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "Linear Algebra",
-                        "payload": "math1_linear_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Change of Axes",
-                        "payload": "math1_change_axes_flow"
-                    }
-                ],
-            },
-        },
-    }
+    bondiFlow,
+    grroupedButtonBlockGen(
+        "🔰 Select Topic for Math-I -  ",
+        [
+            payloadBtnGen("Books", "math1_books_flow"),
+            payloadBtnGen("Questions", "math1_ques_flow"),
+            payloadBtnGen("Solve(2018)", "math1_solve18_flow"),
+        ]
+    ),
+    grroupedButtonBlockGen(
+        "🔰 Select Topic for Math-I -  ",
+        [
+            payloadBtnGen("Convergence/Di.", "math1_conv_div_flow"),
+            payloadBtnGen("Expansion of Fun.", "math1_exapnsion_flow"),
+            payloadBtnGen("Differentiation", "math1_diff_flow"),
+        ]
+    ),
+    grroupedButtonBlockGen(
+        "🔰 Select Topic for Math-I -  ",
+        [
+            payloadBtnGen("Integration", "math1_integre_flow"),
+            payloadBtnGen("Extrema", "math1_extreme_flow"),
+            payloadBtnGen("Conics", "math1_conics_flow"),
+        ]
+    ),
+    grroupedButtonBlockGen(
+        "🔰 Select Topic for Math-I -  ",
+        [
+            payloadBtnGen("Vector Space", "math1_vector_flow"),
+            payloadBtnGen("Matrix", "math1_matrix_flow"),
+            payloadBtnGen("Co-ord geometry", "math1_co_ord_flow"),
+        ]
+    ),
+    grroupedButtonBlockGen(
+        "🔰 Select Topic for Math-I -  ",
+        [
+            payloadBtnGen("Linear Algebra", "math1_linear_flow"),
+            payloadBtnGen("Change of Axes", "math1_change_axes_flow"),
+        ]
+    ),
 ]
 
 

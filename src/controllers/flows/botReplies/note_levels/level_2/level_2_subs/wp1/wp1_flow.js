@@ -1,10 +1,10 @@
 let grroupedButtonBlockGen = require("../../../../../../genrators/grroupedButtonBlockGen");
 let webBtnBlockGen = require("../../../../../../genrators/webBtnBlockGen");
 let payloadBtnGen = require("../../../../../../genrators/payloadBtnGen");
-
+let bondiFlow = require("../../../../sponsoredFlows/bondiCard");
 
 let wp1Flow = [
-
+    bondiFlow,
     grroupedButtonBlockGen("📌 Full Hand Note & Basic Stuff -",
         [
             webBtnBlockGen("Akib(2019)", "https://drive.google.com/file/d/12kmXjlTAQiY14w5rd1I8ZFWOYpxXvdUF/view"),

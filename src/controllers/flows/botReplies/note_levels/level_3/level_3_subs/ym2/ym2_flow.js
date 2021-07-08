@@ -2,10 +2,11 @@ let grroupedButtonBlockGen = require("../../../../../../genrators/grroupedButton
 let webBtnBlockGen = require("../../../../../../genrators/webBtnBlockGen");
 let payloadBtnGen = require("../../../../../../genrators/payloadBtnGen");
 let cardGenerator = require("../../../../../../genrators/cardGenerator");
+let bondiFlow = require("../../../../sponsoredFlows/bondiCard");
 
 
 let ym2Flow = [
-
+    bondiFlow,
     grroupedButtonBlockGen("🔰 Select Topics for YM-II -",
         [
             payloadBtnGen("Books", "ym2_books_flow"),

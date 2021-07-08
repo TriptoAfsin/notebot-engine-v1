@@ -2,9 +2,11 @@ let grroupedButtonBlockGen = require("../../../../../../genrators/grroupedButton
 let webBtnBlockGen = require("../../../../../../genrators/webBtnBlockGen");
 let payloadBtnGen = require("../../../../../../genrators/payloadBtnGen");
 let cardGenerator = require("../../../../../../genrators/cardGenerator");
+let bondiFlow = require("../../../../sponsoredFlows/bondiCard");
 
 
 let chem2_flow = [
+    bondiFlow,
     grroupedButtonBlockGen("📌 Hand Notes -",
         [
             webBtnBlockGen("Hand Note(Maruf)", "https://drive.google.com/file/d/12LLcW92t1BTLFENL9DQH9xkJOvn0VIVe/view?usp=sharing"),

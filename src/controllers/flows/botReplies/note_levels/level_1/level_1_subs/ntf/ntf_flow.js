@@ -1,10 +1,11 @@
 let grroupedButtonBlockGen = require("../../../../../../genrators/grroupedButtonBlockGen");
 let webBtnBlockGen = require("../../../../../../genrators/webBtnBlockGen");
 let payloadBtnGen = require("../../../../../../genrators/payloadBtnGen");
-
+let bondiFlow = require("../../../../sponsoredFlows/bondiCard");
 
 
 let ntf_flow = [
+    bondiFlow,
     grroupedButtonBlockGen(`📌 Hand Notes & Questions -`,
         [
             webBtnBlockGen("Wasy(2021)", "https://drive.google.com/file/d/1DmMmmwzpUErfcn3yeG58tnXg7bzXJ0PR/view?usp=sharing"),

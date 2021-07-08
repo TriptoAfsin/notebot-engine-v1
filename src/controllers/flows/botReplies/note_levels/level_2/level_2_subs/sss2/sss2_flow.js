@@ -5,8 +5,6 @@ let bondiFlow = require("../../../../sponsoredFlows/bondiCard");
 
 
 
-
-
 let sss2Flow = [
     bondiFlow,
     grroupedButtonBlockGen(

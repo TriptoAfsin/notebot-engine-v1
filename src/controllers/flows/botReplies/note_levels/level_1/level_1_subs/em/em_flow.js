@@ -2,10 +2,11 @@ let grroupedButtonBlockGen = require("../../../../../../genrators/grroupedButton
 let webBtnBlockGen = require("../../../../../../genrators/webBtnBlockGen");
 let payloadBtnGen = require("../../../../../../genrators/payloadBtnGen");
 let cardGenerator = require("../../../../../../genrators/cardGenerator");
-
+let bondiFlow = require("../../../../sponsoredFlows/bondiCard");
 
 
 let em_flow = [
+    bondiFlow,
     grroupedButtonBlockGen("📌 Short Hand Note All(Saidul, 2019) -",
         [
             webBtnBlockGen("⚡Download", "https://drive.google.com/file/d/11lnmfUbsrYQa0dwJvCoe3uU2JmNPAOUE/view?usp=sharing")

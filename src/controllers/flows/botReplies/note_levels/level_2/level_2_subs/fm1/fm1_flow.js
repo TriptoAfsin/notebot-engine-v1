@@ -1,9 +1,11 @@
 let grroupedButtonBlockGen = require("../../../../../../genrators/grroupedButtonBlockGen");
 let webBtnBlockGen = require("../../../../../../genrators/webBtnBlockGen");
 let payloadBtnGen = require("../../../../../../genrators/payloadBtnGen");
+let bondiFlow = require("../../../../sponsoredFlows/bondiCard");
 
 
 let fm1Flow = [
+    bondiFlow,
     grroupedButtonBlockGen(
         `📌 Full Hand Notes - `,
         [
