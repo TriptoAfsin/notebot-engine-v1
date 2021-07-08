@@ -1068,6 +1068,8 @@ const acm_accountingAction = require("./flows/botReplies/note_levels/level_3/lev
 const acm_recordingProcess = require("./flows/botReplies/note_levels/level_3/level_3_subs/acm/topics/acmRecordingProcess");
 const acm_CostBehav = require("./flows/botReplies/note_levels/level_3/level_3_subs/acm/topics/acmCostBehav");
 const acm_accMerchendizing = require("./flows/botReplies/note_levels/level_3/level_3_subs/acm/topics/acmAccForMerchendizing");
+const acm_costAccountingSys = require("./flows/botReplies/note_levels/level_3/level_3_subs/acm/topics/acmCostAccountingSys");
+const acm_costingTech = require("./flows/botReplies/note_levels/level_3/level_3_subs/acm/topics/acmCostingTechn");
 
 //om
 const om_flow = require("./flows/botReplies/note_levels/level_3/level_3_subs/om/om_flow");
@@ -4605,6 +4607,12 @@ let handlePostback = async (sender_psid, received_postback) => {
   }
   else if (payload === 'acm_accMerchendizing_flow') {
     magicFunc(sender_psid, acm_accMerchendizing);
+  }
+  else if (payload === 'acm_costAccSys_flow') {
+    magicFunc(sender_psid, acm_costAccountingSys);
+  }
+  else if (payload === 'acm_costTech_flow') {
+    magicFunc(sender_psid, acm_costingTech);
   }
 
   //om
