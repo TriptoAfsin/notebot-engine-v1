@@ -21,8 +21,8 @@ let botConfig = {
         quickReplyBtn("Help😥", "help_flow"),
         quickReplyBtn("Notes📗", "notes_flow"),
         quickReplyBtn("Routine📅", "routine_flow"),
-        quickReplyBtn("Results📝", "result_flow"),
-        quickReplyBtn("Lab Reports📋", "reports_flow"),
+        quickReplyBtn("Results📊", "result_flow"),
+        quickReplyBtn("Lab Reports🧪", "reports_flow"),
     ]
 }
     
