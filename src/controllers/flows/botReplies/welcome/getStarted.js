@@ -26,39 +26,11 @@ let getFacebookUserInfo = (sender_psid) => {
     })
 }
 */
-
-
-
+const botConfig = require('../../../../config/botConfig')
 const getStarted = [
     {
-        "text": `Hello 😄, Welcome to the new BUTEX NoteBOT powered by বন্দি পাঠশালা`,
-        "quick_replies": [{
-                "content_type": "text",
-                "title": "Help😥",
-                "payload": "help_flow"
-            },
-            {
-                "content_type": "text",
-                "title": "Notes📗",
-                "payload": "notes_flow"
-            },
-            {
-                "content_type": "text",
-                "title": "Routine📅",
-                "payload": "routine_flow"
-            },
-            {
-                "content_type": "text",
-                "title": "Results📝",
-                "payload": "result_flow"
-            },
-            {
-                "content_type": "text",
-                "title": "Lab Reports📋",
-                "payload": "reports_flow"
-            }
-
-        ]
+        "text": botConfig.getStartedText,
+        "quick_replies": botConfig.getStartedButtons,
     }
 ]
 
