@@ -4,6 +4,7 @@ let quickReplyBtn = require('./configGenerators/quickReplyBtn')
 
 
 let botConfig = {
+    //Get started texts
     defaultGreeting: "This BOT Provides Study Materials for BUTEX(Bangladesh University of Textiles)😀Moreover It Has Casual Talking Abilities(Bangla & English)☺",
     enGreeting: "This BOT Provides Study Materials for BUTEX(Bangladesh University of Textiles)😀Moreover It Has Casual Talking Abilities(Bangla & English)☺",
 
@@ -11,7 +12,7 @@ let botConfig = {
     persistentMenuButtons: [
         payloadBtn("Help 😥", "help_payload"),
         payloadBtn("Donate 💰", "donation_payload"),
-        webBtn("Submit Notes 📗", "https://goo.gl/forms/akfj9X8vxuoj2xQg2"),
+        webBtn("Submit Notes 📙", "https://goo.gl/forms/akfj9X8vxuoj2xQg2"),
         webBtn("NoteBOT Web 🌍", "https://notebot.netlify.app/#/"),
     ],
 

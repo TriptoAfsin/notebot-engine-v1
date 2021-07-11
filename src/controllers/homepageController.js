@@ -2,6 +2,9 @@
 require("dotenv").config();
 const request = require('request');
 
+//bot config
+const botConfig = require("../config/botConfig")
+
 let getHomepage = (req, res) => {
     return res.render("homepage.ejs");
 };
@@ -22,40 +25,17 @@ let setUpUserFacebookProfile = (req, res) => {
         "greeting":[
             {
               "locale":"default",
-              "text":"This BOT Provides Study Materials for BUTEX(Bangladesh University of Textiles)😀Moreover It Has Casual Talking Abilities(Bangla & English)☺"
+              "text": botConfig.defaultGreeting,
             }, {
               "locale":"en_US",
-              "text":"This BOT Provides Study Materials for BUTEX(Bangladesh University of Textiles)😀Moreover It Has Casual Talking Abilities(Bangla & English)☺"
+              "text": botConfig.enGreeting,
             }
         ],
         "persistent_menu": [
             {
                 "locale": "default",
                 "composer_input_disabled": false,
-                "call_to_actions": [
-                    {
-                        "type": "postback",
-                        "title": "Help 😥",
-                        "payload": "help_payload"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Donate 💰",
-                        "payload": "donation_payload"
-                    },
-                    {
-                        "type": "web_url",
-                        "title": "Submit Notes📗",
-                        "url": "https://goo.gl/forms/akfj9X8vxuoj2xQg2",
-                        "webview_height_ratio": "full"
-                    },
-                    {
-                        "type": "web_url",
-                        "title": "NoteBOT Web 🌍",
-                        "url": "https://notebot.netlify.app/#/",
-                        "webview_height_ratio": "full"
-                    }
-                ]
+                "call_to_actions": botConfig.persistentMenuButtons,
             }
         ],
         
