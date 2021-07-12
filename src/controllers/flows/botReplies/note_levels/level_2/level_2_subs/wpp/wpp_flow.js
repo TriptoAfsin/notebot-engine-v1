@@ -1,46 +1,25 @@
+let grroupedButtonBlockGen = require("../../../../../../genrators/grroupedButtonBlockGen");
+let webBtnBlockGen = require("../../../../../../genrators/webBtnBlockGen");
+let payloadBtnGen = require("../../../../../../genrators/payloadBtnGen");
+let cardGenerator = require("../../../../../../genrators/cardGenerator");
+let bondiFlow = require("../../../../sponsoredFlows/bondiCard");
+
+
 let wppFlow = [
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🔰 Select Topics for WPP - ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "Questions",
-                        "payload": "wpp_quess_flow"
-                    }
-                ],
-            },
-        },
-    },
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🔰 Select Topics for WPP - ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "Pretreatment",
-                        "payload": "wpp_pretreatment_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Singeing",
-                        "payload": "wpp_singeing_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Desizing",
-                        "payload": "wpp_desizing_flow"
-                    }
-                ],
-            },
-        },
-    }
+    grroupedButtonBlockGen(
+        "📌 Select Topics for WPP -",
+        [
+            payloadBtnGen("Questions", "wpp_quess_flow"),
+        ]
+    ),
+    grroupedButtonBlockGen(
+        "🔰 Select Topics for WPP -",
+        [
+            payloadBtnGen("Pretreatment", "wpp_pretreatment_flow"),
+            payloadBtnGen("Singeing", "wpp_singeing_flow"),
+            payloadBtnGen("Desizing", "wpp_desizing_flow"),
+        ]
+    ),
 ]
 
 
