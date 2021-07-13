@@ -1,6 +1,14 @@
 let textBlockGen = require("../../../../../../../genrators/textBlockGen");
+let grroupedButtonBlockGen = require("../../../../../../../genrators/grroupedButtonBlockGen");
+let webBtnBlockGen = require("../../../../../../../genrators/webBtnBlockGen");
 
 let math2Laplace = [
+    grroupedButtonBlockGen(
+        "📌 2021 Laplace Notes",
+        [
+            webBtnBlockGen("Folder", "https://drive.google.com/drive/folders/1mb68x9nMU7KD3FDb5gBVXTo7tlfpRiB2?usp=sharing")
+        ]
+    ),
     textBlockGen(`🔷 Hand Note Full(Tanvir, 2019)-\n\nhttps://drive.google.com/file/d/164T13o5TWCLREezY2djcB1Qw_Sx4O5qR/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note Laplace(Archi,AE-45,2021)-\n\nhttps://drive.google.com/file/d/1k-Yt9LT5qArr5nVzNAHketGre1Ks-2Et/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note Inverse Laplace(Archi,AE-45,2021)-\n\nhttps://drive.google.com/file/d/1O2atS1Nkw8t_KWzOxtzYj0w9_WcNui5V/view?usp=sharing`),
