@@ -1,8 +1,7 @@
+let textBlockGen = require("../../../../../../../genrators/textBlockGen");
+
 let wppDesizing = [
-    {
-        "text": `🔷Sheet(Tabassum Mam, 2019)-
-        https://drive.google.com/file/d/1ksP2IjQgOBh2DceC1Qi0hKnjbo4inTEY/view?usp=sharing`
-    }
+    textBlockGen(`🔷 Sheet(Tabassum Mam, 2019)-\n\nhttps://drive.google.com/file/d/1ksP2IjQgOBh2DceC1Qi0hKnjbo4inTEY/view?usp=sharing`),
 ]
 
 
