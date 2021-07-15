@@ -35,6 +35,7 @@ let phy1_flow = [
     grroupedButtonBlockGen(`🔰 Select Topic for PHY-I - `,
         [
             payloadBtnGen("Surface Tension", "phy1_surface_flow"),
+            webBtnBlockGen("Fluid Mech..", "https://drive.google.com/file/d/1PfyCtmc1xX9g8pbxZp4eC9hyYAlWf0xa/view?usp=sharing"),
         ]
     ),
 ]

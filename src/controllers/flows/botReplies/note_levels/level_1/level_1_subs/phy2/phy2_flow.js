@@ -15,6 +15,11 @@ let phy2_flow = [
             webBtnBlockGen("Rushad(2021)", "https://drive.google.com/file/d/1HGf21qAypMgltBJRwslTJ5NcIjB8M2pL/view?usp=sharing")
         ]
     ),
+    grroupedButtonBlockGen("📌 Combined Note -",
+        [
+            webBtnBlockGen("Wasy(2021)", "https://drive.google.com/file/d/1Hw9qRAf2fJBL_6UgResO_WgUvnjUMlrA/view?usp=sharing"),
+        ]
+    ),
     grroupedButtonBlockGen("📌 QB Solve - ",
         [
             webBtnBlockGen("By AE-45", "https://drive.google.com/file/d/1F1MVY00RL6MmjLhCgx7ODacgnJOQgI1A/view?usp=sharing"),
