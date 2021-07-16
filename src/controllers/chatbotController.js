@@ -1823,7 +1823,7 @@ function handleMessage(sender_psid, received_message) {
     if(received_message.attachments){
       response = textBlockGen(`${randomPicker(attachmentReply)}`);
       callSendAPI(sender_psid, response);
-      console.log(`🟡 Attachment found !`)
+      console.log(`🟡 Attachment found !`) //attachments: [ { type: 'image', payload: [Object] } ]
     }
     else{
       response = defaultReply[0];

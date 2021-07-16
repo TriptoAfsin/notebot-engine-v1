@@ -8,6 +8,7 @@ const foodWords = [
     "biriyani",
     "birani",
     "ice cream",
+    "ice-cream",
     "বার্গার",
     "কাচ্চি",
     "বিরিয়ানী",
@@ -17,7 +18,8 @@ const foodWords = [
     "চিকেন",
     "স্যুপ",
     "ভাত",
-    "খিচুড়ী"
+    "খিচুড়ী",
+    "চিপস",
 ];
 
 
