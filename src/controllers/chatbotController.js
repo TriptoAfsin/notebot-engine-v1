@@ -1821,7 +1821,7 @@ function handleMessage(sender_psid, received_message) {
 
   if (!received_message.text) {
     if(received_message.attachments){
-      let attachments = {... received_message.attachments}
+      let attachments = received_message.attachments
       if(received_message.attachments.type === "image"){
         response = textBlockGen(`${randomPicker(attachmentReply.imageReply)}`);
         callSendAPI(sender_psid, response);
@@ -1832,7 +1832,7 @@ function handleMessage(sender_psid, received_message) {
         callSendAPI(sender_psid, response);
       }
       console.log(`🟡 Attachment found !`) 
-      console.log(`${attachments}`) 
+      console.log(`${attachments[0]}`) 
     }
     else{
       response = defaultReply[0];
