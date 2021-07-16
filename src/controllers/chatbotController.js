@@ -1692,7 +1692,7 @@ function handleReaction(sender_psid, received_reaction){
   console.log(`🔴 Received Reaction: ${received_reaction.emoji}`)
 
   if (wordIncludes(loveMojis, received_reaction)) {
-    response = textBlockGen(`${randomPicker(loveReply)}`);
+    response = textBlockGen(`${randomPicker(loveReplies)}`);
     callSendAPI(sender_psid, response);
   }
 }
