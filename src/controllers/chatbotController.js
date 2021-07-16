@@ -1821,13 +1821,13 @@ function handleMessage(sender_psid, received_message) {
 
   if (!received_message.text) {
     if(received_message.attachments){
-      if(received_message.attachments.type === 'image'){
-        response = textBlockGen(`${randomPicker(attachmentReply.imageReply)}`);
+      if(received_message.attachments.type === "image"){
+        response = textBlockGen(`${randomPicker(attachmentReply)}`);
         callSendAPI(sender_psid, response);
       }
-      else if(received_message.attachments.type === 'audio'){
+      else if(received_message.attachments.type === "audio"){
         console.log(`🟡 Voice Found`) 
-        response = textBlockGen(`${randomPicker(attachmentReply.audioReply)}`);
+        response = textBlockGen(`${randomPicker(attachmentReply)}`);
         callSendAPI(sender_psid, response);
       }
       console.log(`🟡 Attachment found !`) 
