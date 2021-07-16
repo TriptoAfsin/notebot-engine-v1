@@ -1664,8 +1664,14 @@ let postWebhook = (req, res) => {
       // pass the event to the appropriate handler function
       if (webhook_event.message && !webhook_event.message.is_echo) {
         handleMessage(sender_psid, webhook_event.message);
-      } else if (webhook_event.postback) {
+      } 
+      //for postbacks
+      else if (webhook_event.postback) {
         handlePostback(sender_psid, webhook_event.postback);
+      }
+      //for reactions
+      else if(webhook_event.reaction){
+        handleReaction(sender_psid,webhook_event.reaction);
       }
     });
 
@@ -1677,6 +1683,18 @@ let postWebhook = (req, res) => {
     res.sendStatus(404);
   }
 
+}
+
+
+//handles reaction
+function handleReaction(sender_psid, received_reaction){
+
+  console.log(`🔴 Received Reaction: ${received_reaction}`)
+
+  if (wordIncludes(positive, received_reaction)) {
+    response = textBlockGen(`${randomPicker(loveReply)}`);
+    callSendAPI(sender_psid, response);
+  }
 }
 
 
@@ -1821,8 +1839,8 @@ function handleMessage(sender_psid, received_message) {
 
   if (!received_message.text) {
     if(received_message.attachments){
-      let attachments = received_message.attachments
       if(received_message.attachments[0].type === "image"){
+        console.log(`🟡 Image Found`) 
         response = textBlockGen(`${randomPicker(attachmentReply.imageReply)}`);
         callSendAPI(sender_psid, response);
       }
@@ -1832,7 +1850,6 @@ function handleMessage(sender_psid, received_message) {
         callSendAPI(sender_psid, response);
       }
       console.log(`🟡 Attachment found !`) 
-      console.log(`${attachments[0]}`) 
     }
     else{
       response = defaultReply[0];
