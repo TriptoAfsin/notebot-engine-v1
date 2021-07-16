@@ -1821,9 +1821,15 @@ function handleMessage(sender_psid, received_message) {
 
   if (!received_message.text) {
     if(received_message.attachments){
-      response = textBlockGen(`${randomPicker(attachmentReply)}`);
-      callSendAPI(sender_psid, response);
-      console.log(`🟡 Attachment found !`) //attachments: [ { type: 'image', payload: [Object] } ]
+      if(received_message.attachments.type === 'image'){
+        response = textBlockGen(`${randomPicker(attachmentReply.imageReply)}`);
+        callSendAPI(sender_psid, response);
+      }
+      else if(received_message.attachments.type === 'audio'){
+        response = textBlockGen(`${randomPicker(attachmentReply.audioReply)}`);
+        callSendAPI(sender_psid, response);
+      }
+      console.log(`🟡 Attachment found !`) 
     }
     else{
       response = defaultReply[0];
