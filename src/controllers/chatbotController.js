@@ -1822,15 +1822,16 @@ function handleMessage(sender_psid, received_message) {
   if (!received_message.text) {
     if(received_message.attachments){
       if(received_message.attachments.type === "image"){
-        response = textBlockGen(`${randomPicker(attachmentReply)}`);
+        response = textBlockGen(`${randomPicker(attachmentReply.imageReply)}`);
         callSendAPI(sender_psid, response);
       }
       else if(received_message.attachments.type === "audio"){
         console.log(`🟡 Voice Found`) 
-        response = textBlockGen(`${randomPicker(attachmentReply)}`);
+        response = textBlockGen(`${randomPicker(attachmentReply.audioReply)}`);
         callSendAPI(sender_psid, response);
       }
       console.log(`🟡 Attachment found !`) 
+      console.log(`${received_message.attachments}`) 
     }
     else{
       response = defaultReply[0];
