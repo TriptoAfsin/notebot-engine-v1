@@ -1689,9 +1689,9 @@ let postWebhook = (req, res) => {
 //handles reaction
 function handleReaction(sender_psid, received_reaction){
 
-  console.log(`🔴 Received Reaction: ${received_reaction}`)
+  console.log(`🔴 Received Reaction: ${received_reaction.emoji}`)
 
-  if (wordIncludes(positive, received_reaction)) {
+  if (wordIncludes(loveMojis, received_reaction)) {
     response = textBlockGen(`${randomPicker(loveReply)}`);
     callSendAPI(sender_psid, response);
   }
