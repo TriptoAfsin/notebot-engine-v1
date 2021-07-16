@@ -1698,6 +1698,38 @@ function handleReaction(sender_psid, received_reaction){
     response = textBlockGen(`${randomPicker(reactionEmojiReply.love)}`);
     callSendAPI(sender_psid, response);
   }
+
+  else if (emojiIs(reactionEmoji.sad, received_reaction)) {
+    response = textBlockGen(`${randomPicker(reactionEmojiReply.sad)}`);
+    callSendAPI(sender_psid, response);
+  }
+
+  else if (emojiIs(reactionEmoji.haha, received_reaction)) {
+    response = textBlockGen(`${randomPicker(reactionEmojiReply.haha)}`);
+    callSendAPI(sender_psid, response);
+  }
+
+  else if (emojiIs(reactionEmoji.angry, received_reaction)) {
+    response = textBlockGen(`${randomPicker(reactionEmojiReply.angry)}`);
+    callSendAPI(sender_psid, response);
+  }
+
+  else if (emojiIs(reactionEmoji.like, received_reaction)) {
+    response = textBlockGen(`${randomPicker(reactionEmojiReply.like)}`);
+    callSendAPI(sender_psid, response);
+  }
+
+  else if (emojiIs(reactionEmoji.dislike, received_reaction)) {
+    response = textBlockGen(`${randomPicker(reactionEmojiReply.dislike)}`);
+    callSendAPI(sender_psid, response);
+  }
+
+
+  //default
+  else{
+    response = textBlockGen(`${randomPicker(reactionEmojiReply.misc)}`);
+    callSendAPI(sender_psid, response);
+  }
 }
 
 
