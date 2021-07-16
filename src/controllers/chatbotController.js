@@ -1693,7 +1693,21 @@ let postWebhook = (req, res) => {
 function getUserInfo(sender_psid){
   axios.get(`https://graph.facebook.com/${sender_psid}?fields=first_name,last_name,profile_pic&access_token=${PAGE_ACCESS_TOKEN}`).then(resp => {
       console.log(resp)
-    });
+    }).cath(
+      function(error){
+        if(error.response){
+          console.log(error.response.data);
+          console.log(error.response.status);
+        }
+        else if (error.request) {
+          console.log(error.request);
+        }
+        else {
+          console.log('Error', error.message);
+        }
+        console.log(error.config);
+      }
+    );
 }
 
 
