@@ -1691,7 +1691,7 @@ function handleReaction(sender_psid, received_reaction){
 
   console.log(`🔴 Received Reaction: ${received_reaction.emoji}`)
 
-  if (wordIncludes(loveMojis, received_reaction.emoji)) {
+  if (emojiIs(loveMojis, received_reaction.emoji)) {
     response = textBlockGen(`${randomPicker(loveReplies)}`);
     callSendAPI(sender_psid, response);
   }
@@ -5698,6 +5698,10 @@ let magicFunc = (sender_psid, flow) => {
 //word includes
 let wordIncludes = (keywordArray, received_message) => {
   return keywordArray.some(word => received_message.text.toLowerCase().includes(word)); //received_message is an object
+}
+
+let emojiIs = (keywordArray, received_reaction) => {
+  return keywordArray.some(emoji => received_reaction.emoji.includes(emoji)); //received_message is an object
 }
 
 //payload include
