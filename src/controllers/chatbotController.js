@@ -1822,11 +1822,11 @@ function handleMessage(sender_psid, received_message) {
   if (!received_message.text) {
     if(received_message.attachments){
       let attachments = received_message.attachments
-      if(received_message.attachments.type === "image"){
+      if(received_message.attachments[0].type === "image"){
         response = textBlockGen(`${randomPicker(attachmentReply.imageReply)}`);
         callSendAPI(sender_psid, response);
       }
-      else if(received_message.attachments.type === "audio"){
+      else if(received_message.attachments[0].type === "audio"){
         console.log(`🟡 Voice Found`) 
         response = textBlockGen(`${randomPicker(attachmentReply.audioReply)}`);
         callSendAPI(sender_psid, response);
