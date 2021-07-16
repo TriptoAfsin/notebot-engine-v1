@@ -208,6 +208,14 @@ const byeReplies = require('./keywords/replies/byeReply');
 const sentiWords = require('./keywords/sentiWords');
 const sentiReplies = require('./keywords/replies/sentiReply');
 
+//fool
+const foolWords = require('./keywords/foolWords');
+const foolReplies = require('./keywords/replies/foolReply');
+
+//ahoh
+const ahOhWords = require('./keywords/ahOhWords');
+const ahOhReplies = require('./keywords/replies/ahOhReply');
+
 //gg
 const ggWord = require('./keywords/ggWord');
 const ggReply = require('./keywords/replies/ggReply');
@@ -444,8 +452,8 @@ const donation_nagad = require('./flows/botReplies/donation/nagadDonation');
 const donation_surecash = require('./flows/botReplies/donation/surecashDonation');
 
 
-
-
+//attachment reply
+const attachmentReply = require('./keywords/replies/attachmentReply');
 
 //global replies
 const notAvailable = require('./flows/botReplies/notAvailable');
@@ -1580,6 +1588,7 @@ const help_flow = require('./flows/helpFlow');
 
 
 
+
 const MY_VERIFY_TOKEN = process.env.MY_VERIFY_TOKEN;
 
 
@@ -1811,8 +1820,16 @@ function handleMessage(sender_psid, received_message) {
 
 
   if (!received_message.text) {
-    response = defaultReply[0];
-    callSendAPI(sender_psid, response);
+    if(received_message.attachments){
+      response = textBlockGen(`${randomPicker(attachmentReply)}`);
+      callSendAPI(sender_psid, response);
+      console.log(`🟡 Attachment found !`)
+    }
+    else{
+      response = defaultReply[0];
+      callSendAPI(sender_psid, response);
+    }
+    console.log(received_message)
   }
 
   else if (wordIncludes(greets, received_message)) {
@@ -2170,6 +2187,18 @@ function handleMessage(sender_psid, received_message) {
   //chill
   else if (wordIncludes(chillWords, received_message)) {
     response = textBlockGen(`${randomPicker(chillReplies)}`)
+    callSendAPI(sender_psid, response);
+  }
+
+  //fool
+  else if (wordIncludes(foolWords, received_message)) {
+    response = textBlockGen(`${randomPicker(foodReplies)}`)
+    callSendAPI(sender_psid, response);
+  }
+
+  //ahOh
+  else if (wordIncludes(ahOhWords, received_message)) {
+    response = textBlockGen(`${randomPicker(ahOhReplies)}`)
     callSendAPI(sender_psid, response);
   }
 
