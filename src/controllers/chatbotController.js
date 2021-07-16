@@ -1691,7 +1691,7 @@ function handleReaction(sender_psid, received_reaction){
 
   console.log(`🔴 Received Reaction: ${received_reaction.emoji}`)
 
-  if (emojiIs(loveMojis, received_reaction.emoji)) {
+  if (emojiIs(loveMojis, received_reaction)) {
     response = textBlockGen(`${randomPicker(loveReplies)}`);
     callSendAPI(sender_psid, response);
   }
