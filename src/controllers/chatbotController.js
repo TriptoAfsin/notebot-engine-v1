@@ -1826,6 +1826,7 @@ function handleMessage(sender_psid, received_message) {
         callSendAPI(sender_psid, response);
       }
       else if(received_message.attachments.type === 'audio'){
+        console.log(`🟡 Voice Found`) 
         response = textBlockGen(`${randomPicker(attachmentReply.audioReply)}`);
         callSendAPI(sender_psid, response);
       }
