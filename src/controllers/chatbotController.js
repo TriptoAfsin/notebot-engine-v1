@@ -1724,6 +1724,11 @@ function handleReaction(sender_psid, received_reaction){
     callSendAPI(sender_psid, response);
   }
 
+  else if (emojiIs(reactionEmoji.wow, received_reaction)) {
+    response = textBlockGen(`${randomPicker(reactionEmojiReply.wow)}`);
+    callSendAPI(sender_psid, response);
+  }
+
 
   //default
   else{
