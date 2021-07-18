@@ -1667,14 +1667,14 @@ let postWebhook = (req, res) => {
       // pass the event to the appropriate handler function
       if (webhook_event.message && !webhook_event.message.is_echo) {
         handleMessage(sender_psid, webhook_event.message);
-      } 
+      }
       //for postbacks
       else if (webhook_event.postback) {
         handlePostback(sender_psid, webhook_event.postback);
       }
       //for reactions
-      else if(webhook_event.reaction){
-        handleReaction(sender_psid,webhook_event.reaction);
+      else if (webhook_event.reaction) {
+        handleReaction(sender_psid, webhook_event.reaction);
       }
     });
 
@@ -1689,7 +1689,7 @@ let postWebhook = (req, res) => {
 }
 
 //get user info function 
-
+/*
 function getUserInfo(sender_psid){
   axios.get(`https://graph.facebook.com/${sender_psid}?fields=first_name,last_name,profile_pic&access_token=${PAGE_ACCESS_TOKEN}`).then(resp => {
       console.log(resp)
@@ -1709,10 +1709,11 @@ function getUserInfo(sender_psid){
       }
     );
 }
+*/
 
 
 //handles reaction
-function handleReaction(sender_psid, received_reaction){
+function handleReaction(sender_psid, received_reaction) {
 
   let reactionEmoji = require('./keywords/reactionEmoji')
   let reactionEmojiReply = require('./keywords/replies/reactionReply')
@@ -1756,7 +1757,7 @@ function handleReaction(sender_psid, received_reaction){
 
 
   //default
-  else{
+  else {
     response = textBlockGen(`${randomPicker(reactionEmojiReply.misc)}`);
     callSendAPI(sender_psid, response);
   }
@@ -1903,20 +1904,20 @@ function handleMessage(sender_psid, received_message) {
 
 
   if (!received_message.text) {
-    if(received_message.attachments){
-      if(received_message.attachments[0].type === "image"){
-        console.log(`🟡 Image Found`) 
+    if (received_message.attachments) {
+      if (received_message.attachments[0].type === "image") {
+        console.log(`🟡 Image Found`)
         response = textBlockGen(`${randomPicker(attachmentReply.imageReply)}`);
         callSendAPI(sender_psid, response);
       }
-      else if(received_message.attachments[0].type === "audio"){
-        console.log(`🟡 Voice Found`) 
+      else if (received_message.attachments[0].type === "audio") {
+        console.log(`🟡 Voice Found`)
         response = textBlockGen(`${randomPicker(attachmentReply.audioReply)}`);
         callSendAPI(sender_psid, response);
       }
-      console.log(`🟡 Attachment found !`) 
+      console.log(`🟡 Attachment found !`)
     }
-    else{
+    else {
       response = defaultReply[0];
       callSendAPI(sender_psid, response);
     }
@@ -2160,7 +2161,7 @@ function handleMessage(sender_psid, received_message) {
         //let myDate = new Date(topRss[i].published);
         response.push(
           groupedBtnBlockGen(
-            `🟣 ${i+1}\n\n${topRss[i].title} -`,
+            `🟣 ${i + 1}\n\n${topRss[i].title} -`,
             [
               webBtnBlockGen("Visit 🌐", `${topRss[i].link}`)
             ]
@@ -2784,7 +2785,7 @@ function handleMessage(sender_psid, received_message) {
 
   //default reply
   else if (received_message.text) {
-    response = defaultReply[Math.floor(Math.random()*defaultReply.length)];
+    response = defaultReply[Math.floor(Math.random() * defaultReply.length)];
     callSendAPI(sender_psid, response);
   }
 }
