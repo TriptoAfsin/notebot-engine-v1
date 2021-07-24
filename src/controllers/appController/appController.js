@@ -22,23 +22,26 @@ let appIntro = (req, res) => {
 
 
 let notes = (req, res) => {
+
+    var fullUrl = req.protocol + '://' + req.get('host') + req.originalUrl;
+
     let noteLevels = {
         noteLevels: [
             {
                 noteLevel: 1,
-                route: '/app/notes/1'
+                route: `${fullUrl}/1`
             },
             {
                 noteLevel: 2,
-                route: '/app/notes/2'
+                route: `${fullUrl}/2`
             },
             {
                 noteLevel: 3,
-                route: '/app/notes/3'
+                route: `${fullUrl}/3`
             },
             {
                 noteLevel: 4,
-                route: '/app/notes/4'
+                route: `${fullUrl}/4`
             }
         ]
     }
