@@ -23,7 +23,7 @@ let appIntro = (req, res) => {
 
 let notes = (req, res) => {
 
-    var fullUrl = req.protocol + '://' + req.get('host') + req.originalUrl;
+    var fullUrl = req.protocol + 's://' + req.get('host') + req.originalUrl;
 
     let noteLevels = {
         noteLevels: [
