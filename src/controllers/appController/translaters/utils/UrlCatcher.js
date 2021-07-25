@@ -4,12 +4,15 @@ let UrlCatcher =  (string) => {
     let titleRegex = /\n/g
     let url = string.match(urlRegex)[1]
 
-    let title = string.replace(urlRegex, '')
+    let title = string.replace(urlRegex, '').replace(titleRegex, '').replace(/-/g,"").trim()
+    /*
     title.replace(titleRegex, '')
     let withoutLineBreaks = title.replace(titleRegex, '')
-    let finalTitle = withoutLineBreaks.replace(/-/g,"")
+    let unTrimmed = withoutLineBreaks.replace(/-/g,"")
+    let finalTitle = unTrimmed.trim()
+    */
 
-    return {finalTitle, url}
+    return {title, url}
 }
 
 

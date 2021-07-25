@@ -2,7 +2,7 @@ let math2Flow = require('../../../../../../flows/botReplies/note_levels/level_1/
 let SubTopicTrans = require('../../../../../translaters/SubTopicTrans')
 
 
-let routePrefix = "notes/1/math2"
+let routePrefix = "app/notes/1/math2"
 
 let math2App = SubTopicTrans(routePrefix, math2Flow)
 

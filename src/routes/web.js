@@ -6,6 +6,8 @@ const appController = require('../controllers/appController/appController');
 let router = express.Router();
 
 let initWebRoutes = (app) => {
+
+
     //get routes
     router.get("/", chatbotController.testMsg);
 
@@ -47,6 +49,27 @@ let initWebRoutes = (app) => {
 
     //math2
     router.get("/app/notes/1/math2", appController.math2);
+    router.get("/app/notes/1/math2/math2_books_flow", appController.math2BooksFlow);
+    router.get("/app/notes/1/math2/math2_ques_flow", appController.math2QuesFlow);
+    router.get("/app/notes/1/math2/math2_suggestion_flow", appController.math2SuggFlow);
+    router.get("/app/notes/1/math2/math2_moivre_flow", appController.math2moivreFlow);
+    router.get("/app/notes/1/math2/math2_homo_flow", appController.math2HomoFlow);
+    router.get("/app/notes/1/math2/math2_lde_flow", appController.math2LDEFlow);
+    router.get("/app/notes/1/math2/math2_exact_flow", appController.math2ExactFlow);
+    router.get("/app/notes/1/math2/math2_red_homo_flow", appController.math2RedHomoFlow);
+    router.get("/app/notes/1/math2/math2_dif_eqn_flow", appController.math2DiffEqnFlow);
+    router.get("/app/notes/1/math2/math2_linear_eqn_flow", appController.math2linEqnFlow);
+    router.get("/app/notes/1/math2/math2_residue_flow", appController.math2residueFlow);
+    router.get("/app/notes/1/math2/math2_line_int_flow", appController.math2LineIntFlow);
+    router.get("/app/notes/1/math2/math2_method_var_flow", appController.math2methodVarFlow);
+    router.get("/app/notes/1/math2/math2_analy_func_flow", appController.math2AnalyFuncFlow);
+    router.get("/app/notes/1/math2/math2_vector_flow", appController.math2VectorFlow);
+    router.get("/app/notes/1/math2/math2_ode_flow", appController.math2odeFlow);
+    router.get("/app/notes/1/math2/math2_separation_flow", appController.math2SepaVarFlow);
+    router.get("/app/notes/1/math2/math2_laplace_flow", appController.math2laplaceFlow);
+    router.get("/app/notes/1/math2/math2_cx_num_flow", appController.math2ComplexFlow);
+
+
     router.get("/app/labs", appController.labs);
 
     
