@@ -1,10 +1,7 @@
 const express = require('express');
 const app = express();
 let router = express.Router();
-
 require("dotenv").config();
-
-
 
 
 let deploymentEnvDetector = () => {
@@ -60,6 +57,39 @@ let math2ode = require('./academic/notes/level1/subs/math2/topics/appMath2Ode')
 let math2SepaVar = require('./academic/notes/level1/subs/math2/topics/appMath2SepaVar')
 let math2laplace = require('./academic/notes/level1/subs/math2/topics/appMath2Laplace')
 let math2Complex = require('./academic/notes/level1/subs/math2/topics/appMath2Complex')
+
+
+//chem1
+let chem1appFlow = require('./academic/notes/level1/subs/chem1/chem1')
+let chem1Books = require('./academic/notes/level1/subs/chem1/topics/appChem1Books')
+let chem1Ques = require('./academic/notes/level1/subs/chem1/topics/appChem1Questions')
+let chem1Periodic = require('./academic/notes/level1/subs/chem1/topics/chem1PeriodicProp')
+let chem1Dilu = require('./academic/notes/level1/subs/chem1/topics/appChem1Dil')
+let chem1Complex = require('./academic/notes/level1/subs/chem1/topics/appChem1CxComp')
+let chem1Bond = require('./academic/notes/level1/subs/chem1/topics/appChem1Bond')
+let chem1Kinetics = require('./academic/notes/level1/subs/chem1/topics/appChem1Kinetic')
+let chem1ChemicalEqui = require('./academic/notes/level1/subs/chem1/topics/appChem1ChemEqui')
+let chem1Photo = require('./academic/notes/level1/subs/chem1/topics/appChem1Photo')
+let chem1Analy = require('./academic/notes/level1/subs/chem1/topics/appChem1Analy')
+let chem1Colloid = require('./academic/notes/level1/subs/chem1/topics/appChem1Coll')
+let chem1AcidBase = require('./academic/notes/level1/subs/chem1/topics/appChem1AcidBase')
+
+
+//chem2
+let chem2appFlow = require('./academic/notes/level1/subs/chem2/chem2')
+let chem2Books = require('./academic/notes/level1/subs/chem2/topics/appChem2Books')
+let chem2Ques = require('./academic/notes/level1/subs/chem2/topics/appChem2Ques')
+let chem2OrganMetal = require('./academic/notes/level1/subs/chem2/topics/appChem2OrganMet')
+let chem2Carbonyl = require('./academic/notes/level1/subs/chem2/topics/appChem2Carbonyl')
+let chem2OrgReac = require('./academic/notes/level1/subs/chem2/topics/appChem2OrgRecMech')
+let chem2AlcPhen = require('./academic/notes/level1/subs/chem2/topics/appChem2AlcPhenol')
+let chem2Amino = require('./academic/notes/level1/subs/chem2/topics/appChem2Amino')
+let chem2Carboh = require('./academic/notes/level1/subs/chem2/topics/appChem2Carbo')
+let chem2ColorDye = require('./academic/notes/level1/subs/chem2/topics/appChem2ColorDye')
+let chem2CarboxylicAcid = require('./academic/notes/level1/subs/chem2/topics/appChem2CarboxAcid')
+let chem2Amine = require('./academic/notes/level1/subs/chem2/topics/appChem2Amine')
+let chem2Sollubility = require('./academic/notes/level1/subs/chem2/topics/appChem2Solu')
+
 
 
 
@@ -294,6 +324,144 @@ let math2ComplexFlow = (req, res) => {
     return res.send(math2Complex);
 };
 
+//chem1
+let chem1Flow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(chem1appFlow);
+};
+
+let chem1BooksFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(chem1Books);
+};
+
+let chem1QuesFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(chem1Ques);
+};
+
+
+let chem1PeriodicFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(chem1Periodic);
+};
+
+
+let chem1DiluFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(chem1Dilu);
+};
+
+let chem1CxCompFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(chem1Complex);
+};
+
+let chem1BondFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(chem1Bond);
+};
+
+let chem1KineticsFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(chem1Kinetics);
+};
+
+
+let chem1EquiFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(chem1ChemicalEqui);
+};
+
+let chem1PhotoFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(chem1Photo);
+};
+
+
+let chem1AnalyFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(chem1Analy);
+};
+
+
+let chem1CollFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(chem1Colloid);
+};
+
+let chem1AcidBaseFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(chem1AcidBase);
+};
+
+
+//chem2
+let chem2Flow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(chem2appFlow);
+};
+
+let chem2BooksFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(chem2Books);
+};
+
+let chem2QuesFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(chem2Ques);
+};
+
+let chem2OrganMetalFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(chem2OrganMetal);
+};
+
+let chem2CarboNylFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(chem2Carbonyl);
+};
+
+
+let chem2orgRecFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(chem2OrgReac);
+};
+
+let chem2AlcPhenFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(chem2AlcPhen);
+};
+
+let chem2AminoFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(chem2Amino);
+};
+
+let chem2CarboHyFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(chem2Carboh);
+};
+
+let chem2ColorDyeFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(chem2ColorDye);
+};
+
+let chem2CarboxylicAcidFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(chem2CarboxylicAcid);
+};
+
+let chem2AmineFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(chem2Amine);
+};
+
+let chem2SolubilityFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(chem2Sollubility);
+};
 
 
 /*-----------------------------------------------------------------------------------------------------------------------------------*/ 
@@ -372,4 +540,34 @@ module.exports = {
     math2SepaVarFlow: math2SepaVarFlow,
     math2laplaceFlow: math2laplaceFlow,
     math2ComplexFlow: math2ComplexFlow,
+
+
+    chem1Flow: chem1Flow,
+    chem1BooksFlow: chem1BooksFlow,
+    chem1QuesFlow: chem1QuesFlow,
+    chem1PeriodicFlow: chem1PeriodicFlow,
+    chem1DiluFlow: chem1DiluFlow,
+    chem1CxCompFlow: chem1CxCompFlow,
+    chem1BondFlow: chem1BondFlow,
+    chem1KineticsFlow: chem1KineticsFlow,
+    chem1EquiFlow: chem1EquiFlow,
+    chem1PhotoFlow: chem1PhotoFlow,
+    chem1AnalyFlow: chem1AnalyFlow,
+    chem1CollFlow: chem1CollFlow,
+    chem1AcidBaseFlow: chem1AcidBaseFlow,
+
+
+    chem2Flow: chem2Flow,
+    chem2BooksFlow: chem2BooksFlow,
+    chem2QuesFlow: chem2QuesFlow,
+    chem2OrganMetalFlow: chem2OrganMetalFlow,
+    chem2CarboNylFlow: chem2CarboNylFlow,
+    chem2orgRecFlow: chem2orgRecFlow,
+    chem2AlcPhenFlow: chem2AlcPhenFlow,
+    chem2AminoFlow: chem2AminoFlow,
+    chem2CarboHyFlow: chem2CarboHyFlow,
+    chem2ColorDyeFlow: chem2ColorDyeFlow,
+    chem2CarboxylicAcidFlow: chem2CarboxylicAcidFlow,
+    chem2AmineFlow: chem2AmineFlow,
+    chem2SolubilityFlow: chem2SolubilityFlow,
 }

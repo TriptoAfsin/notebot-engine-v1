@@ -70,6 +70,38 @@ let initWebRoutes = (app) => {
     router.get("/app/notes/1/math2/math2_cx_num_flow", appController.math2ComplexFlow);
 
 
+    //chem1
+    router.get("/app/notes/1/chem1", appController.chem1Flow);
+    router.get("/app/notes/1/chem1/chem1_books_flow", appController.chem1BooksFlow);
+    router.get("/app/notes/1/chem1/chem1_ques_flow", appController.chem1QuesFlow);
+    router.get("/app/notes/1/chem1/chem1_periodic_flow", appController.chem1PeriodicFlow);
+    router.get("/app/notes/1/chem1/chem1_dilute_flow", appController.chem1DiluFlow);
+    router.get("/app/notes/1/chem1/chem1_complx_flow", appController.chem1CxCompFlow);
+    router.get("/app/notes/1/chem1/chem1_bond_flow", appController.chem1BondFlow);
+    router.get("/app/notes/1/chem1/chem1_kinetics_flow", appController.chem1KineticsFlow);
+    router.get("/app/notes/1/chem1/chem1_equi_flow", appController.chem1EquiFlow);
+    router.get("/app/notes/1/chem1/chem1_photo_flow", appController.chem1PhotoFlow);
+    router.get("/app/notes/1/chem1/chem1_analy_flow", appController.chem1AnalyFlow);
+    router.get("/app/notes/1/chem1/chem1_coll_flow", appController.chem1CollFlow);
+    router.get("/app/notes/1/chem1/chem1_acid_base_flow", appController.chem1AcidBaseFlow);
+
+
+    //chem2
+    router.get("/app/notes/1/chem2", appController.chem2Flow);
+    router.get("/app/notes/1/chem2/chem2_books_flow", appController.chem2BooksFlow);
+    router.get("/app/notes/1/chem2/chem2_ques_flow", appController.chem2QuesFlow);
+    router.get("/app/notes/1/chem2/chem2_org_meta_flow", appController.chem2OrganMetalFlow);
+    router.get("/app/notes/1/chem2/chem2_carbonyl_flow", appController.chem2CarboNylFlow);
+    router.get("/app/notes/1/chem2/chem2_org_reac_flow", appController.chem2orgRecFlow);
+    router.get("/app/notes/1/chem2/chem2_alc_phe_flow", appController.chem2AlcPhenFlow);
+    router.get("/app/notes/1/chem2/chem2_amino_flow", appController.chem2AminoFlow);
+    router.get("/app/notes/1/chem2/chem2_carbo_flow", appController.chem2CarboHyFlow);
+    router.get("/app/notes/1/chem2/chem2_color_dye_flow", appController.chem2ColorDyeFlow);
+    router.get("/app/notes/1/chem2/chem2_carboxylic_flow", appController.chem2CarboxylicAcidFlow);
+    router.get("/app/notes/1/chem2/chem2_amine_flow", appController.chem2AmineFlow);
+    router.get("/app/notes/1/chem2/chem2_solubulity_flow", appController.chem2SolubilityFlow);
+
+
     router.get("/app/labs", appController.labs);
 
     
