@@ -22,6 +22,7 @@ let noteLevel1Subs = require('./academic/notes/level1/level1Subs')
 //math1
 let math1Flow = require('./academic/notes/level1/subs/math1/math1')
 let math1BooksFlow = require('./academic/notes/level1/subs/math1/topics/appMath1Books')
+let math1Solve2018 = require('./academic/notes/level1/subs/math1/topics/appMath1Solve2018')
 let math1QuesFlow = require('./academic/notes/level1/subs/math1/topics/appMath1Ques')
 let math1Conver = require('./academic/notes/level1/subs/math1/topics/appMath1Conv')
 let math1Expan = require('./academic/notes/level1/subs/math1/topics/appMath1Expansion')
@@ -91,6 +92,31 @@ let chem2Amine = require('./academic/notes/level1/subs/chem2/topics/appChem2Amin
 let chem2Sollubility = require('./academic/notes/level1/subs/chem2/topics/appChem2Solu')
 
 
+//phy1
+let phy1appFlow = require('./academic/notes/level1/subs/phy1/phy1')
+let phy1Books = require('./academic/notes/level1/subs/phy1/topics/appPhy1Books')
+let phy1Ques = require('./academic/notes/level1/subs/phy1/topics/appPhy1Ques')
+let phy1Circular = require('./academic/notes/level1/subs/phy1/topics/appPhy1Circular')
+let phy1Hydro = require('./academic/notes/level1/subs/phy1/topics/appPhy1Hydrau')
+let phy1Diffrac = require('./academic/notes/level1/subs/phy1/topics/appPhy1Diffrac')
+let phy1Inter = require('./academic/notes/level1/subs/phy1/topics/appPhy1Interf')
+let phy1Polar = require('./academic/notes/level1/subs/phy1/topics/appPhy1Polar')
+let phy1Elasticity = require('./academic/notes/level1/subs/phy1/topics/appPhy1Elasticity')
+let phy1Visco = require('./academic/notes/level1/subs/phy1/topics/appPhy1Visco')
+let phy1Surface = require('./academic/notes/level1/subs/phy1/topics/appPhy1Surface')
+
+//phy2
+let phy2appFlow = require('./academic/notes/level1/subs/phy2/phy2')
+let phy2Books = require('./academic/notes/level1/subs/phy2/topics/appPhy2Books')
+let phy2Ques = require('./academic/notes/level1/subs/phy2/topics/appPhy2Ques')
+let phy2Kinetic = require('./academic/notes/level1/subs/phy2/topics/appPhy2Kinetics')
+let phy2Electric = require('./academic/notes/level1/subs/phy2/topics/appPhy2Elec')
+let phy2Thermo = require('./academic/notes/level1/subs/phy2/topics/appPhy2Thermo')
+let phy2Rad = require('./academic/notes/level1/subs/phy2/topics/appPhy2Rad')
+let phy2Magnet = require('./academic/notes/level1/subs/phy2/topics/appPhy2Magnet')
+let phy2Modern = require('./academic/notes/level1/subs/phy2/topics/appPhy2modernPhy')
+let phy2Entropy = require('./academic/notes/level1/subs/phy2/topics/appPhy2Entropy')
+
 
 
 /*--------------------------------------------------------------------------*/ 
@@ -156,6 +182,11 @@ let level1Notes = (req, res) => {
 let math1 = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
     return res.send(math1Flow);
+};
+
+let math1Solve2018Flow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(math1Solve2018);
 };
 
 let math1Books = (req, res) => {
@@ -464,6 +495,117 @@ let chem2SolubilityFlow = (req, res) => {
 };
 
 
+//phy1
+let phy1Flow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(phy1appFlow);
+};
+
+let phy1BooksFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(phy1Books);
+};
+
+let phy1QuesFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(phy1Ques);
+};
+
+let phy1CircularFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(phy1Circular);
+};
+
+let phy1HydroFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(phy1Hydro);
+};
+
+let phy1DiffracFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(phy1Diffrac);
+};
+
+let phy1InterFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(phy1Inter);
+};
+
+let phy1PolarFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(phy1Polar);
+};
+
+
+let phy1ElasticityFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(phy1Elasticity);
+};
+
+let phy1ViscoFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(phy1Visco);
+};
+
+let phy1SurfaceFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(phy1Surface);
+};
+
+
+//phy2
+let phy2Flow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(phy2appFlow);
+};
+
+let phy2BooksFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(phy2Books);
+};
+
+
+let phy2QuesFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(phy2Ques);
+};
+
+let phy2KineticFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(phy2Kinetic);
+};
+
+let phy2ElectricFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(phy2Electric);
+};
+
+let phy2ThermoFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(phy2Thermo);
+};
+
+let phy2RadFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(phy2Rad);
+};
+
+let phy2MagFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(phy2Magnet);
+};
+
+let phy2ModernFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(phy2Modern);
+};
+
+let phy2EntropyFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(phy2Entropy);
+};
+
+
 /*-----------------------------------------------------------------------------------------------------------------------------------*/ 
 
 let labs = (req, res) => {
@@ -507,6 +649,7 @@ module.exports = {
     //math1
     math1: math1,
     math1Books: math1Books,
+    math1Solve2018Flow: math1Solve2018Flow,
     math1Ques: math1Ques,
     math1Conver: math1Convergence,
     math1Exapnsion: math1Expansion,
@@ -570,4 +713,27 @@ module.exports = {
     chem2CarboxylicAcidFlow: chem2CarboxylicAcidFlow,
     chem2AmineFlow: chem2AmineFlow,
     chem2SolubilityFlow: chem2SolubilityFlow,
+
+    phy1Flow: phy1Flow,
+    phy1BooksFlow: phy1BooksFlow,
+    phy1QuesFlow: phy1QuesFlow,
+    phy1CircularFlow:phy1CircularFlow,
+    phy1HydroFlow: phy1HydroFlow,
+    phy1DiffracFlow: phy1DiffracFlow,
+    phy1InterFlow:phy1InterFlow,
+    phy1PolarFlow:phy1PolarFlow,
+    phy1ElasticityFlow: phy1ElasticityFlow,
+    phy1ViscoFlow: phy1ViscoFlow,
+    phy1SurfaceFlow: phy1SurfaceFlow,
+
+    phy2Flow: phy2Flow,
+    phy2BooksFlow: phy2BooksFlow,
+    phy2QuesFlow: phy2QuesFlow,
+    phy2KineticFlow: phy2KineticFlow,
+    phy2ElectricFlow: phy2ElectricFlow,
+    phy2ThermoFlow: phy2ThermoFlow,
+    phy2RadFlow: phy2RadFlow,
+    phy2MagFlow: phy2MagFlow,
+    phy2ModernFlow: phy2ModernFlow,
+    phy2EntropyFlow: phy2EntropyFlow,
 }

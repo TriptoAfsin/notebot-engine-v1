@@ -34,6 +34,7 @@ let initWebRoutes = (app) => {
     //math1
     router.get("/app/notes/1/math1", appController.math1);
     router.get("/app/notes/1/math1/math1_books_flow", appController.math1Books);
+    router.get("/app/notes/1/math1/math1_solve18_flow", appController.math1Solve2018Flow);
     router.get("/app/notes/1/math1/math1_ques_flow", appController.math1Ques);
     router.get("/app/notes/1/math1/math1_conv_div_flow", appController.math1Conver);
     router.get("/app/notes/1/math1/math1_exapnsion_flow", appController.math1Exapnsion);
@@ -100,6 +101,33 @@ let initWebRoutes = (app) => {
     router.get("/app/notes/1/chem2/chem2_carboxylic_flow", appController.chem2CarboxylicAcidFlow);
     router.get("/app/notes/1/chem2/chem2_amine_flow", appController.chem2AmineFlow);
     router.get("/app/notes/1/chem2/chem2_solubulity_flow", appController.chem2SolubilityFlow);
+
+
+    //phy1
+    router.get("/app/notes/1/phy1", appController.phy1Flow);
+    router.get("/app/notes/1/phy1/phy1_books_flow", appController.phy1BooksFlow);
+    router.get("/app/notes/1/phy1/phy1_ques_flow", appController.phy1QuesFlow);
+    router.get("/app/notes/1/phy1/phy1_circular_flow", appController.phy1CircularFlow);
+    router.get("/app/notes/1/phy1/phy1_hydro_flow", appController.phy1HydroFlow);
+    router.get("/app/notes/1/phy1/phy1_diffraction_flow", appController.phy1DiffracFlow);
+    router.get("/app/notes/1/phy1/phy1_interfer_flow", appController.phy1InterFlow);
+    router.get("/app/notes/1/phy1/phy1_polar_flow", appController.phy1PolarFlow);
+    router.get("/app/notes/1/phy1/phy1_elas_flow", appController.phy1ElasticityFlow);
+    router.get("/app/notes/1/phy1/phy1_visco_flow", appController.phy1ViscoFlow);
+    router.get("/app/notes/1/phy1/phy1_surface_flow", appController.phy1SurfaceFlow);
+
+
+    //phy2
+    router.get("/app/notes/1/phy2", appController.phy2Flow);
+    router.get("/app/notes/1/phy2/phy2_books_flow", appController.phy2BooksFlow);
+    router.get("/app/notes/1/phy2/phy2_ques_flow", appController.phy2QuesFlow);
+    router.get("/app/notes/1/phy2/phy2_kinetic_flow", appController.phy2KineticFlow);
+    router.get("/app/notes/1/phy2/phy2_electricity_flow", appController.phy2ElectricFlow);
+    router.get("/app/notes/1/phy2/phy2_thermodynamics_flow", appController.phy2ThermoFlow);
+    router.get("/app/notes/1/phy2/phy2_radiation_flow", appController.phy2RadFlow);
+    router.get("/app/notes/1/phy2/phy2_magnet_flow", appController.phy2MagFlow);
+    router.get("/app/notes/1/phy2/phy2_modern_flow", appController.phy2ModernFlow);
+    router.get("/app/notes/1/phy2/phy2_entropy_flow", appController.phy2EntropyFlow);
 
 
     router.get("/app/labs", appController.labs);
