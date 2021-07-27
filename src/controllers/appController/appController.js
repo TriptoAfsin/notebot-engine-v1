@@ -19,6 +19,7 @@ let deploymentEnvDetector = () => {
 
 
 let noteLevel1Subs = require('./academic/notes/level1/level1Subs')
+let noteLevel2Subs = require('./academic/notes/level2/level2Subs')
 //math1
 let math1Flow = require('./academic/notes/level1/subs/math1/math1')
 let math1BooksFlow = require('./academic/notes/level1/subs/math1/topics/appMath1Books')
@@ -176,6 +177,14 @@ let level1Notes = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
 
     return res.send(noteLevel1Subs);
+};
+
+//level2
+let level2Notes = (req, res) => {
+
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+
+    return res.send(noteLevel2Subs);
 };
 
 //level1 -> math1
@@ -642,9 +651,12 @@ let labs = (req, res) => {
 
 module.exports = {
     intro: appIntro,
-    notes: notes,
+    
     labs: labs,
+
+    notes: notes,
     notesLevel1: level1Notes,
+    notesLevel2: level2Notes,
 
     //math1
     math1: math1,

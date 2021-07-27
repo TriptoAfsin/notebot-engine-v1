@@ -28,8 +28,10 @@ let initWebRoutes = (app) => {
 
     //app routes
     router.get("/app", appController.intro);
+
     router.get("/app/notes", appController.notes);
     router.get("/app/notes/1", appController.notesLevel1);
+    router.get("/app/notes/2", appController.notesLevel2);
 
     //math1
     router.get("/app/notes/1/math1", appController.math1);
