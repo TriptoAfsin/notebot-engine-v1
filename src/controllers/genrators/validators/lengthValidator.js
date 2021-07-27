@@ -1,6 +1,8 @@
+//const getCallerFile = require('get-caller-file'); // https://www.npmjs.com/package/get-caller-file
+
 let lengthValidator = (string, lengthToKeep) => {
     if (string.length > lengthToKeep) {
-        console.warn(`⚠ Warning: Max length crossed crossed! First ${lengthToKeep} chars were kept`);
+        console.warn(`⚠ Warning: Max length crossed! First ${lengthToKeep} chars were kept || ${string}(${string.length})`);
         let newString = "";
         for(let i = 0; i < lengthToKeep; i++){
             newString += string[i];
