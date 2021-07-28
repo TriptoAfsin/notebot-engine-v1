@@ -131,6 +131,13 @@ let initWebRoutes = (app) => {
     router.get("/app/notes/1/phy2/phy2_modern_flow", appController.phy2ModernFlow);
     router.get("/app/notes/1/phy2/phy2_entropy_flow", appController.phy2EntropyFlow);
 
+    //em
+    router.get("/app/notes/1/em", appController.emFlow);
+
+    //tmm
+    router.get("/app/notes/1/tmm", appController.tmmFlow);
+    router.get("/app/notes/1/tmm/tmm_quess_flow", appController.tmmQuesFlow);
+
 
     router.get("/app/labs", appController.labs);
 

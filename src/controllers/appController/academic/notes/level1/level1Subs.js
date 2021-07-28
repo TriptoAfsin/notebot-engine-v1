@@ -74,6 +74,10 @@ let level1Subs = [
     {
         subName: "ECB",
         route: "/app/notes/1/ecb"
+    },
+    {
+        subName: "FH",
+        route: "/app/notes/1/fh"
     }
 ]
 

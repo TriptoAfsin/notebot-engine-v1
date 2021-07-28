@@ -53,6 +53,11 @@ let level_1_note = [
             payloadBtnGen("IEE", "iee_flow"),
             payloadBtnGen("ECB", "ecb_flow")
         ]
+    ),
+    grroupedButtonBlockGen(`🔰 Select Subject for level 1 - `,
+        [
+            payloadBtnGen("Fashion His.", "fh_flow"),
+        ]
     )
 ]
 

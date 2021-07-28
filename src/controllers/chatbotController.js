@@ -347,6 +347,8 @@ const weav_prep_words = require('./keywords/academic_words/subjects/weavPrepWord
 const mp_words = require('./keywords/academic_words/subjects/mpWords');
 //academic -> fd2
 const fd2_words = require('./keywords/academic_words/subjects/fd2Words');
+//academic -> fh
+const fh_words = require('./keywords/academic_words/subjects/fhWords');
 //academic -> ap1
 const ap1_words = require('./keywords/academic_words/subjects/ap1Words');
 //academic -> ap2
@@ -656,7 +658,7 @@ const em_alloy = require("./flows/botReplies/note_levels/level_1/level_1_subs/em
 const em_composites = require("./flows/botReplies/note_levels/level_1/level_1_subs/em/topics/emComposites");
 const em_plastic = require("./flows/botReplies/note_levels/level_1/level_1_subs/em/topics/emPlastic");
 const em_phaseDiag = require("./flows/botReplies/note_levels/level_1/level_1_subs/em/topics/emPhaseDiag");
-
+const em_atomic_struct = require("./flows/botReplies/note_levels/level_1/level_1_subs/em/topics/emAtomicStruct");
 
 //academic flows -> pse
 const pse_flow = require("./flows/botReplies/note_levels/level_1/level_1_subs/pse/pse_flow");
@@ -948,6 +950,22 @@ const fdce_Polarity = require("./flows/botReplies/note_levels/level_2/level_2_su
 const fdce_SepaPuri = require("./flows/botReplies/note_levels/level_2/level_2_subs/fdce/topics/fdceSeparationPuri");
 const fdce_BalanceChem = require("./flows/botReplies/note_levels/level_2/level_2_subs/fdce/topics/fdceBalancingChem");
 const fdce_filtrationMethod = require("./flows/botReplies/note_levels/level_2/level_2_subs/fdce/topics/fdceFiltrationMethod");
+
+//fh
+const fh_flow = require("./flows/botReplies/note_levels/level_1/level_1_subs/fh/fh_flow");
+const fh_ArtDes = require("./flows/botReplies/note_levels/level_1/level_1_subs/fh/topics/fhArtDes");
+const fh_Roman = require("./flows/botReplies/note_levels/level_1/level_1_subs/fh/topics/fhRoman");
+const fh_Eliza = require("./flows/botReplies/note_levels/level_1/level_1_subs/fh/topics/fhEliza");
+const fh_Georgian = require("./flows/botReplies/note_levels/level_1/level_1_subs/fh/topics/fhGeorgi");
+const fh_Greek = require("./flows/botReplies/note_levels/level_1/level_1_subs/fh/topics/fhGreek");
+const fh_Egypt = require("./flows/botReplies/note_levels/level_1/level_1_subs/fh/topics/fhEgypt");
+const fh_Renaiss = require("./flows/botReplies/note_levels/level_1/level_1_subs/fh/topics/fhRenais");
+const fh_Silk = require("./flows/botReplies/note_levels/level_1/level_1_subs/fh/topics/fhSilk");
+const fh_JeansHis = require("./flows/botReplies/note_levels/level_1/level_1_subs/fh/topics/fhJeansHis");
+const fh_Muslin = require("./flows/botReplies/note_levels/level_1/level_1_subs/fh/topics/fhMuslin");
+const fh_Handloom = require("./flows/botReplies/note_levels/level_1/level_1_subs/fh/topics/fhHandloom");
+
+
 
 //tp
 const tp_flow = require("./flows/botReplies/note_levels/level_2/level_2_subs/tp/tp_flow");
@@ -2575,6 +2593,11 @@ function handleMessage(sender_psid, received_message) {
     magicFunc(sender_psid, ttqc_flow);
   }
 
+  //academic -> fh
+  else if (wordIs(fh_words, received_message)) {
+    magicFunc(sender_psid, fh_flow);
+  }
+
   //academic -> marketing
   else if (wordIs(marketing, received_message)) {
     magicFunc(sender_psid, marketing_flow);
@@ -2898,6 +2921,55 @@ let handlePostback = async (sender_psid, received_postback) => {
 
   else if (payload === 'read_write_bce_flow') {
     magicFunc(sender_psid, bce_read_writing);
+  }
+
+  //subject-> fh
+  else if (payload === 'fh_flow') {
+    magicFunc(sender_psid, fh_flow);
+  }
+
+  else if (payload === 'fh_art_des_flow') {
+    magicFunc(sender_psid, fh_ArtDes);
+  }
+
+  else if (payload === 'fh_roman_flow') {
+    magicFunc(sender_psid, fh_Roman);
+  }
+
+  else if (payload === 'fh_elizabethian_flow') {
+    magicFunc(sender_psid, fh_Eliza);
+  }
+
+  else if (payload === 'fh_georigian_flow') {
+    magicFunc(sender_psid, fh_Georgian);
+  }
+
+  else if (payload === 'fh_greek_flow') {
+    magicFunc(sender_psid, fh_Greek);
+  }
+
+  else if (payload === 'fh_egyptian_flow') {
+    magicFunc(sender_psid, fh_Egypt);
+  }
+
+  else if (payload === 'fh_renaissance_flow') {
+    magicFunc(sender_psid, fh_Renaiss);
+  }
+
+  else if (payload === 'fh_silk_flow') {
+    magicFunc(sender_psid, fh_Silk);
+  }
+
+  else if (payload === 'fh_jeans_his_flow') {
+    magicFunc(sender_psid, fh_JeansHis);
+  }
+
+  else if (payload === 'fh_muslin_flow') {
+    magicFunc(sender_psid, fh_Muslin);
+  }
+
+  else if (payload === 'fh_handloom_flow') {
+    magicFunc(sender_psid, fh_Handloom);
   }
 
   //subject-> cp
@@ -3283,6 +3355,10 @@ let handlePostback = async (sender_psid, received_postback) => {
 
   else if (payload === 'em_composites_flow') {
     magicFunc(sender_psid, em_composites);
+  }
+
+  else if (payload === 'em_atomic_struct_flow') {
+    magicFunc(sender_psid, em_atomic_struct);
   }
 
   //subject-> bfs

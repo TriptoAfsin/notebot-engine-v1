@@ -118,6 +118,13 @@ let phy2Magnet = require('./academic/notes/level1/subs/phy2/topics/appPhy2Magnet
 let phy2Modern = require('./academic/notes/level1/subs/phy2/topics/appPhy2modernPhy')
 let phy2Entropy = require('./academic/notes/level1/subs/phy2/topics/appPhy2Entropy')
 
+//em
+let emAppFlow = require('./academic/notes/level1/subs/em/em')
+
+//tmm
+let tmmAppFlow = require('./academic/notes/level1/subs/tmm/tmm')
+let tmmQues = require('./academic/notes/level1/subs/tmm/topics/appTmmQues')
+
 
 
 /*--------------------------------------------------------------------------*/ 
@@ -614,6 +621,24 @@ let phy2EntropyFlow = (req, res) => {
     return res.send(phy2Entropy);
 };
 
+//em
+let emFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(emAppFlow);
+};
+
+
+//tmm
+let tmmFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(tmmAppFlow);
+};
+
+let tmmQuesFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(tmmQues);
+};
+
 
 /*-----------------------------------------------------------------------------------------------------------------------------------*/ 
 
@@ -748,4 +773,9 @@ module.exports = {
     phy2MagFlow: phy2MagFlow,
     phy2ModernFlow: phy2ModernFlow,
     phy2EntropyFlow: phy2EntropyFlow,
+
+    emFlow: emFlow,
+
+    tmmFlow: tmmFlow,
+    tmmQuesFlow: tmmQuesFlow,
 }
