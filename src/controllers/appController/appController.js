@@ -120,10 +120,40 @@ let phy2Entropy = require('./academic/notes/level1/subs/phy2/topics/appPhy2Entro
 
 //em
 let emAppFlow = require('./academic/notes/level1/subs/em/em')
+let emBooks = require('./academic/notes/level1/subs/em/topics/appEMBooks')
+let emQues = require('./academic/notes/level1/subs/em/topics/appEmQues')
+let emMath = require('./academic/notes/level1/subs/em/topics/appEmMathChotha')
+let emBlastFur = require('./academic/notes/level1/subs/em/topics/appEmBlastFur')
+let emHeatTre = require('./academic/notes/level1/subs/em/topics/appEmHeatTreat')
+let emWrought = require('./academic/notes/level1/subs/em/topics/appEmWrought')
+let emCrystal = require('./academic/notes/level1/subs/em/topics/appEmCrystal')
+let emIron = require('./academic/notes/level1/subs/em/topics/appEmIron')
+let emGlass = require('./academic/notes/level1/subs/em/topics/appEmGlass')
+let emCeramics = require('./academic/notes/level1/subs/em/topics/appEmCeramics')
+let emCorrosion = require('./academic/notes/level1/subs/em/topics/appEmCorrosion')
+let emAlloy = require('./academic/notes/level1/subs/em/topics/appEmAlloy')
+let emComposites = require('./academic/notes/level1/subs/em/topics/appEmComposites')
+let emPlastic = require('./academic/notes/level1/subs/em/topics/appEmPlastics')
+let emPhaseDiag = require('./academic/notes/level1/subs/em/topics/appEmPhaseDiag')
+let emAtomic = require('./academic/notes/level1/subs/em/topics/appEmAtomicStruct')
 
 //tmm
 let tmmAppFlow = require('./academic/notes/level1/subs/tmm/tmm')
 let tmmQues = require('./academic/notes/level1/subs/tmm/topics/appTmmQues')
+
+//fh
+let fhAppFlow = require('./academic/notes/level1/subs/fh/fashionHistory')
+let fhArtDes = require('./academic/notes/level1/subs/fh/topics/appFhArtDes')
+let fhRoman = require('./academic/notes/level1/subs/fh/topics/appFhRoman')
+let fhEliza = require('./academic/notes/level1/subs/fh/topics/appFhEliza')
+let fhGeorgian = require('./academic/notes/level1/subs/fh/topics/appFhGeorgi')
+let fhGreek = require('./academic/notes/level1/subs/fh/topics/appFhGreek')
+let fhEgypt = require('./academic/notes/level1/subs/fh/topics/appFhEgypt')
+let fhRenasi = require('./academic/notes/level1/subs/fh/topics/appFhRenasi')
+let fhSilk = require('./academic/notes/level1/subs/fh/topics/appFhSilk')
+let fhJeans = require('./academic/notes/level1/subs/fh/topics/appFhJeansHis')
+let fhMuslin = require('./academic/notes/level1/subs/fh/topics/appFhMuslin')
+let fhHandloom = require('./academic/notes/level1/subs/fh/topics/appFhHandloom')
 
 
 
@@ -627,6 +657,86 @@ let emFlow = (req, res) => {
     return res.send(emAppFlow);
 };
 
+let emBooksFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(emBooks);
+};
+
+let emQuesFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(emQues);
+};
+
+let emMathFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(emMath);
+};
+
+let emBlastFurFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(emBlastFur);
+};
+
+let emHeatTreatFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(emHeatTre);
+};
+
+let emHeatWroughtFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(emWrought);
+};
+
+let emCrystalFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(emCrystal);
+};
+
+let emIronFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(emIron);
+};
+
+let emGlassFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(emGlass);
+};
+
+let emCeramicsFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(emCeramics);
+};
+
+let emCorrosionFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(emCorrosion);
+};
+
+let emAlloyFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(emAlloy);
+};
+
+let emCompositesFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(emComposites);
+};
+
+let emPlasticsFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(emPlastic);
+};
+
+let emPhasediagFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(emPhaseDiag);
+};
+
+let emAtomicFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(emAtomic);
+};
+
 
 //tmm
 let tmmFlow = (req, res) => {
@@ -637,6 +747,68 @@ let tmmFlow = (req, res) => {
 let tmmQuesFlow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
     return res.send(tmmQues);
+};
+
+
+//fh
+let fhFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(fhAppFlow);
+};
+
+let fhArtDesFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(fhArtDes);
+};
+
+let fhRomanFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(fhRoman);
+};
+
+let fhElizaFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(fhEliza);
+};
+
+let fhGeorigianFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(fhGeorgian);
+};
+
+let fhGreekFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(fhGreek);
+};
+
+let fhEgyptFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(fhEgypt);
+};
+
+let fhRenasiFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(fhRenasi);
+};
+
+let fhSilkFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(fhSilk);
+};
+
+let fhJeansFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(fhJeans);
+};
+
+let fhMuslinFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(fhMuslin);
+};
+
+let fhHandloomFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(fhHandloom);
 };
 
 
@@ -775,7 +947,36 @@ module.exports = {
     phy2EntropyFlow: phy2EntropyFlow,
 
     emFlow: emFlow,
+    emBooksFlow: emBooksFlow,
+    emQuesFlow: emQuesFlow,
+    emMathFlow: emMathFlow,
+    emBlastFurFlow: emBlastFurFlow,
+    emHeatTreatFlow: emHeatTreatFlow,
+    emHeatWroughtFlow: emHeatWroughtFlow,
+    emCrystalFlow:emCrystalFlow,
+    emIronFlow: emIronFlow,
+    emGlassFlow: emGlassFlow,
+    emCeramicsFlow: emCeramicsFlow,
+    emCorrosionFlow: emCorrosionFlow,
+    emAlloyFlow: emAlloyFlow,
+    emCompositesFlow: emCompositesFlow,
+    emPlasticsFlow: emPlasticsFlow,
+    emPhasediagFlow: emPhasediagFlow,
+    emAtomicFlow: emAtomicFlow,
 
     tmmFlow: tmmFlow,
     tmmQuesFlow: tmmQuesFlow,
+
+    fhFlow: fhFlow,
+    fhArtDesFlow: fhArtDesFlow,
+    fhRomanFlow: fhRomanFlow,
+    fhElizaFlow: fhElizaFlow,
+    fhGeorigianFlow: fhGeorigianFlow,
+    fhGreekFlow: fhGreekFlow,
+    fhEgyptFlow: fhEgyptFlow,
+    fhRenasiFlow: fhRenasiFlow,
+    fhSilkFlow: fhSilkFlow,
+    fhJeansFlow: fhJeansFlow,
+    fhMuslinFlow: fhMuslinFlow,
+    fhHandloomFlow: fhHandloomFlow,
 }

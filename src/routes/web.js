@@ -133,10 +133,40 @@ let initWebRoutes = (app) => {
 
     //em
     router.get("/app/notes/1/em", appController.emFlow);
+    router.get("/app/notes/1/em/em_books_flow", appController.emBooksFlow);
+    router.get("/app/notes/1/em/em_ques_flow", appController.emQuesFlow);
+    router.get("/app/notes/1/em/em_math_flow", appController.emMathFlow);
+    router.get("/app/notes/1/em/em_blast_flow", appController.emBlastFurFlow);
+    router.get("/app/notes/1/em/em_heat_flow", appController.emHeatTreatFlow);
+    router.get("/app/notes/1/em/em_wrought_flow", appController.emHeatWroughtFlow);
+    router.get("/app/notes/1/em/em_crystal_flow", appController.emCrystalFlow);
+    router.get("/app/notes/1/em/em_iron_ceramic_flow", appController.emIronFlow);
+    router.get("/app/notes/1/em/em_glass_flow", appController.emGlassFlow);
+    router.get("/app/notes/1/em/em_ceramic_flow", appController.emCeramicsFlow);
+    router.get("/app/notes/1/em/em_corrosion_flow", appController.emCorrosionFlow);
+    router.get("/app/notes/1/em/em_alloy_flow", appController.emAlloyFlow);
+    router.get("/app/notes/1/em/em_composites_flow", appController.emCompositesFlow);
+    router.get("/app/notes/1/em/em_plastic_flow", appController.emPlasticsFlow);
+    router.get("/app/notes/1/em/em_phaseDiag_flow", appController.emPhasediagFlow);
+    router.get("/app/notes/1/em/em_atomic_struct_flow", appController.emAtomicFlow);
 
     //tmm
     router.get("/app/notes/1/tmm", appController.tmmFlow);
     router.get("/app/notes/1/tmm/tmm_quess_flow", appController.tmmQuesFlow);
+
+    //fh
+    router.get("/app/notes/1/fh", appController.fhFlow);
+    router.get("/app/notes/1/fh/fh_art_des_flow", appController.fhArtDesFlow);
+    router.get("/app/notes/1/fh/fh_roman_flow", appController.fhRomanFlow);
+    router.get("/app/notes/1/fh/fh_elizabethian_flow", appController.fhElizaFlow);
+    router.get("/app/notes/1/fh/fh_georigian_flow", appController.fhGeorigianFlow);
+    router.get("/app/notes/1/fh/fh_greek_flow", appController.fhGreekFlow);
+    router.get("/app/notes/1/fh/fh_egyptian_flow", appController.fhEgyptFlow);
+    router.get("/app/notes/1/fh/fh_renaissance_flow", appController.fhRenasiFlow);
+    router.get("/app/notes/1/fh/fh_silk_flow", appController.fhSilkFlow);
+    router.get("/app/notes/1/fh/fh_jeans_his_flow", appController.fhJeansFlow);
+    router.get("/app/notes/1/fh/fh_muslin_flow", appController.fhMuslinFlow);
+    router.get("/app/notes/1/fh/fh_handloom_flow", appController.fhHandloomFlow);
 
 
     router.get("/app/labs", appController.labs);
