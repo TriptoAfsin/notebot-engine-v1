@@ -107,6 +107,9 @@ const sameReplies = require('./keywords/replies/sameToYouReply');
 const sadMojis = require('./keywords/sadMoji');
 const sadMojiReplies = require('./keywords/replies/sadMojiReply');
 
+//slightly angry moji
+const slightAngryMoji = require('./keywords/slightAngryEmoji');
+
 //doingWhat
 const doingWords = require('./keywords/doingWhatWords');
 const doingReplies = require('./keywords/replies/doingReply');
@@ -2308,6 +2311,12 @@ function handleMessage(sender_psid, received_message) {
 
   //ahOh
   else if (wordIncludes(ahOhWords, received_message)) {
+    response = textBlockGen(`${randomPicker(ahOhReplies)}`)
+    callSendAPI(sender_psid, response);
+  }
+
+  //slightly angry 
+  else if (wordIncludes(slightAngryMoji, received_message)) {
     response = textBlockGen(`${randomPicker(ahOhReplies)}`)
     callSendAPI(sender_psid, response);
   }
