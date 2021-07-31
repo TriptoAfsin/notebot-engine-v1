@@ -156,6 +156,24 @@ let fhMuslin = require('./academic/notes/level1/subs/fh/topics/appFhMuslin')
 let fhHandloom = require('./academic/notes/level1/subs/fh/topics/appFhHandloom')
 
 
+//pse
+let pseAppFlow = require('./academic/notes/level1/subs/pse/pse')
+let pseBooks = require('./academic/notes/level1/subs/pse/topics/appPseBooks')
+let pseQues = require('./academic/notes/level1/subs/pse/topics/appPseQues')
+let psehandNotes = require('./academic/notes/level1/subs/pse/topics/appPseHandNotes')
+let pseIntro = require('./academic/notes/level1/subs/pse/topics/appPseIntro')
+let psePhyStruct = require('./academic/notes/level1/subs/pse/topics/appPsePhyStruct')
+let pseChemStruct = require('./academic/notes/level1/subs/pse/topics/appPseChemicalStruc')
+let pseMW = require('./academic/notes/level1/subs/pse/topics/appPseMW')
+let pseStep = require('./academic/notes/level1/subs/pse/topics/appPseStep')
+let pseChain = require('./academic/notes/level1/subs/pse/topics/appPseChain')
+let pseThermal = require('./academic/notes/level1/subs/pse/topics/appPseChain')
+let pseDegrad = require('./academic/notes/level1/subs/pse/topics/appPseDegrad')
+let psePolymTech = require('./academic/notes/level1/subs/pse/topics/appPsePolymTech')
+let pseApplicationPoly = require('./academic/notes/level1/subs/pse/topics/appPseAppofPoly')
+let psePolyMorpho = require('./academic/notes/level1/subs/pse/topics/appPsePolyMorpho')
+
+
 
 /*--------------------------------------------------------------------------*/ 
 
@@ -812,6 +830,83 @@ let fhHandloomFlow = (req, res) => {
 };
 
 
+//pse
+let pseFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(pseAppFlow);
+};
+
+let pseBooksFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(pseBooks);
+};
+
+let pseQuesFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(pseQues);
+};
+
+let pseHandNotesFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(psehandNotes);
+};
+
+let pseIntroFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(pseIntro);
+};
+
+let psePhyStructFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(psePhyStruct);
+};
+
+let pseChemStructFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(pseChemStruct);
+};
+
+let pseMWFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(pseMW);
+};
+
+let pseStepFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(pseStep);
+};
+
+let pseChainFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(pseChain);
+};
+
+let pseThermalFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(pseThermal);
+};
+
+let pseDegradFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(pseDegrad);
+};
+
+let psePolymTechFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(psePolymTech);
+};
+
+let pseAppPolyFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(pseApplicationPoly);
+};
+
+let pseMorphoFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(psePolymTech);
+};
+
+
 /*-----------------------------------------------------------------------------------------------------------------------------------*/ 
 
 let labs = (req, res) => {
@@ -979,4 +1074,20 @@ module.exports = {
     fhJeansFlow: fhJeansFlow,
     fhMuslinFlow: fhMuslinFlow,
     fhHandloomFlow: fhHandloomFlow,
+
+    pseFlow: pseFlow,
+    pseBooksFlow: pseBooksFlow,
+    pseQuesFlow: pseQuesFlow,
+    pseHandNotesFlow: pseHandNotesFlow,
+    pseIntroFlow: pseIntroFlow,
+    psePhyStructFlow: psePhyStructFlow,
+    pseChemStructFlow: pseChemStructFlow,
+    pseMWFlow: pseMWFlow,
+    pseStepFlow: pseStepFlow,
+    pseChainFlow: pseChainFlow,
+    pseThermalFlow: pseThermalFlow,
+    pseDegradFlow: pseDegradFlow,
+    psePolymTechFlow: psePolymTechFlow,
+    pseAppPolyFlow: pseAppPolyFlow,
+    pseMorphoFlow: pseMorphoFlow,
 }

@@ -168,6 +168,23 @@ let initWebRoutes = (app) => {
     router.get("/app/notes/1/fh/fh_muslin_flow", appController.fhMuslinFlow);
     router.get("/app/notes/1/fh/fh_handloom_flow", appController.fhHandloomFlow);
 
+    //pse
+    router.get("/app/notes/1/pse", appController.pseFlow);
+    router.get("/app/notes/1/pse/pse_books_flow", appController.pseBooksFlow);
+    router.get("/app/notes/1/pse/pse_ques_flow", appController.pseQuesFlow);
+    router.get("/app/notes/1/pse/pse_handnotes_flow", appController.pseHandNotesFlow);
+    router.get("/app/notes/1/pse/pse_intro_flow", appController.pseIntroFlow);
+    router.get("/app/notes/1/pse/pse_physical_struc_flow", appController.psePhyStructFlow);
+    router.get("/app/notes/1/pse/pse_chemical_struc_flow", appController.pseChemStructFlow);
+    router.get("/app/notes/1/pse/pse_molWei_flow", appController.pseMWFlow);
+    router.get("/app/notes/1/pse/pse_step_growth_flow", appController.pseStepFlow);
+    router.get("/app/notes/1/pse/pse_chain_growth_flow", appController.pseChainFlow);
+    router.get("/app/notes/1/pse/pse_thermal_flow", appController.pseThermalFlow);
+    router.get("/app/notes/1/pse/pse_degrad_flow", appController.pseDegradFlow);
+    router.get("/app/notes/1/pse/pse_polymer_tec_flow", appController.psePolymTechFlow);
+    router.get("/app/notes/1/pse/pse_application_flow", appController.pseAppPolyFlow);
+    router.get("/app/notes/1/pse/pse_morpho_flow", appController.pseMorphoFlow);
+
 
     router.get("/app/labs", appController.labs);
 
