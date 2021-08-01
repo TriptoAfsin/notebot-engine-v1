@@ -174,6 +174,44 @@ let pseApplicationPoly = require('./academic/notes/level1/subs/pse/topics/appPse
 let psePolyMorpho = require('./academic/notes/level1/subs/pse/topics/appPsePolyMorpho')
 
 
+//ntf
+let ntfAppFlow = require('./academic/notes/level1/subs/ntf/ntf')
+let ntfBooks = require('./academic/notes/level1/subs/ntf/topics/appNtfBooks')
+let ntfQues = require('./academic/notes/level1/subs/ntf/topics/appNtfQues')
+let ntfHandNotes = require('./academic/notes/level1/subs/ntf/topics/appNtfHNotes')
+let ntfSugg = require('./academic/notes/level1/subs/ntf/topics/appNtfSugg')
+let ntfIntro = require('./academic/notes/level1/subs/ntf/topics/appNtfIntro')
+let ntfCotton = require('./academic/notes/level1/subs/ntf/topics/appNtfCotton')
+let ntfFlax = require('./academic/notes/level1/subs/ntf/topics/appNtfFlax')
+let ntfWool = require('./academic/notes/level1/subs/ntf/topics/appNtfWool')
+let ntfJute = require('./academic/notes/level1/subs/ntf/topics/appNtfJute')
+let ntfSilk = require('./academic/notes/level1/subs/ntf/topics/appNtfSilk')
+let ntfSisal = require('./academic/notes/level1/subs/ntf/topics/appNtfSisal')
+let ntfHemp = require('./academic/notes/level1/subs/ntf/topics/appNtfHemp')
+let ntfPALF = require('./academic/notes/level1/subs/ntf/topics/appNtfPalf')
+let ntfKapok = require('./academic/notes/level1/subs/ntf/topics/appNtfKapok')
+let ntfAsbestos = require('./academic/notes/level1/subs/ntf/topics/appNtfAsbestos')
+let ntfOtherFib = require('./academic/notes/level1/subs/ntf/topics/appOtherFib')
+
+//cp
+let cpAppFlow = require('./academic/notes/level1/subs/cp/cp')
+
+
+//bce
+let bceAppFlow = require('./academic/notes/level1/subs/bce/bce')
+let bceQues = require('./academic/notes/level1/subs/bce/topics/appBceQues')
+let bceAllSheets = require('./academic/notes/level1/subs/bce/topics/appBceAllSheets')
+let bcePartA = require('./academic/notes/level1/subs/bce/topics/appBcePartA')
+let bcePartB = require('./academic/notes/level1/subs/bce/topics/appBcePartB')
+let bceFullAB = require('./academic/notes/level1/subs/bce/topics/appBceFullAB')
+let bceIntro = require('./academic/notes/level1/subs/bce/topics/appBceIntro')
+let bceLangFunc = require('./academic/notes/level1/subs/bce/topics/appBCeLanguageFunc')
+let bceCommunication = require('./academic/notes/level1/subs/bce/topics/appBceCommuni')
+let bceBizLetter = require('./academic/notes/level1/subs/bce/topics/appBceLetter')
+let bceBizReport = require('./academic/notes/level1/subs/bce/topics/appBceReport')
+let bceReadWrite = require('./academic/notes/level1/subs/bce/topics/appBceReadWrite')
+
+
 
 /*--------------------------------------------------------------------------*/ 
 
@@ -903,7 +941,166 @@ let pseAppPolyFlow = (req, res) => {
 
 let pseMorphoFlow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
-    return res.send(psePolymTech);
+    return res.send(psePolyMorpho);
+};
+
+
+//ntf
+let ntfFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(ntfAppFlow);
+};
+
+
+let ntfBooksFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(ntfBooks);
+};
+
+let ntfQuesFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(ntfQues);
+};
+
+let ntfNotesFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(ntfHandNotes);
+};
+
+
+let ntfSuggFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(ntfSugg);
+};
+
+
+let ntfIntroFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(ntfIntro);
+};
+
+
+let ntfCottonFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(ntfCotton);
+};
+
+let ntfFlaxFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(ntfFlax);
+};
+
+let ntfWoolFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(ntfWool);
+};
+
+let ntfJuteFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(ntfJute);
+};
+
+let ntfSilkFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(ntfSilk);
+};
+
+let ntfSisalFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(ntfSisal);
+};
+
+let ntfHempFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(ntfHemp);
+};
+
+let ntfPalfFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(ntfPALF);
+};
+
+let ntfKapokFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(ntfKapok);
+};
+
+let ntfAsbestosFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(ntfAsbestos);
+};
+
+let ntfOtherFibFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(ntfOtherFib);
+};
+
+
+//cp
+let cpFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(cpAppFlow);
+};
+
+//bce
+let bceFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(bceAppFlow);
+};
+
+let bceQuesFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(bceQues);
+};
+
+let bceAllSheetsFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(bceAllSheets);
+};
+
+let bcePartAFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(bcePartA);
+};
+
+let bcePartBFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(bcePartB);
+};
+
+let bceFullABFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(bceFullAB);
+};
+
+let bceIntroFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(bceIntro);
+};
+
+let bceLangFuncFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(bceLangFunc);
+};
+
+let bceCommuniFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(bceCommunication);
+};
+
+let bceBizLetterFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(bceBizLetter);
+};
+
+let bceReportFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(bceBizReport);
+};
+
+let bceReadWriteFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(bceReadWrite);
 };
 
 
@@ -1090,4 +1287,39 @@ module.exports = {
     psePolymTechFlow: psePolymTechFlow,
     pseAppPolyFlow: pseAppPolyFlow,
     pseMorphoFlow: pseMorphoFlow,
+
+    ntfFlow: ntfFlow,
+    ntfBooksFlow: ntfBooksFlow,
+    ntfQuesFlow: ntfQuesFlow,
+    ntfNotesFlow: ntfNotesFlow,
+    ntfSuggFlow: ntfSuggFlow,
+    ntfIntroFlow: ntfIntroFlow,
+    ntfCottonFlow: ntfCottonFlow,
+    ntfFlaxFlow: ntfFlaxFlow,
+    ntfWoolFlow: ntfWoolFlow,
+    ntfJuteFlow: ntfJuteFlow,
+    ntfSilkFlow: ntfSilkFlow,
+    ntfSisalFlow: ntfSisalFlow,
+    ntfHempFlow: ntfHempFlow,
+    ntfPalfFlow: ntfPalfFlow,
+    ntfKapokFlow: ntfKapokFlow,
+    ntfAsbestosFlow: ntfAsbestosFlow,
+    ntfOtherFibFlow: ntfOtherFibFlow,
+
+
+    cpFlow: cpFlow,
+
+
+    bceFlow: bceFlow,
+    bceQuesFlow: bceQuesFlow,
+    bceAllSheetsFlow: bceAllSheetsFlow,
+    bcePartAFlow: bcePartAFlow,
+    bcePartBFlow: bcePartBFlow,
+    bceFullABFlow: bceFullABFlow,
+    bceIntroFlow: bceIntroFlow,
+    bceLangFuncFlow: bceLangFuncFlow,
+    bceCommuniFlow: bceCommuniFlow,
+    bceBizLetterFlow: bceBizLetterFlow,
+    bceReportFlow: bceReportFlow,
+    bceReadWriteFlow: bceReadWriteFlow,
 }

@@ -186,6 +186,45 @@ let initWebRoutes = (app) => {
     router.get("/app/notes/1/pse/pse_morpho_flow", appController.pseMorphoFlow);
 
 
+    //ntf
+    router.get("/app/notes/1/ntf", appController.ntfFlow);
+    router.get("/app/notes/1/ntf/ntf_books_flow", appController.ntfBooksFlow);
+    router.get("/app/notes/1/ntf/ntf_ques_flow", appController.ntfQuesFlow);
+    router.get("/app/notes/1/ntf/ntf_hnotes_flow", appController.ntfNotesFlow);
+    router.get("/app/notes/1/ntf/ntf_suggestion_flow", appController.ntfSuggFlow);
+    router.get("/app/notes/1/ntf/ntf_intro_flow", appController.ntfIntroFlow);
+    router.get("/app/notes/1/ntf/ntf_flax_flow", appController.ntfFlaxFlow);
+    router.get("/app/notes/1/ntf/ntf_wool_flow", appController.ntfWoolFlow);
+    router.get("/app/notes/1/ntf/ntf_jute_flow", appController.ntfJuteFlow);
+    router.get("/app/notes/1/ntf/ntf_silk_flow", appController.ntfSilkFlow);
+    router.get("/app/notes/1/ntf/ntf_sisal_flow", appController.ntfSisalFlow);
+    router.get("/app/notes/1/ntf/ntf_hemp_flow", appController.ntfHempFlow);
+    router.get("/app/notes/1/ntf/ntf_palf_flow", appController.ntfPalfFlow);
+    router.get("/app/notes/1/ntf/ntf_kapok_flow", appController.ntfKapokFlow);
+    router.get("/app/notes/1/ntf/ntf_asbestos_flow", appController.ntfAsbestosFlow);
+    router.get("/app/notes/1/ntf/ntf_other_fib_flow", appController.ntfOtherFibFlow);
+
+    //cp
+    router.get("/app/notes/1/cp", appController.cpFlow);
+
+
+    //bce
+    router.get("/app/notes/1/bce", appController.bceFlow);
+    router.get("/app/notes/1/bce/bce_ques_flow", appController.bceQuesFlow);
+    router.get("/app/notes/1/bce/all_sheets_bce_flow", appController.bceAllSheetsFlow);
+    router.get("/app/notes/1/bce/part_a_bce_flow", appController.bcePartAFlow);
+    router.get("/app/notes/1/bce/part_b_bce_flow", appController.bcePartBFlow);
+    router.get("/app/notes/1/bce/full_ab_bce_flow", appController.bceFullABFlow);
+    router.get("/app/notes/1/bce/intro_bce_flow", appController.bceIntroFlow);
+    router.get("/app/notes/1/bce/lang_func_bce_flow", appController.bceLangFuncFlow);
+    router.get("/app/notes/1/bce/communi_bce_flow", appController.bceCommuniFlow);
+    router.get("/app/notes/1/bce/letter_bce_flow", appController.bceBizLetterFlow);
+    router.get("/app/notes/1/bce/report_bce_flow", appController.bceReportFlow);
+    router.get("/app/notes/1/bce/read_write_bce_flow", appController.bceReadWriteFlow);
+
+
+
+
     router.get("/app/labs", appController.labs);
 
     
