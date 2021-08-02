@@ -206,6 +206,15 @@ let initWebRoutes = (app) => {
 
     //cp
     router.get("/app/notes/1/cp", appController.cpFlow);
+    router.get("/app/notes/1/cp/books_cp_flow", appController.cpBooksFlow);
+    router.get("/app/notes/1/cp/ques_cp_flow", appController.cpQuesFlow);
+    router.get("/app/notes/1/cp/fundamental_cp_flow", appController.cpFundaFlow);
+    router.get("/app/notes/1/cp/condition_cp_flow", appController.cpConditionalFlow);
+    router.get("/app/notes/1/cp/loop_cp_flow", appController.cpLoopFlow);
+    router.get("/app/notes/1/cp/array_cp_flow", appController.cpArrayFlow);
+    router.get("/app/notes/1/cp/function_cp_flow", appController.cpFunctionFlow);
+    router.get("/app/notes/1/cp/string_cp_flow", appController.cpStringFlow);
+    router.get("/app/notes/1/cp/suggestion_cp_flow", appController.cpSuggFlow);
 
 
     //bce
@@ -221,6 +230,17 @@ let initWebRoutes = (app) => {
     router.get("/app/notes/1/bce/letter_bce_flow", appController.bceBizLetterFlow);
     router.get("/app/notes/1/bce/report_bce_flow", appController.bceReportFlow);
     router.get("/app/notes/1/bce/read_write_bce_flow", appController.bceReadWriteFlow);
+
+    //iae
+    router.get("/app/notes/1/iae", appController.iaeFlow);
+    router.get("/app/notes/1/iae/iae_books_flow", appController.iaeBooksFlow);
+    router.get("/app/notes/1/iae/iae_ques_flow", appController.iaeQuesFlow);
+    router.get("/app/notes/1/iae/iae_intro_flow", appController.iaeIntroFlow);
+    router.get("/app/notes/1/iae/iae_full_slide_flow", appController.iaeFullSlideFlow);
+    router.get("/app/notes/1/iae/iae_diff_woven_flow", appController.iaeDiffWovenFlow);
+    router.get("/app/notes/1/iae/iae_brands_flow", appController.iaeBrandsFlow);
+    router.get("/app/notes/1/iae/iae_cam_flow", appController.iaeCadFlow);
+    router.get("/app/notes/1/iae/iae_shirt_flow", appController.iaeShirtFlow);
 
 
 

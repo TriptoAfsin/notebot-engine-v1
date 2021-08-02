@@ -2,7 +2,13 @@ let UrlCatcher =  (string) => {
     //regex: /(https?:\/\/[^ ]*)/
     let urlRegex = /(https?:\/\/[^ ]*)/
     let titleRegex = /\n/g
-    let url = string.match(urlRegex)[1]
+    let url = ''
+    try{
+        url = string.match(urlRegex)[1]
+    }catch (err){
+        
+    }
+    
 
     let title = string.replace(urlRegex, '').replace(titleRegex, '').replace(/-/g,"").trim()
     /*

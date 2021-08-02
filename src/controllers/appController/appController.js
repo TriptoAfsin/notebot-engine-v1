@@ -195,6 +195,15 @@ let ntfOtherFib = require('./academic/notes/level1/subs/ntf/topics/appOtherFib')
 
 //cp
 let cpAppFlow = require('./academic/notes/level1/subs/cp/cp')
+let cpBooks = require('./academic/notes/level1/subs/cp/topics/AppCpBooks')
+let cpQues = require('./academic/notes/level1/subs/cp/topics/AppCpQues')
+let cpFunda = require('./academic/notes/level1/subs/cp/topics/AppCpFundamentals')
+let cpConditional = require('./academic/notes/level1/subs/cp/topics/AppCPConditional')
+let cpLoop = require('./academic/notes/level1/subs/cp/topics/AppCPLoop')
+let cpArray = require('./academic/notes/level1/subs/cp/topics/AppCPArray')
+let cpFunc = require('./academic/notes/level1/subs/cp/topics/AppCPFunction')
+let cpString = require('./academic/notes/level1/subs/cp/topics/AppCPString')
+let cpSugg = require('./academic/notes/level1/subs/cp/topics/AppCpSUgg')
 
 
 //bce
@@ -210,6 +219,19 @@ let bceCommunication = require('./academic/notes/level1/subs/bce/topics/appBceCo
 let bceBizLetter = require('./academic/notes/level1/subs/bce/topics/appBceLetter')
 let bceBizReport = require('./academic/notes/level1/subs/bce/topics/appBceReport')
 let bceReadWrite = require('./academic/notes/level1/subs/bce/topics/appBceReadWrite')
+
+
+//iae
+let iaeAppFlow = require('./academic/notes/level1/subs/iae/iae')
+let iaeBooks = require('./academic/notes/level1/subs/iae/topics/AppIaeBooks')
+let iaeQues = require('./academic/notes/level1/subs/iae/topics/AppIaeQues')
+let iaeIntro = require('./academic/notes/level1/subs/iae/topics/AppIaeIntro')
+let iaeFullSlide = require('./academic/notes/level1/subs/iae/topics/AppIaeFullside')
+let iaeDiffWoven = require('./academic/notes/level1/subs/iae/topics/AppIaeDiffWoven')
+let iaeBrands = require('./academic/notes/level1/subs/iae/topics/AppIaeBrands')
+let iaeQuota = require('./academic/notes/level1/subs/iae/topics/AppIaeBrands')
+let iaeCad = require('./academic/notes/level1/subs/iae/topics/AppIaeCad')
+let iaeShirt = require('./academic/notes/level1/subs/iae/topics/AppIaeShirtComp')
 
 
 
@@ -1042,6 +1064,53 @@ let cpFlow = (req, res) => {
     return res.send(cpAppFlow);
 };
 
+
+let cpBooksFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(cpBooks);
+};
+
+
+let cpQuesFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(cpQues);
+};
+
+let cpFundaFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(cpFunda);
+};
+
+let cpConditionalFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(cpConditional);
+};
+
+let cpLoopFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(cpLoop);
+};
+
+let cpArrayFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(cpArray);
+};
+
+let cpFunctionFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(cpFunc);
+};
+
+let cpStringFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(cpString);
+};
+
+let cpSuggFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(cpSugg);
+};
+
 //bce
 let bceFlow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
@@ -1101,6 +1170,58 @@ let bceReportFlow = (req, res) => {
 let bceReadWriteFlow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
     return res.send(bceReadWrite);
+};
+
+
+//iae
+let iaeFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(iaeAppFlow);
+};
+
+let iaeBooksFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(iaeBooks);
+};
+
+let iaeQuesFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(iaeQues);
+};
+
+let iaeIntroFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(iaeIntro);
+};
+
+let iaeFullSlideFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(iaeFullSlide);
+};
+
+let iaeDiffWovenFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(iaeDiffWoven);
+};
+
+let iaeBrandsFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(iaeBrands);
+};
+
+let iaeQuotaFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(iaeQuota);
+};
+
+let iaeCadFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(iaeCad);
+};
+
+let iaeShirtFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(iaeShirt);
 };
 
 
@@ -1308,7 +1429,15 @@ module.exports = {
 
 
     cpFlow: cpFlow,
-
+    cpBooksFlow: cpBooksFlow,
+    cpQuesFlow: cpQuesFlow,
+    cpFundaFlow: cpFundaFlow,
+    cpConditionalFlow: cpConditionalFlow,
+    cpLoopFlow: cpLoopFlow,
+    cpArrayFlow: cpArrayFlow,
+    cpFunctionFlow: cpFunctionFlow,
+    cpStringFlow: cpStringFlow,
+    cpSuggFlow: cpSuggFlow,
 
     bceFlow: bceFlow,
     bceQuesFlow: bceQuesFlow,
@@ -1322,4 +1451,15 @@ module.exports = {
     bceBizLetterFlow: bceBizLetterFlow,
     bceReportFlow: bceReportFlow,
     bceReadWriteFlow: bceReadWriteFlow,
+
+    iaeFlow: iaeFlow,
+    iaeBooksFlow: iaeBooksFlow,
+    iaeQuesFlow: iaeQuesFlow,
+    iaeIntroFlow: iaeIntroFlow,
+    iaeFullSlideFlow: iaeFullSlideFlow,
+    iaeDiffWovenFlow: iaeDiffWovenFlow,
+    iaeBrandsFlow: iaeBrandsFlow,
+    iaeQuotaFlow: iaeQuotaFlow,
+    iaeCadFlow: iaeCadFlow,
+    iaeShirtFlow:iaeShirtFlow,
 }
