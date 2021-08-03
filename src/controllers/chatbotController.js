@@ -352,6 +352,8 @@ const mp_words = require('./keywords/academic_words/subjects/mpWords');
 const fd2_words = require('./keywords/academic_words/subjects/fd2Words');
 //academic -> fh
 const fh_words = require('./keywords/academic_words/subjects/fhWords');
+//academic -> acfd
+const acfd_words = require('./keywords/academic_words/subjects/acfdWords');
 //academic -> ap1
 const ap1_words = require('./keywords/academic_words/subjects/ap1Words');
 //academic -> ap2
@@ -1077,6 +1079,9 @@ const pd_intro = require("./flows/botReplies/note_levels/level_3/level_3_subs/pd
 const pd_understandingCustomer = require("./flows/botReplies/note_levels/level_3/level_3_subs/pd/topics/pdUnderstandingCustomer");
 const pd_planDesign = require("./flows/botReplies/note_levels/level_3/level_3_subs/pd/topics/pdPlanningDesign");
 const pd_qualityFunc = require("./flows/botReplies/note_levels/level_3/level_3_subs/pd/topics/pdQualityFunc");
+
+//academic flows -> acfd
+const acfd_flow = require("./flows/botReplies/note_levels/level_3/level_3_subs/acfd/acfd_flow");
 
 
 //ace
@@ -2783,6 +2788,11 @@ function handleMessage(sender_psid, received_message) {
     magicFunc(sender_psid, pse_flow);
   }
 
+  //academic -> acfd
+  else if (wordIncludes(acfd_words, received_message)) {
+    magicFunc(sender_psid, acfd_flow);
+  }
+
 
   else if (wordIncludes(lab_report, received_message)) {
     magicFunc(sender_psid, labFlow);
@@ -2979,6 +2989,11 @@ let handlePostback = async (sender_psid, received_postback) => {
 
   else if (payload === 'fh_handloom_flow') {
     magicFunc(sender_psid, fh_Handloom);
+  }
+
+  //subject-> acfd
+  else if (payload === 'acfd_flow') {
+    magicFunc(sender_psid, acfd_flow);
   }
 
   //subject-> cp
