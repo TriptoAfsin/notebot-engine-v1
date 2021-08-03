@@ -234,6 +234,36 @@ let iaeCad = require('./academic/notes/level1/subs/iae/topics/AppIaeCad')
 let iaeShirt = require('./academic/notes/level1/subs/iae/topics/AppIaeShirtComp')
 
 
+//bfs
+let bfsAppFlow = require('./academic/notes/level1/subs/bfs/bfs')
+let bfsLec3 = require('./academic/notes/level1/subs/bfs/topics/appBfsLec3')
+
+//tpm
+let tpmAppFlow = require('./academic/notes/level1/subs/tpm/tpm')
+let tpmQues = require('./academic/notes/level1/subs/tpm/topics/appTpmQues')
+let tpmFabWet = require('./academic/notes/level1/subs/tpm/topics/appTpmWovenFabWt')
+let tpmFabManu = require('./academic/notes/level1/subs/tpm/topics/appTpmWovenFabManu')
+
+//fmg
+let fmgAppFlow = require('./academic/notes/level1/subs/fmg/fmg')
+
+//iee
+let ieeAppFlow = require('./academic/notes/level1/subs/iee/iee')
+let ieeBooks = require('./academic/notes/level1/subs/iee/topics/appIeeBooks')
+let ieeSheets = require('./academic/notes/level1/subs/iee/topics/appIeeSheets')
+let ieeNotes = require('./academic/notes/level1/subs/iee/topics/AppIeeNotes')
+let ieeManEnv = require('./academic/notes/level1/subs/iee/topics/appIeeManEnv')
+let ieeSoil = require('./academic/notes/level1/subs/iee/topics/AppIeeSoil')
+let ieeEnvIssue = require('./academic/notes/level1/subs/iee/topics/AppIeeSoil')
+let ieeNatureEnv = require('./academic/notes/level1/subs/iee/topics/appIeeNatureEnv')
+let ieeSPF = require('./academic/notes/level1/subs/iee/topics/appIeeSPF')
+
+//ecb
+let ecbAppFlow = require('./academic/notes/level1/subs/ecb/ecb')
+let ecbNotes = require('./academic/notes/level1/subs/ecb/topics/appEcbNotes')
+let ecbIntro = require('./academic/notes/level1/subs/ecb/topics/appEcbIntro')
+
+
 
 /*--------------------------------------------------------------------------*/ 
 
@@ -1225,6 +1255,110 @@ let iaeShirtFlow = (req, res) => {
 };
 
 
+//bfs
+let bfsFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(bfsAppFlow);
+};
+
+let bfsLec3Flow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(bfsLec3);
+};
+
+//tpm
+let tpmFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(tpmAppFlow);
+};
+
+let tpmQuesFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(tpmQues);
+};
+
+let tpmFabWetFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(tpmFabWet);
+};
+
+let tpmFabManuFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(tpmFabManu);
+};
+
+
+//fmg
+let fmgFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(fmgAppFlow);
+};
+
+
+//iee
+let ieeFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(ieeAppFlow);
+};
+
+let ieeBooksFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(ieeBooks);
+};
+
+let ieeSheetsFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(ieeSheets);
+};
+
+let ieeNotesFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(ieeNotes);
+};
+
+let ieeManEnvFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(ieeManEnv);
+};
+
+let ieeSoilFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(ieeSoil);
+};
+
+let ieeEnvIssueFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(ieeEnvIssue);
+};
+
+let ieeNatureEnvFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(ieeNatureEnv);
+};
+
+let ieeSPFFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(ieeSPF);
+};
+
+
+//ecb
+let ecbFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(ecbAppFlow);
+};
+
+let ecbNotesFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(ecbNotes);
+};
+
+let ecbIntroFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(ecbIntro);
+};
+
+
 /*-----------------------------------------------------------------------------------------------------------------------------------*/ 
 
 let labs = (req, res) => {
@@ -1462,4 +1596,28 @@ module.exports = {
     iaeQuotaFlow: iaeQuotaFlow,
     iaeCadFlow: iaeCadFlow,
     iaeShirtFlow:iaeShirtFlow,
+
+    bfsFlow: bfsFlow,
+    bfsLec3Flow: bfsLec3Flow,
+
+    tpmFlow: tpmFlow,
+    tpmQuesFlow: tpmQuesFlow,
+    tpmFabWetFlow: tpmFabWetFlow,
+    tpmFabManuFlow:tpmFabManuFlow,
+
+    fmgFlow: fmgFlow,
+
+    ieeFlow: ieeFlow,
+    ieeBooksFlow: ieeBooksFlow,
+    ieeSheetsFlow: ieeSheetsFlow,
+    ieeNotesFlow: ieeNotesFlow,
+    ieeManEnvFlow: ieeManEnvFlow,
+    ieeSoilFlow: ieeSoilFlow,
+    ieeEnvIssueFlow: ieeEnvIssueFlow,
+    ieeNatureEnvFlow: ieeNatureEnvFlow,
+    ieeSPFFlow: ieeSPFFlow,
+
+    ecbFlow: ecbFlow,
+    ecbNotesFlow: ecbNotesFlow,
+    ecbIntroFlow: ecbIntroFlow,
 }

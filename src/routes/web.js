@@ -242,6 +242,35 @@ let initWebRoutes = (app) => {
     router.get("/app/notes/1/iae/iae_cam_flow", appController.iaeCadFlow);
     router.get("/app/notes/1/iae/iae_shirt_flow", appController.iaeShirtFlow);
 
+    //bfs
+    router.get("/app/notes/1/bfs", appController.bfsFlow);
+    router.get("/app/notes/1/bfs/bfs_lec3_flow", appController.bfsLec3Flow);
+
+    //tpm
+    router.get("/app/notes/1/tpm", appController.tpmFlow);
+    router.get("/app/notes/1/tpm/tpm_ques_flow", appController.tpmQuesFlow);
+    router.get("/app/notes/1/tpm/tpm_wov_fab_wet_flow", appController.tpmFabWetFlow);
+    router.get("/app/notes/1/tpm/tpm_wov_fab_manu_flow", appController.tpmFabManuFlow);
+
+    //fmg
+    router.get("/app/notes/1/fmg", appController.fmgFlow);
+
+    //iee
+    router.get("/app/notes/1/iee", appController.ieeFlow);
+    router.get("/app/notes/1/iee/iee_books_flow", appController.ieeBooksFlow);
+    router.get("/app/notes/1/iee/iee_sheets_flow", appController.ieeSheetsFlow);
+    router.get("/app/notes/1/iee/iee_handnotes_flow", appController.ieeNotesFlow);
+    router.get("/app/notes/1/iee/iee_man_env_flow", appController.ieeManEnvFlow);
+    router.get("/app/notes/1/iee/iee_soil_flow", appController.ieeSoilFlow);
+    router.get("/app/notes/1/iee/iee_env_issue_flow", appController.ieeEnvIssueFlow);
+    router.get("/app/notes/1/iee/iee_nature_env_flow", appController.ieeNatureEnvFlow);
+    router.get("/app/notes/1/iee/iee_spf_upf_flow", appController.ieeSPFFlow);
+
+    //ecb
+    router.get("/app/notes/1/ecb", appController.ecbFlow);
+    router.get("/app/notes/1/ecb/ecb_handNote_flow", appController.ecbNotesFlow);
+    router.get("/app/notes/1/ecb/ecb_intro_flow", appController.ecbIntroFlow);
+
 
 
 
