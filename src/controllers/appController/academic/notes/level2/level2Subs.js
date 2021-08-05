@@ -9,91 +9,91 @@ let level2Subs = [
     },
     {
         subName: "Marketing",
-        route: "/app/notes/2/marketing"
+        route: "app/notes/2/marketing"
     },
     {
         subName: "FYT",
-        route: "/app/notes/2/fyt"
+        route: "app/notes/2/fyt"
     },
     {
         subName: "SSS-I",
-        route: "/app/notes/2/sss1"
+        route: "app/notes/2/sss1"
     },
     {
         subName: "SSS-II",
-        route: "/app/notes/2/sss2"
+        route: "app/notes/2/sss2"
     },
     {
         subName: "MP",
-        route: "/app/notes/2/mp"
+        route: "app/notes/2/mp"
     },
     {
         subName: "FM-I",
-        route: "/app/notes/2/fm1"
+        route: "app/notes/2/fm1"
     },
     {
         subName: "WP-I",
-        route: "/app/notes/2/wp1"
+        route: "app/notes/2/wp1"
     },
     {
         subName: "AM-I",
-        route: "/app/notes/2/am1"
+        route: "app/notes/2/am1"
     },
     {
         subName: "YM-I",
-        route: "/app/notes/2/ym1"
+        route: "app/notes/2/ym1"
     },
     {
         subName: "FD-II",
-        route: "/app/notes/2/fd2"
+        route: "app/notes/2/fd2"
     },
     {
         subName: "API-I",
-        route: "/app/notes/2/ap1"
+        route: "app/notes/2/ap1"
     },
     {
         subName: "OM",
-        route: "/app/notes/2/om"
+        route: "app/notes/2/om"
     },
     {
         subName: "TTQC",
-        route: "/app/notes/2/ttqc"
+        route: "app/notes/2/ttqc"
     },
     {
         subName: "TP",
-        route: "/app/notes/2/tp"
+        route: "app/notes/2/tp"
     },
     {
         subName: "MMTF",
-        route: "/app/notes/2/mmtf"
+        route: "app/notes/2/mmtf"
     },
     {
         subName: "FDCE",
-        route: "/app/notes/2/fdce"
+        route: "app/notes/2/fdce"
     },
     {
         subName: "FME",
-        route: "/app/notes/2/FME"
+        route: "app/notes/2/FME"
     },
     {
         subName: "FEEE",
-        route: "/app/notes/2/eee"
+        route: "app/notes/2/eee"
     },
     {
         subName: "Stat",
-        route: "/app/notes/2/stat"
+        route: "app/notes/2/stat"
     },
     {
         subName: "CTCA",
-        route: "/app/notes/2/ctca"
+        route: "app/notes/2/ctca"
     },
     {
         subName: "WPP",
-        route: "/app/notes/2/wpp"
+        route: "app/notes/2/wpp"
     },
     {
         subName: "Weaving Prep",
-        route: "/app/notes/2/weaving_prep"
+        route: "app/notes/2/weaving_prep"
     },
 ]
   
