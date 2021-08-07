@@ -8,6 +8,10 @@ let level2Subs = [
         url: "https://drive.google.com/file/d/1ce4mTpJ0S0yi8tYQvvEGn_4BtlbcjI6m/view"
     },
     {
+        subName: "Online(2021)",
+        url: "https://drive.google.com/drive/folders/1LxaFjV2a7MdCRpG5XxyqO49gY_CcmcS_?usp=sharing"
+    },
+    {
         subName: "Marketing",
         route: "app/notes/2/marketing"
     },
@@ -48,7 +52,7 @@ let level2Subs = [
         route: "app/notes/2/fd2"
     },
     {
-        subName: "API-I",
+        subName: "AP-I",
         route: "app/notes/2/ap1"
     },
     {

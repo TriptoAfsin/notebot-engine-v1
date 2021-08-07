@@ -1,4 +1,4 @@
-let eeeBooks = [
+let marketMajorPricing = [
     {
         "text": `🔷Fundamentals of Electric Circuits(5th Edition) - 
         https://drive.google.com/file/d/1D31egaxwJTWeCrCtvb1LXqsOvSrx0O09/view?usp=sharing`
@@ -13,4 +13,4 @@ let eeeBooks = [
 
 
 
-module.exports = eeeBooks;
+module.exports = marketMajorPricing;

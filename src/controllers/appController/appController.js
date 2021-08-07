@@ -265,6 +265,64 @@ let ecbNotes = require('./academic/notes/level1/subs/ecb/topics/appEcbNotes')
 let ecbIntro = require('./academic/notes/level1/subs/ecb/topics/appEcbIntro')
 
 
+//------------------------------level-2------------------------------------//
+//sss1
+let sss1AppFlow = require('./academic/notes/level2/subs/sss1/sss1')
+let sss1Books = require('./academic/notes/level2/subs/sss1/topics/appSSS1Books')
+let sss1BlowRoom = require('./academic/notes/level2/subs/sss1/topics/appSSS1BlowRoom')
+let sss1Drawframe = require('./academic/notes/level2/subs/sss1/topics/appSSS1Drawframe')
+let sss1Carding = require('./academic/notes/level2/subs/sss1/topics/appSSS1Carding')
+let sss1Intro = require('./academic/notes/level2/subs/sss1/topics/appSSS1Intro')
+let sss1IntroFib = require('./academic/notes/level2/subs/sss1/topics/appSSS1IntroFib')
+
+
+//sss2
+let sss2AppFlow = require('./academic/notes/level2/subs/sss2/sss2')
+let sss2Ringframe = require('./academic/notes/level2/subs/sss2/topics/appSSS2RingFrame')
+let sss2Notes = require('./academic/notes/level2/subs/sss2/topics/appSSS2Notes')
+
+//fyt
+let fytAppFlow = require('./academic/notes/level2/subs/fyt/fyt')
+let fytBooks = require('./academic/notes/level2/subs/fyt/topics/appFytBooks')
+let fytNotes = require('./academic/notes/level2/subs/fyt/topics/appFytNotes')
+let fytSugg = require('./academic/notes/level2/subs/fyt/topics/appFytSugg')
+let fytYarnNum = require('./academic/notes/level2/subs/fyt/topics/appFytYarnNum')
+let fytYarnTwist = require('./academic/notes/level2/subs/fyt/topics/appFytYarnTwist')
+let fytEvenness = require('./academic/notes/level2/subs/fyt/topics/appFytEvennesstest')
+let fytCount = require('./academic/notes/level2/subs/fyt/topics/appFytYarnCount')
+let fytAfis = require('./academic/notes/level2/subs/fyt/topics/appFytAfis')
+let fytISO = require('./academic/notes/level2/subs/fyt/topics/appFytISO')
+let fytCapaOptical = require('./academic/notes/level2/subs/fyt/topics/appFytCapaOptical')
+
+//marketing
+let marketingAppFlow = require('./academic/notes/level2/subs/marketing/marketing')
+let marketingBooks = require('./academic/notes/level2/subs/marketing/topics/appMarketBooks')
+let marketingNotes = require('./academic/notes/level2/subs/marketing/topics/appMarketNotes')
+let marketingQues = require('./academic/notes/level2/subs/marketing/topics/appmarketQues')
+let marketingSugg = require('./academic/notes/level2/subs/marketing/topics/appMarketSugg')
+let marketingIntro = require('./academic/notes/level2/subs/marketing/topics/appmarketIntro')
+let marketingFuncMarket = require('./academic/notes/level2/subs/marketing/topics/appMarketFuncMarket')
+let marketingField = require('./academic/notes/level2/subs/marketing/topics/appMarketField')
+let marketingConcept = require('./academic/notes/level2/subs/marketing/topics/appMarketConcept')
+let marketingOrientation = require('./academic/notes/level2/subs/marketing/topics/appMarketOrientation')
+let marketingMicroEnv = require('./academic/notes/level2/subs/marketing/topics/appMarketMicroEnv')
+let marketingMacroEnv = require('./academic/notes/level2/subs/marketing/topics/appMarketMacroEnv')
+let marketingSegment = require('./academic/notes/level2/subs/marketing/topics/appMarketSegment')
+let marketingTarget = require('./academic/notes/level2/subs/marketing/topics/appMarketTarget')
+let marketingDiffPos = require('./academic/notes/level2/subs/marketing/topics/appMarketDiffPos')
+let marketingChannelDist = require('./academic/notes/level2/subs/marketing/topics/appMarketChannelDist')
+let marketingRetail = require('./academic/notes/level2/subs/marketing/topics/appMarketRetail')
+let marketingPrice = require('./academic/notes/level2/subs/marketing/topics/appMarketPrice')
+let marketingConsumerBuyer = require('./academic/notes/level2/subs/marketing/topics/appMarketingConsumer')
+let marketingBranding = require('./academic/notes/level2/subs/marketing/topics/appMarketBrand')
+let marketingNewProduct = require('./academic/notes/level2/subs/marketing/topics/appMarketNewProd')
+let marketingAdvert = require('./academic/notes/level2/subs/marketing/topics/appMarketAdvert')
+let marketingCompStrat = require('./academic/notes/level2/subs/marketing/topics/appMarketCompStrat')
+let marketingMajorPrice = require('./academic/notes/level2/subs/marketing/topics/appMarketMajorPrice')
+
+
+
+
 
 /*--------------------------------------------------------------------------*/ 
 
@@ -1365,6 +1423,239 @@ let ecbIntroFlow = (req, res) => {
 };
 
 
+//sss1
+let sss1Flow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(sss1AppFlow);
+};
+
+let sss1BooksFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(sss1Books);
+};
+
+let sss1BlowRoomFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(sss1BlowRoom);
+};
+
+let sss1DrawframeFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(sss1Drawframe);
+};
+
+let sss1CardingFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(sss1Carding);
+};
+
+let sss1IntroFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(sss1Intro);
+};
+
+let sss1IntroFibFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(sss1IntroFib);
+};
+
+
+//sss2
+let sss2Flow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(sss2AppFlow);
+};
+
+let sss2RingframeFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(sss2Ringframe);
+};
+
+let sss2NotesFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(sss2Notes);
+};
+
+
+//fyt
+let fytFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(fytAppFlow);
+};
+
+let fytBooksFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(fytBooks);
+};
+
+let fytNotesFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(fytNotes);
+};
+
+let fytSuggFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(fytSugg);
+};
+
+let fytYarnNumFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(fytYarnNum);
+};
+
+let fytYarnTwistFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(fytYarnTwist);
+};
+
+let fytEvennessFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(fytEvenness);
+};
+
+let fytCountFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(fytCount);
+};
+
+let fytAfisFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(fytAfis);
+};
+
+let fytISOFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(fytISO);
+};
+
+let fytCapaOpticalFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(fytCapaOptical);
+};
+
+
+//marketing
+let marketingFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(marketingAppFlow);
+};
+
+let marketingBooksFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(marketingBooks);
+};
+
+let marketingNotesFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(marketingNotes);
+};
+
+let marketingQuesFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(marketingQues);
+};
+
+let marketingSuggFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(marketingSugg);
+};
+
+let marketingIntroFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(marketingIntro);
+};
+
+let marketingFuncMarketFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(marketingFuncMarket);
+};
+
+let marketingFieldFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(marketingField);
+};
+
+let marketingConceptFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(marketingConcept);
+};
+
+let marketingOrientationFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(marketingOrientation);
+};
+
+let marketingMicroEnvFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(marketingMicroEnv);
+};
+
+let marketingMacroEnvFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(marketingMacroEnv);
+};
+
+let marketingSegmentFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(marketingSegment);
+};
+
+let marketingTargetFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(marketingTarget);
+};
+
+let marketingDiffPosFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(marketingDiffPos);
+};
+
+let marketingChannelDistFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(marketingChannelDist);
+};
+
+let marketingRetailFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(marketingRetail);
+};
+
+let marketingPriceFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(marketingPrice);
+};
+
+let marketingConsumerBuyerFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(marketingConsumerBuyer);
+};
+
+let marketingBrandFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(marketingBranding);
+};
+
+let marketingNewProdFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(marketingNewProduct);
+};
+
+let marketingAdvertFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(marketingAdvert);
+};
+
+let marketingCompStartFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(marketingCompStrat);
+};
+
+let marketingMajorPriceFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(marketingMajorPrice);
+};
+
+
 /*-----------------------------------------------------------------------------------------------------------------------------------*/ 
 
 let labs = (req, res) => {
@@ -1627,4 +1918,54 @@ module.exports = {
     ecbFlow: ecbFlow,
     ecbNotesFlow: ecbNotesFlow,
     ecbIntroFlow: ecbIntroFlow,
+
+
+    sss1Flow: sss1Flow,
+    sss1BooksFlow: sss1BooksFlow,
+    sss1BlowRoomFlow: sss1BlowRoomFlow,
+    sss1DrawframeFlow: sss1DrawframeFlow,
+    sss1CardingFlow: sss1CardingFlow,
+    sss1IntroFlow: sss1IntroFlow,
+    sss1IntroFibFlow: sss1IntroFibFlow,
+
+    sss2Flow: sss2Flow,
+    sss2RingframeFlow: sss2RingframeFlow,
+    sss2NotesFlow: sss2NotesFlow,
+
+    fytFlow: fytFlow,
+    fytBooksFlow: fytBooksFlow,
+    fytNotesFlow: fytNotesFlow,
+    fytSuggFlow: fytSuggFlow,
+    fytYarnNumFlow: fytYarnNumFlow,
+    fytYarnTwistFlow: fytYarnTwistFlow,
+    fytEvennessFlow: fytEvennessFlow,
+    fytCountFlow: fytCountFlow,
+    fytAfisFlow: fytAfisFlow,
+    fytISOFlow: fytISOFlow,
+    fytCapaOpticalFlow: fytCapaOpticalFlow,
+
+    marketingFlow: marketingFlow,
+    marketingBooksFlow: marketingBooksFlow,
+    marketingNotesFlow: marketingNotesFlow,
+    marketingQuesFlow: marketingQuesFlow,
+    marketingSuggFlow: marketingSuggFlow,
+    marketingIntroFlow: marketingIntroFlow,
+    marketingFuncMarketFlow: marketingFuncMarketFlow,
+    marketingFieldFlow: marketingFieldFlow,
+    marketingConceptFlow: marketingConceptFlow,
+    marketingOrientationFlow: marketingOrientationFlow,
+    marketingMicroEnvFlow: marketingMicroEnvFlow,
+    marketingMacroEnvFlow: marketingMacroEnvFlow,
+    marketingSegmentFlow: marketingSegmentFlow,
+    marketingTargetFlow: marketingTargetFlow,
+    marketingDiffPosFlow: marketingDiffPosFlow,
+    marketingChannelDistFlow: marketingChannelDistFlow,
+    marketingRetailFlow: marketingRetailFlow,
+    marketingPriceFlow: marketingPriceFlow,
+    marketingConsumerBuyerFlow: marketingConsumerBuyerFlow,
+    marketingBrandFlow: marketingBrandFlow,
+    marketingNewProdFlow: marketingNewProdFlow,
+    marketingAdvertFlow: marketingAdvertFlow,
+    marketingCompStartFlow: marketingCompStartFlow,
+    marketingMajorPriceFlow: marketingMajorPriceFlow,
 }

@@ -273,6 +273,65 @@ let initWebRoutes = (app) => {
     router.get("/app/notes/1/ecb/ecb_intro_flow", appController.ecbIntroFlow);
 
 
+    //sss1
+    router.get("/app/notes/2/sss1", appController.sss1Flow);
+    router.get("/app/notes/2/sss1/sss1_books_flow", appController.sss1BooksFlow);
+    router.get("/app/notes/2/sss1/sss1_blowRoom_flow", appController.sss1BlowRoomFlow);
+    router.get("/app/notes/2/sss1/sss1_drawFrame_flow", appController.sss1DrawframeFlow);
+    router.get("/app/notes/2/sss1/sss1_carding_flow", appController.sss1CardingFlow);
+    router.get("/app/notes/2/sss1/sss1_intro_flow", appController.sss1IntroFlow);
+    router.get("/app/notes/2/sss1/sss1_introFibre_flow", appController.sss1IntroFibFlow);
+
+
+    //sss2
+    router.get("/app/notes/2/sss2", appController.sss2Flow);
+    router.get("/app/notes/2/sss2/sss2_ringFrame_flow", appController.sss2RingframeFlow);
+    router.get("/app/notes/2/sss2/sss2_notes_flow", appController.sss2NotesFlow);
+
+
+    //fyt
+    router.get("/app/notes/2/fyt", appController.fytFlow);
+    router.get("/app/notes/2/fyt/fyt_books_flow", appController.fytBooksFlow);
+    router.get("/app/notes/2/fyt/fyt_hnotes_flow", appController.fytNotesFlow);
+    router.get("/app/notes/2/fyt/fyt_sugg_flow", appController.fytSuggFlow);
+    router.get("/app/notes/2/fyt/fyt_yarnNum_flow", appController.fytYarnNumFlow);
+    router.get("/app/notes/2/fyt/fyt_yarnTwist_flow", appController.fytYarnTwistFlow);
+    router.get("/app/notes/2/fyt/fyt_evennessTester_flow", appController.fytEvennessFlow);
+    router.get("/app/notes/2/fyt/fyt_yarnCounting_flow", appController.fytCountFlow);
+    router.get("/app/notes/2/fyt/fyt_afis_flow", appController.fytAfisFlow);
+    router.get("/app/notes/2/fyt/fyt_iso_flow", appController.fytISOFlow);
+    router.get("/app/notes/2/fyt/fyt_capaOptical_flow", appController.fytCapaOpticalFlow);
+
+    //marketing
+    router.get("/app/notes/2/marketing", appController.marketingFlow);
+    router.get("/app/notes/2/marketing/marketing_books_flow", appController.marketingBooksFlow);
+    router.get("/app/notes/2/marketing/marketing_notes_flow", appController.marketingNotesFlow);
+    router.get("/app/notes/2/marketing/marketing_ques_flow", appController.marketingQuesFlow);
+    router.get("/app/notes/2/marketing/marketing_suggestion_flow", appController.marketingSuggFlow);
+    router.get("/app/notes/2/marketing/marketing_intro_flow", appController.marketingIntroFlow);
+    router.get("/app/notes/2/marketing/marketing_func_flow", appController.marketingFuncMarketFlow);
+    router.get("/app/notes/2/marketing/marketing_field_flow", appController.marketingFieldFlow);
+    router.get("/app/notes/2/marketing/marketing_concept_flow", appController.marketingConceptFlow);
+    router.get("/app/notes/2/marketing/marketing_market_orientation_flow", appController.marketingOrientationFlow);
+    router.get("/app/notes/2/marketing/marketing_micro_env_flow", appController.marketingMicroEnvFlow);
+    router.get("/app/notes/2/marketing/marketing_macro_env_flow", appController.marketingMacroEnvFlow);
+    router.get("/app/notes/2/marketing/marketing_market_segment_flow", appController.marketingSegmentFlow);
+    router.get("/app/notes/2/marketing/marketing_market_targeting_flow", appController.marketingTargetFlow);
+    router.get("/app/notes/2/marketing/marketing_diff_pos_flow", appController.marketingDiffPosFlow);
+    router.get("/app/notes/2/marketing/marketing_channel_distri_flow", appController.marketingChannelDistFlow);
+    router.get("/app/notes/2/marketing/marketing_retailing_flow", appController.marketingRetailFlow);
+    router.get("/app/notes/2/marketing/marketing_price_sys_flow", appController.marketingPriceFlow);
+    router.get("/app/notes/2/marketing/marketing_consumer_buyer_flow", appController.marketingConsumerBuyerFlow);
+    router.get("/app/notes/2/marketing/marketing_branding_pack_flow", appController.marketingBrandFlow);
+    router.get("/app/notes/2/marketing/marketing_new_product_flow", appController.marketingNewProdFlow);
+    router.get("/app/notes/2/marketing/marketing_competitive_flow", appController.marketingCompStartFlow);
+    router.get("/app/notes/2/marketing/marketing_major_pricing_flow", appController.marketingMajorPriceFlow);
+
+
+
+
+
+
 
 
     router.get("/app/labs", appController.labs);
