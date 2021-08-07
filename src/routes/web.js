@@ -203,6 +203,7 @@ let initWebRoutes = (app) => {
     router.get("/app/notes/1/ntf/ntf_kapok_flow", appController.ntfKapokFlow);
     router.get("/app/notes/1/ntf/ntf_asbestos_flow", appController.ntfAsbestosFlow);
     router.get("/app/notes/1/ntf/ntf_other_fib_flow", appController.ntfOtherFibFlow);
+    router.get("/app/notes/1/ntf/quiz_flow", appController.ntfQuizFlow);
 
     //cp
     router.get("/app/notes/1/cp", appController.cpFlow);

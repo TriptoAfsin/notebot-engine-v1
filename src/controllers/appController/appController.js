@@ -192,6 +192,7 @@ let ntfPALF = require('./academic/notes/level1/subs/ntf/topics/appNtfPalf')
 let ntfKapok = require('./academic/notes/level1/subs/ntf/topics/appNtfKapok')
 let ntfAsbestos = require('./academic/notes/level1/subs/ntf/topics/appNtfAsbestos')
 let ntfOtherFib = require('./academic/notes/level1/subs/ntf/topics/appOtherFib')
+let ntfQuiz = require('./academic/notes/level1/subs/ntf/topics/appNtfQuiz')
 
 //cp
 let cpAppFlow = require('./academic/notes/level1/subs/cp/cp')
@@ -1087,6 +1088,11 @@ let ntfOtherFibFlow = (req, res) => {
     return res.send(ntfOtherFib);
 };
 
+let ntfQuizFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(ntfQuiz);
+};
+
 
 //cp
 let cpFlow = (req, res) => {
@@ -1560,6 +1566,7 @@ module.exports = {
     ntfKapokFlow: ntfKapokFlow,
     ntfAsbestosFlow: ntfAsbestosFlow,
     ntfOtherFibFlow: ntfOtherFibFlow,
+    ntfQuizFlow: ntfQuizFlow,
 
 
     cpFlow: cpFlow,
