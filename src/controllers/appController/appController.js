@@ -321,6 +321,38 @@ let marketingCompStrat = require('./academic/notes/level2/subs/marketing/topics/
 let marketingMajorPrice = require('./academic/notes/level2/subs/marketing/topics/appMarketMajorPrice')
 
 
+//am1
+let am1AppFlow = require('./academic/notes/level2/subs/am1/am1')
+let am1Books = require('./academic/notes/level2/subs/am1/topics/appAm1Books')
+let am1Notes = require('./academic/notes/level2/subs/am1/topics/appAM1Notes')
+let am1Ques = require('./academic/notes/level2/subs/am1/topics/appAm1Ques')
+let am1Intro = require('./academic/notes/level2/subs/am1/topics/appAm1Intro')
+let am1StructTex = require('./academic/notes/level2/subs/am1/topics/appAm1StructTex')
+let am1Sizing = require('./academic/notes/level2/subs/am1/topics/appAm1Sizing')
+let am1Seam = require('./academic/notes/level2/subs/am1/topics/appAm1Seam')
+let am1Trim = require('./academic/notes/level2/subs/am1/topics/appAm1trim')
+let am1Inter = require('./academic/notes/level2/subs/am1/topics/appAm1Inter')
+let am1Pattern = require('./academic/notes/level2/subs/am1/topics/appAM1Pattern')
+let am1Marker = require('./academic/notes/level2/subs/am1/topics/appAm1Marker')
+let am1Spread = require('./academic/notes/level2/subs/am1/topics/appAm1Spreading')
+let am1FabCut = require('./academic/notes/level2/subs/am1/topics/appAm1FabCut')
+let am1FabInspection = require('./academic/notes/level2/subs/am1/topics/appAm1FabInspection')
+
+//stat
+let statAppFlow = require('./academic/notes/level2/subs/stat/stat')
+let statBooks = require('./academic/notes/level2/subs/stat/topics/appStatBooks')
+let statNotes = require('./academic/notes/level2/subs/stat/topics/appStatNotes')
+let statProbab = require('./academic/notes/level2/subs/stat/topics/appStatProbab')
+let statIntro = require('./academic/notes/level2/subs/stat/topics/appStatIntro')
+let statCentral = require('./academic/notes/level2/subs/stat/topics/appStatCentral')
+let statCV = require('./academic/notes/level2/subs/stat/topics/appStatCv')
+let statMoments = require('./academic/notes/level2/subs/stat/topics/appStatMoments')
+let statShapeCharac = require('./academic/notes/level2/subs/stat/topics/appStatShapeCharc')
+let statDesignExp = require('./academic/notes/level2/subs/stat/topics/appStatDesignExp')
+let statNormal = require('./academic/notes/level2/subs/stat/topics/appStatNormal')
+let statBinomial = require('./academic/notes/level2/subs/stat/topics/appStatBinomial')
+let statPoission = require('./academic/notes/level2/subs/stat/topics/appStatPoission')
+let statRegression = require('./academic/notes/level2/subs/stat/topics/appStatRegression')
 
 
 
@@ -1655,6 +1687,156 @@ let marketingMajorPriceFlow = (req, res) => {
     return res.send(marketingMajorPrice);
 };
 
+//am1
+let am1Flow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(am1AppFlow);
+};
+
+let am1BooksFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(am1Books);
+};
+
+let am1NotesFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(am1Notes);
+};
+
+let am1QuesFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(am1Ques);
+};
+
+let am1IntroFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(am1Intro);
+};
+
+let am1StructTexFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(am1StructTex);
+};
+
+let am1SizingFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(am1Sizing);
+};
+
+let am1SeamFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(am1Seam);
+};
+
+let am1TrimFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(am1Trim);
+};
+
+let am1InterFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(am1Inter);
+};
+
+let am1PatternFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(am1Pattern);
+};
+
+let am1MarkerFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(am1Marker);
+};
+
+let am1SpreadFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(am1Spread);
+};
+
+let am1FabCutFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(am1FabCut);
+};
+
+let am1FabInspectionFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(am1FabInspection);
+};
+
+
+//stat
+let statFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(statAppFlow);
+};
+
+let statBooksFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(statBooks);
+};
+
+let statNotesFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(statNotes);
+};
+
+let statProbabFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(statProbab);
+};
+
+let statIntroFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(statIntro);
+};
+
+let statCentralFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(statCentral);
+};
+
+let statCVFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(statCV);
+};
+
+let statMomentsFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(statMoments);
+};
+
+let statShapeFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(statShapeCharac);
+};
+
+let statDesignExpFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(statDesignExp);
+};
+
+let statNormalFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(statNormal);
+};
+
+let statBinomialFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(statBinomial);
+};
+
+let statPoissionFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(statPoission);
+};
+
+let statRegressionFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(statRegression);
+};
+
+
+
 
 /*-----------------------------------------------------------------------------------------------------------------------------------*/ 
 
@@ -1968,4 +2150,35 @@ module.exports = {
     marketingAdvertFlow: marketingAdvertFlow,
     marketingCompStartFlow: marketingCompStartFlow,
     marketingMajorPriceFlow: marketingMajorPriceFlow,
+
+    am1Flow: am1Flow,
+    am1BooksFlow: am1BooksFlow,
+    am1NotesFlow: am1NotesFlow,
+    am1QuesFlow: am1QuesFlow,
+    am1IntroFlow: am1IntroFlow,
+    am1StructTexFlow: am1StructTexFlow,
+    am1SizingFlow: am1SizingFlow,
+    am1SeamFlow: am1SeamFlow,
+    am1TrimFlow: am1TrimFlow,
+    am1InterFlow: am1InterFlow,
+    am1PatternFlow: am1PatternFlow,
+    am1MarkerFlow: am1MarkerFlow,
+    am1SpreadFlow: am1SpreadFlow,
+    am1FabCutFlow: am1FabCutFlow,
+    am1FabInspectionFlow: am1FabInspectionFlow,
+
+    statFlow: statFlow,
+    statBooksFlow: statBooksFlow,
+    statNotesFlow: statNotesFlow,
+    statProbabFlow: statProbabFlow,
+    statIntroFlow:statIntroFlow,
+    statCentralFlow: statCentralFlow,
+    statCVFlow: statCVFlow,
+    statMomentsFlow: statMomentsFlow,
+    statShapeFlow: statShapeFlow,
+    statDesignExpFlow: statDesignExpFlow,
+    statNormalFlow: statNormalFlow,
+    statBinomialFlow: statBinomialFlow,
+    statPoissionFlow: statPoissionFlow,
+    statRegressionFlow: statRegressionFlow,
 }

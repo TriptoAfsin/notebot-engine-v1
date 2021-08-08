@@ -997,6 +997,7 @@ const wpp_ques = require("./flows/botReplies/note_levels/level_2/level_2_subs/wp
 const wpp_pretreatment = require("./flows/botReplies/note_levels/level_2/level_2_subs/wpp/topics/wppPretreatment");
 const wpp_singeing = require("./flows/botReplies/note_levels/level_2/level_2_subs/wpp/topics/wppSingeing");
 const wpp_desizing = require("./flows/botReplies/note_levels/level_2/level_2_subs/wpp/topics/wppDesizing");
+const wpp_Impurities = require("./flows/botReplies/note_levels/level_2/level_2_subs/wpp/topics/wppImpurities");
 
 
 //fd2
@@ -1137,7 +1138,9 @@ const tqm_flow = require("./flows/botReplies/note_levels/level_3/level_3_subs/tq
 const tqm_totalQm = require("./flows/botReplies/note_levels/level_3/level_3_subs/tqm/topics/tqmTotalQm");
 const tqm_continuosImprove = require("./flows/botReplies/note_levels/level_3/level_3_subs/tqm/topics/tqmContinuousImprove");
 const tqm_qualityRelia = require("./flows/botReplies/note_levels/level_3/level_3_subs/tqm/topics/tqmQualityReliability");
-
+const tqm_QualityStd = require("./flows/botReplies/note_levels/level_3/level_3_subs/tqm/topics/tqmQualityStd");
+const tqm_Intro = require("./flows/botReplies/note_levels/level_3/level_3_subs/tqm/topics/tqmIntro");
+const tqm_ControlManage = require("./flows/botReplies/note_levels/level_3/level_3_subs/tqm/topics/tqmControlManage");
 
 //pcs
 const pcs_flow = require("./flows/botReplies/note_levels/level_3/level_3_subs/pcs/pcs_flow");
@@ -4583,6 +4586,9 @@ let handlePostback = async (sender_psid, received_postback) => {
   else if (payload === 'wpp_desizing_flow') {
     magicFunc(sender_psid, wpp_desizing);
   }
+  else if (payload === 'wpp_impurities_flow') {
+    magicFunc(sender_psid, wpp_Impurities);
+  }
 
   //fd2
   else if (payload === 'fd2_flow') {
@@ -4915,6 +4921,15 @@ let handlePostback = async (sender_psid, received_postback) => {
   }
   else if (payload === 'tqm_continuous_flow') {
     magicFunc(sender_psid, tqm_continuosImprove);
+  }
+  else if (payload === 'tqm_qualityStd_flow') {
+    magicFunc(sender_psid, tqm_QualityStd);
+  }
+  else if (payload === 'tqm_intro_flow') {
+    magicFunc(sender_psid, tqm_Intro);
+  }
+  else if (payload === 'tqm_control_flow') {
+    magicFunc(sender_psid, tqm_ControlManage);
   }
 
 

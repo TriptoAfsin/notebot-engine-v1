@@ -20,6 +20,12 @@ let wppFlow = [
             payloadBtnGen("Desizing", "wpp_desizing_flow"),
         ]
     ),
+    grroupedButtonBlockGen(
+        "🔰 Select Topics for WPP -",
+        [
+            payloadBtnGen("Impurities", "wpp_impurities_flow"),
+        ]
+    ),
 ]
 
 

@@ -328,6 +328,37 @@ let initWebRoutes = (app) => {
     router.get("/app/notes/2/marketing/marketing_major_pricing_flow", appController.marketingMajorPriceFlow);
 
 
+    //am1
+    router.get("/app/notes/2/am1", appController.am1Flow);
+    router.get("/app/notes/2/am1/am1_books_flow", appController.am1BooksFlow);
+    router.get("/app/notes/2/am1/am1_hnotes_flow", appController.am1NotesFlow);
+    router.get("/app/notes/2/am1/am1_ques_flow", appController.am1QuesFlow);
+    router.get("/app/notes/2/am1/am1_structure_tex_flow", appController.am1StructTexFlow);
+    router.get("/app/notes/2/am1/am1_sizing_sys_flow", appController.am1SizingFlow);
+    router.get("/app/notes/2/am1/am1_seam_stitch_flow", appController.am1SeamFlow);
+    router.get("/app/notes/2/am1/am1_trim_acces_flow", appController.am1TrimFlow);
+    router.get("/app/notes/2/am1/am1_interlining_flow", appController.am1InterFlow);
+    router.get("/app/notes/2/am1/am1_pattern_flow", appController.am1PatternFlow);
+    router.get("/app/notes/2/am1/am1_marker_flow", appController.am1MarkerFlow);
+    router.get("/app/notes/2/am1/am1_fabricInspection_flow", appController.am1FabInspectionFlow);
+
+    //stat
+    router.get("/app/notes/2/stat", appController.statFlow);
+    router.get("/app/notes/2/stat/stat_books_flow", appController.statBooksFlow);
+    router.get("/app/notes/2/stat/stat_hnotes_flow", appController.statNotesFlow);
+    router.get("/app/notes/2/stat/stat_probab_flow", appController.statProbabFlow);
+    router.get("/app/notes/2/stat/stat_intro_flow", appController.statIntroFlow);
+    router.get("/app/notes/2/stat/stat_central_tend_flow", appController.statCentralFlow);
+    router.get("/app/notes/2/stat/stat_cv_sd_flow", appController.statCVFlow);
+    router.get("/app/notes/2/stat/stat_moments_flow", appController.statMomentsFlow);
+    router.get("/app/notes/2/stat/stat_shapes_flow", appController.statShapeFlow);
+    router.get("/app/notes/2/stat/stat_design_exp_flow", appController.statDesignExpFlow);
+    router.get("/app/notes/2/stat/stat_normal_distri_flow", appController.statNormalFlow);
+    router.get("/app/notes/2/stat/stat_binomial_distri_flow", appController.statBinomialFlow);
+    router.get("/app/notes/2/stat/stat_poission_flow", appController.statPoissionFlow);
+    router.get("/app/notes/2/stat/stat_regression_flow", appController.statRegressionFlow);
+
+
 
 
 

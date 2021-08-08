@@ -1,72 +1,39 @@
+let grroupedButtonBlockGen = require("../../../../../../genrators/grroupedButtonBlockGen");
+let webBtnBlockGen = require("../../../../../../genrators/webBtnBlockGen");
+let payloadBtnGen = require("../../../../../../genrators/payloadBtnGen");
+let bondiFlow = require("../../../../sponsoredFlows/bondiCard");
+
+
 let tqmFlow = [
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🔰 Select Topics for TQM - ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "Lec 1: Total QM",
-                        "payload": "tqm_totalQm_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Quality & Reliabil.",
-                        "payload": "tqm_qualityReliability_flow"
-                    },
-                    {
-                        "type": "web_url",
-                        "url": "https://drive.google.com/file/d/1HNwDmU31ApcnjpWv1gzJC874yUDBlvA9/view",
-                        "title": "Fault Tree Analysis",
-                    }
-                ],
-            },
-        },
-    },
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🔰 Select Topics for TQM - ",
-                "buttons": [
-                    {
-                        "type": "web_url",
-                        "url": "https://drive.google.com/file/d/1CMdh-swegCdRYYf97-Qk-UfmgsSBIUcE/view",
-                        "title": "OEE",
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Contunuous Improv.",
-                        "payload": "tqm_continuous_flow"
-                    },
-                    {
-                        "type": "web_url",
-                        "url": "https://drive.google.com/file/d/1gbZo47bLCKpE_IkDfXXr7DZOSApvRyIo/view",
-                        "title": "Quality Standards",
-                    }
-                ],
-            },
-        },
-    },
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🔰 Select Topics for TQM - ",
-                "buttons": [
-                    {
-                        "type": "web_url",
-                        "url": "https://drive.google.com/drive/folders/15byZ4dccfNR9oeUQOv1giUXLoD8DXhcs",
-                        "title": "H. Sheikh Sir Sheets",
-                    }
-                ],
-            },
-        },
-    }
+    grroupedButtonBlockGen(
+        "🔰 Select Topics for TQM - ",
+        [
+            payloadBtnGen("Lec 1: Total QM", "tqm_totalQm_flow"),
+            payloadBtnGen("Quality & Reliabil.", "tqm_qualityReliability_flow"),
+            webBtnBlockGen("Fault Tree Analysis", "https://drive.google.com/file/d/1HNwDmU31ApcnjpWv1gzJC874yUDBlvA9/view")
+        ]
+    ),
+    grroupedButtonBlockGen(
+        "🔰 Select Topics for TQM - ",
+        [
+            webBtnBlockGen("OEE", "https://drive.google.com/file/d/1CMdh-swegCdRYYf97-Qk-UfmgsSBIUcE/view"),
+            payloadBtnGen("Conti.. Improv.", "tqm_continuous_flow"),
+            payloadBtnGen("Quality Standards", "tqm_qualityStd_flow")
+        ]
+    ),
+    grroupedButtonBlockGen(
+        "🔰 Select Topics for TQM - ",
+        [
+            payloadBtnGen("Intro to QM", "tqm_intro_flow"),
+            payloadBtnGen("Control & Man..", "tqm_control_flow")
+        ]
+    ),
+    grroupedButtonBlockGen(
+        "🔰 Select Topics for TQM - ",
+        [
+            webBtnBlockGen("H.Sheikh Sir Sheets", "https://drive.google.com/drive/folders/15byZ4dccfNR9oeUQOv1giUXLoD8DXhcs"),
+        ]
+    ),
 ]
 
 
