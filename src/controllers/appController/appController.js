@@ -355,6 +355,48 @@ let statPoission = require('./academic/notes/level2/subs/stat/topics/appStatPois
 let statRegression = require('./academic/notes/level2/subs/stat/topics/appStatRegression')
 
 
+//fm1
+let fm1AppFlow = require('./academic/notes/level2/subs/fm1/fm1')
+let fm1Books = require('./academic/notes/level2/subs/fm1/topics/appFm1Books')
+let fm1Notes = require('./academic/notes/level2/subs/fm1/topics/appFm1Notes')
+let fm1Sugg = require('./academic/notes/level2/subs/fm1/topics/appFm1Sugg')
+let fm1Ques = require('./academic/notes/level2/subs/fm1/topics/appFm1Ques')
+let fm1Loom = require('./academic/notes/level2/subs/fm1/topics/appFm1loom')
+let fm1MotionWeav = require('./academic/notes/level2/subs/fm1/topics/appFm1MotionsWeav')
+let fm1Intro = require('./academic/notes/level2/subs/fm1/topics/appFm1Intro')
+let fm1Shedding = require('./academic/notes/level2/subs/fm1/topics/appFm1Shedding')
+let fm1Weaving = require('./academic/notes/level2/subs/fm1/topics/appFm1Weav')
+let fm1Sizing = require('./academic/notes/level2/subs/fm1/topics/appFm1Sizing')
+let fm1Winding = require('./academic/notes/level2/subs/fm1/topics/appFm1Winding')
+let fm1Dobby = require('./academic/notes/level2/subs/fm1/topics/appFm1Dobby')
+let fm1Warping = require('./academic/notes/level2/subs/fm1/topics/appFm1Warping')
+let fm1Tappet = require('./academic/notes/level2/subs/fm1/topics/appFm1Tappet')
+let fm1Picking = require('./academic/notes/level2/subs/fm1/topics/appFm1Pick')
+let fm1Beatup = require('./academic/notes/level2/subs/fm1/topics/appFm1beatup')
+let fm1Selvedge = require('./academic/notes/level2/subs/fm1/topics/appFm1Selvedge')
+let fm1Takeup = require('./academic/notes/level2/subs/fm1/topics/appFm1Takeup')
+let fm1LetOff = require('./academic/notes/level2/subs/fm1/topics/appFm1letoff')
+let fm1Denim = require('./academic/notes/level2/subs/fm1/topics/appFm1Denim')
+let fm1StopMotions = require('./academic/notes/level2/subs/fm1/topics/appFm1StopMotions')
+let fm1Jacquard = require('./academic/notes/level2/subs/fm1/topics/appFm1Jacquard')
+
+//ym1
+let ym1AppFlow = require('./academic/notes/level2/subs/ym1/ym1')
+let ym1Intro = require('./academic/notes/level2/subs/ym1/topics/appYm1Intro')
+let ym1IndeterStr = require('./academic/notes/level2/subs/ym1/topics/appYm1IndeStr')
+let ym1Blowroom = require('./academic/notes/level2/subs/ym1/topics/appYm1Blowroom')
+let ym1Mixing = require('./academic/notes/level2/subs/ym1/topics/appYm1Mixing')
+let ym1FibreProp = require('./academic/notes/level2/subs/ym1/topics/appYm1FibreProp')
+let ym1yarnCond = require('./academic/notes/level2/subs/ym1/topics/appYm1YarnCond')
+let ym1Comber = require('./academic/notes/level2/subs/ym1/topics/appYm1Comber')
+let ym1Drawframe = require('./academic/notes/level2/subs/ym1/topics/appYm1DrawFrame')
+let ym1Winding = require('./academic/notes/level2/subs/ym1/topics/appYm1Winding')
+let ym1LapFormer = require('./academic/notes/level2/subs/ym1/topics/appYm1LapFormer')
+let ym1Carding = require('./academic/notes/level2/subs/ym1/topics/appYm1Carding')
+let ym1RingFrame = require('./academic/notes/level2/subs/ym1/topics/appYm1RingFrame')
+let ym1SpeedSimplex = require('./academic/notes/level2/subs/ym1/topics/appYm1Simplex')
+
+
 
 /*--------------------------------------------------------------------------*/ 
 
@@ -1836,6 +1878,197 @@ let statRegressionFlow = (req, res) => {
 };
 
 
+//fm1
+let fm1Flow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(fm1AppFlow);
+};
+
+let fm1BooksFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(fm1Books);
+};
+
+let fm1NotesFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(fm1Notes);
+};
+
+let fm1SuggFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(fm1Sugg);
+};
+
+let fm1QuesFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(fm1Ques);
+};
+
+let fm1LoomFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(fm1Loom);
+};
+
+let fm1MotionsWeavFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(fm1MotionWeav);
+};
+
+let fm1IntroFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(fm1Intro);
+};
+
+let fm1SheddingFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(fm1Shedding);
+};
+
+let fm1WeavingFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(fm1Weaving);
+};
+
+let fm1SizingFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(fm1Sizing);
+};
+
+let fm1WindingFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(fm1Winding);
+};
+
+let fm1DobbyFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(fm1Dobby);
+};
+
+let fm1WarpingFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(fm1Warping);
+};
+
+let fm1TappetFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(fm1Tappet);
+};
+
+let fm1PickingFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(fm1Picking);
+};
+
+let fm1BeatupFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(fm1Beatup);
+};
+
+let fm1SelvedgeFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(fm1Selvedge);
+};
+
+let fm1TakeupFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(fm1Takeup);
+};
+
+let fm1LetoffFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(fm1LetOff);
+};
+
+let fm1DenimFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(fm1Denim);
+};
+
+let fm1StopMotionsFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(fm1StopMotions);
+};
+
+let fm1JaquardFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(fm1Jacquard);
+};
+
+
+//ym1
+let ym1Flow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(ym1AppFlow);
+};
+
+let ym1IntroFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(ym1Intro);
+};
+
+let ym1IndeterStrFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(ym1IndeterStr);
+};
+
+let ym1BlowroomFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(ym1Blowroom);
+};
+
+let ym1MixingFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(ym1Mixing);
+};
+
+let ym1FibPropFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(ym1FibreProp);
+};
+
+let ym1YarnCondFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(ym1yarnCond);
+};
+
+let ym1ComberFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(ym1Comber);
+};
+
+let ym1DrawframeFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(ym1Drawframe);
+};
+
+let ym1WindingFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(ym1Winding);
+};
+
+let ym1LapFormerFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(ym1LapFormer);
+};
+
+let ym1CardingFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(ym1Carding);
+};
+
+let ym1RingFrameFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(ym1RingFrame);
+};
+
+let ym1SpeedSimplexFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(ym1SpeedSimplex);
+};
+
+
+
+
 
 
 /*-----------------------------------------------------------------------------------------------------------------------------------*/ 
@@ -2181,4 +2414,43 @@ module.exports = {
     statBinomialFlow: statBinomialFlow,
     statPoissionFlow: statPoissionFlow,
     statRegressionFlow: statRegressionFlow,
+
+    fm1Flow: fm1Flow,
+    fm1BooksFlow: fm1BooksFlow,
+    fm1NotesFlow: fm1NotesFlow,
+    fm1SuggFlow: fm1SuggFlow,
+    fm1QuesFlow: fm1QuesFlow,
+    fm1LoomFlow: fm1LoomFlow,
+    fm1MotionsWeavFlow: fm1MotionsWeavFlow,
+    fm1IntroFlow: fm1IntroFlow,
+    fm1SheddingFlow: fm1SheddingFlow,
+    fm1WeavingFlow: fm1WeavingFlow,
+    fm1SizingFlow: fm1SizingFlow,
+    fm1WindingFlow: fm1WindingFlow,
+    fm1DobbyFlow: fm1DobbyFlow,
+    fm1WarpingFlow: fm1WarpingFlow,
+    fm1TappetFlow: fm1TappetFlow,
+    fm1PickingFlow: fm1PickingFlow,
+    fm1BeatupFlow: fm1BeatupFlow,
+    fm1SelvedgeFlow: fm1SelvedgeFlow,
+    fm1TakeupFlow: fm1TakeupFlow,
+    fm1LetoffFlow: fm1LetoffFlow,
+    fm1DenimFlow: fm1DenimFlow,
+    fm1StopMotionsFlow: fm1StopMotionsFlow,
+    fm1JaquardFlow: fm1JaquardFlow,
+
+    ym1Flow: ym1Flow,
+    ym1IntroFlow: ym1IntroFlow,
+    ym1IndeterStrFlow: ym1IndeterStrFlow,
+    ym1BlowroomFlow: ym1BlowroomFlow,
+    ym1MixingFlow: ym1MixingFlow,
+    ym1FibPropFlow: ym1FibPropFlow,
+    ym1YarnCondFlow: ym1YarnCondFlow,
+    ym1ComberFlow: ym1ComberFlow,
+    ym1DrawframeFlow: ym1DrawframeFlow,
+    ym1WindingFlow: ym1WindingFlow,
+    ym1LapFormerFlow: ym1LapFormerFlow,
+    ym1CardingFlow: ym1CardingFlow,
+    ym1RingFrameFlow: ym1RingFrameFlow,
+    ym1SpeedSimplexFlow: ym1SpeedSimplexFlow,
 }

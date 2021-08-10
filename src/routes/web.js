@@ -358,6 +358,47 @@ let initWebRoutes = (app) => {
     router.get("/app/notes/2/stat/stat_poission_flow", appController.statPoissionFlow);
     router.get("/app/notes/2/stat/stat_regression_flow", appController.statRegressionFlow);
 
+    //fm1
+    router.get("/app/notes/2/fm1", appController.fm1Flow);
+    router.get("/app/notes/2/fm1/fm1_books_flow", appController.fm1BooksFlow);
+    router.get("/app/notes/2/fm1/fm1_hnotes_flow", appController.fm1NotesFlow);
+    router.get("/app/notes/2/fm1/fm1_sugg_flow", appController.fm1SuggFlow);
+    router.get("/app/notes/2/fm1/fm1_ques_flow", appController.fm1QuesFlow);
+    router.get("/app/notes/2/fm1/fm1_loom_flow", appController.fm1LoomFlow);
+    router.get("/app/notes/2/fm1/fm1_motion_weav_flow", appController.fm1MotionsWeavFlow);
+    router.get("/app/notes/2/fm1/fm1_intro_fm_flow", appController.fm1IntroFlow);
+    router.get("/app/notes/2/fm1/fm1_shedding_flow", appController.fm1SheddingFlow);
+    router.get("/app/notes/2/fm1/fm1_weaving_flow", appController.fm1WeavingFlow);
+    router.get("/app/notes/2/fm1/fm1_sizing_flow", appController.fm1SizingFlow);
+    router.get("/app/notes/2/fm1/fm1_winding_flow", appController.fm1WindingFlow);
+    router.get("/app/notes/2/fm1/fm1_dobby_flow", appController.fm1DobbyFlow);
+    router.get("/app/notes/2/fm1/fm1_warping_flow", appController.fm1WarpingFlow);
+    router.get("/app/notes/2/fm1/fm1_tappet_flow", appController.fm1TappetFlow);
+    router.get("/app/notes/2/fm1/fm1_picking_flow", appController.fm1PickingFlow);
+    router.get("/app/notes/2/fm1/fm1_beatup_flow", appController.fm1BeatupFlow);
+    router.get("/app/notes/2/fm1/fm1_selvedgeFaults_flow", appController.fm1SelvedgeFlow);
+    router.get("/app/notes/2/fm1/fm1_takeup_flow", appController.fm1TakeupFlow);
+    router.get("/app/notes/2/fm1/fm1_letOff_flow", appController.fm1LetoffFlow);
+    router.get("/app/notes/2/fm1/fm1_denim_flow", appController.fm1DenimFlow);
+    router.get("/app/notes/2/fm1/fm1_stopMotion_flow", appController.fm1StopMotionsFlow);
+    router.get("/app/notes/2/fm1/fm1_jacquard_flow", appController.fm1JaquardFlow);
+
+    //ym1
+    router.get("/app/notes/2/ym1", appController.ym1Flow);
+    router.get("/app/notes/2/ym1/ym1_intro_flow", appController.ym1IntroFlow);
+    router.get("/app/notes/2/ym1/ym1_indeterminer_flow", appController.ym1IndeterStrFlow);
+    router.get("/app/notes/2/ym1/ym1_blowroom_flow", appController.ym1BlowroomFlow);
+    router.get("/app/notes/2/ym1/ym1_mixing_blend_flow", appController.ym1MixingFlow);
+    router.get("/app/notes/2/ym1/ym1_fibreProp_flow", appController.ym1FibPropFlow);
+    router.get("/app/notes/2/ym1/ym1_yarnCondi_flow", appController.ym1YarnCondFlow);
+    router.get("/app/notes/2/ym1/ym1_comber_flow", appController.ym1ComberFlow);
+    router.get("/app/notes/2/ym1/ym1_drawFrame_flow", appController.ym1DrawframeFlow);
+    router.get("/app/notes/2/ym1/ym1_winding_flow", appController.ym1WindingFlow);
+    router.get("/app/notes/2/ym1/ym1_lapFormer_flow", appController.ym1LapFormerFlow);
+    router.get("/app/notes/2/ym1/ym1_carding_flow", appController.ym1CardingFlow);
+    router.get("/app/notes/2/ym1/ym1_ringFrame_flow", appController.ym1RingFrameFlow);
+    router.get("/app/notes/2/ym1/ym1_speedFrame_flow", appController.ym1SpeedSimplexFlow);
+
 
 
 
