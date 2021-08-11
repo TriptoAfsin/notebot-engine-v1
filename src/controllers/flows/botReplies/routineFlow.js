@@ -5,6 +5,12 @@ let cardGen = require("../../genrators/cardGenerator");
 
 let routines = [
     grroupedButtonBlockGen(
+        "🔴 Online Exam Routine(2021)-",
+        [
+            webBtnBlockGen("🔵 L1,1 ", "https://www.butex.edu.bd/wp-content/uploads/2021/08/20210809_173940.jpg"),
+        ]
+    ),
+    grroupedButtonBlockGen(
         "🔰 Online Class Routine(New)-",
         [
             payloadBtnGen("🔵 L2,1 ", "online_2_1"),
