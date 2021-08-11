@@ -399,6 +399,45 @@ let initWebRoutes = (app) => {
     router.get("/app/notes/2/ym1/ym1_ringFrame_flow", appController.ym1RingFrameFlow);
     router.get("/app/notes/2/ym1/ym1_speedFrame_flow", appController.ym1SpeedSimplexFlow);
 
+    //ttqc
+    router.get("/app/notes/2/ttqc", appController.ttqcFlow);
+    router.get("/app/notes/2/ttqc/ttqc_books_flow", appController.ttqcBooksFlow);
+    router.get("/app/notes/2/ttqc/ttqc_hnotes_flow", appController.ttqcNotesFlow);
+    router.get("/app/notes/2/ttqc/ttqc_count_flow", appController.ttqcCountFlow);
+    router.get("/app/notes/2/ttqc/ttqc_crimp_flow", appController.ttqcCrimpFlow);
+    router.get("/app/notes/2/ttqc/ttqc_twist_flow", appController.ttqcTwistFlow);
+    router.get("/app/notes/2/ttqc/ttqc_intro_flow", appController.ttqcIntroFlow);
+    router.get("/app/notes/2/ttqc/ttqc_mositure_flow", appController.ttqcMoistureRHFlow);
+    router.get("/app/notes/2/ttqc/ttqc_neps_flow", appController.ttqcNepsFlow);
+    router.get("/app/notes/2/ttqc/ttqc_sampling_flow", appController.ttqcSamplingFlow);
+    router.get("/app/notes/2/ttqc/ttqc_fibre_prop_flow", appController.ttqcFibPropFlow);
+    router.get("/app/notes/2/ttqc/ttqc_hvi_flow", appController.ttqcHVIFlow);
+    router.get("/app/notes/2/ttqc/ttqc_afis_flow", appController.ttqcAfisFlow);
+
+
+    //tp
+    router.get("/app/notes/2/tp", appController.tpFlow);
+    router.get("/app/notes/2/tp/tp_books_flow", appController.tpBooksFlow);
+    router.get("/app/notes/2/tp/tp_notes_flow", appController.tpNotesFlow);
+    router.get("/app/notes/2/tp/tp_sugg_flow", appController.tpSuggFlow);
+    router.get("/app/notes/2/tp/tp_ques_flow", appController.tpQuesFlow);
+    router.get("/app/notes/2/tp/tp_swelling_flow", appController.tpSwellingFlow);
+    router.get("/app/notes/2/tp/tp_friction_flow", appController.tpFrictionFlow);
+    router.get("/app/notes/2/tp/tp_yarnJamming_flow", appController.tpJammingFlow);
+    router.get("/app/notes/2/tp/tp_optical_flow", appController.tpOpticalFlow);
+    router.get("/app/notes/2/tp/tp_fibreMig_flow", appController.tpFibMigFlow);
+    router.get("/app/notes/2/tp/tp_thermalProp_flow", appController.tpThermalPropFlow);
+    router.get("/app/notes/2/tp/tp_fibredraw_flow", appController.tpFibDrawFlow);
+    router.get("/app/notes/2/tp/tp_x_ray_flow", appController.tpXrayFlow);
+    router.get("/app/notes/2/tp/tp_yarnStructure_flow", appController.tpYarnStructFlow);
+    router.get("/app/notes/2/tp/tp_fabgemometry_flow", appController.tpFabGeoFlow);
+    router.get("/app/notes/2/tp/tp_tensile_flow", appController.tpTensilePropFlow);
+
+
+
+
+
+
 
 
 

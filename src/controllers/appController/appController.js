@@ -396,6 +396,40 @@ let ym1Carding = require('./academic/notes/level2/subs/ym1/topics/appYm1Carding'
 let ym1RingFrame = require('./academic/notes/level2/subs/ym1/topics/appYm1RingFrame')
 let ym1SpeedSimplex = require('./academic/notes/level2/subs/ym1/topics/appYm1Simplex')
 
+//ttqc
+let ttqcAppFlow = require('./academic/notes/level2/subs/ttqc/ttqc')
+let ttqcBooks = require('./academic/notes/level2/subs/ttqc/topics/appTtqcBooks')
+let ttqcNotes = require('./academic/notes/level2/subs/ttqc/topics/appttqcNotes')
+let ttqcCount = require('./academic/notes/level2/subs/ttqc/topics/appttqcCount')
+let ttqcCrimp = require('./academic/notes/level2/subs/ttqc/topics/appttqcCrimp')
+let ttqcTwist = require('./academic/notes/level2/subs/ttqc/topics/appTtqcTwist')
+let ttqcIntro = require('./academic/notes/level2/subs/ttqc/topics/appttqcIntro')
+let ttqcMoistureRH = require('./academic/notes/level2/subs/ttqc/topics/appttqcRH')
+let ttqcNeps = require('./academic/notes/level2/subs/ttqc/topics/appTtqcNeps')
+let ttqcSampling = require('./academic/notes/level2/subs/ttqc/topics/appTtqcSampling')
+let ttqcFibProp = require('./academic/notes/level2/subs/ttqc/topics/appTtqcFibProp')
+let ttqcHVI = require('./academic/notes/level2/subs/ttqc/topics/appTtqcHVI')
+let ttqcAfis = require('./academic/notes/level2/subs/ttqc/topics/appTtqcAfis')
+
+//tp
+let tpAppFlow = require('./academic/notes/level2/subs/tp/tp')
+let tpBooks = require('./academic/notes/level2/subs/tp/topics/apptpBooks')
+let tpNotes = require('./academic/notes/level2/subs/tp/topics/apptpNotes')
+let tpSugg = require('./academic/notes/level2/subs/tp/topics/appTpSugg')
+let tpQues = require('./academic/notes/level2/subs/tp/topics/appTpQues')
+let tpSwelling = require('./academic/notes/level2/subs/tp/topics/appTpSwelling')
+let tpFriction = require('./academic/notes/level2/subs/tp/topics/appTpFriction')
+let tpJamming = require('./academic/notes/level2/subs/tp/topics/apptpYarnJamming')
+let tpOptical = require('./academic/notes/level2/subs/tp/topics/appTpOpticalProp')
+let tpFibMig = require('./academic/notes/level2/subs/tp/topics/appTpFibreMig')
+let tpThermalProp = require('./academic/notes/level2/subs/tp/topics/appTpThermalProp')
+let tpFibDraw = require('./academic/notes/level2/subs/tp/topics/appTpFibDraw')
+let tpXrayDiff = require('./academic/notes/level2/subs/tp/topics/appTpXray')
+let tpYarnStruct = require('./academic/notes/level2/subs/tp/topics/appTpYarnStruct')
+let tpFabGeo = require('./academic/notes/level2/subs/tp/topics/appTpFabGeo')
+let tpTensileProp = require('./academic/notes/level2/subs/tp/topics/appTpTensileProp')
+
+
 
 
 /*--------------------------------------------------------------------------*/ 
@@ -2068,8 +2102,153 @@ let ym1SpeedSimplexFlow = (req, res) => {
 
 
 
+//ttqc
+let ttqcFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(ttqcAppFlow);
+};
+
+let ttqcBooksFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(ttqcBooks);
+};
+
+let ttqcNotesFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(ttqcNotes);
+};
+
+let ttqcCountFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(ttqcCount);
+};
+
+let ttqcCrimpFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(ttqcCrimp);
+};
+
+let ttqcTwistFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(ttqcTwist);
+};
+
+let ttqcIntroFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(ttqcIntro);
+};
+
+let ttqcMoistureRHFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(ttqcMoistureRH);
+};
+
+let ttqcNepsFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(ttqcNeps);
+};
+
+let ttqcSamplingFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(ttqcSampling);
+};
+
+let ttqcFibPropFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(ttqcFibProp);
+};
+
+let ttqcHVIFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(ttqcHVI);
+};
+
+let ttqcAfisFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(ttqcAfis);
+};
 
 
+//tp
+let tpFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(tpAppFlow);
+};
+
+let tpBooksFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(tpBooks);
+};
+
+let tpNotesFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(tpNotes);
+};
+
+let tpSuggFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(tpSugg);
+};
+
+let tpQuesFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(tpQues);
+};
+
+let tpSwellingFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(tpSwelling);
+};
+
+let tpFrictionFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(tpFriction);
+};
+
+let tpJammingFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(tpJamming);
+};
+
+let tpOpticalFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(tpOptical);
+};
+
+let tpFibMigFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(tpFibMig);
+};
+
+let tpThermalPropFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(tpThermalProp);
+};
+
+let tpFibDrawFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(tpFibDraw);
+};
+
+let tpXrayFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(tpXrayDiff);
+};
+
+let tpYarnStructFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(tpYarnStruct);
+};
+
+let tpFabGeoFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(tpFabGeo);
+};
+
+let tpTensilePropFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(tpTensileProp);
+};
 
 /*-----------------------------------------------------------------------------------------------------------------------------------*/ 
 
@@ -2453,4 +2632,35 @@ module.exports = {
     ym1CardingFlow: ym1CardingFlow,
     ym1RingFrameFlow: ym1RingFrameFlow,
     ym1SpeedSimplexFlow: ym1SpeedSimplexFlow,
+
+    ttqcFlow: ttqcFlow,
+    ttqcBooksFlow: ttqcBooksFlow,
+    ttqcNotesFlow: ttqcNotesFlow,
+    ttqcCountFlow: ttqcCountFlow,
+    ttqcCrimpFlow: ttqcCrimpFlow,
+    ttqcTwistFlow: ttqcTwistFlow,
+    ttqcIntroFlow: ttqcIntroFlow,
+    ttqcMoistureRHFlow: ttqcMoistureRHFlow,
+    ttqcNepsFlow: ttqcNepsFlow,
+    ttqcSamplingFlow: ttqcSamplingFlow,
+    ttqcFibPropFlow: ttqcFibPropFlow,
+    ttqcHVIFlow: ttqcHVIFlow,
+    ttqcAfisFlow: ttqcAfisFlow,
+
+    tpFlow: tpFlow,
+    tpBooksFlow: tpBooksFlow,
+    tpNotesFlow: tpNotesFlow,
+    tpSuggFlow: tpSuggFlow,
+    tpQuesFlow: tpQuesFlow,
+    tpSwellingFlow: tpSwellingFlow,
+    tpFrictionFlow: tpFrictionFlow,
+    tpJammingFlow: tpJammingFlow,
+    tpOpticalFlow: tpOpticalFlow,
+    tpFibMigFlow: tpFibMigFlow,
+    tpThermalPropFlow: tpThermalPropFlow,
+    tpFibDrawFlow: tpFibDrawFlow,
+    tpXrayFlow: tpXrayFlow,
+    tpYarnStructFlow: tpYarnStructFlow,
+    tpFabGeoFlow: tpFabGeoFlow,
+    tpTensilePropFlow: tpTensilePropFlow,
 }
