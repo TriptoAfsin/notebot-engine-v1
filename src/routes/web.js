@@ -433,6 +433,45 @@ let initWebRoutes = (app) => {
     router.get("/app/notes/2/tp/tp_fabgemometry_flow", appController.tpFabGeoFlow);
     router.get("/app/notes/2/tp/tp_tensile_flow", appController.tpTensilePropFlow);
 
+    //feee
+    router.get("/app/notes/2/eee", appController.feeeFlow);
+    router.get("/app/notes/2/eee/eee_books_flow", appController.feeeBooksFlow);
+    router.get("/app/notes/2/eee/eee_hnotes_flow", appController.feeeNotesFlow);
+    router.get("/app/notes/2/eee/eee_ques_flow", appController.feeeQuesFlow);
+    router.get("/app/notes/2/eee/eee_ch1_flow", appController.feeeCh1Flow);
+    router.get("/app/notes/2/eee/eee_ch2_flow", appController.feeeCh2Flow);
+    router.get("/app/notes/2/eee/eee_ch3_flow", appController.feeeCh3Flow);
+    router.get("/app/notes/2/eee/eee_ch4_flow", appController.feeeCh4Flow);
+    router.get("/app/notes/2/eee/eee_ch5_flow", appController.feeeCh5Flow);
+    router.get("/app/notes/2/eee/eee_ch8_flow", appController.feeeCh8Flow);
+    router.get("/app/notes/2/eee/eee_wye_delta_flow", appController.feeeWyeDeltaFlow);
+    router.get("/app/notes/2/eee/eee_rms_flow", appController.feeeRMSFlow);
+    router.get("/app/notes/2/eee/eee_circuit_analy_flow", appController.feeeCirAnalFlow);
+
+    //mmtf
+    router.get("/app/notes/2/mmtf", appController.mmtfFlow);
+    router.get("/app/notes/2/mmtf/mmtf_books_flow", appController.mmtfBooksFlow);
+    router.get("/app/notes/2/mmtf/mmtf_hnotes_flow", appController.mmtfNotesFlow);
+    router.get("/app/notes/2/mmtf/mmtf_sugg_flow", appController.mmtfSuggFlow);
+    router.get("/app/notes/2/mmtf/mmtf_intro_flow", appController.mmtfIntroFlow);
+    router.get("/app/notes/2/mmtf/mmtf_rayon_flow", appController.mmtfViscoseRayonFlow);
+    router.get("/app/notes/2/mmtf/mmtf_spinning_sys_flow", appController.mmtfSpinSysFlow);
+    router.get("/app/notes/2/mmtf/mmtf_high_perf_flow", appController.mmtfHighPerfFlow);
+    router.get("/app/notes/2/mmtf/mmtf_polyamaide_flow", appController.mmtfPolyamideFlow);
+    router.get("/app/notes/2/mmtf/mmtf_modal_flow", appController.mmtfModalFlow);
+    router.get("/app/notes/2/mmtf/mmtf_elastomer_flow", appController.mmtfElastomerFlow);
+    router.get("/app/notes/2/mmtf/mmtf_polyolefin_flow", appController.mmtfPolyolefinFlow);
+    router.get("/app/notes/2/mmtf/mmtf_carbon_fibre_flow", appController.mmtfCarbonFibFlow);
+    router.get("/app/notes/2/mmtf/mmtf_acetate_flow", appController.mmtfAcetateFlow);
+    router.get("/app/notes/2/mmtf/mmtf_bio_fibre_flow", appController.mmtfBiCompFlow);
+    router.get("/app/notes/2/mmtf/mmtf_polyester_flow", appController.mmtfPolyesterFlow);
+    router.get("/app/notes/2/mmtf/mmtf_acrylic_flow", appController.mmtfAcrylicFlow);
+    router.get("/app/notes/2/mmtf/mmtf_vectran_flow", appController.mmtfVectranFlow);
+    router.get("/app/notes/2/mmtf/mmtf_regen_protein_fibre_flow", appController.mmtfRegenProteinFlow);
+    router.get("/app/notes/2/mmtf/mmtf_glassfib_flow", appController.mmtfGlassFibFlow);
+    router.get("/app/notes/2/mmtf/mmtf_lyocell_flow", appController.mmtfLyocellFlow);
+    router.get("/app/notes/2/mmtf/mmtf_nylon_flow", appController.mmtfNylonFlow);
+
 
 
 

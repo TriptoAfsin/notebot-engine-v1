@@ -430,6 +430,46 @@ let tpFabGeo = require('./academic/notes/level2/subs/tp/topics/appTpFabGeo')
 let tpTensileProp = require('./academic/notes/level2/subs/tp/topics/appTpTensileProp')
 
 
+//feee
+let feeeAppFlow = require('./academic/notes/level2/subs/feee/feee')
+let feeeBooks = require('./academic/notes/level2/subs/feee/topics/appFeeeBooks')
+let feeeNotes = require('./academic/notes/level2/subs/feee/topics/appFeeeNotes')
+let feeeQues = require('./academic/notes/level2/subs/feee/topics/appFeeeQues')
+let feeeCh1 = require('./academic/notes/level2/subs/feee/topics/appFeeeCh1')
+let feeeCh2 = require('./academic/notes/level2/subs/feee/topics/appFeeeCh2')
+let feeeCh3 = require('./academic/notes/level2/subs/feee/topics/appFeeeCh3')
+let feeeCh4 = require('./academic/notes/level2/subs/feee/topics/appFeeeCh4')
+let feeeCh5 = require('./academic/notes/level2/subs/feee/topics/appFeeeCh5')
+let feeeCh8 = require('./academic/notes/level2/subs/feee/topics/appFeeeCh8')
+let feeeWyeDelta = require('./academic/notes/level2/subs/feee/topics/appFeeeWyeDelta')
+let feeeRMS = require('./academic/notes/level2/subs/feee/topics/appFeeeRMS')
+let feeeCirAnal = require('./academic/notes/level2/subs/feee/topics/appFeeeCircuitAnal')
+
+
+//mmtf
+let mmtfAppFlow = require('./academic/notes/level2/subs/mmtf/mmtf')
+let mmtfBooks = require('./academic/notes/level2/subs/mmtf/topics/appMMTFBooks')
+let mmtfNotes = require('./academic/notes/level2/subs/mmtf/topics/appMMTFNotes')
+let mmtfSugg = require('./academic/notes/level2/subs/mmtf/topics/appmmtfSugg')
+let mmtfIntro = require('./academic/notes/level2/subs/mmtf/topics/appmmtfIntro')
+let mmtfViscoseRayon = require('./academic/notes/level2/subs/mmtf/topics/appmmtfViscoseRayon')
+let mmtfSpinSys = require('./academic/notes/level2/subs/mmtf/topics/appmmtfSpinSys')
+let mmtfHighPerf = require('./academic/notes/level2/subs/mmtf/topics/appMmtfHighPerf')
+let mmtfPolyamide = require('./academic/notes/level2/subs/mmtf/topics/appMmtfplyamide')
+let mmtfModal = require('./academic/notes/level2/subs/mmtf/topics/appMMTFModal')
+let mmtfElastomer = require('./academic/notes/level2/subs/mmtf/topics/appMmtfElastomer')
+let mmtfPolyolefin = require('./academic/notes/level2/subs/mmtf/topics/appMmtfPolyolefin')
+let mmtfCarbonFib = require('./academic/notes/level2/subs/mmtf/topics/appMMtfCarbonFib')
+let mmtfAcetate = require('./academic/notes/level2/subs/mmtf/topics/appmmtfacetatetriace')
+let mmtfBiComp = require('./academic/notes/level2/subs/mmtf/topics/appmmtfBiComp')
+let mmtfPolyester = require('./academic/notes/level2/subs/mmtf/topics/appmmtfPolyester')
+let mmtfAcrylic = require('./academic/notes/level2/subs/mmtf/topics/appmmtfAcry')
+let mmtfVectran = require('./academic/notes/level2/subs/mmtf/topics/appmmtfVectran')
+let mmtfRegenProtein = require('./academic/notes/level2/subs/mmtf/topics/appmmtfRegenProtein')
+let mmtfGlassFib = require('./academic/notes/level2/subs/mmtf/topics/appmmtfGlassFib')
+let mmtfLyocell = require('./academic/notes/level2/subs/mmtf/topics/appmmtfLyocell')
+let mmtfNylon = require('./academic/notes/level2/subs/mmtf/topics/appmmtfNylon')
+
 
 
 /*--------------------------------------------------------------------------*/ 
@@ -2250,6 +2290,187 @@ let tpTensilePropFlow = (req, res) => {
     return res.send(tpTensileProp);
 };
 
+//feee
+let feeeFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(feeeAppFlow);
+};
+
+let feeeBooksFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(feeeBooks);
+};
+
+let feeeNotesFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(feeeNotes);
+};
+
+let feeeQuesFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(feeeQues);
+};
+
+let feeeCh1Flow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(feeeCh1);
+};
+
+let feeeCh2Flow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(feeeCh2);
+};
+
+let feeeCh3Flow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(feeeCh3);
+};
+
+let feeeCh4Flow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(feeeCh4);
+};
+
+
+let feeeCh5Flow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(feeeCh5);
+};
+
+let feeeCh8Flow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(feeeCh8);
+};
+
+let feeeWyeDeltaFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(feeeWyeDelta);
+};
+
+let feeeRMSFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(feeeRMS);
+};
+
+let feeeCirAnalFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(feeeCirAnal);
+};
+
+
+//mmtf
+
+let mmtfFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(mmtfAppFlow);
+};
+
+let mmtfBooksFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(mmtfBooks);
+};
+
+let mmtfNotesFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(mmtfNotes);
+};
+
+let mmtfSuggFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(mmtfSugg);
+};
+
+let mmtfIntroFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(mmtfIntro);
+};
+
+let mmtfViscoseRayonFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(mmtfViscoseRayon);
+};
+
+let mmtfSpinSysFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(mmtfSpinSys);
+};
+
+let mmtfHighPerfFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(mmtfHighPerf);
+};
+
+let mmtfPolyamideFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(mmtfPolyamide);
+};
+
+let mmtfModalFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(mmtfModal);
+};
+
+let mmtfElastomerFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(mmtfElastomer);
+};
+
+let mmtfPolyolefinFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(mmtfPolyolefin);
+};
+
+let mmtfCarbonFibFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(mmtfCarbonFib);
+};
+
+let mmtfAcetateFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(mmtfAcetate);
+};
+
+let mmtfBiCompFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(mmtfBiComp);
+};
+
+let mmtfPolyesterFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(mmtfPolyester);
+};
+
+let mmtfAcrylicFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(mmtfAcrylic);
+};
+
+let mmtfVectranFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(mmtfVectran);
+};
+
+let mmtfRegenProteinFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(mmtfRegenProtein);
+};
+
+let mmtfGlassFibFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(mmtfGlassFib);
+};
+
+let mmtfLyocellFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(mmtfLyocell);
+};
+
+let mmtfNylonFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(mmtfNylon);
+};
+
+
 /*-----------------------------------------------------------------------------------------------------------------------------------*/ 
 
 let labs = (req, res) => {
@@ -2663,4 +2884,41 @@ module.exports = {
     tpYarnStructFlow: tpYarnStructFlow,
     tpFabGeoFlow: tpFabGeoFlow,
     tpTensilePropFlow: tpTensilePropFlow,
+
+    feeeFlow:feeeFlow,
+    feeeBooksFlow: feeeBooksFlow,
+    feeeNotesFlow: feeeNotesFlow,
+    feeeQuesFlow: feeeQuesFlow,
+    feeeCh1Flow: feeeCh1Flow,
+    feeeCh2Flow: feeeCh2Flow,
+    feeeCh3Flow: feeeCh3Flow,
+    feeeCh4Flow: feeeCh4Flow,
+    feeeCh5Flow: feeeCh5Flow,
+    feeeCh8Flow: feeeCh8Flow,
+    feeeWyeDeltaFlow: feeeWyeDeltaFlow,
+    feeeRMSFlow: feeeRMSFlow,
+    feeeCirAnalFlow: feeeCirAnalFlow,
+
+    mmtfFlow: mmtfFlow,
+    mmtfBooksFlow: mmtfBooksFlow,
+    mmtfNotesFlow: mmtfNotesFlow,
+    mmtfSuggFlow: mmtfSuggFlow,
+    mmtfIntroFlow: mmtfIntroFlow,
+    mmtfViscoseRayonFlow: mmtfViscoseRayonFlow,
+    mmtfSpinSysFlow: mmtfSpinSysFlow,
+    mmtfHighPerfFlow: mmtfHighPerfFlow,
+    mmtfPolyamideFlow: mmtfPolyamideFlow,
+    mmtfModalFlow: mmtfModalFlow,
+    mmtfElastomerFlow: mmtfElastomerFlow,
+    mmtfPolyolefinFlow: mmtfPolyolefinFlow,
+    mmtfCarbonFibFlow: mmtfCarbonFibFlow,
+    mmtfAcetateFlow: mmtfAcetateFlow,
+    mmtfBiCompFlow: mmtfBiCompFlow,
+    mmtfPolyesterFlow: mmtfPolyesterFlow,
+    mmtfAcrylicFlow: mmtfAcrylicFlow,
+    mmtfVectranFlow: mmtfVectranFlow,
+    mmtfRegenProteinFlow: mmtfRegenProteinFlow,
+    mmtfGlassFibFlow: mmtfGlassFibFlow,
+    mmtfLyocellFlow: mmtfLyocellFlow,
+    mmtfNylonFlow: mmtfNylonFlow,
 }
