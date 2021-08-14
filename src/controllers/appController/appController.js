@@ -471,6 +471,49 @@ let mmtfLyocell = require('./academic/notes/level2/subs/mmtf/topics/appmmtfLyoce
 let mmtfNylon = require('./academic/notes/level2/subs/mmtf/topics/appmmtfNylon')
 
 
+//mp
+let mpAppFlow = require('./academic/notes/level2/subs/mp/mp')
+let mpDefects = require('./academic/notes/level2/subs/mp/topics/appMpDefects')
+let mpLathe = require('./academic/notes/level2/subs/mp/topics/appMpLathe')
+let mpMilling = require('./academic/notes/level2/subs/mp/topics/appMpMilling')
+let mpCastingVideo = require('./academic/notes/level2/subs/mp/topics/appMpCastingVideo')
+let mpWelding = require('./academic/notes/level2/subs/mp/topics/appMpWelding')
+let mpHotCold = require('./academic/notes/level2/subs/mp/topics/appMpHotCold')
+let mpCeramics = require('./academic/notes/level2/subs/mp/topics/appMpCeramics')
+let mpPlastics = require('./academic/notes/level2/subs/mp/topics/appMpPlastics')
+let mpSlideWays = require('./academic/notes/level2/subs/mp/topics/appMpSlideWays')
+let mpShaper = require('./academic/notes/level2/subs/mp/topics/appMpShaper')
+let mpEDM = require('./academic/notes/level2/subs/mp/topics/appMpEDM')
+let mpNonConv = require('./academic/notes/level2/subs/mp/topics/appMpNonConvMC')
+let mpMCEconomics = require('./academic/notes/level2/subs/mp/topics/appMpMcEcono')
+let mpCasting = require('./academic/notes/level2/subs/mp/topics/appMpMcEcono')
+
+
+//fme
+let fmeAppFlow = require('./academic/notes/level2/subs/fme/fme')
+let fmeBooks = require('./academic/notes/level2/subs/fme/topics/appFmeBooks')
+let fmeNotes = require('./academic/notes/level2/subs/fme/topics/appFmeNotes')
+let fmeQues = require('./academic/notes/level2/subs/fme/topics/appFmeQues')
+let fmeSugg = require('./academic/notes/level2/subs/fme/topics/appFmeSugg')
+let fmeBoiler = require('./academic/notes/level2/subs/fme/topics/appFmeBoiler')
+let fmePowerRef = require('./academic/notes/level2/subs/fme/topics/appFmePowerRef')
+let fmeSteamTurb = require('./academic/notes/level2/subs/fme/topics/appFmeSteamTurbine')
+let fmeThermalEng = require('./academic/notes/level2/subs/fme/topics/appFMEThermalEng')
+let fmeFluidMech = require('./academic/notes/level2/subs/fme/topics/appFmeFluidMech')
+let fmeEnergProc = require('./academic/notes/level2/subs/fme/topics/appFmeEngProc')
+let fmeSolid = require('./academic/notes/level2/subs/fme/topics/appFmeSolid')
+let fmeGearTrain = require('./academic/notes/level2/subs/fme/topics/appFmeGearTrain')
+let fmePump = require('./academic/notes/level2/subs/fme/topics/appFmePumpCompre')
+let fmeStress = require('./academic/notes/level2/subs/fme/topics/appFmeStressStrain')
+let fmeEngPetrol = require('./academic/notes/level2/subs/fme/topics/appFmeEngPetrol')
+let fmeEngCombus = require('./academic/notes/level2/subs/fme/topics/appFmeEngCombus')
+let fmeBeam = require('./academic/notes/level2/subs/fme/topics/appFmeBeam')
+let fmeBelt = require('./academic/notes/level2/subs/fme/topics/appFmeBelt')
+let fmeCentroid = require('./academic/notes/level2/subs/fme/topics/appFmeCentroid')
+let fmeMOI = require('./academic/notes/level2/subs/fme/topics/appFmeMOI')
+let fmeColumn = require('./academic/notes/level2/subs/fme/topics/appFmeColumn')
+
+
 
 /*--------------------------------------------------------------------------*/ 
 
@@ -2471,6 +2514,197 @@ let mmtfNylonFlow = (req, res) => {
 };
 
 
+//mp
+
+let mpFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(mpAppFlow);
+};
+
+let mpDefectsFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(mpDefects);
+};
+
+let mpLatheFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(mpLathe);
+};
+
+let mpMillingFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(mpMilling);
+};
+
+let mpCastingVideoFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(mpCastingVideo);
+};
+
+let mpWeldingFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(mpWelding);
+};
+
+let mpHotColdFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(mpHotCold);
+};
+
+let mpCeramicsFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(mpCeramics);
+};
+
+let mpPlasticsFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(mpPlastics);
+};
+
+let mpSlideWaysFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(mpSlideWays);
+};
+
+let mpShaperFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(mpShaper);
+};
+
+let mpEDMFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(mpEDM);
+};
+
+let mpNonConvFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(mpNonConv);
+};
+
+let mpMCEconoFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(mpMCEconomics);
+};
+
+let mpCastingFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(mpCasting);
+};
+
+
+//fme
+let fmeFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(fmeAppFlow);
+};
+
+let fmeBooksFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(fmeBooks);
+};
+
+let fmeNotesFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(fmeNotes);
+};
+
+let fmeQuesFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(fmeQues);
+};
+
+let fmeSuggFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(fmeSugg);
+};
+
+let fmeBoilerFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(fmeBoiler);
+};
+
+let fmePowerRefFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(fmePowerRef);
+};
+
+let fmeSteamTurbFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(fmeSteamTurb);
+};
+
+let fmeThermalEngFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(fmeThermalEng);
+};
+
+let fmeFluidMechFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(fmeFluidMech);
+};
+
+let fmeEnergProcFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(fmeEnergProc);
+};
+
+let fmeSolidFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(fmeSolid);
+};
+
+let fmeGearTrainFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(fmeGearTrain);
+};
+
+let fmePumpFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(fmePump);
+};
+
+let fmeStressFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(fmeStress);
+};
+
+let fmeEngPetrolFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(fmeEngPetrol);
+};
+
+let fmeEngCombusFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(fmeEngCombus);
+};
+
+let fmeBeamFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(fmeBeam);
+};
+
+let fmeBeltFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(fmeBelt);
+};
+
+let fmeCentroidFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(fmeCentroid);
+};
+
+let fmeMOIFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(fmeMOI);
+};
+
+let fmeColumnFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(fmeColumn);
+};
+
+
+
 /*-----------------------------------------------------------------------------------------------------------------------------------*/ 
 
 let labs = (req, res) => {
@@ -2921,4 +3155,44 @@ module.exports = {
     mmtfGlassFibFlow: mmtfGlassFibFlow,
     mmtfLyocellFlow: mmtfLyocellFlow,
     mmtfNylonFlow: mmtfNylonFlow,
+
+
+    mpFlow: mpFlow,
+    mpDefectsFlow: mpDefectsFlow,
+    mpLatheFlow: mpLatheFlow,
+    mpMillingFlow: mpMillingFlow,
+    mpCastingVideoFlow: mpCastingVideoFlow,
+    mpWeldingFlow: mpWeldingFlow,
+    mpHotColdFlow: mpHotColdFlow,
+    mpCeramicsFlow: mpCeramicsFlow,
+    mpPlasticsFlow: mpPlasticsFlow,
+    mpSlideWaysFlow: mpSlideWaysFlow,
+    mpShaperFlow: mpShaperFlow,
+    mpEDMFlow: mpEDMFlow,
+    mpNonConvFlow: mpNonConvFlow,
+    mpMCEconoFlow: mpMCEconoFlow,
+    mpCastingFlow: mpCastingFlow,
+
+    fmeFlow: fmeFlow,
+    fmeBooksFlow: fmeBooksFlow,
+    fmeNotesFlow: fmeNotesFlow,
+    fmeQuesFlow: fmeQuesFlow,
+    fmeSuggFlow: fmeSuggFlow,
+    fmeBoilerFlow: fmeBoilerFlow,
+    fmePowerRefFlow: fmePowerRefFlow,
+    fmeSteamTurbFlow: fmeSteamTurbFlow,
+    fmeThermalEngFlow: fmeThermalEngFlow,
+    fmeFluidMechFlow: fmeFluidMechFlow,
+    fmeEnergProcFlow: fmeEnergProcFlow,
+    fmeSolidFlow: fmeSolidFlow,
+    fmeGearTrainFlow: fmeGearTrainFlow,
+    fmePumpFlow: fmePumpFlow,
+    fmeStressFlow: fmeStressFlow,
+    fmeEngPetrolFlow: fmeEngPetrolFlow,
+    fmeEngCombusFlow: fmeEngCombusFlow,
+    fmeBeamFlow: fmeBeamFlow,
+    fmeBeltFlow: fmeBeltFlow,
+    fmeCentroidFlow: fmeCentroidFlow,
+    fmeMOIFlow: fmeMOIFlow,
+    fmeColumnFlow: fmeColumnFlow,
 }

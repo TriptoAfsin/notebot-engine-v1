@@ -62,11 +62,6 @@ let level_2_note = [
             payloadBtnGen("Weaving Preparatory", "weav_prep_flow")
         ]
     ),
-    grroupedButtonBlockGen(`🔰 Select Subject for level 2 -`,
-        [
-            payloadBtnGen("OM", "om_flow"),
-        ]
-    )
 ]
 
 

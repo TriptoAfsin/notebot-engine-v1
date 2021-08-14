@@ -472,6 +472,48 @@ let initWebRoutes = (app) => {
     router.get("/app/notes/2/mmtf/mmtf_lyocell_flow", appController.mmtfLyocellFlow);
     router.get("/app/notes/2/mmtf/mmtf_nylon_flow", appController.mmtfNylonFlow);
 
+    //mp
+    router.get("/app/notes/2/mp", appController.mpFlow);
+    router.get("/app/notes/2/mp/mp_defects_flow", appController.mpDefectsFlow);
+    router.get("/app/notes/2/mp/mp_latheMc_flow", appController.mpLatheFlow);
+    router.get("/app/notes/2/mp/mp_millingMc_flow", appController.mpMillingFlow);
+    router.get("/app/notes/2/mp/mp_castingVideo_flow", appController.mpCastingVideoFlow);
+    router.get("/app/notes/2/mp/mp_welding_flow", appController.mpWeldingFlow);
+    router.get("/app/notes/2/mp/mp_hotCold_flow", appController.mpHotColdFlow);
+    router.get("/app/notes/2/mp/mp_ceramics_flow", appController.mpCeramicsFlow);
+    router.get("/app/notes/2/mp/mp_plastic_flow", appController.mpPlasticsFlow);
+    router.get("/app/notes/2/mp/mp_slideways_flow", appController.mpSlideWaysFlow);
+    router.get("/app/notes/2/mp/mp_shaperMc_flow", appController.mpShaperFlow);
+    router.get("/app/notes/2/mp/mp_edm_flow", appController.mpEDMFlow);
+    router.get("/app/notes/2/mp/mp_non_conventional_flow", appController.mpNonConvFlow);
+    router.get("/app/notes/2/mp/mp_mcEconomics_flow", appController.mpMCEconoFlow);
+    router.get("/app/notes/2/mp/mp_casting_flow", appController.mpCastingFlow);
+
+
+    //fme
+    router.get("/app/notes/2/fme", appController.fmeFlow);
+    router.get("/app/notes/2/fme/fme_books_flow", appController.fmeBooksFlow);
+    router.get("/app/notes/2/fme/fme_notes_flow", appController.fmeNotesFlow);
+    router.get("/app/notes/2/fme/fme_ques_flow", appController.fmeQuesFlow);
+    router.get("/app/notes/2/fme/fme_sugg_flow", appController.fmeSuggFlow);
+    router.get("/app/notes/2/fme/fme_boiler_flow", appController.fmeBoilerFlow);
+    router.get("/app/notes/2/fme/fme_powerRefre_flow", appController.fmePowerRefFlow);
+    router.get("/app/notes/2/fme/fme_steam_flow", appController.fmeSteamTurbFlow);
+    router.get("/app/notes/2/fme/fme_thermalEng_flow", appController.fmeThermalEngFlow);
+    router.get("/app/notes/2/fme/fme_fluidMecha_flow", appController.fmeFluidMechFlow);
+    router.get("/app/notes/2/fme/fme_energyProcess_flow", appController.fmeEnergProcFlow);
+    router.get("/app/notes/2/fme/fme_solid_flow", appController.fmeSolidFlow);
+    router.get("/app/notes/2/fme/fme_gearTrain_flow", appController.fmeGearTrainFlow);
+    router.get("/app/notes/2/fme/fme_pumpCompressor_flow", appController.fmePumpFlow);
+    router.get("/app/notes/2/fme/fme_stressStrain_flow", appController.fmeStressFlow);
+    router.get("/app/notes/2/fme/fme_enginePetrol_flow", appController.fmeEngPetrolFlow);
+    router.get("/app/notes/2/fme/fme_engineCombus_flow", appController.fmeEngCombusFlow);
+    router.get("/app/notes/2/fme/fme_beam_flow", appController.fmeBeamFlow);
+    router.get("/app/notes/2/fme/fme_belt_flow", appController.fmeBeltFlow);
+    router.get("/app/notes/2/fme/fme_centroid_flow", appController.fmeCentroidFlow);
+    router.get("/app/notes/2/fme/fme_momentInnertia_flow", appController.fmeMOIFlow);
+    router.get("/app/notes/2/fme/fme_cloumn_flow", appController.fmeColumnFlow);
+
 
 
 
