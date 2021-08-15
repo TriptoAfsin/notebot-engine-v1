@@ -515,6 +515,51 @@ let initWebRoutes = (app) => {
     router.get("/app/notes/2/fme/fme_cloumn_flow", appController.fmeColumnFlow);
 
 
+    //wp1
+    router.get("/app/notes/2/wp1", appController.wp1Flow);
+
+
+
+    //ap1
+    router.get("/app/notes/2/ap1", appController.ap1Flow);
+    router.get("/app/notes/2/ap1/ap1_books_flow", appController.ap1BooksFlow);
+    router.get("/app/notes/2/ap1/ap1_ques_flow", appController.ap1QuesFlow);
+    router.get("/app/notes/2/ap1/ap1_sizing_flow", appController.ap1SizingFlow);
+    router.get("/app/notes/2/ap1/ap1_trimmimg_flow", appController.ap1TrimmingFlow);
+    router.get("/app/notes/2/ap1/ap1_interlining_flow", appController.ap1InterFlow);
+    router.get("/app/notes/2/ap1/ap1_fabricCut_flow", appController.ap1FabCutFlow);
+    router.get("/app/notes/2/ap1/ap1_patternMaking_flow", appController.ap1PatternFlow);
+    router.get("/app/notes/2/ap1/ap1_fabricSpreading_flow", appController.ap1FabSpreadFlow);
+    router.get("/app/notes/2/ap1/ap1_markerMaking_flow", appController.ap1MarkerFlow);
+    router.get("/app/notes/2/ap1/ap1_sewingTherad_flow", appController.ap1SewingFlow);
+
+
+    //ctca
+    router.get("/app/notes/2/ctca", appController.ctcaFlow);
+    router.get("/app/notes/2/ctca/ctca_books_flow", appController.ctcaBooksFlow);
+    router.get("/app/notes/2/ctca/ctca_sheets_flow", appController.ctcaSheetsFlow);
+    router.get("/app/notes/2/ctca/ctca_thickAge_flow", appController.ctcaThickFlow);
+    router.get("/app/notes/2/ctca/ctca_water_flow", appController.ctcaWaterFlow);
+    router.get("/app/notes/2/ctca/ctca_surfactants_flow", appController.ctcaSurfactantFlow);
+    router.get("/app/notes/2/ctca/ctca_bleach_flow", appController.ctcaBleachFlow);
+    router.get("/app/notes/2/ctca/ctca_solutions_flow", appController.ctcaSolutionsFlow);
+    router.get("/app/notes/2/ctca/ctca_colloid_flow", appController.ctcaColloidFlow);
+
+
+    //fdce
+    router.get("/app/notes/2/fdce", appController.fdceFlow);
+    router.get("/app/notes/2/fdce/fdce_dyesPigments_flow", appController.fdceDyesFlow);
+    router.get("/app/notes/2/fdce/fdce_chromatography_flow", appController.fdceChromatoFlow);
+    router.get("/app/notes/2/fdce/fdce_polarity_flow", appController.fdcePolarityFlow);
+    router.get("/app/notes/2/fdce/fdce_sepaPurifi_flow", appController.fdceSepaPuriFlow);
+    router.get("/app/notes/2/fdce/fdce_balancingChem_flow", appController.fdceBalanceChemFlow);
+    router.get("/app/notes/2/fdce/fdce_filtration_flow", appController.fdceFiltrationFlow);
+
+
+    //fd2
+    router.get("/app/notes/2/fd2", appController.fd2Flow);
+
+
 
 
 

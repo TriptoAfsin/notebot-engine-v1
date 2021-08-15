@@ -513,6 +513,49 @@ let fmeCentroid = require('./academic/notes/level2/subs/fme/topics/appFmeCentroi
 let fmeMOI = require('./academic/notes/level2/subs/fme/topics/appFmeMOI')
 let fmeColumn = require('./academic/notes/level2/subs/fme/topics/appFmeColumn')
 
+//wp1
+let wp1AppFlow = require('./academic/notes/level2/subs/wp1/wp1')
+
+
+//ap1
+let ap1AppFlow = require('./academic/notes/level2/subs/ap1/ap1')
+let ap1Books = require('./academic/notes/level2/subs/ap1/topics/appAp1Books')
+let ap1Ques = require('./academic/notes/level2/subs/ap1/topics/appAp1Ques')
+let ap1Sizing = require('./academic/notes/level2/subs/ap1/topics/appAp1Sizing')
+let ap1Trim = require('./academic/notes/level2/subs/ap1/topics/appAp1trim')
+let ap1Inter = require('./academic/notes/level2/subs/ap1/topics/appAp1Interlining')
+let ap1FabCut = require('./academic/notes/level2/subs/ap1/topics/appAp1FabCut')
+let ap1Pattern = require('./academic/notes/level2/subs/ap1/topics/appAP1Pattern')
+let ap1FabSpread = require('./academic/notes/level2/subs/ap1/topics/appAp1FabSpread')
+let ap1Marker = require('./academic/notes/level2/subs/ap1/topics/appAP1marker')
+let ap1Sewing = require('./academic/notes/level2/subs/ap1/topics/appAP1SewingThread')
+
+
+//ctca
+let ctcaAppFlow = require('./academic/notes/level2/subs/ctca/ctca')
+let ctcaBooks = require('./academic/notes/level2/subs/ctca/topics/appCtcaBooks')
+let ctcaSheets = require('./academic/notes/level2/subs/ctca/topics/appCtcaSheets')
+let ctcaThickeningAgents = require('./academic/notes/level2/subs/ctca/topics/appCtcaThickAgent')
+let ctcaWater = require('./academic/notes/level2/subs/ctca/topics/appCtcaWater')
+let ctcaSurfactants = require('./academic/notes/level2/subs/ctca/topics/appCtcaSufact')
+let ctcaBleach = require('./academic/notes/level2/subs/ctca/topics/appCtcaBleach')
+let ctcaSolutions = require('./academic/notes/level2/subs/ctca/topics/appCtcaSolutions')
+let ctcaColloid = require('./academic/notes/level2/subs/ctca/topics/appCtcaColloid')
+
+
+//fdce
+let fdceAppFlow = require('./academic/notes/level2/subs/fdce/fdce')
+let fdceDyes = require('./academic/notes/level2/subs/fdce/topics/appFdceDye')
+let fdceChromato = require('./academic/notes/level2/subs/fdce/topics/appFdceChromato')
+let fdcePolarity = require('./academic/notes/level2/subs/fdce/topics/appFdcePolarity')
+let fdceSepaPuri = require('./academic/notes/level2/subs/fdce/topics/appFdceSepaPuri')
+let fdceBalanceChem = require('./academic/notes/level2/subs/fdce/topics/appFdceBalanceChem')
+let fdceFiltration = require('./academic/notes/level2/subs/fdce/topics/appFdceFiltra')
+
+
+//fd2
+let fd2AppFlow = require('./academic/notes/level2/subs/fd2/fd2')
+
 
 
 /*--------------------------------------------------------------------------*/ 
@@ -2703,6 +2746,161 @@ let fmeColumnFlow = (req, res) => {
     return res.send(fmeColumn);
 };
 
+//wp1
+let wp1Flow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(wp1AppFlow);
+};
+
+
+//ap1
+let ap1Flow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(ap1AppFlow);
+};
+
+let ap1BooksFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(ap1Books);
+};
+
+let ap1QuesFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(ap1Ques);
+};
+
+let ap1SizingFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(ap1Sizing);
+};
+
+let ap1TrimmingFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(ap1Trim);
+};
+
+let ap1InterFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(ap1Inter);
+};
+
+let ap1FabCutFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(ap1FabCut);
+};
+
+let ap1PatternFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(ap1Pattern);
+};
+
+let ap1FabSpreadFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(ap1FabSpread);
+};
+
+let ap1MarkerFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(ap1Marker);
+};
+
+let ap1SewingFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(ap1Sewing);
+};
+
+
+//ctca
+let ctcaFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(ctcaAppFlow);
+};
+
+let ctcaBooksFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(ctcaBooks);
+};
+
+let ctcaSheetsFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(ctcaSheets);
+};
+
+let ctcaThickFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(ctcaThickeningAgents);
+};
+
+let ctcaWaterFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(ctcaWater);
+};
+
+let ctcaSurfactantFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(ctcaSurfactants);
+};
+
+let ctcaBleachFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(ctcaBleach);
+};
+
+let ctcaSolutionsFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(ctcaSolutions);
+};
+
+let ctcaColloidFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(ctcaColloid);
+};
+
+
+//fdce
+let fdceFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(fdceAppFlow);
+};
+
+let fdceDyesFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(fdceDyes);
+};
+
+let fdceChromatoFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(fdceChromato);
+};
+
+let fdcePolarityFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(fdcePolarity);
+};
+
+let fdceSepaPuriFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(fdceSepaPuri);
+};
+
+let fdceBalanceChemFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(fdceBalanceChem);
+};
+
+let fdceFiltrationFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(fdceFiltration);
+};
+
+
+//fd2
+let fd2Flow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(fd2AppFlow);
+};
+
+
 
 
 /*-----------------------------------------------------------------------------------------------------------------------------------*/ 
@@ -3195,4 +3393,39 @@ module.exports = {
     fmeCentroidFlow: fmeCentroidFlow,
     fmeMOIFlow: fmeMOIFlow,
     fmeColumnFlow: fmeColumnFlow,
+
+    wp1Flow: wp1Flow,
+
+    ap1Flow: ap1Flow,
+    ap1BooksFlow: ap1BooksFlow,
+    ap1QuesFlow: ap1QuesFlow,
+    ap1SizingFlow: ap1SizingFlow,
+    ap1TrimmingFlow: ap1TrimmingFlow,
+    ap1InterFlow: ap1InterFlow,
+    ap1FabCutFlow: ap1FabCutFlow,
+    ap1PatternFlow: ap1PatternFlow,
+    ap1FabSpreadFlow: ap1FabSpreadFlow,
+    ap1MarkerFlow: ap1MarkerFlow,
+    ap1SewingFlow: ap1SewingFlow,
+
+
+    ctcaFlow: ctcaFlow,
+    ctcaBooksFlow: ctcaBooksFlow,
+    ctcaSheetsFlow: ctcaSheetsFlow,
+    ctcaThickFlow: ctcaThickFlow,
+    ctcaWaterFlow: ctcaWaterFlow,
+    ctcaSurfactantFlow: ctcaSurfactantFlow,
+    ctcaBleachFlow: ctcaBleachFlow,
+    ctcaSolutionsFlow: ctcaSolutionsFlow,
+    ctcaColloidFlow: ctcaColloidFlow,
+
+    fdceFlow: fdceFlow,
+    fdceDyesFlow: fdceDyesFlow,
+    fdceChromatoFlow: fdceChromatoFlow,
+    fdcePolarityFlow: fdcePolarityFlow,
+    fdceSepaPuriFlow: fdceSepaPuriFlow,
+    fdceBalanceChemFlow: fdceBalanceChemFlow,
+    fdceFiltrationFlow: fdceFiltrationFlow,
+
+    fd2Flow: fd2Flow,
 }
