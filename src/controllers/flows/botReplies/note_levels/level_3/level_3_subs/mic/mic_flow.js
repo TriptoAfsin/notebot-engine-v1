@@ -1,46 +1,25 @@
+let grroupedButtonBlockGen = require("../../../../../../genrators/grroupedButtonBlockGen");
+let webBtnBlockGen = require("../../../../../../genrators/webBtnBlockGen");
+let payloadBtnGen = require("../../../../../../genrators/payloadBtnGen");
+let bondiFlow = require("../../../../sponsoredFlows/bondiCard");
+
+
+
 let micFlow = [
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🔰 Select Topics for MIC - ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "Books",
-                        "payload": "mic_book_flow"
-                    }
-                ],
-            },
-        },
-    },
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🔰 Select Topics for MIC - ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "Ch 1: Intro to .",
-                        "payload": "mic_ch1_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Ch 2: System Elem.",
-                        "payload": "mic_ch2_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Ch 4: Control Sys.",
-                        "payload": "mic_ch4_flow"
-                    }
-                ],
-            },
-        },
-    }
+    grroupedButtonBlockGen(
+        "🔰 Select Topics for MIC -",
+        [
+            payloadBtnGen("Books", "mic_book_flow"),
+        ]
+    ),
+    grroupedButtonBlockGen(
+        "🔰 Select Topics for MIC -",
+        [
+            payloadBtnGen("Ch 1: Intro to .", "mic_ch1_flow"),
+            payloadBtnGen("Ch 2: System Elem.", "mic_ch2_flow"),
+            payloadBtnGen("Ch 4: Control Sys.", "mic_ch4_flow"),
+        ]
+    ),
 ]
 
 

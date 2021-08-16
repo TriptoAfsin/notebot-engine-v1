@@ -557,6 +557,19 @@ let fdceFiltration = require('./academic/notes/level2/subs/fdce/topics/appFdceFi
 let fd2AppFlow = require('./academic/notes/level2/subs/fd2/fd2')
 
 
+//weaving prep
+let weavingPrepAppFlow = require('./academic/notes/level2/subs/weave_prep/weave_prep')
+let weavingPrepBooks = require('./academic/notes/level2/subs/weave_prep/topics/weavePrepBooks')
+
+
+//wpp books
+let wppAppFlow = require('./academic/notes/level2/subs/wpp/wpp')
+let wppQues = require('./academic/notes/level2/subs/wpp/topics/appWppQues')
+let wppPretreatment = require('./academic/notes/level2/subs/wpp/topics/appWppPretreatment')
+let wppSingeing = require('./academic/notes/level2/subs/wpp/topics/appWppSingei')
+let wppDesizing = require('./academic/notes/level2/subs/wpp/topics/appWppDesizing')
+let wppImpurities = require('./academic/notes/level2/subs/wpp/topics/appWppImpurities')
+
 
 /*--------------------------------------------------------------------------*/ 
 
@@ -2901,6 +2914,50 @@ let fd2Flow = (req, res) => {
 };
 
 
+//weaving prep
+let weavingPrepFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(weavingPrepAppFlow);
+};
+
+let weavingPrepBooksFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(weavingPrepBooks);
+};
+
+
+//wpp
+let wppFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(wppAppFlow);
+};
+
+let wppQuesFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(wppQues);
+};
+
+let wppPretreatmentFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(wppPretreatment);
+};
+
+let wppSingeingFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(wppSingeing);
+};
+
+let wppDesizingFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(wppDesizing);
+};
+
+let wppImpuritiesFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(wppImpurities);
+};
+
+
 
 
 /*-----------------------------------------------------------------------------------------------------------------------------------*/ 
@@ -3428,4 +3485,16 @@ module.exports = {
     fdceFiltrationFlow: fdceFiltrationFlow,
 
     fd2Flow: fd2Flow,
+
+
+    weavingPrepFlow: weavingPrepFlow,
+    weavingPrepBooksFlow: weavingPrepBooksFlow,
+
+
+    wppFlow: wppFlow,
+    wppQuesFlow: wppQuesFlow,
+    wppPretreatmentFlow: wppPretreatmentFlow,
+    wppSingeingFlow: wppSingeingFlow,
+    wppDesizingFlow: wppDesizingFlow,
+    wppImpuritiesFlow: wppImpuritiesFlow,
 }

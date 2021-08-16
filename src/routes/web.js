@@ -560,6 +560,20 @@ let initWebRoutes = (app) => {
     router.get("/app/notes/2/fd2", appController.fd2Flow);
 
 
+    //weaving prep
+    router.get("/app/notes/2/weaving_prep", appController.weavingPrepFlow);
+    router.get("/app/notes/2/weav_books_flow", appController.weavingPrepBooksFlow);
+
+
+    //wpp
+    router.get("/app/notes/2/wpp", appController.wppFlow);
+    router.get("/app/notes/2/wpp/wpp_quess_flow", appController.wppQuesFlow);
+    router.get("/app/notes/2/wpp/wpp_pretreatment_flow", appController.wppPretreatmentFlow);
+    router.get("/app/notes/2/wpp/wpp_singeing_flow", appController.wppSingeingFlow);
+    router.get("/app/notes/2/wpp/wpp_desizing_flow", appController.wppDesizingFlow);
+    router.get("/app/notes/2/wpp/wpp_impurities_flow", appController.wppImpuritiesFlow);
+
+
 
 
 
