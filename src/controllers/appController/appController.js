@@ -513,9 +513,6 @@ let fmeCentroid = require('./academic/notes/level2/subs/fme/topics/appFmeCentroi
 let fmeMOI = require('./academic/notes/level2/subs/fme/topics/appFmeMOI')
 let fmeColumn = require('./academic/notes/level2/subs/fme/topics/appFmeColumn')
 
-//wp1
-let wp1AppFlow = require('./academic/notes/level2/subs/wp1/wp1')
-
 
 //ap1
 let ap1AppFlow = require('./academic/notes/level2/subs/ap1/ap1')
@@ -569,6 +566,38 @@ let wppPretreatment = require('./academic/notes/level2/subs/wpp/topics/appWppPre
 let wppSingeing = require('./academic/notes/level2/subs/wpp/topics/appWppSingei')
 let wppDesizing = require('./academic/notes/level2/subs/wpp/topics/appWppDesizing')
 let wppImpurities = require('./academic/notes/level2/subs/wpp/topics/appWppImpurities')
+
+
+
+//wp1
+let wp1AppFlow = require('./academic/notes/level2/subs/wp1/wp1')
+let wp1Books = require('./academic/notes/level2/subs/wp1/topics/appWp1Books')
+let wp1Notes = require('./academic/notes/level2/subs/wp1/topics/appWp1Notes')
+let wp1Ques = require('./academic/notes/level2/subs/wp1/topics/appWp1Ques')
+let wp1Intro = require('./academic/notes/level2/subs/wp1/topics/appWp1Intro')
+let wp1Water = require('./academic/notes/level2/subs/wp1/topics/appWp1Water')
+let wp1IntroDye = require('./academic/notes/level2/subs/wp1/topics/appWp1IntroDye')
+let wp1GenConcepts = require('./academic/notes/level2/subs/wp1/topics/appWp1genConc')
+let wp1ColorFastness = require('./academic/notes/level2/subs/wp1/topics/appWp1ColFast')
+let wp1Stripping = require('./academic/notes/level2/subs/wp1/topics/appWP1Strip')
+let wp1Singeing = require('./academic/notes/level2/subs/wp1/topics/appWp1Singeing')
+let wp1Scouring = require('./academic/notes/level2/subs/wp1/topics/appWp1Scouring')
+let wp1Pigment = require('./academic/notes/level2/subs/wp1/topics/appWP1Pigment')
+let wp1TexFinish = require('./academic/notes/level2/subs/wp1/topics/appWp1TexFinish')
+let wp1VatDyes = require('./academic/notes/level2/subs/wp1/topics/appWp1vatDye')
+let wp1Desizing = require('./academic/notes/level2/subs/wp1/topics/appWP1Desizing')
+let wp1BasicDye = require('./academic/notes/level2/subs/wp1/topics/appWp1BasicDye')
+let wp1AcidDye = require('./academic/notes/level2/subs/wp1/topics/appWp1AcidDye')
+let wp1Bleach = require('./academic/notes/level2/subs/wp1/topics/appWp1Bleach')
+let wp1DisperseDye = require('./academic/notes/level2/subs/wp1/topics/appWp1Disperse')
+let wp1KierBoiler = require('./academic/notes/level2/subs/wp1/topics/appWp1KierBoiler')
+let wp1DyeingFault = require('./academic/notes/level2/subs/wp1/topics/appWp1DyeFault')
+let wp1ReactiveDye = require('./academic/notes/level2/subs/wp1/topics/appWp1Reactive')
+let wp1DirectDye = require('./academic/notes/level2/subs/wp1/topics/appWp1DirectDye')
+let wp1JiggerMC = require('./academic/notes/level2/subs/wp1/topics/appWp1JiggerMC')
+let wp1ColorTest = require('./academic/notes/level2/subs/wp1/topics/appWp1ColorTest')
+let wp1FoldingTest = require('./academic/notes/level2/subs/wp1/topics/apPWp1FoldTest')
+let wp1WashingMC = require('./academic/notes/level2/subs/wp1/topics/appWp1WashingMC')
 
 
 /*--------------------------------------------------------------------------*/ 
@@ -2759,12 +2788,6 @@ let fmeColumnFlow = (req, res) => {
     return res.send(fmeColumn);
 };
 
-//wp1
-let wp1Flow = (req, res) => {
-    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
-    return res.send(wp1AppFlow);
-};
-
 
 //ap1
 let ap1Flow = (req, res) => {
@@ -2955,6 +2978,149 @@ let wppDesizingFlow = (req, res) => {
 let wppImpuritiesFlow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
     return res.send(wppImpurities);
+};
+
+
+
+//wp1
+let wp1Flow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(wp1AppFlow);
+};
+
+let wp1BooksFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(wp1Books);
+};
+
+let wp1NotesFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(wp1Notes);
+};
+
+let wp1QuesFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(wp1Ques);
+};
+
+let wp1IntroFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(wp1Intro);
+};
+
+let wp1WaterFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(wp1Water);
+};
+
+let wp1IntroDyeFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(wp1IntroDye);
+};
+
+let wp1GenConceptsFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(wp1GenConcepts);
+};
+
+let wp1ColorFastnessFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(wp1ColorFastness);
+};
+
+let wp1StrippingFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(wp1Stripping);
+};
+
+let wp1SingeingFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(wp1Singeing);
+};
+
+let wp1ScouringFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(wp1Scouring);
+};
+
+let wp1PigmentFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(wp1Pigment);
+};
+
+let wp1TexFinishFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(wp1TexFinish);
+};
+
+let wp1VatDyesFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(wp1VatDyes);
+};
+
+let wp1DesizingFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(wp1Desizing);
+};
+
+let wp1BasicDyeFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(wp1BasicDye);
+};
+
+let wp1AcidDyeFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(wp1AcidDye);
+};
+
+let wp1BleachFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(wp1Bleach);
+};
+
+let wp1DisperseDyeFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(wp1DisperseDye);
+};
+
+let wp1KierBoilerFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(wp1KierBoiler);
+};
+
+let wp1DyeingFaultFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(wp1DyeingFault);
+};
+
+let wp1ReactiveDyeFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(wp1ReactiveDye);
+};
+
+let wp1DirectDyeFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(wp1DirectDye);
+};
+
+let wp1JiggerMCFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(wp1JiggerMC);
+};
+
+let wp1ColorTestFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(wp1ColorTest);
+};
+
+let wp1FoldingTestFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(wp1FoldingTest);
+};
+
+let wp1WashingMCFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(wp1WashingMC);
 };
 
 
@@ -3451,8 +3617,6 @@ module.exports = {
     fmeMOIFlow: fmeMOIFlow,
     fmeColumnFlow: fmeColumnFlow,
 
-    wp1Flow: wp1Flow,
-
     ap1Flow: ap1Flow,
     ap1BooksFlow: ap1BooksFlow,
     ap1QuesFlow: ap1QuesFlow,
@@ -3497,4 +3661,33 @@ module.exports = {
     wppSingeingFlow: wppSingeingFlow,
     wppDesizingFlow: wppDesizingFlow,
     wppImpuritiesFlow: wppImpuritiesFlow,
+
+    wp1Flow: wp1Flow,
+    wp1BooksFlow: wp1BooksFlow,
+    wp1NotesFlow: wp1NotesFlow,
+    wp1QuesFlow: wp1QuesFlow,
+    wp1IntroFlow: wp1IntroFlow,
+    wp1WaterFlow: wp1WaterFlow,
+    wp1IntroDyeFlow: wp1IntroDyeFlow,
+    wp1GenConceptsFlow: wp1GenConceptsFlow,
+    wp1ColorFastnessFlow: wp1ColorFastnessFlow,
+    wp1StrippingFlow: wp1StrippingFlow,
+    wp1SingeingFlow: wp1SingeingFlow,
+    wp1ScouringFlow: wp1ScouringFlow,
+    wp1PigmentFlow: wp1PigmentFlow,
+    wp1TexFinishFlow: wp1TexFinishFlow,
+    wp1VatDyesFlow: wp1VatDyesFlow,
+    wp1DesizingFlow: wp1DesizingFlow,
+    wp1BasicDyeFlow: wp1BasicDyeFlow,
+    wp1AcidDyeFlow: wp1AcidDyeFlow,
+    wp1BleachFlow: wp1BleachFlow,
+    wp1DisperseDyeFlow: wp1DisperseDyeFlow,
+    wp1KierBoilerFlow: wp1KierBoilerFlow,
+    wp1DyeingFaultFlow: wp1DyeingFaultFlow,
+    wp1ReactiveDyeFlow: wp1ReactiveDyeFlow,
+    wp1DirectDyeFlow: wp1DirectDyeFlow,
+    wp1JiggerMCFlow: wp1JiggerMCFlow,
+    wp1ColorTestFlow: wp1ColorTestFlow,
+    wp1FoldingTestFlow: wp1FoldingTestFlow,
+    wp1WashingMCFlow: wp1WashingMCFlow,
 }

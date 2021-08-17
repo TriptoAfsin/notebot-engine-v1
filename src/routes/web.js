@@ -515,10 +515,6 @@ let initWebRoutes = (app) => {
     router.get("/app/notes/2/fme/fme_cloumn_flow", appController.fmeColumnFlow);
 
 
-    //wp1
-    router.get("/app/notes/2/wp1", appController.wp1Flow);
-
-
 
     //ap1
     router.get("/app/notes/2/ap1", appController.ap1Flow);
@@ -572,6 +568,38 @@ let initWebRoutes = (app) => {
     router.get("/app/notes/2/wpp/wpp_singeing_flow", appController.wppSingeingFlow);
     router.get("/app/notes/2/wpp/wpp_desizing_flow", appController.wppDesizingFlow);
     router.get("/app/notes/2/wpp/wpp_impurities_flow", appController.wppImpuritiesFlow);
+
+
+
+    //wp1
+    router.get("/app/notes/2/wp1", appController.wp1Flow);
+    router.get("/app/notes/2/wp1/wp1_books_flow", appController.wp1BooksFlow);
+    router.get("/app/notes/2/wp1/wp1_notes_flow", appController.wp1NotesFlow);
+    router.get("/app/notes/2/wp1/wp1_ques_flow", appController.wp1QuesFlow);
+    router.get("/app/notes/2/wp1/wp1_intro_flow", appController.wp1IntroFlow);
+    router.get("/app/notes/2/wp1/wp1_water_flow", appController.wp1WaterFlow);
+    router.get("/app/notes/2/wp1/wp1_introDye_flow", appController.wp1IntroDyeFlow);
+    router.get("/app/notes/2/wp1/wp1_generalConcepts_flow", appController.wp1GenConceptsFlow);
+    router.get("/app/notes/2/wp1/wp1_colorFastness_flow", appController.wp1ColorFastnessFlow);
+    router.get("/app/notes/2/wp1/wp1_stripping_flow", appController.wp1StrippingFlow);
+    router.get("/app/notes/2/wp1/wp1_singeing_flow", appController.wp1SingeingFlow);
+    router.get("/app/notes/2/wp1/wp1_scouring_flow", appController.wp1ScouringFlow);
+    router.get("/app/notes/2/wp1/wp1_pigment_flow", appController.wp1PigmentFlow);
+    router.get("/app/notes/2/wp1/wp1_textileFinishing_flow", appController.wp1TexFinishFlow);
+    router.get("/app/notes/2/wp1/wp1_vatDyes_flow", appController.wp1VatDyesFlow);
+    router.get("/app/notes/2/wp1/wp1_desizing_flow", appController.wp1DesizingFlow);
+    router.get("/app/notes/2/wp1/wp1_basicDye_flow", appController.wp1BasicDyeFlow);
+    router.get("/app/notes/2/wp1/wp1_acidDye_flow", appController.wp1AcidDyeFlow);
+    router.get("/app/notes/2/wp1/wp1_bleaching_flow", appController.wp1BleachFlow);
+    router.get("/app/notes/2/wp1/wp1_disperseDye_flow", appController.wp1DisperseDyeFlow);
+    router.get("/app/notes/2/wp1/wp1_kierBoiler_flow", appController.wp1KierBoilerFlow);
+    router.get("/app/notes/2/wp1/wp1_dyeingFault_flow", appController.wp1DyeingFaultFlow);
+    router.get("/app/notes/2/wp1/wp1_reactiveDye_flow", appController.wp1ReactiveDyeFlow);
+    router.get("/app/notes/2/wp1/wp1_directDye_flow", appController.wp1DirectDyeFlow);
+    router.get("/app/notes/2/wp1/wp1_jiggerMachine_flow", appController.wp1JiggerMCFlow);
+    router.get("/app/notes/2/wp1/wp1_colorTest_flow", appController.wp1ColorTestFlow);
+    router.get("/app/notes/2/wp1/wp1_foldingTest_flow", appController.wp1FoldingTestFlow);
+    router.get("/app/notes/2/wp1/wp1_washingMachine_flow", appController.wp1WashingMCFlow);
 
 
 
