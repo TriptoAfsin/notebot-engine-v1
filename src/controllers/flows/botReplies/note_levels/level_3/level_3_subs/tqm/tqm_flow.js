@@ -5,6 +5,7 @@ let bondiFlow = require("../../../../sponsoredFlows/bondiCard");
 
 
 let tqmFlow = [
+    bondiFlow,
     grroupedButtonBlockGen(
         "🔰 Select Topics for TQM - ",
         [
@@ -25,7 +26,14 @@ let tqmFlow = [
         "🔰 Select Topics for TQM - ",
         [
             payloadBtnGen("Intro to QM", "tqm_intro_flow"),
-            payloadBtnGen("Control & Man..", "tqm_control_flow")
+            payloadBtnGen("Control & Meas..", "tqm_control_flow"),
+            payloadBtnGen("Management Apro.", "tqm_managementApproach_flow")
+        ]
+    ),
+    grroupedButtonBlockGen(
+        "🔰 Select Topics for TQM - ",
+        [
+            payloadBtnGen("QC Tools", "tqm_qcTools_flow"),
         ]
     ),
     grroupedButtonBlockGen(

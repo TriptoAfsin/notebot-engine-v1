@@ -1125,6 +1125,12 @@ const mic_books = require("./flows/botReplies/note_levels/level_3/level_3_subs/m
 const mic_Ch1 = require("./flows/botReplies/note_levels/level_3/level_3_subs/mic/topics/micCh1");
 const mic_Ch2 = require("./flows/botReplies/note_levels/level_3/level_3_subs/mic/topics/micCh2");
 const mic_Ch4 = require("./flows/botReplies/note_levels/level_3/level_3_subs/mic/topics/micCh4");
+const mic_LimitFit = require("./flows/botReplies/note_levels/level_3/level_3_subs/mic/topics/micLimitFits");
+const mic_NonDestruc = require("./flows/botReplies/note_levels/level_3/level_3_subs/mic/topics/micNonDestructiveTesting");
+const mic_SurfaceFinish = require("./flows/botReplies/note_levels/level_3/level_3_subs/mic/topics/micSurfaceFinish");
+const mic_ThreadMeas = require("./flows/botReplies/note_levels/level_3/level_3_subs/mic/topics/micThreadMeas");
+const mic_AngularMeas = require("./flows/botReplies/note_levels/level_3/level_3_subs/mic/topics/micAngularMeas");
+const mic_LinearMeas = require("./flows/botReplies/note_levels/level_3/level_3_subs/mic/topics/micLinearMeas");
 
 
 //fsd
@@ -1142,6 +1148,8 @@ const tqm_qualityRelia = require("./flows/botReplies/note_levels/level_3/level_3
 const tqm_QualityStd = require("./flows/botReplies/note_levels/level_3/level_3_subs/tqm/topics/tqmQualityStd");
 const tqm_Intro = require("./flows/botReplies/note_levels/level_3/level_3_subs/tqm/topics/tqmIntro");
 const tqm_ControlManage = require("./flows/botReplies/note_levels/level_3/level_3_subs/tqm/topics/tqmControlManage");
+const tqm_ManageAppro = require("./flows/botReplies/note_levels/level_3/level_3_subs/tqm/topics/tqmManageAppro");
+const tqm_QcTools = require("./flows/botReplies/note_levels/level_3/level_3_subs/tqm/topics/tqmQcTools");
 
 //pcs
 const pcs_flow = require("./flows/botReplies/note_levels/level_3/level_3_subs/pcs/pcs_flow");
@@ -4893,6 +4901,24 @@ let handlePostback = async (sender_psid, received_postback) => {
   else if (payload === 'mic_ch4_flow') {
     magicFunc(sender_psid, mic_Ch4);
   }
+  else if (payload === 'mic_limitsFitsGauge_flow') {
+    magicFunc(sender_psid, mic_LimitFit);
+  }
+  else if (payload === 'mic_nonDestructive_flow') {
+    magicFunc(sender_psid, mic_NonDestruc);
+  }
+  else if (payload === 'mic_surfaceFinish_flow') {
+    magicFunc(sender_psid, mic_SurfaceFinish);
+  }
+  else if (payload === 'mic_threadMeasure_flow') {
+    magicFunc(sender_psid, mic_ThreadMeas);
+  }
+  else if (payload === 'mic_angularMeas_flow') {
+    magicFunc(sender_psid, mic_AngularMeas);
+  }
+  else if (payload === 'mic_LinearMeas_flow') {
+    magicFunc(sender_psid, mic_LinearMeas);
+  }
 
 
   //fsd
@@ -4934,6 +4960,12 @@ let handlePostback = async (sender_psid, received_postback) => {
   }
   else if (payload === 'tqm_control_flow') {
     magicFunc(sender_psid, tqm_ControlManage);
+  }
+  else if (payload === 'tqm_managementApproach_flow') {
+    magicFunc(sender_psid, tqm_ManageAppro);
+  }
+  else if (payload === 'tqm_qcTools_flow') {
+    magicFunc(sender_psid, tqm_QcTools);
   }
 
 

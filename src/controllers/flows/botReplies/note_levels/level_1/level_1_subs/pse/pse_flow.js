@@ -1,129 +1,51 @@
+let grroupedButtonBlockGen = require("../../../../../../genrators/grroupedButtonBlockGen");
+let webBtnBlockGen = require("../../../../../../genrators/webBtnBlockGen");
+let payloadBtnGen = require("../../../../../../genrators/payloadBtnGen");
+let bondiFlow = require("../../../../sponsoredFlows/bondiCard");
+
+
+
 let pse_flow = [
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🟩 Select Topics for PSE -  ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "Books",
-                        "payload": "pse_books_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Questions",
-                        "payload": "pse_ques_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Hand Notes",
-                        "payload": "pse_handnotes_flow"
-                    }
-                ],
-            },
-        },
-    },
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🟩 Select Topics for PSE -  ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "Intro to Polymers",
-                        "payload": "pse_intro_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Physical Structure",
-                        "payload": "pse_physical_struc_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Chemical Structure",
-                        "payload": "pse_chemical_struc_flow"
-                    }
-                ],
-            },
-        },
-    },
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🟩 Select Topics for PSE -  ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "Molecular Weight",
-                        "payload": "pse_molWei_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Step Growth",
-                        "payload": "pse_step_growth_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Chain Growth",
-                        "payload": "pse_chain_growth_flow"
-                    }
-                ],
-            },
-        },
-    },
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🟩 Select Topics for PSE -  ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "Thermal Transition",
-                        "payload": "pse_thermal_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Polymer Degradation",
-                        "payload": "pse_degrad_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Polymerization Tec.",
-                        "payload": "pse_polymer_tec_flow"
-                    }
-                ],
-            },
-        },
-    },
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🟩 Select Topics for PSE -  ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "Applic.. of Polymers",
-                        "payload": "pse_application_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Polymer Morpho..",
-                        "payload": "pse_morpho_flow"
-                    }
-                ],
-            },
-        },
-    }
+    bondiFlow,
+    grroupedButtonBlockGen(
+        "🔰 Select Topics for PSE - ",
+        [
+            payloadBtnGen("Books", "pse_books_flow"),
+            payloadBtnGen("Questions", "pse_ques_flow"),
+            payloadBtnGen("Hand Notes", "pse_handnotes_flow"),
+        ]
+    ),
+    grroupedButtonBlockGen(
+        "🔰 Select Topics for PSE - ",
+        [
+            payloadBtnGen("Intro to Polymers", "pse_intro_flow"),
+            payloadBtnGen("Physical Structure", "pse_physical_struc_flow"),
+            payloadBtnGen("Chemical Structure", "pse_chemical_struc_flow"),
+        ]
+    ),
+    grroupedButtonBlockGen(
+        "🔰 Select Topics for PSE - ",
+        [
+            payloadBtnGen("Molecular Weight", "pse_molWei_flow"),
+            payloadBtnGen("Step Growth", "pse_step_growth_flow"),
+            payloadBtnGen("Chain Growth", "pse_chain_growth_flow"),
+        ]
+    ),
+    grroupedButtonBlockGen(
+        "🔰 Select Topics for PSE - ",
+        [
+            payloadBtnGen("Thermal Transition", "pse_thermal_flow"),
+            payloadBtnGen("Polymer Degradation", "pse_degrad_flow"),
+            payloadBtnGen("Polymerization Tec.", "pse_polymer_tec_flow"),
+        ]
+    ),
+    grroupedButtonBlockGen(
+        "🔰 Select Topics for PSE - ",
+        [
+            payloadBtnGen("Appli.. of Polymers", "pse_application_flow"),
+            payloadBtnGen("Polymer Morpho..", "pse_morpho_flow"),
+        ]
+    ),
 ]
 
 
