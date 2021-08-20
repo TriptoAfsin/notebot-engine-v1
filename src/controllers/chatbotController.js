@@ -998,6 +998,7 @@ const wpp_pretreatment = require("./flows/botReplies/note_levels/level_2/level_2
 const wpp_singeing = require("./flows/botReplies/note_levels/level_2/level_2_subs/wpp/topics/wppSingeing");
 const wpp_desizing = require("./flows/botReplies/note_levels/level_2/level_2_subs/wpp/topics/wppDesizing");
 const wpp_Impurities = require("./flows/botReplies/note_levels/level_2/level_2_subs/wpp/topics/wppImpurities");
+const wpp_BioScouring = require("./flows/botReplies/note_levels/level_2/level_2_subs/wpp/topics/wppBioScouring");
 
 
 //fd2
@@ -4597,6 +4598,9 @@ let handlePostback = async (sender_psid, received_postback) => {
   }
   else if (payload === 'wpp_impurities_flow') {
     magicFunc(sender_psid, wpp_Impurities);
+  }
+  else if (payload === 'wpp_bioScouring') {
+    magicFunc(sender_psid, wpp_BioScouring);
   }
 
   //fd2
