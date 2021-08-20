@@ -6,6 +6,7 @@ let bondiFlow = require("../../../../sponsoredFlows/bondiCard");
 
 
 let wppFlow = [
+    bondiFlow,
     grroupedButtonBlockGen(
         "📌 Select Topics for WPP -",
         [
