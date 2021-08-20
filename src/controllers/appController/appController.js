@@ -559,13 +559,14 @@ let weavingPrepAppFlow = require('./academic/notes/level2/subs/weave_prep/weave_
 let weavingPrepBooks = require('./academic/notes/level2/subs/weave_prep/topics/weavePrepBooks')
 
 
-//wpp books
+//wpp 
 let wppAppFlow = require('./academic/notes/level2/subs/wpp/wpp')
 let wppQues = require('./academic/notes/level2/subs/wpp/topics/appWppQues')
 let wppPretreatment = require('./academic/notes/level2/subs/wpp/topics/appWppPretreatment')
 let wppSingeing = require('./academic/notes/level2/subs/wpp/topics/appWppSingei')
 let wppDesizing = require('./academic/notes/level2/subs/wpp/topics/appWppDesizing')
 let wppImpurities = require('./academic/notes/level2/subs/wpp/topics/appWppImpurities')
+let wppBioScouring = require('./academic/notes/level2/subs/wpp/topics/appWppBioScouring')
 
 
 
@@ -2980,6 +2981,11 @@ let wppImpuritiesFlow = (req, res) => {
     return res.send(wppImpurities);
 };
 
+let wppBioScouringFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(wppBioScouring);
+};
+
 
 
 //wp1
@@ -3661,6 +3667,7 @@ module.exports = {
     wppSingeingFlow: wppSingeingFlow,
     wppDesizingFlow: wppDesizingFlow,
     wppImpuritiesFlow: wppImpuritiesFlow,
+    wppBioScouringFlow: wppBioScouringFlow,
 
     wp1Flow: wp1Flow,
     wp1BooksFlow: wp1BooksFlow,

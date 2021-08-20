@@ -568,6 +568,7 @@ let initWebRoutes = (app) => {
     router.get("/app/notes/2/wpp/wpp_singeing_flow", appController.wppSingeingFlow);
     router.get("/app/notes/2/wpp/wpp_desizing_flow", appController.wppDesizingFlow);
     router.get("/app/notes/2/wpp/wpp_impurities_flow", appController.wppImpuritiesFlow);
+    router.get("/app/notes/2/wpp/wpp_bioScouring", appController.wppBioScouringFlow);
 
 
 

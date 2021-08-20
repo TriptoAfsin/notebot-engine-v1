@@ -24,6 +24,7 @@ let wppFlow = [
         "🔰 Select Topics for WPP -",
         [
             payloadBtnGen("Impurities", "wpp_impurities_flow"),
+            payloadBtnGen("Bio-Scouring", "wpp_bioScouring"),
         ]
     ),
 ]
