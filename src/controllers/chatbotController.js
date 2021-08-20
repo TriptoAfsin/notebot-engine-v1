@@ -3982,7 +3982,7 @@ let handlePostback = async (sender_psid, received_postback) => {
   else if (payload === 'mmtf_flow') {
     magicFunc(sender_psid, mmtf_flow);
   }
-  else if (payload === 'mmtf_mmtf_books_flowflow') {
+  else if (payload === 'mmtf_books_flow') {
     magicFunc(sender_psid, mmtf_books);
   }
   else if (payload === 'mmtf_hnotes_flow') {
