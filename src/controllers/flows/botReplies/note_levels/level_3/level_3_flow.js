@@ -51,14 +51,9 @@ let level_3_note = [
         [
             payloadBtnGen("ACM", "acm_flow"),
             payloadBtnGen("TQM", "tqm_flow"),
-            payloadBtnGen("MIC", "mic_flow")
-        ]
-    ),
-    grroupedButtonBlockGen(`🔰 Select Subject for level 3 -`,
-        [
             payloadBtnGen("ACFD", "acfd_flow"),
         ]
-    )
+    ),
 ]
 
 

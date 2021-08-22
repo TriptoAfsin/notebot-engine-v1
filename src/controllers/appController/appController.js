@@ -20,6 +20,7 @@ let deploymentEnvDetector = () => {
 
 let noteLevel1Subs = require('./academic/notes/level1/level1Subs')
 let noteLevel2Subs = require('./academic/notes/level2/level2Subs')
+let noteLevel3Subs = require('./academic/notes/level3/level3Subs')
 //math1
 let math1Flow = require('./academic/notes/level1/subs/math1/math1')
 let math1BooksFlow = require('./academic/notes/level1/subs/math1/topics/appMath1Books')
@@ -601,6 +602,27 @@ let wp1FoldingTest = require('./academic/notes/level2/subs/wp1/topics/apPWp1Fold
 let wp1WashingMC = require('./academic/notes/level2/subs/wp1/topics/appWp1WashingMC')
 
 
+
+//acfd
+let acfdAppFlow = require('./academic/notes/level3/subs/acfd/acfd')
+
+
+//tcp
+let tcpAppFlow = require('./academic/notes/level3/subs/tcp/tcp')
+let tcpKpc = require('./academic/notes/level3/subs/tcp/topics/appTcpKpc')
+
+
+//pcs
+let pcsAppFlow = require('./academic/notes/level3/subs/pcs/pcs')
+let pcsBooks = require('./academic/notes/level3/subs/pcs/topics/appPcsBooks')
+
+
+//lss
+let lssAppFlow = require('./academic/notes/level3/subs/lss/lss')
+let lssDrawframe = require('./academic/notes/level3/subs/lss/topics/appLssDrawframe')
+let lssSpreader = require('./academic/notes/level3/subs/lss/topics/appLssSpreader')
+
+
 /*--------------------------------------------------------------------------*/ 
 
 
@@ -666,6 +688,15 @@ let level2Notes = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
 
     return res.send(noteLevel2Subs);
+};
+
+
+//level3
+let level3Notes = (req, res) => {
+
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+
+    return res.send(noteLevel3Subs);
 };
 
 //level1 -> math1
@@ -3131,6 +3162,52 @@ let wp1WashingMCFlow = (req, res) => {
 
 
 
+//acfd
+let acfdFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(acfdAppFlow);
+};
+
+
+//tcp
+let tcpFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(tcpAppFlow);
+};
+let tcpKpcFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(tcpKpc);
+};
+
+
+//pcs
+let pcsFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(pcsAppFlow);
+};
+let pcsBooksFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(pcsBooks);
+};
+
+
+//lss
+let lssFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(lssAppFlow);
+};
+
+let lssDrawFrameFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(lssDrawframe);
+};
+let lssSpreaderFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(lssSpreader);
+};
+
+
+
 
 /*-----------------------------------------------------------------------------------------------------------------------------------*/ 
 
@@ -3174,6 +3251,7 @@ module.exports = {
     notes: notes,
     notesLevel1: level1Notes,
     notesLevel2: level2Notes,
+    notesLevel3: level3Notes,
 
     //math1
     math1: math1,
@@ -3697,4 +3775,18 @@ module.exports = {
     wp1ColorTestFlow: wp1ColorTestFlow,
     wp1FoldingTestFlow: wp1FoldingTestFlow,
     wp1WashingMCFlow: wp1WashingMCFlow,
+
+
+    acfdFlow: acfdFlow,
+
+    tcpFlow: tcpFlow,
+    tcpKpcFlow: tcpKpcFlow,
+
+    pcsFlow: pcsFlow,
+    pcsBooksFlow: pcsBooksFlow,
+
+
+    lssFlow: lssFlow,
+    lssDrawFrameFlow: lssDrawFrameFlow,
+    lssSpreaderFlow: lssSpreaderFlow,
 }

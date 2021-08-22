@@ -1,7 +1,6 @@
 let mmtfBooks = [
     {
-        "text": `🔷Books Folder - 
-        https://drive.google.com/drive/folders/1ld3q6RrKEbFHgkOhKjztHjC-M2iCyEQx?usp=sharing`
+        "text": `🔷 Books Folder - \n\nhttps://drive.google.com/drive/folders/1ld3q6RrKEbFHgkOhKjztHjC-M2iCyEQx?usp=sharing`
     },
 ]
 

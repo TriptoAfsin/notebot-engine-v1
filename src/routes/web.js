@@ -32,6 +32,7 @@ let initWebRoutes = (app) => {
     router.get("/app/notes", appController.notes);
     router.get("/app/notes/1", appController.notesLevel1);
     router.get("/app/notes/2", appController.notesLevel2);
+    router.get("/app/notes/3", appController.notesLevel3);
 
     //math1
     router.get("/app/notes/1/math1", appController.math1);
@@ -601,6 +602,25 @@ let initWebRoutes = (app) => {
     router.get("/app/notes/2/wp1/wp1_colorTest_flow", appController.wp1ColorTestFlow);
     router.get("/app/notes/2/wp1/wp1_foldingTest_flow", appController.wp1FoldingTestFlow);
     router.get("/app/notes/2/wp1/wp1_washingMachine_flow", appController.wp1WashingMCFlow);
+
+
+    //acfd
+    router.get("/app/notes/3/acfd", appController.acfdFlow);
+
+    //tcp
+    router.get("/app/notes/3/tcp", appController.tcpFlow);
+    router.get("/app/notes/3/tcp/tcp_kpc_flow", appController.tcpKpcFlow);
+
+
+    //pcs
+    router.get("/app/notes/3/pcs", appController.pcsFlow);
+    router.get("/app/notes/3/pcs/pcs_books_flow", appController.pcsBooksFlow);
+
+
+    //lss
+    router.get("/app/notes/3/lss", appController.lssFlow);
+    router.get("/app/notes/3/lss/lss_drawFrame_flow", appController.lssDrawFrameFlow);
+    router.get("/app/notes/3/lss/lss_spreader_flow", appController.lssSpreaderFlow);
 
 
 
