@@ -622,6 +622,28 @@ let initWebRoutes = (app) => {
     router.get("/app/notes/3/lss/lss_drawFrame_flow", appController.lssDrawFrameFlow);
     router.get("/app/notes/3/lss/lss_spreader_flow", appController.lssSpreaderFlow);
 
+    //knit1
+    router.get("/app/notes/3/knit1", appController.knit1Flow);
+    router.get("/app/notes/3/knit1/knit_lecture_flow", appController.knit1LectureFlow);
+
+
+    //im
+    router.get("/app/notes/3/im", appController.imFlow);
+    router.get("/app/notes/3/im/im_lecture_flow", appController.imLectureFlow);
+    router.get("/app/notes/3/im/im_lec2_flow", appController.imLec2Flow);
+    router.get("/app/notes/3/im/im_lec3_flow", appController.imLec3Flow);
+    router.get("/app/notes/3/im/im_lec4_flow", appController.imLec4Flow);
+    router.get("/app/notes/3/im/im_market_flow", appController.imMarketFlow);
+    router.get("/app/notes/3/im/im_marketMix_flow", appController.imMarketMixFlow);
+    router.get("/app/notes/3/im/im_projectFeasible_flow", appController.imProjectFeasFlow);
+    router.get("/app/notes/3/im/im_natureScope_flow", appController.imNatureScopeFlow);
+    router.get("/app/notes/3/im/im_managementFunc_flow", appController.imManageFuncFlow);
+    router.get("/app/notes/3/im/im_indusManage_flow", appController.imIndusManageFlow);
+    router.get("/app/notes/3/im/im_techManage_flow", appController.imTechManageFlow);
+    router.get("/app/notes/3/im/im_prodMange_flow", appController.imProdnManageFlow);
+
+
+
 
 
 

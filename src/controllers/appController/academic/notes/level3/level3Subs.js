@@ -37,7 +37,7 @@ let level3Subs = [
     },
     {
         subName: "Knitting-I",
-        route: "app/notes/3/kint1"
+        route: "app/notes/3/knit1"
     },
     {
         subName: "FSD",
@@ -53,7 +53,7 @@ let level3Subs = [
     },
     {
         subName: "IM",
-        route: "app/notes/3/IM"
+        route: "app/notes/3/im"
     },
     {
         subName: "FM-II",

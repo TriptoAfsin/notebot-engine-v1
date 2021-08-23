@@ -623,6 +623,28 @@ let lssDrawframe = require('./academic/notes/level3/subs/lss/topics/appLssDrawfr
 let lssSpreader = require('./academic/notes/level3/subs/lss/topics/appLssSpreader')
 
 
+//knit1
+let knit1AppFlow = require('./academic/notes/level3/subs/knit1/kint1')
+let knit1Lecture = require('./academic/notes/level3/subs/knit1/topics/appKnit1Lecture')
+
+//im
+let imAppFlow = require('./academic/notes/level3/subs/im/im')
+let imLecture = require('./academic/notes/level3/subs/im/topics/appImLecture')
+let imLec1 = require('./academic/notes/level3/subs/im/topics/appImLec1')
+let imLec2 = require('./academic/notes/level3/subs/im/topics/appImLec2')
+let imLec3 = require('./academic/notes/level3/subs/im/topics/appImLec3')
+let imLec4 = require('./academic/notes/level3/subs/im/topics/appImLec3')
+let imMarket = require('./academic/notes/level3/subs/im/topics/appImMarket')
+let imMarketMix = require('./academic/notes/level3/subs/im/topics/appImMarketMix')
+let imProjectFeas = require('./academic/notes/level3/subs/im/topics/appImProjFeas')
+let imNatureScope = require('./academic/notes/level3/subs/im/topics/appImNatureScope')
+let imManageFunc = require('./academic/notes/level3/subs/im/topics/appImManageFunc')
+let ImIndusManage = require('./academic/notes/level3/subs/im/topics/appImIndusManage')
+let ImTechManage = require('./academic/notes/level3/subs/im/topics/appImTechManage')
+let ImProdnManage = require('./academic/notes/level3/subs/im/topics/appImProdnManage')
+
+
+
 /*--------------------------------------------------------------------------*/ 
 
 
@@ -3207,6 +3229,89 @@ let lssSpreaderFlow = (req, res) => {
 };
 
 
+//knit1
+let knit1Flow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(knit1AppFlow);
+};
+let knit1LectureFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(knit1Lecture);
+};
+
+
+//im
+let imFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(imAppFlow);
+};
+
+let imLectureFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(imLecture);
+};
+
+let imLec1Flow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(imLec1);
+};
+
+let imLec2Flow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(imLec2);
+};
+
+let imLec3Flow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(imLec3);
+};
+
+let imLec4Flow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(imLec4);
+};
+
+let imMarketFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(imMarket);
+};
+
+let imMarketMixFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(imMarketMix);
+};
+
+let imProjectFeasFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(imProjectFeas);
+};
+
+let imNatureScopeFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(imNatureScope);
+};
+
+let imManageFuncFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(imManageFunc);
+};
+
+let imIndusManageFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(ImIndusManage);
+};
+
+let imTechManageFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(ImTechManage);
+};
+
+let imProdnManageFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(ImProdnManage);
+};
+
+
 
 
 /*-----------------------------------------------------------------------------------------------------------------------------------*/ 
@@ -3789,4 +3894,22 @@ module.exports = {
     lssFlow: lssFlow,
     lssDrawFrameFlow: lssDrawFrameFlow,
     lssSpreaderFlow: lssSpreaderFlow,
+
+    knit1Flow: knit1Flow,
+    knit1LectureFlow: knit1LectureFlow,
+
+    imFlow: imFlow,
+    imLectureFlow: imLectureFlow,
+    imLec1Flow: imLec1Flow,
+    imLec2Flow: imLec2Flow,
+    imLec3Flow: imLec3Flow,
+    imLec4Flow: imLec4Flow,
+    imMarketFlow: imMarketFlow,
+    imMarketMixFlow: imMarketMixFlow,
+    imProjectFeasFlow: imProjectFeasFlow,
+    imNatureScopeFlow: imNatureScopeFlow,
+    imManageFuncFlow: imManageFuncFlow,
+    imIndusManageFlow: imIndusManageFlow,
+    imTechManageFlow: imTechManageFlow,
+    imProdnManageFlow: imProdnManageFlow,
 }
