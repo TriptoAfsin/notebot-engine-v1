@@ -643,6 +643,40 @@ let initWebRoutes = (app) => {
     router.get("/app/notes/3/im/im_prodMange_flow", appController.imProdnManageFlow);
 
 
+    //pd
+    router.get("/app/notes/3/pd", appController.pdFlow);
+    router.get("/app/notes/3/pd/pd_intro_flow", appController.pdIntroFlow);
+    router.get("/app/notes/3/pd/pd_understandingCustomer_flow", appController.pdUnderstandingFlow);
+    router.get("/app/notes/3/pd/pd_planningDesign_flow", appController.pdPlanningDesignFlow);
+    router.get("/app/notes/3/pd/pd_qualityFunc_flow", appController.pdQualityFuncFlow);
+
+
+    //tqm
+    router.get("/app/notes/3/tqm", appController.tqmFlow);
+    router.get("/app/notes/3/tqm/tqm_totalQm_flow", appController.tqmTotalQMFlow);
+    router.get("/app/notes/3/tqm/tqm_qualityReliability_flow", appController.tqmQualityReliabilityFlow);
+    router.get("/app/notes/3/tqm/tqm_continuous_flow", appController.tqmContinuousImproveFlow);
+    router.get("/app/notes/3/tqm/tqm_qualityStd_flow", appController.tqmQualityStdFlow);
+    router.get("/app/notes/3/tqm/tqm_intro_flow", appController.tqmIntroQMFlow);
+    router.get("/app/notes/3/tqm/tqm_control_flow", appController.tqmControlMeasureFlow);
+    router.get("/app/notes/3/tqm/tqm_managementApproach_flow", appController.tqmManagementApproachFlow);
+    router.get("/app/notes/3/tqm/tqm_qcTools_flow", appController.tqmQCToolsFlow);
+
+
+    //mic
+    router.get("/app/notes/3/mic", appController.micFlow);
+    router.get("/app/notes/3/mic/mic_book_flow", appController.micBooksFlow);
+    router.get("/app/notes/3/mic/mic_ch1_flow", appController.micIntroFlow);
+    router.get("/app/notes/3/mic/mic_ch2_flow", appController.micSysElementFlow);
+    router.get("/app/notes/3/mic/mic_ch4_flow", appController.micControlSysFlow);
+    router.get("/app/notes/3/mic/mic_limitsFitsGauge_flow", appController.micLimitFitFlow);
+    router.get("/app/notes/3/mic/mic_nonDestructive_flow", appController.micNonDesFlow);
+    router.get("/app/notes/3/mic/mic_surfaceFinish_flow", appController.micSurfaceFinishFlow);
+    router.get("/app/notes/3/mic/mic_threadMeasure_flow", appController.micThreadMeasureFlow);
+    router.get("/app/notes/3/mic/mic_angularMeas_flow", appController.micAngularMeasFlow);
+    router.get("/app/notes/3/mic/mic_LinearMeas_flow", appController.micLinearMeasFlow);
+
+
 
 
 

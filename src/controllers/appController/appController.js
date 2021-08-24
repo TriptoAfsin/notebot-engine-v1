@@ -644,6 +644,40 @@ let ImTechManage = require('./academic/notes/level3/subs/im/topics/appImTechMana
 let ImProdnManage = require('./academic/notes/level3/subs/im/topics/appImProdnManage')
 
 
+//pd
+let pdAppFlow = require('./academic/notes/level3/subs/pd/pd')
+let pdIntro = require('./academic/notes/level3/subs/pd/topics/appPdIntro')
+let pdUnderstandingCustomer = require('./academic/notes/level3/subs/pd/topics/appPdUndersatndingCustomer')
+let pdPlanningDesign = require('./academic/notes/level3/subs/pd/topics/pdPlaaningDesign')
+let pdQualityFunc = require('./academic/notes/level3/subs/pd/topics/pdQualityFunc')
+
+
+//tqm
+let tqmAppFlow = require('./academic/notes/level3/subs/tqm/tqm')
+let tqmTotalQM = require('./academic/notes/level3/subs/tqm/topics/appTqmTotalQM')
+let tqmQualityReliability = require('./academic/notes/level3/subs/tqm/topics/appTqmQualityRelia')
+let tqmContinuousImprovement = require('./academic/notes/level3/subs/tqm/topics/appTqmContImprove')
+let tqmQualityStd = require('./academic/notes/level3/subs/tqm/topics/appTqmQualityStd')
+let tqmIntroQM = require('./academic/notes/level3/subs/tqm/topics/appTqmIntroQM')
+let tqmControlMeasure = require('./academic/notes/level3/subs/tqm/topics/appTqmControlMeas')
+let tqmManageApproach = require('./academic/notes/level3/subs/tqm/topics/appTqmManageAppro')
+let tqmQCTools = require('./academic/notes/level3/subs/tqm/topics/appTqmQCTools')
+
+
+//mic
+let micAppFlow = require('./academic/notes/level3/subs/mic/mic')
+let micBooks = require('./academic/notes/level3/subs/mic/topics/appMicBooks')
+let micIntro = require('./academic/notes/level3/subs/mic/topics/appMicIntro')
+let micSystemElement = require('./academic/notes/level3/subs/mic/topics/appMicSystemEl')
+let micControlSys = require('./academic/notes/level3/subs/mic/topics/appMicControlSys')
+let micLimitFit = require('./academic/notes/level3/subs/mic/topics/appMicLimitFit')
+let micNonDes = require('./academic/notes/level3/subs/mic/topics/appMicNonDes')
+let micSurfaceFinish = require('./academic/notes/level3/subs/mic/topics/appMicMeasSurfaceFin')
+let micThreadMeasure = require('./academic/notes/level3/subs/mic/topics/appMicThreadMeas')
+let micAngular = require('./academic/notes/level3/subs/mic/topics/appMicAngular')
+let micLinear = require('./academic/notes/level3/subs/mic/topics/appMicLinear')
+
+
 
 /*--------------------------------------------------------------------------*/ 
 
@@ -3312,6 +3346,137 @@ let imProdnManageFlow = (req, res) => {
 };
 
 
+//pd
+let pdFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(pdAppFlow);
+};
+
+let pdIntroFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(pdIntro);
+};
+
+let pdUnderstandingFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(pdUnderstandingCustomer);
+};
+
+let pdPlanningDesignFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(pdPlanningDesign);
+};
+
+let pdQualityFuncFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(pdQualityFunc);
+};
+
+
+//tqm
+let tqmFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(tqmAppFlow);
+};
+
+let tqmTotalQMFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(tqmTotalQM);
+};
+
+let tqmQualityReliabilityFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(tqmQualityReliability);
+};
+
+let tqmContinuousImproveFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(tqmContinuousImprovement);
+};
+
+let tqmQualityStdFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(tqmQualityStd);
+};
+
+let tqmIntroQMFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(tqmIntroQM);
+};
+
+let tqmControlMeasureFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(tqmControlMeasure);
+};
+
+let tqmManagementApproachFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(tqmManageApproach);
+};
+
+let tqmQCToolsFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(tqmQCTools);
+};
+
+
+//mic
+let micFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(micAppFlow);
+};
+
+let micBooksFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(micBooks);
+};
+
+let micIntroFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(micIntro);
+};
+
+let micSysElementFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(micSystemElement);
+};
+
+let micControlSysFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(micControlSys);
+};
+
+let micLimitFitFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(micLimitFit);
+};
+
+let micNonDesFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(micNonDes);
+};
+
+let micSurfaceFinishFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(micSurfaceFinish);
+};
+
+let micThreadMeasureFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(micThreadMeasure);
+};
+
+let micAngularMeasFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(micAngular);
+};
+
+let micLinearMeasFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(micLinear);
+};
+
+
 
 
 /*-----------------------------------------------------------------------------------------------------------------------------------*/ 
@@ -3912,4 +4077,34 @@ module.exports = {
     imIndusManageFlow: imIndusManageFlow,
     imTechManageFlow: imTechManageFlow,
     imProdnManageFlow: imProdnManageFlow,
+
+    pdFlow: pdFlow,
+    pdIntroFlow: pdIntroFlow,
+    pdUnderstandingFlow: pdUnderstandingFlow,
+    pdPlanningDesignFlow: pdPlanningDesignFlow,
+    pdQualityFuncFlow: pdQualityFuncFlow,
+
+
+    tqmFlow: tqmFlow,
+    tqmTotalQMFlow: tqmTotalQMFlow,
+    tqmQualityReliabilityFlow: tqmQualityReliabilityFlow,
+    tqmContinuousImproveFlow: tqmContinuousImproveFlow,
+    tqmQualityStdFlow: tqmQualityStdFlow,
+    tqmIntroQMFlow: tqmIntroQMFlow,
+    tqmControlMeasureFlow: tqmControlMeasureFlow,
+    tqmManagementApproachFlow: tqmManagementApproachFlow,
+    tqmQCToolsFlow: tqmQCToolsFlow,
+
+
+    micFlow: micFlow,
+    micBooksFlow: micBooksFlow,
+    micIntroFlow: micIntroFlow,
+    micSysElementFlow: micSysElementFlow,
+    micControlSysFlow: micControlSysFlow,
+    micLimitFitFlow: micLimitFitFlow,
+    micNonDesFlow: micNonDesFlow,
+    micSurfaceFinishFlow: micSurfaceFinishFlow,
+    micThreadMeasureFlow: micThreadMeasureFlow,
+    micAngularMeasFlow: micAngularMeasFlow,
+    micLinearMeasFlow: micLinearMeasFlow,
 }
