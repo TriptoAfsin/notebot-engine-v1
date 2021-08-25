@@ -1098,6 +1098,11 @@ const ace_transferFunc = require("./flows/botReplies/note_levels/level_3/level_3
 const ace_logicgate = require("./flows/botReplies/note_levels/level_3/level_3_subs/ace/topics/aceLogicGates");
 const ace_hydraulics = require("./flows/botReplies/note_levels/level_3/level_3_subs/ace/topics/aceHydraulics");
 const ace_Pneumatics = require("./flows/botReplies/note_levels/level_3/level_3_subs/ace/topics/acePneumatic");
+const ace_IntroRobot = require("./flows/botReplies/note_levels/level_3/level_3_subs/ace/topics/aceIntroRobot");
+const ace_JointLinks = require("./flows/botReplies/note_levels/level_3/level_3_subs/ace/topics/aceJoints");
+const ace_Actuator = require("./flows/botReplies/note_levels/level_3/level_3_subs/ace/topics/aceActuator");
+const ace_Grips = require("./flows/botReplies/note_levels/level_3/level_3_subs/ace/topics/aceGrips");
+const ace_StructElements = require("./flows/botReplies/note_levels/level_3/level_3_subs/ace/topics/aceStructElements");
 
 //acm
 const acm_flow = require("./flows/botReplies/note_levels/level_3/level_3_subs/acm/acm_flow");
@@ -4840,6 +4845,21 @@ let handlePostback = async (sender_psid, received_postback) => {
   }
   else if (payload === 'ace_pneumatics_flow') {
     magicFunc(sender_psid, ace_Pneumatics);
+  }
+  else if (payload === 'ace_introRobot_flow') {
+    magicFunc(sender_psid, ace_IntroRobot);
+  }
+  else if (payload === 'ace_Joint_flow') {
+    magicFunc(sender_psid, ace_JointLinks);
+  }
+  else if (payload === 'ace_Actuator_flow') {
+    magicFunc(sender_psid, ace_Actuator);
+  }
+  else if (payload === 'ace_Grips_flow') {
+    magicFunc(sender_psid, ace_Grips);
+  }
+  else if (payload === 'ace_StructElements_flow') {
+    magicFunc(sender_psid, ace_StructElements);
   }
 
   //acm

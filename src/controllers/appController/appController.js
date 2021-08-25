@@ -678,6 +678,37 @@ let micAngular = require('./academic/notes/level3/subs/mic/topics/appMicAngular'
 let micLinear = require('./academic/notes/level3/subs/mic/topics/appMicLinear')
 
 
+//ace
+let aceAppFlow = require('./academic/notes/level3/subs/ace/ace')
+let aceIntroControl = require('./academic/notes/level3/subs/ace/topics/appAceIntroControl')
+let aceModelFreq = require('./academic/notes/level3/subs/ace/topics/appAceModelFreq')
+let aceTimeRes = require('./academic/notes/level3/subs/ace/topics/appAceTimeResponse')
+let aceSensors = require('./academic/notes/level3/subs/ace/topics/appAceSensors')
+let aceNumberSys = require('./academic/notes/level3/subs/ace/topics/appAceNumbersSys')
+let aceTransferFunc = require('./academic/notes/level3/subs/ace/topics/appAceTransferFunc')
+let aceLogicGates = require('./academic/notes/level3/subs/ace/topics/appAceLogic')
+let aceHydraulics = require('./academic/notes/level3/subs/ace/topics/appAceHydraulics')
+let acePneumatics = require('./academic/notes/level3/subs/ace/topics/appAcePneumatics')
+let aceIntroRobotics = require('./academic/notes/level3/subs/ace/topics/appAceIntroRobot')
+let aceJoints = require('./academic/notes/level3/subs/ace/topics/appAceJoints')
+let aceActuator = require('./academic/notes/level3/subs/ace/topics/appAceActuator')
+let aceGrips = require('./academic/notes/level3/subs/ace/topics/appAcegrips')
+let aceStructElements = require('./academic/notes/level3/subs/ace/topics/appAceStructElements')
+
+
+//acm
+let acmAppFlow = require('./academic/notes/level3/subs/acm/acm')
+let acmBooks = require('./academic/notes/level3/subs/acm/topics/appAcmBooks')
+let acmIntroCost = require('./academic/notes/level3/subs/acm/topics/appAcmIntroCostManage')
+let acmInterestedUsers = require('./academic/notes/level3/subs/acm/topics/appAcmInterestedUsers')
+let acmAccinAction = require('./academic/notes/level3/subs/acm/topics/appAcmAccinAction')
+let acmRecordingProcess = require('./academic/notes/level3/subs/acm/topics/appAcmRecordingProcess')
+let acmCostBehaviour = require('./academic/notes/level3/subs/acm/topics/appAcmCostBehav')
+let acmAccForMerch = require('./academic/notes/level3/subs/acm/topics/appAcmAccForMerch')
+let acmCostAccSys = require('./academic/notes/level3/subs/acm/topics/appAcmCostAccSys')
+let acmCostTech = require('./academic/notes/level3/subs/acm/topics/appAcmCostingTech')
+
+
 
 /*--------------------------------------------------------------------------*/ 
 
@@ -3477,6 +3508,112 @@ let micLinearMeasFlow = (req, res) => {
 };
 
 
+//ace
+let aceFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(aceAppFlow);
+};
+let aceIntroControlFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(aceIntroControl);
+};
+let aceModelFreqFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(aceModelFreq);
+};
+let aceTimeResFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(aceTimeRes);
+};
+let aceSensorsFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(aceSensors);
+};
+let aceNumberSysFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(aceNumberSys);
+};
+let aceTransferFuncFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(aceTransferFunc);
+};
+let aceLogicGateFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(aceLogicGates);
+};
+let aceHydraulicsFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(aceHydraulics);
+};
+let acePneumaticsFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(acePneumatics);
+};
+let aceIntroRoboticsFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(aceIntroRobotics);
+};
+let aceJointsFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(aceJoints);
+};
+let aceActuatorFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(aceActuator);
+};
+let aceGripsFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(aceGrips);
+};
+let aceStructElementsFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(aceStructElements);
+};
+
+
+//acm
+let acmFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(acmAppFlow);
+};
+let acmBooksFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(acmBooks);
+};
+let acmIntroCostFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(acmIntroCost);
+};
+let acmInterestedUsersFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(acmInterestedUsers);
+};
+let acmAccInActionFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(acmAccinAction);
+};
+let acmRecordingProcessFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(acmRecordingProcess);
+};
+let acmCostBehaviourFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(acmCostBehaviour);
+};
+let acmAccForMerchFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(acmAccForMerch);
+};
+let acmCostAccSysFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(acmCostAccSys);
+};
+let acmCostTechFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(acmCostTech);
+};
+
+
 
 
 /*-----------------------------------------------------------------------------------------------------------------------------------*/ 
@@ -4107,4 +4244,32 @@ module.exports = {
     micThreadMeasureFlow: micThreadMeasureFlow,
     micAngularMeasFlow: micAngularMeasFlow,
     micLinearMeasFlow: micLinearMeasFlow,
+
+
+    aceFlow: aceFlow,
+    aceIntroControlFlow: aceIntroControlFlow,
+    aceModelFreqFlow: aceModelFreqFlow,
+    aceTimeResFlow: aceTimeResFlow,
+    aceSensorsFlow: aceSensorsFlow,
+    aceNumberSysFlow: aceNumberSysFlow,
+    aceTransferFuncFlow: aceTransferFuncFlow,
+    aceLogicGateFlow: aceLogicGateFlow,
+    aceHydraulicsFlow: aceHydraulicsFlow,
+    acePneumaticsFlow: acePneumaticsFlow,
+    aceIntroRoboticsFlow: aceIntroRoboticsFlow,
+    aceJointsFlow: aceJointsFlow,
+    aceActuatorFlow: aceActuatorFlow,
+    aceGripsFlow: aceGripsFlow,
+    aceStructElementsFlow: aceStructElementsFlow,
+
+    acmFlow: acmFlow,
+    acmBooksFlow: acmBooksFlow,
+    acmIntroCostFlow: acmIntroCostFlow,
+    acmInterestedUsersFlow: acmInterestedUsersFlow,
+    acmAccInActionFlow: acmAccInActionFlow,
+    acmRecordingProcessFlow: acmRecordingProcessFlow,
+    acmCostBehaviourFlow:acmCostBehaviourFlow,
+    acmAccForMerchFlow: acmAccForMerchFlow,
+    acmCostAccSysFlow: acmCostAccSysFlow,
+    acmCostTechFlow: acmCostTechFlow,
 }

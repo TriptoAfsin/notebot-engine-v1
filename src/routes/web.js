@@ -677,6 +677,37 @@ let initWebRoutes = (app) => {
     router.get("/app/notes/3/mic/mic_LinearMeas_flow", appController.micLinearMeasFlow);
 
 
+    //ace
+    router.get("/app/notes/3/ace", appController.aceFlow);
+    router.get("/app/notes/3/ace/ace_introSys_flow", appController.aceIntroControlFlow);
+    router.get("/app/notes/3/ace/ace_modleingFreq_flow", appController.aceModelFreqFlow);
+    router.get("/app/notes/3/ace/ace_timeResponse_flow", appController.aceTimeResFlow);
+    router.get("/app/notes/3/ace/ace_sensors_flow", appController.aceSensorsFlow);
+    router.get("/app/notes/3/ace/ace_numberSys_flow", appController.aceNumberSysFlow);
+    router.get("/app/notes/3/ace/ace_transferFunc_flow", appController.aceTransferFuncFlow);
+    router.get("/app/notes/3/ace/ace_logicGate_flow", appController.aceLogicGateFlow);
+    router.get("/app/notes/3/ace/ace_hydraulics_flow", appController.aceHydraulicsFlow);
+    router.get("/app/notes/3/ace/ace_pneumatics_flow", appController.acePneumaticsFlow);
+    router.get("/app/notes/3/ace/ace_introRobot_flow", appController.aceIntroRoboticsFlow);
+    router.get("/app/notes/3/ace/ace_Joint_flow", appController.aceJointsFlow);
+    router.get("/app/notes/3/ace/ace_Actuator_flow", appController.aceActuatorFlow);
+    router.get("/app/notes/3/ace/ace_Grips_flow", appController.aceGripsFlow);
+    router.get("/app/notes/3/ace/ace_StructElements_flow", appController.aceStructElementsFlow);
+
+
+    //acm
+    router.get("/app/notes/3/acm", appController.acmFlow);
+    router.get("/app/notes/3/acm/acm_book_flow", appController.acmBooksFlow);
+    router.get("/app/notes/3/acm/acm_introCostManage_flow", appController.acmIntroCostFlow);
+    router.get("/app/notes/3/acm/acm_interestedUsers_flow", appController.acmInterestedUsersFlow);
+    router.get("/app/notes/3/acm/acm_accountingAction_flow", appController.acmAccInActionFlow);
+    router.get("/app/notes/3/acm/acm_recordingProcess_flow", appController.acmRecordingProcessFlow);
+    router.get("/app/notes/3/acm/acm_CostBehav_flow", appController.acmCostBehaviourFlow);
+    router.get("/app/notes/3/acm/acm_accMerchendizing_flow", appController.acmAccForMerchFlow);
+    router.get("/app/notes/3/acm/acm_costAccSys_flow", appController.acmCostAccSysFlow);
+    router.get("/app/notes/3/acm/acm_costTech_flow", appController.acmCostTechFlow);
+
+
 
 
 
