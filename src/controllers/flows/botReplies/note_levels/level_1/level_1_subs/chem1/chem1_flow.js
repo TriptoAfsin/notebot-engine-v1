@@ -8,6 +8,12 @@ let bondiFlow = require("../../../../sponsoredFlows/bondiCard");
 let chem1_flow = [
     bondiFlow,
     grroupedButtonBlockGen(
+        "📌 Select Topics for CHE-I -",
+        [
+            webBtnBlockGen("QB Solve(2021)", "https://drive.google.com/drive/folders/1tOXp7lwSuoENfugIFQ3djiDgahxvR8Un?usp=sharing"),
+        ]
+    ),
+    grroupedButtonBlockGen(
         "🔰 Select Topics for CHE-I -",
         [
             payloadBtnGen("Books", "chem1_books_flow"),
