@@ -708,6 +708,51 @@ let initWebRoutes = (app) => {
     router.get("/app/notes/3/acm/acm_costTech_flow", appController.acmCostTechFlow);
 
 
+    //fsd
+    router.get("/app/notes/3/fsd", appController.fsdFlow);
+    router.get("/app/notes/3/fsd/fsd_books_flow", appController.fsdFlow);
+    router.get("/app/notes/3/fsd/fsd_intro_flow", appController.fsdIntroFlow);
+    router.get("/app/notes/3/fsd/fsd_plainWeave_flow", appController.fsdPlainWeaveFlow);
+    router.get("/app/notes/3/fsd/fsd_twillWeave_flow", appController.fsdTwillFlow);
+
+    //am2
+    router.get("/app/notes/3/am2", appController.am2Flow);
+    router.get("/app/notes/3/am2/am2_books_flow", appController.am2BooksFlow);
+    router.get("/app/notes/3/am2/am2_classlec_flow", appController.am2ClassLecFlow);
+    router.get("/app/notes/3/am2/am2_lineBalancing_flow", appController.am2LineBalancingFlow);
+    router.get("/app/notes/3/am2/am2_costingExcel_flow", appController.am2ExcelFlow);
+
+
+    //ap2
+    router.get("/app/notes/3/ap2", appController.ap2Flow);
+    router.get("/app/notes/3/ap2/ap2_folding_flow", appController.ap2FoldingFlow);
+    router.get("/app/notes/3/ap2/ap2_stitch_flow", appController.ap2StitchFlow);
+    router.get("/app/notes/3/ap2/ap2_lockStitch_flow", appController.ap2LockStictchFlow);
+    router.get("/app/notes/3/ap2/ap2_pressingFinish_flow", appController.ap2PressingFlow);
+    router.get("/app/notes/3/ap2/ap2_Inspection_flow", appController.ap2InspectionFlow);
+
+
+    //econo
+    router.get("/app/notes/3/economics", appController.econoFlow);
+    router.get("/app/notes/3/economics/econo_books_flow", appController.econoBooksFlow);
+    router.get("/app/notes/3/economics/econo_classlec_flow", appController.econoClassLecFlow);
+
+
+    //fm2
+    router.get("/app/notes/3/fm2", appController.fm2Flow);
+    router.get("/app/notes/3/fm2/fm2_books_flow", appController.fm2BooksFlow);
+    router.get("/app/notes/3/fm2/fm2_classlec_flow", appController.fm2ClassLecFlow);
+    router.get("/app/notes/3/fm2/fm2_note_flow", appController.fm2NotesFlow);
+    router.get("/app/notes/3/fm2/fm2_basicWarp_flow", appController.fm2BasicWarpFlow);
+    router.get("/app/notes/3/fm2/fm2_misc_flow", appController.fm2MiscFlow);
+
+
+
+
+    
+
+
+
 
 
 

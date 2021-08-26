@@ -709,6 +709,46 @@ let acmCostAccSys = require('./academic/notes/level3/subs/acm/topics/appAcmCostA
 let acmCostTech = require('./academic/notes/level3/subs/acm/topics/appAcmCostingTech')
 
 
+//fsd
+let fsdAppFlow = require('./academic/notes/level3/subs/fsd/fsd')
+let fsdBooks = require('./academic/notes/level3/subs/fsd/topics/appFsdBooks')
+let fsdIntro = require('./academic/notes/level3/subs/fsd/topics/appFsdIntro')
+let fsdPlainWeave = require('./academic/notes/level3/subs/fsd/topics/appFsdPlainWea')
+let fsdTwill = require('./academic/notes/level3/subs/fsd/topics/appFsdTwill')
+
+
+//am2
+let am2AppFlow = require('./academic/notes/level3/subs/am2/am2')
+let am2Books = require('./academic/notes/level3/subs/am2/topics/appAm2Books')
+let am2ClassLec = require('./academic/notes/level3/subs/am2/topics/appAm2ClassLec')
+let am2LineBalance = require('./academic/notes/level3/subs/am2/topics/appAm2LineBalancing')
+let am2Excel = require('./academic/notes/level3/subs/am2/topics/appAm2CostingExcel')
+
+
+//ap2
+let ap2AppFlow = require('./academic/notes/level3/subs/ap2/ap2')
+let ap2Folding = require('./academic/notes/level3/subs/ap2/topics/appAp2Folding')
+let ap2Stitch = require('./academic/notes/level3/subs/ap2/topics/appAP2Stitch')
+let ap2LockStitch = require('./academic/notes/level3/subs/ap2/topics/appAp2LockStictch')
+let ap2Pressing = require('./academic/notes/level3/subs/ap2/topics/appAp2PressFinish')
+let ap2Inspection = require('./academic/notes/level3/subs/ap2/topics/appAp2AppInspec')
+
+
+//economics
+let econoAppFlow = require('./academic/notes/level3/subs/economics/economics')
+let econoBooks = require('./academic/notes/level3/subs/economics/topics/appEcoBooks')
+let econoClassLec = require('./academic/notes/level3/subs/economics/topics/appEconoClassLec')
+
+
+//fm2
+let fm2AppFlow = require('./academic/notes/level3/subs/fm2/fm2')
+let fm2Books = require('./academic/notes/level3/subs/fm2/topics/appFm2Books')
+let fm2ClassLec = require('./academic/notes/level3/subs/fm2/topics/appFm2ClassLec')
+let fm2Notes = require('./academic/notes/level3/subs/fm2/topics/appFm2HandNote')
+let fm2BasicWarp = require('./academic/notes/level3/subs/fm2/topics/appFm2BasicWarp')
+let fm2Misc = require('./academic/notes/level3/subs/fm2/topics/appFm2Misc')
+
+
 
 /*--------------------------------------------------------------------------*/ 
 
@@ -3614,6 +3654,141 @@ let acmCostTechFlow = (req, res) => {
 };
 
 
+//fsd
+let fsdFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(fsdAppFlow);
+};
+
+let fsdBooksFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(fsdBooks);
+};
+
+let fsdIntroFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(fsdIntro);
+};
+
+let fsdPlainWeaveFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(fsdPlainWeave);
+};
+
+let fsdTwillFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(fsdTwill);
+};
+
+
+//am2
+let am2Flow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(am2AppFlow);
+};
+
+let am2BooksFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(am2Books);
+};
+
+let am2ClassLecFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(am2ClassLec);
+};
+
+let am2LineBalancingFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(am2LineBalance);
+};
+
+let am2ExcelFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(am2Excel);
+};
+
+
+//ap2
+let ap2Flow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(ap2AppFlow);
+};
+
+let ap2FoldingFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(ap2Folding);
+};
+
+let ap2StitchFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(ap2Stitch);
+};
+
+let ap2LockStictchFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(ap2LockStitch);
+};
+
+let ap2PressingFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(ap2Pressing);
+};
+
+let ap2InspectionFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(ap2Inspection);
+};
+
+
+//economics
+let econoFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(econoAppFlow);
+};
+
+let econoBooksFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(econoBooks);
+};
+
+let econoClassLecFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(econoClassLec);
+};
+
+
+//fm2
+let fm2Flow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(fm2AppFlow);
+};
+
+let fm2BooksFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(fm2Books);
+};
+
+let fm2ClassLecFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(fm2ClassLec);
+};
+
+let fm2NotesFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(fm2Notes);
+};
+
+let fm2BasicWarpFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(fm2BasicWarp);
+};
+
+let fm2MiscFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(fm2Misc);
+};
+
+
 
 
 /*-----------------------------------------------------------------------------------------------------------------------------------*/ 
@@ -4272,4 +4447,35 @@ module.exports = {
     acmAccForMerchFlow: acmAccForMerchFlow,
     acmCostAccSysFlow: acmCostAccSysFlow,
     acmCostTechFlow: acmCostTechFlow,
+
+    fsdFlow: fsdFlow,
+    fsdBooksFlow: fsdBooksFlow,
+    fsdIntroFlow: fsdIntroFlow,
+    fsdPlainWeaveFlow: fsdPlainWeaveFlow,
+    fsdTwillFlow: fsdTwillFlow,
+
+    am2Flow: am2Flow,
+    am2BooksFlow: am2BooksFlow,
+    am2ClassLecFlow: am2ClassLecFlow,
+    am2LineBalancingFlow: am2LineBalancingFlow,
+    am2ExcelFlow: am2ExcelFlow,
+
+
+    ap2Flow: ap2Flow,
+    ap2FoldingFlow: ap2FoldingFlow,
+    ap2StitchFlow: ap2StitchFlow,
+    ap2LockStictchFlow: ap2LockStictchFlow,
+    ap2PressingFlow: ap2PressingFlow,
+    ap2InspectionFlow: ap2InspectionFlow,
+
+    econoFlow: econoFlow,
+    econoBooksFlow: econoBooksFlow,
+    econoClassLecFlow: econoClassLecFlow,
+
+    fm2Flow: fm2Flow,
+    fm2BooksFlow: fm2BooksFlow,
+    fm2ClassLecFlow: fm2ClassLecFlow,
+    fm2NotesFlow: fm2NotesFlow,
+    fm2BasicWarpFlow: fm2BasicWarpFlow,
+    fm2MiscFlow: fm2MiscFlow,
 }
