@@ -749,6 +749,23 @@ let fm2BasicWarp = require('./academic/notes/level3/subs/fm2/topics/appFm2BasicW
 let fm2Misc = require('./academic/notes/level3/subs/fm2/topics/appFm2Misc')
 
 
+//wp2
+let wp2AppFlow = require('./academic/notes/level3/subs/wp2/wp2')
+let wp2Books = require('./academic/notes/level3/subs/wp2/topics/appWp2Books')
+let wp2ClassLec = require('./academic/notes/level3/subs/wp2/topics/appWp2ClassLec')
+
+
+//ym2
+let ym2AppFlow = require('./academic/notes/level3/subs/ym2/ym2')
+let ym2Books = require('./academic/notes/level3/subs/ym2/topics/appYm2Books')
+let ym2ClassLec = require('./academic/notes/level3/subs/ym2/topics/appYm2ClassLec')
+let ym2Notes = require('./academic/notes/level3/subs/ym2/topics/appYm2Notes')
+let ym2SpecialYarns = require('./academic/notes/level3/subs/ym2/topics/appYm2SpecialYarns')
+let ym2IntroModern = require('./academic/notes/level3/subs/ym2/topics/appYm2Intro')
+let ym2Rotor = require('./academic/notes/level3/subs/ym2/topics/appYm2Rotor')
+let ym2Spinning = require('./academic/notes/level3/subs/ym2/topics/appYm2Spinning')
+
+
 
 /*--------------------------------------------------------------------------*/ 
 
@@ -3789,6 +3806,68 @@ let fm2MiscFlow = (req, res) => {
 };
 
 
+//wp2
+let wp2Flow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(wp2AppFlow);
+};
+
+let wp2BooksFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(wp2Books);
+};
+
+let wp2ClasLecFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(wp2ClassLec);
+};
+
+
+
+//ym2
+let ym2Flow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(ym2AppFlow);
+};
+
+let ym2BooksFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(ym2Books);
+};
+
+let ym2ClassLecFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(ym2ClassLec);
+};
+
+let ym2NotesFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(ym2Notes);
+};
+
+let ym2SpecialyarnsFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(ym2SpecialYarns);
+};
+
+let ym2IntroFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(ym2IntroModern);
+};
+
+let ym2RotorFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(ym2Rotor);
+};
+
+let ym2SpinningFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(ym2Spinning);
+};
+
+
+
+
 
 
 /*-----------------------------------------------------------------------------------------------------------------------------------*/ 
@@ -4478,4 +4557,17 @@ module.exports = {
     fm2NotesFlow: fm2NotesFlow,
     fm2BasicWarpFlow: fm2BasicWarpFlow,
     fm2MiscFlow: fm2MiscFlow,
+
+    wp2Flow: wp2Flow,
+    wp2BooksFlow: wp2BooksFlow,
+    wp2ClasLecFlow: wp2ClasLecFlow,
+
+    ym2Flow: ym2Flow,
+    ym2BooksFlow: ym2BooksFlow,
+    ym2ClassLecFlow: ym2ClassLecFlow,
+    ym2NotesFlow: ym2NotesFlow,
+    ym2SpecialyarnsFlow: ym2SpecialyarnsFlow,
+    ym2IntroFlow: ym2IntroFlow,
+    ym2RotorFlow: ym2RotorFlow,
+    ym2SpinningFlow:ym2SpinningFlow,
 }

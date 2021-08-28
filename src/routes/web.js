@@ -747,6 +747,24 @@ let initWebRoutes = (app) => {
     router.get("/app/notes/3/fm2/fm2_misc_flow", appController.fm2MiscFlow);
 
 
+     //wp2
+     router.get("/app/notes/3/wp2", appController.wp2Flow);
+     router.get("/app/notes/3/wp2/wp2_books_flow", appController.wp2BooksFlow);
+     router.get("/app/notes/3/wp2/wp2_classlec_flow", appController.wp2ClasLecFlow);
+
+
+     //ym2
+     router.get("/app/notes/3/ym2", appController.ym2Flow);
+     router.get("/app/notes/3/ym2/ym2_books_flow", appController.ym2BooksFlow);
+     router.get("/app/notes/3/ym2/ym2_classlec_flow", appController.ym2ClassLecFlow);
+     router.get("/app/notes/3/ym2/ym2_note_flow", appController.ym2NotesFlow);
+     router.get("/app/notes/3/ym2/ym2_specialYarns_flow", appController.ym2SpecialyarnsFlow);
+     router.get("/app/notes/3/ym2/ym2_introSpin_flow", appController.ym2IntroFlow);
+     router.get("/app/notes/3/ym2/ym2_rotor_flow", appController.ym2RotorFlow);
+     router.get("/app/notes/3/ym2/ym2_spinning_flow", appController.ym2SpinningFlow);
+
+
+
 
 
     
