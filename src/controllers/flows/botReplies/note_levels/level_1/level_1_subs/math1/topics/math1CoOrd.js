@@ -5,6 +5,7 @@ let math1CoOrd = [
     textBlockGen(`🔷 Hand Note(Akib, 2018) - \n\nhttps://drive.google.com/file/d/1ppJ4D4vbUvbhJywj2iYJIXk_JihZiVBT/view?usp=drivesdk`),
     textBlockGen(`🔷 Hand Note(Azim, TEM-46 ,2021) - \n\nhttps://drive.google.com/file/d/1a6XFcivWVBkyW3LQrq2yipvfjbwhuVGZ/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note(Suraiya, 46 ,2021) - \n\nhttps://drive.google.com/file/d/1NqIUUA4wKbixm4dk9CjH_cHSVoCy6rWl/view?usp=sharing`),
+    textBlockGen(`🔷 Hand Note(Sagar, WPE-46 ,2021) - \n\nhttps://drive.google.com/file/d/11qJE3gM8_iWQDn1hDdCpG_MrvRhdtCzZ/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note(Zubair,46,2021) - \n\nhttps://drive.google.com/file/d/1J-R_FlktUDyaXE-LZHByWVHd0mUe4Zxj/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note(Shafiul, DCE-46 ,2021) - \n\nhttps://drive.google.com/file/d/1fH1O1BGEDgpw7YU-rR112X0zDvmV8EgH/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note(Sazzad, 2019)- \n\nhttps://drive.google.com/file/d/1APhaH5hp4wvaZTLCe6lBuMChvwYaxQcn/view?usp=sharing`),
