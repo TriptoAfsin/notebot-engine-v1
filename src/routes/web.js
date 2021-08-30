@@ -33,6 +33,7 @@ let initWebRoutes = (app) => {
     router.get("/app/notes/1", appController.notesLevel1);
     router.get("/app/notes/2", appController.notesLevel2);
     router.get("/app/notes/3", appController.notesLevel3);
+    router.get("/app/notes/4", appController.notesLevel4);
 
     //math1
     router.get("/app/notes/1/math1", appController.math1);
@@ -710,7 +711,7 @@ let initWebRoutes = (app) => {
 
     //fsd
     router.get("/app/notes/3/fsd", appController.fsdFlow);
-    router.get("/app/notes/3/fsd/fsd_books_flow", appController.fsdFlow);
+    router.get("/app/notes/3/fsd/fsd_books_flow", appController.fsdBooksFlow);
     router.get("/app/notes/3/fsd/fsd_intro_flow", appController.fsdIntroFlow);
     router.get("/app/notes/3/fsd/fsd_plainWeave_flow", appController.fsdPlainWeaveFlow);
     router.get("/app/notes/3/fsd/fsd_twillWeave_flow", appController.fsdTwillFlow);
@@ -762,6 +763,35 @@ let initWebRoutes = (app) => {
      router.get("/app/notes/3/ym2/ym2_introSpin_flow", appController.ym2IntroFlow);
      router.get("/app/notes/3/ym2/ym2_rotor_flow", appController.ym2RotorFlow);
      router.get("/app/notes/3/ym2/ym2_spinning_flow", appController.ym2SpinningFlow);
+
+
+
+     //bil
+     router.get("/app/notes/4/bil", appController.bilFlow);
+     router.get("/app/notes/4/bil/bil_labor_law_flow", appController.bilLaborFlow);
+
+
+     //hrm
+     router.get("/app/notes/4/hrm", appController.hrmFlow);
+
+     //bs
+     router.get("/app/notes/4/bs", appController.bsFlow);
+
+     //epd
+     router.get("/app/notes/4/epd", appController.epdFlow);
+
+
+     //ir
+     router.get("/app/notes/4/ir", appController.irFlow);
+     router.get("/app/notes/4/ir/ir_ir_flow", appController.irIndusRelationFlow);
+
+
+     //ppc
+     router.get("/app/notes/4/ppc", appController.ppcFlow);
+
+     //tam
+     router.get("/app/notes/4/tam", appController.tamFlow);
+     router.get("/app/notes/4/tam/tam_intro_merch_flow", appController.tamIntroMerchFlow);
 
 
 

@@ -30,8 +30,6 @@ let level_4_note = [
         `🔰 Select Subject for level 4 -`,
         [
             payloadBtnGen("B&IL", "bil_flow"),
-            payloadBtnGen("HRM", "hrm_flow"),
-            payloadBtnGen("BS", "bs_flow")
         ]
     ), 
     grroupedButtonBlockGen(

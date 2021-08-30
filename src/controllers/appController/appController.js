@@ -21,6 +21,7 @@ let deploymentEnvDetector = () => {
 let noteLevel1Subs = require('./academic/notes/level1/level1Subs')
 let noteLevel2Subs = require('./academic/notes/level2/level2Subs')
 let noteLevel3Subs = require('./academic/notes/level3/level3Subs')
+let noteLevel4Subs = require('./academic/notes/level4/level4Subs')
 //math1
 let math1Flow = require('./academic/notes/level1/subs/math1/math1')
 let math1BooksFlow = require('./academic/notes/level1/subs/math1/topics/appMath1Books')
@@ -766,6 +767,37 @@ let ym2Rotor = require('./academic/notes/level3/subs/ym2/topics/appYm2Rotor')
 let ym2Spinning = require('./academic/notes/level3/subs/ym2/topics/appYm2Spinning')
 
 
+//bil
+let bilAppFlow = require('./academic/notes/level4/subs/bil/bil')
+let bilLaborLaw = require('./academic/notes/level4/subs/bil/topics/appBilLaborLaw')
+
+//hrm
+let hrmAppFlow = require('./academic/notes/level4/subs/hrm/hrm')
+
+
+//bs
+let bsAppFlow = require('./academic/notes/level4/subs/bs/bs')
+
+//epd
+let epdAppFlow = require('./academic/notes/level4/subs/epd/epd')
+
+
+//ir
+let irAppFlow = require('./academic/notes/level4/subs/ir/ir')
+let irIndustrialRelation = require('./academic/notes/level4/subs/ir/topics/appIrIndusRela')
+
+
+//ppc
+let ppcAppFlow = require('./academic/notes/level4/subs/ppc/ppc')
+
+
+//tam
+let tamAppFlow = require('./academic/notes/level4/subs/tam/tam')
+let tamIntroMerch = require('./academic/notes/level4/subs/tam/topics/appTamIntroMerch')
+
+
+
+
 
 /*--------------------------------------------------------------------------*/ 
 
@@ -841,6 +873,14 @@ let level3Notes = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
 
     return res.send(noteLevel3Subs);
+};
+
+//level4
+let level4Notes = (req, res) => {
+
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+
+    return res.send(noteLevel4Subs);
 };
 
 //level1 -> math1
@@ -3866,6 +3906,70 @@ let ym2SpinningFlow = (req, res) => {
 };
 
 
+//level4
+//bil
+let bilFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(bilAppFlow);
+};
+
+let bilLaborFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(bilLaborLaw);
+};
+
+
+//hrm
+let hrmFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(hrmAppFlow);
+};
+
+
+//bs
+let bsFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(bsAppFlow);
+};
+
+
+//epd
+let epdFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(epdAppFlow);
+};
+
+
+//ir
+let irFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(irAppFlow);
+};
+
+let irIndusRelationFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(irIndustrialRelation);
+};
+
+
+//ppc
+let ppcFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(ppcAppFlow);
+};
+
+//tam
+let tamFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(tamAppFlow);
+};
+
+let tamIntroMerchFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(tamIntroMerch);
+};
+
+
 
 
 
@@ -3913,6 +4017,7 @@ module.exports = {
     notesLevel1: level1Notes,
     notesLevel2: level2Notes,
     notesLevel3: level3Notes,
+    notesLevel4: level4Notes,
 
     //math1
     math1: math1,
@@ -4570,4 +4675,22 @@ module.exports = {
     ym2IntroFlow: ym2IntroFlow,
     ym2RotorFlow: ym2RotorFlow,
     ym2SpinningFlow:ym2SpinningFlow,
+
+
+    bilFlow: bilFlow,
+    bilLaborFlow: bilLaborFlow,
+
+    hrmFlow: hrmFlow,
+
+    bsFlow: bsFlow,
+
+    epdFlow: epdFlow,
+
+    irFlow: irFlow,
+    irIndusRelationFlow: irIndusRelationFlow,
+
+    ppcFlow: ppcFlow,
+
+    tamFlow: tamFlow,
+    tamIntroMerchFlow: tamIntroMerchFlow,
 }
