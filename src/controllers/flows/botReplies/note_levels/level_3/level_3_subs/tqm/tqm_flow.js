@@ -7,6 +7,12 @@ let bondiFlow = require("../../../../sponsoredFlows/bondiCard");
 let tqmFlow = [
     bondiFlow,
     grroupedButtonBlockGen(
+        "📌 Select Topics for TQM - ",
+        [
+            webBtnBlockGen("TQM Maths", "https://drive.google.com/file/d/1ejpc4Ihsp5-ixXEe_XHh_xRZS7kyHOrm/view?usp=sharing"),
+        ]
+    ),
+    grroupedButtonBlockGen(
         "🔰 Select Topics for TQM - ",
         [
             payloadBtnGen("Lec 1: Total QM", "tqm_totalQm_flow"),

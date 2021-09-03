@@ -17,8 +17,8 @@ let fsdFlow = [
     grroupedButtonBlockGen(
         `📌 All Sheets -  `,
         [
-            webBtnBlockGen("Shilpi Mam Part-A", "https://drive.google.com/file/d/1RLy1u-ZcZd-KVHGK0GtO6sk1GGoIam-k/view?usp=sharing"),
-            webBtnBlockGen("Shilpi Mam Part-B", "https://drive.google.com/drive/folders/1T_BhiA18x2p91JGFBACR2NQgPoalmy_Q?usp=sharing"),
+            webBtnBlockGen("Shilpi Mam(A)", "https://drive.google.com/file/d/1RLy1u-ZcZd-KVHGK0GtO6sk1GGoIam-k/view?usp=sharing"),
+            webBtnBlockGen("Shilpi Mam(B)", "https://drive.google.com/drive/folders/1e1UO-hd553hsqSOd6oQKkLaOIcf2DQuD?usp=sharing"),
         ]
     ),
     grroupedButtonBlockGen(
