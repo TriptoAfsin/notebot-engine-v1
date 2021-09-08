@@ -3,7 +3,8 @@ const deprssedWords = [
     "depressed", 
     "মন ভাল না", 
     "মন খারাপ", 
-    "ডিপ্রেসড"
+    "ডিপ্রেসড",
+    "sad"
 ];
 
 

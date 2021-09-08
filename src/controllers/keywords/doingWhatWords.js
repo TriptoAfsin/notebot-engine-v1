@@ -5,7 +5,8 @@ const doingWhatWords = [
     "work", 
     "করো",
     "করেন",
-    "kro"
+    "kro",
+    "koren"
 ];
 
 

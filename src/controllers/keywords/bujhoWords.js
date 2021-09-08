@@ -6,7 +6,10 @@ const bujhoWords = [
     "bojho",
     "bogo", 
     "বুঝ",
-    "বুঝতে"
+    "বুঝতে",
+    "bujhen",
+    "understand"
+
 ];
 
 

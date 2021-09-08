@@ -4,7 +4,8 @@ const shalaWords = [
     "hala", 
     "শালি",
     "শালী",
-    "shali"
+    "shali",
+    "sala"
 ];
 
 
