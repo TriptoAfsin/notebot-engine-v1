@@ -15,7 +15,7 @@ let ntf_flow = [
         [
             webBtnBlockGen("Important Que.", "https://drive.google.com/file/d/16xe5aLVA1cTGM2aEJXmEbmG527Ewz7Hb/view?usp=sharing"),
             webBtnBlockGen("Short Note", "https://drive.google.com/file/d/1ssWOEjOj1qJrfRO_sKM3uqit1zIbBOKT/view?usp=sharing"),
-            webBtnBlockGen("Full Note", "https://drive.google.com/file/d/19JIpGWPQVP9SWFHfZdisdvNgaSlwxaW5/view?usp=drivesdk")
+            webBtnBlockGen("🔵 Akib(2019)", "https://drive.google.com/file/d/19JIpGWPQVP9SWFHfZdisdvNgaSlwxaW5/view?usp=drivesdk")
         ]
     ),
     grroupedButtonBlockGen(`⭐ All Properties Short Note -`,
