@@ -6,6 +6,12 @@ let cardGenerator = require("../../genrators/cardGenerator");
 
 let result = [
     grroupedButtonBlockGen(
+        "🔴 Latest Results -",
+        [
+            webBtnBlockGen("L1T2(2021)", "https://drive.google.com/file/d/1orh48cQeiOc7OuzwVzm_oi9kPSRrAiLe/view"),
+        ]
+    ),
+    grroupedButtonBlockGen(
         "🔰 Choose -",
         [
             payloadBtnGen("🔴 Academic Result", "result_academic"),
