@@ -1,25 +1,18 @@
+let grroupedButtonBlockGen = require("../../../../genrators/grroupedButtonBlockGen");
+let webBtnBlockGen = require("../../../../genrators/webBtnBlockGen");
+let payloadBtnGen = require("../../../../genrators/payloadBtnGen");
+let cardGenerator = require("../../../../genrators/cardGenerator");
+
+
+
 let academicResult = [
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🟡 Select Academic Year - ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "2019",
-                        "payload": "academic_res_2019"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "2018",
-                        "payload": "academic_res_2018"
-                    }
-                ],
-            },
-        },
-    },
+    grroupedButtonBlockGen(
+        "🟡 Select Academic Year -",
+        [
+            payloadBtnGen("2019", "academic_res_2019"),
+            payloadBtnGen("2018", "academic_res_2018")
+        ]
+    ),
 ]
 
 

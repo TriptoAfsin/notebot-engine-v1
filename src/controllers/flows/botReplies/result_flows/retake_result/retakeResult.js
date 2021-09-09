@@ -1,25 +1,17 @@
+let grroupedButtonBlockGen = require("../../../../genrators/grroupedButtonBlockGen");
+let webBtnBlockGen = require("../../../../genrators/webBtnBlockGen");
+let payloadBtnGen = require("../../../../genrators/payloadBtnGen");
+let cardGenerator = require("../../../../genrators/cardGenerator");
+
+
 let retakecResult = [
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🟤 Select Academic Year - ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": " Retake 2019",
-                        "payload": "retake_res_2019"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Retake 2018",
-                        "payload": "retake_res_2018"
-                    }
-                ],
-            },
-        },
-    },
+    grroupedButtonBlockGen(
+        "🟤 Select Academic Year -",
+        [
+            payloadBtnGen("Retake 2019", "retake_res_2019"),
+            payloadBtnGen("Retake 2018", "retake_res_2018"),
+        ]
+    ),
 ]
 
 
