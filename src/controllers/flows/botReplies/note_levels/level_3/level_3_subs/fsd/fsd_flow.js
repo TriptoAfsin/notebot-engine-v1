@@ -36,6 +36,13 @@ let fsdFlow = [
         ]
     ),
     grroupedButtonBlockGen(
+        `🔰 Select Topics for FSD - `,
+        [
+            payloadBtnGen("Fancy Weave", "fsd_fancyWeave_flow"),
+            payloadBtnGen("Color & Weave Eff.", "fsd_colorWeave_flow"),
+        ]
+    ),
+    grroupedButtonBlockGen(
         `📌 Shortcuts, Suggestions & Excel Sheets  `,
         [
             webBtnBlockGen("Shortcuts", "https://drive.google.com/file/d/1rY9ENH_FzyulkeGrpzsH0KCFskTTRBw1/view?usp=sharing"),

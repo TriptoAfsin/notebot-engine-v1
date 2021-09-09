@@ -1145,6 +1145,8 @@ const fsd_intro = require("./flows/botReplies/note_levels/level_3/level_3_subs/f
 const fsd_plainWeave = require("./flows/botReplies/note_levels/level_3/level_3_subs/fsd/topics/fsdPlainWeave");
 const fsd_TwillWeave = require("./flows/botReplies/note_levels/level_3/level_3_subs/fsd/topics/fsdTwill");
 const fsd_books = require("./flows/botReplies/note_levels/level_3/level_3_subs/fsd/topics/fsdBooks");
+const fsd_Fancy = require("./flows/botReplies/note_levels/level_3/level_3_subs/fsd/topics/fsdFancy");
+const fsd_colorWeave = require("./flows/botReplies/note_levels/level_3/level_3_subs/fsd/topics/fsdColorWeave");
 
 //tqm
 const tqm_flow = require("./flows/botReplies/note_levels/level_3/level_3_subs/tqm/tqm_flow");
@@ -2210,7 +2212,7 @@ function handleMessage(sender_psid, received_message) {
           let myDate = new Date(topRss[i].published);
           response.push(
             groupedBtnBlockGen(
-              `🟣 Date:${myDate.getDate()}/${myDate.getMonth() + 1}/${myDate.getFullYear()}\n\n${topRss[i].title} -`,
+              `🟣 Date: ${myDate.getDate()}/${myDate.getMonth() + 1}/${myDate.getFullYear()}\n\n${topRss[i].title} -`,
               [
                 webBtnBlockGen("Visit 🌎", `${topRss[i].link}`)
               ]
@@ -2222,6 +2224,7 @@ function handleMessage(sender_psid, received_message) {
       }).catch(err => callSendAPI(sender_psid, erroResponse));
     } catch (err) {
       callSendAPI(sender_psid, erroResponse)
+      console.error("🟥 Function Error Occured In Notice Checking")
     }
   }
 
@@ -4969,6 +4972,12 @@ let handlePostback = async (sender_psid, received_postback) => {
   }
   else if (payload === 'fsd_books_flow') {
     magicFunc(sender_psid, fsd_books);
+  }
+  else if (payload === 'fsd_fancyWeave_flow') {
+    magicFunc(sender_psid, fsd_Fancy);
+  }
+  else if (payload === 'fsd_colorWeave_flow') {
+    magicFunc(sender_psid, fsd_colorWeave);
   }
 
 

@@ -715,6 +715,8 @@ let initWebRoutes = (app) => {
     router.get("/app/notes/3/fsd/fsd_intro_flow", appController.fsdIntroFlow);
     router.get("/app/notes/3/fsd/fsd_plainWeave_flow", appController.fsdPlainWeaveFlow);
     router.get("/app/notes/3/fsd/fsd_twillWeave_flow", appController.fsdTwillFlow);
+    router.get("/app/notes/3/fsd/fsd_fancyWeave_flow", appController.fsdFancyFlow);
+    router.get("/app/notes/3/fsd/fsd_colorWeave_flow", appController.fsdColorWeaveFlow);
 
     //am2
     router.get("/app/notes/3/am2", appController.am2Flow);
