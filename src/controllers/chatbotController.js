@@ -2194,7 +2194,7 @@ function handleMessage(sender_psid, received_message) {
     let Feed = require('rss-to-json');
     const rssUrl = "https://www.butex.edu.bd/feed";
     let topRss = [];
-    let topRssAmount = 3
+    let topRssAmount = 5
     // Promise
     Feed.load(rssUrl).then(rss => {
       for (let i = 0; i < topRssAmount; i++) {
