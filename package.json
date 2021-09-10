@@ -23,7 +23,8 @@
     "mongodb": "^4.1.1",
     "mongoose": "^5.13.9",
     "request": "^2.88.2",
-    "rss-to-json": "^1.1.3"
+    "rss-to-json": "^1.1.3",
+    "simple-messenger-blocks": "file:local-npm/simple-ms-blocks"
   },
   "devDependencies": {
     "@babel/core": "^7.15.5",

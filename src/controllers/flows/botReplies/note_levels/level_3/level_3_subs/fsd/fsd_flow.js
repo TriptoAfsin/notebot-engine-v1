@@ -1,8 +1,8 @@
 
-let grroupedButtonBlockGen = require("../../../../../../genrators/grroupedButtonBlockGen");
-let webBtnBlockGen = require("../../../../../../genrators/webBtnBlockGen");
-let payloadBtnGen = require("../../../../../../genrators/payloadBtnGen");
-let cardGenerator = require("../../../../../../genrators/cardGenerator");
+let grroupedButtonBlockGen = require("simple-messenger-blocks/groupedBtnBlockGen");
+let webBtnBlockGen = require("simple-messenger-blocks/webBtnGen");
+let payloadBtnGen = require("simple-messenger-blocks/payloadBtnGen");
+let cardGenerator = require("simple-messenger-blocks/cardGenerator");
 let bondiFlow = require("../../../../sponsoredFlows/bondiCard");
 
 let fsdFlow = [
