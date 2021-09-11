@@ -681,6 +681,7 @@ const pse_degrad = require("./flows/botReplies/note_levels/level_1/level_1_subs/
 const pse_polyTech = require("./flows/botReplies/note_levels/level_1/level_1_subs/pse/topics/psePolymerizationTech");
 const pse_application = require("./flows/botReplies/note_levels/level_1/level_1_subs/pse/topics/pseAppliPoly");
 const pse_morpho = require("./flows/botReplies/note_levels/level_1/level_1_subs/pse/topics/pseMorpho");
+const pse_FiberForming = require("./flows/botReplies/note_levels/level_1/level_1_subs/pse/topics/pseFiberForming");
 
 //academic flows -> bfs
 const bfs_flow = require("./flows/botReplies/note_levels/level_1/level_1_subs/bfs/bfs_flow");
@@ -3485,6 +3486,13 @@ let handlePostback = async (sender_psid, received_postback) => {
     magicFunc(sender_psid, pse_application);
   }
 
+  else if (payload === 'pse_fiberForming_flow') {
+    magicFunc(sender_psid, pse_FiberForming);
+  }
+
+
+
+  //tpm
   else if (payload === 'tpm_flow') {
     magicFunc(sender_psid, tpm_flow);
   }

@@ -45,6 +45,7 @@ let pse_flow = [
         [
             payloadBtnGen("Appli.. of Polymers", "pse_application_flow"),
             payloadBtnGen("Polymer Morpho..", "pse_morpho_flow"),
+            payloadBtnGen("Fiber For. Poly.", "pse_fiberForming_flow"),
         ]
     ),
 ]
