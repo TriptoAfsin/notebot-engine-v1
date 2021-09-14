@@ -9,6 +9,7 @@ let result = [
         "🔴 Latest Results -",
         [
             webBtnBlockGen("L1T2(2021)", "https://drive.google.com/file/d/1orh48cQeiOc7OuzwVzm_oi9kPSRrAiLe/view"),
+            webBtnBlockGen("Retake L1T2", "https://www.butex.edu.bd/result-of-retake-subjects-b-sc-in-textile-engineering-l-1-t-2-exam-2019/"),
         ]
     ),
     grroupedButtonBlockGen(
