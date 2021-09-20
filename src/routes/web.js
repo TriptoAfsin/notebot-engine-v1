@@ -817,6 +817,23 @@ let initWebRoutes = (app) => {
 
 
     router.get("/app/labs", appController.labs);
+    router.get("/app/labs/1", appController.level1Labs);
+
+
+    //lab- chem1
+    router.get("/app/labs/1/chem1", appController.labChem1Flow);
+    router.get("/app/labs/1/chem1/che1_procedureSheet_flow", appController.labChem1ProcedureFlow);
+    router.get("/app/labs/1/chem1/che1_acidRadical_flow", appController.labChem1AcidFlow);
+    router.get("/app/labs/1/chem1/che1_basicRadical_flow", appController.labChem1BasicFlow);
+    router.get("/app/labs/1/chem1/che1_mohrsSalt_flow", appController.labChem1MohrFlow);
+    router.get("/app/labs/1/chem1/che1_wetTest_flow", appController.labChem1WetTestFlow);
+    router.get("/app/labs/1/chem1/che1_titration_flow", appController.labChem1TitrationFlow);
+
+
+    //lab - phy1
+    router.get("/app/labs/1/phy1", appController.labPhy1Flow);
+    
+
 
     
 

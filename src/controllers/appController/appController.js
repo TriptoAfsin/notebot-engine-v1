@@ -798,6 +798,26 @@ let tamAppFlow = require('./academic/notes/level4/subs/tam/tam')
 let tamIntroMerch = require('./academic/notes/level4/subs/tam/topics/appTamIntroMerch')
 
 
+//labs
+//labLevels
+let labLevel1Subs = require('./academic/labReport/level1/level1Labs')
+
+
+//lab - chem1
+let chem1Labs = require('./academic/labReport/level1/subs/chem1/chem1Labs')
+let chem1LabsProcedure = require('./academic/labReport/level1/subs/chem1/topics/appChem1LabsProcedureSheet')
+let chem1LabsAcid = require('./academic/labReport/level1/subs/chem1/topics/appChem1LabsAcid')
+let chem1LabsBasic = require('./academic/labReport/level1/subs/chem1/topics/appChem1LabsBasic')
+let chem1LabsMohr = require('./academic/labReport/level1/subs/chem1/topics/appChem1LabsMohr')
+let chem1LabsWetTest = require('./academic/labReport/level1/subs/chem1/topics/appChem1LabsWetTest')
+let chem1LabsTitration = require('./academic/labReport/level1/subs/chem1/topics/appChem1LabsTitrations')
+
+
+//lab - phy1
+let phy1Labs = require('./academic/labReport/level1/subs/phy1/phy1Labs')
+
+
+
 
 
 
@@ -858,6 +878,11 @@ let level1Notes = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
 
     return res.send(noteLevel1Subs);
+};
+
+let level1Labs = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(labLevel1Subs);
 };
 
 //level2
@@ -3981,6 +4006,50 @@ let tamIntroMerchFlow = (req, res) => {
     return res.send(tamIntroMerch);
 };
 
+//labs
+//chem1
+let labChem1Flow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(chem1Labs);
+};
+
+let labChem1ProcedureFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(chem1LabsProcedure);
+};
+
+let labChem1AcidFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(chem1LabsAcid);
+};
+
+let labChem1BasicFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(chem1LabsBasic);
+};
+
+let labChem1MohrFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(chem1LabsMohr);
+};
+
+let labChem1WetTestFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(chem1LabsWetTest);
+};
+
+let labChem1TitrationFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(chem1LabsTitration);
+};
+
+
+//labs - phy1
+let labPhy1Flow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(phy1Labs);
+};
+
 
 
 
@@ -4707,4 +4776,17 @@ module.exports = {
 
     tamFlow: tamFlow,
     tamIntroMerchFlow: tamIntroMerchFlow,
+
+
+    level1Labs: level1Labs,
+
+    labChem1Flow: labChem1Flow,
+    labChem1ProcedureFlow: labChem1ProcedureFlow,
+    labChem1AcidFlow: labChem1AcidFlow,
+    labChem1BasicFlow: labChem1BasicFlow,
+    labChem1MohrFlow: labChem1MohrFlow,
+    labChem1WetTestFlow: labChem1WetTestFlow,
+    labChem1TitrationFlow: labChem1TitrationFlow,
+
+    labPhy1Flow: labPhy1Flow,
 }

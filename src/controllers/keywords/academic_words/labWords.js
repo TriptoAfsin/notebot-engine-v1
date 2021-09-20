@@ -6,7 +6,8 @@ const lab = [
     "রিপোর্ট", 
     "ল্যাব",
     "lab reports📋",
-    "lab reports"
+    "lab reports",
+    "labs"
 
 ];
 
