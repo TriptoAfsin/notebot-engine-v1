@@ -1,11 +1,17 @@
-let grroupedButtonBlockGen = require("../../../../../../genrators/grroupedButtonBlockGen");
-let webBtnBlockGen = require("../../../../../../genrators/webBtnBlockGen");
-let payloadBtnGen = require("../../../../../../genrators/payloadBtnGen");
+let grroupedButtonBlockGen = require('simple-messenger-blocks/groupedBtnBlockGen');
+let webBtnBlockGen = require('simple-messenger-blocks/webBtnGen');
+let payloadBtnGen = require('simple-messenger-blocks/payloadBtnGen');
 let bondiFlow = require("../../../../sponsoredFlows/bondiCard");
 
 
 let tqmFlow = [
     bondiFlow,
+    grroupedButtonBlockGen(
+        "📌 CT 2021 -",
+        [
+            webBtnBlockGen("Note(Akib)", "https://drive.google.com/file/d/1-TErZ97R9k1_RzyZfAu_CLxVkIlv1E25/view"),
+        ]
+    ),
     grroupedButtonBlockGen(
         "📌 Select Topics for TQM - ",
         [
