@@ -7,9 +7,10 @@ let bondiFlow = require("../../../../sponsoredFlows/bondiCard");
 let cp_flow = [
     bondiFlow,
     grroupedButtonBlockGen(
-        "📌 Practical Practices with Solve(Mim, 2020)-",
+        "📌 Practical Practices with Solve-",
         [
-            webBtnBlockGen("☄️Download", "https://drive.google.com/file/d/1YTSL0vZbTkmEzY3SgusNhwnR6oJqoKr9/view?usp=sharing")
+            webBtnBlockGen("Mim(2020)", "https://drive.google.com/file/d/1YTSL0vZbTkmEzY3SgusNhwnR6oJqoKr9/view?usp=sharing"),
+            webBtnBlockGen("Jami(46, 2021)", "https://drive.google.com/file/d/1C2V_SXddc9HIGt9qpw3pC7XtmGda7_Tc/view?usp=sharing")
         ]
     ),
     grroupedButtonBlockGen(
