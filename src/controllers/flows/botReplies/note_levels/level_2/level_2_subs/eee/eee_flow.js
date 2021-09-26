@@ -1,7 +1,7 @@
-let grroupedButtonBlockGen = require("../../../../../../genrators/grroupedButtonBlockGen");
-let webBtnBlockGen = require("../../../../../../genrators/webBtnBlockGen");
-let payloadBtnGen = require("../../../../../../genrators/payloadBtnGen");
-let cardGen = require("../../../../../../genrators/cardGenerator");
+let grroupedButtonBlockGen = require("simple-messenger-blocks/groupedBtnBlockGen");
+let webBtnBlockGen = require("simple-messenger-blocks/webBtnGen");
+let payloadBtnGen = require("simple-messenger-blocks/payloadBtnGen");
+let cardGenerator = require("simple-messenger-blocks/cardGenerator");
 let bondiFlow = require("../../../../sponsoredFlows/bondiCard");
 
 
@@ -9,7 +9,7 @@ let bondiFlow = require("../../../../sponsoredFlows/bondiCard");
 let eeeFlow = [
     bondiFlow,
     grroupedButtonBlockGen(
-        "📌 ♦Asad Sir's Slide♦ -",
+        "📌 Asad Sir's Slide♦ -",
         [
             webBtnBlockGen("⚡ Downlaod", "https://drive.google.com/file/d/16mFkXWt7gAeeYpCpcQp-dQLf43Jocdpx/view?usp=sharing")
         ]
@@ -42,6 +42,13 @@ let eeeFlow = [
             payloadBtnGen("Ch 4:3 & 1 Phase Sys", "eee_ch4_flow"),
             payloadBtnGen("Ch 5: Electronics", "eee_ch5_flow"),
             payloadBtnGen("Ch 8: Power System", "eee_ch8_flow"),
+        ]
+    ),
+    grroupedButtonBlockGen(
+        "🔰 Select Topics for FEEE -",
+        [
+            webBtnBlockGen("Ch 9", "https://drive.google.com/file/d/1CDRk6kZBwrn0JaxMle5vxI8ExqNiNBal/view?usp=sharing"),
+            webBtnBlockGen("Ch 12", "https://drive.google.com/file/d/1wJe3_T-ewgsOz2nSqJdzSd8QQX-ak4Gj/view?usp=sharing"),
         ]
     ),
     grroupedButtonBlockGen(
