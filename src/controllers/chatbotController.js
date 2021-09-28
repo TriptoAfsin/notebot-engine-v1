@@ -1082,6 +1082,7 @@ const pd_intro = require("./flows/botReplies/note_levels/level_3/level_3_subs/pd
 const pd_understandingCustomer = require("./flows/botReplies/note_levels/level_3/level_3_subs/pd/topics/pdUnderstandingCustomer");
 const pd_planDesign = require("./flows/botReplies/note_levels/level_3/level_3_subs/pd/topics/pdPlanningDesign");
 const pd_qualityFunc = require("./flows/botReplies/note_levels/level_3/level_3_subs/pd/topics/pdQualityFunc");
+const pd_DesAssembly = require("./flows/botReplies/note_levels/level_3/level_3_subs/pd/topics/pdDesAssembly");
 
 //academic flows -> acfd
 const acfd_flow = require("./flows/botReplies/note_levels/level_3/level_3_subs/acfd/acfd_flow");
@@ -1132,6 +1133,7 @@ const mic_books = require("./flows/botReplies/note_levels/level_3/level_3_subs/m
 const mic_Ch1 = require("./flows/botReplies/note_levels/level_3/level_3_subs/mic/topics/micCh1");
 const mic_Ch2 = require("./flows/botReplies/note_levels/level_3/level_3_subs/mic/topics/micCh2");
 const mic_Ch4 = require("./flows/botReplies/note_levels/level_3/level_3_subs/mic/topics/micCh4");
+const mic_Ch5 = require("./flows/botReplies/note_levels/level_3/level_3_subs/mic/topics/micCH5");
 const mic_LimitFit = require("./flows/botReplies/note_levels/level_3/level_3_subs/mic/topics/micLimitFits");
 const mic_NonDestruc = require("./flows/botReplies/note_levels/level_3/level_3_subs/mic/topics/micNonDestructiveTesting");
 const mic_SurfaceFinish = require("./flows/botReplies/note_levels/level_3/level_3_subs/mic/topics/micSurfaceFinish");
@@ -4830,6 +4832,9 @@ let handlePostback = async (sender_psid, received_postback) => {
   else if (payload === 'pd_qualityFunc_flow') {
     magicFunc(sender_psid, pd_qualityFunc);
   }
+  else if (payload === 'pd_designAssembly_flow') {
+    magicFunc(sender_psid, pd_DesAssembly);
+  }
 
 
   //ace
@@ -4944,6 +4949,9 @@ let handlePostback = async (sender_psid, received_postback) => {
   }
   else if (payload === 'mic_ch4_flow') {
     magicFunc(sender_psid, mic_Ch4);
+  }
+  else if (payload === 'mic_ch5_flow') {
+    magicFunc(sender_psid, mic_Ch5);
   }
   else if (payload === 'mic_limitsFitsGauge_flow') {
     magicFunc(sender_psid, mic_LimitFit);

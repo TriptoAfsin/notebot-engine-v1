@@ -1,46 +1,26 @@
+let grroupedButtonBlockGen = require("simple-messenger-blocks/groupedBtnBlockGen");
+let webBtnBlockGen = require("simple-messenger-blocks/webBtnGen");
+let payloadBtnGen = require("simple-messenger-blocks/payloadBtnGen");
+let cardGenerator = require("simple-messenger-blocks/cardGenerator");
+let bondiFlow = require("../../../../sponsoredFlows/bondiCard");
+
+
 let pdFlow = [
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🔰 Select Topics for PD - ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "Intro to PD",
-                        "payload": "pd_intro_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Understaing customer",
-                        "payload": "pd_understandingCustomer_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Planning for design",
-                        "payload": "pd_planningDesign_flow"
-                    }
-                ],
-            },
-        },
-    },
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🔰 Select Topics for PD - ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "Quality Func Deplo",
-                        "payload": "pd_qualityFunc_flow"
-                    }
-                ],
-            },
-        },
-    }
+    grroupedButtonBlockGen(
+        "🔰 Select Topics for PD -",
+        [
+            payloadBtnGen("Intro to PD", "pd_intro_flow"),
+            payloadBtnGen("Understa. customer", "pd_understandingCustomer_flow"),
+            payloadBtnGen("Planning for design", "pd_planningDesign_flow"),
+        ]
+    ),
+    grroupedButtonBlockGen(
+        "🔰 Select Topics for PD -",
+        [
+            payloadBtnGen("Quality Func Deplo", "pd_qualityFunc_flow"),
+            payloadBtnGen("Design for Assem.", "pd_designAssembly_flow"),
+        ]
+    ),
 ]
 
 

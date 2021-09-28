@@ -651,6 +651,7 @@ let pdIntro = require('./academic/notes/level3/subs/pd/topics/appPdIntro')
 let pdUnderstandingCustomer = require('./academic/notes/level3/subs/pd/topics/appPdUndersatndingCustomer')
 let pdPlanningDesign = require('./academic/notes/level3/subs/pd/topics/pdPlaaningDesign')
 let pdQualityFunc = require('./academic/notes/level3/subs/pd/topics/pdQualityFunc')
+let pdDesAssembly = require('./academic/notes/level3/subs/pd/topics/appPDDesAssembly')
 
 
 //tqm
@@ -677,6 +678,7 @@ let micSurfaceFinish = require('./academic/notes/level3/subs/mic/topics/appMicMe
 let micThreadMeasure = require('./academic/notes/level3/subs/mic/topics/appMicThreadMeas')
 let micAngular = require('./academic/notes/level3/subs/mic/topics/appMicAngular')
 let micLinear = require('./academic/notes/level3/subs/mic/topics/appMicLinear')
+let micCh5 = require('./academic/notes/level3/subs/mic/topics/appMicCh5')
 
 
 //ace
@@ -3527,6 +3529,11 @@ let pdQualityFuncFlow = (req, res) => {
     return res.send(pdQualityFunc);
 };
 
+let pdDesAssemFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(pdDesAssembly);
+};
+
 
 //tqm
 let tqmFlow = (req, res) => {
@@ -3629,6 +3636,11 @@ let micAngularMeasFlow = (req, res) => {
 let micLinearMeasFlow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
     return res.send(micLinear);
+};
+
+let micCh5Flow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(micCh5);
 };
 
 
@@ -4660,6 +4672,7 @@ module.exports = {
     pdUnderstandingFlow: pdUnderstandingFlow,
     pdPlanningDesignFlow: pdPlanningDesignFlow,
     pdQualityFuncFlow: pdQualityFuncFlow,
+    pdDesAssemFlow: pdDesAssemFlow,
 
 
     tqmFlow: tqmFlow,
@@ -4684,6 +4697,7 @@ module.exports = {
     micThreadMeasureFlow: micThreadMeasureFlow,
     micAngularMeasFlow: micAngularMeasFlow,
     micLinearMeasFlow: micLinearMeasFlow,
+    micCh5Flow: micCh5Flow,
 
 
     aceFlow: aceFlow,
