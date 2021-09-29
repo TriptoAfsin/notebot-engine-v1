@@ -8,7 +8,4 @@ let tqmTotalQM = [
 ]
 
 
-
-
-
 module.exports = tqmTotalQM;
