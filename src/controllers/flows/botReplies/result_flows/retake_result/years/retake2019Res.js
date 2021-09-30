@@ -10,6 +10,7 @@ let retakeRes2019 = [
         [
             webBtnBlockGen("4,1", "https://drive.google.com/file/d/1NGhfVSSI_tH7psk1LkrjLQRepqi2E4GW/view"),
             webBtnBlockGen("2,2(New)", "https://www.butex.edu.bd/wp-content/uploads/2021/09/Result-of-Retake-Subjects-B.Sc_.-in-Textile-Engineering-L-2-T-2-Examination-2019.pdf"),
+            webBtnBlockGen("3,2(New)", "https://www.butex.edu.bd/wp-content/uploads/2021/09/Result-of-Retake-Subjects-B.Sc_.-in-Textile-Engineering-L-3-T-2-Examination-2019.pdf"),
         ]
     ),
     grroupedButtonBlockGen(
