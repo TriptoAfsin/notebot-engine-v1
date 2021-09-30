@@ -13,6 +13,11 @@ let statFlow = [
             webBtnBlockGen("Z, T Table", "https://drive.google.com/file/d/13eqSeHVGlDfJ8kLwvBBvSYo2uZJwZ6iR/view?usp=sharing")
         ]
     ),
+    grroupedButtonBlockGen(`📌 Stat Solve -`,
+        [
+            webBtnBlockGen("Avik(2021)", "https://drive.google.com/file/d/19uqtuiAYmnJ7jvLxzYWnwq8j2cbgvGFz/view?usp=sharing"),
+        ]
+    ),
     grroupedButtonBlockGen(`📌 Full Hand Notes -`,
         [
             webBtnBlockGen("Nahid(2020)", "https://drive.google.com/file/d/1buy5jwu1gR44OYS_srTuviCwpAEuPuq7/view"),
