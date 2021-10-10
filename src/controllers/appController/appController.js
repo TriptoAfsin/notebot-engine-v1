@@ -665,6 +665,9 @@ let tqmControlMeasure = require('./academic/notes/level3/subs/tqm/topics/appTqmC
 let tqmManageApproach = require('./academic/notes/level3/subs/tqm/topics/appTqmManageAppro')
 let tqmQCTools = require('./academic/notes/level3/subs/tqm/topics/appTqmQCTools')
 
+//ttm
+let ttmAppFlow = require('./academic/notes/level3/subs/ttm/ttm')
+
 
 //mic
 let micAppFlow = require('./academic/notes/level3/subs/mic/mic')
@@ -3581,6 +3584,13 @@ let tqmQCToolsFlow = (req, res) => {
     return res.send(tqmQCTools);
 };
 
+//ttm
+let ttmFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(ttmAppFlow);
+};
+
+
 
 //mic
 let micFlow = (req, res) => {
@@ -4640,6 +4650,8 @@ module.exports = {
 
     tcpFlow: tcpFlow,
     tcpKpcFlow: tcpKpcFlow,
+
+    ttmFlow: ttmFlow,
 
     pcsFlow: pcsFlow,
     pcsBooksFlow: pcsBooksFlow,

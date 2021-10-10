@@ -664,6 +664,9 @@ let initWebRoutes = (app) => {
     router.get("/app/notes/3/tqm/tqm_managementApproach_flow", appController.tqmManagementApproachFlow);
     router.get("/app/notes/3/tqm/tqm_qcTools_flow", appController.tqmQCToolsFlow);
 
+    //ttm
+    router.get("/app/notes/3/ttm", appController.ttmFlow);
+
 
     //mic
     router.get("/app/notes/3/mic", appController.micFlow);

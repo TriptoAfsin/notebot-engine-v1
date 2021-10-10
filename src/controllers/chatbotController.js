@@ -1162,6 +1162,9 @@ const tqm_ControlManage = require("./flows/botReplies/note_levels/level_3/level_
 const tqm_ManageAppro = require("./flows/botReplies/note_levels/level_3/level_3_subs/tqm/topics/tqmManageAppro");
 const tqm_QcTools = require("./flows/botReplies/note_levels/level_3/level_3_subs/tqm/topics/tqmQcTools");
 
+//ttm
+const ttm_flow = require("./flows/botReplies/note_levels/level_3/level_3_subs/ttm/ttm_flow");
+
 //pcs
 const pcs_flow = require("./flows/botReplies/note_levels/level_3/level_3_subs/pcs/pcs_flow");
 const pcs_books = require("./flows/botReplies/note_levels/level_3/level_3_subs/pcs/topics/pcsBooks");
@@ -1630,6 +1633,7 @@ const labFlow_fm2_5 = require('./flows/botReplies/lab_levels/level_3/level_3_lab
 
 //help flow
 const help_flow = require('./flows/helpFlow');
+const ttm_words = require("./keywords/academic_words/subjects/ttmWords");
 
 
 
@@ -2513,6 +2517,11 @@ function handleMessage(sender_psid, received_message) {
   //academic -> tqm
   else if (wordIncludes(tqm, received_message)) {
     magicFunc(sender_psid, tqm_flow);
+  }
+
+  //academic -> ttm
+  else if (wordIncludes(ttm_words, received_message)) {
+    magicFunc(sender_psid, ttm_flow);
   }
 
   //academic -> knit1
@@ -5024,6 +5033,12 @@ let handlePostback = async (sender_psid, received_postback) => {
   }
   else if (payload === 'tqm_qcTools_flow') {
     magicFunc(sender_psid, tqm_QcTools);
+  }
+
+
+  //ttm
+  else if (payload === 'ttm_flow') {
+    magicFunc(sender_psid, ttm_flow);
   }
 
 
