@@ -1711,7 +1711,7 @@ let postWebhook = (req, res) => {
 
       // Get the sender PSID
       let sender_psid = webhook_event.sender.id;
-      console.log('👤Sender PSID: ' + sender_psid);
+      console.log('🧑 Sender PSID: ' + sender_psid);
 
       //getting userInfo
       //getUserInfo(sender_psid)
@@ -6032,7 +6032,7 @@ function callSendAPI(sender_psid, response) {
     "json": request_body
   }, (err, res, body) => {
     if (!err) {
-      console.log('message sent!')
+      console.log('🟢 Message sent!')
     } else {
       console.error(`🔴 Unable to send message: ${err}`);
     }
