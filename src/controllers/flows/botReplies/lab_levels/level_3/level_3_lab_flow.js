@@ -1,125 +1,54 @@
+let grroupedButtonBlockGen = require('simple-messenger-blocks/groupedBtnBlockGen');
+let webBtnBlockGen = require('simple-messenger-blocks/webBtnGen');
+let payloadBtnGen = require('simple-messenger-blocks/payloadBtnGen');
+let cardGen = require('simple-messenger-blocks/cardGenerator');
+
+
 let level_3_lab = [
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🔰 Select Subject Your Lab Report - ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "AM-II",
-                        "payload": "am2_lab_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "WP-II",
-                        "payload": "wp2_lab_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "FM-II",
-                        "payload": "fm2_lab_flow"
-                    }
-                ],
-            },
-        },
-    },
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🔰 Select Subject Your Lab Report -  ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "YM-II",
-                        "payload": "ym2_lab_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Textile Coloration-I",
-                        "payload": "texColor_lab_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "FSD",
-                        "payload": "fsd_lab_flow"
-                    }
-                ],
-            },
-        },
-    },
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🔰 Select Subject Your Lab Report - ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "AP-II",
-                        "payload": "ap2_lab_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "LSS",
-                        "payload": "lss_lab_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Apparel Washing, Dy",
-                        "payload": "apprelWashing_lab_flow"
-                    }
-                ],
-            },
-        },
-    },
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "⚡Lab Lectures -  ",
-                "buttons": [
-                    {
-                        "type": "web_url",
-                        "url": "https://drive.google.com/file/d/1AFSAcRKNOJICelLN7J8B8w-gncHKrDZL/view",
-                        "title": "WP-II(Tazkia)",
-                    },
-                    {
-                        "type": "web_url",
-                        "url": "https://drive.google.com/file/d/13iIG5urFXxhix9nnIBqKMwlJCCh4kKj-/view",
-                        "title": "AM-II(Tazkia)",
-                    },
-                    {
-                        "type": "web_url",
-                        "url": "https://drive.google.com/file/d/19w7CYNB7fkgjKDUqfDJZyEdUf7RXCLmb/view",
-                        "title": "FM(Tazkia)",
-                    }
-                ],
-            },
-        },
-    },
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "⚡Lab Lectures - ",
-                "buttons": [
-                    {
-                        "type": "web_url",
-                        "url": "https://drive.google.com/file/d/1A5AfNa2kzk9aHVeWTd2TPfkOCs3gzc1o/view",
-                        "title": "LSS(Tazkia)",
-                    }
-                ],
-            },
-        },
-    }
-   
+    grroupedButtonBlockGen(
+        "🔰 Select Subject Your Lab Report -",
+        [
+            payloadBtnGen("AM-II", "am2_lab_flow"),
+            payloadBtnGen("WP-II", "wp2_lab_flow"),
+            payloadBtnGen("FM-II", "fm2_lab_flow"),
+        ]
+    ),
+    grroupedButtonBlockGen(
+        "🔰 Select Subject Your Lab Report -",
+        [
+            payloadBtnGen("YM-II", "ym2_lab_flow"),
+            payloadBtnGen("Textile Coloration-I", "texColor_lab_flow"),
+            payloadBtnGen("FSD", "fsd_lab_flow"),
+        ]
+    ),
+    grroupedButtonBlockGen(
+        "🔰 Select Subject Your Lab Report -",
+        [
+            payloadBtnGen("AP-II", "ap2_lab_flow"),
+            payloadBtnGen("LSS", "lss_lab_flow"),
+            payloadBtnGen("Apparel Washing, Dy", "apprelWashing_lab_flow"),
+        ]
+    ),
+    grroupedButtonBlockGen(
+        "🔰 Select Subject Your Lab Report -",
+        [
+            webBtnBlockGen("PM-II", "https://drive.google.com/file/d/1reKITBkO3ppqIBXpGYQQop3AzhMblPK3/view?usp=sharing"),
+        ]
+    ),
+    grroupedButtonBlockGen(
+        "⚡ Lab Lectures -",
+        [
+            webBtnBlockGen("WP-II(Tazkia)", "https://drive.google.com/file/d/1AFSAcRKNOJICelLN7J8B8w-gncHKrDZL/view"),
+            webBtnBlockGen("AM-II(Tazkia)", "https://drive.google.com/file/d/13iIG5urFXxhix9nnIBqKMwlJCCh4kKj-/view"),
+            webBtnBlockGen("FM(Tazkia)", "https://drive.google.com/file/d/19w7CYNB7fkgjKDUqfDJZyEdUf7RXCLmb/view"),
+        ]
+    ),
+    grroupedButtonBlockGen(
+        "⚡ Lab Lectures -",
+        [
+            webBtnBlockGen("LSS(Tazkia)", "https://drive.google.com/file/d/1A5AfNa2kzk9aHVeWTd2TPfkOCs3gzc1o/view"),
+        ]
+    ),
 ]
 
 
