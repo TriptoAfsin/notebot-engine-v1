@@ -1,129 +1,49 @@
+let grroupedButtonBlockGen = require('simple-messenger-blocks/groupedBtnBlockGen');
+let webBtnBlockGen = require('simple-messenger-blocks/webBtnGen');
+let payloadBtnGen = require('simple-messenger-blocks/payloadBtnGen');
+
+
+
 let wp1_lab_flow = [
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🔰 Select Experiment for WP-I -  ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "1)layout",
-                        "payload": "wp1_lab_layout_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "2)Alk Scouring",
-                        "payload": "wp1_lab_alkScouring_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Combined(Cot)",
-                        "payload": "wp1_lab_combinedScouringCotton_flow"
-                    }
-                ],
-            },
-        },
-    },
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🔰 Select Experiment for WP-I -  ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "Combined(Jute)",
-                        "payload": "wp1_lab_combinedScouringJute_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Direct Dye",
-                        "payload": "wp1_lab_directDye_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Reactive Dye",
-                        "payload": "wp1_lab_reactiveDye_flow"
-                    }
-                ],
-            },
-        },
-    },
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🔰 Select Experiment for WP-I -  ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "Disperse Dye",
-                        "payload": "wp1_lab_disperseDye_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Acid Dye",
-                        "payload": "wp1_lab_acidDye_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Basic Dye",
-                        "payload": "wp1_lab_basicDye_flow"
-                    }
-                ],
-            },
-        },
-    },
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🔰 Select Experiment for WP-I -  ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "Vat Dye",
-                        "payload": "wp1_lab_vatDye_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Rubbing Fast..",
-                        "payload": "wp1_lab_rubbing_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Pigment on Cotton",
-                        "payload": "wp1_lab_pigmentCotton_flow"
-                    }
-                ],
-            },
-        },
-    },
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "⚡ All Combined - ",
-                "buttons": [
-                    {
-                        "type": "web_url",
-                        "url": "https://drive.google.com/file/d/11E9-rVvkh0lFe6lXxfqkhY3HZfLeBKAB/view?usp=sharing",
-                        "title": "ইয়ামিন",
-                    },
-                    {
-                        "type": "web_url",
-                        "url": "https://drive.google.com/file/d/1Ub8pYoYqSYSJLdOUu4qBRX6c11PuYvGG/view?usp=sharing",
-                        "title": "Emran Sir",
-                    }
-                ],
-            },
-        },
-    }
+    grroupedButtonBlockGen(
+        "🔰 Select Experiment for WP-I -",
+        [
+            payloadBtnGen("1)layout", "wp1_lab_layout_flow"),
+            payloadBtnGen("2)Alk Scouring", "wp1_lab_alkScouring_flow"),
+            payloadBtnGen("Combined(Cot)", "wp1_lab_combinedScouringCotton_flow"),
+        ]
+    ),
+    grroupedButtonBlockGen(
+        "🔰 Select Experiment for WP-I -",
+        [
+            payloadBtnGen("Combined(Jute)", "wp1_lab_combinedScouringJute_flow"),
+            payloadBtnGen("Direct Dye", "wp1_lab_directDye_flow"),
+            payloadBtnGen("Reactive Dye", "wp1_lab_reactiveDye_flow"),
+        ]
+    ),
+    grroupedButtonBlockGen(
+        "🔰 Select Experiment for WP-I -",
+        [
+            payloadBtnGen("Disperse Dye", "wp1_lab_disperseDye_flow"),
+            payloadBtnGen("Acid Dye", "wp1_lab_acidDye_flow"),
+            payloadBtnGen("Basic Dye", "wp1_lab_basicDye_flow"),
+        ]
+    ),
+    grroupedButtonBlockGen(
+        "🔰 Select Experiment for WP-I -",
+        [
+            payloadBtnGen("Vat Dye", "wp1_lab_vatDye_flow"),
+            payloadBtnGen("Rubbing Fast..", "wp1_lab_rubbing_flow"),
+            payloadBtnGen("Pigment on Cotton", "wp1_lab_pigmentCotton_flow"),
+        ]
+    ),
+    grroupedButtonBlockGen(
+        "⚡ All Combined -",
+        [
+            webBtnBlockGen("ইয়ামিন", "https://drive.google.com/file/d/11E9-rVvkh0lFe6lXxfqkhY3HZfLeBKAB/view?usp=sharing"),
+            webBtnBlockGen("Emran Sir", "https://drive.google.com/file/d/1Ub8pYoYqSYSJLdOUu4qBRX6c11PuYvGG/view?usp=sharing"),
+        ]
+    )
 ]
 
 

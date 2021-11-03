@@ -1,4 +1,4 @@
-let textBlockGen = require("../../../../../../../genrators/textBlockGen");
+let textBlockGen = require('simple-messenger-blocks/textBlockGen');
 
 let aceTimeresponse = [
     textBlockGen(`🔷 Hand Note(Akib AE-44, 2021)(New)-\n\nhttps://drive.google.com/file/d/1I61khqdY3V0Oz4kE2msGtT4CVnu-GJEp/view`),

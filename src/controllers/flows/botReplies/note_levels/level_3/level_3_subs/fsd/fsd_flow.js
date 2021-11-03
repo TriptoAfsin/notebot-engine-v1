@@ -8,6 +8,12 @@ let bondiFlow = require("../../../../sponsoredFlows/bondiCard");
 let fsdFlow = [
     bondiFlow,
     grroupedButtonBlockGen(
+        `⚡ All Designs Excel Sheet -  `,
+        [
+            webBtnBlockGen("Taqi 43", "https://docs.google.com/spreadsheets/d/1c8n5ldfZOU76mjk6jtxOw1jcAN09N8ne/edit?usp=sharing&ouid=104261757061783772055&rtpof=true&sd=true"),
+        ]
+    ),
+    grroupedButtonBlockGen(
         `📌 All Lectures -  `,
         [
             webBtnBlockGen("Shilpi Mam", "https://drive.google.com/drive/folders/1MK9LPivN1r7G-cAWD5zCeS9wkUkyVKms?usp=sharing"),
