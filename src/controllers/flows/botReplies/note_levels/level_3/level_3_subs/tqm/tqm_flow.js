@@ -7,6 +7,12 @@ let bondiFlow = require("../../../../sponsoredFlows/bondiCard");
 let tqmFlow = [
     bondiFlow,
     grroupedButtonBlockGen(
+        "📌 Select Topics for TQM -",
+        [
+            webBtnBlockGen("Books", "https://drive.google.com/file/d/1f8lBOBejC-5beq-znanBC0QOlsiMgKc3/view?usp=sharing"),
+        ]
+    ),
+    grroupedButtonBlockGen(
         "📌 CT 2021 -",
         [
             webBtnBlockGen("Note(Akib)", "https://drive.google.com/file/d/1-TErZ97R9k1_RzyZfAu_CLxVkIlv1E25/view"),
