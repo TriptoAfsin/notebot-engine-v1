@@ -32,7 +32,7 @@ let level_3_lab = [
     grroupedButtonBlockGen(
         "🔰 Select Subject Your Lab Report -",
         [
-            webBtnBlockGen("PM-II", "https://drive.google.com/file/d/1reKITBkO3ppqIBXpGYQQop3AzhMblPK3/view?usp=sharing"),
+            payloadBtnGen("PM-II", "pm2LabFlow"),
         ]
     ),
     grroupedButtonBlockGen(

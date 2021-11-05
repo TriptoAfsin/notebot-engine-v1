@@ -15,6 +15,12 @@ let acmFlow = [
         ]
     ),
     grroupedButtonBlockGen(
+        `📌 Assignments & Solves - `,
+        [
+            webBtnBlockGen("Rayhan Sir(2021)", "https://drive.google.com/drive/folders/1BOYhEXtaZIsiTrzMnRrFP-xQwy97hTR7?usp=sharing"),
+        ]
+    ),
+    grroupedButtonBlockGen(
         `🔰 Select Topics for ACM - `,
         [
             payloadBtnGen("Books", "acm_book_flow")

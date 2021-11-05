@@ -1615,6 +1615,9 @@ const labFlow_am2 = require('./flows/botReplies/lab_levels/level_3/level_3_lab_s
 //lab-> appareel washing
 const labFlow_apparelWashing = require('./flows/botReplies/lab_levels/level_3/level_3_lab_subs/apparel_washing/apparelWashingLabFlow');
 
+//lab-> pm2
+const labFlow_pm2 = require('./flows/botReplies/lab_levels/level_3/level_3_lab_subs/pm2/pm2LabFlow');
+
 
 //lab-> ym2
 const labFlow_ym2 = require('./flows/botReplies/lab_levels/level_3/level_3_lab_subs/ym_2/ym2LabFlow');
@@ -5903,6 +5906,11 @@ let handlePostback = async (sender_psid, received_postback) => {
   //lab -> apparel washing
   else if (payload === 'apprelWashing_lab_flow') {
     magicFunc(sender_psid, labFlow_apparelWashing);
+  }
+
+  //lab -> pm2
+  else if (payload === 'pm2LabFlow') {
+    magicFunc(sender_psid, labFlow_pm2);
   }
 
   //lab -> ym2
