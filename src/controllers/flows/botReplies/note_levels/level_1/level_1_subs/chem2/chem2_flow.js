@@ -54,7 +54,11 @@ let chem2_flow = [
             payloadBtnGen("Carboxylic Acid", "chem2_carboxylic_flow"),
             payloadBtnGen("Amine", "chem2_amine_flow"),
             payloadBtnGen("Solubulity Boiling", "chem2_solubulity_flow"),
-
+        ]
+    ),
+    grroupedButtonBlockGen("🔰 Select Topic for CHE-II - ",
+        [
+            webBtnBlockGen("Grignard Rea.", "https://drive.google.com/file/d/1UnWcDu9vRCh1WFALLQG3SOR9LqiyfYif/view?usp=sharing"),
         ]
     ),
     grroupedButtonBlockGen("📌 Sheets Folder - ",
