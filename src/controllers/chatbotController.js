@@ -1,12 +1,23 @@
 require("dotenv").config();
 const axios = require('axios');
 
-const imgBlockGen = require('./genrators/imgBlockGen');
-const webBtnBlockGen = require('./genrators/webBtnBlockGen');
-const textBlockGen = require('./genrators/textBlockGen');
-const payloadBtnBlockGen = require('./genrators/payloadBtnGen');
-const groupedBtnBlockGen = require('./genrators/grroupedButtonBlockGen');
-const cardGenerator = require('./genrators/cardGenerator');
+//libs - generators
+const imgBlockGen = require('simple-messenger-blocks/imgBlockGen');
+const webBtnBlockGen = require('simple-messenger-blocks/webBtnGen');
+const textBlockGen = require('simple-messenger-blocks/textBlockGen');
+const payloadBtnBlockGen = require('simple-messenger-blocks/payloadBtnGen');
+const groupedBtnBlockGen = require('simple-messenger-blocks/groupedBtnBlockGen');
+const cardGenerator = require('simple-messenger-blocks/cardGenerator');
+
+//libs - utility functions
+const wordIs = require('./libs/wordDetectors/wordIs');
+const wordIncludes = require('./libs/wordDetectors/wordIncludes');
+
+//libs - emoji
+const emojiIs = require('./libs/wordDetectors/emojiIs');
+
+//libs - payload detector
+const payloadIncludes = require('./libs/wordDetectors/payloadIncludes')
 
 
 
@@ -5974,12 +5985,6 @@ let handlePostback = async (sender_psid, received_postback) => {
   else if (payload === 'help_payload') {
     magicFunc(sender_psid, help_flow);
   }
-
-
-
-
-
-
 }
 
 
@@ -5994,23 +5999,31 @@ let magicFunc = (sender_psid, flow) => {
 
 //wordDetectorFunctions
 //word includes
+/*
 let wordIncludes = (keywordArray, received_message) => {
   return keywordArray.some(word => received_message.text.toLowerCase().includes(word)); //received_message is an object
 }
+*/
 
+/*
 let emojiIs = (keywordArray, received_reaction) => {
   return keywordArray.some(emoji => received_reaction.emoji.includes(emoji)); //received_message is an object
 }
+*/
 
+/*
 //payload include
 let payloadIncludes = (keywordArray, payload) => {
   return keywordArray.some(word => payload.toLowerCase().includes(word));  //payload is a string
 }
+*/
 
+/*
 //word is
 let wordIs = (keywordArray, received_message) => {
   return keywordArray.includes(received_message.text.toLowerCase());
 }
+*/
 
 //randomPicker Function
 let randomPicker = (replyArray) => {
