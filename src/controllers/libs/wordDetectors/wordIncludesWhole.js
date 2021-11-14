@@ -1,5 +1,6 @@
 let wordIncludesWhole = (keywordArray, searchText) => {
-    searchText = searchText.replace(/[-\/\\^$*+?.()|[\]{}]/g, "\\$&");
+    try{
+        searchText = searchText.text.replace(/[-\/\\^$*+?.()|[\]{}]/g, "\\$&");
     let verdict = false
     if(Array.isArray(keywordArray)){
       for(let i = 0; i < keywordArray.length; i++){
@@ -15,6 +16,10 @@ let wordIncludesWhole = (keywordArray, searchText) => {
     else{
         return console.log("Invalid params")
     }
-  }
+    }catch(err){
+        console.error("Error occurred while detecting word")
+        return false
+    }
+}
 
 module.exports = wordIncludesWhole;
