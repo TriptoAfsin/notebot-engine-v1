@@ -16,7 +16,12 @@ const greets = [
     "ki obostha",
     "kire",
     "salam",
-    "সালাম"
+    "সালাম",
+    "hi",
+    "hy",
+    "hii",
+    "heyyy",
+    'kiree'
 ];
 
 

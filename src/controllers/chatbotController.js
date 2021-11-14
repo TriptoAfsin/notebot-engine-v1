@@ -12,6 +12,7 @@ const cardGenerator = require('simple-messenger-blocks/cardGenerator');
 //libs - utility functions
 const wordIs = require('./libs/wordDetectors/wordIs');
 const wordIncludes = require('./libs/wordDetectors/wordIncludes');
+const wordIncludesWhole = require('./libs/wordDetectors/wordIncludesWhole');
 
 //libs - emoji
 const emojiIs = require('./libs/wordDetectors/emojiIs');
@@ -1991,15 +1992,17 @@ function handleMessage(sender_psid, received_message) {
     console.log(received_message)
   }
 
-  else if (wordIncludes(greets, received_message)) {
+  else if (wordIncludesWhole(greets, received_message)) {
     response = greetReplies[0];
     callSendAPI(sender_psid, response);
   }
 
-  else if (wordIs(hiWords, received_message)) {
+  /*
+  else if (wordIncludesWhole(hiWords, received_message)) {
     response = greetReplies[0];
     callSendAPI(sender_psid, response);
   }
+  */
 
   //bhai
   else if (wordIncludes(bhaiWords, received_message)) {
