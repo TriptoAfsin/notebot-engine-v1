@@ -5992,11 +5992,11 @@ let handlePostback = async (sender_psid, received_postback) => {
 
 
 //magic func
-let magicFunc = (sender_psid, flow) => {
+let magicFunc = async (sender_psid, flow) => {
   let i = 0;
   for (i = 0; i < flow.length; i++) {
     response = flow[i];
-    callSendAPI(sender_psid, response);
+    await callSendAPI(sender_psid, response);
   }
 }
 
