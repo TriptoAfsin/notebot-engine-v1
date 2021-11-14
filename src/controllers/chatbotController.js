@@ -6039,7 +6039,7 @@ let randomPicker = (replyArray) => {
 
 
 // Sends response messages via the Send API
-function callSendAPI(sender_psid, response) {
+let  callSendAPI = async (sender_psid, response) => {
   // Construct the message body
   let request_body = {
     "recipient": {
@@ -6049,7 +6049,7 @@ function callSendAPI(sender_psid, response) {
   }
 
   // Send the HTTP request to the Messenger Platform
-  request({
+  await request({
     "uri": "https://graph.facebook.com/v12.0/me/messages",
     "qs": { "access_token": process.env.PAGE_ACCESS_TOKEN },
     "method": "POST",
