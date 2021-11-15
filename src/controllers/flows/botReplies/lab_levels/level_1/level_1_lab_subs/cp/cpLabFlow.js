@@ -5,9 +5,9 @@ let payloadBtnGen = require('simple-messenger-blocks/payloadBtnGen');
 
 let cp_lab_flow = [
     grroupedButtonBlockGen(
-        "📌 All Lab Reports - ",
+        "📌 All Lab Reports(New) - ",
         [
-            webBtnBlockGen("Sagar(2021)", "https://drive.google.com/file/d/1N9IDD2jYIJvt9UHtbfWI1B5NYZV0KRmP/view?usp=sharing"),
+            webBtnBlockGen("Sagar(2021)", "https://drive.google.com/file/d/1KUfs791LWjh4VPfPbOs04KsiBhJqAkim/view?usp=sharing"),
         ]
     ),
     grroupedButtonBlockGen(
