@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 let router = express.Router();
 require("dotenv").config();
+let Feed = require('rss-to-json');
 
 
 let deploymentEnvDetector = () => {
@@ -14,7 +15,6 @@ let deploymentEnvDetector = () => {
     else{
         return urlModifier = '://'
     }
-
 }
 
 
@@ -4110,8 +4110,42 @@ let labs = (req, res) => {
 };
 
 
+// Extra App flows
+let noticeFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    const rssUrl = "https://www.butex.edu.bd/feed";
+    //empty array to hold json responses
+    let topRss = [];
+    let topRssAmount = 5
+    try {
+      // Promise
+      Feed.load(rssUrl).then(rss => {
+        for (let i = 0; i < topRssAmount; i++) {
+            let formatedDate = new Date(rss.items[i].published);
+            let noticeObj = {
+                title: rss.items[i].title,
+                url: rss.items[i].url,
+                date: `${formatedDate.getDate()}/${formatedDate.getMonth()+1}/${formatedDate.getFullYear()}`,
+                category: rss.items[i].category,
+            }
+          //pushing json objects to the array
+          topRss.push(noticeObj)
+        }
+        return res.send(topRss);
+      }).catch(err => {
+          console.log(err)
+          return res.status(500).send({error: "Error Occured"});
+        });
+    } catch (err) {
+        console.error("🟥 Function Error Occured In Notice Checking")
+        return res.status(500).send({error: "Error Occured"});
+    }
+};
+
+
 
 module.exports = {
+    notice: noticeFlow,
     intro: appIntro,
     
     labs: labs,
