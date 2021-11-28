@@ -32,6 +32,42 @@ let handleAnalytics =  async(subName) => {
   }
 }
 
+let handleMissedWordPosting = async missedWord => {
+  try {
+    const result = await axios
+      .post(`${process.env.analyticsServerUrl}/missed/`, {
+        word: missedWord,
+      })
+      .then(function (response) {
+        console.log(`🟢 Missed word posting was handled successfully`);
+      })
+      .catch(function (err) {
+        console.log(`🔴 Error occurred while handling missed word posting`);
+      });
+  } catch (err) {
+    //console.log(err)
+    console.log(`🔴 Error occurred while handling missed word posting`);
+  }
+};
+
+
+let postNewUserCount = async () => {
+  try {
+    axios
+      .post(`${process.env.analyticsServerUrl}/users`)
+      .then(function (response) {
+        // handle success
+        console.log(`🟢 New user info posting was successful`);
+      })
+      .catch(function (error) {
+        // handle error
+        console.log(`🔴 Error occured while posting new user info`);
+      });
+  } catch (err) {
+    console.log(`🔴 Error occured while posting new user info`);
+  }
+};
+
 //libs - emoji
 const emojiIs = require('./libs/wordDetectors/emojiIs');
 
@@ -2430,24 +2466,28 @@ function handleMessage(sender_psid, received_message) {
   //toss
   else if (wordIncludes(toss, received_message)) {
     response = {
-      "text": `${randomPicker(tossReplies)}`
-    }
+      text: `${randomPicker(tossReplies)}`,
+    };
 
     callSendAPI(sender_psid, response);
-  }
-
+  } 
 
   else if (wordIncludes(getStartedWords, received_message)) {
+
+    try{
+      postNewUserCount()
+    }catch(err){
+      console.log(`🔴 Error occurred while posting new user info`);
+    }
+
     response = getStartedMsg[0];
 
     callSendAPI(sender_psid, response);
-  }
-
-  else if (wordIncludes(negative, received_message)) {
+  } else if (wordIncludes(negative, received_message)) {
     // Create the payload for a basic text message
     response = {
-      "text": `${randomPicker(sadReply)}`
-    }
+      text: `${randomPicker(sadReply)}`,
+    };
 
     callSendAPI(sender_psid, response);
   }
@@ -2472,13 +2512,10 @@ function handleMessage(sender_psid, received_message) {
     magicFunc(sender_psid, depressedFlow);
   }
 
-
   //academic
   else if (wordIncludes(notes, received_message)) {
     magicFunc(sender_psid, notesFlow);
-  }
-
-  else if (wordIncludes(quiz, received_message)) {
+  } else if (wordIncludes(quiz, received_message)) {
     magicFunc(sender_psid, quizFlow);
   }
 
@@ -2506,37 +2543,24 @@ function handleMessage(sender_psid, received_message) {
   //bothAP
   else if (wordIs(bothAPWords, received_message)) {
     magicFunc(sender_psid, bothAPFlow);
-  }
-
-  else if (wordIncludes(level1, received_message)) {
+  } else if (wordIncludes(level1, received_message)) {
     magicFunc(sender_psid, level_1_notes);
-  }
-
-  else if (wordIncludes(level2, received_message)) {
+  } else if (wordIncludes(level2, received_message)) {
     magicFunc(sender_psid, level_2_notes);
-  }
-
-  else if (wordIncludes(level3, received_message)) {
+  } else if (wordIncludes(level3, received_message)) {
     magicFunc(sender_psid, level_3_notes);
-  }
-
-  else if (wordIncludes(level4, received_message)) {
+  } else if (wordIncludes(level4, received_message)) {
     magicFunc(sender_psid, level_4_notes);
-  }
-
-  else if (wordIs(bothChem, received_message)) {
+  } else if (wordIs(bothChem, received_message)) {
     magicFunc(sender_psid, bothChem_flow);
-  }
-  else if (wordIs(bothPhy, received_message)) {
+  } else if (wordIs(bothPhy, received_message)) {
     magicFunc(sender_psid, bothPhy_flow);
-  }
-  else if (wordIs(bothMath, received_message)) {
+  } else if (wordIs(bothMath, received_message)) {
     magicFunc(sender_psid, bothMath_flow);
   }
 
   //academic -> bce
   else if (wordIncludes(bce, received_message)) {
-
     //analytics
     try {
       handleAnalytics("bce");
@@ -2549,7 +2573,6 @@ function handleMessage(sender_psid, received_message) {
 
   //academic -> economics
   else if (wordIncludes(economics, received_message)) {
-
     //analytics
     try {
       handleAnalytics("econo");
@@ -2567,7 +2590,6 @@ function handleMessage(sender_psid, received_message) {
 
   //academic -> tqm
   else if (wordIncludes(tqm, received_message)) {
-
     //analytics
     try {
       handleAnalytics("tqm");
@@ -2610,14 +2632,13 @@ function handleMessage(sender_psid, received_message) {
 
   //academic -> wpp
   else if (wordIncludes(wpp, received_message)) {
-
     //analytics
     try {
       handleAnalytics("wpp");
     } catch (err) {
       console.log(`🔴 Error while handling analytics(pre)`);
     }
-    
+
     magicFunc(sender_psid, wpp_flow);
   }
 
@@ -2633,7 +2654,6 @@ function handleMessage(sender_psid, received_message) {
 
   //academic -> feee
   else if (wordIncludes(feee, received_message)) {
-
     //analytics
     try {
       handleAnalytics("feee");
@@ -2646,7 +2666,6 @@ function handleMessage(sender_psid, received_message) {
 
   //academic -> fsd
   else if (wordIncludes(fsd, received_message)) {
-
     //analytics
     try {
       handleAnalytics("fsd");
@@ -2659,7 +2678,6 @@ function handleMessage(sender_psid, received_message) {
 
   //academic -> WP1
   else if (wordIncludes(wp1, received_message)) {
-
     //analytics
     try {
       handleAnalytics("wp1");
@@ -2672,7 +2690,6 @@ function handleMessage(sender_psid, received_message) {
 
   //academic -> WP2
   else if (wordIncludes(wp2, received_message)) {
-
     //analytics
     try {
       handleAnalytics("wp2");
@@ -2685,7 +2702,6 @@ function handleMessage(sender_psid, received_message) {
 
   //academic -> sss1
   else if (wordIncludes(sss1, received_message)) {
-
     //analytics
     try {
       handleAnalytics("sss1");
@@ -2698,7 +2714,6 @@ function handleMessage(sender_psid, received_message) {
 
   //academic -> sss2
   else if (wordIncludes(sss2, received_message)) {
-
     //analytics
     try {
       handleAnalytics("sss2");
@@ -2711,7 +2726,6 @@ function handleMessage(sender_psid, received_message) {
 
   //academic -> ym1
   else if (wordIncludes(ym1, received_message)) {
-
     //analytics
     try {
       handleAnalytics("ym1");
@@ -2724,7 +2738,6 @@ function handleMessage(sender_psid, received_message) {
 
   //academic -> ym2
   else if (wordIncludes(ym2, received_message)) {
-
     //analytics
     try {
       handleAnalytics("ym2");
@@ -2737,7 +2750,6 @@ function handleMessage(sender_psid, received_message) {
 
   //academic -> mmtf
   else if (wordIncludes(mmtf, received_message)) {
-
     //analytics
     try {
       handleAnalytics("mmtf");
@@ -2765,7 +2777,6 @@ function handleMessage(sender_psid, received_message) {
 
   //academic -> am1
   else if (wordIncludes(am1, received_message)) {
-
     //analytics
     try {
       handleAnalytics("am1");
@@ -2778,7 +2789,6 @@ function handleMessage(sender_psid, received_message) {
 
   //academic -> am2
   else if (wordIncludes(am2, received_message)) {
-
     //analytics
     try {
       handleAnalytics("am2");
@@ -2791,7 +2801,6 @@ function handleMessage(sender_psid, received_message) {
 
   //academic -> stat
   else if (wordIncludes(stat, received_message)) {
-
     //analytics
     try {
       handleAnalytics("stat");
@@ -2809,7 +2818,6 @@ function handleMessage(sender_psid, received_message) {
 
   //academic -> ttqc
   else if (wordIncludes(ttqc, received_message)) {
-
     //analytics
     try {
       handleAnalytics("ttqc");
@@ -2827,7 +2835,6 @@ function handleMessage(sender_psid, received_message) {
 
   //academic -> marketing
   else if (wordIs(marketing, received_message)) {
-
     //analytics
     try {
       handleAnalytics("market");
@@ -2860,7 +2867,6 @@ function handleMessage(sender_psid, received_message) {
 
   //academic -> ace
   else if (wordIs(ace, received_message)) {
-
     //analytics
     try {
       handleAnalytics("ace");
@@ -2873,7 +2879,6 @@ function handleMessage(sender_psid, received_message) {
 
   //academic -> mic
   else if (wordIs(mic, received_message)) {
-
     //analytics
     try {
       handleAnalytics("mic");
@@ -2886,7 +2891,6 @@ function handleMessage(sender_psid, received_message) {
 
   //academic -> acm
   else if (wordIs(acm, received_message)) {
-
     //analytics
     try {
       handleAnalytics("acm");
@@ -2904,7 +2908,6 @@ function handleMessage(sender_psid, received_message) {
 
   //academic -> tp
   else if (wordIs(tp, received_message)) {
-
     //analytics
     try {
       handleAnalytics("tp");
@@ -2927,7 +2930,6 @@ function handleMessage(sender_psid, received_message) {
 
   //academic -> fm1
   else if (wordIncludes(fm1, received_message)) {
-
     //analytics
     try {
       handleAnalytics("fm1");
@@ -2940,7 +2942,6 @@ function handleMessage(sender_psid, received_message) {
 
   //academic -> fm2
   else if (wordIncludes(fm2, received_message)) {
-
     //analytics
     try {
       handleAnalytics("fm2");
@@ -2983,7 +2984,6 @@ function handleMessage(sender_psid, received_message) {
 
   //academic -> cp
   else if (wordIs(cp, received_message)) {
-
     //analytics
     try {
       handleAnalytics("cp");
@@ -3016,7 +3016,6 @@ function handleMessage(sender_psid, received_message) {
 
   //academic -> chem1
   else if (wordIncludes(chem1, received_message)) {
-
     //analytics
     try {
       handleAnalytics("chem1");
@@ -3029,7 +3028,6 @@ function handleMessage(sender_psid, received_message) {
 
   //academic -> chem2
   else if (wordIncludes(chem2, received_message)) {
-
     //analytics
     try {
       handleAnalytics("chem2");
@@ -3042,7 +3040,6 @@ function handleMessage(sender_psid, received_message) {
 
   //academic -> phy1
   else if (wordIncludes(phy1, received_message)) {
-
     //analytics
     try {
       handleAnalytics("phy1");
@@ -3055,7 +3052,6 @@ function handleMessage(sender_psid, received_message) {
 
   //academic -> phy2
   else if (wordIncludes(phy2, received_message)) {
-
     //analytics
     try {
       handleAnalytics("phy2");
@@ -3085,7 +3081,6 @@ function handleMessage(sender_psid, received_message) {
 
   //academic -> math2
   else if (wordIncludes(math2, received_message)) {
-
     //analytics
     try {
       handleAnalytics("math1");
@@ -3098,7 +3093,6 @@ function handleMessage(sender_psid, received_message) {
 
   //academic -> ntf
   else if (wordIncludes(ntf, received_message)) {
-
     //analytics
     try {
       handleAnalytics("ntf");
@@ -3111,7 +3105,6 @@ function handleMessage(sender_psid, received_message) {
 
   //academic -> em
   else if (wordIs(em, received_message)) {
-
     //analytics
     try {
       handleAnalytics("em");
@@ -3124,7 +3117,6 @@ function handleMessage(sender_psid, received_message) {
 
   //academic -> pse
   else if (wordIncludes(pse, received_message)) {
-
     //analytics
     try {
       handleAnalytics("pse");
@@ -3161,6 +3153,14 @@ function handleMessage(sender_psid, received_message) {
 
   //default reply
   else if (received_message.text) {
+    try {
+      if(received_message.text.length >= 2){
+        handleMissedWordPosting(received_message.text);
+      }
+    } catch (err) {
+      console.log(`🔴 Error occurred while handling missed word posting(pre)`);
+    }
+
     response = defaultReply[Math.floor(Math.random() * defaultReply.length)];
     callSendAPI(sender_psid, response);
   }
@@ -3192,6 +3192,12 @@ let handlePostback = async (sender_psid, received_postback) => {
   if (payload === 'GET_STARTED') {
     //getting username
     let username = await chatBotService.getFacebookUserInfo(sender_psid);
+
+    try{
+      postNewUserCount()
+    }catch(err){
+      console.log(`🔴 Error occurred while posting new user info`);
+    }
 
     console.log(`Username: ${username}`);
     response = getStartedMsg[0];
