@@ -2536,11 +2536,27 @@ function handleMessage(sender_psid, received_message) {
 
   //academic -> bce
   else if (wordIncludes(bce, received_message)) {
+
+    //analytics
+    try {
+      handleAnalytics("bce");
+    } catch (err) {
+      console.log(`🔴 Error while handling analytics(pre)`);
+    }
+
     magicFunc(sender_psid, bce_flow);
   }
 
   //academic -> economics
   else if (wordIncludes(economics, received_message)) {
+
+    //analytics
+    try {
+      handleAnalytics("econo");
+    } catch (err) {
+      console.log(`🔴 Error while handling analytics(pre)`);
+    }
+
     magicFunc(sender_psid, econo_flow);
   }
 
@@ -2551,6 +2567,14 @@ function handleMessage(sender_psid, received_message) {
 
   //academic -> tqm
   else if (wordIncludes(tqm, received_message)) {
+
+    //analytics
+    try {
+      handleAnalytics("tqm");
+    } catch (err) {
+      console.log(`🔴 Error while handling analytics(pre)`);
+    }
+
     magicFunc(sender_psid, tqm_flow);
   }
 
@@ -2586,6 +2610,14 @@ function handleMessage(sender_psid, received_message) {
 
   //academic -> wpp
   else if (wordIncludes(wpp, received_message)) {
+
+    //analytics
+    try {
+      handleAnalytics("wpp");
+    } catch (err) {
+      console.log(`🔴 Error while handling analytics(pre)`);
+    }
+    
     magicFunc(sender_psid, wpp_flow);
   }
 
@@ -2601,46 +2633,118 @@ function handleMessage(sender_psid, received_message) {
 
   //academic -> feee
   else if (wordIncludes(feee, received_message)) {
+
+    //analytics
+    try {
+      handleAnalytics("feee");
+    } catch (err) {
+      console.log(`🔴 Error while handling analytics(pre)`);
+    }
+
     magicFunc(sender_psid, eee_flow);
   }
 
   //academic -> fsd
   else if (wordIncludes(fsd, received_message)) {
+
+    //analytics
+    try {
+      handleAnalytics("fsd");
+    } catch (err) {
+      console.log(`🔴 Error while handling analytics(pre)`);
+    }
+
     magicFunc(sender_psid, fsd_flow);
   }
 
   //academic -> WP1
   else if (wordIncludes(wp1, received_message)) {
+
+    //analytics
+    try {
+      handleAnalytics("wp1");
+    } catch (err) {
+      console.log(`🔴 Error while handling analytics(pre)`);
+    }
+
     magicFunc(sender_psid, wp1_flow);
   }
 
   //academic -> WP2
   else if (wordIncludes(wp2, received_message)) {
+
+    //analytics
+    try {
+      handleAnalytics("wp2");
+    } catch (err) {
+      console.log(`🔴 Error while handling analytics(pre)`);
+    }
+
     magicFunc(sender_psid, wp2_flow);
   }
 
   //academic -> sss1
   else if (wordIncludes(sss1, received_message)) {
+
+    //analytics
+    try {
+      handleAnalytics("sss1");
+    } catch (err) {
+      console.log(`🔴 Error while handling analytics(pre)`);
+    }
+
     magicFunc(sender_psid, sss1_flow);
   }
 
   //academic -> sss2
   else if (wordIncludes(sss2, received_message)) {
+
+    //analytics
+    try {
+      handleAnalytics("sss2");
+    } catch (err) {
+      console.log(`🔴 Error while handling analytics(pre)`);
+    }
+
     magicFunc(sender_psid, sss2_flow);
   }
 
   //academic -> ym1
   else if (wordIncludes(ym1, received_message)) {
+
+    //analytics
+    try {
+      handleAnalytics("ym1");
+    } catch (err) {
+      console.log(`🔴 Error while handling analytics(pre)`);
+    }
+
     magicFunc(sender_psid, ym1_flow);
   }
 
   //academic -> ym2
   else if (wordIncludes(ym2, received_message)) {
+
+    //analytics
+    try {
+      handleAnalytics("ym2");
+    } catch (err) {
+      console.log(`🔴 Error while handling analytics(pre)`);
+    }
+
     magicFunc(sender_psid, ym2_flow);
   }
 
   //academic -> mmtf
   else if (wordIncludes(mmtf, received_message)) {
+
+    //analytics
+    try {
+      handleAnalytics("mmtf");
+    } catch (err) {
+      console.log(`🔴 Error while handling analytics(pre)`);
+    }
+
     magicFunc(sender_psid, mmtf_flow);
   }
 
@@ -2661,16 +2765,40 @@ function handleMessage(sender_psid, received_message) {
 
   //academic -> am1
   else if (wordIncludes(am1, received_message)) {
+
+    //analytics
+    try {
+      handleAnalytics("am1");
+    } catch (err) {
+      console.log(`🔴 Error while handling analytics(pre)`);
+    }
+
     magicFunc(sender_psid, am1_flow);
   }
 
   //academic -> am2
   else if (wordIncludes(am2, received_message)) {
+
+    //analytics
+    try {
+      handleAnalytics("am2");
+    } catch (err) {
+      console.log(`🔴 Error while handling analytics(pre)`);
+    }
+
     magicFunc(sender_psid, am2_flow);
   }
 
   //academic -> stat
   else if (wordIncludes(stat, received_message)) {
+
+    //analytics
+    try {
+      handleAnalytics("stat");
+    } catch (err) {
+      console.log(`🔴 Error while handling analytics(pre)`);
+    }
+
     magicFunc(sender_psid, stat_flow);
   }
 
@@ -2681,6 +2809,14 @@ function handleMessage(sender_psid, received_message) {
 
   //academic -> ttqc
   else if (wordIncludes(ttqc, received_message)) {
+
+    //analytics
+    try {
+      handleAnalytics("ttqc");
+    } catch (err) {
+      console.log(`🔴 Error while handling analytics(pre)`);
+    }
+
     magicFunc(sender_psid, ttqc_flow);
   }
 
@@ -2691,6 +2827,14 @@ function handleMessage(sender_psid, received_message) {
 
   //academic -> marketing
   else if (wordIs(marketing, received_message)) {
+
+    //analytics
+    try {
+      handleAnalytics("market");
+    } catch (err) {
+      console.log(`🔴 Error while handling analytics(pre)`);
+    }
+
     magicFunc(sender_psid, marketing_flow);
   }
 
@@ -2716,16 +2860,40 @@ function handleMessage(sender_psid, received_message) {
 
   //academic -> ace
   else if (wordIs(ace, received_message)) {
+
+    //analytics
+    try {
+      handleAnalytics("ace");
+    } catch (err) {
+      console.log(`🔴 Error while handling analytics(pre)`);
+    }
+
     magicFunc(sender_psid, ace_flow);
   }
 
   //academic -> mic
   else if (wordIs(mic, received_message)) {
+
+    //analytics
+    try {
+      handleAnalytics("mic");
+    } catch (err) {
+      console.log(`🔴 Error while handling analytics(pre)`);
+    }
+
     magicFunc(sender_psid, mic_flow);
   }
 
   //academic -> acm
   else if (wordIs(acm, received_message)) {
+
+    //analytics
+    try {
+      handleAnalytics("acm");
+    } catch (err) {
+      console.log(`🔴 Error while handling analytics(pre)`);
+    }
+
     magicFunc(sender_psid, acm_flow);
   }
 
@@ -2736,6 +2904,14 @@ function handleMessage(sender_psid, received_message) {
 
   //academic -> tp
   else if (wordIs(tp, received_message)) {
+
+    //analytics
+    try {
+      handleAnalytics("tp");
+    } catch (err) {
+      console.log(`🔴 Error while handling analytics(pre)`);
+    }
+
     magicFunc(sender_psid, tp_flow);
   }
 
@@ -2751,11 +2927,27 @@ function handleMessage(sender_psid, received_message) {
 
   //academic -> fm1
   else if (wordIncludes(fm1, received_message)) {
+
+    //analytics
+    try {
+      handleAnalytics("fm1");
+    } catch (err) {
+      console.log(`🔴 Error while handling analytics(pre)`);
+    }
+
     magicFunc(sender_psid, fm1_flow);
   }
 
   //academic -> fm2
   else if (wordIncludes(fm2, received_message)) {
+
+    //analytics
+    try {
+      handleAnalytics("fm2");
+    } catch (err) {
+      console.log(`🔴 Error while handling analytics(pre)`);
+    }
+
     magicFunc(sender_psid, fm2_flow);
   }
 
@@ -2791,6 +2983,14 @@ function handleMessage(sender_psid, received_message) {
 
   //academic -> cp
   else if (wordIs(cp, received_message)) {
+
+    //analytics
+    try {
+      handleAnalytics("cp");
+    } catch (err) {
+      console.log(`🔴 Error while handling analytics(pre)`);
+    }
+
     magicFunc(sender_psid, cp_flow);
   }
 
@@ -2816,21 +3016,53 @@ function handleMessage(sender_psid, received_message) {
 
   //academic -> chem1
   else if (wordIncludes(chem1, received_message)) {
+
+    //analytics
+    try {
+      handleAnalytics("chem1");
+    } catch (err) {
+      console.log(`🔴 Error while handling analytics(pre)`);
+    }
+
     magicFunc(sender_psid, chem1_flow);
   }
 
   //academic -> chem2
   else if (wordIncludes(chem2, received_message)) {
+
+    //analytics
+    try {
+      handleAnalytics("chem2");
+    } catch (err) {
+      console.log(`🔴 Error while handling analytics(pre)`);
+    }
+
     magicFunc(sender_psid, chem2_flow);
   }
 
   //academic -> phy1
   else if (wordIncludes(phy1, received_message)) {
+
+    //analytics
+    try {
+      handleAnalytics("phy1");
+    } catch (err) {
+      console.log(`🔴 Error while handling analytics(pre)`);
+    }
+
     magicFunc(sender_psid, phy1_flow);
   }
 
   //academic -> phy2
   else if (wordIncludes(phy2, received_message)) {
+
+    //analytics
+    try {
+      handleAnalytics("phy2");
+    } catch (err) {
+      console.log(`🔴 Error while handling analytics(pre)`);
+    }
+
     magicFunc(sender_psid, phy2_flow);
   }
 
@@ -2866,16 +3098,40 @@ function handleMessage(sender_psid, received_message) {
 
   //academic -> ntf
   else if (wordIncludes(ntf, received_message)) {
+
+    //analytics
+    try {
+      handleAnalytics("ntf");
+    } catch (err) {
+      console.log(`🔴 Error while handling analytics(pre)`);
+    }
+
     magicFunc(sender_psid, ntf_flow);
   }
 
   //academic -> em
   else if (wordIs(em, received_message)) {
+
+    //analytics
+    try {
+      handleAnalytics("em");
+    } catch (err) {
+      console.log(`🔴 Error while handling analytics(pre)`);
+    }
+
     magicFunc(sender_psid, em_flow);
   }
 
   //academic -> pse
   else if (wordIncludes(pse, received_message)) {
+
+    //analytics
+    try {
+      handleAnalytics("pse");
+    } catch (err) {
+      console.log(`🔴 Error while handling analytics(pre)`);
+    }
+
     magicFunc(sender_psid, pse_flow);
   }
 
@@ -2970,6 +3226,14 @@ let handlePostback = async (sender_psid, received_postback) => {
 
   //subject-> bce
   else if (payload === 'bce_flow') {
+
+    //analytics
+    try {
+      handleAnalytics("bce");
+    } catch (err) {
+      console.log(`🔴 Error while handling analytics(pre)`);
+    }
+
     magicFunc(sender_psid, bce_flow);
   }
 
@@ -3076,6 +3340,14 @@ let handlePostback = async (sender_psid, received_postback) => {
 
   //subject-> cp
   else if (payload === 'cp_flow') {
+
+    //analytics
+    try {
+      handleAnalytics("cp");
+    } catch (err) {
+      console.log(`🔴 Error while handling analytics(pre)`);
+    }
+
     magicFunc(sender_psid, cp_flow);
   }
 
@@ -3120,6 +3392,14 @@ let handlePostback = async (sender_psid, received_postback) => {
 
   //subject-> chem1
   else if (payload === 'che1_flow') {
+
+    //analytics
+    try {
+      handleAnalytics("chem1");
+    } catch (err) {
+      console.log(`🔴 Error while handling analytics(pre)`);
+    }
+
     magicFunc(sender_psid, chem1_flow);
   }
 
@@ -3173,6 +3453,14 @@ let handlePostback = async (sender_psid, received_postback) => {
 
   //subject-> phy1
   else if (payload === 'phy1_flow') {
+
+    //analytics
+    try {
+      handleAnalytics("phy1");
+    } catch (err) {
+      console.log(`🔴 Error while handling analytics(pre)`);
+    }
+
     magicFunc(sender_psid, phy1_flow);
   }
 
@@ -3311,6 +3599,14 @@ let handlePostback = async (sender_psid, received_postback) => {
 
   //subject-> ntf
   else if (payload === 'ntf_flow') {
+
+    //analytics
+    try {
+      handleAnalytics("ntf");
+    } catch (err) {
+      console.log(`🔴 Error while handling analytics(pre)`);
+    }
+
     magicFunc(sender_psid, ntf_flow);
   }
 
@@ -3404,6 +3700,14 @@ let handlePostback = async (sender_psid, received_postback) => {
 
   //subject-> em
   else if (payload === 'em_flow') {
+
+    //analytics
+    try {
+      handleAnalytics("em");
+    } catch (err) {
+      console.log(`🔴 Error while handling analytics(pre)`);
+    }
+
     magicFunc(sender_psid, em_flow);
   }
 
@@ -3482,6 +3786,14 @@ let handlePostback = async (sender_psid, received_postback) => {
 
   //subject-> pse
   else if (payload === 'pse_flow') {
+
+    //analytics
+    try {
+      handleAnalytics("pse");
+    } catch (err) {
+      console.log(`🔴 Error while handling analytics(pre)`);
+    }
+
     magicFunc(sender_psid, pse_flow);
   }
 
@@ -3772,6 +4084,14 @@ let handlePostback = async (sender_psid, received_postback) => {
 
   //subject-> chem2
   else if (payload === 'che2_flow') {
+
+    //analytics
+    try {
+      handleAnalytics("chem2");
+    } catch (err) {
+      console.log(`🔴 Error while handling analytics(pre)`);
+    }
+
     magicFunc(sender_psid, chem2_flow);
   }
 
@@ -3827,6 +4147,14 @@ let handlePostback = async (sender_psid, received_postback) => {
 
   //subject-> phy2
   else if (payload === 'phy2_flow') {
+
+    //analytics
+    try {
+      handleAnalytics("phy2");
+    } catch (err) {
+      console.log(`🔴 Error while handling analytics(pre)`);
+    }
+
     magicFunc(sender_psid, phy2_flow);
   }
 
@@ -3997,6 +4325,14 @@ let handlePostback = async (sender_psid, received_postback) => {
 
   //fm1
   else if (payload === 'fm1_flow') {
+
+    //analytics
+    try {
+      handleAnalytics("fm1");
+    } catch (err) {
+      console.log(`🔴 Error while handling analytics(pre)`);
+    }
+
     magicFunc(sender_psid, fm1_flow);
   }
   else if (payload === 'fm1_hnotes_flow') {
@@ -4068,6 +4404,14 @@ let handlePostback = async (sender_psid, received_postback) => {
 
   //mmtf
   else if (payload === 'mmtf_flow') {
+
+    //analytics
+    try {
+      handleAnalytics("mmtf");
+    } catch (err) {
+      console.log(`🔴 Error while handling analytics(pre)`);
+    }
+
     magicFunc(sender_psid, mmtf_flow);
   }
   else if (payload === 'mmtf_books_flow') {
@@ -4136,6 +4480,14 @@ let handlePostback = async (sender_psid, received_postback) => {
 
   //ttqc
   else if (payload === 'ttqc_flow') {
+
+    //analytics
+    try {
+      handleAnalytics("ttqc");
+    } catch (err) {
+      console.log(`🔴 Error while handling analytics(pre)`);
+    }
+
     magicFunc(sender_psid, ttqc_flow);
   }
   else if (payload === 'ttqc_books_flow') {
@@ -4177,6 +4529,14 @@ let handlePostback = async (sender_psid, received_postback) => {
 
   //stat
   else if (payload === 'stat_flow') {
+
+    //analytics
+    try {
+      handleAnalytics("stat");
+    } catch (err) {
+      console.log(`🔴 Error while handling analytics(pre)`);
+    }
+
     magicFunc(sender_psid, stat_flow);
   }
   else if (payload === 'stat_books_flow') {
@@ -4221,6 +4581,14 @@ let handlePostback = async (sender_psid, received_postback) => {
 
   //feee
   else if (payload === 'eee_flow') {
+
+    //analytics
+    try {
+      handleAnalytics("feee");
+    } catch (err) {
+      console.log(`🔴 Error while handling analytics(pre)`);
+    }
+
     magicFunc(sender_psid, eee_flow);
   }
   else if (payload === 'eee_books_flow') {
@@ -4262,6 +4630,14 @@ let handlePostback = async (sender_psid, received_postback) => {
 
   //am1
   else if (payload === 'am1_flow') {
+
+    //analytics
+    try {
+      handleAnalytics("am1");
+    } catch (err) {
+      console.log(`🔴 Error while handling analytics(pre)`);
+    }
+
     magicFunc(sender_psid, am1_flow);
   }
   else if (payload === 'am1_books_flow') {
@@ -4309,6 +4685,14 @@ let handlePostback = async (sender_psid, received_postback) => {
 
   //marketing
   else if (payload === 'marketing_flow') {
+
+    //analytics
+    try {
+      handleAnalytics("market");
+    } catch (err) {
+      console.log(`🔴 Error while handling analytics(pre)`);
+    }
+
     magicFunc(sender_psid, marketing_flow);
   }
   else if (payload === 'marketing_books_flow') {
@@ -4516,6 +4900,14 @@ let handlePostback = async (sender_psid, received_postback) => {
 
   //sss1
   else if (payload === 'sss1_flow') {
+
+    //analytics
+    try {
+      handleAnalytics("sss1");
+    } catch (err) {
+      console.log(`🔴 Error while handling analytics(pre)`);
+    }
+
     magicFunc(sender_psid, sss1_flow);
   }
   else if (payload === 'sss1_books_flow') {
@@ -4539,6 +4931,14 @@ let handlePostback = async (sender_psid, received_postback) => {
 
   //sss2
   else if (payload === 'sss2_flow') {
+
+    //analytics
+    try {
+      handleAnalytics("sss2");
+    } catch (err) {
+      console.log(`🔴 Error while handling analytics(pre)`);
+    }
+
     magicFunc(sender_psid, sss2_flow);
   }
   else if (payload === 'sss2_notes_flow') {
@@ -4551,6 +4951,14 @@ let handlePostback = async (sender_psid, received_postback) => {
 
   //ym1
   else if (payload === 'ym1_flow') {
+
+    //analytics
+    try {
+      handleAnalytics("ym1");
+    } catch (err) {
+      console.log(`🔴 Error while handling analytics(pre)`);
+    }
+
     magicFunc(sender_psid, ym1_flow);
   }
   else if (payload === 'ym1_intro_flow') {
@@ -4619,6 +5027,14 @@ let handlePostback = async (sender_psid, received_postback) => {
 
   //tp
   else if (payload === 'tp_flow') {
+
+    //analytics
+    try {
+      handleAnalytics("tp");
+    } catch (err) {
+      console.log(`🔴 Error while handling analytics(pre)`);
+    }
+
     magicFunc(sender_psid, tp_flow);
   }
   else if (payload === 'tp_books_flow') {
@@ -4670,6 +5086,14 @@ let handlePostback = async (sender_psid, received_postback) => {
 
   //wpp
   else if (payload === 'wpp_flow') {
+
+    //analytics
+    try {
+      handleAnalytics("wpp");
+    } catch (err) {
+      console.log(`🔴 Error while handling analytics(pre)`);
+    }
+
     magicFunc(sender_psid, wpp_flow);
   }
   else if (payload === 'wpp_quess_flow') {
@@ -4744,6 +5168,14 @@ let handlePostback = async (sender_psid, received_postback) => {
 
   //wp1
   else if (payload === 'wp1_flow') {
+
+    //analytics
+    try {
+      handleAnalytics("wp1");
+    } catch (err) {
+      console.log(`🔴 Error while handling analytics(pre)`);
+    }
+
     magicFunc(sender_psid, wp1_flow);
   }
   else if (payload === 'wp1_books_flow') {
@@ -4900,6 +5332,14 @@ let handlePostback = async (sender_psid, received_postback) => {
 
   //ace
   else if (payload === 'ace_flow') {
+
+    //analytics
+    try {
+      handleAnalytics("ace");
+    } catch (err) {
+      console.log(`🔴 Error while handling analytics(pre)`);
+    }
+
     magicFunc(sender_psid, ace_flow);
   }
   else if (payload === 'ace_introSys_flow') {
@@ -4950,6 +5390,14 @@ let handlePostback = async (sender_psid, received_postback) => {
 
   //acm
   else if (payload === 'acm_flow') {
+
+    //analytics
+    try {
+      handleAnalytics("acm");
+    } catch (err) {
+      console.log(`🔴 Error while handling analytics(pre)`);
+    }
+
     magicFunc(sender_psid, acm_flow);
   }
   else if (payload === 'acm_book_flow') {
@@ -4997,6 +5445,14 @@ let handlePostback = async (sender_psid, received_postback) => {
 
   //mic
   else if (payload === 'mic_flow') {
+
+    //analytics
+    try {
+      handleAnalytics("mic");
+    } catch (err) {
+      console.log(`🔴 Error while handling analytics(pre)`);
+    }
+
     magicFunc(sender_psid, mic_flow);
   }
   else if (payload === 'mic_book_flow') {
@@ -5036,6 +5492,15 @@ let handlePostback = async (sender_psid, received_postback) => {
 
   //fsd
   else if (payload === 'fsd_flow') {
+
+    //analytics
+    try {
+      handleAnalytics("fsd");
+    } catch (err) {
+      console.log(`🔴 Error while handling analytics(pre)`);
+    }
+
+
     magicFunc(sender_psid, fsd_flow);
   }
   else if (payload === 'fsd_intro_flow') {
@@ -5060,6 +5525,14 @@ let handlePostback = async (sender_psid, received_postback) => {
 
   //tqm
   else if (payload === 'tqm_flow') {
+
+    //analytics
+    try {
+      handleAnalytics("tqm");
+    } catch (err) {
+      console.log(`🔴 Error while handling analytics(pre)`);
+    }
+
     magicFunc(sender_psid, tqm_flow);
   }
   else if (payload === 'tqm_totalQm_flow') {
@@ -5176,6 +5649,14 @@ let handlePostback = async (sender_psid, received_postback) => {
 
   //am2
   else if (payload === 'am2_flow') {
+
+    //analytics
+    try {
+      handleAnalytics("am2");
+    } catch (err) {
+      console.log(`🔴 Error while handling analytics(pre)`);
+    }
+
     magicFunc(sender_psid, am2_flow);
   }
   else if (payload === 'am2_books_flow') {
@@ -5194,6 +5675,14 @@ let handlePostback = async (sender_psid, received_postback) => {
 
   //economics
   else if (payload === 'econo_flow') {
+
+    //analytics
+    try {
+      handleAnalytics("econo");
+    } catch (err) {
+      console.log(`🔴 Error while handling analytics(pre)`);
+    }
+
     magicFunc(sender_psid, econo_flow);
   }
   else if (payload === 'econo_books_flow') {
@@ -5206,6 +5695,14 @@ let handlePostback = async (sender_psid, received_postback) => {
 
   //ym2
   else if (payload === 'ym2_flow') {
+
+    //analytics
+    try {
+      handleAnalytics("ym2");
+    } catch (err) {
+      console.log(`🔴 Error while handling analytics(pre)`);
+    }
+
     magicFunc(sender_psid, ym2_flow);
   }
   else if (payload === 'ym2_books_flow') {
@@ -5233,6 +5730,14 @@ let handlePostback = async (sender_psid, received_postback) => {
 
   //fm2
   else if (payload === 'fm2_flow') {
+
+    //analytics
+    try {
+      handleAnalytics("fm2");
+    } catch (err) {
+      console.log(`🔴 Error while handling analytics(pre)`);
+    }
+
     magicFunc(sender_psid, fm2_flow);
   }
   else if (payload === 'fm2_books_flow') {
@@ -5284,6 +5789,14 @@ let handlePostback = async (sender_psid, received_postback) => {
 
   //wp2
   else if (payload === 'wp2_flow') {
+
+    //analytics
+    try {
+      handleAnalytics("wp2");
+    } catch (err) {
+      console.log(`🔴 Error while handling analytics(pre)`);
+    }
+
     magicFunc(sender_psid, wp2_flow);
   }
   else if (payload === 'wp2_books_flow') {
