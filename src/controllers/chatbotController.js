@@ -14,6 +14,24 @@ const wordIs = require('./libs/wordDetectors/wordIs');
 const wordIncludes = require('./libs/wordDetectors/wordIncludes');
 const wordIncludesWhole = require('./libs/wordDetectors/wordIncludesWhole');
 
+//analytics
+let handleAnalytics =  async(subName) => {
+  //console.log(`${process.env.analyticsServerUrl}/notes/${subName}?adminKey=${process.env.analyticsAuthKey}`)
+  if(process.env.collectAnalytics === "true"){
+      try{
+          const result = await axios.get(`${process.env.analyticsServerUrl}/notes/${subName}?adminKey=${process.env.analyticsAuthKey}`,
+          console.log(`🟢 Analytics was handled successfully`)
+   );
+      }catch(err){
+          //console.log(err)
+          console.log(`🔴 Error occurred while handling analytics(${subName})`)
+      }
+  }
+  else{
+      console.log(`🟠 Analytics is disabled`)
+  }
+}
+
 //libs - emoji
 const emojiIs = require('./libs/wordDetectors/emojiIs');
 
@@ -2823,14 +2841,28 @@ function handleMessage(sender_psid, received_message) {
 
   //academic -> math1
   else if (wordIncludes(math1, received_message)) {
+    //analytics
+    try {
+      handleAnalytics("math1");
+    } catch (err) {
+      console.log(`🔴 Error while handling analytics(pre)`);
+    }
+
     magicFunc(sender_psid, math1_flow);
   }
 
   //academic -> math2
   else if (wordIncludes(math2, received_message)) {
+
+    //analytics
+    try {
+      handleAnalytics("math1");
+    } catch (err) {
+      console.log(`🔴 Error while handling analytics(pre)`);
+    }
+
     magicFunc(sender_psid, math2_flow);
   }
-
 
   //academic -> ntf
   else if (wordIncludes(ntf, received_message)) {
@@ -2850,26 +2882,15 @@ function handleMessage(sender_psid, received_message) {
   //academic -> acfd
   else if (wordIncludes(acfd_words, received_message)) {
     magicFunc(sender_psid, acfd_flow);
-  }
-
-
-  else if (wordIncludes(lab_report, received_message)) {
+  } else if (wordIncludes(lab_report, received_message)) {
     magicFunc(sender_psid, labFlow);
-  }
-
-  else if (wordIs(onlylabWord, received_message)) {
+  } else if (wordIs(onlylabWord, received_message)) {
     magicFunc(sender_psid, labFlow);
-  }
-
-  else if (wordIncludes(result, received_message)) {
+  } else if (wordIncludes(result, received_message)) {
     magicFunc(sender_psid, resultFlow);
-  }
-
-  else if (wordIncludes(routine, received_message)) {
+  } else if (wordIncludes(routine, received_message)) {
     magicFunc(sender_psid, routineFlow);
-  }
-
-  else if (wordIncludes(syllabus, received_message)) {
+  } else if (wordIncludes(syllabus, received_message)) {
     magicFunc(sender_psid, syllabusFlow);
   }
 
@@ -2877,12 +2898,10 @@ function handleMessage(sender_psid, received_message) {
   else if (wordIncludes(loveMoji, received_message)) {
     // Create the payload for a basic text message
     response = {
-      "text": `${randomPicker(loveReply)}`
-    }
+      text: `${randomPicker(loveReply)}`,
+    };
     callSendAPI(sender_psid, response);
   }
-
-
 
   //default reply
   else if (received_message.text) {
@@ -3199,6 +3218,14 @@ let handlePostback = async (sender_psid, received_postback) => {
 
   //subject-> math1
   else if (payload === 'math1_flow') {
+
+    //analytics
+    try {
+      handleAnalytics("math1");
+    } catch (err) {
+      console.log(`🔴 Error while handling analytics(pre)`);
+    }
+
     magicFunc(sender_psid, math1_flow);
   }
 
@@ -3647,6 +3674,14 @@ let handlePostback = async (sender_psid, received_postback) => {
   }
 
   else if (payload === 'math2_flow') {
+
+    //analytics
+    try {
+      handleAnalytics("math2");
+    } catch (err) {
+      console.log(`🔴 Error while handling analytics(pre)`);
+    }
+
     magicFunc(sender_psid, math2_flow);
   }
 

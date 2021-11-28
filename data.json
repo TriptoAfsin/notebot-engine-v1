@@ -1,24 +1,169 @@
 {
-    "noteSubjects": [
-      {
-        "name": "math1",
-        "count": 1,
-        "id": 1
-      },
-      {
-        "id": 2,
-        "name": "Math2",
+  "noteSubjects": [
+    {
+      "name": "Math1",
+      "count": 0,
+      "id": "math1"
+    },
+    {
+      "name": "Math2",
+      "count": 2,
+      "id": "math2"
+    },
+    {
+      "id": "chem1",
+      "name": "Chem1",
+      "count": 0
+    },
+    {
+      "id": "chem2",
+      "name": "Chem2",
+      "count": 0
+    },
+    {
+      "id": "phy1",
+      "name": "Phy1",
+      "count": 0
+    },
+    {
+      "id": "phy2",
+      "name": "Phy2",
+      "count": 0
+    },
+    {
+      "name": "NTF",
+      "count": 1,
+      "id": "ntf"
+    },
+    {
+      "name": "PSE",
+      "count": 3,
+      "id": "pse"
+    },
+    {
+      "name": "CP",
+      "count": 1,
+      "id": "cp"
+    },
+    {
+      "id": "em",
+      "name": "EM",
+      "count": 0
+    },
+    {
+      "id": "bce",
+      "name": "bce",
+      "count": 0
+    },
+    {
+      "id": "am1",
+      "name": "AM2",
+      "count": 0
+    },
+    {
+        "id": "am2",
+        "name": "AM1",
         "count": 0
-      },
-      {
-        "id": 3,
-        "name": "Chem1",
+    },
+    {
+        "id": "wp1",
+        "name": "WP1",
         "count": 0
-      },
-      {
-        "id": 4,
-        "name": "Chem2",
+    },
+    {
+        "id": "wp2",
+        "name": "WP2",
         "count": 0
-      }
-    ]
-  }
+    },
+    {
+        "id": "ym1",
+        "name": "YM1",
+        "count": 0
+    },
+    {
+        "id": "ym2",
+        "name": "YM2",
+        "count": 0
+    },
+    {
+        "id": "fm1",
+        "name": "FM1",
+        "count": 0
+    },
+    {
+        "id": "fm2",
+        "name": "FM2",
+        "count": 0
+    },
+    {
+        "id": "tp",
+        "name": "TP",
+        "count": 0
+    },
+    {
+        "id": "feee",
+        "name": "FEEE",
+        "count": 0
+    },
+    {
+        "id": "ttqc",
+        "name": "TTQC",
+        "count": 0
+    },
+    {
+        "id": "fme",
+        "name": "FME",
+        "count": 0
+    },
+    {
+        "id": "mmtf",
+        "name": "MMTF",
+        "count": 0
+    },
+    {
+        "id": "marketing",
+        "name": "Marketing",
+        "count": 0
+    },
+    {
+        "id": "stat",
+        "name": "STAT",
+        "count": 0
+    },
+    {
+        "id": "ace",
+        "name": "ACE",
+        "count": 0
+    },
+    {
+        "id": "acm",
+        "name": "ACM",
+        "count": 0
+    },
+    {
+        "id": "tqm",
+        "name": "TQM",
+        "count": 0
+    },
+    {
+        "id": "fsd",
+        "name": "FSD",
+        "count": 0
+    },
+    {
+        "id": "sss1",
+        "name": "SSS1",
+        "count": 0
+    },
+    {
+        "id": "sss2",
+        "name": "SSS2",
+        "count": 0
+    },
+    {
+        "id": "econo",
+        "name": "Economics",
+        "count": 0
+    }
+  ]
+}

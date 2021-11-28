@@ -4,19 +4,19 @@ const bodyParser = require('body-parser');
 const viewEngine = require('./config/viewEngine');
 const initWebRoutes = require('./routes/web');
 
-//json server
-const jsonServer = require('json-server')
-const server = jsonServer.create()
-const router = jsonServer.router('data.json')
-const middlewares = jsonServer.defaults()
+// //json server
+// const jsonServer = require('json-server')
+// const server = jsonServer.create()
+// const router = jsonServer.router('data.json')
+// const middlewares = jsonServer.defaults()
 
-server.use(middlewares)
-server.use(router)
+// server.use(middlewares)
+// server.use(router)
 
 
-server.listen(process.env.JSONDB_PORT, () => {
-    console.log(`JSONDB Started at ${process.env.JSONDB_PORT}`)
-})
+// server.listen(process.env.JSONDB_PORT, () => {
+//     console.log(`JSONDB Started at ${process.env.JSONDB_PORT}`)
+// })
 
 
 

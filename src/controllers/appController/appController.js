@@ -4,11 +4,13 @@ let router = express.Router();
 require("dotenv").config();
 let Feed = require('rss-to-json');
 
+const axios = require('axios');
+
 
 // analytics 
-// const fs = require("fs");
-// const analDB = '../../data.json'; //path
-// const jsonDb = require(analDB);
+//const fs = require("fs");
+//const analDB = '../../../data.json'; //path
+//const jsonDb = require(analDB);
 
 let deploymentEnvDetector = () => {
     let appProduction = process.env.appProduction;
@@ -22,16 +24,23 @@ let deploymentEnvDetector = () => {
     }
 }
 
-// let handleAnalytics = () => {
-//   //async
-//   fs.writeFile(analDB, JSON.stringify(jsonDb), function writeJSON(err) {
-//     if (err) {
-//       return console.log(err);
-//     }
-//     console.log(JSON.stringify(jsonDb));
-//     console.log(`writing to ${analDB}`);
-//   });
-// }
+
+let handleAnalytics =  async(subName) => {
+    //console.log(`${process.env.analyticsServerUrl}/notes/${subName}?adminKey=${process.env.analyticsAuthKey}`)
+    if(process.env.collectAnalytics === "true"){
+        try{
+            const result = await axios.get(`${process.env.analyticsServerUrl}/notes/${subName}?adminKey=${process.env.analyticsAuthKey}`,
+            console.log(`🟢 Analytics was handled successfully`)
+     );
+        }catch(err){
+            //console.log(err)
+            console.log(`🔴 Error occurred while handling analytics(${subName})`)
+        }
+    }
+    else{
+        console.log(`🟠 Analytics is disabled`)
+    }
+}
 
 
 let noteLevel1Subs = require('./academic/notes/level1/level1Subs')
@@ -932,21 +941,15 @@ let level4Notes = (req, res) => {
 };
 
 //level1 -> math1
-let math1 = (req, res) => {
+let math1 = async (req, res) => {
+  //analytics
+  try{
+    handleAnalytics("math1");
+}catch(err){
+    console.log(`🔴 Error while handling analytics(pre)`)
+}
 
-//  jsonDb.math1Count += 1;
-
-//  //fs.writeFileSync(analDB, JSON.stringify(jsonDb));
- 
-//  //async
-//  fs.writeFile(analDB, JSON.stringify(jsonDb), function writeJSON(err) {
-//     if (err) {
-//       return console.log(err);
-//     }
-//     console.log(JSON.stringify(jsonDb));
-//     console.log(`writing to ${analDB}`);
-//   });
-
+  //console.log(result.data.json)
   console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`);
   return res.send(math1Flow);
 };
@@ -1023,6 +1026,14 @@ let math1ChangeofAxesFlow = (req, res) => {
 
 //level1 -> math2
 let math2 = (req, res) => {
+
+    //analytics
+    try{
+        handleAnalytics("math2");
+    }catch(err){
+        console.log(`🔴 Error while handling analytics(pre)`)
+    }
+
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
     return res.send(math2Flow);
 };
@@ -1124,6 +1135,14 @@ let math2ComplexFlow = (req, res) => {
 
 //chem1
 let chem1Flow = (req, res) => {
+
+    //analytics
+    try{
+        handleAnalytics("chem1");
+    }catch(err){
+        console.log(`🔴 Error while handling analytics(pre)`)
+    }
+
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
     return res.send(chem1appFlow);
 };
@@ -1196,6 +1215,14 @@ let chem1AcidBaseFlow = (req, res) => {
 
 //chem2
 let chem2Flow = (req, res) => {
+
+    //analytics
+    try{
+        handleAnalytics("chem2");
+    }catch(err){
+        console.log(`🔴 Error while handling analytics(pre)`)
+    }
+
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
     return res.send(chem2appFlow);
 };
@@ -1264,6 +1291,15 @@ let chem2SolubilityFlow = (req, res) => {
 
 //phy1
 let phy1Flow = (req, res) => {
+
+    //analytics
+    try{
+        handleAnalytics("phy1");
+    }catch(err){
+        console.log(`🔴 Error while handling analytics(pre)`)
+    }
+
+
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
     return res.send(phy1appFlow);
 };
@@ -1322,6 +1358,15 @@ let phy1SurfaceFlow = (req, res) => {
 
 //phy2
 let phy2Flow = (req, res) => {
+
+    //analytics
+    try{
+        handleAnalytics("phy2");
+    }catch(err){
+        console.log(`🔴 Error while handling analytics(pre)`)
+    }
+
+
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
     return res.send(phy2appFlow);
 };
@@ -1374,6 +1419,14 @@ let phy2EntropyFlow = (req, res) => {
 
 //em
 let emFlow = (req, res) => {
+
+    //analytics
+    try{
+        handleAnalytics("em");
+    }catch(err){
+        console.log(`🔴 Error while handling analytics(pre)`)
+    }
+
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
     return res.send(emAppFlow);
 };
@@ -1535,6 +1588,14 @@ let fhHandloomFlow = (req, res) => {
 
 //pse
 let pseFlow = (req, res) => {
+
+    //analytics
+    try{
+        handleAnalytics("pse");
+    }catch(err){
+        console.log(`🔴 Error while handling analytics(pre)`)
+    }
+
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
     return res.send(pseAppFlow);
 };
@@ -1612,6 +1673,14 @@ let pseMorphoFlow = (req, res) => {
 
 //ntf
 let ntfFlow = (req, res) => {
+
+    //analytics
+    try{
+        handleAnalytics("ntf");
+    }catch(err){
+        console.log(`🔴 Error while handling analytics(pre)`)
+    }
+
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
     return res.send(ntfAppFlow);
 };
@@ -1708,6 +1777,14 @@ let ntfQuizFlow = (req, res) => {
 
 //cp
 let cpFlow = (req, res) => {
+
+    //analytics
+    try{
+        handleAnalytics("cp");
+    }catch(err){
+        console.log(`🔴 Error while handling analytics(pre)`)
+    }
+
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
     return res.send(cpAppFlow);
 };
@@ -1761,6 +1838,14 @@ let cpSuggFlow = (req, res) => {
 
 //bce
 let bceFlow = (req, res) => {
+
+    //analytics
+    try{
+        handleAnalytics("bce");
+    }catch(err){
+        console.log(`🔴 Error while handling analytics(pre)`)
+    }
+
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
     return res.send(bceAppFlow);
 };
@@ -1979,6 +2064,15 @@ let ecbIntroFlow = (req, res) => {
 
 //sss1
 let sss1Flow = (req, res) => {
+
+
+    //analytics
+    try{
+        handleAnalytics("sss1");
+    }catch(err){
+        console.log(`🔴 Error while handling analytics(pre)`)
+    }
+
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
     return res.send(sss1AppFlow);
 };
@@ -2016,6 +2110,15 @@ let sss1IntroFibFlow = (req, res) => {
 
 //sss2
 let sss2Flow = (req, res) => {
+
+
+    //analytics
+    try{
+        handleAnalytics("sss2");
+    }catch(err){
+        console.log(`🔴 Error while handling analytics(pre)`)
+    }
+
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
     return res.send(sss2AppFlow);
 };
@@ -2090,6 +2193,14 @@ let fytCapaOpticalFlow = (req, res) => {
 
 //marketing
 let marketingFlow = (req, res) => {
+
+    //analytics
+    try{
+        handleAnalytics("market");
+    }catch(err){
+        console.log(`🔴 Error while handling analytics(pre)`)
+    }
+
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
     return res.send(marketingAppFlow);
 };
@@ -2211,6 +2322,14 @@ let marketingMajorPriceFlow = (req, res) => {
 
 //am1
 let am1Flow = (req, res) => {
+
+    //analytics
+    try{
+        handleAnalytics("am1");
+    }catch(err){
+        console.log(`🔴 Error while handling analytics(pre)`)
+    }
+
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
     return res.send(am1AppFlow);
 };
@@ -2288,6 +2407,15 @@ let am1FabInspectionFlow = (req, res) => {
 
 //stat
 let statFlow = (req, res) => {
+
+    //analytics
+    try{
+        handleAnalytics("phy1");
+    }catch(err){
+        console.log(`🔴 Error while handling analytics(pre)`)
+    }
+
+
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
     return res.send(statAppFlow);
 };
@@ -2477,6 +2605,15 @@ let fm1JaquardFlow = (req, res) => {
 
 //ym1
 let ym1Flow = (req, res) => {
+
+    //analytics
+    try{
+        handleAnalytics("ym1");
+    }catch(err){
+        console.log(`🔴 Error while handling analytics(pre)`)
+    }
+
+
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
     return res.send(ym1AppFlow);
 };
@@ -2550,6 +2687,14 @@ let ym1SpeedSimplexFlow = (req, res) => {
 
 //ttqc
 let ttqcFlow = (req, res) => {
+
+    //analytics
+    try{
+        handleAnalytics("phy1");
+    }catch(err){
+        console.log(`🔴 Error while handling analytics(pre)`)
+    }
+
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
     return res.send(ttqcAppFlow);
 };
@@ -2698,6 +2843,14 @@ let tpTensilePropFlow = (req, res) => {
 
 //feee
 let feeeFlow = (req, res) => {
+
+    //analytics
+    try{
+        handleAnalytics("feee");
+    }catch(err){
+        console.log(`🔴 Error while handling analytics(pre)`)
+    }
+
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
     return res.send(feeeAppFlow);
 };
@@ -2767,6 +2920,14 @@ let feeeCirAnalFlow = (req, res) => {
 //mmtf
 
 let mmtfFlow = (req, res) => {
+
+    //analytics
+    try{
+        handleAnalytics("mmtf");
+    }catch(err){
+        console.log(`🔴 Error while handling analytics(pre)`)
+    }
+
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
     return res.send(mmtfAppFlow);
 };
@@ -2880,6 +3041,14 @@ let mmtfNylonFlow = (req, res) => {
 //mp
 
 let mpFlow = (req, res) => {
+
+    //analytics
+    try{
+        handleAnalytics("mp");
+    }catch(err){
+        console.log(`🔴 Error while handling analytics(pre)`)
+    }
+
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
     return res.send(mpAppFlow);
 };
@@ -2957,6 +3126,15 @@ let mpCastingFlow = (req, res) => {
 
 //fme
 let fmeFlow = (req, res) => {
+
+    //analytics
+    try{
+        handleAnalytics("fme");
+    }catch(err){
+        console.log(`🔴 Error while handling analytics(pre)`)
+    }
+
+
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
     return res.send(fmeAppFlow);
 };
@@ -3229,6 +3407,14 @@ let weavingPrepBooksFlow = (req, res) => {
 
 //wpp
 let wppFlow = (req, res) => {
+
+    //analytics
+    try{
+        handleAnalytics("wpp");
+    }catch(err){
+        console.log(`🔴 Error while handling analytics(pre)`)
+    }
+
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
     return res.send(wppAppFlow);
 };
@@ -3267,6 +3453,14 @@ let wppBioScouringFlow = (req, res) => {
 
 //wp1
 let wp1Flow = (req, res) => {
+
+    //analytics
+    try{
+        handleAnalytics("wp1");
+    }catch(err){
+        console.log(`🔴 Error while handling analytics(pre)`)
+    }
+
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
     return res.send(wp1AppFlow);
 };
@@ -3570,6 +3764,14 @@ let pdDesAssemFlow = (req, res) => {
 
 //tqm
 let tqmFlow = (req, res) => {
+
+    //analytics
+    try{
+        handleAnalytics("tqm");
+    }catch(err){
+        console.log(`🔴 Error while handling analytics(pre)`)
+    }
+
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
     return res.send(tqmAppFlow);
 };
@@ -3686,6 +3888,14 @@ let micCh5Flow = (req, res) => {
 
 //ace
 let aceFlow = (req, res) => {
+
+    //analytics
+    try{
+        handleAnalytics("ace");
+    }catch(err){
+        console.log(`🔴 Error while handling analytics(pre)`)
+    }
+
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
     return res.send(aceAppFlow);
 };
@@ -3749,6 +3959,15 @@ let aceStructElementsFlow = (req, res) => {
 
 //acm
 let acmFlow = (req, res) => {
+
+    //analytics
+    try{
+        handleAnalytics("phy1");
+    }catch(err){
+        console.log(`🔴 Error while handling analytics(pre)`)
+    }
+
+
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
     return res.send(acmAppFlow);
 };
@@ -3792,6 +4011,14 @@ let acmCostTechFlow = (req, res) => {
 
 //fsd
 let fsdFlow = (req, res) => {
+
+    //analytics
+    try{
+        handleAnalytics("fsd");
+    }catch(err){
+        console.log(`🔴 Error while handling analytics(pre)`)
+    }
+
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
     return res.send(fsdAppFlow);
 };
@@ -3829,6 +4056,14 @@ let fsdColorWeaveFlow = (req, res) => {
 
 //am2
 let am2Flow = (req, res) => {
+
+    //analytics
+    try{
+        handleAnalytics("am2");
+    }catch(err){
+        console.log(`🔴 Error while handling analytics(pre)`)
+    }
+
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
     return res.send(am2AppFlow);
 };
@@ -3888,6 +4123,14 @@ let ap2InspectionFlow = (req, res) => {
 
 //economics
 let econoFlow = (req, res) => {
+
+    //analytics
+    try{
+        handleAnalytics("econo");
+    }catch(err){
+        console.log(`🔴 Error while handling analytics(pre)`)
+    }
+
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
     return res.send(econoAppFlow);
 };
@@ -3937,6 +4180,14 @@ let fm2MiscFlow = (req, res) => {
 
 //wp2
 let wp2Flow = (req, res) => {
+
+    //analytics
+    try{
+        handleAnalytics("wp2");
+    }catch(err){
+        console.log(`🔴 Error while handling analytics(pre)`)
+    }
+
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
     return res.send(wp2AppFlow);
 };
@@ -3955,6 +4206,14 @@ let wp2ClasLecFlow = (req, res) => {
 
 //ym2
 let ym2Flow = (req, res) => {
+
+    //analytics
+    try{
+        handleAnalytics("ym2");
+    }catch(err){
+        console.log(`🔴 Error while handling analytics(pre)`)
+    }
+
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
     return res.send(ym2AppFlow);
 };
