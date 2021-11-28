@@ -5,6 +5,11 @@ require("dotenv").config();
 let Feed = require('rss-to-json');
 
 
+// analytics 
+// const fs = require("fs");
+// const analDB = '../../data.json'; //path
+// const jsonDb = require(analDB);
+
 let deploymentEnvDetector = () => {
     let appProduction = process.env.appProduction;
     console.log(`App Production: ${appProduction}`)
@@ -16,6 +21,17 @@ let deploymentEnvDetector = () => {
         return urlModifier = '://'
     }
 }
+
+// let handleAnalytics = () => {
+//   //async
+//   fs.writeFile(analDB, JSON.stringify(jsonDb), function writeJSON(err) {
+//     if (err) {
+//       return console.log(err);
+//     }
+//     console.log(JSON.stringify(jsonDb));
+//     console.log(`writing to ${analDB}`);
+//   });
+// }
 
 
 let noteLevel1Subs = require('./academic/notes/level1/level1Subs')
@@ -917,8 +933,22 @@ let level4Notes = (req, res) => {
 
 //level1 -> math1
 let math1 = (req, res) => {
-    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
-    return res.send(math1Flow);
+
+//  jsonDb.math1Count += 1;
+
+//  //fs.writeFileSync(analDB, JSON.stringify(jsonDb));
+ 
+//  //async
+//  fs.writeFile(analDB, JSON.stringify(jsonDb), function writeJSON(err) {
+//     if (err) {
+//       return console.log(err);
+//     }
+//     console.log(JSON.stringify(jsonDb));
+//     console.log(`writing to ${analDB}`);
+//   });
+
+  console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`);
+  return res.send(math1Flow);
 };
 
 let math1Solve2018Flow = (req, res) => {

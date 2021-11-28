@@ -20,6 +20,7 @@
     "express": "^4.17.1",
     "firebase-admin": "^9.11.1",
     "get-caller-file": "^2.0.5",
+    "json-server": "^0.17.0",
     "mongodb": "^4.1.1",
     "mongoose": "^5.13.9",
     "request": "^2.88.2",
