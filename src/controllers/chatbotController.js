@@ -3154,9 +3154,9 @@ function handleMessage(sender_psid, received_message) {
   //default reply
   else if (received_message.text) {
     try {
-      if(received_message.text.length >= 2){
-        handleMissedWordPosting(received_message.text);
-      }
+      console.log(`Missed word length: ${received_message.text.length}`)
+      handleMissedWordPosting(received_message.text);
+      console.log(`🟢 Succesfully posted missed word`);
     } catch (err) {
       console.log(`🔴 Error occurred while handling missed word posting(pre)`);
     }
