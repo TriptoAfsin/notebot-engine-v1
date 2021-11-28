@@ -2443,7 +2443,7 @@ function handleMessage(sender_psid, received_message) {
 
 
   //gfBf
-  else if (wordIncludes(gfBfWords, received_message)) {
+  else if (wordIncludesWhole(gfBfWords, received_message)) {
     response = textBlockGen(`${randomPicker(gfBfReply)}`)
     callSendAPI(sender_psid, response);
   }
@@ -3154,9 +3154,11 @@ function handleMessage(sender_psid, received_message) {
   //default reply
   else if (received_message.text) {
     try {
-      console.log(`Missed word length: ${received_message.text.length}`)
-      handleMissedWordPosting(received_message.text);
-      console.log(`🟢 Succesfully posted missed word`);
+      if(received_message.text.length >= 2){
+        console.log(`Missed word length: ${received_message.text.length}`)
+        handleMissedWordPosting(received_message.text);
+        console.log(`🟢 Succesfully posted missed word`);
+      }
     } catch (err) {
       console.log(`🔴 Error occurred while handling missed word posting(pre)`);
     }
