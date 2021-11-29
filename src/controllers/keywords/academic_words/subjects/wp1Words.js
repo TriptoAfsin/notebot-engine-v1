@@ -3,6 +3,8 @@ const wp1_words = [
     "wp-i",
     "wp 1",
     "wp i",
+    "wp-1",
+    "wpe-1",
     "wet process 1",
 ];
 

@@ -2,7 +2,8 @@ const sss2_words = [
     "sss2", 
     "sss-ii",
     "sss 2",
-    "sss ii"
+    "sss ii",
+    "sss-2"
 ];
 
 

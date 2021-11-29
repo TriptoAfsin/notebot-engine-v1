@@ -2677,7 +2677,7 @@ function handleMessage(sender_psid, received_message) {
   }
 
   //academic -> WP1
-  else if (wordIncludes(wp1, received_message)) {
+  else if (wordIncludesWhole(wp1, received_message)) {
     //analytics
     try {
       handleAnalytics("wp1");
@@ -2689,7 +2689,7 @@ function handleMessage(sender_psid, received_message) {
   }
 
   //academic -> WP2
-  else if (wordIncludes(wp2, received_message)) {
+  else if (wordIncludesWhole(wp2, received_message)) {
     //analytics
     try {
       handleAnalytics("wp2");
