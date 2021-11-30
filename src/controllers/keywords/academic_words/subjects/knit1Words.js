@@ -4,6 +4,8 @@ const knit1_words = [
     "knitting1",
     "knitting-i",
     "knitting i",
+    "knitting-1",
+    "knitting 1",
 ];
 
 

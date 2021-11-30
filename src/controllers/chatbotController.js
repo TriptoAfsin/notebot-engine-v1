@@ -2589,7 +2589,7 @@ function handleMessage(sender_psid, received_message) {
   }
 
   //academic -> tqm
-  else if (wordIncludes(tqm, received_message)) {
+  else if (wordIncludesWhole(tqm, received_message)) {
     //analytics
     try {
       handleAnalytics("tqm");
@@ -2677,7 +2677,7 @@ function handleMessage(sender_psid, received_message) {
   }
 
   //academic -> WP1
-  else if (wordIncludesWhole(wp1, received_message)) {
+  else if (wordIncludes(wp1, received_message)) {
     //analytics
     try {
       handleAnalytics("wp1");
@@ -2689,7 +2689,7 @@ function handleMessage(sender_psid, received_message) {
   }
 
   //academic -> WP2
-  else if (wordIncludesWhole(wp2, received_message)) {
+  else if (wordIncludes(wp2, received_message)) {
     //analytics
     try {
       handleAnalytics("wp2");
@@ -3130,7 +3130,7 @@ function handleMessage(sender_psid, received_message) {
   //academic -> acfd
   else if (wordIncludes(acfd_words, received_message)) {
     magicFunc(sender_psid, acfd_flow);
-  } else if (wordIncludes(lab_report, received_message)) {
+  } else if (wordIncludesWhole(lab_report, received_message)) {
     magicFunc(sender_psid, labFlow);
   } else if (wordIs(onlylabWord, received_message)) {
     magicFunc(sender_psid, labFlow);

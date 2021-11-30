@@ -2,6 +2,7 @@ const tqm_words = [
     "tqm", 
     "quality",
     "total quality management",
+    "qm"
 ];
 
 
