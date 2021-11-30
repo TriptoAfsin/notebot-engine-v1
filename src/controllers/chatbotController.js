@@ -32,6 +32,23 @@ let handleAnalytics =  async(subName) => {
   }
 }
 
+let handleAnalyticsLabs =  async(subName) => {
+  //console.log(`${process.env.analyticsServerUrl}/notes/${subName}?adminKey=${process.env.analyticsAuthKey}`)
+  if(process.env.collectAnalytics === "true"){
+      try{
+          const result = await axios.get(`${process.env.analyticsServerUrl}/labs/${subName}?adminKey=${process.env.analyticsAuthKey}`,
+          console.log(`🟢 Analytics was handled successfully`)
+   );
+      }catch(err){
+          //console.log(err)
+          console.log(`🔴 Error occurred while handling analytics(${subName})`)
+      }
+  }
+  else{
+      console.log(`🟠 Analytics is disabled`)
+  }
+}
+
 let handleMissedWordPosting = async missedWord => {
   try {
     const result = await axios
@@ -5887,6 +5904,12 @@ let handlePostback = async (sender_psid, received_postback) => {
 
   //lab -> che1
   else if (payload === 'che1_lab_flow') {
+    //analytics
+    try {
+      handleAnalyticsLabs("chem1");
+    } catch (err) {
+      console.log(`🔴 Error while handling analytics(pre)`);
+    }
     magicFunc(sender_psid, labFlow_che1);
   }
   else if (payload === 'che1_procedureSheet_flow') {
@@ -5911,6 +5934,14 @@ let handlePostback = async (sender_psid, received_postback) => {
 
   //lab -> phy1
   else if (payload === 'phy1_lab_flow') {
+
+    //analytics
+    try {
+      handleAnalyticsLabs("phy1");
+    } catch (err) {
+      console.log(`🔴 Error while handling analytics(pre)`);
+    }
+
     magicFunc(sender_psid, labFlow_phy1);
   }
   else if (payload === 'phy1_m1_flow') {
@@ -5947,6 +5978,12 @@ let handlePostback = async (sender_psid, received_postback) => {
 
   //lab -> bce
   else if (payload === 'bce_lab_flow') {
+    //analytics
+    try {
+      handleAnalyticsLabs("bce");
+    } catch (err) {
+      console.log(`🔴 Error while handling analytics(pre)`);
+    }
     magicFunc(sender_psid, labFlow_bce);
   }
   else if (payload === 'bce_lab_read_flow') {
@@ -5962,6 +5999,12 @@ let handlePostback = async (sender_psid, received_postback) => {
 
   //lab -> phy2
   else if (payload === 'phy2_lab_flow') {
+    //analytics
+    try {
+      handleAnalyticsLabs("phy2");
+    } catch (err) {
+      console.log(`🔴 Error while handling analytics(pre)`);
+    }
     magicFunc(sender_psid, labFlow_phy2);
   }
   else if (payload === 'phy2_lab_e1_flow') {
@@ -6004,6 +6047,12 @@ let handlePostback = async (sender_psid, received_postback) => {
 
   //lab -> che2
   else if (payload === 'che2_lab_flow') {
+    //analytics
+    try {
+      handleAnalyticsLabs("chem2");
+    } catch (err) {
+      console.log(`🔴 Error while handling analytics(pre)`);
+    }
     magicFunc(sender_psid, labFlow_che2);
   }
   else if (payload === 'che2_lab_physicalProp_flow') {
@@ -6048,6 +6097,12 @@ let handlePostback = async (sender_psid, received_postback) => {
 
   //lab -> cp
   else if (payload === 'cp_lab_flow') {
+    //analytics
+    try {
+      handleAnalyticsLabs("cp");
+    } catch (err) {
+      console.log(`🔴 Error while handling analytics(pre)`);
+    }
     magicFunc(sender_psid, labFlow_cp);
   }
   else if (payload === 'cp_lab_intro') {
@@ -6077,6 +6132,12 @@ let handlePostback = async (sender_psid, received_postback) => {
 
   //lab -> ap1
   else if (payload === 'ap1_lab_flow') {
+    //analytics
+    try {
+      handleAnalyticsLabs("ap1");
+    } catch (err) {
+      console.log(`🔴 Error while handling analytics(pre)`);
+    }
     magicFunc(sender_psid, labFlow_ap1);
   }
   else if (payload === 'ap1_lab_attachingInterline_flow') {
@@ -6094,6 +6155,12 @@ let handlePostback = async (sender_psid, received_postback) => {
 
   //lab -> msp
   else if (payload === 'msp_lab_flow') {
+    //analytics
+    try {
+      handleAnalyticsLabs("msp");
+    } catch (err) {
+      console.log(`🔴 Error while handling analytics(pre)`);
+    }
     magicFunc(sender_psid, labFlow_msp);
   }
   else if (payload === 'msp_lab_layout_flow') {
@@ -6141,7 +6208,12 @@ let handlePostback = async (sender_psid, received_postback) => {
 
 
   //lab -> am1
-  else if (payload === 'am1_lab_flow') {
+  else if (payload === 'am1_lab_flow') {//analytics
+    try {
+      handleAnalyticsLabs("am1");
+    } catch (err) {
+      console.log(`🔴 Error while handling analytics(pre)`);
+    }
     magicFunc(sender_psid, labFlow_am1);
   }
   else if (payload === 'am1_lab_layoutPlan_flow') {
@@ -6156,6 +6228,12 @@ let handlePostback = async (sender_psid, received_postback) => {
 
   //lab -> wp1
   else if (payload === 'wp1_lab_flow') {
+    //analytics
+    try {
+      handleAnalyticsLabs("wp1");
+    } catch (err) {
+      console.log(`🔴 Error while handling analytics(pre)`);
+    }
     magicFunc(sender_psid, labFlow_wp1);
   }
   else if (payload === 'wp1_lab_layout_flow') {
@@ -6233,6 +6311,12 @@ let handlePostback = async (sender_psid, received_postback) => {
 
   //lab -> ym1
   else if (payload === 'ym1_lab_flow') {
+    //analytics
+    try {
+      handleAnalyticsLabs("ym1");
+    } catch (err) {
+      console.log(`🔴 Error while handling analytics(pre)`);
+    }
     magicFunc(sender_psid, labFlow_ym1);
   }
   else if (payload === 'ym1_lab_layout_flow') {
@@ -6266,6 +6350,12 @@ let handlePostback = async (sender_psid, received_postback) => {
 
   //lab -> fm1
   else if (payload === 'fm1_lab_flow') {
+    //analytics
+    try {
+      handleAnalyticsLabs("fm1");
+    } catch (err) {
+      console.log(`🔴 Error while handling analytics(pre)`);
+    }
     magicFunc(sender_psid, labFlow_fm1);
   }
   else if (payload === 'fm1_lab_layout_flow') {
@@ -6302,6 +6392,12 @@ let handlePostback = async (sender_psid, received_postback) => {
 
   //lab -> ttqc
   else if (payload === 'ttqc_lab_flow') {
+    //analytics
+    try {
+      handleAnalyticsLabs("ttqc");
+    } catch (err) {
+      console.log(`🔴 Error while handling analytics(pre)`);
+    }
     magicFunc(sender_psid, labFlow_ttqc);
   }
   else if (payload === 'ttqc_lab_atmosphere_flow') {
@@ -6341,6 +6437,12 @@ let handlePostback = async (sender_psid, received_postback) => {
 
   //lab -> mp
   else if (payload === 'mp_lab_flow') {
+    //analytics
+    try {
+      handleAnalyticsLabs("mp");
+    } catch (err) {
+      console.log(`🔴 Error while handling analytics(pre)`);
+    }
     magicFunc(sender_psid, labFlow_mp);
   }
   else if (payload === 'mp_lab_lathe_flow') {
@@ -6368,6 +6470,12 @@ let handlePostback = async (sender_psid, received_postback) => {
 
   //lab -> fme
   else if (payload === 'fme_lab_flow') {
+    //analytics
+    try {
+      handleAnalyticsLabs("fme");
+    } catch (err) {
+      console.log(`🔴 Error while handling analytics(pre)`);
+    }
     magicFunc(sender_psid, labFlow_fme);
   }
   else if (payload === 'fme_lab_airCompressor_flow') {
@@ -6454,17 +6562,35 @@ let handlePostback = async (sender_psid, received_postback) => {
 
   //lab -> fsd
   else if (payload === 'fsd_lab_flow') {
+    //analytics
+    try {
+      handleAnalyticsLabs("fsd");
+    } catch (err) {
+      console.log(`🔴 Error while handling analytics(pre)`);
+    }
     magicFunc(sender_psid, labFlow_fsd);
   }
 
 
   //lab -> lss
   else if (payload === 'lss_lab_flow') {
+    //analytics
+    try {
+      handleAnalyticsLabs("lss");
+    } catch (err) {
+      console.log(`🔴 Error while handling analytics(pre)`);
+    }
     magicFunc(sender_psid, labFlow_lss);
   }
 
   //lab -> wp2
   else if (payload === 'wp2_lab_flow') {
+    //analytics
+    try {
+      handleAnalyticsLabs("wp2");
+    } catch (err) {
+      console.log(`🔴 Error while handling analytics(pre)`);
+    }
     magicFunc(sender_psid, labFlow_wp2);
   }
 
@@ -6485,17 +6611,35 @@ let handlePostback = async (sender_psid, received_postback) => {
 
   //lab -> ym2
   else if (payload === 'ym2_lab_flow') {
+    //analytics
+    try {
+      handleAnalyticsLabs("ym2");
+    } catch (err) {
+      console.log(`🔴 Error while handling analytics(pre)`);
+    }
     magicFunc(sender_psid, labFlow_ym2);
   }
 
   //lab -> ap2
   else if (payload === 'ap2_lab_flow') {
+    //analytics
+    try {
+      handleAnalyticsLabs("ap2");
+    } catch (err) {
+      console.log(`🔴 Error while handling analytics(pre)`);
+    }
     magicFunc(sender_psid, labFlow_ap2);
   }
 
 
   //lab -> fm2
   else if (payload === 'fm2_lab_flow') {
+    //analytics
+    try {
+      handleAnalyticsLabs("fm2");
+    } catch (err) {
+      console.log(`🔴 Error while handling analytics(pre)`);
+    }
     magicFunc(sender_psid, labFlow_fm2);
   }
   else if (payload === 'fm2_lab_1_flow') {
