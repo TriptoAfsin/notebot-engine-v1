@@ -2866,7 +2866,7 @@ function handleMessage(sender_psid, received_message) {
   }
 
   //academic -> ace
-  else if (wordIs(ace, received_message)) {
+  else if (wordIncludesWhole(ace, received_message)) {
     //analytics
     try {
       handleAnalytics("ace");

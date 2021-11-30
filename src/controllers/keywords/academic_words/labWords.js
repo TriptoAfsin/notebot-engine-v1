@@ -7,8 +7,10 @@ const lab = [
     "ল্যাব",
     "lab reports📋",
     "lab reports",
-    "labs"
-
+    "labs",
+    "msp",
+    "ap1",
+    "ap 1",
 ];
 
 
