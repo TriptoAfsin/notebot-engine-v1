@@ -3100,7 +3100,7 @@ function handleMessage(sender_psid, received_message) {
   else if (wordIncludes(math2, received_message)) {
     //analytics
     try {
-      handleAnalytics("math1");
+      handleAnalytics("math2");
     } catch (err) {
       console.log(`🔴 Error while handling analytics(pre)`);
     }
