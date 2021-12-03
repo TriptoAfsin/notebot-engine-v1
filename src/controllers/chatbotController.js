@@ -102,6 +102,9 @@ const chatBotService = require('../services/chatBotService');
 //prevCustomer
 const prevUserFlow = require('./flows/botReplies/prevCustomerReply');
 
+//wifi pass words
+const wifiPassWords = require('./keywords/wifiWords');
+
 //bothSubj Words
 const bothYMWords = require('./keywords/academic_words/subjects/bothYM');
 const bothAMWords = require('./keywords/academic_words/subjects/bothAM');
@@ -2462,6 +2465,12 @@ function handleMessage(sender_psid, received_message) {
   //gfBf
   else if (wordIncludesWhole(gfBfWords, received_message)) {
     response = textBlockGen(`${randomPicker(gfBfReply)}`)
+    callSendAPI(sender_psid, response);
+  }
+
+  //wifi
+  else if (wordIncludesWhole(wifiPassWords, received_message)) {
+    response = textBlockGen(`🟠 BUTEX Students Wifi Hotsport Name : Students\n🟢 BUTEX Students Wifi Password: 1234567890`)
     callSendAPI(sender_psid, response);
   }
 
