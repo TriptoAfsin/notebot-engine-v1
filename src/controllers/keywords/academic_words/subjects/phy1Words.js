@@ -9,7 +9,11 @@ const phy1_words = [
     "ফিজিক্স ১",
     "ফিজিক্স 1 ",
     "পদার্থ  ১",
-    "phy-1"
+    "phy-1",
+    "physics-i",
+    "physics -1",
+    "viscosity",
+    "light"
 ];
 
 

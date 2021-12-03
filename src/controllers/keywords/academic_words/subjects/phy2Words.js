@@ -9,7 +9,9 @@ const phy2_words = [
     "ফিজিক্স 2",
     "ফিজিক্স ২",
     "পদার্থ  ২ ",
-    "phy-2"
+    "phy-2",
+    "physics-ii",
+    "physics -2"
 ];
 
 
