@@ -2470,7 +2470,7 @@ function handleMessage(sender_psid, received_message) {
 
   //wifi
   else if (wordIncludesWhole(wifiPassWords, received_message)) {
-    response = textBlockGen(`🟠 BUTEX Students Wifi Hotsport Name : Students\n🟢 BUTEX Students Wifi Password: 1234567890`)
+    response = textBlockGen(`🟠 Hotspot Name : Students\n\n🟢 Wifi Password: 1234567890`)
     callSendAPI(sender_psid, response);
   }
 
