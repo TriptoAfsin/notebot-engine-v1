@@ -879,8 +879,11 @@ let initWebRoutes = (app) => {
     router.get("/app/labs/1/phy2/phy2_lab_h1_flow", appController.labPhy2H1Flow);
     router.get("/app/labs/1/phy2/phy2_lab_h2_flow", appController.labPhy2H2Flow);
     router.get("/app/labs/1/phy2/phy2_lab_h3_flow", appController.labPhy2H3Flow);
-    
 
+
+
+    //404 route
+    router.get("*", appController.notFound);
 
     
 

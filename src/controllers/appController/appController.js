@@ -4637,6 +4637,16 @@ let labPhy2M1Flow = (req, res) => {
 
 
 
+
+//404 Route
+let notFound = (req, res) => {
+    return res.status(404).json(
+        {
+            "Error": `404 Not Found`,
+            "isErr": true
+        }
+    ) 
+}
 /*-----------------------------------------------------------------------------------------------------------------------------------*/ 
 
 let labs = (req, res) => {
@@ -5446,4 +5456,8 @@ module.exports = {
     labChem2CarboxyIdenFlow: labChem2CarboxyIdenFlow,
     labChem2NIdenFlow: labChem2NIdenFlow,
     labChem2AmountNa2CO3Flow: labChem2AmountNa2CO3Flow,
+
+
+
+    notFound: notFound,
 }
