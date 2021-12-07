@@ -43,6 +43,24 @@ let handleAnalytics =  async(subName) => {
 }
 
 
+let handleAnalyticsLabs =  async(subName) => {
+    //console.log(`${process.env.analyticsServerUrl}/notes/${subName}?adminKey=${process.env.analyticsAuthKey}`)
+    if(process.env.collectAnalytics === "true"){
+        try{
+            const result = await axios.get(`${process.env.analyticsServerUrl}/labs/${subName}?adminKey=${process.env.analyticsAuthKey}`,
+            console.log(`🟢 Analytics was handled successfully`)
+     );
+        }catch(err){
+            //console.log(err)
+            console.log(`🔴 Error occurred while handling analytics(${subName})`)
+        }
+    }
+    else{
+        console.log(`🟠 Analytics is disabled`)
+    }
+  }
+
+
 let noteLevel1Subs = require('./academic/notes/level1/level1Subs')
 let noteLevel2Subs = require('./academic/notes/level2/level2Subs')
 let noteLevel3Subs = require('./academic/notes/level3/level3Subs')
@@ -842,9 +860,50 @@ let chem1LabsMohr = require('./academic/labReport/level1/subs/chem1/topics/appCh
 let chem1LabsWetTest = require('./academic/labReport/level1/subs/chem1/topics/appChem1LabsWetTest')
 let chem1LabsTitration = require('./academic/labReport/level1/subs/chem1/topics/appChem1LabsTitrations')
 
+//lab - chem2
+let chem2Labs = require('./academic/labReport/level1/subs/chem2/chem2Labs')
+let chem2LabsPhyProp = require('./academic/labReport/level1/subs/chem2/topics/appChem2LabsPhysProp')
+let chem2LabsLass1 = require('./academic/labReport/level1/subs/chem2/topics/appChem2LabsLassTest1')
+let chem2LabsLass2 = require('./academic/labReport/level1/subs/chem2/topics/appChem2LabsLassTest2')
+let chem2LabsSoluTest = require('./academic/labReport/level1/subs/chem2/topics/appChem2LabsSolubTest')
+let chem2LabsAlcIden = require('./academic/labReport/level1/subs/chem2/topics/appChem2LabsAlcIdentify')
+let chem2LabsStrengthH2O2 = require('./academic/labReport/level1/subs/chem2/topics/appChem2LabsStrengthH2O2')
+let chem2LabsAmountFe2 = require('./academic/labReport/level1/subs/chem2/topics/appChem2LabsAmountFe2')
+let chem2LabsCarbonylIden = require('./academic/labReport/level1/subs/chem2/topics/appChem2LabsCarbonylIden')
+let chem2LabsCarboxyIden = require('./academic/labReport/level1/subs/chem2/topics/appChem2LabsCarboxylicIden')
+let chem2LabsNIden = require('./academic/labReport/level1/subs/chem2/topics/appChem2LabsNIden')
+let chem2LabsAmountNa2CO3 = require('./academic/labReport/level1/subs/chem2/topics/appChem2LabsAmountNa2CO3')
+
+
 
 //lab - phy1
 let phy1Labs = require('./academic/labReport/level1/subs/phy1/phy1Labs')
+let phy1LabsM1 = require('./academic/labReport/level1/subs/phy1/topics/appPhy1LabsM1')
+let phy1LabsM2 = require('./academic/labReport/level1/subs/phy1/topics/appPhy1LabsM2')
+let phy1LabsM3 = require('./academic/labReport/level1/subs/phy1/topics/appPhy1LabsM3')
+let phy1LabsM4 = require('./academic/labReport/level1/subs/phy1/topics/appPhy1LabsM4')
+let phy1LabsM5 = require('./academic/labReport/level1/subs/phy1/topics/appPhy1LabsM5')
+let phy1LabsM6 = require('./academic/labReport/level1/subs/phy1/topics/appPhy1LabsM6')
+let phy1LabsO1 = require('./academic/labReport/level1/subs/phy1/topics/appPhy1LabsO1')
+let phy1LabsO2 = require('./academic/labReport/level1/subs/phy1/topics/appPhy1LabsO2')
+let phy1LabsO3 = require('./academic/labReport/level1/subs/phy1/topics/appPhy1LabsO3')
+let phy1LabsO4 = require('./academic/labReport/level1/subs/phy1/topics/appPhy1LabsO4')
+
+
+//lab - phy2
+let phy2Labs = require('./academic/labReport/level1/subs/phy2/phy2Labs')
+let phy2LabsE1 = require('./academic/labReport/level1/subs/phy2/topics/appPhy2LabsE1')
+let phy2LabsE2 = require('./academic/labReport/level1/subs/phy2/topics/appPhy2LabsE2')
+let phy2LabsE3 = require('./academic/labReport/level1/subs/phy2/topics/appPhy2LabsE3')
+let phy2LabsE4 = require('./academic/labReport/level1/subs/phy2/topics/appPhy2LabsE4')
+let phy2LabsE5 = require('./academic/labReport/level1/subs/phy2/topics/appPhy2LabsE5')
+let phy2LabsE6 = require('./academic/labReport/level1/subs/phy2/topics/appPhy2LabsE6')
+let phy2LabsE7 = require('./academic/labReport/level1/subs/phy2/topics/appPhy2LabsE7')
+let phy2LabsE8 = require('./academic/labReport/level1/subs/phy2/topics/appPhy2LabsE8')
+let phy2LabsH1 = require('./academic/labReport/level1/subs/phy2/topics/appPhy2LabsH1')
+let phy2LabsH2 = require('./academic/labReport/level1/subs/phy2/topics/appPhy2LabsH2')
+let phy2LabsH3 = require('./academic/labReport/level1/subs/phy2/topics/appPhy2LabsH3')
+let phy2LabsM1 = require('./academic/labReport/level1/subs/phy2/topics/appPhy2LabsM1')
 
 
 
@@ -4320,6 +4379,14 @@ let tamIntroMerchFlow = (req, res) => {
 //labs
 //chem1
 let labChem1Flow = (req, res) => {
+
+    //analytics
+    try {
+        handleAnalyticsLabs("chem1");
+      } catch (err) {
+        console.log(`🔴 Error while handling analytics(pre)`);
+      }
+
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
     return res.send(chem1Labs);
 };
@@ -4354,11 +4421,215 @@ let labChem1TitrationFlow = (req, res) => {
     return res.send(chem1LabsTitration);
 };
 
+//chem2
+let labChem2Flow = (req, res) => {
+
+    //analytics
+    try {
+        handleAnalyticsLabs("chem2");
+      } catch (err) {
+        console.log(`🔴 Error while handling analytics(pre)`);
+      }
+
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(chem2Labs);
+};
+
+let labChem2PhysPropFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(chem2LabsPhyProp);
+};
+
+let labChem2Lass1Flow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(chem2LabsLass1);
+};
+
+let labChem2Lass2Flow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(chem2LabsLass2);
+};
+
+let labChem2SoluTestFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(chem2LabsSoluTest);
+};
+
+let labChem2AlcIdenFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(chem2LabsAlcIden);
+};
+
+let labChem2StrengthH2O2Flow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(chem2LabsStrengthH2O2);
+};
+
+let labChem2AmountFe2Flow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(chem2LabsAmountFe2);
+};
+
+let labChem2CarbonylIdenFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(chem2LabsCarbonylIden);
+};
+
+let labChem2CarboxyIdenFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(chem2LabsCarboxyIden);
+};
+
+let labChem2NIdenFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(chem2LabsNIden);
+};
+
+let labChem2AmountNa2CO3Flow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(chem2LabsAmountNa2CO3);
+};
+
 
 //labs - phy1
 let labPhy1Flow = (req, res) => {
+
+    //analytics
+    try {
+        handleAnalyticsLabs("phy1");
+      } catch (err) {
+        console.log(`🔴 Error while handling analytics(pre)`);
+      }
+
+
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
     return res.send(phy1Labs);
+};
+
+let labPhy1M1Flow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(phy1LabsM1);
+};
+
+let labPhy1M2Flow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(phy1LabsM2);
+};
+
+let labPhy1M3Flow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(phy1LabsM3);
+};
+
+let labPhy1M4Flow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(phy1LabsM4);
+};
+
+let labPhy1M5Flow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(phy1LabsM5);
+};
+
+let labPhy1M6Flow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(phy1LabsM6);
+};
+
+let labPhy1O1Flow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(phy1LabsO1);
+};
+
+let labPhy1O2Flow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(phy1LabsO2);
+};
+
+let labPhy1O3Flow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(phy1LabsO3);
+};
+
+let labPhy1O4Flow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(phy1LabsO4);
+};
+
+
+//labs - phy2
+let labPhy2Flow = (req, res) => {
+
+    //analytics
+    try {
+        handleAnalyticsLabs("phy2");
+      } catch (err) {
+        console.log(`🔴 Error while handling analytics(pre)`);
+      }
+
+
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(phy2Labs);
+};
+
+let labPhy2E1Flow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(phy2LabsE1);
+};
+
+let labPhy2E2Flow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(phy2LabsE2);
+};
+
+let labPhy2E3Flow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(phy2LabsE3);
+};
+
+let labPhy2E4Flow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(phy2LabsE4);
+};
+
+let labPhy2E5Flow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(phy2LabsE5);
+};
+
+let labPhy2E6Flow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(phy2LabsE6);
+};
+
+let labPhy2E7Flow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(phy2LabsE7);
+};
+
+let labPhy2E8Flow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(phy2LabsE8);
+};
+
+let labPhy2H1Flow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(phy2LabsH1);
+};
+
+let labPhy2H2Flow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(phy2LabsH2);
+};
+
+let labPhy2H3Flow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(phy2LabsH3);
+};
+
+let labPhy2M1Flow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(phy2LabsM1);
 };
 
 
@@ -5138,4 +5409,41 @@ module.exports = {
     labChem1TitrationFlow: labChem1TitrationFlow,
 
     labPhy1Flow: labPhy1Flow,
+    labPhy1M1Flow: labPhy1M1Flow,
+    labPhy1M2Flow: labPhy1M2Flow,
+    labPhy1M3Flow: labPhy1M3Flow,
+    labPhy1M4Flow: labPhy1M4Flow,
+    labPhy1M5Flow: labPhy1M5Flow,
+    labPhy1M6Flow: labPhy1M6Flow,
+    labPhy1O1Flow: labPhy1O1Flow,
+    labPhy1O2Flow: labPhy1O2Flow,
+    labPhy1O3Flow: labPhy1O3Flow,
+    labPhy1O4Flow: labPhy1O4Flow,
+
+    labPhy2Flow :labPhy2Flow,
+    labPhy2E1Flow: labPhy2E1Flow,
+    labPhy2E2Flow: labPhy2E2Flow,
+    labPhy2E3Flow: labPhy2E3Flow,
+    labPhy2E4Flow: labPhy2E4Flow,
+    labPhy2E5Flow: labPhy2E5Flow,
+    labPhy2E6Flow: labPhy2E6Flow,
+    labPhy2E7Flow: labPhy2E7Flow,
+    labPhy2E8Flow: labPhy2E8Flow,
+    labPhy2H1Flow: labPhy2H1Flow,
+    labPhy2H2Flow: labPhy2H2Flow,
+    labPhy2H3Flow: labPhy2H3Flow,
+    labPhy2M1Flow: labPhy2M1Flow,
+
+    labChem2Flow :labChem2Flow,
+    labChem2PhysPropFlow: labChem2PhysPropFlow,
+    labChem2Lass1Flow: labChem2Lass1Flow,
+    labChem2Lass2Flow: labChem2Lass2Flow,
+    labChem2SoluTestFlow: labChem2SoluTestFlow,
+    labChem2AlcIdenFlow: labChem2AlcIdenFlow,
+    labChem2StrengthH2O2Flow: labChem2StrengthH2O2Flow,
+    labChem2AmountFe2Flow: labChem2AmountFe2Flow,
+    labChem2CarbonylIdenFlow: labChem2CarbonylIdenFlow,
+    labChem2CarboxyIdenFlow: labChem2CarboxyIdenFlow,
+    labChem2NIdenFlow: labChem2NIdenFlow,
+    labChem2AmountNa2CO3Flow: labChem2AmountNa2CO3Flow,
 }

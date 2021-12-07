@@ -836,9 +836,49 @@ let initWebRoutes = (app) => {
     router.get("/app/labs/1/chem1/che1_wetTest_flow", appController.labChem1WetTestFlow);
     router.get("/app/labs/1/chem1/che1_titration_flow", appController.labChem1TitrationFlow);
 
+    //lab- chem2
+    router.get("/app/labs/1/chem2", appController.labChem2Flow);
+    router.get("/app/labs/1/chem2/che2_lab_physicalProp_flow", appController.labChem2PhysPropFlow);
+    router.get("/app/labs/1/chem2/che2_lab_lassaignesTest_flow", appController.labChem2Lass1Flow);
+    router.get("/app/labs/1/chem2/che2_lab_solubilityTest_flow", appController.labChem2SoluTestFlow);
+    router.get("/app/labs/1/chem2/che2_lab_alcoholIdentify_flow", appController.labChem2AlcIdenFlow);
+    router.get("/app/labs/1/chem2/che2_lab_lassaignesTest2_flow", appController.labChem2Lass2Flow);
+    router.get("/app/labs/1/chem2/che2_lab_h2o2_flow", appController.labChem2StrengthH2O2Flow);
+    router.get("/app/labs/1/chem2/che2_lab_amountofFe2_flow", appController.labChem2AmountFe2Flow);
+    router.get("/app/labs/1/chem2/che2_lab_carbonylIdentify_flow", appController.labChem2CarbonylIdenFlow);
+    router.get("/app/labs/1/chem2/che2_lab_Nidentity_flow", appController.labChem2NIdenFlow);
+    router.get("/app/labs/1/chem2/che2_lab_amountna2co3_flow", appController.labChem2AmountNa2CO3Flow);
+    router.get("/app/labs/1/chem2/che2_lab_carboxylicIdentity_flow", appController.labChem2CarboxyIdenFlow);
+
 
     //lab - phy1
     router.get("/app/labs/1/phy1", appController.labPhy1Flow);
+    router.get("/app/labs/1/phy1/phy1_m1_flow", appController.labPhy1M1Flow);
+    router.get("/app/labs/1/phy1/phy1_m2_flow", appController.labPhy1M2Flow);
+    router.get("/app/labs/1/phy1/phy1_m3_flow", appController.labPhy1M3Flow);
+    router.get("/app/labs/1/phy1/phy1_m4_flow", appController.labPhy1M4Flow);
+    router.get("/app/labs/1/phy1/phy1_m5_flow", appController.labPhy1M5Flow);
+    router.get("/app/labs/1/phy1/phy1_m6_flow", appController.labPhy1M6Flow);
+    router.get("/app/labs/1/phy1/phy1_o1_flow", appController.labPhy1O1Flow);
+    router.get("/app/labs/1/phy1/phy1_o2_flow", appController.labPhy1O2Flow);
+    router.get("/app/labs/1/phy1/phy1_o3_flow", appController.labPhy1O3Flow);
+    router.get("/app/labs/1/phy1/phy1_o4_flow", appController.labPhy1O4Flow);
+
+
+    //lab - phy2
+    router.get("/app/labs/1/phy2", appController.labPhy2Flow);
+    router.get("/app/labs/1/phy2/phy2_lab_e1_flow", appController.labPhy2E1Flow);
+    router.get("/app/labs/1/phy2/phy2_lab_e2_flow", appController.labPhy2E2Flow);
+    router.get("/app/labs/1/phy2/phy2_lab_e3_flow", appController.labPhy2E3Flow);
+    router.get("/app/labs/1/phy2/phy2_lab_e4_flow", appController.labPhy2E4Flow);
+    router.get("/app/labs/1/phy2/phy2_lab_e5_flow", appController.labPhy2E5Flow);
+    router.get("/app/labs/1/phy2/phy2_lab_e6_flow", appController.labPhy2E6Flow);
+    router.get("/app/labs/1/phy2/phy2_lab_e7_flow", appController.labPhy2E7Flow);
+    router.get("/app/labs/1/phy2/phy2_lab_e8_flow", appController.labPhy2E8Flow);
+    router.get("/app/labs/1/phy2/phy2_lab_m1_flow", appController.labPhy2M1Flow);
+    router.get("/app/labs/1/phy2/phy2_lab_h1_flow", appController.labPhy2H1Flow);
+    router.get("/app/labs/1/phy2/phy2_lab_h2_flow", appController.labPhy2H2Flow);
+    router.get("/app/labs/1/phy2/phy2_lab_h3_flow", appController.labPhy2H3Flow);
     
 
 
