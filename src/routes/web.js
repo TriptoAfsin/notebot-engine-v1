@@ -687,6 +687,7 @@ let initWebRoutes = (app) => {
 
     //ace
     router.get("/app/notes/3/ace", appController.aceFlow);
+    router.get("/app/notes/3/ace/ace_books_flow", appController.aceBooksFlow);
     router.get("/app/notes/3/ace/ace_introSys_flow", appController.aceIntroControlFlow);
     router.get("/app/notes/3/ace/ace_modleingFreq_flow", appController.aceModelFreqFlow);
     router.get("/app/notes/3/ace/ace_timeResponse_flow", appController.aceTimeResFlow);

@@ -729,6 +729,7 @@ let micCh5 = require('./academic/notes/level3/subs/mic/topics/appMicCh5')
 
 //ace
 let aceAppFlow = require('./academic/notes/level3/subs/ace/ace')
+let aceBooks = require('./academic/notes/level3/subs/ace/topics/appAceBooks')
 let aceIntroControl = require('./academic/notes/level3/subs/ace/topics/appAceIntroControl')
 let aceModelFreq = require('./academic/notes/level3/subs/ace/topics/appAceModelFreq')
 let aceTimeRes = require('./academic/notes/level3/subs/ace/topics/appAceTimeResponse')
@@ -4014,6 +4015,10 @@ let aceStructElementsFlow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
     return res.send(aceStructElements);
 };
+let aceBooksFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(aceBooks);
+};
 
 
 //acm
@@ -5331,6 +5336,7 @@ module.exports = {
     aceActuatorFlow: aceActuatorFlow,
     aceGripsFlow: aceGripsFlow,
     aceStructElementsFlow: aceStructElementsFlow,
+    aceBooksFlow: aceBooksFlow,
 
     acmFlow: acmFlow,
     acmBooksFlow: acmBooksFlow,
