@@ -1,14 +1,8 @@
-let tpTensileProp = [
-    {
-        "text": `Hand Note(Akib,2019)-
-        https://drive.google.com/file/d/1MVat9DovQD7WefDOGqyujVzv-ppP3d9P/view`
-    },
-    {
-        "text": `🔷Hand Note(Akib,2019)-
-        https://drive.google.com/file/d/1MVat9DovQD7WefDOGqyujVzv-ppP3d9P/view`
-    }
-]
+let textBlockGen = require('simple-messenger-blocks/textBlockGen');
 
+let tpTensileProp = [
+    textBlockGen(`🔷 Hand Note(Akib,2019)-\n\nhttps://drive.google.com/file/d/1MVat9DovQD7WefDOGqyujVzv-ppP3d9P/view`),
+]
 
 
 
