@@ -926,6 +926,7 @@ let initWebRoutes = (app) => {
 
     //syllabus
     router.get("/app/syllabus", appController.syllabusLevelFlow);
+    router.get("/app/syllabus/45", appController.syllabusBatch45Flow);
     router.get("/app/syllabus/45/ae", appController.syllabusBatch45AeFlow);
     router.get("/app/syllabus/45/ye", appController.syllabusBatch45YeFlow);
     router.get("/app/syllabus/45/fe", appController.syllabusBatch45FeFlow);
