@@ -767,6 +767,7 @@ let fsdPlainWeave = require('./academic/notes/level3/subs/fsd/topics/appFsdPlain
 let fsdTwill = require('./academic/notes/level3/subs/fsd/topics/appFsdTwill')
 let fsdFancy = require('./academic/notes/level3/subs/fsd/topics/appFsdFancy')
 let fsdColorWeave = require('./academic/notes/level3/subs/fsd/topics/appFsdColorWeave')
+let fsdSatinWeave = require('./academic/notes/level3/subs/fsd/topics/appFsdSatin')
 
 
 //am2
@@ -4170,6 +4171,11 @@ let fsdColorWeaveFlow = (req, res) => {
     return res.send(fsdColorWeave);
 };
 
+let fsdSatinWeaveFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(fsdSatinWeave);
+};
+
 
 //am2
 let am2Flow = (req, res) => {
@@ -5675,6 +5681,7 @@ module.exports = {
     fsdTwillFlow: fsdTwillFlow,
     fsdFancyFlow: fsdFancyFlow,
     fsdColorWeaveFlow: fsdColorWeaveFlow,
+    fsdSatinWeaveFlow: fsdSatinWeaveFlow,
 
     am2Flow: am2Flow,
     am2BooksFlow: am2BooksFlow,

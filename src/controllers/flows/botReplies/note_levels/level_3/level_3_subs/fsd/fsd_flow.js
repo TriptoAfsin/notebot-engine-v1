@@ -46,6 +46,7 @@ let fsdFlow = [
         [
             payloadBtnGen("Fancy Weave", "fsd_fancyWeave_flow"),
             payloadBtnGen("Color & Weave Eff.", "fsd_colorWeave_flow"),
+            payloadBtnGen("Satin Weave", "fsd_satin_flow"),
         ]
     ),
     grroupedButtonBlockGen(

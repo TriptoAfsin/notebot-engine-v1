@@ -1236,6 +1236,7 @@ const fsd_TwillWeave = require("./flows/botReplies/note_levels/level_3/level_3_s
 const fsd_books = require("./flows/botReplies/note_levels/level_3/level_3_subs/fsd/topics/fsdBooks");
 const fsd_Fancy = require("./flows/botReplies/note_levels/level_3/level_3_subs/fsd/topics/fsdFancy");
 const fsd_colorWeave = require("./flows/botReplies/note_levels/level_3/level_3_subs/fsd/topics/fsdColorWeave");
+const fsd_Satin = require("./flows/botReplies/note_levels/level_3/level_3_subs/fsd/topics/fsdSatin");
 
 //tqm
 const tqm_flow = require("./flows/botReplies/note_levels/level_3/level_3_subs/tqm/tqm_flow");
@@ -5554,6 +5555,9 @@ let handlePostback = async (sender_psid, received_postback) => {
   }
   else if (payload === 'fsd_colorWeave_flow') {
     magicFunc(sender_psid, fsd_colorWeave);
+  }
+  else if (payload === 'fsd_satin_flow') {
+    magicFunc(sender_psid, fsd_Satin);
   }
 
 
