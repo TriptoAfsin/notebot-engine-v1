@@ -881,6 +881,47 @@ let initWebRoutes = (app) => {
     router.get("/app/labs/1/phy2/phy2_lab_h2_flow", appController.labPhy2H2Flow);
     router.get("/app/labs/1/phy2/phy2_lab_h3_flow", appController.labPhy2H3Flow);
 
+    //lab - msp
+    router.get("/app/labs/1/msp", appController.labmspFlow);
+    router.get("/app/labs/1/msp/msp_lab_layout_flow", appController.labMspLayoutFlow);
+    router.get("/app/labs/1/msp/msp_lab_handTools_flow", appController.labMspHandToolsFlow);
+    router.get("/app/labs/1/msp/msp_lab_grindingMC_flow", appController.labMspLabsGrindingFlow);
+    router.get("/app/labs/1/msp/msp_lab_lathe_flow", appController.labMspLatheFlow);
+    router.get("/app/labs/1/msp/msp_lab_sqKey_flow", appController.labMspSqKeyFlow);
+    router.get("/app/labs/1/msp/msp_lab_matchingParts_flow", appController.labMspMatchingPartsFlow);
+    router.get("/app/labs/1/msp/msp_lab_milling_flow", appController.labMspMillingFlow);
+    router.get("/app/labs/1/msp/msp_lab_drilling_flow", appController.labMspDrillingFlow);
+    router.get("/app/labs/1/msp/msp_lab_shaper_flow", appController.labMspShaperFlow);
+    router.get("/app/labs/1/msp/msp_lab_welding_flow", appController.labMspWeldingFlow);
+    router.get("/app/labs/1/msp/msp_lab_introLight_flow", appController.labMspLightMcFlow);
+    router.get("/app/labs/1/msp/msp_lab_arcWelding_flow", appController.labMspArcWrldFlow);
+    router.get("/app/labs/1/msp/msp_lab_manuAssm_flow", appController.labMspMfgAssmFlow);
+    router.get("/app/labs/1/msp/msp_lab_mspQuiz_flow", appController.labMspQuizFlow);
+
+    //lab - cp
+    router.get("/app/labs/1/cp", appController.labCpFlow);
+    router.get("/app/labs/1/cp/cp_lab_intro", appController.labCp1Flow);
+    router.get("/app/labs/1/cp/cp_lab_condition", appController.labCp2Flow);
+    router.get("/app/labs/1/cp/cp_lab_arithmetic", appController.labCp3Flow);
+    router.get("/app/labs/1/cp/cp_lab_sumSeries", appController.labCp4Flow);
+    router.get("/app/labs/1/cp/cp_lab_array", appController.labCp5Flow);
+    router.get("/app/labs/1/cp/cp_lab_recursionFactorial", appController.labCp6Flow);
+    router.get("/app/labs/1/cp/cp_lab_recursionFibo", appController.labCp7Flow);
+    router.get("/app/labs/1/cp/cp_lab_Chapter", appController.labCp135Flow);
+
+    //lab - ap1
+    router.get("/app/labs/1/ap1", appController.labAp1Flow);
+    router.get("/app/labs/1/ap1/ap1_lab_attachingInterline_flow", appController.labAp1InterliningFlow);
+    router.get("/app/labs/1/ap1/ap1_lab_standardBody_flow", appController.labAp1StdBodyFlow);
+    router.get("/app/labs/1/ap1/ap1_lab_continuousFusing_flow", appController.labAp1FusingFlow);
+    router.get("/app/labs/1/ap1/ap1_lab_straightKnife_flow", appController.labAp1StrtKnifeFlow);
+
+    //lab - bce
+    router.get("/app/labs/1/bce", appController.labBceFlow);
+    router.get("/app/labs/1/bce/bce_lab_read_flow", appController.labBceReadFlow);
+    router.get("/app/labs/1/bce/bce_lab_listen_flow", appController.labBceListenFlow);
+    router.get("/app/labs/1/bce/bce_lab_sheet_flow", appController.labBceSheetFlow);
+
 
 
     //404 route

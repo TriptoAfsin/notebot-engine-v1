@@ -1,6 +1,6 @@
 let wp1Desizing = [
     {
-        "text": `🔷 Desizing Sheet(Tomal Sir, 2019)-\n\nhttps://drive.google.com/file/d/0B8xZXwxUW6rMNThVU25SVjJjZEUwSG85X0xidDBVajRIU05F/view?usp=sharing`
+        "text": `🔷 Desizing Sheet(Tomal Sir, 2019)-\n\nhttps://drive.google.com/file/d/0B8xZXwxUW6rMNThVU25SVjJjZEUwSG85X0xidDBVajRIU05F/view?usp=sharing&resourcekey=0-W6aPar4g25A1o8kqK2f8ig`
     },
     {
         "text": `🔷 Hand Note(Akib, 2019)-\n\nhttps://drive.google.com/file/d/1P03a6xXGABKc8ubcXmVOpX1cIcCwDeah/view`

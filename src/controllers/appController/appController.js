@@ -906,6 +906,48 @@ let phy2LabsH2 = require('./academic/labReport/level1/subs/phy2/topics/appPhy2La
 let phy2LabsH3 = require('./academic/labReport/level1/subs/phy2/topics/appPhy2LabsH3')
 let phy2LabsM1 = require('./academic/labReport/level1/subs/phy2/topics/appPhy2LabsM1')
 
+//lab - msp
+let mspLabs = require('./academic/labReport/level1/subs/msp/mspLabs')
+let mspLabsLayout = require('./academic/labReport/level1/subs/msp/topics/appMspLabLayout')
+let mspLabsHandTools = require('./academic/labReport/level1/subs/msp/topics/appMspLabHandTools')
+let mspLabsGrinding = require('./academic/labReport/level1/subs/msp/topics/appMspLabGrinding')
+let mspLabsLathe = require('./academic/labReport/level1/subs/msp/topics/appMspLabLathe')
+let mspLabsSqKey = require('./academic/labReport/level1/subs/msp/topics/appMspLabSqKey')
+let mspLabsMatchingParts = require('./academic/labReport/level1/subs/msp/topics/appMspLabMatchingParts')
+let mspLabsMillingMc = require('./academic/labReport/level1/subs/msp/topics/appMspLabMilling')
+let mspLabsDrilling = require('./academic/labReport/level1/subs/msp/topics/appMspLabDrilling')
+let mspLabsShaper = require('./academic/labReport/level1/subs/msp/topics/appMspLabShaper')
+let mspLabsWelding = require('./academic/labReport/level1/subs/msp/topics/appMspLabWelding')
+let mspLabsLightMc = require('./academic/labReport/level1/subs/msp/topics/appMspLabLightMc')
+let mspLabsArcWelding = require('./academic/labReport/level1/subs/msp/topics/appMspLabArcWelding')
+let mspLabsMfgAssm = require('./academic/labReport/level1/subs/msp/topics/appMspLabMfgAssembly')
+let mspLabsQuiz = require('./academic/labReport/level1/subs/msp/topics/appMspLabsQuiz')
+
+//lab - bce
+let bceLabs = require('./academic/labReport/level1/subs/bce/bceLabs')
+let bceLabListen = require('./academic/labReport/level1/subs/bce/topics/appBceLabsListen')
+let bceLabReading = require('./academic/labReport/level1/subs/bce/topics/appBceLabsReading')
+let bceLabSheet = require('./academic/labReport/level1/subs/bce/topics/appBceLabsSheet')
+
+//lab - ap1
+let ap1Labs = require('./academic/labReport/level1/subs/ap1/ap1Labs')
+let ap1LabsInterlining = require('./academic/labReport/level1/subs/ap1/topics/appAp1LabsInter')
+let ap1LabsStdBody = require('./academic/labReport/level1/subs/ap1/topics/appAp1LabStdBodyMeas')
+let ap1LabsFusing = require('./academic/labReport/level1/subs/ap1/topics/appAp1LabsContFusing')
+let ap1LabsStrtKnife = require('./academic/labReport/level1/subs/ap1/topics/appAp1LabsStraightKnife')
+
+
+//lab - cp
+let cpLabs = require('./academic/labReport/level1/subs/cp/cpLabs')
+let cpLabs1 = require('./academic/labReport/level1/subs/cp/topics/appCpLabs1')
+let cpLabs2 = require('./academic/labReport/level1/subs/cp/topics/appCpLabs2')
+let cpLabs3 = require('./academic/labReport/level1/subs/cp/topics/appCpLabs3')
+let cpLabs4 = require('./academic/labReport/level1/subs/cp/topics/appCpLabs4')
+let cpLabs5 = require('./academic/labReport/level1/subs/cp/topics/appCpLabs5')
+let cpLabs6 = require('./academic/labReport/level1/subs/cp/topics/appCpLabs6')
+let cpLabs7 = require('./academic/labReport/level1/subs/cp/topics/appCpLabs7')
+let cpLabs135 = require('./academic/labReport/level1/subs/cp/topics/appCpLabsChap135')
+
 
 
 
@@ -4638,6 +4680,208 @@ let labPhy2M1Flow = (req, res) => {
 };
 
 
+//labs - msp
+let labmspFlow = (req, res) => {
+
+    //analytics
+    try {
+        handleAnalyticsLabs("msp");
+      } catch (err) {
+        console.log(`🔴 Error while handling analytics(pre)`);
+      }
+
+
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(mspLabs);
+};
+
+let labMspLayoutFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(mspLabsLayout);
+};
+
+let labMspHandToolsFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(mspLabsHandTools);
+};
+
+let labMspLabsGrindingFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(mspLabsGrinding);
+};
+
+let labMspLatheFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(mspLabsLathe);
+};
+
+let labMspSqKeyFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(mspLabsSqKey);
+};
+
+let labMspMatchingPartsFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(mspLabsMatchingParts);
+};
+
+let labMspMillingFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(mspLabsMillingMc);
+};
+
+let labMspDrillingFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(mspLabsDrilling);
+};
+
+let labMspShaperFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(mspLabsShaper);
+};
+
+let labMspWeldingFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(mspLabsWelding);
+};
+
+let labMspLightMcFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(mspLabsLightMc);
+};
+
+let labMspArcWrldFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(mspLabsArcWelding);
+};
+
+let labMspMfgAssmFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(mspLabsMfgAssm);
+};
+
+let labMspQuizFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(mspLabsQuiz);
+};
+
+
+//labs - bce
+let labBceFlow = (req, res) => {
+
+    //analytics
+    try {
+        handleAnalyticsLabs("bce");
+      } catch (err) {
+        console.log(`🔴 Error while handling analytics(pre)`);
+      }
+
+
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(bceLabs);
+};
+
+let labBceListenFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(bceLabListen);
+};
+
+let labBceReadFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(bceLabReading);
+};
+
+let labBceSheetFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(bceLabSheet);
+};
+
+
+//labs - ap1
+let labAp1Flow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(ap1Labs);
+};
+
+let labAp1InterliningFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(ap1LabsInterlining);
+};
+
+let labAp1StdBodyFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(ap1LabsStdBody);
+};
+
+let labAp1FusingFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(ap1LabsFusing);
+};
+
+let labAp1StrtKnifeFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(ap1LabsStrtKnife);
+};
+
+
+//labs - cp
+let labCpFlow = (req, res) => {
+
+    //analytics
+    try {
+        handleAnalyticsLabs("cp");
+      } catch (err) {
+        console.log(`🔴 Error while handling analytics(pre)`);
+      }
+
+
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(cpLabs);
+};
+
+
+let labCp1Flow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(cpLabs1);
+};
+
+let labCp2Flow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(cpLabs2);
+};
+
+let labCp3Flow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(cpLabs3);
+};
+
+let labCp4Flow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(cpLabs4);
+};
+
+let labCp5Flow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(cpLabs5);
+};
+
+let labCp6Flow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(cpLabs6);
+};
+
+let labCp7Flow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(cpLabs7);
+};
+
+let labCp135Flow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(cpLabs135);
+};
+
+
+
 
 
 
@@ -5462,6 +5706,43 @@ module.exports = {
     labChem2CarboxyIdenFlow: labChem2CarboxyIdenFlow,
     labChem2NIdenFlow: labChem2NIdenFlow,
     labChem2AmountNa2CO3Flow: labChem2AmountNa2CO3Flow,
+
+    labmspFlow: labmspFlow,
+    labMspLayoutFlow: labMspLayoutFlow,
+    labMspHandToolsFlow: labMspHandToolsFlow,
+    labMspLabsGrindingFlow: labMspLabsGrindingFlow,
+    labMspLatheFlow: labMspLatheFlow,
+    labMspSqKeyFlow: labMspSqKeyFlow,
+    labMspMatchingPartsFlow: labMspMatchingPartsFlow,
+    labMspMillingFlow: labMspMillingFlow,
+    labMspDrillingFlow: labMspDrillingFlow,
+    labMspShaperFlow: labMspShaperFlow,
+    labMspWeldingFlow: labMspWeldingFlow,
+    labMspLightMcFlow: labMspLightMcFlow,
+    labMspArcWrldFlow: labMspArcWrldFlow,
+    labMspMfgAssmFlow: labMspMfgAssmFlow,
+    labMspQuizFlow: labMspQuizFlow,
+
+    labBceFlow: labBceFlow,
+    labBceListenFlow: labBceListenFlow,
+    labBceReadFlow: labBceReadFlow,
+    labBceSheetFlow: labBceSheetFlow,
+
+    labAp1Flow: labAp1Flow,
+    labAp1InterliningFlow: labAp1InterliningFlow,
+    labAp1StdBodyFlow: labAp1StdBodyFlow,
+    labAp1FusingFlow: labAp1FusingFlow,
+    labAp1StrtKnifeFlow: labAp1StrtKnifeFlow,
+
+    labCpFlow: labCpFlow,
+    labCp1Flow: labCp1Flow,
+    labCp2Flow: labCp2Flow,
+    labCp3Flow: labCp3Flow,
+    labCp4Flow: labCp4Flow,
+    labCp5Flow: labCp5Flow,
+    labCp6Flow: labCp6Flow,
+    labCp7Flow: labCp7Flow,
+    labCp135Flow: labCp135Flow,
 
 
 
