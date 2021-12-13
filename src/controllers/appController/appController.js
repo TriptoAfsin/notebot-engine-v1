@@ -950,7 +950,18 @@ let cpLabs135 = require('./academic/labReport/level1/subs/cp/topics/appCpLabsCha
 
 
 
-
+//syllabus
+let syllabusBatch45 = require('./academic/syllabus/45/syllabusBatch45')
+let syllabusBatch45Ae = require('./academic/syllabus/45/depts/ae45Syl')
+let syllabusBatch45Fe = require('./academic/syllabus/45/depts/fe45Syl')
+let syllabusBatch45Ye = require('./academic/syllabus/45/depts/ye45Syl')
+let syllabusBatch45Ipe = require('./academic/syllabus/45/depts/ipe45Syl')
+let syllabusBatch45Wpe = require('./academic/syllabus/45/depts/wpe45Syl')
+let syllabusBatch45Dce = require('./academic/syllabus/45/depts/dce45Syl')
+let syllabusBatch45Tem = require('./academic/syllabus/45/depts/tem45Syl')
+let syllabusBatch45Tfd = require('./academic/syllabus/45/depts/tfd45Syl')
+let syllabusBatch45Tmdm = require('./academic/syllabus/45/depts/tmdm45Syl')
+let syllabusBatch45Ese = require('./academic/syllabus/45/depts/ese45Syl')
 
 
 /*--------------------------------------------------------------------------*/ 
@@ -4883,7 +4894,71 @@ let labCp135Flow = (req, res) => {
 
 
 
+//syllabus
+let syllabusLevelFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send([
+        {
+                batch: "45",
+                route: "app/syllabus/45"
+        }
+    ]);
+};
 
+let syllabusBatch45Flow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(syllabusBatch45);
+};
+
+let syllabusBatch45AeFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(syllabusBatch45Ae);
+};
+
+let syllabusBatch45FeFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(syllabusBatch45Fe);
+};
+
+let syllabusBatch45YeFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(syllabusBatch45Ye);
+};
+
+let syllabusBatch45IpeFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(syllabusBatch45Ipe);
+};
+
+let syllabusBatch45WpeFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(syllabusBatch45Wpe);
+};
+
+let syllabusBatch45DceFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(syllabusBatch45Dce);
+};
+
+let syllabusBatch45TemFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(syllabusBatch45Tem);
+};
+
+let syllabusBatch45TfdFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(syllabusBatch45Tfd);
+};
+
+let syllabusBatch45TmdmFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(syllabusBatch45Tmdm);
+};
+
+let syllabusBatch45EseFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(syllabusBatch45Ese);
+};
 
 
 
@@ -5745,6 +5820,19 @@ module.exports = {
     labCp135Flow: labCp135Flow,
 
 
+
+    syllabusLevelFlow: syllabusLevelFlow,
+    syllabusBatch45Flow: syllabusBatch45Flow,
+    syllabusBatch45AeFlow: syllabusBatch45AeFlow,
+    syllabusBatch45FeFlow: syllabusBatch45FeFlow,
+    syllabusBatch45YeFlow: syllabusBatch45YeFlow,
+    syllabusBatch45IpeFlow: syllabusBatch45IpeFlow,
+    syllabusBatch45WpeFlow: syllabusBatch45WpeFlow,
+    syllabusBatch45DceFlow: syllabusBatch45DceFlow,
+    syllabusBatch45TemFlow: syllabusBatch45TemFlow,
+    syllabusBatch45TfdFlow: syllabusBatch45TfdFlow,
+    syllabusBatch45TmdmFlow: syllabusBatch45TmdmFlow,
+    syllabusBatch45EseFlow: syllabusBatch45EseFlow,
 
     notFound: notFound,
 }

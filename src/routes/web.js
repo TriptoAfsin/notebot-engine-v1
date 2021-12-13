@@ -924,6 +924,19 @@ let initWebRoutes = (app) => {
 
 
 
+    //syllabus
+    router.get("/app/syllabus", appController.syllabusLevelFlow);
+    router.get("/app/syllabus/45/ae", appController.syllabusBatch45AeFlow);
+    router.get("/app/syllabus/45/ye", appController.syllabusBatch45YeFlow);
+    router.get("/app/syllabus/45/fe", appController.syllabusBatch45FeFlow);
+    router.get("/app/syllabus/45/ipe", appController.syllabusBatch45IpeFlow);
+    router.get("/app/syllabus/45/tem", appController.syllabusBatch45TemFlow);
+    router.get("/app/syllabus/45/dce", appController.syllabusBatch45DceFlow);
+    router.get("/app/syllabus/45/wpe", appController.syllabusBatch45WpeFlow);
+    router.get("/app/syllabus/45/ese", appController.syllabusBatch45EseFlow);
+    router.get("/app/syllabus/45/tfd", appController.syllabusBatch45TfdFlow);
+    router.get("/app/syllabus/45/tmdm", appController.syllabusBatch45TmdmFlow);
+
     //404 route
     router.get("*", appController.notFound);
 
