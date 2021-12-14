@@ -22,7 +22,8 @@ let SubTopicTrans = (routePrefix, chatbotSubjFlow) => {
             }
             if(chatbotSubjFlow[i].attachment.type === "image"){
                 cleanedObjArr.push({
-                    imgUrl: `${chatbotSubjFlow[i].attachment.payload.url}`
+                    topic: `Index`,
+                    url: `${chatbotSubjFlow[i].attachment.payload.url}`
                 })
             }
             continue
