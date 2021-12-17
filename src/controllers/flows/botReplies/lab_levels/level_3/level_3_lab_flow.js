@@ -33,6 +33,8 @@ let level_3_lab = [
         "🔰 Select Subject Your Lab Report -",
         [
             payloadBtnGen("PM-II", "pm2LabFlow"),
+            payloadBtnGen("ACWP", "acwp_lab_flow"),
+            webBtnBlockGen("TC-I(Osmani)", "https://drive.google.com/drive/folders/13kEtfRo59s-r7-NRFewHaoJPD4ZQTVmg?usp=sharing"),
         ]
     ),
     grroupedButtonBlockGen(
@@ -46,7 +48,7 @@ let level_3_lab = [
     grroupedButtonBlockGen(
         "⚡ Lab Lectures -",
         [
-            webBtnBlockGen("LSS(Tazkia)", "https://drive.google.com/file/d/1A5AfNa2kzk9aHVeWTd2TPfkOCs3gzc1o/view"),
+            webBtnBlockGen("LSS(Tazkia)", "https://drive.google.com/file/d/1A5AfNa2kzk9aHVeWTd2TPfkOCs3gzc1o/view")
         ]
     ),
 ]

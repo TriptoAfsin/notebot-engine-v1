@@ -458,6 +458,8 @@ const ym2_words = require('./keywords/academic_words/subjects/ym2Words');
 const wp1_words = require('./keywords/academic_words/subjects/wp1Words');
 //academic -> wp2
 const wp2_words = require('./keywords/academic_words/subjects/wp2Words');
+//academic -> weave2
+const weave2_words = require('./keywords/academic_words/subjects/weaving2Words');
 //academic -> marketing
 const marketing_words = require('./keywords/academic_words/subjects/marketingWords');
 //academic -> tp
@@ -1341,6 +1343,10 @@ const wp2_books = require("./flows/botReplies/note_levels/level_3/level_3_subs/w
 const wp2_classLec = require("./flows/botReplies/note_levels/level_3/level_3_subs/wp2/topics/wp2ClassLec");
 
 
+//weave2
+const weave2_flow = require("./flows/botReplies/note_levels/level_3/level_3_subs/weaving2/weave2_flow");
+
+
 
 
 
@@ -1704,6 +1710,9 @@ const labFlow_apparelWashing = require('./flows/botReplies/lab_levels/level_3/le
 
 //lab-> pm2
 const labFlow_pm2 = require('./flows/botReplies/lab_levels/level_3/level_3_lab_subs/pm2/pm2LabFlow');
+
+//lab-> acwp
+const labFlow_acwp = require('./flows/botReplies/lab_levels/level_3/level_3_lab_subs/acwp/acwpLabFlow');
 
 
 //lab-> ym2
@@ -2630,6 +2639,11 @@ function handleMessage(sender_psid, received_message) {
   //academic -> ttm
   else if (wordIncludes(ttm_words, received_message)) {
     magicFunc(sender_psid, ttm_flow);
+  }
+
+  //academic -> weave2
+  else if (wordIncludes(weave2_words, received_message)) {
+    magicFunc(sender_psid, weave2_flow);
   }
 
   //academic -> knit1
@@ -5604,6 +5618,11 @@ let handlePostback = async (sender_psid, received_postback) => {
     magicFunc(sender_psid, ttm_flow);
   }
 
+  //weave2
+  else if (payload === 'weave2_flow') {
+    magicFunc(sender_psid, weave2_flow);
+  }
+
 
   //pcs
   else if (payload === 'pcs_flow') {
@@ -6620,6 +6639,11 @@ let handlePostback = async (sender_psid, received_postback) => {
   //lab -> pm2
   else if (payload === 'pm2LabFlow') {
     magicFunc(sender_psid, labFlow_pm2);
+  }
+
+  //lab -> acwp
+  else if (payload === 'acwp_lab_flow') {
+    magicFunc(sender_psid, labFlow_acwp);
   }
 
   //lab -> ym2

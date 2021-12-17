@@ -764,6 +764,9 @@ let initWebRoutes = (app) => {
      router.get("/app/notes/3/wp2/wp2_books_flow", appController.wp2BooksFlow);
      router.get("/app/notes/3/wp2/wp2_classlec_flow", appController.wp2ClasLecFlow);
 
+     //weave2
+     router.get("/app/notes/3/weave2", appController.weave2Flow);
+
 
      //ym2
      router.get("/app/notes/3/ym2", appController.ym2Flow);

@@ -807,6 +807,9 @@ let wp2AppFlow = require('./academic/notes/level3/subs/wp2/wp2')
 let wp2Books = require('./academic/notes/level3/subs/wp2/topics/appWp2Books')
 let wp2ClassLec = require('./academic/notes/level3/subs/wp2/topics/appWp2ClassLec')
 
+//weave2
+let weave2AppFlow = require('./academic/notes/level3/subs/weave2/weave2')
+
 
 //ym2
 let ym2AppFlow = require('./academic/notes/level3/subs/ym2/ym2')
@@ -4326,6 +4329,13 @@ let wp2ClasLecFlow = (req, res) => {
 };
 
 
+//weave2
+let weave2Flow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(weave2AppFlow);
+};
+
+
 
 //ym2
 let ym2Flow = (req, res) => {
@@ -5738,6 +5748,8 @@ module.exports = {
 
     tamFlow: tamFlow,
     tamIntroMerchFlow: tamIntroMerchFlow,
+
+    weave2Flow: weave2Flow,
 
 
     level1Labs: level1Labs,
