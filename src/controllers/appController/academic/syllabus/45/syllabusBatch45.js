@@ -28,7 +28,7 @@ let syllabus45 = [
         route: "app/syllabus/45/dce"
     },
     {
-        dept: "tfd",
+        dept: "TFD",
         route: "app/syllabus/45/tfd"
     },
     {

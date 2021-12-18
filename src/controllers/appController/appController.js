@@ -968,6 +968,10 @@ let syllabusBatch45Tmdm = require('./academic/syllabus/45/depts/tmdm45Syl')
 let syllabusBatch45Ese = require('./academic/syllabus/45/depts/ese45Syl')
 
 
+//jokes 
+let jokes = require('././entertainment/jokes/jokesFlow')
+
+
 /*--------------------------------------------------------------------------*/ 
 
 
@@ -4976,6 +4980,17 @@ let syllabusBatch45EseFlow = (req, res) => {
     return res.send(syllabusBatch45Ese);
 };
 
+//random func
+let randomNum = (length) => {
+    return Math.floor(Math.random()*length)
+}
+
+//jokes
+let jokesFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(jokes[randomNum(jokes.length)]);
+};
+
 
 
 //404 Route
@@ -5852,6 +5867,9 @@ module.exports = {
     syllabusBatch45TfdFlow: syllabusBatch45TfdFlow,
     syllabusBatch45TmdmFlow: syllabusBatch45TmdmFlow,
     syllabusBatch45EseFlow: syllabusBatch45EseFlow,
+
+
+    jokesFlow: jokesFlow,
 
     notFound: notFound,
 }

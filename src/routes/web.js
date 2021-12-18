@@ -942,6 +942,10 @@ let initWebRoutes = (app) => {
     router.get("/app/syllabus/45/tfd", appController.syllabusBatch45TfdFlow);
     router.get("/app/syllabus/45/tmdm", appController.syllabusBatch45TmdmFlow);
 
+
+    //jokes
+    router.get("/app/jokes", appController.jokesFlow);
+
     //404 route
     router.get("*", appController.notFound);
 
