@@ -5,9 +5,11 @@ let cardGen = require("../../genrators/cardGenerator");
 
 let routines = [
     grroupedButtonBlockGen(
-        "🔴 Online Exam Routine(2021)-",
+        "🔴 Latest Routines -",
         [
-            webBtnBlockGen("🔵 L1,1 ", "https://www.butex.edu.bd/wp-content/uploads/2021/08/20210809_173940.jpg"),
+            webBtnBlockGen("Exam L2,1(2022)", "https://drive.google.com/file/d/1hlagbuwTw7JgHiLaix0JCTjIAPMChwhJ/view?usp=sharing"),
+            webBtnBlockGen("Exam L3,1(2022)", "https://drive.google.com/file/d/119kgW-OIo6AY5fBhO4z7vr3ItKnYu610/view?usp=sharing"),
+            webBtnBlockGen("Exam L4,1(2022)", "https://drive.google.com/file/d/1dCc1T1dXd_ZtKYd4e60uhz99T2P9bck7/view?usp=sharing"),
         ]
     ),
     grroupedButtonBlockGen(
