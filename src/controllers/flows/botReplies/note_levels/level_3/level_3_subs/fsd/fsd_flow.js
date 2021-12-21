@@ -8,6 +8,12 @@ let bondiFlow = require("../../../../sponsoredFlows/bondiCard");
 let fsdFlow = [
     bondiFlow,
     grroupedButtonBlockGen(
+        `📌 Full Notes  `,
+        [
+            webBtnBlockGen("Akib(A)", "https://drive.google.com/file/d/1AIDhY0Y6KIHkzUgxsbKs2OxhDlwhGeS3/view"),
+        ]
+    ),
+    grroupedButtonBlockGen(
         `⚡ All Designs Excel Sheet -  `,
         [
             webBtnBlockGen("Taqi 43", "https://docs.google.com/spreadsheets/d/1c8n5ldfZOU76mjk6jtxOw1jcAN09N8ne/edit?usp=sharing&ouid=104261757061783772055&rtpof=true&sd=true"),
@@ -47,6 +53,12 @@ let fsdFlow = [
             payloadBtnGen("Fancy Weave", "fsd_fancyWeave_flow"),
             payloadBtnGen("Color & Weave Eff.", "fsd_colorWeave_flow"),
             payloadBtnGen("Satin Weave", "fsd_satin_flow"),
+        ]
+    ),
+    grroupedButtonBlockGen(
+        `🔰 Select Topics for FSD - `,
+        [
+            webBtnBlockGen("Fig. Extra Threads", "https://drive.google.com/file/d/1AXlX8JVt94QIwkqVFdZGO-iJu9w_rcM6/view"),
         ]
     ),
     grroupedButtonBlockGen(
