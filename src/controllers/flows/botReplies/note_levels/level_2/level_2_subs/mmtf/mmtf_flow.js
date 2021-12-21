@@ -16,7 +16,7 @@ let mmtfFlow = [
     grroupedButtonBlockGen(
         "📌 Analytical Questions - ",
         [
-            webBtnBlockGen("Tripto(2021)", "https://drive.google.com/file/d/1As-YVkjFF5Yg-abWMefmJ_t98EpSF8TE/view"),
+            webBtnBlockGen("Tripto(2021)", "https://drive.google.com/file/d/1axF8QJfbggg4DqLk-V_HfXuUv1YvnBU5/view?usp=sharing"),
         ]
     ),
     grroupedButtonBlockGen(
