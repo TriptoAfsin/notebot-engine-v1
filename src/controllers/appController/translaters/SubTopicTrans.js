@@ -1,3 +1,9 @@
+let wordIncludes = (keywordArray, received_message) => {
+    return keywordArray.some(word =>
+      received_message.toLowerCase().includes(word)
+    ); //received_message is an object
+};
+
 let SubTopicTrans = (routePrefix, chatbotSubjFlow) => {
 
     let cleanedObjArr = []
@@ -5,6 +11,7 @@ let SubTopicTrans = (routePrefix, chatbotSubjFlow) => {
     for(let i=0; i<chatbotSubjFlow.length; i++){
         try{
             if(chatbotSubjFlow[i].attachment.payload.template_type === "button"){
+                //console.log(payload.text)
                 for(let j=0;j<chatbotSubjFlow[i].attachment.payload.buttons.length;j++){
                     if(chatbotSubjFlow[i].attachment.payload.buttons[j].payload){
                         cleanedObjArr.push({
@@ -14,7 +21,7 @@ let SubTopicTrans = (routePrefix, chatbotSubjFlow) => {
                     }
                     if(chatbotSubjFlow[i].attachment.payload.buttons[j].url){
                         cleanedObjArr.push({
-                            topic: chatbotSubjFlow[i].attachment.payload.buttons[j].title,
+                            topic: wordIncludes(["📌 full", "📌 all", "⚡"], chatbotSubjFlow[i].attachment.payload.text) ? `${chatbotSubjFlow[i].attachment.payload.text}${chatbotSubjFlow[i].attachment.payload.buttons[j].title}` : `${chatbotSubjFlow[i].attachment.payload.buttons[j].title}`,
                             url: `${chatbotSubjFlow[i].attachment.payload.buttons[j].url}`
                         }) 
                     }
@@ -28,6 +35,7 @@ let SubTopicTrans = (routePrefix, chatbotSubjFlow) => {
             }
             continue
         }catch(err){
+            console.log(err)
             console.error("🔴 Invalid chatbotSubjFlow Given")
         }
     }
