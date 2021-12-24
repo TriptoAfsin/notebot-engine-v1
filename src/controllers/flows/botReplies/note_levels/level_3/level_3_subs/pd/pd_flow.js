@@ -7,6 +7,12 @@ let bondiFlow = require("../../../../sponsoredFlows/bondiCard");
 
 let pdFlow = [
     grroupedButtonBlockGen(
+        "📌 Select Topics for PD -",
+        [
+            payloadBtnGen("Books", "pd_books_flow"),
+        ]
+    ),
+    grroupedButtonBlockGen(
         "🔰 Select Topics for PD -",
         [
             payloadBtnGen("Intro to PD", "pd_intro_flow"),
@@ -19,6 +25,15 @@ let pdFlow = [
         [
             payloadBtnGen("Quality Func Deplo", "pd_qualityFunc_flow"),
             payloadBtnGen("Design for Assem.", "pd_designAssembly_flow"),
+            payloadBtnGen("Design for Manu.", "pd_designManu_flow"),
+        ]
+    ),
+    grroupedButtonBlockGen(
+        "🔰 Select Topics for PD -",
+        [
+            payloadBtnGen("FAST Method", "pd_fast_flow"),
+            payloadBtnGen("Design for Relia.", "pd_designReliability_flow"),
+            payloadBtnGen("Design for Main.", "pd_designMaintain_flow"),
         ]
     ),
 ]

@@ -653,6 +653,11 @@ let initWebRoutes = (app) => {
     router.get("/app/notes/3/pd/pd_planningDesign_flow", appController.pdPlanningDesignFlow);
     router.get("/app/notes/3/pd/pd_qualityFunc_flow", appController.pdQualityFuncFlow);
     router.get("/app/notes/3/pd/pd_designAssembly_flow", appController.pdDesAssemFlow);
+    router.get("/app/notes/3/pd/pd_designManu_flow", appController.pdDesManuFlow);
+    router.get("/app/notes/3/pd/pd_fast_flow", appController.pdFastFlow);
+    router.get("/app/notes/3/pd/pd_designReliability_flow", appController.pdDesRelFlow);
+    router.get("/app/notes/3/pd/pd_books_flow", appController.pdBooksFlow);
+    router.get("/app/notes/3/pd/pd_designMaintain_flow", appController.pdDesMainFlow);
 
 
     //tqm

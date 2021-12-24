@@ -1171,6 +1171,11 @@ const pd_understandingCustomer = require("./flows/botReplies/note_levels/level_3
 const pd_planDesign = require("./flows/botReplies/note_levels/level_3/level_3_subs/pd/topics/pdPlanningDesign");
 const pd_qualityFunc = require("./flows/botReplies/note_levels/level_3/level_3_subs/pd/topics/pdQualityFunc");
 const pd_DesAssembly = require("./flows/botReplies/note_levels/level_3/level_3_subs/pd/topics/pdDesAssembly");
+const pd_DesManu = require("./flows/botReplies/note_levels/level_3/level_3_subs/pd/topics/pdDFManu");
+const pd_DFR = require("./flows/botReplies/note_levels/level_3/level_3_subs/pd/topics/pdDFR");
+const pd_DFMain = require("./flows/botReplies/note_levels/level_3/level_3_subs/pd/topics/pdDFMain");
+const pd_Books = require("./flows/botReplies/note_levels/level_3/level_3_subs/pd/topics/pdBooks");
+const pd_Fast = require("./flows/botReplies/note_levels/level_3/level_3_subs/pd/topics/pdFast");
 
 //academic flows -> acfd
 const acfd_flow = require("./flows/botReplies/note_levels/level_3/level_3_subs/acfd/acfd_flow");
@@ -5376,6 +5381,21 @@ let handlePostback = async (sender_psid, received_postback) => {
   }
   else if (payload === 'pd_designAssembly_flow') {
     magicFunc(sender_psid, pd_DesAssembly);
+  }
+  else if (payload === 'pd_books_flow') {
+    magicFunc(sender_psid, pd_Books);
+  }
+  else if (payload === 'pd_designManu_flow') {
+    magicFunc(sender_psid, pd_DesManu);
+  }
+  else if (payload === 'pd_fast_flow') {
+    magicFunc(sender_psid, pd_Fast);
+  }
+  else if (payload === 'pd_designReliability_flow') {
+    magicFunc(sender_psid, pd_DFR);
+  }
+  else if (payload === 'pd_designMaintain_flow') {
+    magicFunc(sender_psid, pd_DFMain);
   }
 
 

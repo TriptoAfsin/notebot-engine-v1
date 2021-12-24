@@ -695,6 +695,11 @@ let pdUnderstandingCustomer = require('./academic/notes/level3/subs/pd/topics/ap
 let pdPlanningDesign = require('./academic/notes/level3/subs/pd/topics/pdPlaaningDesign')
 let pdQualityFunc = require('./academic/notes/level3/subs/pd/topics/pdQualityFunc')
 let pdDesAssembly = require('./academic/notes/level3/subs/pd/topics/appPDDesAssembly')
+let pdBooks = require('./academic/notes/level3/subs/pd/topics/appPdBooks')
+let pdDFR = require('./academic/notes/level3/subs/pd/topics/appPDDFR')
+let pdDFManu = require('./academic/notes/level3/subs/pd/topics/appPDDesManu')
+let pdDFMain = require('./academic/notes/level3/subs/pd/topics/appPDDesMain')
+let pdDFFast = require('./academic/notes/level3/subs/pd/topics/appPDFast')
 
 
 //tqm
@@ -3882,6 +3887,31 @@ let pdDesAssemFlow = (req, res) => {
     return res.send(pdDesAssembly);
 };
 
+let pdDesManuFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(pdDFManu);
+};
+
+let pdDesMainFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(pdDFMain);
+};
+
+let pdDesRelFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(pdDFR);
+};
+
+let pdBooksFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(pdBooks);
+};
+
+let pdFastFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(pdDFFast);
+};
+
 
 //tqm
 let tqmFlow = (req, res) => {
@@ -5644,6 +5674,11 @@ module.exports = {
     pdPlanningDesignFlow: pdPlanningDesignFlow,
     pdQualityFuncFlow: pdQualityFuncFlow,
     pdDesAssemFlow: pdDesAssemFlow,
+    pdDesManuFlow: pdDesManuFlow,
+    pdDesMainFlow: pdDesMainFlow,
+    pdDesRelFlow: pdDesRelFlow,
+    pdBooksFlow: pdBooksFlow,
+    pdFastFlow: pdFastFlow,
 
 
     tqmFlow: tqmFlow,
