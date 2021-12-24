@@ -29,7 +29,7 @@ let initWebRoutes = (app) => {
     //app routes
     router.get("/app", appController.intro);
 
-    router.get("/app/notices", appController.notice);
+    // router.get("/app/notices", appController.notice);
 
     router.get("/app/notes", appController.notes);
     router.get("/app/notes/1", appController.notesLevel1);

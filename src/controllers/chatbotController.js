@@ -2300,46 +2300,46 @@ function handleMessage(sender_psid, received_message) {
     });
   }
 
-  //🔴 Notice doesn't work in cPanel
-  //notice
-  else if (wordIncludes(noticeWords, received_message)) {
-    let loadingResponse = textBlockGen("🟡 Please wait, looking for latest notices ...");
-    let erroResponse = textBlockGen("❌ Failed to retrieve latest notices 😓\n\nTry again later by sending 'Notice'");
-    callSendAPI(sender_psid, loadingResponse);
-    let Feed = require('rss-to-json');
-    const rssUrl = "https://www.butex.edu.bd/feed";
-    //empty array to hold json responses
-    let topRss = [];
-    let topRssAmount = 5
+  // //🔴 Notice doesn't work in cPanel
+  // //notice
+  // else if (wordIncludes(noticeWords, received_message)) {
+  //   let loadingResponse = textBlockGen("🟡 Please wait, looking for latest notices ...");
+  //   let erroResponse = textBlockGen("❌ Failed to retrieve latest notices 😓\n\nTry again later by sending 'Notice'");
+  //   callSendAPI(sender_psid, loadingResponse);
+  //   let Feed = require('rss-to-json');
+  //   const rssUrl = "https://www.butex.edu.bd/feed";
+  //   //empty array to hold json responses
+  //   let topRss = [];
+  //   let topRssAmount = 5
 
-    try {
-      // Promise
-      Feed.load(rssUrl).then(rss => {
-        for (let i = 0; i < topRssAmount; i++) {
-          //pushing json objects to the array
-          topRss.push(rss.items[i])
-        }
-        //initializing an empty array to hold blocks
-        let response = [];
-        for (let i = 0; i < topRssAmount; i++) {
-          let myDate = new Date(topRss[i].published);
-          response.push(
-            groupedBtnBlockGen(
-              `🟣 Date: ${myDate.getDate()}/${myDate.getMonth() + 1}/${myDate.getFullYear()}\n\n${topRss[i].title} -`,
-              [
-                webBtnBlockGen("Visit 🌎", `${topRss[i].link}`)
-              ]
-            )
-          )
-        }
-        //callling magic function to send an array of blocks
-        magicFunc(sender_psid, response)
-      }).catch(err => callSendAPI(sender_psid, erroResponse));
-    } catch (err) {
-      callSendAPI(sender_psid, erroResponse)
-      console.error("🟥 Function Error Occured In Notice Checking")
-    }
-  }
+  //   try {
+  //     // Promise
+  //     Feed.load(rssUrl).then(rss => {
+  //       for (let i = 0; i < topRssAmount; i++) {
+  //         //pushing json objects to the array
+  //         topRss.push(rss.items[i])
+  //       }
+  //       //initializing an empty array to hold blocks
+  //       let response = [];
+  //       for (let i = 0; i < topRssAmount; i++) {
+  //         let myDate = new Date(topRss[i].published);
+  //         response.push(
+  //           groupedBtnBlockGen(
+  //             `🟣 Date: ${myDate.getDate()}/${myDate.getMonth() + 1}/${myDate.getFullYear()}\n\n${topRss[i].title} -`,
+  //             [
+  //               webBtnBlockGen("Visit 🌎", `${topRss[i].link}`)
+  //             ]
+  //           )
+  //         )
+  //       }
+  //       //callling magic function to send an array of blocks
+  //       magicFunc(sender_psid, response)
+  //     }).catch(err => callSendAPI(sender_psid, erroResponse));
+  //   } catch (err) {
+  //     callSendAPI(sender_psid, erroResponse)
+  //     console.error("🟥 Function Error Occured In Notice Checking")
+  //   }
+  // }
 
 
   //help
