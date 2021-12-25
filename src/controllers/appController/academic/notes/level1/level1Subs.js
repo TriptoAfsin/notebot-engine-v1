@@ -4,7 +4,7 @@ let level1Subs = [
         url: "https://drive.google.com/drive/folders/1XSV3_96TvLXmkqnhK6zFQQ67jCj4_NzL"
     },
     {
-        subName: "🍎 Math-I",
+        subName: "Math-I",
         route: "app/notes/1/math1"
     },
     {
