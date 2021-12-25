@@ -11,12 +11,14 @@ let fsdFlow = [
         `📌 Full Notes  `,
         [
             webBtnBlockGen("Akib(A)", "https://drive.google.com/file/d/1AIDhY0Y6KIHkzUgxsbKs2OxhDlwhGeS3/view"),
+            webBtnBlockGen("Akib(B)", "https://drive.google.com/file/d/1033CG6uvSwnAvLoRxx5WIV0XArqPy5r_/view"),
         ]
     ),
     grroupedButtonBlockGen(
-        `⚡ All Designs Excel Sheet -  `,
+        `⚡ All Designs`,
         [
-            webBtnBlockGen("Taqi 43", "https://docs.google.com/spreadsheets/d/1c8n5ldfZOU76mjk6jtxOw1jcAN09N8ne/edit?usp=sharing&ouid=104261757061783772055&rtpof=true&sd=true"),
+            webBtnBlockGen("Excel(Taqi-43)", "https://docs.google.com/spreadsheets/d/1c8n5ldfZOU76mjk6jtxOw1jcAN09N8ne/edit?usp=sharing&ouid=104261757061783772055&rtpof=true&sd=true"),
+            webBtnBlockGen("PDFs(Akib-44)", "https://drive.google.com/drive/u/0/folders/17BQq9bdEfQiUKU9doB90FaNbl4-rbKat"),
         ]
     ),
     grroupedButtonBlockGen(
@@ -59,6 +61,8 @@ let fsdFlow = [
         `🔰 Select Topics for FSD - `,
         [
             webBtnBlockGen("Fig. Extra Threads", "https://drive.google.com/file/d/1AXlX8JVt94QIwkqVFdZGO-iJu9w_rcM6/view"),
+            webBtnBlockGen("Double Cloth", "https://drive.google.com/file/d/109_6KUwyDrvN9d84EU02WhH9tRZ_Efss/view"),
+            webBtnBlockGen("Compound Fabric", "https://drive.google.com/file/d/109GIHbKWJvgCXYQ8ha2sKQ3n00jMFQsR/view"),
         ]
     ),
     grroupedButtonBlockGen(
