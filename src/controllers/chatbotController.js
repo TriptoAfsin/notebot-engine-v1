@@ -1757,13 +1757,14 @@ let testMsg = (req, res) => {
   res.header("Access-Control-Allow-Origin", "*");
   let serverStatus = {
     isServerRunning: true,
-    url: req.protocol + '://' + req.get('host') + req.originalUrl,
+    url: req.protocol + 's://' + req.get('host') + req.originalUrl,
     paths: [
       "/profile",
-      "/homepage"
+      "/homepage",
+      "/app"
     ],
     botStatus: true,
-    msg: "All serveices are running as expected",
+    msg: "All serveices are running as expected 🟢",
   }
   //return res.status(200).send(`Hello from notebot engine v1 ✔✔\n here are some routes - \n/profile\n/homepage`)
   return res.status(200).json(serverStatus);
