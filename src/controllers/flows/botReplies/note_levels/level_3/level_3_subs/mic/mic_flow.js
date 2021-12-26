@@ -8,9 +8,10 @@ let bondiFlow = require("../../../../sponsoredFlows/bondiCard");
 let micFlow = [
     bondiFlow,
     grroupedButtonBlockGen(
-        "🔰 Select Topics for MIC -",
+        "📌 Select Topics for MIC -",
         [
             payloadBtnGen("Books", "mic_book_flow"),
+            webBtnBlockGen("Questions", "https://drive.google.com/file/d/1wpL356Gmh156oI0-cGuxZDVr9b2m3Q5i/view?usp=sharing"),
         ]
     ),
     grroupedButtonBlockGen(
