@@ -7,7 +7,8 @@ let level_4_note = [
     grroupedButtonBlockGen(
         `🔴 Question Banks -`,
         [
-            webBtnBlockGen("All QB", "https://drive.google.com/drive/folders/1M9QjSqItJW1oZJd1RcG4yeAa41hB_dz-")
+            webBtnBlockGen("All QB", "https://drive.google.com/drive/folders/1M9QjSqItJW1oZJd1RcG4yeAa41hB_dz-"),
+            webBtnBlockGen("IPE Ques", "https://drive.google.com/file/d/17og6Ea9pYJnrEVO3_fKRLEfQMtbxhcza/view?usp=sharing")
         ]
     ),
     grroupedButtonBlockGen(
