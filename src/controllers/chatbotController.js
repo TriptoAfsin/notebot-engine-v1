@@ -2545,7 +2545,7 @@ function handleMessage(sender_psid, received_message) {
   }
 
   //songs
-  else if (wordIncludes(songWords, received_message)) {
+  else if (wordIncludesWhole(songWords, received_message)) {
     magicFunc(sender_psid, songFlow);
   }
 
