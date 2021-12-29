@@ -52,6 +52,7 @@ let tqmFlow = [
         "🔰 Select Topics for TQM - ",
         [
             payloadBtnGen("QC Tools", "tqm_qcTools_flow"),
+            webBtnBlockGen("Des. Quality Prod", "https://drive.google.com/file/d/1vBVzz2EPSxSGmg0sZTJ5Esm4KYEubx7o/view?usp=sharing"),
         ]
     ),
     grroupedButtonBlockGen(
