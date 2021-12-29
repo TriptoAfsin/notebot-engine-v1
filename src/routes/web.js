@@ -658,6 +658,8 @@ let initWebRoutes = (app) => {
     router.get("/app/notes/3/pd/pd_designReliability_flow", appController.pdDesRelFlow);
     router.get("/app/notes/3/pd/pd_books_flow", appController.pdBooksFlow);
     router.get("/app/notes/3/pd/pd_designMaintain_flow", appController.pdDesMainFlow);
+    router.get("/app/notes/3/pd/pd_desTension_flow", appController.pdDesTensionFlow);
+    router.get("/app/notes/3/pd/pd_loadStress_flow", appController.pdLoadStressFlow);
 
 
     //tqm
@@ -688,6 +690,8 @@ let initWebRoutes = (app) => {
     router.get("/app/notes/3/mic/mic_angularMeas_flow", appController.micAngularMeasFlow);
     router.get("/app/notes/3/mic/mic_LinearMeas_flow", appController.micLinearMeasFlow);
     router.get("/app/notes/3/mic/mic_ch5_flow", appController.micCh5Flow);
+    router.get("/app/notes/3/mic/mic_gearMeas_flow", appController.micGearMeasFlow);
+    router.get("/app/notes/3/mic/mic_fatigueFail_flow", appController.micFatigueFailFlow);
 
 
     //ace

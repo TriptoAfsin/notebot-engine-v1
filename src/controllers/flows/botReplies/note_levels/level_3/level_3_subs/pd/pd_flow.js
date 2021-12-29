@@ -37,6 +37,13 @@ let pdFlow = [
             payloadBtnGen("Design for Main.", "pd_designMaintain_flow"),
         ]
     ),
+    grroupedButtonBlockGen(
+        "🔰 Select Topics for PD -",
+        [
+            payloadBtnGen("Des. Tension Mem", "pd_desTension_flow"),
+            payloadBtnGen("Load stress ana", "pd_loadStress_flow"),
+        ]
+    ),
 ]
 
 

@@ -1176,6 +1176,8 @@ const pd_DFR = require("./flows/botReplies/note_levels/level_3/level_3_subs/pd/t
 const pd_DFMain = require("./flows/botReplies/note_levels/level_3/level_3_subs/pd/topics/pdDFMain");
 const pd_Books = require("./flows/botReplies/note_levels/level_3/level_3_subs/pd/topics/pdBooks");
 const pd_Fast = require("./flows/botReplies/note_levels/level_3/level_3_subs/pd/topics/pdFast");
+const pd_LoadStress = require("./flows/botReplies/note_levels/level_3/level_3_subs/pd/topics/pdLoadStress");
+const pd_DesTension = require("./flows/botReplies/note_levels/level_3/level_3_subs/pd/topics/pdDesTension");
 
 //academic flows -> acfd
 const acfd_flow = require("./flows/botReplies/note_levels/level_3/level_3_subs/acfd/acfd_flow");
@@ -1233,6 +1235,8 @@ const mic_SurfaceFinish = require("./flows/botReplies/note_levels/level_3/level_
 const mic_ThreadMeas = require("./flows/botReplies/note_levels/level_3/level_3_subs/mic/topics/micThreadMeas");
 const mic_AngularMeas = require("./flows/botReplies/note_levels/level_3/level_3_subs/mic/topics/micAngularMeas");
 const mic_LinearMeas = require("./flows/botReplies/note_levels/level_3/level_3_subs/mic/topics/micLinearMeas");
+const mic_GearMes = require("./flows/botReplies/note_levels/level_3/level_3_subs/mic/topics/micGearMeas");
+const mic_FatigueFail = require("./flows/botReplies/note_levels/level_3/level_3_subs/mic/topics/micFatigueFail");
 
 
 //fsd
@@ -5398,6 +5402,12 @@ let handlePostback = async (sender_psid, received_postback) => {
   else if (payload === 'pd_designMaintain_flow') {
     magicFunc(sender_psid, pd_DFMain);
   }
+  else if (payload === 'pd_desTension_flow') {
+    magicFunc(sender_psid, pd_DesTension);
+  }
+  else if (payload === 'pd_loadStress_flow') {
+    magicFunc(sender_psid, pd_LoadStress);
+  }
 
 
   //ace
@@ -5557,6 +5567,12 @@ let handlePostback = async (sender_psid, received_postback) => {
   }
   else if (payload === 'mic_LinearMeas_flow') {
     magicFunc(sender_psid, mic_LinearMeas);
+  }
+  else if (payload === 'mic_gearMeas_flow') {
+    magicFunc(sender_psid, mic_GearMes);
+  }
+  else if (payload === 'mic_fatigueFail_flow') {
+    magicFunc(sender_psid, mic_FatigueFail);
   }
 
 

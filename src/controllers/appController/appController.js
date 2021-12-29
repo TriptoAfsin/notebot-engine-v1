@@ -700,6 +700,8 @@ let pdDFR = require('./academic/notes/level3/subs/pd/topics/appPDDFR')
 let pdDFManu = require('./academic/notes/level3/subs/pd/topics/appPDDesManu')
 let pdDFMain = require('./academic/notes/level3/subs/pd/topics/appPDDesMain')
 let pdDFFast = require('./academic/notes/level3/subs/pd/topics/appPDFast')
+let pdDDesTension = require('./academic/notes/level3/subs/pd/topics/appPdDesTension')
+let pdDLoadStress = require('./academic/notes/level3/subs/pd/topics/appPdLoadStress')
 
 
 //tqm
@@ -730,6 +732,8 @@ let micThreadMeasure = require('./academic/notes/level3/subs/mic/topics/appMicTh
 let micAngular = require('./academic/notes/level3/subs/mic/topics/appMicAngular')
 let micLinear = require('./academic/notes/level3/subs/mic/topics/appMicLinear')
 let micCh5 = require('./academic/notes/level3/subs/mic/topics/appMicCh5')
+let micGearMes = require('./academic/notes/level3/subs/mic/topics/appMicGearMes')
+let micFatigueFail = require('./academic/notes/level3/subs/mic/topics/appMicFatigueFail')
 
 
 //ace
@@ -3912,6 +3916,16 @@ let pdFastFlow = (req, res) => {
     return res.send(pdDFFast);
 };
 
+let pdDesTensionFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(pdDDesTension);
+};
+
+let pdLoadStressFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(pdDLoadStress);
+};
+
 
 //tqm
 let tqmFlow = (req, res) => {
@@ -4034,6 +4048,16 @@ let micLinearMeasFlow = (req, res) => {
 let micCh5Flow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
     return res.send(micCh5);
+};
+
+let micGearMeasFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(micGearMes);
+};
+
+let micFatigueFailFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(micFatigueFail);
 };
 
 
@@ -5678,6 +5702,8 @@ module.exports = {
     pdDesRelFlow: pdDesRelFlow,
     pdBooksFlow: pdBooksFlow,
     pdFastFlow: pdFastFlow,
+    pdDesTensionFlow: pdDesTensionFlow,
+    pdLoadStressFlow: pdLoadStressFlow,
 
 
     tqmFlow: tqmFlow,
@@ -5703,6 +5729,8 @@ module.exports = {
     micAngularMeasFlow: micAngularMeasFlow,
     micLinearMeasFlow: micLinearMeasFlow,
     micCh5Flow: micCh5Flow,
+    micGearMeasFlow: micGearMeasFlow,
+    micFatigueFailFlow: micFatigueFailFlow,
 
 
     aceFlow: aceFlow,

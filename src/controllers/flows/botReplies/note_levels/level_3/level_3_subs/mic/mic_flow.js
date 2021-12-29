@@ -26,6 +26,8 @@ let micFlow = [
         "🔰 Select Topics for MIC -",
         [
             payloadBtnGen("Ch 5: Proc. Control..", "mic_ch5_flow"),
+            payloadBtnGen("Gear Meas.", "mic_gearMeas_flow"),
+            payloadBtnGen("Fatigue Fail.", "mic_fatigueFail_flow"),
         ]
     ),
     grroupedButtonBlockGen(
