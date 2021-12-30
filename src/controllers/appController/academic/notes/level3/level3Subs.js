@@ -77,7 +77,7 @@ let level3Subs = [
     },
     {
         subName: "LSS",
-        route: "app/notes/3/lsd"
+        route: "app/notes/3/lss"
     },
     {
         subName: "TTM",
