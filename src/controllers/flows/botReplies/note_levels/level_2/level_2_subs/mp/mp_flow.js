@@ -5,6 +5,7 @@ let bondiFlow = require("../../../../sponsoredFlows/bondiCard");
 
 
 let mpFlow = [
+    bondiFlow,
     grroupedButtonBlockGen(
         "📌 Select Topics for MP -",
         [
