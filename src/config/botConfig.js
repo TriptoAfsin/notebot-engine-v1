@@ -10,6 +10,7 @@ let botConfig = {
 
     //Persistent Menu Buttons
     persistentMenuButtons: [
+        webBtn("NoteBot App 📱", "https://play.google.com/store/apps/details?id=com.hawkers.notebot"),
         payloadBtn("Help 😥", "help_payload"),
         payloadBtn("Donate 💰", "donation_payload"),
         webBtn("Submit Notes 📙", "https://goo.gl/forms/akfj9X8vxuoj2xQg2"),
