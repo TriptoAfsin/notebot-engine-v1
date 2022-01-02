@@ -42,6 +42,7 @@ let pdFlow = [
         [
             payloadBtnGen("Des. Tension Mem", "pd_desTension_flow"),
             payloadBtnGen("Load stress ana", "pd_loadStress_flow"),
+            webBtnBlockGen("Mech Prop.", "https://drive.google.com/file/d/1qz1AgGt_5N8NsGUnpAjEl8CecqzSeURl/view?usp=sharing"),
         ]
     ),
 ]
