@@ -7,7 +7,7 @@ let bondiFlow = require("../../../../sponsoredFlows/bondiCard");
 let acmFlow = [
     bondiFlow,
     grroupedButtonBlockGen(
-        `📌 Full Notes `,
+        `📌 Full Notes -`,
         [
             webBtnBlockGen("Anika(Emu Mam)", "https://drive.google.com/file/d/1kFEKcaamuhpk4EfN8vnRpeHJbInTkhJ_/view?usp=sharing"),
         ]

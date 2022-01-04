@@ -10,6 +10,7 @@ let tqmFlow = [
         "📌 Select Topics for TQM -",
         [
             webBtnBlockGen("Books", "https://drive.google.com/file/d/1f8lBOBejC-5beq-znanBC0QOlsiMgKc3/view?usp=sharing"),
+            webBtnBlockGen("Suggestion(2022)", "https://drive.google.com/file/d/1G1bYyNJ-TWn5oOFF_R1BE-aJcq-qPiR3/view?usp=sharing"),
         ]
     ),
     grroupedButtonBlockGen(
