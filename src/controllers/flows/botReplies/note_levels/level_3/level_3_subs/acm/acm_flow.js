@@ -7,6 +7,12 @@ let bondiFlow = require("../../../../sponsoredFlows/bondiCard");
 let acmFlow = [
     bondiFlow,
     grroupedButtonBlockGen(
+        `📌 Full Notes `,
+        [
+            webBtnBlockGen("Anika(Emu Mam)", "https://drive.google.com/file/d/1kFEKcaamuhpk4EfN8vnRpeHJbInTkhJ_/view?usp=sharing"),
+        ]
+    ),
+    grroupedButtonBlockGen(
         `📌 All Class Lectures - `,
         [
             webBtnBlockGen("Emu Mam(Tazkia)", "https://drive.google.com/drive/folders/1ykFx0pM2lz5XMxhWRXS7BzAuCzbu2c_M?usp=sharing"),
