@@ -12,6 +12,7 @@ let fsdFlow = [
         [
             webBtnBlockGen("Akib(A)", "https://drive.google.com/file/d/1AIDhY0Y6KIHkzUgxsbKs2OxhDlwhGeS3/view"),
             webBtnBlockGen("Akib(B)", "https://drive.google.com/file/d/1033CG6uvSwnAvLoRxx5WIV0XArqPy5r_/view"),
+            webBtnBlockGen("Osmani(A)", "https://drive.google.com/file/d/1cFtjEQop5TiV0DJQgntfwuOPBGFIoUhN/view?usp=sharing"),
         ]
     ),
     grroupedButtonBlockGen(
