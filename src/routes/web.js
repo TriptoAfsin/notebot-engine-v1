@@ -625,6 +625,9 @@ let initWebRoutes = (app) => {
     router.get("/app/notes/3/lss/lss_drawFrame_flow", appController.lssDrawFrameFlow);
     router.get("/app/notes/3/lss/lss_spreader_flow", appController.lssSpreaderFlow);
 
+    //mpp
+    router.get("/app/notes/3/mpp", appController.mppFlow);
+
     //knit1
     router.get("/app/notes/3/knit1", appController.knit1Flow);
     router.get("/app/notes/3/knit1/knit_lecture_flow", appController.knit1LectureFlow);

@@ -1356,6 +1356,10 @@ const wp2_classLec = require("./flows/botReplies/note_levels/level_3/level_3_sub
 const weave2_flow = require("./flows/botReplies/note_levels/level_3/level_3_subs/weaving2/weave2_flow");
 
 
+//mpp flow
+const mpp_flow = require("./flows/botReplies/note_levels/level_3/level_3_subs/mpp/mppFlow");
+
+
 
 
 
@@ -1742,6 +1746,7 @@ const labFlow_fm2_5 = require('./flows/botReplies/lab_levels/level_3/level_3_lab
 //help flow
 const help_flow = require('./flows/helpFlow');
 const ttm_words = require("./keywords/academic_words/subjects/ttmWords");
+const mpp_words = require("./keywords/academic_words/subjects/mppWords");
 
 
 
@@ -2654,6 +2659,12 @@ function handleMessage(sender_psid, received_message) {
   //academic -> weave2
   else if (wordIncludes(weave2_words, received_message)) {
     magicFunc(sender_psid, weave2_flow);
+  }
+
+
+  //academic -> mpp
+  else if (wordIncludesWhole(mpp_words, received_message)) {
+    magicFunc(sender_psid, mpp_flow);
   }
 
   //academic -> knit1
@@ -5658,6 +5669,11 @@ let handlePostback = async (sender_psid, received_postback) => {
   //weave2
   else if (payload === 'weave2_flow') {
     magicFunc(sender_psid, weave2_flow);
+  }
+
+  //mpp
+  else if (payload === 'mpp_flow') {
+    magicFunc(sender_psid, mpp_flow);
   }
 
 

@@ -667,6 +667,10 @@ let lssDrawframe = require('./academic/notes/level3/subs/lss/topics/appLssDrawfr
 let lssSpreader = require('./academic/notes/level3/subs/lss/topics/appLssSpreader')
 
 
+//mpp
+let mppAppFlow = require('./academic/notes/level3/subs/mpp/mpp')
+
+
 //knit1
 let knit1AppFlow = require('./academic/notes/level3/subs/knit1/kint1')
 let knit1Lecture = require('./academic/notes/level3/subs/knit1/topics/appKnit1Lecture')
@@ -3777,6 +3781,13 @@ let lssSpreaderFlow = (req, res) => {
 };
 
 
+//lss
+let mppFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(mppAppFlow);
+};
+
+
 //knit1
 let knit1Flow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
@@ -5664,6 +5675,8 @@ module.exports = {
     tcpKpcFlow: tcpKpcFlow,
 
     ttmFlow: ttmFlow,
+
+    mppFlow: mppFlow,
 
     pcsFlow: pcsFlow,
     pcsBooksFlow: pcsBooksFlow,
