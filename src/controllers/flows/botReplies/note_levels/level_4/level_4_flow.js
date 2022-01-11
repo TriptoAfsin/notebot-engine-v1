@@ -37,6 +37,7 @@ let level_4_note = [
         `🟣 Final Viva, Industrial Attachments Resources -`,
         [
             webBtnBlockGen("Drive Folder", "https://drive.google.com/drive/folders/1m-WnO6hdaJ2W7cRJ0v5UdKarvKen4hCM?usp=sharing"),
+            webBtnBlockGen("YE Project Work", "https://drive.google.com/file/d/1dEfe-DrJo6fvLDXAOzR7O4yger_fTUtH/view?usp=sharing"),
         ]
     ), 
 ]

@@ -47,6 +47,13 @@ let bce_flow = [
             payloadBtnGen("Reading,Writing..", "read_write_bce_flow"),
         ]
     ),
+    grroupedButtonBlockGen(
+        "🔰 Select Topic For BCE -",
+        [
+            webBtnBlockGen("Meeting & Memo", "https://drive.google.com/file/d/1l7bLK56hBoUyRphM7AYB_PE8NEtYtScz/view?usp=sharing"),
+            webBtnBlockGen("Business Proposal", "https://drive.google.com/file/d/1hD7rxeD2LHLTyMtw_Pq_YaALQ_dPW0iO/view?usp=sharing")
+        ]
+    ),
 ]
 
 
