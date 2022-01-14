@@ -27,6 +27,7 @@ let bce_flow = [
     grroupedButtonBlockGen(
         "📌 Full Hand Notes -",
         [
+            webBtnBlockGen("Nafis(2022)", "https://drive.google.com/file/d/1x1hcnrlXKk2Qu4zSsiJwPf_uV8u0lWZ2/view?usp=sharing"),
             webBtnBlockGen("Rafsan(2021)", "https://drive.google.com/file/d/1SO8FI9elSj0CT0VPV3WcX2SPhpbZV_p6/view?usp=sharing"),
             webBtnBlockGen("Wasy(2021)", "https://drive.google.com/file/d/1nCl3rA47TtAtR2qV63_Jv3UStcB3-MVX/view?usp=sharing"),
         ]
