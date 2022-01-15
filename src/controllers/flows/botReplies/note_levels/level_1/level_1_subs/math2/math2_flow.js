@@ -25,6 +25,12 @@ let math2_flow = [
         ]
     ),
     grroupedButtonBlockGen(
+        "📌 Matin Sir Book Solve(2022) - ",
+        [
+            webBtnBlockGen("Book Solve", "https://drive.google.com/drive/folders/1Hi7KqhDEU--EG1Ni3dC9Q-lHAH8DBjXL?usp=sharing"),
+        ]
+    ),
+    grroupedButtonBlockGen(
         "🔰 Select Topic for Math-II -",
         [
             payloadBtnGen("Moivre's Theorem", "math2_moivre_flow"),
