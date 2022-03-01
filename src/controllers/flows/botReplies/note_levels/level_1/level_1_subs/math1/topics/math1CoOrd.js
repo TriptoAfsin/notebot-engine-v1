@@ -1,4 +1,4 @@
-let textBlockGen = require("../../../../../../../genrators/textBlockGen");
+let textBlockGen = require('simple-messenger-blocks/textBlockGen');
 
 
 let math1CoOrd = [

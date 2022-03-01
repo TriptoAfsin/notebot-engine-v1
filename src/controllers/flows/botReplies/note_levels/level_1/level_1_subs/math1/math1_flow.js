@@ -15,6 +15,12 @@ let math1_flow = [
         ]
     ),
     grroupedButtonBlockGen(
+        "📌 Full Notes - ",
+        [
+            webBtnBlockGen("Linear, Mat.", "https://drive.google.com/file/d/1MbOxlNbEgtg2J1HNClPNLYfkm5DFt8PL/view?usp=sharing"),
+        ]
+    ),
+    grroupedButtonBlockGen(
         "🔰 Select Topic for Math-I -  ",
         [
             payloadBtnGen("Books", "math1_books_flow"),

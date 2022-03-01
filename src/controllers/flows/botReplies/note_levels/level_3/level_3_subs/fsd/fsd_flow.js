@@ -16,6 +16,13 @@ let fsdFlow = [
         ]
     ),
     grroupedButtonBlockGen(
+        `📌 Full Notes  `,
+        [
+            webBtnBlockGen("Nahid(A)", "https://drive.google.com/file/d/1qH1SpbJBfUG0YU7TgpEcpGVyC_duBAnA/view?usp=sharing"),
+            webBtnBlockGen("Nahid(B)", "https://drive.google.com/file/d/1b52DeegYrUEblmkPkfJgxZ3QiM3Pq6GG/view?usp=sharing"),
+        ]
+    ),
+    grroupedButtonBlockGen(
         `⚡ All Designs`,
         [
             webBtnBlockGen("Excel(Taqi-43)", "https://docs.google.com/spreadsheets/d/1c8n5ldfZOU76mjk6jtxOw1jcAN09N8ne/edit?usp=sharing&ouid=104261757061783772055&rtpof=true&sd=true"),
@@ -40,6 +47,7 @@ let fsdFlow = [
         `📌 Select Topics for FSD - `,
         [
             payloadBtnGen("Books", "fsd_books_flow"),
+            webBtnBlockGen("Questions", "https://drive.google.com/drive/folders/1tHf6Nwt-HZ4MeyADjVox8g5zUrybZDkl?usp=sharing"),
         ]
     ),
     grroupedButtonBlockGen(

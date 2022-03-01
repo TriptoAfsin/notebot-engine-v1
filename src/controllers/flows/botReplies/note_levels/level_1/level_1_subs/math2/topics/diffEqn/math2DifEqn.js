@@ -1,25 +1,16 @@
+let grroupedButtonBlockGen = require('simple-messenger-blocks/groupedBtnBlockGen');
+// let webBtnBlockGen = require('simple-messenger-blocks/webBtnGen');
+let payloadBtnGen = require('simple-messenger-blocks/payloadBtnGen');
+
+
 let math2DifEqn = [
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🟩 Select - ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "Handnote",
-                        "payload": "math2_diffeqn_note_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Book Scanned",
-                        "payload": "math2_diffeqn_book_flow"
-                    }
-                ],
-            },
-        },
-    }
+    grroupedButtonBlockGen(
+        "🟩 Select -",
+        [
+            payloadBtnGen("Hand Note", "math2_diffeqn_note_flow"),
+            payloadBtnGen("Book Scanned", "math2_diffeqn_book_flow"),
+        ]
+    )
 ]
 
 

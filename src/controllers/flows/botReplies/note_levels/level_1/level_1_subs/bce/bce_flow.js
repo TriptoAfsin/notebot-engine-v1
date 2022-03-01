@@ -19,6 +19,12 @@ let bce_flow = [
     grroupedButtonBlockGen(
         "📌 Full Hand Notes -",
         [
+            webBtnBlockGen("Definitions(2022)", "https://drive.google.com/file/d/141ZMgBy78AMmZtGAagjuqJubiyzFi7pJ/view?usp=sharing"),
+        ]
+    ),
+    grroupedButtonBlockGen(
+        "📌 Full Hand Notes -",
+        [
             payloadBtnGen("Part A", "part_a_bce_flow"),
             payloadBtnGen("Part B", "part_b_bce_flow"),
             payloadBtnGen("Full(A+B)", "full_ab_bce_flow"),
