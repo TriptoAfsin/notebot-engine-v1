@@ -65,6 +65,7 @@ let aceFlow = [
         [
             payloadBtnGen("Grips", "ace_Grips_flow"),
             payloadBtnGen("Struct. Eleme.", "ace_StructElements_flow"),
+            webBtnBlockGen("Robot Mot. An.", "https://drive.google.com/file/d/1KPKmH4Vegkw5V-Z7MmEr-pyOQUyWFpKf/view?usp=sharing"),
         ]
     ),
 ]
