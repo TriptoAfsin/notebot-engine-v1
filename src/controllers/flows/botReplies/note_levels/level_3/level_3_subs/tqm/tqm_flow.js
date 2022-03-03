@@ -14,6 +14,12 @@ let tqmFlow = [
         ]
     ),
     grroupedButtonBlockGen(
+        "📌 Full Hand Notes -",
+        [
+            webBtnBlockGen("Akib(A)", "https://drive.google.com/file/d/1BqoB9ZfFqLy2dOmVU_864q7wz33bxt7E/view"),
+        ]
+    ),
+    grroupedButtonBlockGen(
         "📌 CT 2021 -",
         [
             webBtnBlockGen("Note(Akib)", "https://drive.google.com/file/d/1-TErZ97R9k1_RzyZfAu_CLxVkIlv1E25/view"),
