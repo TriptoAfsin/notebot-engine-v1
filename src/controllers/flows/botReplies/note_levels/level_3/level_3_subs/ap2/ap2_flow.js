@@ -14,6 +14,13 @@ let ap2Flow = [
         ]
     ),
     grroupedButtonBlockGen(
+        "📌 Full Hand Notes - ",
+        [
+            webBtnBlockGen("Nahid(A)", "https://drive.google.com/file/d/1AJN5vqMPQVrtTwKwLapHXTEJeKWhpINM/view?usp=sharing"),
+            webBtnBlockGen("Nahid(B)", "https://drive.google.com/file/d/1smg1l9D6P_Qvgqsy76BpX0G9_EKohcwq/view?usp=sharing")
+        ]
+    ),
+    grroupedButtonBlockGen(
         "📌 Select Topics for Ap-II -",
         [
             webBtnBlockGen("Part-A Outline", "https://drive.google.com/file/d/11GC_11zU5gnXMsURqVJUw6Tfgejrzw57/view")

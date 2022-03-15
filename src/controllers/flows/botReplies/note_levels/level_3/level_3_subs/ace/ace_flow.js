@@ -25,7 +25,8 @@ let aceFlow = [
     grroupedButtonBlockGen(
         `📌 Full Notes -  `,
         [
-            webBtnBlockGen("Part-A(Nahid)", "https://drive.google.com/file/d/1GdCD2jSTtTHtwLahM3n9a0G5yWpp81vc/view?usp=sharing"),
+            webBtnBlockGen("Part-A(Nahid)", "https://drive.google.com/file/d/1fIcM2fj3OBEk9saJADuceD8LNPtYmxfp/view?usp=sharing"),
+            webBtnBlockGen("Part-B(Nahid)", "https://drive.google.com/file/d/1_QuELIk-Z0QIdRMcr9pLRjzWPlR5mJI-/view?usp=sharing"),
         ]
     ),
     grroupedButtonBlockGen(

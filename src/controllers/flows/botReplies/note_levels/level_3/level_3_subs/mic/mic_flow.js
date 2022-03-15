@@ -15,6 +15,20 @@ let micFlow = [
         ]
     ),
     grroupedButtonBlockGen(
+        "📌 Short Notes(2022) - ",
+        [
+            webBtnBlockGen("PID(Tripto)", "https://drive.google.com/file/d/1a-694UwLLt4iDFVz8Vwejy8v9PJjeJ2Z/view?usp=sharing"),
+            webBtnBlockGen("PLC(Tripto)", "https://drive.google.com/file/d/1406UPyX7Ms2XzVr7JECnzXgnmMrC8WUJ/view?usp=sharing"),
+            webBtnBlockGen("Block Dia(Tripto)", "https://drive.google.com/file/d/1aA15NDPAQWmK-962bOJmxUdvPfQoAb2Z/view?usp=sharing"),
+        ]
+    ),
+    grroupedButtonBlockGen(
+        "📌 Short Notes(2022) - ",
+        [
+            webBtnBlockGen("Differences(Tripto)", "https://drive.google.com/file/d/1g7G6Ux-x-zN7fL8QYuLoqhqxm0v6-2l5/view?usp=sharing"),
+        ]
+    ),
+    grroupedButtonBlockGen(
         "🔰 Select Topics for MIC -",
         [
             payloadBtnGen("Ch 1: Intro to .", "mic_ch1_flow"),
