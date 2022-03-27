@@ -1,12 +1,8 @@
+let textBlockGen = require('simple-messenger-blocks/textBlockGen');
+
 let phy1LabE1 = [
-    {
-        "text": `🔷 E1 - 
-        https://drive.google.com/file/d/1yuQhmNQzvJsOfnEpkQTdxd8EC85Lq4TL/view?usp=sharing`
-    },
-    {
-        "text": `🔷with data - 
-        https://drive.google.com/file/d/1Dpa50MUOj6S8fJK0_187nTQGkU1BiHOl/view?usp=drivesdk`
-    }
+    textBlockGen(`🔷 E1 - \n\nhttps://drive.google.com/file/d/1yuQhmNQzvJsOfnEpkQTdxd8EC85Lq4TL/view?usp=sharing`),
+    textBlockGen(`🔷with data - \n\nhttps://drive.google.com/file/d/1Dpa50MUOj6S8fJK0_187nTQGkU1BiHOl/view?usp=drivesdk`)
 ]
 
 

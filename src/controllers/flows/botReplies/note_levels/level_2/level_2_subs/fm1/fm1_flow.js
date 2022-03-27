@@ -22,6 +22,12 @@ let fm1Flow = [
         ]
     ),
     grroupedButtonBlockGen(
+        `📌 Full Hand Notes(2022)- `,
+        [
+            webBtnBlockGen("Part-A(Urmi)","https://drive.google.com/file/d/1_eaOh72rQ1whd7LQDsr-7Fc795Vp29xA/view?usp=sharing"),
+        ]
+    ),
+    grroupedButtonBlockGen(
         `🔰 Select Topics for FM-I - `,
         [
             payloadBtnGen("Hand Notes","fm1_hnotes_flow"),
