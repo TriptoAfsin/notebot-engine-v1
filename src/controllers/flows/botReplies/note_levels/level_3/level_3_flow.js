@@ -6,11 +6,10 @@ let bondiFlow = require("../../sponsoredFlows/bondiCard");
 
 let level_3_note = [
     bondiFlow,
-    grroupedButtonBlockGen(`🔰 Select Subject for level 3 -`,
+    grroupedButtonBlockGen(`📌 All QB for level 3 -`,
         [
             webBtnBlockGen("All QB", "https://drive.google.com/drive/folders/1nhPHYnDC1JZFl0TwaYxeFB2dbo8aGf9J"),
             webBtnBlockGen("All QB(2021)", "https://drive.google.com/drive/folders/1aMIGuCLJsTWPq9hm9F_KbaSiU9yxwvNm?usp=sharing"),
-            webBtnBlockGen("CDP", "https://drive.google.com/drive/folders/1RQAbOpyuvqFSNgUBuDLJB5I51Tx5p8sV?usp=sharing"),
         ]
     ),
     grroupedButtonBlockGen(`🔰 Select Subject for level 3 -`,
@@ -65,7 +64,8 @@ let level_3_note = [
     grroupedButtonBlockGen(`🔰 Select Subject for level 3 -`,
         [
             webBtnBlockGen("TC-I", "https://drive.google.com/drive/folders/1Tg0ruIBuznlNWYGNYZVxGHnwu8UUNa2r?usp=sharing"),
-            webBtnBlockGen("Osmani Notes", "https://drive.google.com/drive/folders/1V3UpYQfi1gt4Rvsm0YKSGHxZF5bEtOdz?usp=sharing"),
+            webBtnBlockGen("CDP", "https://drive.google.com/drive/folders/1RQAbOpyuvqFSNgUBuDLJB5I51Tx5p8sV?usp=sharing"),
+            webBtnBlockGen("ACWP", "https://drive.google.com/drive/folders/1pCqxLyVgJ-BwhCpCtut7f6v9oQucaHzN?usp=sharing"),
         ]
     ),
 ]
