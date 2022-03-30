@@ -1,93 +1,47 @@
+let grroupedButtonBlockGen = require('simple-messenger-blocks/groupedBtnBlockGen');
+let webBtnBlockGen = require('simple-messenger-blocks/webBtnGen');
+let payloadBtnGen = require('simple-messenger-blocks/payloadBtnGen');
+let cardGen = require('simple-messenger-blocks/cardGenerator');
+let bondiFlow = require("../../../../sponsoredFlows/bondiCard");
+
+
 let iae_flow = [
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🟩 Select Topics for IAE-  ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "Books",
-                        "payload": "iae_books_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Questions",
-                        "payload": "iae_ques_flow"
-                    }
-                ],
-            },
-        },
-    },
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🟩 Select Topics for IAE- ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "Intro to Apparel",
-                        "payload": "iae_intro_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Full Slide",
-                        "payload": "iae_full_slide_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Different T.. Woven",
-                        "payload": "iae_diff_woven_flow"
-                    }
-                ],
-            },
-        },
-    },
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🟩 Select Topics for IAE-  ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "Apparel Brands",
-                        "payload": "iae_brands_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Quota & Cate..",
-                        "payload": "iae_quota_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "CAD & CAM",
-                        "payload": "iae_cam_flow"
-                    }
-                ],
-            },
-        },
-    },
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🟩 Select Topics for IAE-  ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "Components of Shirt",
-                        "payload": "iae_shirt_flow"
-                    },
-                ],
-            },
-        },
-    }
+    bondiFlow,
+    grroupedButtonBlockGen(
+        "📌 Full Hand Notes - ",
+        [
+            webBtnBlockGen("⭐ Najib(2022)", "https://drive.google.com/file/d/1aXzWxPLUqh78Ro-B1gHsHsjosSymvQLM/view?usp=sharing")
+        ]
+    ),
+    grroupedButtonBlockGen(
+        "🔰 Select Topics for IAE -",
+        [
+            payloadBtnGen("Books", "iae_books_flow"),
+            payloadBtnGen("Questions", "iae_ques_flow"),
+        ]
+    ),
+    grroupedButtonBlockGen(
+        "🔰 Select Topics for IAE -",
+        [
+            payloadBtnGen("Intro to Apparel", "iae_intro_flow"),
+            payloadBtnGen("Different T.. Woven", "iae_diff_woven_flow"),
+            payloadBtnGen("Full Slide", "iae_full_slide_flow"),
+        ]
+    ),
+    grroupedButtonBlockGen(
+        "🔰 Select Topics for IAE -",
+        [
+            payloadBtnGen("Apparel Brands", "iae_brands_flow"),
+            payloadBtnGen("Quota & Cate..", "iae_quota_flow"),
+            payloadBtnGen("CAD & CAM", "iae_cam_flow"),
+        ]
+    ),
+    grroupedButtonBlockGen(
+        "🔰 Select Topics for IAE -",
+        [
+            payloadBtnGen("Components of Shirt", "iae_shirt_flow"),
+        ]
+    )
 ]
 
 

@@ -1,114 +1,47 @@
+let grroupedButtonBlockGen = require('simple-messenger-blocks/groupedBtnBlockGen');
+let webBtnBlockGen = require('simple-messenger-blocks/webBtnGen');
+let payloadBtnGen = require('simple-messenger-blocks/payloadBtnGen');
+let cardGen = require('simple-messenger-blocks/cardGenerator');
+
+
 let ap1Flow = [
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "📌 Full Hand Note -",
-                "buttons": [
-                    {
-                        "type": "web_url",
-                        "url": "https://drive.google.com/file/d/1PcYlsGRhig4gxmynG9wVx-_FdGeK7a1v/view",
-                        "title": "Akib",
-                    }
-                ],
-            },
-        },
-    },
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🔰 Select Topics for AP-I - ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "Books",
-                        "payload": "ap1_books_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Questions",
-                        "payload": "ap1_ques_flow"
-                    }
-                ],
-            },
-        },
-    },
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🔰 Select Topics for AP-I - ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "Sizing System",
-                        "payload": "ap1_sizing_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Trimming",
-                        "payload": "ap1_trimmimg_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Interlining",
-                        "payload": "ap1_interlining_flow"
-                    }
-                ],
-            },
-        },
-    },
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🔰 Select Topics for AP-I - ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "Fabric Cutting",
-                        "payload": "ap1_fabricCut_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Pattern Making",
-                        "payload": "ap1_patternMaking_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Fabric Spreading",
-                        "payload": "ap1_fabricSpreading_flow"
-                    }
-                ],
-            },
-        },
-    },
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🔰 Select Topics for AP-I - ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "Marker Making",
-                        "payload": "ap1_markerMaking_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Sewing Thread",
-                        "payload": "ap1_sewingTherad_flow"
-                    }
-                ],
-            },
-        },
-    },
+    grroupedButtonBlockGen(
+        "📌 Full Hand Note -",
+        [
+            webBtnBlockGen("Akib", "https://drive.google.com/file/d/1PcYlsGRhig4gxmynG9wVx-_FdGeK7a1v/view"),
+            webBtnBlockGen("⭐ Najib(2022)", "https://drive.google.com/file/d/1lVUgGCE8aLPNWcYmzdDU9bSlKZv7UtaG/view?usp=sharing")
+        ]
+    ),
+    grroupedButtonBlockGen(
+        "🔰 Select Topics for AP-I -",
+        [
+            payloadBtnGen("Books", "ap1_books_flow"),
+            payloadBtnGen("Questions", "ap1_ques_flow"),
+        ]
+    ),
+    grroupedButtonBlockGen(
+        "🔰 Select Topics for AP-I -",
+        [
+            payloadBtnGen("Sizing System", "ap1_sizing_flow"),
+            payloadBtnGen("Trimming", "ap1_trimmimg_flow"),
+            payloadBtnGen("Interlining", "ap1_interlining_flow"),
+        ]
+    ),
+    grroupedButtonBlockGen(
+        "🔰 Select Topics for AP-I -",
+        [
+            payloadBtnGen("Fabric Cutting", "ap1_fabricCut_flow"),
+            payloadBtnGen("Pattern Making", "ap1_patternMaking_flow"),
+            payloadBtnGen("Fabric Spreading", "ap1_fabricSpreading_flow"),
+        ]
+    ),
+    grroupedButtonBlockGen(
+        "🔰 Select Topics for AP-I -",
+        [
+            payloadBtnGen("Marker Making", "ap1_markerMaking_flow"),
+            payloadBtnGen("Sewing Thread", "ap1_sewingTherad_flow")
+        ]
+    )
 ]
 
 
