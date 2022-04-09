@@ -970,6 +970,9 @@ let labLevel2Subs = require('./academic/labReport/level2/level2Labs')
 
 //lab2 - am1
 let am1Labs = require('./academic/labReport/level2/subs/am1/am1Labs')
+let am1LabsAll = require('./academic/labReport/level2/subs/am1/topics/appAm1AllReport')
+let am1LabsLayout = require('./academic/labReport/level2/subs/am1/topics/appAm1LabLayout')
+let am1LabsStdBody = require('./academic/labReport/level2/subs/am1/topics/appAm1StdBodyMes')
 
 //lab2 - ym1
 let ym1Labs = require('./academic/labReport/level2/subs/ym1/ym1Labs')
@@ -979,6 +982,17 @@ let wp1Labs = require('./academic/labReport/level2/subs/wp1/wp1Labs')
 
 //lab2 - fm1
 let fm1Labs = require('./academic/labReport/level2/subs/fm1/fm1Labs')
+let fm1LabsLayout = require('./academic/labReport/level2/subs/fm1/topics/appFm1Layout')
+let fm1LabsTappet = require('./academic/labReport/level2/subs/fm1/topics/appFm1Tappet')
+let fm1LabsLooming = require('./academic/labReport/level2/subs/fm1/topics/appFm1Looming')
+let fm1LabsPackage = require('./academic/labReport/level2/subs/fm1/topics/appFM1Package')
+let fm1LabsCheese = require('./academic/labReport/level2/subs/fm1/topics/appFm1CheeseWind')
+let fm1LabsHighSpeed = require('./academic/labReport/level2/subs/fm1/topics/appFm1HighSpeed')
+let fm1LabsSectional = require('./academic/labReport/level2/subs/fm1/topics/appFm1Sectional')
+let fm1LabsConvSizing = require('./academic/labReport/level2/subs/fm1/topics/appFm1ConvSizing')
+let fm1LabsDobby = require('./academic/labReport/level2/subs/fm1/topics/appFm1Dobby')
+let fm1LabsSizing = require('./academic/labReport/level2/subs/fm1/topics/appFm1Sizing')
+
 
 //lab2 - sss1
 let sss1Labs = require('./academic/labReport/level2/subs/sss1/sss1Labs')
@@ -991,6 +1005,20 @@ let fmeLabs = require('./academic/labReport/level2/subs/fme/fmeLabs')
 
 //lab2 - feee
 let feeeLabs = require('./academic/labReport/level2/subs/feee/feeeLabs')
+let feeeLabsMultimetre = require('./academic/labReport/level2/subs/feee/topics/appFeeeMultimetre')
+let feeeLabsOhm = require('./academic/labReport/level2/subs/feee/topics/appFeeeOhm')
+let feeeLabsKirchoff = require('./academic/labReport/level2/subs/feee/topics/appFeeeKirchoff')
+let feeeLabsRC = require('./academic/labReport/level2/subs/feee/topics/appFeeeRc')
+let feeeLabsRL = require('./academic/labReport/level2/subs/feee/topics/appFeeeRl')
+let feeeLabsRLC = require('./academic/labReport/level2/subs/feee/topics/appFeeeRLC')
+let feeeLabsCarbonRes = require('./academic/labReport/level2/subs/feee/topics/appFeeeCarbonRes')
+let feeeLabsFanReg = require('./academic/labReport/level2/subs/feee/topics/appFeeeFanReg')
+let feeeLabsWiringTube = require('./academic/labReport/level2/subs/feee/topics/appFeeeWiring')
+let feeeLabsFullBridge = require('./academic/labReport/level2/subs/feee/topics/appFeeeFullBridge')
+let feeeLabsFuse = require('./academic/labReport/level2/subs/feee/topics/appFeeeFuse')
+let feeeLabsOsci = require('./academic/labReport/level2/subs/feee/topics/appFeeeOscila')
+let feeeLabsWireGauge = require('./academic/labReport/level2/subs/feee/topics/appFeeeWireGauge')
+let feeeLabs2Light = require('./academic/labReport/level2/subs/feee/topics/appFeee2Light')
 
 //lab2 - mp
 let mpLabs = require('./academic/labReport/level2/subs/mp/mppLabs')
@@ -5036,6 +5064,21 @@ let labAm1Flow = (req, res) => {
     return res.send(am1Labs);
 };
 
+let labAm1AllFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(am1LabsAll);
+};
+
+let labAm1StdBodyFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(am1LabsStdBody);
+};
+
+let labAm1LayoutFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(am1LabsLayout);
+};
+
 //labs2 -> ym1
 let labYm1Flow = (req, res) => {
     //analytics
@@ -5060,6 +5103,56 @@ let labFm1Flow = (req, res) => {
 
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
     return res.send(fm1Labs);
+};
+
+let labFm1LayoutFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(fm1LabsLayout);
+};
+
+let labFm1TappetFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(fm1LabsTappet);
+};
+
+let labFm1LoomingFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(fm1LabsLooming);
+};
+
+let labFm1PackageFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(fm1LabsPackage);
+};
+
+let labFm1CheeseFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(fm1LabsCheese);
+};
+
+let labFm1HighSpeedFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(fm1LabsHighSpeed);
+};
+
+let labFm1SectionalFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(fm1LabsSectional);
+};
+
+let labFm1ConvSizingFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(fm1LabsConvSizing);
+};
+
+let labFm1DobbyFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(fm1LabsDobby);
+};
+
+let labFm1SizingFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(fm1LabsSizing);
 };
 
 //labs2 -> wp1
@@ -5125,6 +5218,77 @@ let labFeeeFlow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
     return res.send(feeeLabs);
 };
+
+let labFeeeMultiFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(feeeLabsMultimetre);
+};
+
+let labFeeeOhmFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(feeeLabsOhm);
+};
+
+let labFeeeKirchoffFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(feeeLabsKirchoff);
+};
+
+let labFeeeRCFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(feeeLabsRC);
+};
+
+let labFeeeRLFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(feeeLabsRL);
+};
+
+let labFeeeRLCFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(feeeLabsRLC);
+};
+
+let labFeeeCarbonResFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(feeeLabsCarbonRes);
+};
+
+let labFeeeFanRegFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(feeeLabsFanReg);
+};
+
+let labFeeeWiringTubelightFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(feeeLabsWiringTube);
+};
+
+let labFeeeFullBridgeFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(feeeLabsFullBridge);
+};
+
+let labFeeeFuseFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(feeeLabsFuse);
+};
+
+let labFeeeOsciFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(feeeLabsOsci);
+};
+
+let labFeeeWireGaugeFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(feeeLabsWireGauge);
+};
+
+let labFeee2WayLightFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(feeeLabs2Light);
+};
+
 
 //labs2 -> mp
 let labMpFlow = (req, res) => {
@@ -6101,10 +6265,24 @@ module.exports = {
     labCp135Flow: labCp135Flow,
 
     labAm1Flow: labAm1Flow,
+    labAm1AllFlow: labAm1AllFlow,
+    labAm1StdBodyFlow: labAm1StdBodyFlow,
+    labAm1LayoutFlow: labAm1LayoutFlow,
 
     labYm1Flow: labYm1Flow,
 
     labFm1Flow: labFm1Flow,
+    labFm1LayoutFlow: labFm1LayoutFlow,
+    labFm1TappetFlow: labFm1TappetFlow,
+    labFm1LoomingFlow: labFm1LoomingFlow,
+    labFm1PackageFlow: labFm1PackageFlow,
+    labFm1CheeseFlow: labFm1CheeseFlow,
+    labFm1HighSpeedFlow: labFm1HighSpeedFlow,
+    labFm1SectionalFlow: labFm1SectionalFlow,
+    labFm1ConvSizingFlow: labFm1ConvSizingFlow,
+    labFm1DobbyFlow: labFm1DobbyFlow,
+    labFm1SizingFlow: labFm1SizingFlow,
+    
 
     labWp1Flow: labWp1Flow,
 
@@ -6115,6 +6293,20 @@ module.exports = {
     labFmeFlow: labFmeFlow,
 
     labFeeeFlow: labFeeeFlow,
+    labFeeeMultiFlow: labFeeeMultiFlow,
+    labFeeeOhmFlow: labFeeeOhmFlow,
+    labFeeeKirchoffFlow: labFeeeKirchoffFlow,
+    labFeeeRCFlow: labFeeeRCFlow,
+    labFeeeRLFlow: labFeeeRLFlow,
+    labFeeeRLCFlow: labFeeeRLCFlow,
+    labFeeeCarbonResFlow: labFeeeCarbonResFlow,
+    labFeeeFanRegFlow: labFeeeFanRegFlow,
+    labFeeeWiringTubelightFlow: labFeeeWiringTubelightFlow,
+    labFeeeFullBridgeFlow: labFeeeFullBridgeFlow,
+    labFeeeFuseFlow: labFeeeFuseFlow,
+    labFeeeOsciFlow: labFeeeOsciFlow,
+    labFeeeWireGaugeFlow: labFeeeWireGaugeFlow,
+    labFeee2WayLightFlow: labFeee2WayLightFlow,
 
     labMpFlow: labMpFlow,
 

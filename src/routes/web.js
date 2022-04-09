@@ -941,6 +941,9 @@ let initWebRoutes = (app) => {
 
     //lab - am1
     router.get("/app/labs/2/am1", appController.labAm1Flow);
+    router.get("/app/labs/2/am1/am1_lab_layoutPlan_flow", appController.labAm1LayoutFlow);
+    router.get("/app/labs/2/am1/am1_lab_standardBody_flow", appController.labAm1StdBodyFlow);
+    router.get("/app/labs/2/am1/am1_lab_AllReport_flow", appController.labAm1AllFlow);
 
 
     //lab - wp1
@@ -948,12 +951,37 @@ let initWebRoutes = (app) => {
 
     //lab - fm1
     router.get("/app/labs/2/fm1", appController.labFm1Flow);
+    router.get("/app/labs/2/fm1/fm1_lab_layout_flow", appController.labFm1LayoutFlow);
+    router.get("/app/labs/2/fm1/fm1_lab_tappetShedding_flow", appController.labFm1TappetFlow);
+    router.get("/app/labs/2/fm1/fm1_lab_looming_flow", appController.labFm1LoomingFlow);
+    router.get("/app/labs/2/fm1/fm1_lab_package_flow", appController.labFm1PackageFlow);
+    router.get("/app/labs/2/fm1/fm1_lab_cheesWinding_flow", appController.labFm1CheeseFlow);
+    router.get("/app/labs/2/fm1/fm1_lab_highSpeedWarp_flow", appController.labFm1HighSpeedFlow);
+    router.get("/app/labs/2/fm1/fm1_lab_sectionalWarping_flow", appController.labFm1SectionalFlow);
+    router.get("/app/labs/2/fm1/fm1_lab_conventionalSizing_flow", appController.labFm1ConvSizingFlow);
+    router.get("/app/labs/2/fm1/fm1_lab_dobby_flow", appController.labFm1DobbyFlow);
+    router.get("/app/labs/2/fm1/fm1_lab_sizing_flow", appController.labFm1SizingFlow);
 
     //lab - ym1
     router.get("/app/labs/2/ym1", appController.labYm1Flow);
 
     //lab - feee
     router.get("/app/labs/2/feee", appController.labFeeeFlow);
+    router.get("/app/labs/2/feee/feee_lab_multiMetre_flow", appController.labFeeeMultiFlow);
+    router.get("/app/labs/2/feee/feee_lab_ohmslaw_flow", appController.labFeeeOhmFlow);
+    router.get("/app/labs/2/feee/feee_lab_kirchoffsLaw_flow", appController.labFeeeKirchoffFlow);
+    router.get("/app/labs/2/feee/feee_lab_rcCirct_flow", appController.labFeeeRCFlow);
+    router.get("/app/labs/2/feee/feee_lab_rlCirct_flow", appController.labFeeeRLFlow);
+    router.get("/app/labs/2/feee/feee_lab_rlcCirct_flow", appController.labFeeeRLCFlow);
+    router.get("/app/labs/2/feee/feee_lab_carbonResistor_flow", appController.labFeeeCarbonResFlow);
+    router.get("/app/labs/2/feee/feee_lab_fanRegulator_flow", appController.labFeeeFanRegFlow);
+    router.get("/app/labs/2/feee/feee_lab_wiringTubelight_flow", appController.labFeeeWiringTubelightFlow);
+    router.get("/app/labs/2/feee/feee_lab_fullBridgeRect_flow", appController.labFeeeFullBridgeFlow);
+    router.get("/app/labs/2/feee/feee_lab_fuseSwitch_flow", appController.labFeeeFuseFlow);
+    router.get("/app/labs/2/feee/feee_lab_Oscillosc_flow", appController.labFeeeOsciFlow);
+    router.get("/app/labs/2/feee/feee_lab_wireGauge_flow", appController.labFeeeWireGaugeFlow);
+    router.get("/app/labs/2/feee/feee_lab_2waySwitch_flow", appController.labFeee2WayLightFlow);
+
 
     // //lab - ap1
     // router.get("/app/labs/2/ap1", appController.labAp1Flow);
