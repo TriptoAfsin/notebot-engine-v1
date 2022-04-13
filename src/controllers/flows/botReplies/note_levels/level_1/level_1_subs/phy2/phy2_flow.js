@@ -47,6 +47,11 @@ let phy2_flow = [
             payloadBtnGen("Entropy", "phy2_entropy_flow")
         ]
     ),
+    grroupedButtonBlockGen("🔰 Select Topic for PHY-II -",
+        [
+            webBtnBlockGen("Ideal Gas", "https://drive.google.com/file/d/1VFjnVq75gsr1MlAJJsiv8liua_XPb77Q/view?usp=sharing"),
+        ]
+    ),
 ]
 
 
