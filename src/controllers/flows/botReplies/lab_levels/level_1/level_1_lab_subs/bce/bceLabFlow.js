@@ -1,46 +1,29 @@
+let grroupedButtonBlockGen = require('simple-messenger-blocks/groupedBtnBlockGen');
+let webBtnBlockGen = require('simple-messenger-blocks/webBtnGen');
+let payloadBtnGen = require('simple-messenger-blocks/payloadBtnGen');
+
+
 let bce_lab_flow = [
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🔰 Select Experiment for BCE- ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "Reading Technique",
-                        "payload": "bce_lab_read_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Listening Skills",
-                        "payload": "bce_lab_listen_flow"
-                    }
-                ],
-            },
-        },
-    },
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🔰 Lab  Materials -  ",
-                "buttons": [
-                    {
-                        "type": "web_url",
-                        "url": "https://drive.google.com/file/d/1xyoE71MpJL0Hwn2guWsuI9mRxPJBGPas/view?usp=sharing",
-                        "title": "Social English",
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Lab Sheet(Final Viva",
-                        "payload": "bce_lab_sheet_flow"
-                    }
-                ],
-            },
-        },
-    },
+    grroupedButtonBlockGen(
+        "📌 All Report  - ",
+        [
+            payloadBtnGen("All(2022)", "https://drive.google.com/file/d/1tu8slkIs7pTJ3LJseqX04l5o04NDbjDv/view?usp=sharing"),
+        ]
+    ),
+    grroupedButtonBlockGen(
+        "🔰 Select Experiment for BCE - ",
+        [
+            payloadBtnGen("Reading Technique", "bce_lab_read_flow"),
+            payloadBtnGen("Listening Skills", "bce_lab_listen_flow")
+        ]
+    ),
+    grroupedButtonBlockGen(
+        "🔰 Select Experiment for BCE - ",
+        [
+            webBtnBlockGen("Social English", "https://drive.google.com/file/d/1xyoE71MpJL0Hwn2guWsuI9mRxPJBGPas/view?usp=sharing"),
+            payloadBtnGen("Lab Sheet(Final Viva", "bce_lab_sheet_flow")
+        ]
+    )
 ]
 
 

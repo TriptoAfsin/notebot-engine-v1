@@ -1,7 +1,7 @@
-let grroupedButtonBlockGen = require("../../../../../../genrators/grroupedButtonBlockGen");
-let webBtnBlockGen = require("../../../../../../genrators/webBtnBlockGen");
-let payloadBtnGen = require("../../../../../../genrators/payloadBtnGen");
-let cardGenerator = require("../../../../../../genrators/cardGenerator");
+let grroupedButtonBlockGen = require('simple-messenger-blocks/groupedBtnBlockGen');
+let webBtnBlockGen = require('simple-messenger-blocks/webBtnGen');
+let payloadBtnGen = require('simple-messenger-blocks/payloadBtnGen');
+let cardGenerator = require('simple-messenger-blocks/cardGenerator');
 let bondiFlow = require("../../../../sponsoredFlows/bondiCard");
 
 let chem2_flow = [
@@ -30,6 +30,10 @@ let chem2_flow = [
     webBtnBlockGen(
       "By AE-45",
       "https://drive.google.com/file/d/1kV5Jfj-JFY_9GjTO7uu4L6_vcZn3EOUK/view?usp=sharing"
+    ),
+    webBtnBlockGen(
+      "Mamun(SKTEC)",
+      "https://drive.google.com/file/d/1oR4A8wNt5lOXgSBRihljz9VrqFA5D3Wi/view?usp=sharing"
     ),
   ]),
   grroupedButtonBlockGen("🔰 Select Topic for CHE-II - ", [
