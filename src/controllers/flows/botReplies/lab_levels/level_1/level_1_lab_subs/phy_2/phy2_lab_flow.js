@@ -1,117 +1,48 @@
+let grroupedButtonBlockGen = require('simple-messenger-blocks/groupedBtnBlockGen');
+let webBtnBlockGen = require('simple-messenger-blocks/webBtnGen');
+let payloadBtnGen = require('simple-messenger-blocks/payloadBtnGen');
+let imgBlockGen = require('simple-messenger-blocks/imgBlockGen');
+
 let phy2_lab_flow = [
-    {
-        "attachment":{
-            "type":"image", 
-            "payload":{
-              "is_reusable": false,
-              "url":"https://manybot-thumbnails.s3.eu-central-1.amazonaws.com/fb243958719599028/ca/big_9c59ca1c6005f0305772d40f5d0177be.png"
-            }
-          }
-    },
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🔰 Select Experiment for PHY-II- ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "E1",
-                        "payload": "phy2_lab_e1_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "E2",
-                        "payload": "phy2_lab_e2_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "E3",
-                        "payload": "phy2_lab_e3_flow"
-                    }
-                ],
-            },
-        },
-    },
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🔰 Select Experiment for Phy-II-  ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "E4",
-                        "payload": "phy2_lab_e4_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "E5",
-                        "payload": "phy2_lab_e5_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "E6",
-                        "payload": "phy2_lab_e6_flow"
-                    }
-                ],
-            },
-        },
-    },
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🔰 Select Experiment for Phy-II-  ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "E7",
-                        "payload": "phy2_lab_e7_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "E8",
-                        "payload": "phy2_lab_e8_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "M1",
-                        "payload": "phy2_lab_m1_flow"
-                    }
-                ],
-            },
-        },
-    },
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🔰 Select Experiment for Phy-II-  ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "H1",
-                        "payload": "phy2_lab_h1_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "H2",
-                        "payload": "phy2_lab_h2_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "H3",
-                        "payload": "phy2_lab_h3_flow"
-                    }
-                ],
-            },
-        },
-    }
+    imgBlockGen("https://manybot-thumbnails.s3.eu-central-1.amazonaws.com/fb243958719599028/ca/big_9c59ca1c6005f0305772d40f5d0177be.png"),
+    grroupedButtonBlockGen(
+        "🔰 Select Experiment for PHY-II-",
+        [
+            webBtnBlockGen("Book Scanned", "https://drive.google.com/file/d/159l8qjOpNROAlbRCVJKLOWiqtpbGUSCY/view?usp=sharing"),
+        ]
+    ),
+    grroupedButtonBlockGen(
+        "🔰 Select Experiment for PHY-II-",
+        [
+            payloadBtnGen("E1", "phy2_lab_e1_flow"),
+            payloadBtnGen("E2", "phy2_lab_e2_flow"),
+            payloadBtnGen("E3", "phy2_lab_e3_flow"),
+        ]
+    ),
+    grroupedButtonBlockGen(
+        "🔰 Select Experiment for PHY-II-",
+        [
+            payloadBtnGen("E4", "phy2_lab_e4_flow"),
+            payloadBtnGen("E5", "phy2_lab_e5_flow"),
+            payloadBtnGen("E6", "phy2_lab_e6_flow"),
+        ]
+    ),
+    grroupedButtonBlockGen(
+        "🔰 Select Experiment for PHY-II-",
+        [
+            payloadBtnGen("E7", "phy2_lab_e7_flow"),
+            payloadBtnGen("E8", "phy2_lab_e8_flow"),
+            payloadBtnGen("M1", "phy2_lab_m1_flow"),
+        ]
+    ),
+    grroupedButtonBlockGen(
+        "🔰 Select Experiment for PHY-II-",
+        [
+            payloadBtnGen("H1", "phy2_lab_h1_flow"),
+            payloadBtnGen("H2", "phy2_lab_h2_flow"),
+            payloadBtnGen("H3", "phy2_lab_h3_flow"),
+        ]
+    )
 ]
 
 

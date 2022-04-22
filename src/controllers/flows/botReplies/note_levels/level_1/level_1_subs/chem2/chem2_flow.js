@@ -25,6 +25,10 @@ let chem2_flow = [
       "Rushad(2021)",
       "https://drive.google.com/file/d/1VzbsuNV1WRoPdfGAJ7DO-sWZQGELvNx_/view?usp=sharing"
     ),
+    webBtnBlockGen(
+      "Affli College(2022)",
+      "https://drive.google.com/file/d/160qMkHlwhqIe2gftncwCtNdRCNvG3S9l/view?usp=sharing"
+    ),
   ]),
   grroupedButtonBlockGen("📌 QB Solve - ", [
     webBtnBlockGen(
