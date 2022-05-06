@@ -1,77 +1,38 @@
+let grroupedButtonBlockGen = require('simple-messenger-blocks/groupedBtnBlockGen');
+let webBtnBlockGen = require('simple-messenger-blocks/webBtnGen');
+let payloadBtnGen = require('simple-messenger-blocks/payloadBtnGen');
+
+
 let che1_lab_flow = [
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "⚡Practical Books - ",
-                "buttons": [
-                    {
-                        "type": "web_url",
-                        "url": "https://drive.google.com/file/d/1Pv19IT1C_8JAZnsNNGFaHDOmdiojEyCP/view",
-                        "title": "Vogel's Quantitive.",
-                    },
-                    {
-                        "type": "web_url",
-                        "url": "https://drive.google.com/file/d/1bMefQIGJ-6tVERfAbIrtt-alWUPE1zJw/view",
-                        "title": "Vogle's Macro and ..",
-                    }
-                ],
-            },
-        },
-    },
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🔰 Select Experiment for Che-I- ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "Procedure Sheet(All)",
-                        "payload": "che1_procedureSheet_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Acid Radical Ident..",
-                        "payload": "che1_acidRadical_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Basic Radical Ident.",
-                        "payload": "che1_basicRadical_flow"
-                    }
-                ],
-            },
-        },
-    },
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🔰 Select Experiment for Che-I-  ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "Mohr's Salt(new)",
-                        "payload": "che1_mohrsSalt_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Wet Test",
-                        "payload": "che1_wetTest_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Titration",
-                        "payload": "che1_titration_flow"
-                    }
-                ],
-            },
-        },
-    }
+    grroupedButtonBlockGen(
+        "📌 All Lab Reports(New) - ",
+        [
+            webBtnBlockGen("Emon(2022)", "https://drive.google.com/file/d/1fou-8FqdjtKuxrfAong4L-yAovzA04Rv/view?usp=sharing"),
+        ]
+    ),
+    grroupedButtonBlockGen(
+        "⚡Practical Books -",
+        [
+            webBtnBlockGen("Vogel's Quantitive.", "https://drive.google.com/file/d/1Pv19IT1C_8JAZnsNNGFaHDOmdiojEyCP/view"),
+            webBtnBlockGen("Vogle's Macro and ..", "https://drive.google.com/file/d/1bMefQIGJ-6tVERfAbIrtt-alWUPE1zJw/view")
+        ]
+    ),
+    grroupedButtonBlockGen(
+        "🔰 Select Experiment for Chem-I-",
+        [
+            payloadBtnGen("Procedure Sheet(All)", "che1_procedureSheet_flow"),
+            payloadBtnGen("Acid Radical Ident.", "che1_acidRadical_flow"),
+            payloadBtnGen("Basic Radical Ident.", "che1_basicRadical_flow")
+        ]
+    ),
+    grroupedButtonBlockGen(
+        "🔰 Select Experiment for Chem-I-",
+        [
+            payloadBtnGen("Mohr's Salt(new)", "che1_mohrsSalt_flow"),
+            payloadBtnGen("Wet Test", "che1_wetTest_flow"),
+            payloadBtnGen("Titration", "che1_titration_flow")
+        ]
+    ),
 ]
 
 

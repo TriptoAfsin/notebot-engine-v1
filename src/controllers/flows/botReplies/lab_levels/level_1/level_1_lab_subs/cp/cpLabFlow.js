@@ -8,6 +8,7 @@ let cp_lab_flow = [
         "📌 All Lab Reports(New) - ",
         [
             webBtnBlockGen("Sagar(2021)", "https://drive.google.com/file/d/1KUfs791LWjh4VPfPbOs04KsiBhJqAkim/view?usp=sharing"),
+            webBtnBlockGen("Emon(2022)", "https://drive.google.com/file/d/12k8aQCUNkANkl-_7HOzznrHA_hj5YANt/view?usp=sharing"),
         ]
     ),
     grroupedButtonBlockGen(
