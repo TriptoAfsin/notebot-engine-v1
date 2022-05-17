@@ -15,6 +15,12 @@ let wp2Flow = [
     grroupedButtonBlockGen(
         "🔰 Select Topics for WP-II -",
         [
+            webBtnBlockGen("Intro to Tex Print", "https://drive.google.com/file/d/1FC9dIbItS7r3QY5H7mQcODGIFP3V-KgE/view?usp=sharing"),
+        ]
+    ),
+    grroupedButtonBlockGen(
+        "🔰 Select Topics for WP-II -",
+        [
             webBtnBlockGen("Wool Finishings", "https://drive.google.com/file/d/1NDXSTfZ04CHaAXDRdO1ovquRitHaPhTH/view"),
             webBtnBlockGen("Antimicrobial Fin", "https://drive.google.com/file/d/1Cc3BvygH2BRXgT0o7zsFvTsh5IOr3wso/view"),
             webBtnBlockGen("Softener", "https://drive.google.com/file/d/1QaOpsNlmVf0gbh69EpZpNtuXq9zCOqGT/view"),
@@ -47,7 +53,7 @@ let wp2Flow = [
     grroupedButtonBlockGen(
         "🔰 Select Topics for WP-II -",
         [
-            webBtnBlockGen("Textile Printing", "https://drive.google.com/file/d/1Ocpo2rPdux_Tc1B4B1jG3YOaJmyGQIgA/view"),
+            webBtnBlockGen("Textile Printing Sheet", "https://drive.google.com/file/d/1Ocpo2rPdux_Tc1B4B1jG3YOaJmyGQIgA/view"),
             webBtnBlockGen("Mesh & Screen Pri", "https://drive.google.com/file/d/1CwRW4GBxwfyw65sEXpB6wHhDYsxU6ZW7/view")
         ]
     )
