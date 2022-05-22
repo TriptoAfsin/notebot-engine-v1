@@ -8,6 +8,7 @@ let math2Ode = [
     textBlockGen(`🔷 ODE(7-12,15(a)) (Avik, 2019)-\n\nhttps://drive.google.com/file/d/1xEOOIlkXj1aUg4bqUsnExzHy-cPbNzeH/view?usp=sharing`),
     textBlockGen(`🔷 ODE(2-6)(Avik, 2019)-\n\nhttps://drive.google.com/file/d/1NIg79BlEp6x9tAYXO4UUoMlxpH1BH9Au/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note(Sazzad,FE-46,2022)-\n\nhttps://drive.google.com/file/d/1gIpDtOjjEof8KORAmR2ccv6W4YtZz5dl/view?usp=sharing`),
+    textBlockGen(`🔷 Hand Note(Nafis,IPE-46,2022)-\n\nhttps://drive.google.com/file/d/1TzROXr-WxCbQ-isHm37yC22XR8iRUvX6/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note(Hemul,TFD-45,2021)-\n\nhttps://drive.google.com/file/d/1gKfaEoH3DyypKBJ49O3zqWKYGijl477_/view?usp=sharing`),
 ]
 
