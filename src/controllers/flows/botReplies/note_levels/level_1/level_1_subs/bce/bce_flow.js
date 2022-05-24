@@ -31,6 +31,12 @@ let bce_flow = [
         ]
     ),
     grroupedButtonBlockGen(
+        "📌 Suggestions -",
+        [
+            webBtnBlockGen("Affli(2022)", "https://drive.google.com/file/d/19pE0LLMnvFVtSHZKdIeydRM4e7qF5TS4/view?usp=sharing"),
+        ]
+    ),
+    grroupedButtonBlockGen(
         "📌 Full Hand Notes -",
         [
             webBtnBlockGen("Nafis(2022)", "https://drive.google.com/file/d/1x1hcnrlXKk2Qu4zSsiJwPf_uV8u0lWZ2/view?usp=sharing"),

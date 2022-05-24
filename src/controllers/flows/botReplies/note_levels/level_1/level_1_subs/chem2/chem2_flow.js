@@ -61,6 +61,10 @@ let chem2_flow = [
     payloadBtnGen("Solubulity Boiling", "chem2_solubulity_flow"),
   ]),
   grroupedButtonBlockGen("🔰 Select Topic for CHE-II - ", [
+    webBtnBlockGen("Ald&Ketone", "https://drive.google.com/file/d/1YRQW4JPKG46JOxvKmPCZzzA-T-1X4JKj/view?usp=sharing"),
+    webBtnBlockGen("Org Reac Mech", "https://drive.google.com/file/d/1ax1Fp_Ea8CZSoXZo0EB7nv_CCy4mIdtg/view?usp=sharing"),
+  ]),
+  grroupedButtonBlockGen("🔰 Select Topic for CHE-II - ", [
     webBtnBlockGen(
       "Grignard Rea.",
       "https://drive.google.com/file/d/1UnWcDu9vRCh1WFALLQG3SOR9LqiyfYif/view?usp=sharing"
