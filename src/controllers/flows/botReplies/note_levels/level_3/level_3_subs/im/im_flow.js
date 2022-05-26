@@ -8,6 +8,7 @@ let imFlow = [
         "📌 Select Topics for IM(New) -",
         [
             webBtnBlockGen("Marketing Basics", "https://drive.google.com/file/d/1-V7IyR_jCb7SoZ9XD46k5av4bJrZf0MC/view"),
+            webBtnBlockGen("Basics of IM", "https://drive.google.com/file/d/1e9OsUlsSl3DnblCoenWhHT8Mm5ooQQM4/view?usp=sharing"),
         ]
     ),
     grroupedButtonBlockGen(
@@ -20,7 +21,7 @@ let imFlow = [
         "🔰 Select Topics for IM -",
         [
             payloadBtnGen("Lec 1: Intro to IM", "im_lec1_flow"),
-            payloadBtnGen("Lec 2: Manegerial ..", "im_lec2_flow"),
+            payloadBtnGen("Managerial Skills", "im_lec2_flow"),
             payloadBtnGen("Lec 3: Environment.", "im_lec3_flow"),
         ]
     ),
