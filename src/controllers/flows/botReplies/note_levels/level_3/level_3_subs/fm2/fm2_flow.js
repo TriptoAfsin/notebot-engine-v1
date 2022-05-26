@@ -5,6 +5,12 @@ let payloadBtnGen = require('simple-messenger-blocks/payloadBtnGen');
 
 let fm2Flow = [
     grroupedButtonBlockGen(
+        "📌 Select Topics for FM-II -",
+        [
+            webBtnBlockGen("CT(June,2022)", "https://drive.google.com/file/d/1ljvCzAUku4g9D5eaOgzLSbqn32ej7u_N/view?usp=sharing"),
+        ]
+    ),
+    grroupedButtonBlockGen(
         "🔰 Select Topics for FM-II -",
         [
             payloadBtnGen("Books", "fm2_books_flow"),
