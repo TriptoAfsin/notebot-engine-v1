@@ -9,6 +9,12 @@ let bondiFlow = require("../../../../sponsoredFlows/bondiCard");
 let pse_flow = [
     bondiFlow,
     grroupedButtonBlockGen(
+        "📌 Full Hand Notes(2022) - ",
+        [
+            webBtnBlockGen("Part-B(Rafi)", "https://drive.google.com/file/d/1T87Wvn3dEVPyED6X70yyaiZer-dFqFml/view?usp=sharing"),
+        ]
+    ),
+    grroupedButtonBlockGen(
         "🔰 Select Topics for PSE - ",
         [
             payloadBtnGen("Books", "pse_books_flow"),

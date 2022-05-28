@@ -5,6 +5,7 @@ let math2Vector = [
     textBlockGen(`🔷 Handnote(Emon, Based on Rokon Sir's Lecture,2018)-\n\nhttps://drive.google.com/file/d/1hPUjDJtK7lqqLvxHLz-U-CYO_nCdkUZF/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note(Archi,AE-45,2021) - \n\nhttps://drive.google.com/file/d/1FtFnwBiTXDA1N47Qm6vCBZ7QQyQXc-Pa/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note(Nafis,IPE-46,2022) - \n\nhttps://drive.google.com/file/d/1p5jZ6F_WmFLi9zJmQ6LAz3IVZV_MysG9/view?usp=sharing`),
+    textBlockGen(`🔷 Hand Note(Nihat,YE-46,2022) - \n\nhttps://drive.google.com/file/d/1MZNFXpRbbnT44lwax7cgeCevyBtOuNJr/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note(Arpa,2021) - \n\nhttps://drive.google.com/file/d/1mlwMpx2fJFFMG6ofvCsIFWSlV87JxIo6/view?usp=sharing`),
     textBlockGen(`🔷 Short Note(Arpa,2021) - \n\nhttps://drive.google.com/file/d/10v-ehUzJbJJmJve5ZUNDGtfhLIVqH7N-/view?usp=sharing`),
     textBlockGen(`🔷 Vector (Mamun, SKTEC, 2022) - \n\nhttps://drive.google.com/file/d/13-rapEbPDzlbWx8XgUns5KGQ0StwMUNP/view?usp=sharing`),
