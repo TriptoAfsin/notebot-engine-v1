@@ -54,7 +54,8 @@ let wp2Flow = [
         "🔰 Select Topics for WP-II -",
         [
             webBtnBlockGen("Textile Printing Sheet", "https://drive.google.com/file/d/1Ocpo2rPdux_Tc1B4B1jG3YOaJmyGQIgA/view"),
-            webBtnBlockGen("Mesh & Screen Pri", "https://drive.google.com/file/d/1CwRW4GBxwfyw65sEXpB6wHhDYsxU6ZW7/view")
+            webBtnBlockGen("Mesh & Screen Pri", "https://drive.google.com/file/d/1CwRW4GBxwfyw65sEXpB6wHhDYsxU6ZW7/view"),
+            webBtnBlockGen("Screen Printing", "https://drive.google.com/file/d/1ZAr8hIzUqY7FIKawNnqUnsOx30lD0-hX/view?usp=sharing")
         ]
     )
 ]

@@ -62,7 +62,8 @@ let em_flow = [
     grroupedButtonBlockGen("🔰 Select Topics for EM -",
         [
             payloadBtnGen("Atomic Struc.", "em_atomic_struct_flow"),
-            webBtnBlockGen("Class. Prop.", "https://drive.google.com/file/d/1dirVEoOhjyxPto0AUWBShHcwBWldX1CQ/view?usp=sharing")
+            webBtnBlockGen("Class. Prop.", "https://drive.google.com/file/d/1dirVEoOhjyxPto0AUWBShHcwBWldX1CQ/view?usp=sharing"),
+            webBtnBlockGen("Clas. Metals", "https://drive.google.com/file/d/17JeWgqGU8DUvFUnR13CS3uqaymTP8eYv/view?usp=sharing")
         ]
     ),
 ]
