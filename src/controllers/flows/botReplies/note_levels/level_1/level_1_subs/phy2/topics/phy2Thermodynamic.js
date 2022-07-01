@@ -1,10 +1,11 @@
-let textBlockGen = require("../../../../../../../genrators/textBlockGen");
+let textBlockGen = require('simple-messenger-blocks/textBlockGen');
 
 
 let phy2ThermoDynamic = [
     textBlockGen(`🔷 Hand Note(Tripto, Based om Hedayet Sir's Lecture,2019)-\n\nhttps://drive.google.com/file/d/16cumbZvJ8XLER684mAlstN5AuekpSsCg/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note(Akib, 2019)-\n\nhttps://drive.google.com/file/d/1ZLSxYxWhNFY9x97Or8VPrAlamPoedCaK/view`),
     textBlockGen(`🔷 Hand Note(Archi,AE-45,2020)-\n\nhttps://drive.google.com/file/d/1Si3n43a31hTAsFJQng18sUK0bwdCm99k/view?usp=sharing`),
+    textBlockGen(`🔷 Hand Note(Fiza,AE-46,2022)-\n\nhttps://drive.google.com/file/d/1ipRRbrJlMXLggReg4rFAebi4f5U1aEfA/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note(Farhan,TEM-46,2022)-\n\nhttps://drive.google.com/file/d/1qd9n2PBWjzwj14YFakXb3aTHnFAFEezs/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note(Rafi, 46,2022)-\n\nhttps://drive.google.com/file/d/1NBLMzMaTyP9rjZd7VnJGlTxPf0cA2BaP/view?usp=sharing`),
     textBlockGen(`🔷 Sheet(Hedayet Sir, 2021) -\n\nhttps://drive.google.com/file/d/1pmWJe17EXUAXWAcAzYWB6T0Bbi_DpbrG/view?usp=sharing`),

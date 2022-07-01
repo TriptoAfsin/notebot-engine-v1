@@ -1,8 +1,7 @@
+let textBlockGen = require('simple-messenger-blocks/textBlockGen');
+
 let math2Ques = [
-    {
-        "text": `🔷 Math II Questions(2011-2019) -  
-        https://drive.google.com/file/d/1bbvXduZDz5oMqnfOiNRKwwrrhRmaAouR/view?usp=drivesdk`
-    }
+    textBlockGen(`🔷 Math II Questions(2011-2019) -  \n\nhttps://drive.google.com/file/d/1bbvXduZDz5oMqnfOiNRKwwrrhRmaAouR/view?usp=drivesdk`),
 ]
 
 

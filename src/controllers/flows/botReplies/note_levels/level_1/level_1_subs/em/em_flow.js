@@ -12,6 +12,11 @@ let em_flow = [
             webBtnBlockGen("⚡Download", "https://drive.google.com/file/d/11lnmfUbsrYQa0dwJvCoe3uU2JmNPAOUE/view?usp=sharing")
         ]
     ),
+    grroupedButtonBlockGen("📌 Useful Resources - ",
+        [
+            webBtnBlockGen("Maths, Defn(2022)", "https://drive.google.com/file/d/1JpV6azlb9trGXohf0ygIVcShTKN1_s4Z/view?usp=sharing")
+        ]
+    ),
     grroupedButtonBlockGen("📌 Full Hand Notes - ",
         [
             webBtnBlockGen("Rushad(2021)", "https://drive.google.com/file/d/1Nieo9oDLZw-_kQs0VhWrjIG2tp9GOG_c/view?usp=sharing")

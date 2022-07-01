@@ -14,6 +14,12 @@ let mmtfFlow = [
         ]
     ),
     grroupedButtonBlockGen(
+        "📌 QB Solve -",
+        [
+            webBtnBlockGen("Arjan(2022)", "https://drive.google.com/file/d/1nDvpJkaENtIVnbeRzfJTV8AdQI1oybj1/view?usp=sharing"),
+        ]
+    ),
+    grroupedButtonBlockGen(
         "📌 Analytical Questions - ",
         [
             webBtnBlockGen("Tripto(2021)", "https://drive.google.com/file/d/1axF8QJfbggg4DqLk-V_HfXuUv1YvnBU5/view?usp=sharing"),

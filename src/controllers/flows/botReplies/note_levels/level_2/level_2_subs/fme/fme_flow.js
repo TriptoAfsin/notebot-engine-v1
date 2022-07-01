@@ -12,6 +12,12 @@ let fmeFlow = [
             webBtnBlockGen("Solid", "https://drive.google.com/file/d/1TxVKfihV6599YEcdivAK-Xwi-FfsMTa-/view")
         ]
     ),
+    grroupedButtonBlockGen(
+        "📌 QB Solve -",
+        [
+            webBtnBlockGen("Arjan(2022)", "https://drive.google.com/file/d/1yX7UsBG4w_XS8m0I6yWdPJ8sI9nHTLPK/view?usp=sharing"),
+        ]
+    ),
     grroupedButtonBlockGen(`📌Full Hand Note(Nahid,AE-44, 2020)-`,
         [
             webBtnBlockGen("Part A", "https://drive.google.com/file/d/1tbFqkVmg9g-O-XGUeAaCM4bXF7NE6xHW/view"),

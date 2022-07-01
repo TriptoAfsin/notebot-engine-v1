@@ -4,6 +4,7 @@ let textBlockGen = require('simple-messenger-blocks/textBlockGen');
 let phy2Modern = [
     textBlockGen(`🔷 Hand Note(Tripto, 2019)-\n\nhttps://drive.google.com/file/d/1QAyuTIO_DjhCqTE-NvSCDNyVwaCu73WO/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note(Nihat,YE-46,2022)-\n\nhttps://drive.google.com/file/d/1dpYxlo6go0UQ4DWdCOYnyUd_ZbJBq1-S/view?usp=sharing`),
+    textBlockGen(`🔷 Hand Note(Sakib,DCE-46,2022)-\n\nhttps://drive.google.com/file/d/1IZibkLXh6rYkQr5Gj0w0iS8r947HPb8z/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note(Rafi,46,2022)-\n\nhttps://drive.google.com/file/d/1vPUYOzF7nLYMDC4bwi3u5tPRiGGOo5s3/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note(Farhan,TEM-46,2021)-\n\nhttps://drive.google.com/file/d/16-z9xcQqg8nwWSXvRQrHyIJbwNk1D2fJ/view?usp=sharing`),
     textBlockGen(`🔷 Book Scanned -\n\nhttps://drive.google.com/file/d/1wVHVFo0VLAXIb4H3g58OAXezPtObdNaF/view?usp=sharing`),

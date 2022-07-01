@@ -14,8 +14,8 @@ let cardGen = require("../../../genrators/cardGenerator");
 
 let bondiFlow = cardGen(
     "https://i.imgur.com/l1i0TJP.png",
-    "NoteBOT App",
-    "Use the brand new NoteBOT App to get the best of NoteBOT",
+    "⚠️ NoteBot Chatbot might stop working from 20th July,2022",
+    `Please use the brand new NoteBOT App to get the best of NoteBOT \n\n⚠️ NoteBot Chatbot might stop working from 20th July,2022`,
     "https://play.google.com/store/apps/details?id=com.hawkers.notebot",
     [
         webBtnBlockGen("Download", "https://play.google.com/store/apps/details?id=com.hawkers.notebot")

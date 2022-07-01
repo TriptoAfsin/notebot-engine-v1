@@ -14,6 +14,12 @@ let ym1Flow = [
         ]
     ),
     grroupedButtonBlockGen(
+        "📌 QB Solve -",
+        [
+            webBtnBlockGen("Arjan(2022)", "https://drive.google.com/file/d/13XiVix-zmVQL_uQlgLw6Lhe21izJiZIQ/view?usp=sharing"),
+        ]
+    ),
+    grroupedButtonBlockGen(
         `📌 Akib's Hand Notes -   `,
         [
             webBtnBlockGen("Part A","https://drive.google.com/file/d/1LtfOtf5NkgwEFfcSdfSzFiBTnFdc_N3G/view"),

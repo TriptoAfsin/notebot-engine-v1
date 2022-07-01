@@ -15,6 +15,12 @@ let fm1Flow = [
         ]
     ),
     grroupedButtonBlockGen(
+        "📌 QB Solve -",
+        [
+            webBtnBlockGen("Arjan(2022)", "https://drive.google.com/file/d/1OsF8c6R88ZOBetP8_BQMO65vk_awZRWK/view?usp=sharing"),
+        ]
+    ),
+    grroupedButtonBlockGen(
         `📌 Full Hand Notes(Akib, 2021) - `,
         [
             webBtnBlockGen("Part-A(Akib)","https://drive.google.com/file/d/1FHbZSTiRa7cosKdP8zuLn5l0vmg7vRH_/view"),

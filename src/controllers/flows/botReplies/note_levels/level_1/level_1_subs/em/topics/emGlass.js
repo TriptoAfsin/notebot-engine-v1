@@ -1,7 +1,6 @@
 let emGlass = [
     {
-        "text": `🔷Glass Properties - 
-        https://drive.google.com/file/d/1le9W4b_cKzk_UfBJ42DzE-Vfh6xSIHab/view?usp=sharing`
+        "text": `🔷 Glass Properties - \n\nhttps://drive.google.com/file/d/1le9W4b_cKzk_UfBJ42DzE-Vfh6xSIHab/view?usp=sharing`
     }
 ]
 

@@ -26,6 +26,10 @@ let chem2_flow = [
       "https://drive.google.com/file/d/1VzbsuNV1WRoPdfGAJ7DO-sWZQGELvNx_/view?usp=sharing"
     ),
     webBtnBlockGen(
+      "Wasy(2022)",
+      "https://drive.google.com/file/d/1rLSeFUex-OhiQjalsYwSGgfBVnmKyOaj/view?usp=sharing"
+    ),
+    webBtnBlockGen(
       "Affli College(2022)",
       "https://drive.google.com/file/d/160qMkHlwhqIe2gftncwCtNdRCNvG3S9l/view?usp=sharing"
     ),

@@ -9,9 +9,15 @@ let bondiFlow = require("../../../../sponsoredFlows/bondiCard");
 let eeeFlow = [
     bondiFlow,
     grroupedButtonBlockGen(
-        "📌 Asad Sir's Slide♦ -",
+        "📌 Asad Sir's Slide -",
         [
             webBtnBlockGen("⚡ Downlaod", "https://drive.google.com/file/d/16mFkXWt7gAeeYpCpcQp-dQLf43Jocdpx/view?usp=sharing")
+        ]
+    ),
+    grroupedButtonBlockGen(
+        "📌 Basic Laws - ",
+        [
+            webBtnBlockGen("Arpa(2022)", "https://drive.google.com/file/d/1w1k-HhyGqUe8nxAs7tfJ9q8zeQxXSzhL/view?usp=sharing")
         ]
     ),
     grroupedButtonBlockGen(

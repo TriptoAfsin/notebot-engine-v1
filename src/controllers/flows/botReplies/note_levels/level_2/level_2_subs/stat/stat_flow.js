@@ -10,7 +10,8 @@ let statFlow = [
     grroupedButtonBlockGen(`⭐ STAT Tables - `,
         [
             webBtnBlockGen("Normal Table", "https://drive.google.com/file/d/1xcenjNMM1DJUmFkrAxfScg7e6WwJunCL/view?usp=sharing"),
-            webBtnBlockGen("Z, T Table", "https://drive.google.com/file/d/13eqSeHVGlDfJ8kLwvBBvSYo2uZJwZ6iR/view?usp=sharing")
+            webBtnBlockGen("Z, T Table", "https://drive.google.com/file/d/13eqSeHVGlDfJ8kLwvBBvSYo2uZJwZ6iR/view?usp=sharing"),
+            webBtnBlockGen("Formulas Table", "https://drive.google.com/file/d/1JahjJx6EtYmeZHK1DElidWczDwn_UGaI/view?usp=sharing")
         ]
     ),
     grroupedButtonBlockGen(`📌 Stat Solve -`,
