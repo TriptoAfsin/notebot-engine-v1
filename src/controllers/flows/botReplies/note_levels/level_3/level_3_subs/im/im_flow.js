@@ -12,6 +12,12 @@ let imFlow = [
         ]
     ),
     grroupedButtonBlockGen(
+        "📌 Full Hand Notes - ",
+        [
+            webBtnBlockGen("A+B(Adee)", "https://drive.google.com/file/d/1k7GoxViqrMal0NmYJlBiyeWDyye2Xhf6/view?usp=sharing"),
+        ]
+    ),
+    grroupedButtonBlockGen(
         "🔰 Select Topics for IM -",
         [
             payloadBtnGen("Lectures", "im_lecture_flow"),

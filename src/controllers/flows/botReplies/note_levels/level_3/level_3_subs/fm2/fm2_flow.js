@@ -12,6 +12,13 @@ let fm2Flow = [
         ]
     ),
     grroupedButtonBlockGen(
+        "📌 Full Hand Notes - ",
+        [
+            webBtnBlockGen("A+B(Adee)", "https://drive.google.com/file/d/13V_mnmNw8lTr3LMcmO4_H8ahuK9gQayF/view?usp=sharing"),
+            webBtnBlockGen("Part-A(Nahid)", "https://drive.google.com/file/d/1zsT2QiJmwI4VICYTjZwFazbDqkVRIMXp/view?usp=sharing"),
+        ]
+    ),
+    grroupedButtonBlockGen(
         "🔰 Select Topics for FM-II -",
         [
             payloadBtnGen("Books", "fm2_books_flow"),

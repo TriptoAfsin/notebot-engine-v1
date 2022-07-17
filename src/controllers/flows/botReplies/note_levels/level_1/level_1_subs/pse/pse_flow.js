@@ -12,6 +12,7 @@ let pse_flow = [
         "📌 Full Hand Notes(2022) - ",
         [
             webBtnBlockGen("Part-B(Rafi)", "https://drive.google.com/file/d/1T87Wvn3dEVPyED6X70yyaiZer-dFqFml/view?usp=sharing"),
+            webBtnBlockGen("Important Ques(2022)", "https://drive.google.com/file/d/13pluwYvVBZj5auqpRsE-x7OcavsmatOr/view?usp=sharing"),
         ]
     ),
     grroupedButtonBlockGen(

@@ -6,6 +6,12 @@ let imgBlockGen = require('simple-messenger-blocks/imgBlockGen');
 let phy2_lab_flow = [
     imgBlockGen("https://manybot-thumbnails.s3.eu-central-1.amazonaws.com/fb243958719599028/ca/big_9c59ca1c6005f0305772d40f5d0177be.png"),
     grroupedButtonBlockGen(
+        "📌 All Lab Reports -",
+        [
+            webBtnBlockGen("2022", "https://drive.google.com/file/d/1dLXbV8GiLNiDUaapr1nopXWh0u-bs1xn/view?usp=sharing"),
+        ]
+    ),
+    grroupedButtonBlockGen(
         "🔰 Select Experiment for PHY-II-",
         [
             webBtnBlockGen("Book Scanned", "https://drive.google.com/file/d/159l8qjOpNROAlbRCVJKLOWiqtpbGUSCY/view?usp=sharing"),
