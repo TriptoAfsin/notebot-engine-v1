@@ -16,6 +16,7 @@ let fm2Flow = [
         [
             webBtnBlockGen("A+B(Adee)", "https://drive.google.com/file/d/13V_mnmNw8lTr3LMcmO4_H8ahuK9gQayF/view?usp=sharing"),
             webBtnBlockGen("Part-A(Nahid)", "https://drive.google.com/file/d/1zsT2QiJmwI4VICYTjZwFazbDqkVRIMXp/view?usp=sharing"),
+            webBtnBlockGen("Part-B(Nahid)", "https://drive.google.com/file/d/1cFl_FaTQlXZ_CRlaZmOc00hM2deZhiqq/view?usp=sharing"),
         ]
     ),
     grroupedButtonBlockGen(
