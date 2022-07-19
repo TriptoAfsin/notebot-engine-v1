@@ -13,6 +13,7 @@ let econoFlow = [
         [
             webBtnBlockGen("A+B(Ezaz)", "https://drive.google.com/file/d/1nADo6MizjPUu-A4_xwi1aMXnuZlxV9YT/view?usp=sharing"),
             webBtnBlockGen("A+B(Adee)", "https://drive.google.com/file/d/1n9UVrvWxVAvbV1qbYfJ5c6Lxh53fBnlG/view?usp=sharing"),
+            webBtnBlockGen("A+B(Khadiza)", "https://drive.google.com/file/d/1m-nXG46geAIkKMJm_b6Ja9yYy6OhYnRN/view?usp=sharing"),
         ]
     ),
     grroupedButtonBlockGen(
