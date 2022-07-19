@@ -7,6 +7,12 @@ let bondiFlow = require("../../../../sponsoredFlows/bondiCard");
 
 let ym2Flow = [
     bondiFlow,
+    grroupedButtonBlockGen(
+        "📌 Full Hand Notes(2022) - ",
+        [
+            webBtnBlockGen("Part-A(Akib)", "https://drive.google.com/file/d/1-rZCeR2uGfDY_ImbA08T9z4trSFfCx0O/view"),
+        ]
+    ),
     grroupedButtonBlockGen("🔰 Select Topics for YM-II -",
         [
             payloadBtnGen("Books", "ym2_books_flow"),
