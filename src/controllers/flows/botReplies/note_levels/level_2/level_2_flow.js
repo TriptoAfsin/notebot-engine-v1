@@ -13,6 +13,11 @@ let level_2_note = [
             webBtnBlockGen("⭕ Online(2021)", "https://drive.google.com/drive/folders/1LxaFjV2a7MdCRpG5XxyqO49gY_CcmcS_?usp=sharing")
         ]
     ),
+    grroupedButtonBlockGen(`🔴 Question Banks -`,
+        [
+            webBtnBlockGen("2022(2-1)", "https://drive.google.com/file/d/1SR70b7AQvJ0yomIAUuE1QTBJzUqMT0KG/view?usp=sharing"),
+        ]
+    ),
     grroupedButtonBlockGen(`🔰 Select Subject for level 2 -`,
         [
             payloadBtnGen("EEE", "eee_flow"),

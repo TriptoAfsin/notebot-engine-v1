@@ -1,88 +1,37 @@
+let grroupedButtonBlockGen = require('simple-messenger-blocks/groupedBtnBlockGen');
+let webBtnBlockGen = require('simple-messenger-blocks/webBtnGen');
+let payloadBtnGen = require('simple-messenger-blocks/payloadBtnGen');
+
+
 let mp_lab_flow = [
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "⚡ Select Experiment for MP -  ",
-                "buttons": [
-                    {
-                        "type": "web_url",
-                        "url": "https://drive.google.com/file/d/10k2Xuts_y8zgum2BhLCCcPdbbF4xdBDx/view",
-                        "title": "General Guidline",
-                    }
-                ],
-            },
-        },
-    },
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🔰 Select Experiment for MP -  ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "Exp 1: Lathe MC",
-                        "payload": "mp_lab_lathe_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Exp3: Milling M/C",
-                        "payload": "mp_lab_milling_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Exp 5:CNC Mill",
-                        "payload": "mp_lab_cncMill_flow"
-                    }
-                ],
-            },
-        },
-    },
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🔰 Select Experiment for MP -  ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "Chips Temp.",
-                        "payload": "mp_lab_chipsTemp_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Jack Screw",
-                        "payload": "mp_lab_jackScrew_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Exp 7:Inj. Mold",
-                        "payload": "mp_lab_injectionMoulding_flow"
-                    }
-                ],
-            },
-        },
-    },
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🔰 Select Experiment for MP -  ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "Exp10:Sand Mold",
-                        "payload": "mp_lab_sandMold_flow"
-                    }
-                ],
-            },
-        },
-    }
+    grroupedButtonBlockGen(
+        "⚡ Select Experiment for MP -",
+        [
+            webBtnBlockGen("General Guideline", "https://drive.google.com/file/d/10k2Xuts_y8zgum2BhLCCcPdbbF4xdBDx/view")
+        ]
+    ),
+    grroupedButtonBlockGen(
+        "🔰 Select Experiment for MP -",
+        [
+            payloadBtnGen("Exp 1: Lathe MC", "mp_lab_lathe_flow"),
+            payloadBtnGen("Exp3: Milling M/C", "mp_lab_milling_flow"),
+            payloadBtnGen("Exp 5:CNC Mill", "mp_lab_cncMill_flow")
+        ]
+    ),
+    grroupedButtonBlockGen(
+        "🔰 Select Experiment for MP -",
+        [
+            payloadBtnGen("Chips Temp.", "mp_lab_chipsTemp_flow"),
+            payloadBtnGen("Jack Screw", "mp_lab_jackScrew_flow"),
+            payloadBtnGen("Exp 7:Inj. Mold", "mp_lab_injectionMoulding_flow")
+        ]
+    ),
+    grroupedButtonBlockGen(
+        "🔰 Select Experiment for MP -",
+        [
+            payloadBtnGen("Exp10:Sand Mold", "mp_lab_sandMold_flow"),
+        ]
+    )
 ]
 
 

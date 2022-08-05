@@ -6,6 +6,12 @@ let bondiFlow = require("../../../../sponsoredFlows/bondiCard");
 
 let wp2Flow = [
     grroupedButtonBlockGen(
+        "📌 Full Hand Notes(2022) - ",
+        [
+            webBtnBlockGen("A+B(Adee)", "https://drive.google.com/file/d/1Zrc8t3JEr8fSypTEGh_XDkoI8ns0_cM8/view?usp=sharing"),
+        ]
+    ),
+    grroupedButtonBlockGen(
         "🔰 Select Topics for WP-II -",
         [
             payloadBtnGen("Books", "wp2_books_flow"),

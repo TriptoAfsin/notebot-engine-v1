@@ -12,6 +12,10 @@ let level2Subs = [
         url: "https://drive.google.com/drive/folders/1LxaFjV2a7MdCRpG5XxyqO49gY_CcmcS_?usp=sharing"
     },
     {
+        subName: "2022(2-1)",
+        url: "https://drive.google.com/file/d/1SR70b7AQvJ0yomIAUuE1QTBJzUqMT0KG/view?usp=sharing"
+    },
+    {
         subName: "Marketing",
         route: "app/notes/2/marketing"
     },
