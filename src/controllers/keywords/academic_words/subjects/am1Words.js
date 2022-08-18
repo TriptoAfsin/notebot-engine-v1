@@ -3,6 +3,7 @@ const am1_words = [
     "am-i",
     "am 1",
     "am i",
+    "am-1",
     "apparel manufacturing 1"
 ];
 

@@ -11,6 +11,12 @@ let econoFlow = [
     grroupedButtonBlockGen(
         "📌 Full Hand Notes - ",
         [
+            webBtnBlockGen("B(Akib)(2022)", "https://drive.google.com/file/d/1-ZI1d9-AOvzUA_HhWpD9v51E_SA8Ocjn/view"),
+        ]
+    ),
+    grroupedButtonBlockGen(
+        "📌 Full Hand Notes - ",
+        [
             webBtnBlockGen("A+B(Ezaz)", "https://drive.google.com/file/d/1nADo6MizjPUu-A4_xwi1aMXnuZlxV9YT/view?usp=sharing"),
             webBtnBlockGen("A+B(Adee)", "https://drive.google.com/file/d/1n9UVrvWxVAvbV1qbYfJ5c6Lxh53fBnlG/view?usp=sharing"),
             webBtnBlockGen("A+B(Khadiza)", "https://drive.google.com/file/d/1m-nXG46geAIkKMJm_b6Ja9yYy6OhYnRN/view?usp=sharing"),
