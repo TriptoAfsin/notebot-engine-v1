@@ -15,6 +15,14 @@ let imFlow = [
         "📌 Full Hand Notes - ",
         [
             webBtnBlockGen("A+B(Adee)", "https://drive.google.com/file/d/1k7GoxViqrMal0NmYJlBiyeWDyye2Xhf6/view?usp=sharing"),
+            webBtnBlockGen("Akib(A)", "https://drive.google.com/file/d/1-CuUfrbNWHMOqta7lbYJv0YSjSSbpSYj/view"),
+            webBtnBlockGen("Akib(B)", "https://drive.google.com/file/d/11TSBNO3w8DlcuUYhXEw1IA8pXl0rMSHI/view"),
+        ]
+    ),
+    grroupedButtonBlockGen(
+        "📌 Full Hand Notes - ",
+        [
+            webBtnBlockGen("Nahid(B)", "https://drive.google.com/file/d/1RQX2Ax7pCnoGxFB93vXK_kp-xc_vbMEc/view?usp=sharing"),
         ]
     ),
     grroupedButtonBlockGen(

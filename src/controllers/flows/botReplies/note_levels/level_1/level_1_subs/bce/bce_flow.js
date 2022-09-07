@@ -20,6 +20,7 @@ let bce_flow = [
         "📌 Full Hand Notes -",
         [
             webBtnBlockGen("Definitions(2022)", "https://drive.google.com/file/d/141ZMgBy78AMmZtGAagjuqJubiyzFi7pJ/view?usp=sharing"),
+            webBtnBlockGen("QB Solve(Mamun,SKTEC)", "https://drive.google.com/file/d/1JW_Mk-5SePV6oDEAaAUWoRNVmyfFloUR/view?usp=sharing"),
         ]
     ),
     grroupedButtonBlockGen(

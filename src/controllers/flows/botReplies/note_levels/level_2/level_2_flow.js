@@ -67,6 +67,11 @@ let level_2_note = [
             payloadBtnGen("Weaving Preparatory", "weav_prep_flow")
         ]
     ),
+    grroupedButtonBlockGen(`🔰 Select Subject for level 2 -`,
+    [
+        webBtnBlockGen("Weaving-1", "https://drive.google.com/drive/folders/1SFjq8TMmb9X4O2d74-Z8z8TbknwEslkG?usp=sharing"),
+    ]
+),
 ]
 
 

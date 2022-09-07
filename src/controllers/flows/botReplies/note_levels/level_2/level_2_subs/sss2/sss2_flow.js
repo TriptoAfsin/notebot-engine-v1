@@ -16,7 +16,9 @@ let sss2Flow = [
     grroupedButtonBlockGen(
         "📌 Full Hand Notes - ",
         [
-            webBtnBlockGen("Adee(2021)", "https://drive.google.com/file/d/1B2Z73TC3xG0-EX0K4DD5XzDqy6urdjro/view?usp=sharing")
+            webBtnBlockGen("Adee(2021)", "https://drive.google.com/file/d/1B2Z73TC3xG0-EX0K4DD5XzDqy6urdjro/view?usp=sharing"),
+            webBtnBlockGen("Nazim(A)", "https://drive.google.com/file/d/1u1SYDj2jNzhPqXg5halwh9ZmiZkH_soy/view?usp=sharing"),
+            webBtnBlockGen("Nazim(B)", "https://drive.google.com/file/d/16jlSmPUoWxMkR58eZgmwARkR-4lXpk8K/view?usp=sharing"),
         ]
     ),
     grroupedButtonBlockGen(
