@@ -52,7 +52,7 @@ let fmeFlow = [
     ),
     grroupedButtonBlockGen(`🔰 Select Topics for FME - `,
         [
-            payloadBtnGen("Thermal Engineering","fme_thermalEng_flow"),
+            payloadBtnGen("Thermo Dynamics","fme_thermalEng_flow"),
             payloadBtnGen("Fluid Mechanics","fme_fluidMecha_flow"),
             payloadBtnGen("Energy Process","fme_energyProcess_flow")
         ]

@@ -7,6 +7,12 @@ let bondiFlow = require("../../../../sponsoredFlows/bondiCard");
 let am1Flow = [
     bondiFlow,
     grroupedButtonBlockGen(
+        "📌 QB Analysis - ",
+        [
+            webBtnBlockGen("Arjan(2022)", "https://drive.google.com/file/d/1jIAaX3LZaJK4Y1aBZQuzm5-f9GGOI1h0/view?usp=sharing"),
+        ]
+    ),
+    grroupedButtonBlockGen(
         "📌 Full Hand Note & Slide (2020) -",
         [
             webBtnBlockGen("Part A (Rifat)", "https://drive.google.com/file/d/1MSe7Mc7MlqLCIziwBa3iTJQb6nkYRgM-/view"),
@@ -15,7 +21,7 @@ let am1Flow = [
         ]
     ),
     grroupedButtonBlockGen(
-        "📌 Full Hand Notes",
+        "📌 Full Hand Notes - ",
         [
             webBtnBlockGen("Maruf(2021)", "https://drive.google.com/file/d/1PtuUUaa1EbmazOEpa6GyjEuBEpr2d2zl/view?usp=sharing"),
             webBtnBlockGen("Adee(2021)", "https://drive.google.com/file/d/1d31uMCWKBwqayCsMcLcDDKfRoX47fbH2/view?usp=sharing"),
