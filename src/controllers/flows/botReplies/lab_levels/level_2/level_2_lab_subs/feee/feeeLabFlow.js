@@ -1,145 +1,38 @@
+let grroupedButtonBlockGen = require('simple-messenger-blocks/groupedBtnBlockGen');
+let webBtnBlockGen = require('simple-messenger-blocks/webBtnGen');
+let payloadBtnGen = require('simple-messenger-blocks/payloadBtnGen');
+
+
 let feee_lab_flow = [
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "📌Select Experiment for FEEE-   ",
-                "buttons": [
-                    {
-                        "type": "web_url",
-                        "url": "https://drive.google.com/file/d/1nGS7r0MKzv7c0VSl6q1UMaI6t7KslSlW/view",
-                        "title": "All Report(Emon)",
-                    }
-                ],
-            },
-        },
-    },
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🔰 Select Experiment for FEEE-   ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "Multimetre",
-                        "payload": "feee_lab_multiMetre_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Ohm's law Ve.",
-                        "payload": "feee_lab_ohmslaw_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Kirchoff's law",
-                        "payload": "feee_lab_kirchoffsLaw_flow"
-                    }
-                ],
-            },
-        },
-    },
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🔰 Select Experiment for FEEE-   ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "RC Circuit",
-                        "payload": "feee_lab_rcCirct_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "RL Circuit",
-                        "payload": "feee_lab_rlCirct_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "RLC Circuit",
-                        "payload": "feee_lab_rlcCirct_flow"
-                    }
-                ],
-            },
-        },
-    },
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🔰 Select Experiment for FEEE-   ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "Carbon Reistor",
-                        "payload": "feee_lab_carbonResistor_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Fan Regulator",
-                        "payload": "feee_lab_fanRegulator_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Wiring Tubelight",
-                        "payload": "feee_lab_wiringTubelight_flow"
-                    }
-                ],
-            },
-        },
-    },
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🔰 Select Experiment for FEEE-   ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "Full Bridge Rect",
-                        "payload": "feee_lab_fullBridgeRect_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Fuse, Switch Ckt B",
-                        "payload": "feee_lab_fuseSwitch_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Study on Oscillosc.",
-                        "payload": "feee_lab_Oscillosc_flow"
-                    }
-                ],
-            },
-        },
-    },
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🔰 Select Experiment for FEEE-   ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "Wire Gauge",
-                        "payload": "feee_lab_wireGauge_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "2 Way Light Swi..",
-                        "payload": "feee_lab_2waySwitch_flow"
-                    }
-                ],
-            },
-        },
-    }
+    grroupedButtonBlockGen("📌 Select Experiment for FEEE -", [
+        webBtnBlockGen("All(Emon)", "https://drive.google.com/file/d/1nGS7r0MKzv7c0VSl6q1UMaI6t7KslSlW/view"),
+        webBtnBlockGen("All(Shomir, 2022)", "https://drive.google.com/file/d/1pk-goLQ5kYGxhEFehYHla5Aez2Hvskmn/view?usp=sharing")
+    ]),
+    grroupedButtonBlockGen("🔰 Select Experiment for FEEE -", [
+        payloadBtnGen("Multimetre", "feee_lab_multiMetre_flow"),
+        payloadBtnGen("Ohm's law Ve.", "feee_lab_ohmslaw_flow"),
+        payloadBtnGen("Kirchoff's law", "feee_lab_kirchoffsLaw_flow")
+    ]),
+    grroupedButtonBlockGen("🔰 Select Experiment for FEEE -", [
+        payloadBtnGen("RC Circuit", "feee_lab_rcCirct_flow"),
+        payloadBtnGen("RL Circuit", "feee_lab_rlCirct_flow"),
+        payloadBtnGen("RLC Circuit", "feee_lab_rlcCirct_flow")
+    ]),
+    grroupedButtonBlockGen("🔰 Select Experiment for FEEE -", [
+        payloadBtnGen("Carbon Reistor", "feee_lab_carbonResistor_flow"),
+        payloadBtnGen("Fan Regulator", "feee_lab_fanRegulator_flow"),
+        payloadBtnGen("Wiring Tubelight", "feee_lab_wiringTubelight_flow")
+    ]),
+    grroupedButtonBlockGen("🔰 Select Experiment for FEEE -", [
+        payloadBtnGen("Full Bridge Rect", "feee_lab_fullBridgeRect_flow"),
+        payloadBtnGen("Fuse, Switch Ckt B", "feee_lab_fuseSwitch_flow"),
+        payloadBtnGen("Study on Oscillosc.", "feee_lab_Oscillosc_flow")
+    ]),
+    grroupedButtonBlockGen("🔰 Select Experiment for FEEE -", [
+        payloadBtnGen("Wire Gauge", "feee_lab_wireGauge_flow"),
+        payloadBtnGen("2 Way Light Swi..", "feee_lab_2waySwitch_flow"),
+        payloadBtnGen("Study on Oscillosc.", "feee_lab_Oscillosc_flow")
+    ]),
 ]
 
 

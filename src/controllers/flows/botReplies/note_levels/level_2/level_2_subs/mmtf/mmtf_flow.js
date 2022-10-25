@@ -20,9 +20,10 @@ let mmtfFlow = [
         ]
     ),
     grroupedButtonBlockGen(
-        "📌 Analytical Questions - ",
+        "📌 Analytical Questions & Assignments - ",
         [
             webBtnBlockGen("Tripto(2021)", "https://drive.google.com/file/d/1axF8QJfbggg4DqLk-V_HfXuUv1YvnBU5/view?usp=sharing"),
+            webBtnBlockGen("Assignment(Global Mills)", "https://drive.google.com/file/d/1kFxnjei-CbtSHxEEHWph8cRc9_TxJQmw/view?usp=sharing"),
         ]
     ),
     grroupedButtonBlockGen(
