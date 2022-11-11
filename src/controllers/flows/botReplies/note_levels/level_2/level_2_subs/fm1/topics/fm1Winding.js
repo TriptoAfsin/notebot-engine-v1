@@ -1,21 +1,11 @@
+let textBlockGen = require('simple-messenger-blocks/textBlockGen');
+
 let fm1Winding = [
-    {
-        "text": `🔷Sheet(2019)-
-        https://drive.google.com/file/d/15OqPg2EUsgx_ltJ9nVFerAPcZppuXLl6/view`
-    },
-    {
-        "text": `🔷Hand Note(Akib, AE-44, 2020)-
-        https://drive.google.com/file/d/1DHQQ53AOEnF3QK3vBi2HXP1s4aJDYDTX/view`
-    },
-    {
-        "text": `🔷Winding Math(Khalid,2019)-
-        https://drive.google.com/file/d/182VWmzXRIF1fWzd5JxD5t2gZYZDvIe4N/view`
-    },
-    {
-        "text": `🔷More Winding Maths - 
-        https://drive.google.com/file/d/10TVDlybdfA-bIVK6vd4ugnse0QxDr2UK/view?usp=sharing`
-    }
-   
+    textBlockGen(`🔷 Sheet(2019)-\n\nhttps://drive.google.com/file/d/15OqPg2EUsgx_ltJ9nVFerAPcZppuXLl6/view`),
+    textBlockGen(`🔷 Hand Note(Akib, AE-44, 2020)-\n\nhttps://drive.google.com/file/d/1DHQQ53AOEnF3QK3vBi2HXP1s4aJDYDTX/view`),
+    textBlockGen(`🔷 Winding Math(Khalid,2019)-\n\nhttps://drive.google.com/file/d/182VWmzXRIF1fWzd5JxD5t2gZYZDvIe4N/view`),
+    textBlockGen(`🔷 More Winding Maths - \n\nhttps://drive.google.com/file/d/10TVDlybdfA-bIVK6vd4ugnse0QxDr2UK/view?usp=sharing`),
+    textBlockGen(`🔷 Hand Note(Nihat,YE-46,2022)-\n\nhttps://drive.google.com/file/d/14skuNf9FvmU3zBs4LYe3Nd960QLisPO9/view?usp=sharing`),
 ]
 
 

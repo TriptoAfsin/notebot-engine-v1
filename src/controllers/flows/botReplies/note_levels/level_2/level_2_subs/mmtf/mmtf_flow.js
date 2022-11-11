@@ -14,6 +14,12 @@ let mmtfFlow = [
         ]
     ),
     grroupedButtonBlockGen(
+        "📌 Full Hand Notes -",
+        [
+            webBtnBlockGen("Abbas Sir(2022)", "https://drive.google.com/file/d/1jGDwBptxYjlH5WEaJeMUt10jipIlRwfq/view?usp=sharing"),
+        ]
+    ),
+    grroupedButtonBlockGen(
         "📌 QB Solve -",
         [
             webBtnBlockGen("Arjan(2022)", "https://drive.google.com/file/d/1nDvpJkaENtIVnbeRzfJTV8AdQI1oybj1/view?usp=sharing"),

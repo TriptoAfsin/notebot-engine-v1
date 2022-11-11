@@ -8,6 +8,7 @@ let phy1Elasticity = [
     textBlockGen(`🔷 Hand Note (Tripto,IPE-44, 2018) - \n\nhttps://drive.google.com/file/d/1KBD23uVf2ZDUL8ajs89cZE3sbilUwzZ9/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note(Nafis, IPE-46, 2020)-\n\nhttps://drive.google.com/file/d/1a65jFDro1PxlKSYqoQeySUbvVu6z1c9t/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note(Nihat, YE-46, 2020)-\n\nhttps://drive.google.com/file/d/1b9HCBVDH64Irz7KuwioznA1fW9algjml/view?usp=sharing`),
+    textBlockGen(`🔷 Hand Note- Formulas & Graph (Mim, TEM-47.2022)-\n\nhttps://drive.google.com/file/d/1Xs4P8HhpgYbBD7r9DXMe5s9J-f2vcBxn/view?usp=sharing`),
 ]
 
 

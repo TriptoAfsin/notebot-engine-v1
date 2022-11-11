@@ -16,6 +16,7 @@ let wp1Flow = [
     grroupedButtonBlockGen("📌 Full Hand Note & Basic Stuff -",
         [
             webBtnBlockGen("Adee(2021)", "https://drive.google.com/file/d/1AvUqCO9AWQnY6YK1vWgZk_TYIxpjHk20/view?usp=sharing"),
+            webBtnBlockGen("Part-B(Kibria Sir,2022)", "https://drive.google.com/file/d/1S5ne8Twoz87Ul9DFSGHjDlQo21ZtNQqw/view?usp=sharing"),
         ]
     ),
     grroupedButtonBlockGen("🔰 Select Topics for WP-I -",

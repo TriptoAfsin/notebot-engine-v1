@@ -14,7 +14,8 @@ let bce_lab_flow = [
         "🔰 Select Experiment for BCE - ",
         [
             payloadBtnGen("Reading Technique", "bce_lab_read_flow"),
-            payloadBtnGen("Listening Skills", "bce_lab_listen_flow")
+            payloadBtnGen("Listening Skills", "bce_lab_listen_flow"),
+            webBtnBlockGen("Writing Skills", "https://drive.google.com/file/d/1MbHXOz7nMWNo9xIBgAaCT0pzU_2ETB93/view?usp=sharing")
         ]
     ),
     grroupedButtonBlockGen(
