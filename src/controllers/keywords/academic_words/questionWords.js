@@ -2,7 +2,10 @@ const quesWords = [
     "question", 
     "প্রশ্ন", 
     "question bank", 
-    "qb"
+    "qb",
+    "ques",
+    "poshno",
+    "proshno"
 ];
 
 
