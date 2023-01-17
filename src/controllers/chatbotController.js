@@ -119,9 +119,10 @@ const bothYMFlow = require('./flows/botReplies/note_levels/level_2/bothYMFlow');
 
 
 //BooksQues
-const booksQues = require('./keywords/academic_words/booksQuestionWords');
+const quesWords = require('./keywords/academic_words/questionWords');
+const bookWords = require('./keywords/academic_words/bookWords');
 
-const booksQuesFlow = require('./flows/botReplies/note_levels/booksQuesFlow');
+const quesFlow = require('./flows/botReplies/note_levels/quesFlow');
 
 
 //ProblemIssue Words
@@ -2571,8 +2572,12 @@ function handleMessage(sender_psid, received_message) {
   }
 
   //booksQues
-  else if (wordIncludes(booksQues, received_message)) {
-    magicFunc(sender_psid, booksQuesFlow);
+  else if (wordIncludes(quesWords, received_message)) {
+    magicFunc(sender_psid, quesFlow);
+  }
+  else if (wordIncludes(bookWords, received_message)) {
+    response = textBlockGen(`বই নোট সেকশনে আছে`);
+    callSendAPI(sender_psid, response);
   }
 
   //bothSubj
