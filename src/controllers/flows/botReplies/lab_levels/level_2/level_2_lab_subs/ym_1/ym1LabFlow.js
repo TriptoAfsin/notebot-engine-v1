@@ -7,8 +7,9 @@ let cardGenerator = require("../../../../../../genrators/cardGenerator");
 let ym1_lab_flow = [
     grroupedButtonBlockGen("⚡ All Report - ",
         [
-            webBtnBlockGen("Saidul, 2019", "https://drive.google.com/file/d/1Cp6EuJvXW6YqWeDDRX8k_kPu4WR5Nieb/view"),
-            webBtnBlockGen("Hasibul, 2019", "https://drive.google.com/file/d/1ocvUyMPhtF62movL_qwKW46WdGcQVgbP/view?usp=sharing"),
+            webBtnBlockGen("Dipa(2023)", "https://drive.google.com/file/d/1D-fdyVQm3armVryKPrG8F64T3oA3oVzv/view?usp=sharing"),
+            webBtnBlockGen("Saidul(2019)", "https://drive.google.com/file/d/1Cp6EuJvXW6YqWeDDRX8k_kPu4WR5Nieb/view"),
+            webBtnBlockGen("Hasibul(2019)", "https://drive.google.com/file/d/1ocvUyMPhtF62movL_qwKW46WdGcQVgbP/view?usp=sharing"),
         ]
     ),
     grroupedButtonBlockGen("⚡ Lab Viva Note(Naimur, 2020) - ",

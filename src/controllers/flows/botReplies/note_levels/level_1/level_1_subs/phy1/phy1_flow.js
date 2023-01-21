@@ -18,6 +18,16 @@ let phy1_flow = [
             webBtnBlockGen("PHY-I(Siam, 2019)", "https://drive.google.com/file/d/1wQarO19IlJaUtc4-86xtQJSmm0ajX4OM/view?usp=sharing"),
         ]
     ),
+    grroupedButtonBlockGen(`📌 Sheets- `,
+        [
+            webBtnBlockGen("Hedayet Sir(2023)", "https://drive.google.com/drive/folders/1Ky7bRi0c-78B1FC7zd1frqaTyB4lyneo?usp=sharing"),
+        ]
+    ),
+    grroupedButtonBlockGen(`📌 Full Book Scanned - `,
+        [
+            webBtnBlockGen("Phy for Eng.", "https://drive.google.com/drive/folders/1UzVAc4GvGySwpX8tboMhXiRAulTYW2c1?usp=sharing"),
+        ]
+    ),
     grroupedButtonBlockGen(`🔰 Select Topic for PHY-I - `,
         [
             payloadBtnGen("Books", "phy1_books_flow"),
