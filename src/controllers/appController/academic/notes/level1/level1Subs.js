@@ -78,6 +78,10 @@ let level1Subs = [
     {
         subName: "FH",
         route: "app/notes/1/fh"
+    },
+    {
+        subName: "FMG(Mgmt)",
+        url: "https://drive.google.com/file/d/1q6llewteDyEz1TQegSB4rNF8EMxlsOr5/view?usp=sharing"
     }
 ]
 

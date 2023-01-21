@@ -58,6 +58,7 @@ let level_1_note = [
     grroupedButtonBlockGen(`🔰 Select Subject for level 1 - `,
         [
             payloadBtnGen("Fashion His.", "fh_flow"),
+            webBtnBlockGen("FMG(Mgmt.)", "https://drive.google.com/file/d/1q6llewteDyEz1TQegSB4rNF8EMxlsOr5/view?usp=sharing"),
         ]
     )
 ]
