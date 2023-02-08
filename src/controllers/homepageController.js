@@ -48,7 +48,7 @@ let setUpUserFacebookProfile = (req, res) => {
 
 
     request({
-        "uri": "https://graph.facebook.com/v9.0/me/messenger_profile",
+        "uri": "https://graph.facebook.com/v15.0/me/messenger_profile",
         "qs": { "access_token": process.env.PAGE_ACCESS_TOKEN },
         "method": "POST",
         "json": data
