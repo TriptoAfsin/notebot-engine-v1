@@ -998,6 +998,9 @@ let fm2Labs = require('./academic/labReport/level3/subs/fm2/fm2Labs');
 //lab3 - wp2
 let wp2Labs = require('./academic/labReport/level3/subs/wp2/wp2Labs');
 
+//lab3 - ym2
+let ym2Labs = require('./academic/labReport/level3/subs/ym2/ym2Labs');
+
 //lab3 - fsd
 let fsdLabs = require('./academic/labReport/level3/subs/fsd/fsdLabs');
 
@@ -5306,6 +5309,18 @@ let labFsdFlow = (req, res) => {
     return res.send(fsdLabs);
 };
 
+let labYm2Flow = (req, res) => {
+    //analytics
+    // try {
+    //     handleAnalyticsLabs("wp1");
+    //   } catch (err) {
+    //     console.log(`🔴 Error while handling analytics(pre)`);
+    //   }
+
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(ym2Labs);
+};
+
 let labWp2Flow = (req, res) => {
     //analytics
     // try {
@@ -6392,6 +6407,7 @@ module.exports = {
     labFm2Flow: labFm2Flow,
     labFsdFlow: labFsdFlow,
     labWp2Flow: labWp2Flow,
+    labYm2Flow: labYm2Flow,
 
     labWppFlow: labWppFlow,
 

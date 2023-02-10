@@ -21,7 +21,7 @@ let level3Labs = [
     },
     {
         subName: "FSD",
-        route: "app/labs/2/fsd"
+        route: "app/labs/3/fsd"
     },
     {
         subName: "ACWP",
