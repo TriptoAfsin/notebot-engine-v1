@@ -1010,7 +1010,7 @@ let initWebRoutes = (app) => {
       router.get("/app/labs/3/pm2", appController.labAcwpFlow);
 
       //lab - fm2
-      router.get("/app/labs/3/fm2", appController.labAcwpFlow);
+      router.get("/app/labs/3/fm2", appController.labFm2Flow);
 
       //lab - fsd
       router.get("/app/labs/3/fsd", appController.labAcwpFlow);

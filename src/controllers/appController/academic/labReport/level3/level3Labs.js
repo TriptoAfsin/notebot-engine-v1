@@ -28,6 +28,10 @@ let level3Labs = [
         route: "app/labs/3/acwp"
     },
     {
+        subName: "AP-II",
+        route: "app/labs/3/ap2"
+    },
+    {
         subName: "Apparel Wash",
         route: "app/labs/3/apparelWash"
     },
