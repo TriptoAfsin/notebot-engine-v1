@@ -995,7 +995,7 @@ let initWebRoutes = (app) => {
     router.get("/app/labs/3/am2", appController.labAm2Flow);
 
      //lab - wp2
-    router.get("/app/labs/3/wp2", appController.labAcwpFlow);
+    router.get("/app/labs/3/wp2", appController.labWp2Flow);
 
      //lab - ap2
      router.get("/app/labs/3/ap2", appController.labAp2Flow);
@@ -1013,7 +1013,7 @@ let initWebRoutes = (app) => {
       router.get("/app/labs/3/fm2", appController.labFm2Flow);
 
       //lab - fsd
-      router.get("/app/labs/3/fsd", appController.labAcwpFlow);
+      router.get("/app/labs/3/fsd", appController.labFsdFlow);
 
       //lab - mic
       router.get("/app/labs/3/mic", appController.labAcwpFlow);
