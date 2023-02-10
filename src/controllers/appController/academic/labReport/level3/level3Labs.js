@@ -1,58 +1,46 @@
-let level2Labs = [
+let level3Labs = [
     {
-        subName: "AM-I",
-        route: "app/labs/2/am1"
+        subName: "AM-II",
+        route: "app/labs/3/am2"
     },
     {
-        subName: "WP-I",
-        route: "app/labs/2/wp1"
+        subName: "WP-II",
+        route: "app/labs/3/wp2"
     },
     {
-        subName: "FM-I",
-        route: "app/labs/2/fm1"
+        subName: "FM-II",
+        route: "app/labs/3/fm2"
     },
     {
-        subName: "YM-I",
-        route: "app/labs/2/ym1"
+        subName: "YM-II",
+        route: "app/labs/3/ym2"
     },
     {
-        subName: "FEEE",
-        route: "app/labs/2/feee"
+        subName: "MIC",
+        route: "app/labs/3/mic"
     },
     {
-        subName: "TTQC",
-        route: "app/labs/2/ttqc"
+        subName: "FSD",
+        route: "app/labs/2/fsd"
     },
     {
-        subName: "FME",
-        route: "app/labs/2/fme"
+        subName: "ACWP",
+        route: "app/labs/3/acwp"
     },
     {
-        subName: "MP",
-        route: "app/labs/2/mp"
+        subName: "Apparel Wash",
+        route: "app/labs/3/apparelWash"
     },
     {
-        subName: "PM-I",
-        route: "app/labs/2/pm1"
+        subName: "TC-I",
+        route: "app/labs/3/tc1"
     },
     {
-        subName: "SSS-I",
-        route: "app/labs/2/sss1"
-    },
-    {
-        subName: "SSS-II",
-        route: "app/labs/2/sss2"
-    },
-    {
-        subName: "WPP",
-        route: "app/labs/2/wpp"
-    },
-    {
-        subName: "FE-204: WPP",
-        route: "app/labs/2/fe_wpp"
+        subName: "PM-II",
+        route: "app/labs/3/pm2"
     },
 ]
 
 
 
-module.exports = level2Labs;
+module.exports = level3Labs;

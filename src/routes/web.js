@@ -843,6 +843,7 @@ let initWebRoutes = (app) => {
     router.get("/app/labs", appController.labs);
     router.get("/app/labs/1", appController.level1Labs);
     router.get("/app/labs/2", appController.level2Labs);
+    router.get("/app/labs/3", appController.level3Labs);
 
 
     //lab- chem1
@@ -981,6 +982,44 @@ let initWebRoutes = (app) => {
     router.get("/app/labs/2/feee/feee_lab_Oscillosc_flow", appController.labFeeeOsciFlow);
     router.get("/app/labs/2/feee/feee_lab_wireGauge_flow", appController.labFeeeWireGaugeFlow);
     router.get("/app/labs/2/feee/feee_lab_2waySwitch_flow", appController.labFeee2WayLightFlow);
+
+
+    //lab - acwp
+    router.get("/app/labs/3/acwp", appController.labAcwpFlow);
+
+
+    //lab - ym2
+    router.get("/app/labs/3/ym2", appController.labAcwpFlow);
+
+    //lab - am2
+    router.get("/app/labs/3/am2", appController.labAcwpFlow);
+
+     //lab - wp2
+    router.get("/app/labs/3/wp2", appController.labAcwpFlow);
+
+     //lab - ap2
+     router.get("/app/labs/3/ap2", appController.labAcwpFlow);
+
+      //lab - lss
+      router.get("/app/labs/3/lss", appController.labAcwpFlow);
+
+      //lab - apparelWash
+      router.get("/app/labs/3/apparelWash", appController.labAcwpFlow);
+
+      //lab - pm2
+      router.get("/app/labs/3/pm2", appController.labAcwpFlow);
+
+      //lab - fm2
+      router.get("/app/labs/3/fm2", appController.labAcwpFlow);
+
+      //lab - fsd
+      router.get("/app/labs/3/fsd", appController.labAcwpFlow);
+
+      //lab - mic
+      router.get("/app/labs/3/mic", appController.labAcwpFlow);
+
+      //lab - tc1
+      router.get("/app/labs/3/tc1", appController.labAcwpFlow);
 
 
     // //lab - ap1

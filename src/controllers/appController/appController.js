@@ -968,6 +968,9 @@ let cpLabs135 = require('./academic/labReport/level1/subs/cp/topics/appCpLabsCha
 //lab level 2
 let labLevel2Subs = require('./academic/labReport/level2/level2Labs')
 
+//lab level 3
+let labLevel3Subs = require('./academic/labReport/level3/level3Labs')
+
 //lab2 - am1
 let am1Labs = require('./academic/labReport/level2/subs/am1/am1Labs')
 let am1LabsAll = require('./academic/labReport/level2/subs/am1/topics/appAm1AllReport')
@@ -979,6 +982,9 @@ let ym1Labs = require('./academic/labReport/level2/subs/ym1/ym1Labs')
 
 //lab2 - wp1
 let wp1Labs = require('./academic/labReport/level2/subs/wp1/wp1Labs')
+
+//lab2 - wp1
+let acwpLabs = require('./academic/labReport/level3/subs/acwp/acwpLabs');
 
 //lab2 - fm1
 let fm1Labs = require('./academic/labReport/level2/subs/fm1/fm1Labs')
@@ -1131,6 +1137,11 @@ let level2Notes = (req, res) => {
 let level2Labs = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
     return res.send(labLevel2Subs);
+};
+
+let level3Labs = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(labLevel3Subs);
 };
 
 
@@ -5219,6 +5230,19 @@ let labFeeeFlow = (req, res) => {
     return res.send(feeeLabs);
 };
 
+//labs3 -> acwp
+let labAcwpFlow = (req, res) => {
+    //analytics
+    // try {
+    //     handleAnalyticsLabs("wp1");
+    //   } catch (err) {
+    //     console.log(`🔴 Error while handling analytics(pre)`);
+    //   }
+
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(acwpLabs);
+};
+
 let labFeeeMultiFlow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
     return res.send(feeeLabsMultimetre);
@@ -6179,6 +6203,7 @@ module.exports = {
 
     level1Labs: level1Labs,
     level2Labs: level2Labs,
+    level3Labs: level3Labs,
 
     labChem1Flow: labChem1Flow,
     labChem1ProcedureFlow: labChem1ProcedureFlow,
@@ -6285,6 +6310,7 @@ module.exports = {
     
 
     labWp1Flow: labWp1Flow,
+    labAcwpFlow: labAcwpFlow,
 
     labWppFlow: labWppFlow,
 
