@@ -7,15 +7,15 @@ let cardGen = require("../../genrators/cardGenerator");
 
 
 let notes = [
-    cardGen(
-        "https://i.imgur.com/JJRZaJI.jpg",
-        "কাঠপেন্সিল",
-        "Buy Comfy Solid Color T-Shirts at only 250TK",
-        "https://www.facebook.com/kathpencil.butex/posts/1643017485885654",
-        [
-            webBtnBlockGen("🔴 Order Now!", "https://www.facebook.com/kathpencil.butex/posts/1643017485885654")
-        ]
-    ),
+    // cardGen(
+    //     "https://i.imgur.com/JJRZaJI.jpg",
+    //     "কাঠপেন্সিল",
+    //     "Buy Comfy Solid Color T-Shirts at only 250TK",
+    //     "https://www.facebook.com/kathpencil.butex/posts/1643017485885654",
+    //     [
+    //         webBtnBlockGen("🔴 Order Now!", "https://www.facebook.com/kathpencil.butex/posts/1643017485885654")
+    //     ]
+    // ),
     grroupedButtonBlockGen(
         `🔰 Choose - `,
         [
