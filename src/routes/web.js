@@ -992,13 +992,13 @@ let initWebRoutes = (app) => {
     router.get("/app/labs/3/ym2", appController.labAcwpFlow);
 
     //lab - am2
-    router.get("/app/labs/3/am2", appController.labAcwpFlow);
+    router.get("/app/labs/3/am2", appController.labAm2Flow);
 
      //lab - wp2
     router.get("/app/labs/3/wp2", appController.labAcwpFlow);
 
      //lab - ap2
-     router.get("/app/labs/3/ap2", appController.labAcwpFlow);
+     router.get("/app/labs/3/ap2", appController.labAp2Flow);
 
       //lab - lss
       router.get("/app/labs/3/lss", appController.labAcwpFlow);

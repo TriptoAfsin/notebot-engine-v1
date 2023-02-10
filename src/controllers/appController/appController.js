@@ -983,8 +983,14 @@ let ym1Labs = require('./academic/labReport/level2/subs/ym1/ym1Labs')
 //lab2 - wp1
 let wp1Labs = require('./academic/labReport/level2/subs/wp1/wp1Labs')
 
-//lab2 - wp1
+//lab3 - acwp
 let acwpLabs = require('./academic/labReport/level3/subs/acwp/acwpLabs');
+
+//lab3 - am2
+let am2Labs = require('./academic/labReport/level3/subs/am2/am2Labs');
+
+//lab3 - ap2
+let ap2Labs = require('./academic/labReport/level3/subs/ap2/ap2Labs');
 
 //lab2 - fm1
 let fm1Labs = require('./academic/labReport/level2/subs/fm1/fm1Labs')
@@ -5243,6 +5249,31 @@ let labAcwpFlow = (req, res) => {
     return res.send(acwpLabs);
 };
 
+let labAm2Flow = (req, res) => {
+    //analytics
+    // try {
+    //     handleAnalyticsLabs("wp1");
+    //   } catch (err) {
+    //     console.log(`🔴 Error while handling analytics(pre)`);
+    //   }
+
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(am2Labs);
+};
+
+let labAp2Flow = (req, res) => {
+    //analytics
+    // try {
+    //     handleAnalyticsLabs("wp1");
+    //   } catch (err) {
+    //     console.log(`🔴 Error while handling analytics(pre)`);
+    //   }
+
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(ap2Labs);
+};
+
+
 let labFeeeMultiFlow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
     return res.send(feeeLabsMultimetre);
@@ -6311,6 +6342,8 @@ module.exports = {
 
     labWp1Flow: labWp1Flow,
     labAcwpFlow: labAcwpFlow,
+    labAm2Flow: labAm2Flow,
+    labAp2Flow: labAp2Flow,
 
     labWppFlow: labWppFlow,
 

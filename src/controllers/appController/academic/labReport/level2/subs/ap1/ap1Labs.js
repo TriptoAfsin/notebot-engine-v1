@@ -2,7 +2,7 @@ let ap1LabFlow = require('../../../../../../flows/botReplies/lab_levels/level_1/
 let SubTopicTrans = require('../../../../../translaters/SubTopicTrans')
 
 
-let routePrefix = "app/labs/1/ap1"
+let routePrefix = "app/labs/2/ap1"
 
 let ap1LabApp = SubTopicTrans(routePrefix, ap1LabFlow)
 
