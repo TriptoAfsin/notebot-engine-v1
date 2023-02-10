@@ -15,10 +15,10 @@ let level3Labs = [
         subName: "YM-II",
         route: "app/labs/3/ym2"
     },
-    {
-        subName: "MIC",
-        url: "app/labs/3/mic"
-    },
+    // {
+    //     subName: "MIC",
+    //     url: "app/labs/3/mic"
+    // },
     {
         subName: "FSD",
         route: "app/labs/3/fsd"
@@ -35,10 +35,10 @@ let level3Labs = [
         subName: "Apparel Wash",
         route: "app/labs/3/apparelWash"
     },
-    {
-        subName: "TC-I",
-        route: "app/labs/3/tc1"
-    },
+    // {
+    //     subName: "TC-I",
+    //     route: "app/labs/3/tc1"
+    // },
     {
         subName: "PM-II",
         route: "app/labs/3/pm2"
