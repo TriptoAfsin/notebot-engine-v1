@@ -1,4 +1,4 @@
-let ttqcLabFlow = require('../../../../../../flows/botReplies/lab_levels/level_2/level_2_lab_subs/ttqc/ttqcLabFlow')
+let ttqcLabFlow = require('../../../../../../flows/botReplies/lab_levels/level_2/level_2_lab_subs/ttqc/ttqcLabFlowApp')
 let SubTopicTrans = require('../../../../../translaters/SubTopicTrans')
 
 

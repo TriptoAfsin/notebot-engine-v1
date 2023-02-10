@@ -1,4 +1,4 @@
-let fmeLabFlow = require('../../../../../../flows/botReplies/lab_levels/level_2/level_2_lab_subs/fme/fmeLabFlow')
+let fmeLabFlow = require('../../../../../../flows/botReplies/lab_levels/level_2/level_2_lab_subs/fme/fmeLabFlowApp')
 let SubTopicTrans = require('../../../../../translaters/SubTopicTrans')
 
 

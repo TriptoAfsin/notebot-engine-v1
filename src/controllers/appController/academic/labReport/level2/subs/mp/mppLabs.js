@@ -1,4 +1,4 @@
-let mpLabFlow = require('../../../../../../flows/botReplies/lab_levels/level_2/level_2_lab_subs/mp/mpLabFlow')
+let mpLabFlow = require('../../../../../../flows/botReplies/lab_levels/level_2/level_2_lab_subs/mp/mpLabsFlowApp')
 let SubTopicTrans = require('../../../../../translaters/SubTopicTrans')
 
 

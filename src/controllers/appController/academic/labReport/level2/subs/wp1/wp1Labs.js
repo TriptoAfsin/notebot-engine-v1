@@ -1,4 +1,4 @@
-let wp1LabFlow = require('../../../../../../flows/botReplies/lab_levels/level_2/level_2_lab_subs/wp_1/wp1LabFlow')
+let wp1LabFlow = require('../../../../../../flows/botReplies/lab_levels/level_2/level_2_lab_subs/wp_1/wp1LabsFlowApp')
 let SubTopicTrans = require('../../../../../translaters/SubTopicTrans')
 
 
