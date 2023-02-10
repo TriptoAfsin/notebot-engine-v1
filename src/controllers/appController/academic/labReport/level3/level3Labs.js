@@ -17,7 +17,7 @@ let level3Labs = [
     },
     {
         subName: "MIC",
-        url: "https://drive.google.com/drive/folders/1OJh34so0XSa5S7kOTGoh4gSfK82z_-Cw?usp=sharing"
+        url: "app/labs/3/mic"
     },
     {
         subName: "FSD",
@@ -37,7 +37,7 @@ let level3Labs = [
     },
     {
         subName: "TC-I",
-        url: "https://drive.google.com/drive/folders/13kEtfRo59s-r7-NRFewHaoJPD4ZQTVmg?usp=sharing"
+        route: "app/labs/3/tc1"
     },
     {
         subName: "PM-II",
