@@ -1004,7 +1004,7 @@ let initWebRoutes = (app) => {
       router.get("/app/labs/3/lss", appController.labAcwpFlow);
 
       //lab - apparelWash
-      router.get("/app/labs/3/apparelWash", appController.labAcwpFlow);
+      router.get("/app/labs/3/apparelWash", appController.labApparelWashFlow);
 
       //lab - pm2
       router.get("/app/labs/3/pm2", appController.labpm2Flow);
