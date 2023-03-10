@@ -40,7 +40,7 @@ let level3Labs = [
         route: "app/labs/3/pm2"
     },
     {
-        subName: "MIC",
+        subName: "MIC(New)",
         url: "app/labs/3/mic"
     }
 ]
