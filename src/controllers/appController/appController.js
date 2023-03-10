@@ -989,6 +989,9 @@ let acwpLabs = require('./academic/labReport/level3/subs/acwp/acwpLabs');
 //lab3 - apparel wash
 let apparelWashLabs = require('./academic/labReport/level3/subs/apparel_washing/apparelWashLabs');
 
+//lab3 - acwp
+let micLabs = require('./academic/labReport/level3/subs/mic/micLabs');
+
 //lab3 - am2
 let am2Labs = require('./academic/labReport/level3/subs/am2/am2Labs');
 
@@ -5279,6 +5282,18 @@ let labApparelWashFlow = (req, res) => {
     return res.send(apparelWashLabs);
 };
 
+let labmicFlow = (req, res) => {
+    //analytics
+    // try {
+    //     handleAnalyticsLabs("wp1");
+    //   } catch (err) {
+    //     console.log(`🔴 Error while handling analytics(pre)`);
+    //   }
+
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(micLabs);
+};
+
 let labAm2Flow = (req, res) => {
     //analytics
     // try {
@@ -6433,6 +6448,7 @@ module.exports = {
     labWp1Flow: labWp1Flow,
     labAcwpFlow: labAcwpFlow,
     labApparelWashFlow: labApparelWashFlow,
+    labmicFlow: labmicFlow,
     labAm2Flow: labAm2Flow,
     labAp2Flow: labAp2Flow,
     labFm2Flow: labFm2Flow,
