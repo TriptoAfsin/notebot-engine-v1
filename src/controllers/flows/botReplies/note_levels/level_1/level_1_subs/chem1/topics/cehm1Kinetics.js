@@ -1,8 +1,9 @@
-let textBlockGen = require("../../../../../../../genrators/textBlockGen");
+let textBlockGen = require('simple-messenger-blocks/textBlockGen');
 
 
 let chem1Kinetics = [
     textBlockGen(`🔷 Hand Note(Shazzad,FE-46,2021) - \n\nhttps://drive.google.com/file/d/18_59QXHdSk_S5YAcOTaESvoRLbihO_hu/view?usp=sharing`),
+    textBlockGen(`🔷 Hand Note(Hafiza, AE-48,2023) - \n\nhttps://drive.google.com/file/d/1oxB_rxyt1aRJQgPUrSxJO_6IGYxSdZNm/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note(Tripto, 2018)-\n\nhttps://drive.google.com/file/d/1I6jA6ZBSSqmIspWoscNytSMqKLwJuyAB/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note(Akib, 2018) - \n\nhttps://drive.google.com/file/d/1TJ-EJS4XBr0ZZv2ei-dRv6cwyRcGOu0-/view?usp=drivesdk`),
     textBlockGen(`🔷 Hand Note(Azim,TEM-46 ,2021) - \n\nhttps://drive.google.com/file/d/19AAenPq3U0mU-Y7ouX45plplgzxd1q4A/view?usp=sharing`),

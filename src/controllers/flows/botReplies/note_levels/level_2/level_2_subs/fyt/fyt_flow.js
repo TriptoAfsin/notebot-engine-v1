@@ -13,6 +13,12 @@ let fytFlow = [
             payloadBtnGen("Suggestions", "fyt_sugg_flow"),
         ]
     ),
+    grroupedButtonBlockGen(`📌 Combined Note - `,
+        [
+            webBtnBlockGen("Hasib Sir(Nihat,2023)", "https://drive.google.com/file/d/1HoTudvaUZ1VtEMv1lQtKkij0Mpcoq1OD/view?usp=sharing"),
+            webBtnBlockGen("Jalal Sir(Nihat,2023)", "https://drive.google.com/file/d/1Ah9laqL6MJ9cO3cOS1f3lFTp6vRJusKN/view?usp=sharing"),
+        ]
+    ),
     grroupedButtonBlockGen(
         "🔰 Select Topics for FYT -",
         [

@@ -48,6 +48,13 @@ let phy2_lab_flow = [
             payloadBtnGen("H2", "phy2_lab_h2_flow"),
             payloadBtnGen("H3", "phy2_lab_h3_flow"),
         ]
+    ),
+    grroupedButtonBlockGen(
+        "🔰 Select Experiment for PHY-II-",
+        [
+            webBtnBlockGen("H4", "https://drive.google.com/file/d/1l4anpT2DcGyWXa8e1YlSf6jvyV5JzBvl/view?usp=sharing"),
+            webBtnBlockGen("H5", "https://drive.google.com/file/d/1vYRMVGfuRJxdaFAptb__ike0gCJJvaAm/view?usp=sharing"),
+        ]
     )
 ]
 
