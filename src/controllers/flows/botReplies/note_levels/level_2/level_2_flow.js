@@ -8,7 +8,7 @@ let level_2_note = [
     bondiFlow,
     grroupedButtonBlockGen(`🔴 Question Banks -`,
         [
-            webBtnBlockGen("All QB", "https://drive.google.com/drive/folders/1AlmeMT52FQC02IhfvWuVPuDn8qatE_RQ"),
+            webBtnBlockGen("All QB", "https://drive.google.com/drive/folders/1KZvgEL3f1kDY54H5Ha218l7yZfPn6jM6?usp=sharing"),
             webBtnBlockGen("New(Till 2019)", "https://drive.google.com/file/d/1ce4mTpJ0S0yi8tYQvvEGn_4BtlbcjI6m/view?usp=sharing"),
             webBtnBlockGen("⭕ Online(2021)", "https://drive.google.com/drive/folders/1LxaFjV2a7MdCRpG5XxyqO49gY_CcmcS_?usp=sharing")
         ]

@@ -7,7 +7,7 @@ let level_4_note = [
     grroupedButtonBlockGen(
         `🔴 Question Banks -`,
         [
-            webBtnBlockGen("All QB", "https://drive.google.com/drive/folders/1M9QjSqItJW1oZJd1RcG4yeAa41hB_dz-"),
+            webBtnBlockGen("All QB", "https://drive.google.com/drive/folders/17QQ6mXUYe3FL7sf4VMzdBBkRbJAId0VT?usp=sharing"),
             webBtnBlockGen("IPE Ques(42)", "https://drive.google.com/file/d/17og6Ea9pYJnrEVO3_fKRLEfQMtbxhcza/view?usp=sharing"),
             webBtnBlockGen("IPE - 4-1 Ques(2022)", "https://drive.google.com/file/d/1h0QFixuMTYPzSVZjtckhYFGqX4QTnj8-/view?usp=sharing")
         ]
