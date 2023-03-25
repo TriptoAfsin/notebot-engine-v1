@@ -1,32 +1,15 @@
+let grroupedButtonBlockGen = require("simple-messenger-blocks/groupedBtnBlockGen");
+let webBtnBlockGen = require("simple-messenger-blocks/webBtnGen");
+let payloadBtnGen = require("simple-messenger-blocks/payloadBtnGen");
+
 let am1_lab_flow = [
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🔰 Select Experiment for AM-I -  ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "Layout Plan",
-                        "payload": "am1_lab_layoutPlan_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Standard Body Me.",
-                        "payload": "am1_lab_standardBody_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "All Report",
-                        "payload": "am1_lab_AllReport_flow"
-                    }
-                ],
-            },
-        },
-    }
-]
-
-
+  grroupedButtonBlockGen("📌 All Reports - ", [
+    payloadBtnGen("All Report", "am1_lab_AllReport_flow"),
+  ]),
+  grroupedButtonBlockGen("🔰 Select Experiment for AM-I -", [
+    payloadBtnGen("Layout Plan", "am1_lab_layoutPlan_flow"),
+    payloadBtnGen("Standard Body Me.", "am1_lab_standardBody_flow"),
+  ]),
+];
 
 module.exports = am1_lab_flow;
