@@ -927,6 +927,9 @@ let initWebRoutes = (app) => {
     router.get("/app/labs/1/cp/cp_lab_recursionFibo", appController.labCp7Flow);
     router.get("/app/labs/1/cp/cp_lab_Chapter", appController.labCp135Flow);
 
+    //lab - ed
+    router.get("/app/labs/1/ed", appController.labEdFlow);
+
     //lab - ap1
     router.get("/app/labs/1/ap1", appController.labAp1Flow);
     router.get("/app/labs/1/ap1/ap1_lab_attachingInterline_flow", appController.labAp1InterliningFlow);

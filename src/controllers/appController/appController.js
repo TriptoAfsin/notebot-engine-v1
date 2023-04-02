@@ -965,6 +965,9 @@ let cpLabs6 = require('./academic/labReport/level1/subs/cp/topics/appCpLabs6')
 let cpLabs7 = require('./academic/labReport/level1/subs/cp/topics/appCpLabs7')
 let cpLabs135 = require('./academic/labReport/level1/subs/cp/topics/appCpLabsChap135')
 
+//lab - ed
+let edLabs = require('./academic/labReport/level1/subs/ed/edLabs')
+
 //lab level 2
 let labLevel2Subs = require('./academic/labReport/level2/level2Labs')
 
@@ -5048,6 +5051,21 @@ let labCpFlow = (req, res) => {
     return res.send(cpLabs);
 };
 
+//labs - ed
+let labEdFlow = (req, res) => {
+
+    // //analytics
+    // try {
+    //     handleAnalyticsLabs("ed");
+    //   } catch (err) {
+    //     console.log(`🔴 Error while handling analytics(pre)`);
+    //   }
+
+
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(edLabs);
+};
+
 
 let labCp1Flow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
@@ -6424,6 +6442,8 @@ module.exports = {
     labCp6Flow: labCp6Flow,
     labCp7Flow: labCp7Flow,
     labCp135Flow: labCp135Flow,
+
+    labEdFlow: labEdFlow,
 
     labAm1Flow: labAm1Flow,
     labAm1AllFlow: labAm1AllFlow,

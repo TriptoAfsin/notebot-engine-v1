@@ -1,84 +1,23 @@
+let grroupedButtonBlockGen = require('simple-messenger-blocks/groupedBtnBlockGen');
+let webBtnBlockGen = require('simple-messenger-blocks/webBtnGen');
+let payloadBtnGen = require('simple-messenger-blocks/payloadBtnGen');
+
 let level_1_lab = [
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🔰 Select Subject Your Lab Report - ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "Physics-I",
-                        "payload": "phy1_lab_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Chemistry-I",
-                        "payload": "che1_lab_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "MSP",
-                        "payload": "msp_lab_flow"
-                    }
-                ],
-            },
-        },
-    },
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🔰 Select Subject Your Lab Report -  ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "ED",
-                        "payload": "ed_lab_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Physics-II",
-                        "payload": "phy2_lab_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Chemistry-II",
-                        "payload": "che2_lab_flow"
-                    }
-                ],
-            },
-        },
-    },
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🔰 Select Subject Your Lab Report - ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "AP-I",
-                        "payload": "ap1_lab_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "BCE",
-                        "payload": "bce_lab_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "CP",
-                        "payload": "cp_lab_flow"
-                    }
-                ],
-            },
-        },
-    }
-]
-
-
+  grroupedButtonBlockGen("🔰 Select Subject Your Lab Report -", [
+    payloadBtnGen("Physics-I", "phy1_lab_flow"),
+    payloadBtnGen("Chemistry-I", "che1_lab_flow"),
+    payloadBtnGen("MSP", "msp_lab_flow"),
+  ]),
+  grroupedButtonBlockGen("🔰 Select Subject Your Lab Report -", [
+    payloadBtnGen("Eng. Drawing", "ed_lab_flow"),
+    payloadBtnGen("Physics-II", "phy2_lab_flow"),
+    payloadBtnGen("Chemistry-II", "che2_lab_flow"),
+  ]),
+  grroupedButtonBlockGen("🔰 Select Subject Your Lab Report -", [
+    payloadBtnGen("AP-I", "ap1_lab_flow"),
+    payloadBtnGen("BCE", "bce_lab_flow"),
+    payloadBtnGen("CP", "cp_lab_flow"),
+  ]),
+];
 
 module.exports = level_1_lab;
