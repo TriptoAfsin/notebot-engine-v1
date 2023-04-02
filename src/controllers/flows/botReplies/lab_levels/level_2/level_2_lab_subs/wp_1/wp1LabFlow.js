@@ -38,6 +38,12 @@ let wp1_lab_flow = [
         ]
     ),
     grroupedButtonBlockGen(
+        "🔰 Select Experiment for WP-I -",
+        [
+            webBtnBlockGen("Color Fast.", "https://drive.google.com/file/d/1p0Zntum2HLl7XTVhpOYVEMzH-6gXnwX6/view?usp=sharing"),
+        ]
+    ),
+    grroupedButtonBlockGen(
         "⚡ All Combined -",
         [
             webBtnBlockGen("ইয়ামিন", "https://drive.google.com/file/d/11E9-rVvkh0lFe6lXxfqkhY3HZfLeBKAB/view?usp=sharing"),

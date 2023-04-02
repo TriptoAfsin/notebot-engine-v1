@@ -34,6 +34,12 @@ let chem2_flow = [
       "https://drive.google.com/file/d/160qMkHlwhqIe2gftncwCtNdRCNvG3S9l/view?usp=sharing"
     ),
   ]),
+  grroupedButtonBlockGen("📌 Hand Notes -", [
+    webBtnBlockGen(
+      "Rasel(2023)",
+      "https://drive.google.com/drive/folders/1T_kaJ7m_hcr5h6Dp2TS3ik3LxC5o8ls4?usp=sharing"
+    ),
+  ]),
   grroupedButtonBlockGen("📌 QB Solve - ", [
     webBtnBlockGen(
       "By AE-45",
