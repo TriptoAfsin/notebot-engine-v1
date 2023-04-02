@@ -8,9 +8,9 @@ let result = [
     grroupedButtonBlockGen(
         "🔴 Latest Results -",
         [
+            webBtnBlockGen("L3, T1(New)(2023)", "https://www.butex.edu.bd/wp-content/uploads/2023/03/Result-of-BSc-in-Textile-Engineering-L-3-T-1-Exam-2021-Session2020-21.pdf"),
             webBtnBlockGen("L2, T1(New)(2022)", "https://www.butex.edu.bd/wp-content/uploads/2023/03/Result-of-BSc-in-Textile-Engineering-L-2-T-1-Exam-2021.pdf"),
             webBtnBlockGen("L1, T1", "https://www.butex.edu.bd/wp-content/uploads/2022/02/Result-of-B.Sc_.-in-Textile-Engineering-L-1-T-1-Exam-2020.pdf"),
-            webBtnBlockGen("Retake L1T2", "https://www.butex.edu.bd/result-of-retake-subjects-b-sc-in-textile-engineering-l-1-t-2-exam-2019/"),
         ]
     ),
     grroupedButtonBlockGen(
