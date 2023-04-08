@@ -7,6 +7,12 @@ let bondiFlow = require("../../../../sponsoredFlows/bondiCard");
 
 let pdFlow = [
     grroupedButtonBlockGen(
+        "📌 Full Hand Notes  -",
+        [
+            webBtnBlockGen("Arefin(2023)", "https://drive.google.com/file/d/1AcSIKkKyiJfOSdCBhNZ2hzhyBSj9UHdO/view?usp=sharing"),
+        ]
+    ),
+    grroupedButtonBlockGen(
         "📌 Select Topics for PD -",
         [
             payloadBtnGen("Books", "pd_books_flow"),

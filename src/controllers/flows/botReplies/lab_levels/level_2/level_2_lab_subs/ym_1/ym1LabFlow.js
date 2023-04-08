@@ -12,6 +12,11 @@ let ym1_lab_flow = [
             webBtnBlockGen("Hasibul(2019)", "https://drive.google.com/file/d/1ocvUyMPhtF62movL_qwKW46WdGcQVgbP/view?usp=sharing"),
         ]
     ),
+    grroupedButtonBlockGen("⚡ All Report - ",
+        [
+            webBtnBlockGen("Fuad(2023)", "https://drive.google.com/file/d/1HVZKrJv2vdI51jOv0kZkouAEQp-6K4rj/view?usp=sharing"),
+        ]
+    ),
     grroupedButtonBlockGen("⚡ Lab Viva Note(Naimur, 2020) - ",
         [
             webBtnBlockGen("Download", "https://drive.google.com/file/d/1roX4eDoc75v2Mfk-8jHm8t9YuXRDb5Rk/view"),

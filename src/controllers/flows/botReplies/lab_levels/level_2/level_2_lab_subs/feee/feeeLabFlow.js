@@ -6,7 +6,8 @@ let payloadBtnGen = require('simple-messenger-blocks/payloadBtnGen');
 let feee_lab_flow = [
     grroupedButtonBlockGen("📌 Select Experiment for FEEE -", [
         webBtnBlockGen("All(Emon)", "https://drive.google.com/file/d/1nGS7r0MKzv7c0VSl6q1UMaI6t7KslSlW/view"),
-        webBtnBlockGen("All(Shomir, 2022)", "https://drive.google.com/file/d/1pk-goLQ5kYGxhEFehYHla5Aez2Hvskmn/view?usp=sharing")
+        webBtnBlockGen("All(Shomir, 2022)", "https://drive.google.com/file/d/1pk-goLQ5kYGxhEFehYHla5Aez2Hvskmn/view?usp=sharing"),
+        webBtnBlockGen("All(Nihat, 2023)", "https://drive.google.com/file/d/1ghyG5w3r2zTSAm4_QChAqlkybixmhElr/view?usp=sharing")
     ]),
     grroupedButtonBlockGen("🔰 Select Experiment for FEEE -", [
         payloadBtnGen("Multimetre", "feee_lab_multiMetre_flow"),
