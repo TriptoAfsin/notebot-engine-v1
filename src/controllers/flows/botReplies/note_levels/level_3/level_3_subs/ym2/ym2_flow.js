@@ -13,6 +13,12 @@ let ym2Flow = [
             webBtnBlockGen("Part-A(Akib)", "https://drive.google.com/file/d/1-rZCeR2uGfDY_ImbA08T9z4trSFfCx0O/view"),
         ]
     ),
+    grroupedButtonBlockGen(
+        "📌 Question Analysis(2023) - ",
+        [
+            webBtnBlockGen("Arjan+Riaz", "https://drive.google.com/file/d/1lm6swCN15Px-VM0II0IepcWNwFNZ-Llt/view?usp=sharing"),
+        ]
+    ),
     grroupedButtonBlockGen("🔰 Select Topics for YM-II -",
         [
             payloadBtnGen("Books", "ym2_books_flow"),

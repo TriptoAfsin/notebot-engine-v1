@@ -18,6 +18,7 @@ let chem1Dilu = [
     //textBlockGen(`🔷 Hand Note(Oindrela, 2019)-\n\nhttps://drive.google.com/file/d/1O8uRdPSXMcd3YlzdzCkMpVMY1WQ9uUHN/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note(Tanima,DCE-46,2021)-\n\nhttps://drive.google.com/file/d/1OMefzhERfB8HLnAcxkSBZSFpXL-RcUom/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note(Suriya,46,2021)-\n\nhttps://drive.google.com/file/d/1hgGrVA_ArxB8Zj354O84AxfYy8pJgPtY/view?usp=sharing`),
+    textBlockGen(`🔷 Hand Note(Hafiza, AE-48 ,2023)-\n\nhttps://drive.google.com/file/d/1jFGtUmVVzkB0DcfjT5FGt4AhzwMJOtAk/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note(Azim,TEM-46,2021)-\n\nhttps://drive.google.com/file/d/12h74YA2cBNTWc8yrRYQph5-V_K06rsUJ/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note(Shafiul,DCE-46,2021)-\n\nhttps://drive.google.com/file/d/1oog8QSv4GIKrB8YiODtMUD2_1TJnvBs6/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note(Tasin,TEM-46,2021)-\n\nhttps://drive.google.com/file/d/1YLVQssG793GTAw6dn5Jg9ZJT88nMoyOU/view?usp=sharing`),
