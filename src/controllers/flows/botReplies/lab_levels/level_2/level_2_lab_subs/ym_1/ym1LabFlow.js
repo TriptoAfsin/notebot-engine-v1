@@ -15,6 +15,7 @@ let ym1_lab_flow = [
     grroupedButtonBlockGen("⚡ All Report - ",
         [
             webBtnBlockGen("Fuad(2023)", "https://drive.google.com/file/d/1HVZKrJv2vdI51jOv0kZkouAEQp-6K4rj/view?usp=sharing"),
+            webBtnBlockGen("Arindom(2023)", "https://drive.google.com/file/d/1RJKwKWH-pNh4O4-gb5epTZx0kGHXFfiE/view?usp=sharing"),
         ]
     ),
     grroupedButtonBlockGen("⚡ Lab Viva Note(Naimur, 2020) - ",
