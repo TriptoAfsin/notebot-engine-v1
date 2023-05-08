@@ -2225,7 +2225,7 @@ function handleMessage(sender_psid, received_message) {
   }
 
   //shala
-  else if (wordIncludes(shalaWords, received_message)) {
+  else if (wordIncludesWhole(shalaWords, received_message)) {
     response = textBlockGen(`${randomPicker(shalaReplies)}`);
     callSendAPI(sender_psid, response);
   }
