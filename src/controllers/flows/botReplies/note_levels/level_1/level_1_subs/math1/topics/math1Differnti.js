@@ -9,6 +9,7 @@ let math1Differn = [
     textBlockGen(`🔷 Indeterminate Form(Akib)- \n\nhttps://drive.google.com/file/d/1ima318JXINMUi4DjGTPZz3jHq7UORYUa/view?usp=drivesdk`),
     textBlockGen(`🔷 Limit, Continuity & Differentiability (Akib)-\n\nhttps://drive.google.com/file/d/1eQWQQfmhpbLPbl2tfwox-UxZYn5a8HGM/view?usp=drivesdk`),
     textBlockGen(`🔷 Partial Derivative(Akib) - \n\nhttps://drive.google.com/file/d/1-X4pohf1ACsMr_Jt_wMx4iPnIudQWApq/view?usp=drivesdk`),
+    textBlockGen(`🔷 Hand Note(Samet,FE-47,2023) - \n\nhttps://drive.google.com/file/d/1Q1iYL_LOWbaVgesJz7Id6YsDWpFzg7nq/view?usp=sharing`),
 ]
 
 

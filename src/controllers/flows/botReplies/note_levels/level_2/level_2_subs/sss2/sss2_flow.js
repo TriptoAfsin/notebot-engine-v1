@@ -14,6 +14,12 @@ let sss2Flow = [
         ]
     ),
     grroupedButtonBlockGen(
+        "📌 Spin Plan",
+        [
+            webBtnBlockGen("Ratul(2023)", "https://drive.google.com/file/d/1g7MQuqR81QOJxT1T1LvCrN9W8Rd-2KS-/view?usp=sharing")
+        ]
+    ),
+    grroupedButtonBlockGen(
         "📌 Full Hand Notes - ",
         [
             webBtnBlockGen("Adee(2021)", "https://drive.google.com/file/d/1B2Z73TC3xG0-EX0K4DD5XzDqy6urdjro/view?usp=sharing"),

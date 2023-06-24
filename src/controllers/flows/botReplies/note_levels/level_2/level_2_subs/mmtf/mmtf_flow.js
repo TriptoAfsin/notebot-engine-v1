@@ -17,6 +17,7 @@ let mmtfFlow = [
         "📌 Full Hand Notes -",
         [
             webBtnBlockGen("Abbas Sir(2022)", "https://drive.google.com/file/d/1jGDwBptxYjlH5WEaJeMUt10jipIlRwfq/view?usp=sharing"),
+            webBtnBlockGen("Lingkon(2023)", "https://drive.google.com/file/d/1rl7O2QEzF0ttfeGH4opyPAa08fCAGwX5/view?usp=sharing"),
         ]
     ),
     grroupedButtonBlockGen(

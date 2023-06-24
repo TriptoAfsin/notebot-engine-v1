@@ -14,9 +14,10 @@ let cp_flow = [
         ]
     ),
     grroupedButtonBlockGen(
-        "📌 Full QB Solve(2021, Arjan-45)- ",
+        "📌 QB Solve- ",
         [
-            webBtnBlockGen("☄️Download", "https://drive.google.com/file/d/1JSiqXyn5ddXFkOOJTfXxTvvaqm7UMvZw/view?usp=sharing")
+            webBtnBlockGen("Arjan(2021)", "https://drive.google.com/file/d/1JSiqXyn5ddXFkOOJTfXxTvvaqm7UMvZw/view?usp=sharing"),
+            webBtnBlockGen("Mehedi(Code Solve)", "https://drive.google.com/file/d/1UnVfXUZPMGPjlhK5nBMEvbCk1fKyo0Am/view?usp=sharing")
         ]
     ),
     grroupedButtonBlockGen(

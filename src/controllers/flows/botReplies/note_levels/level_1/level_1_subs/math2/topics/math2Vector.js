@@ -4,6 +4,7 @@ let textBlockGen = require('simple-messenger-blocks/textBlockGen');
 let math2Vector = [
     textBlockGen(`🔷 Handnote(Emon, Based on Rokon Sir's Lecture,2018)-\n\nhttps://drive.google.com/file/d/1hPUjDJtK7lqqLvxHLz-U-CYO_nCdkUZF/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note(Archi,AE-45,2021) - \n\nhttps://drive.google.com/file/d/1FtFnwBiTXDA1N47Qm6vCBZ7QQyQXc-Pa/view?usp=sharing`),
+    textBlockGen(`🔷 Hand Note(Samet,FE-47,2023) - \n\nhttps://drive.google.com/file/d/1nxGo73q1gBlXnrBikbFKZDrvF2YJbGVK/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note(Nafis,IPE-46,2022) - \n\nhttps://drive.google.com/file/d/1p5jZ6F_WmFLi9zJmQ6LAz3IVZV_MysG9/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note(Nihat,YE-46,2022) - \n\nhttps://drive.google.com/file/d/1MZNFXpRbbnT44lwax7cgeCevyBtOuNJr/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note(Arpa,2021) - \n\nhttps://drive.google.com/file/d/1mlwMpx2fJFFMG6ofvCsIFWSlV87JxIo6/view?usp=sharing`),

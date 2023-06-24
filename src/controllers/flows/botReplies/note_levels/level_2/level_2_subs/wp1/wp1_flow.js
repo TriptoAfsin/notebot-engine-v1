@@ -6,6 +6,11 @@ let bondiFlow = require("../../../../sponsoredFlows/bondiCard");
 let wp1Flow = [
     bondiFlow,
     grroupedButtonBlockGen("📌 Full Hand Note & Basic Stuff -",
+    [
+        webBtnBlockGen("Short Note(Sadia,2023)", "https://drive.google.com/file/d/1iHtTbyEoRfzGZmBbz7aC8GRELnCZjjvg/view?usp=sharing"),
+    ]
+),
+    grroupedButtonBlockGen("📌 Full Hand Note & Basic Stuff -",
         [
             webBtnBlockGen("Akib(2019)", "https://drive.google.com/file/d/12kmXjlTAQiY14w5rd1I8ZFWOYpxXvdUF/view"),
             webBtnBlockGen("MCQ Note", "https://drive.google.com/file/d/1nlroDuFqXjPjw7KAkQ0rMTfygGsJ17QB/view?usp=sharing"),
@@ -17,6 +22,7 @@ let wp1Flow = [
         [
             webBtnBlockGen("Adee(2021)", "https://drive.google.com/file/d/1AvUqCO9AWQnY6YK1vWgZk_TYIxpjHk20/view?usp=sharing"),
             webBtnBlockGen("Part-B(Kibria Sir,2022)", "https://drive.google.com/file/d/1S5ne8Twoz87Ul9DFSGHjDlQo21ZtNQqw/view?usp=sharing"),
+            webBtnBlockGen("Part-A(Raafi Sir,2022)", "https://drive.google.com/file/d/1tukl8wSRhj0Kr1pLWHv4b7Qu-gbkfQZs/view?usp=sharing"),
         ]
     ),
     grroupedButtonBlockGen("🔰 Select Topics for WP-I -",

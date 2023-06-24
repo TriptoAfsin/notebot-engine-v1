@@ -13,6 +13,19 @@ let am1Flow = [
         ]
     ),
     grroupedButtonBlockGen(
+        "📌 Basic Terms - ",
+        [
+            webBtnBlockGen("Rishad(2023)", "https://drive.google.com/file/d/1zGCO1KO5L_g7ixEFyul3hkH31R5VQEdH/view?usp=sharing"),
+            webBtnBlockGen("Tripto(2019)", "https://drive.google.com/file/d/1oUqikuBVJr5l4LTRF8NAhFe5J1CBMt-D/view"),
+        ]
+    ),
+    grroupedButtonBlockGen(
+        "📌 Slide Questions - ",
+        [
+            webBtnBlockGen("Kamrul Sir(2023)", "https://drive.google.com/file/d/1ivzYZVcpWK9UqyJJA20CSBdhHoHFiQLK/view?usp=sharing"),
+        ]
+    ),
+    grroupedButtonBlockGen(
         "📌 Full Hand Note & Slide (2020) -",
         [
             webBtnBlockGen("Part A (Rifat)", "https://drive.google.com/file/d/1MSe7Mc7MlqLCIziwBa3iTJQb6nkYRgM-/view"),
@@ -38,7 +51,6 @@ let am1Flow = [
     grroupedButtonBlockGen(
         "🔰 Select Topics for AM-I -",
         [
-            webBtnBlockGen("Basic Terms(Tripto)", "https://drive.google.com/file/d/1oUqikuBVJr5l4LTRF8NAhFe5J1CBMt-D/view"),
             payloadBtnGen("Intro", "am1_intro_flow"),
             payloadBtnGen("Structure of Tex In", "am1_structure_tex_flow"),
         ]

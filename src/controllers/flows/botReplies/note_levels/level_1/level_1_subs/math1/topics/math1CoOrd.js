@@ -10,6 +10,7 @@ let math1CoOrd = [
     textBlockGen(`🔷 Hand Note(Zubair,46,2021) - \n\nhttps://drive.google.com/file/d/1J-R_FlktUDyaXE-LZHByWVHd0mUe4Zxj/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note(Shafiul, DCE-46 ,2021) - \n\nhttps://drive.google.com/file/d/1fH1O1BGEDgpw7YU-rR112X0zDvmV8EgH/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note(Sazzad, 2019)- \n\nhttps://drive.google.com/file/d/1APhaH5hp4wvaZTLCe6lBuMChvwYaxQcn/view?usp=sharing`),
+    textBlockGen(`🔷 Hand Note(Samet,FE-47,2023) - \n\nhttps://drive.google.com/file/d/1ut3wfZVc0OcFeqdmAhZ2fpjqdjjB_ZRO/view?usp=sharing`),
     textBlockGen(`🔷 Book Scanned-\n\nhttps://drive.google.com/file/d/1ikxcoKWT94WYn4e-_121ZdIOd7iqA_b2/view?usp=sharing`),
     textBlockGen(`🔷 Changes of axes - \n\nhttps://drive.google.com/file/d/13b67KQlsA2jOcy_W7WnVjizbCMf2zqps/view?usp=sharing`),
     textBlockGen(`🔷 Co-ord Shifting - \n\nhttps://drive.google.com/file/d/1S1G8ql75dfFm3geG5WgCbErLHpAyaJho/view?usp=sharing`),

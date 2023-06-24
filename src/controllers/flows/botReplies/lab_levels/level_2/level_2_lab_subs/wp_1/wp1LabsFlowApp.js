@@ -12,6 +12,18 @@ let wp1_lab_flow = [
             webBtnBlockGen("Emran Sir", "https://drive.google.com/file/d/1Ub8pYoYqSYSJLdOUu4qBRX6c11PuYvGG/view?usp=sharing"),
             webBtnBlockGen("Nihat(2023)", "https://drive.google.com/file/d/1oeq2w6GJUMwi2x-Bi0TPdrrlLQHcHss5/view?usp=sharing"),
         ]
+    ),
+    grroupedButtonBlockGen(
+        "⚡ All Combined -",
+        [
+            webBtnBlockGen("Samia", "https://drive.google.com/file/d/1ki_Z6BLw3kgaaiULCqaj5EjiiCoWWM40/view?usp=sharing"),
+        ]
+    ),
+    grroupedButtonBlockGen(
+        "⚡ All Combined -",
+        [
+            webBtnBlockGen("Layout(2023)", "https://drive.google.com/file/d/1nbdQQ0dfS5A9J3DDx-k9MU5O4bHjpYEn/view?usp=sharing"),
+        ]
     )
 ]
 

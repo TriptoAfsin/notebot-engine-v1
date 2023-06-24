@@ -20,6 +20,7 @@ grroupedButtonBlockGen(`📌New(2023)`,
         "📌 QB Solve -",
         [
             webBtnBlockGen("Arjan(2022)", "https://drive.google.com/file/d/1yX7UsBG4w_XS8m0I6yWdPJ8sI9nHTLPK/view?usp=sharing"),
+            webBtnBlockGen("Fuad(2023)", "https://drive.google.com/file/d/1ZmeJ5cI39lX0jaVHeeqPd0xH9Vv9ugDI/view?usp=sharing"),
         ]
     ),
     grroupedButtonBlockGen(

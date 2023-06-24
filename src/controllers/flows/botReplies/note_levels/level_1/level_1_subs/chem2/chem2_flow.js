@@ -39,6 +39,10 @@ let chem2_flow = [
       "Rasel(2023)",
       "https://drive.google.com/drive/folders/1T_kaJ7m_hcr5h6Dp2TS3ik3LxC5o8ls4?usp=sharing"
     ),
+    webBtnBlockGen(
+      "Lingkon(CTEC)(2023)",
+      "https://drive.google.com/file/d/179aQS4-tD0LUDO4z7pjSIQktii2F2j8H/view?usp=sharing"
+    ),
   ]),
   grroupedButtonBlockGen("📌 QB Solve - ", [
     webBtnBlockGen(

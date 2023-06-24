@@ -22,6 +22,7 @@ let chem1Dilu = [
     textBlockGen(`🔷 Hand Note(Azim,TEM-46,2021)-\n\nhttps://drive.google.com/file/d/12h74YA2cBNTWc8yrRYQph5-V_K06rsUJ/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note(Shafiul,DCE-46,2021)-\n\nhttps://drive.google.com/file/d/1oog8QSv4GIKrB8YiODtMUD2_1TJnvBs6/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note(Tasin,TEM-46,2021)-\n\nhttps://drive.google.com/file/d/1YLVQssG793GTAw6dn5Jg9ZJT88nMoyOU/view?usp=sharing`),
+    textBlockGen(`🔷 Hand Note(Istiaque,DCE-48,2023) - \n\nhttps://drive.google.com/file/d/1TGE4qKwl_eWsM9iqjzPZcFQuzNYEwplU/view?usp=sharing`),
     //textBlockGen(`🔷 Sheet (Amzad Sir, 2018)-\n\nhttps://drive.google.com/file/d/1hPklz_SZUv7VCFs2wbKY22n1Wr-ITch3/view?usp=sharing`),
     textBlockGen(`🔷 Sheet(Brishty Mam, 2019)-\n\nhttps://drive.google.com/file/d/1CZer_BVmqEhDt-YED8B-H-O5cIhN41vN/view?usp=sharing`),
     textBlockGen(`🔷 Book Scanned(2019)-\n\nhttps://drive.google.com/file/d/1_X3pm63slFI3zriqQ5m8xBxHfExYruN1/view?usp=sharing`),

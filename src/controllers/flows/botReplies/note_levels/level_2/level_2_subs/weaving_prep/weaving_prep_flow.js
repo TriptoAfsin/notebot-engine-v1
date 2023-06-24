@@ -1,20 +1,15 @@
+let grroupedButtonBlockGen = require('simple-messenger-blocks/groupedBtnBlockGen');
+let webBtnBlockGen = require('simple-messenger-blocks/webBtnGen');
+let payloadBtnGen = require('simple-messenger-blocks/payloadBtnGen');
+
+
 let weavFlow = [
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🔰 Select Topics for Weaving Prepatory Process - ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "Books",
-                        "payload": "weav_books_flow"
-                    }
-                ],
-            },
-        },
-    },
+    grroupedButtonBlockGen("🔰 Select Topics for Weaving Preparatory Process -", [
+        payloadBtnGen("Books", "weav_books_flow")
+    ]),
+    grroupedButtonBlockGen("📌 Hand Notes", [
+        webBtnBlockGen("Lingkon(2023)", "https://drive.google.com/file/d/17S2qZjA2oi88k9YQGMhaZsx-BpJWO8UD/view?usp=sharing")
+    ]),
 ]
 
 
