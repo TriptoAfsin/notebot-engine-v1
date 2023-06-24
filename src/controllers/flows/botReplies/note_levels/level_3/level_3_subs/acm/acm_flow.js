@@ -26,6 +26,7 @@ let acmFlow = [
         `📌 Assignments & Solves - `,
         [
             webBtnBlockGen("Rayhan Sir(2021)", "https://drive.google.com/drive/folders/1BOYhEXtaZIsiTrzMnRrFP-xQwy97hTR7?usp=sharing"),
+            webBtnBlockGen("Equations(2023)", "https://drive.google.com/file/d/1Muar1f0K_e1cRGrcV0DytYsFjhedIBcL/view?usp=sharing"),
         ]
     ),
     grroupedButtonBlockGen(

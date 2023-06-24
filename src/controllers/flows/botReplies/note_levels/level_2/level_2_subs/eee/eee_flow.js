@@ -29,7 +29,8 @@ let eeeFlow = [
     grroupedButtonBlockGen(
         "📌 Full Hand Notes",
         [
-            webBtnBlockGen("Adee(2021)", "https://drive.google.com/file/d/1KgIfMMCIu33dd7wUZfefJXGso1_Hiiwl/view?usp=sharing")
+            webBtnBlockGen("Adee(2021)", "https://drive.google.com/file/d/1KgIfMMCIu33dd7wUZfefJXGso1_Hiiwl/view?usp=sharing"),
+            webBtnBlockGen("Mamun(SKTEC,2023)", "https://drive.google.com/file/d/1o66VmiMFz4BgGBSFTVQJAQl7vJx1ubJf/view?usp=sharing"),
         ]
     ),
     grroupedButtonBlockGen(

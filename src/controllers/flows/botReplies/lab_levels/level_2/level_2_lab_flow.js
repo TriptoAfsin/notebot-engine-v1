@@ -26,6 +26,7 @@ let level_2_lab = [
   grroupedButtonBlockGen("🔰 Select Subject Your Lab Report - ", [
     payloadBtnGen("SSS-II", "sss2_lab_flow"),
     payloadBtnGen("WPE 202: WPP", "wpe_wpp_lab_flow"),
+    webBtnBlockGen("FYT", "https://drive.google.com/file/d/1ohmJdoTWF7I8WPJ0LizRFMFisbDumfAd/view?usp=sharing"),
   ]),
 ];
 

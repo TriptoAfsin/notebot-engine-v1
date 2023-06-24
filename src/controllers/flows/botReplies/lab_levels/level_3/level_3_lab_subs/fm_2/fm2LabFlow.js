@@ -7,6 +7,12 @@ let imgBlockGen = require('simple-messenger-blocks/imgBlockGen');
 let fm2_lab_flow = [
     imgBlockGen("https://manybot-thumbnails.s3.eu-central-1.amazonaws.com/fb243958719599028/ca/big_4ea8034e14dee64657b53bd213d86ebf.png"),
     grroupedButtonBlockGen(
+        "📌 Layout - ",
+        [
+            webBtnBlockGen("Mamun(2023)", "https://drive.google.com/file/d/14lT7hPuaqSo6hdpG4qpby7ygBCO1rFsv/view?usp=sharing"),
+        ]
+    ),
+    grroupedButtonBlockGen(
         "📌 All Report - ",
         [
             webBtnBlockGen("All Report(Bappi)", "https://drive.google.com/file/d/1Y72PDOYkFwW9_l8yoSJ2e27Dh1iLaWiE/view"),

@@ -4,7 +4,11 @@ let payloadBtnGen = require('simple-messenger-blocks/payloadBtnGen');
 
 
 let fmeFlow = [
-
+grroupedButtonBlockGen(`📌New(2023)`,
+        [
+            webBtnBlockGen("Suggestions", "https://drive.google.com/file/d/1DSK8J-O-4UcQgZeSy973PBmcpzC1_F30/view?usp=sharing"),
+        ]
+    ),
     grroupedButtonBlockGen(`📌Full Hand Note(Maruf)-`,
         [
             webBtnBlockGen("Fluid, Inertia, pump", "https://drive.google.com/file/d/1EeU6E0nZjv5NRkqffBmqyhbN7_fWPsQO/view"),
