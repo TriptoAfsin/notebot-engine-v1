@@ -3285,6 +3285,10 @@ let handlePostback = async (sender_psid, received_postback) => {
     magicFunc(sender_psid, notesFlow);
   }
 
+  else if (payload === 'qb_flow') {
+    magicFunc(sender_psid, quesFlow);
+  }
+
   else if (payload === 'level_1') {
     magicFunc(sender_psid, level_1_notes);
   }
