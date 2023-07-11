@@ -154,7 +154,7 @@ const greetWords = require("./keywords/greetWords");
 const hiWords = require("./keywords/onlyHiWord");
 
 //manza
-const manza = require("./keywords/manzaWords.js");
+const manzaWords = require("./keywords/manzaWords");
 
 //yes
 const yesWords = require("./keywords/yesTypeWords");
@@ -537,6 +537,7 @@ const donation_surecash = require("./flows/botReplies/donation/surecashDonation"
 //attachment reply
 const attachmentReply = require("./keywords/replies/attachmentReply");
 //maza replies
+const mazaGetStarted = require("./flows/botReplies/manzaFlow/manzaGetStarted");
 const manzaFaq = require("./flows/botReplies/manzaFlow/manzaFaq");
 const manzaContact = require("./flows/botReplies/manzaFlow/manzaContactUs");
 const manzaCatalogue = require("./flows/botReplies/manzaFlow/manzaCatalogue");
@@ -1786,8 +1787,6 @@ function handleMessage(sender_psid, received_message) {
   //keywords
   const greets = greetWords;
 
-  const manzaWords = manza;
-
   //academic
   const notes = noteWords;
   const level1 = level_1_note_words;
@@ -1899,7 +1898,6 @@ function handleMessage(sender_psid, received_message) {
 
   const greetReply = greetReplies;
 
-  const mazaGetStarted = require("./flows/botReplies/manzaFlow/manzaGetStarted");
 
   const sadReply = sadStuffReply;
   const positive = positiveKeywords;
