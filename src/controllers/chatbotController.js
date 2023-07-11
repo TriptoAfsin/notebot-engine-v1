@@ -3106,7 +3106,7 @@ let handlePostback = async (sender_psid, received_postback) => {
     magicFunc(sender_psid, manzaCatalogue);
   }
   else if (payload === "manza_contact") {
-    magicFunc(sender_psid, manzaContact);
+    magicFunc(sender_psid, manzaGetStarted);
   }
   else if (payload === "manza_faq") {
     magicFunc(sender_psid, manzaFaq);
