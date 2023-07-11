@@ -537,7 +537,7 @@ const donation_surecash = require("./flows/botReplies/donation/surecashDonation"
 //attachment reply
 const attachmentReply = require("./keywords/replies/attachmentReply");
 //maza replies
-const mazaGetStarted = require("./flows/botReplies/manzaFlow/manzaGetStarted");
+const manzaGetStarted = require("./flows/botReplies/manzaFlow/manzaGetStarted");
 const manzaFaq = require("./flows/botReplies/manzaFlow/manzaFaq");
 const manzaContact = require("./flows/botReplies/manzaFlow/manzaContactUs");
 const manzaCatalogue = require("./flows/botReplies/manzaFlow/manzaCatalogue");
@@ -1950,8 +1950,8 @@ function handleMessage(sender_psid, received_message) {
 
   //manza
   else if (wordIncludes(manzaWords, received_message)) {
-    response = mazaGetStarted
-    callSendAPI(sender_psid, response);
+    response = manzaGetStarted
+    magicFunc(sender_psid, response);
   }
 
   //hot
