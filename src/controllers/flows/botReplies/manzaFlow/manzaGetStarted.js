@@ -6,7 +6,6 @@ const payloadBtnBlockGen = require("../../../genrators/payloadBtnGen");
 const groupedBtnBlockGen = require("../../../genrators/grroupedButtonBlockGen");
 
 let manzaGetStarted = {
-
     "text": `Welcome to ManzaBot 😃 !`,
      "quick_replies": [{
        "content_type": "text",

@@ -1951,7 +1951,7 @@ function handleMessage(sender_psid, received_message) {
   //manza
   else if (wordIncludes(manzaWords, received_message)) {
     response = manzaGetStarted
-    magicFunc(sender_psid, response);
+    callSendAPI(sender_psid, response);
   }
 
   //hot
