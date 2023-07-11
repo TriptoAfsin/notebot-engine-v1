@@ -539,7 +539,7 @@ const attachmentReply = require("./keywords/replies/attachmentReply");
 //maza replies
 const manzaGetStarted = require("./flows/botReplies/manzaFlow/manzaGetStarted");
 const manzaFaq = require("./flows/botReplies/manzaFlow/manzaFaq");
-const manzaContact = require("./flows/botReplies/manzaFlow/manzaContactUs");
+const manzaContactUs = require("./flows/botReplies/manzaFlow/manzaContactUs");
 const manzaCatalogue = require("./flows/botReplies/manzaFlow/manzaCatalogue");
 
 
@@ -3106,7 +3106,7 @@ let handlePostback = async (sender_psid, received_postback) => {
     magicFunc(sender_psid, manzaCatalogue);
   }
   else if (payload === "manza_contact") {
-    magicFunc(sender_psid, manzaGetStarted);
+    magicFunc(sender_psid, manzaContactUs);
   }
   else if (payload === "manza_faq") {
     magicFunc(sender_psid, manzaFaq);
