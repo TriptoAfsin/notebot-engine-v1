@@ -7,11 +7,22 @@ const groupedBtnBlockGen = require("../../../genrators/grroupedButtonBlockGen");
 
 let manzaGetStarted = [
   textBlockGen(`Welcome to ManzaBot 😃 !`),
-  quickReplyGen("Choose what you want - ", [
-    payloadBtnBlockGen("📦 Browse Catalogue", "manza_catalogue"),
-    payloadBtnBlockGen("💌 Contact Us", "manza_contact"),
-    payloadBtnBlockGen("💌 Help/ FAQ", "manza_faq"),
-  ]),
+  "quick_replies": [{
+    "content_type": "text",
+    "title": "📦 Browse Catalogue",
+    "payload": "manza_catalogue"
+},
+{
+    "content_type": "text",
+    "title": "💌 Contact Us",
+    "payload": "manza_contact"
+},
+{
+    "content_type": "text",
+    "title": "👋 Help/ FAQ",
+    "payload": "manza_faq"
+},
+]
 ];
 
 module.exports = manzaGetStarted;
