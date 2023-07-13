@@ -5601,7 +5601,7 @@ let callSendAPI = (sender_psid, response) => {
   // Send the HTTP request to the Messenger Platform
   request(
     {
-      uri: "https://graph.facebook.com/v12.0/me/messages",
+      uri: "https://graph.facebook.com/v17.0/me/messages",
       qs: { access_token: process.env.PAGE_ACCESS_TOKEN },
       method: "POST",
       json: request_body,
