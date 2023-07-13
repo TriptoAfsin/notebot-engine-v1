@@ -17,7 +17,7 @@ let botConfig = {
     ),
     payloadBtn("Help 😥", "help_payload"),
     payloadBtn("Donate 💰", "donation_payload"),
-    webBtn("🧑 About Founder", "https://triptex.me/"),
+    webBtn("Founder 🧑", "https://triptex.me/"),
     webBtn("Submit Notes 📙", "https://goo.gl/forms/akfj9X8vxuoj2xQg2"),
     webBtn("NoteBOT Web 🌍", "https://notebot.netlify.app/#/"),
   ],
