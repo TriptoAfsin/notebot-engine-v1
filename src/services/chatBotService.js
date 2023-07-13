@@ -122,9 +122,70 @@ let sendTypingOff = (sender_psid) => {
   });
 }
 
+let passThreadControl = (sender_psid) => {
+  return new Promise(async (resolve, reject) => {
+    try {
+      let uri = `https://graph.facebook.com/v17.0/me/pass_thread_control`;
+      // Send the HTTP request to the Messenger Platform
+      request(
+        {
+          uri: uri,
+          qs: {"access_token": process.env.PAGE_ACCESS_TOKEN},
+          method: "POST",
+          json: {
+            "recipient":{
+              "id": sender_psid
+            },
+            "target_app_id": process.env.SECONDARY_RECEIVER_ID,
+            "metadata": "Pass control to a human agent"
+          }
+        },
+        (err, res, body) => {
+          //console.log(body);
+          if (!err) {
+            resolve("done !");
+          } else {
+            reject("Unable to post sender action" + err);
+          }
+        }
+      );
+    }catch (e) {
+      reject(err);
+    }
+  });
+}
+
+let talkToHuman = async (sender_psid) => {
+  return new Promise(async (resolve, reject) => {
+    try {
+      let res1 = {
+        "text": "A person will get in touch with you"
+      }
+      await passThreadControl(sender_psid)
+    } catch (e) {
+      reject(err);
+    }
+  });
+}
+
+let restartBot = async (sender_psid) => {
+  return new Promise(async (resolve, reject) => {
+    try {
+      let res1 = {
+        "text": "A person will get in touch with you"
+      }
+      await passThreadControl(sender_psid)
+    } catch (e) {
+      reject(err);
+    }
+  });
+}
+
 module.exports = {
   getFacebookUserInfo: getFacebookUserInfo,
   sendTypingOn: sendTypingOn,
   markMessageRead: markMessageRead,
   sendTypingOff: sendTypingOff,
+  talkToHuman: talkToHuman,
+  restartBot: restartBot,
 };
