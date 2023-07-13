@@ -5590,7 +5590,9 @@ let randomPicker = replyArray => {
 };
 
 // Sends response messages via the Send API
-let callSendAPI = (sender_psid, response) => {
+let callSendAPI = async (sender_psid, response) => {
+  await chatBotService.markMessageRead(sender_psid)
+  await chatBotService.sendTypingOn(sender_psid)
   // Construct the message body
   let request_body = {
     recipient: {

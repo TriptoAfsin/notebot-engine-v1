@@ -29,6 +29,70 @@ let getFacebookUserInfo = sender_psid => {
   });
 };
 
+let markMessageRead = (sender_psid) => {
+  return new Promise((resolve, reject) => {
+    try {
+      let uri = `https://graph.facebook.com/v17.0/me/messages?access_token=${process.env.PAGE_ACCESS_TOKEN}`;
+      // Send the HTTP request to the Messenger Platform
+      request(
+        {
+          uri: uri,
+          method: "POST",
+          json: {
+            "recipient":{
+              "id": sender_psid
+            },
+            "sender_action":"mark_seen "
+          }
+        },
+        (err, res, body) => {
+          //console.log(body);
+          if (!err) {
+            resolve("done !");
+          } else {
+            reject("Unable to post sender action" + err);
+          }
+        }
+      );
+    } catch (e) {
+      reject(err);
+    }
+  });
+}
+
+let sendTypingOn = (sender_psid) => {
+  return new Promise((resolve, reject) => {
+    try {
+      let uri = `https://graph.facebook.com/v17.0/me/messages?access_token=${process.env.PAGE_ACCESS_TOKEN}`;
+      // Send the HTTP request to the Messenger Platform
+      request(
+        {
+          uri: uri,
+          method: "POST",
+          json: {
+            "recipient":{
+              "id": sender_psid
+            },
+            "sender_action":"typing_on"
+          }
+        },
+        (err, res, body) => {
+          //console.log(body);
+          if (!err) {
+            resolve("done !");
+          } else {
+            reject("Unable to post sender action" + err);
+          }
+        }
+      );
+    } catch (e) {
+      reject(err);
+    }
+  });
+}
+
 module.exports = {
   getFacebookUserInfo: getFacebookUserInfo,
+  sendTypingOn: sendTypingOn,
+  markMessageRead: markMessageRead,
 };
