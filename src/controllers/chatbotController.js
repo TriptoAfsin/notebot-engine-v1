@@ -5611,8 +5611,10 @@ let callSendAPI = async (sender_psid, response) => {
     },
     (err, res, body) => {
       if (!err) {
+        await chatBotService.sendTypingOff(sender_psid)
         console.log("🟢 Message sent!");
       } else {
+        await chatBotService.sendTypingOff(sender_psid)
         console.error(`🔴 Unable to send message: ${err}`);
       }
     }
