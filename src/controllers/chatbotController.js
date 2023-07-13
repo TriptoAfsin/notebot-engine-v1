@@ -1678,7 +1678,7 @@ let getWebhook = (req, res) => {
 };
 
 //post webhook
-let postWebhook = (req, res) => {
+let postWebhook = async (req, res) => {
   let body = req.body;
 
   // Checks this is an event from a page subscription
@@ -1781,7 +1781,7 @@ function handleReaction(sender_psid, received_reaction) {
 }
 
 // Handles messages events
-function handleMessage(sender_psid, received_message) {
+let  handleMessage = async (sender_psid, received_message) =>  {
   let response;
 
   //keywords
@@ -1950,7 +1950,8 @@ function handleMessage(sender_psid, received_message) {
 
   //manza
   else if (wordIncludes(manzaWords, received_message)) {
-    response = manzaGetStarted
+    let userName = await chatBotService.getFacebookUserInfo(sender_psid)
+    response = [textBlockGen(`Hey, ${userName}`),manzaGetStarted]
     magicFunc(sender_psid, response);
   }
 

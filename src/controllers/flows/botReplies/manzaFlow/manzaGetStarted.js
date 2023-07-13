@@ -6,6 +6,7 @@ const payloadBtnBlockGen = require("../../../genrators/payloadBtnGen");
 const groupedBtnBlockGen = require("simple-messenger-blocks/groupedBtnBlockGen");
 
 let manzaGetStarted = [
+
   groupedBtnBlockGen("Welcome to ManzaBot 😃 !", [
     payloadBtnBlockGen("📦 Browse Catalogue", "manza_catalogue"),
     payloadBtnBlockGen("💌 Contact Us", "manza_contact"),
