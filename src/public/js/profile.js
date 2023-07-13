@@ -5,26 +5,28 @@ window.addEventListener("load", () => {
     event.preventDefault();
 
     //rewrite in fetch
-    try {
-      const response = await fetch(
-        `${window.location.origin}/set-up-user-fb-profile`,
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: {},
+    fetch(`${window.location.origin}/set-up-user-fb-profile`, {
+      method: "POST",
+      body: JSON.stringify({}),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+      .then(response => {
+        if (response.ok) {
+          return response.json();
+        } else {
+          throw new Error("Setup failed 😥");
         }
-      );
-      const result = await response.json();
-      if (result) {
+      })
+      .then(data => {
         alert("Setup success 😀");
-        console.log("Success:", result);
-      }
-    } catch (error) {
-      alert("Setup failed 🤔");
-      console.log(error);
-    }
+        console.log(data);
+      })
+      .catch(error => {
+        alert("Setup failed 😥");
+        console.log(error);
+      });
 
     // $.ajax({
     //     url: `${window.location.origin}/set-up-user-fb-profile`,
