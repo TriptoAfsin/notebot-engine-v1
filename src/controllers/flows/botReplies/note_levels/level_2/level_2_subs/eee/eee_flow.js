@@ -9,6 +9,12 @@ let bondiFlow = require("../../../../sponsoredFlows/bondiCard");
 let eeeFlow = [
     bondiFlow,
     grroupedButtonBlockGen(
+        "📌 QB Solve -",
+        [
+            webBtnBlockGen("Rafi(2023)", "https://drive.google.com/drive/folders/1wOTKv9jDlR54evoAOS60gkrNOfDjvDvZ?usp=sharing"),
+        ]
+    ),
+    grroupedButtonBlockGen(
         "📽️ Class Recordings - ",
         [
             webBtnBlockGen("YouTube Playlist", "https://www.youtube.com/playlist?list=PLakGb0S4SwU17jAOvXvN8hNxfflP13PkJ")

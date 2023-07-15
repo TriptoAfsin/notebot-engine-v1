@@ -7,6 +7,12 @@ let bondiFlow = require("../../../../sponsoredFlows/bondiCard");
 let tpFlow = [
     bondiFlow,
     grroupedButtonBlockGen(
+        "📌 QB Solve -",
+        [
+            webBtnBlockGen("Rafi(2023)", "https://drive.google.com/drive/folders/16mRiVpUohGl_QHul0DSS8PwF2qKdVMdj?usp=sharing"),
+        ]
+    ),
+    grroupedButtonBlockGen(
         "📌 Full Hand Notes -",
         [
             webBtnBlockGen("Akib's All Note", "https://drive.google.com/file/d/1N1wxgwmp-ltxPYkOB6UfPPjuOfsz9FTz/view"),

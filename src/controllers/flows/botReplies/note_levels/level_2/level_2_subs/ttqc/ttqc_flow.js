@@ -6,6 +6,12 @@ let bondiFlow = require("../../../../sponsoredFlows/bondiCard");
 
 let ttqcFlow = [
     bondiFlow,
+    grroupedButtonBlockGen(
+        "📌 QB Solve -",
+        [
+            webBtnBlockGen("Rafi(2023)", "https://drive.google.com/drive/folders/17Yv0ziAOwwxnoLCMb17vup-ljSxpEx5y?usp=sharing"),
+        ]
+    ),
     grroupedButtonBlockGen(`📌 Full Hand Notes -`,
         [
             webBtnBlockGen("Nahid(A,2020)", "https://drive.google.com/file/d/117BxjlWQoCQDxpHPjPKK2LnwJ9ZOf0GT/view"),

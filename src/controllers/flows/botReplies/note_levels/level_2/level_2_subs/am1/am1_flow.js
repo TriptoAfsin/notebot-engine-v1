@@ -10,6 +10,7 @@ let am1Flow = [
         "📌 QB Analysis - ",
         [
             webBtnBlockGen("Arjan(2022)", "https://drive.google.com/file/d/1jIAaX3LZaJK4Y1aBZQuzm5-f9GGOI1h0/view?usp=sharing"),
+            webBtnBlockGen("Rafi(2023)", "https://drive.google.com/drive/folders/1oN2kFCWSu6Kn5QxYSxxNjvMlEGdz5Itf?usp=sharing"),
         ]
     ),
     grroupedButtonBlockGen(

@@ -5,6 +5,12 @@ let bondiFlow = require("../../../../sponsoredFlows/bondiCard");
 
 let wp1Flow = [
     bondiFlow,
+    grroupedButtonBlockGen(
+        "📌 QB Solve -",
+        [
+            webBtnBlockGen("Rafi(2023)", "https://drive.google.com/drive/folders/1RbAuvw2oFdUap3cqi5zWleNUtWIHDBNl?usp=sharing"),
+        ]
+    ),
     grroupedButtonBlockGen("📌 Full Hand Note & Basic Stuff -",
     [
         webBtnBlockGen("Short Note(Sadia,2023)", "https://drive.google.com/file/d/1iHtTbyEoRfzGZmBbz7aC8GRELnCZjjvg/view?usp=sharing"),
