@@ -1685,6 +1685,19 @@ let postWebhook = async (req, res) => {
   if (body.object === "page") {
     // Iterates over each entry - there may be multiple if batched
     body.entry.forEach(function (entry) {
+      //for talk to agent
+      if(entry.standby){
+        //to turn back on
+        let webhook_standby = entry.standby[0]
+        if(webhook_standby && webhook_standby.message){
+          if(wordIncludesWhole(["restart", "restart bot"],webhook_standby.message.text)){
+            chatBotService.restartBot(webhook_standby.sender.id)
+            response = getStartedMsg[0];
+            callSendAPI(webhook_standby.sender.id, response);
+          }
+        }
+        return;
+      }
       // Gets the message. entry.messaging is an array, but
       // will only ever contain one message, so we get index 0
       let webhook_event = entry.messaging[0];
@@ -3084,6 +3097,17 @@ let handlePostback = async (sender_psid, received_postback) => {
     }
 
     console.log(`Username: ${username}`);
+    response = getStartedMsg[0];
+    callSendAPI(sender_psid, response);
+  }
+
+  else if(payload === "talk_to_human"){
+    response = textBlockGen(`A person will get in touch with you 😁`);
+    callSendAPI(sender_psid, response);
+    await chatBotService.talkToHuman(sender_psid)
+  }
+  else if(payload === "restart_bot"){
+    await chatBotService.restartBot(sender_psid)
     response = getStartedMsg[0];
     callSendAPI(sender_psid, response);
   }
