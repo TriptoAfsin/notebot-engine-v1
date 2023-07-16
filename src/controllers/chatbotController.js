@@ -1710,12 +1710,10 @@ let postWebhook = async (req, res) => {
       //getting userInfo
       //getUserInfo(sender_psid)
 
-      // Check if the event is a message or postback and
-      // pass the event to the appropriate handler function
       //for quick_reply_postback
-      if (webhook_event.message && !webhook_event.message.is_echo && webhook_event.message.quick_reply && webhook_event.message.quick_reply.payload) {
-        handlePostback(sender_psid, webhook_event.message.quick_reply.payload);
-      }
+      // if (webhook_event.message && !webhook_event.message.is_echo && webhook_event.message.quick_reply && webhook_event.message.quick_reply.payload) {
+      //   handlePostback(sender_psid, webhook_event.message.quick_reply.payload);
+      // }
       else if (webhook_event.message && !webhook_event.message.is_echo) {
         handleMessage(sender_psid, webhook_event.message);
       }
