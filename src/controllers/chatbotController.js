@@ -1714,7 +1714,7 @@ let postWebhook = async (req, res) => {
       // if (webhook_event.message && !webhook_event.message.is_echo && webhook_event.message.quick_reply && webhook_event.message.quick_reply.payload) {
       //   handlePostback(sender_psid, webhook_event.message.quick_reply.payload);
       // }
-      else if (webhook_event.message && !webhook_event.message.is_echo) {
+      if (webhook_event.message && !webhook_event.message.is_echo) {
         handleMessage(sender_psid, webhook_event.message);
       }
       //for postbacks
