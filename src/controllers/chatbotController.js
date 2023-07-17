@@ -1711,10 +1711,10 @@ let postWebhook = async (req, res) => {
       //getUserInfo(sender_psid)
 
       //for quick_reply_postback
-      // if (webhook_event.message && !webhook_event.message.is_echo && webhook_event.message.quick_reply && webhook_event.message.quick_reply.payload) {
-      //   handlePostback(sender_psid, webhook_event.message.quick_reply.payload);
-      // }
-      if (webhook_event.message && !webhook_event.message.is_echo) {
+      if (webhook_event.message && !webhook_event.message.is_echo && webhook_event.message.quick_reply && webhook_event.message.quick_reply.payload) {
+        handlePostback(sender_psid, webhook_event.message.quick_reply);
+      }
+      else if (webhook_event.message && !webhook_event.message.is_echo) {
         handleMessage(sender_psid, webhook_event.message);
       }
       //for postbacks
