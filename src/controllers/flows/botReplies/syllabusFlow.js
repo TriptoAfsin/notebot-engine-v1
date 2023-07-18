@@ -9,7 +9,7 @@ let syllabus = [
     grroupedButtonBlockGen(
         "🔰 Select Your Batch -",
         [
-            payloadBtnGen("🔵 46", "syllabus_46"),
+            webBtnBlockGen("🔵 46", "https://drive.google.com/file/d/1di3DU0HRJZE-Kjihfr6UGS4y7qNWH7mF/view?usp=sharing"),
             payloadBtnGen("🔵 45", "syllabus_45"),
         ]
     ),

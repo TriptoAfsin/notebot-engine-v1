@@ -15,6 +15,7 @@ let ttqc_lab_flow = [
     grroupedButtonBlockGen("⚡ All Report - ",
         [
             webBtnBlockGen("Arindom(2023)", "https://drive.google.com/file/d/1CXePAAOhFR2xx8vPdGrNjN8NpBl3h31A/view?usp=sharing"),
+            webBtnBlockGen("Shanto(2023)", "https://drive.google.com/file/d/1YEQvI9dyiCL0JYzMS8T3rLWYShtmz8i9/view?usp=sharing"),
         ]
     ),
     grroupedButtonBlockGen("🔰 Select Experiment for TTQC - ",

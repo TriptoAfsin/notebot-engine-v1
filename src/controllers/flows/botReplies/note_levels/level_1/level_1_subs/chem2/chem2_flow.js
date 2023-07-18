@@ -43,6 +43,10 @@ let chem2_flow = [
       "Lingkon(CTEC)(2023)",
       "https://drive.google.com/file/d/179aQS4-tD0LUDO4z7pjSIQktii2F2j8H/view?usp=sharing"
     ),
+    webBtnBlockGen(
+      "Sadia(WPE-47,2023)",
+      "https://drive.google.com/file/d/1ntNITOWmdSAe4eZVQJXsQYsAvMyC_NJo/view?usp=sharing"
+    ),
   ]),
   grroupedButtonBlockGen("📌 QB Solve - ", [
     webBtnBlockGen(

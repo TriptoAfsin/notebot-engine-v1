@@ -17,6 +17,7 @@ let statFlow = [
     grroupedButtonBlockGen(`📌 Stat Solve -`,
         [
             webBtnBlockGen("Avik(2021)", "https://drive.google.com/file/d/19uqtuiAYmnJ7jvLxzYWnwq8j2cbgvGFz/view?usp=sharing"),
+            webBtnBlockGen("Mamun(2023)", "https://drive.google.com/file/d/1fsI-6DOyAe1Vc-WPt6nVH0CqHuVkqCXw/view?usp=sharing"),
         ]
     ),
     grroupedButtonBlockGen(`📌 Full Hand Notes -`,

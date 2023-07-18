@@ -19,6 +19,11 @@ let ttqcFlow = [
             webBtnBlockGen("Rifat(2020)", "https://drive.google.com/file/d/1OBMtlEA2Tdivk5oKHfTUjuluBbGp96Rn/view?usp=sharing")
         ]
     ),
+    grroupedButtonBlockGen(`📌 Full Hand Notes -`,
+        [
+            webBtnBlockGen("Sakib(2023)", "https://drive.google.com/file/d/19Hhrxht0Rm6_fFxPXzsBoLSO3JJI2X1C/view?usp=sharing"),
+        ]
+    ),
     grroupedButtonBlockGen(`📌 Akib's Hand Notes -`,
         [
             webBtnBlockGen("Part-A", "https://drive.google.com/file/d/1-4EA5mbfL1vJ8KCkPxlI0XLLhAabvsfG/view"),
