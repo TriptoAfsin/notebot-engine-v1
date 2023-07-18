@@ -1076,6 +1076,8 @@ let ttqcLabs = require('./academic/labReport/level2/subs/ttqc/ttqcLabs')
 
 //syllabus
 let syllabusBatch45 = require('./academic/syllabus/45/syllabusBatch45')
+let syllabusBatch46 = require('./academic/syllabus/46/syllabusBatch46')
+let syllabusBatch46All = require('./academic/syllabus/46/depts/allSyllabus46')
 let syllabusBatch45Ae = require('./academic/syllabus/45/depts/ae45Syl')
 let syllabusBatch45Fe = require('./academic/syllabus/45/depts/fe45Syl')
 let syllabusBatch45Ye = require('./academic/syllabus/45/depts/ye45Syl')
@@ -5502,7 +5504,7 @@ let syllabusLevelFlow = (req, res) => {
         },
         {
             batch: "46",
-            url: "https://drive.google.com/file/d/1di3DU0HRJZE-Kjihfr6UGS4y7qNWH7mF/view?usp=sharing"
+            route: "app/syllabus/45"
     }
     ]);
 };
@@ -5510,6 +5512,16 @@ let syllabusLevelFlow = (req, res) => {
 let syllabusBatch45Flow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
     return res.send(syllabusBatch45);
+};
+
+let syllabusBatch46Flow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(syllabusBatch46);
+};
+
+let syllabusBatch46AllFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(syllabusBatch46All);
 };
 
 let syllabusBatch45AeFlow = (req, res) => {
@@ -6518,6 +6530,8 @@ module.exports = {
 
     syllabusLevelFlow: syllabusLevelFlow,
     syllabusBatch45Flow: syllabusBatch45Flow,
+    syllabusBatch46Flow: syllabusBatch46Flow,
+    syllabusBatch46AllFlow: syllabusBatch46AllFlow,
     syllabusBatch45AeFlow: syllabusBatch45AeFlow,
     syllabusBatch45FeFlow: syllabusBatch45FeFlow,
     syllabusBatch45YeFlow: syllabusBatch45YeFlow,
