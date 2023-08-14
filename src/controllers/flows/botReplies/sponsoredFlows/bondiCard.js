@@ -3,14 +3,24 @@ let cardGen = require("../../../genrators/cardGenerator");
 
 
 let bondiFlow = cardGen(
-    "https://i.imgur.com/fQZqOwW.png",
-    "বন্দি পাঠশালা",
-    "BUTEX NoteBOT is now powered by Bondi Pathshala 😀",
-    "https://www.facebook.com/bp.liveclass",
+    "https://i.postimg.cc/HkwhXRXr/tc-chatbot.png",
+    "TrueCaller Premium !",
+    "মাত্র ৫ টাকায় TrueCaller Premium !",
+    "https://hullor.io/#truecaller",
     [
-        webBtnBlockGen("Visit 🌍", "https://www.facebook.com/bp.liveclass")
+        webBtnBlockGen("Buy Now 👑", "https://i.postimg.cc/HkwhXRXr/tc-chatbot.png")
     ]
 )
+
+// let bondiFlow = cardGen(
+//     "https://i.imgur.com/fQZqOwW.png",
+//     "বন্দি পাঠশালা",
+//     "BUTEX NoteBOT is now powered by Bondi Pathshala 😀",
+//     "https://www.facebook.com/bp.liveclass",
+//     [
+//         webBtnBlockGen("Visit 🌍", "https://www.facebook.com/bp.liveclass")
+//     ]
+// )
 
 // let bondiFlow = cardGen(
 //     "https://i.imgur.com/l1i0TJP.png",
