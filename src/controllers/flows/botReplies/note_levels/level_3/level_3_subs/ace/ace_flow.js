@@ -26,6 +26,7 @@ let aceFlow = [
         `📌 Full Notes -  `,
         [
             webBtnBlockGen("Part-A(Nahid)", "https://drive.google.com/file/d/1fIcM2fj3OBEk9saJADuceD8LNPtYmxfp/view?usp=sharing"),
+            webBtnBlockGen("Part-A(Rakibul)", "https://drive.google.com/file/d/1GIBG0Y7ksjM1OURLdADvEs4n1IanruoP/view?usp=sharing"),
             webBtnBlockGen("Part-B(Nahid)", "https://drive.google.com/file/d/1_QuELIk-Z0QIdRMcr9pLRjzWPlR5mJI-/view?usp=sharing"),
         ]
     ),

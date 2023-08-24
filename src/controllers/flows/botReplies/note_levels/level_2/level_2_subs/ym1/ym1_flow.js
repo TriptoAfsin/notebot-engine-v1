@@ -27,6 +27,12 @@ let ym1Flow = [
         ]
     ),
     grroupedButtonBlockGen(
+        `📌 Full Hand Notes -   `,
+        [
+            webBtnBlockGen("Linkon(CTEC,2023)", "https://drive.google.com/file/d/1le7Y0Di_V7CKujbrFH4t3ciH-kZSGj90/view?usp=sharing"),
+        ]
+    ),
+    grroupedButtonBlockGen(
         `🔰 Select Topics for YM-I - `,
         [
             payloadBtnGen("Intro to YM","ym1_intro_flow"),

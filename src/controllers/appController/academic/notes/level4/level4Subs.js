@@ -16,6 +16,14 @@ let level4Subs = [
         url: "https://drive.google.com/drive/folders/1qrbsRc4WWRKjCO3bqQDp0JK5S6Tvl6b6?usp=sharing"
     },
     {
+        subName: "Sociology",
+        url: "https://drive.google.com/drive/folders/1dp46oYLKPp2Iruv0mM01uTCB-x0Hvn3r?usp=sharing"
+    },
+    {
+        subName: "IEAP",
+        url: "https://drive.google.com/drive/folders/1YqLpLaP9KUMcnBsecumdwQ6hzOYLNsIQ?usp=sharing"
+    },
+    {
         subName: "B&IL",
         route: "app/notes/4/bil"
     },

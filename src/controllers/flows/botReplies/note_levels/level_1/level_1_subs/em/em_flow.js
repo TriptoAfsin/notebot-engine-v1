@@ -20,7 +20,7 @@ let em_flow = [
     grroupedButtonBlockGen("📌 Full Hand Notes - ",
         [
             webBtnBlockGen("Rushad(2021)", "https://drive.google.com/file/d/1Nieo9oDLZw-_kQs0VhWrjIG2tp9GOG_c/view?usp=sharing"),
-            webBtnBlockGen("Lingkon(2023)", "https://drive.google.com/file/d/1OvBvwgBWdPBDnr1CpVulWqAmXTG_LvOt/view?usp=sharing")
+            webBtnBlockGen("Linkon(2023)", "https://drive.google.com/file/d/1OvBvwgBWdPBDnr1CpVulWqAmXTG_LvOt/view?usp=sharing")
         ]
     ),
     grroupedButtonBlockGen("🔰 Select Topics for EM -",

@@ -16,6 +16,11 @@ let math2_flow = [
             webBtnBlockGen("MCQ", "https://drive.google.com/drive/folders/1pTYAebVn77kJfhhKs6YK4q-bk9yEmniq?usp=sharing")
         ]
     ),
+    grroupedButtonBlockGen("📌 Full Hand Notes - ",
+    [
+        webBtnBlockGen("Linkon(2023)", "https://drive.google.com/file/d/1hKRX5vp08oTzu0UrkATK12W4GLx555-Q/view?usp=sharing")
+    ]
+),
     grroupedButtonBlockGen(
         "📌 Select Topic for Math-II -",
         [

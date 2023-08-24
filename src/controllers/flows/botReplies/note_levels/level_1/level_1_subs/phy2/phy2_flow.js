@@ -16,7 +16,8 @@ let phy2_flow = [
         ]
     ),
     grroupedButtonBlockGen("📌 Combined Note -",
-        [
+    [
+            webBtnBlockGen("Lingkon(CTEC,2023)", "https://drive.google.com/file/d/18aPpGM6-fh1h8wTJzO1hlWVPWvdlRlsj/view?usp=sharing"),
             webBtnBlockGen("Wasy(2021)", "https://drive.google.com/file/d/1Hw9qRAf2fJBL_6UgResO_WgUvnjUMlrA/view?usp=sharing"),
             webBtnBlockGen("Nirob(Affl,2022)", "https://drive.google.com/file/d/1IMl_I9FoYIrjXFL-fvbBICERkyhBVch7/view?usp=sharing"),
         ]
@@ -24,6 +25,7 @@ let phy2_flow = [
     grroupedButtonBlockGen("📌 QB Solve - ",
         [
             webBtnBlockGen("By AE-45", "https://drive.google.com/file/d/1F1MVY00RL6MmjLhCgx7ODacgnJOQgI1A/view?usp=sharing"),
+            webBtnBlockGen("Math Solve(Affli.)", "https://drive.google.com/file/d/1qi-Ev2jCffNfyfov9PBra2MDUNFLUXEI/view?usp=sharing"),
         ]
     ),
     grroupedButtonBlockGen("🔰 Select Topic for PHY-II -",

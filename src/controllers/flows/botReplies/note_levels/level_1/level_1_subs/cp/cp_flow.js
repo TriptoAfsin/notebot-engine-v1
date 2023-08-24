@@ -37,6 +37,12 @@ let cp_flow = [
         ]
     ),
     grroupedButtonBlockGen(
+        "📌 Full Hand Notes -",
+        [
+            webBtnBlockGen("Lingkon(CTEC,2023)", "https://drive.google.com/file/d/1aTa8nrLfEXDSb3GwbWVnrGvx2Jt_ZThd/view?usp=sharing"),
+        ]
+    ),
+    grroupedButtonBlockGen(
         "🔰 Select Topic for CP -",
         [
             payloadBtnGen("Books", "books_cp_flow"),

@@ -17,6 +17,7 @@ let fytFlow = [
         [
             webBtnBlockGen("Hasib Sir(Nihat,2023)", "https://drive.google.com/file/d/1HoTudvaUZ1VtEMv1lQtKkij0Mpcoq1OD/view?usp=sharing"),
             webBtnBlockGen("Jalal Sir(Nihat,2023)", "https://drive.google.com/file/d/1Ah9laqL6MJ9cO3cOS1f3lFTp6vRJusKN/view?usp=sharing"),
+            webBtnBlockGen("Lingkon(CTEC,2023)", "https://drive.google.com/file/d/1Bf-3cGfx-XSOhcYRFHjRalYFqjtEY659/view?usp=sharing"),
         ]
     ),
     grroupedButtonBlockGen(

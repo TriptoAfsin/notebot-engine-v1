@@ -17,6 +17,7 @@ let tpFlow = [
         [
             webBtnBlockGen("Akib's All Note", "https://drive.google.com/file/d/1N1wxgwmp-ltxPYkOB6UfPPjuOfsz9FTz/view"),
             webBtnBlockGen("Jalal Sir Part(Emon)", "https://drive.google.com/file/d/19oQyEktkXu1n4Cpxa8f_O-s2EQs-gTSG/view"),
+            webBtnBlockGen("Linkon(CTEC,2023)", "https://drive.google.com/file/d/1KxpK1JAzROhVrBsaMWG98xRxSlbSETon/view?usp=sharing"),
         ]
     ),
     grroupedButtonBlockGen(
