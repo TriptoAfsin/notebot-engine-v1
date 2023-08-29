@@ -8,7 +8,7 @@ let bondiFlow = cardGen(
     "মাত্র ৫ টাকায় Genuine TrueCaller Premium !",
     "https://hullor.io/truecaller/notebot",
     [
-        webBtnBlockGen("Buy Now 👑", "https://i.postimg.cc/HkwhXRXr/tc-chatbot.png")
+        webBtnBlockGen("Buy Now 👑", "https://hullor.io/truecaller/notebot")
     ]
 )
 
