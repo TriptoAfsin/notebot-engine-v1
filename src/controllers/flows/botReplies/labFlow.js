@@ -21,6 +21,17 @@ let lab = [
                         "title": "🟣 Level 3",
                         "payload": "level_3_lab"
                     },
+                ],
+            },
+        },
+    },
+    {
+        "attachment": {
+            "type": "template",
+            "payload": {
+                "template_type": "button",
+                "text": "🔰 Choose - ",
+                "buttons": [
                     {
                         "type": "postback",
                         "title": "🟣 Level 4",
