@@ -20,6 +20,11 @@ let fytFlow = [
             webBtnBlockGen("Lingkon(CTEC,2023)", "https://drive.google.com/file/d/1Bf-3cGfx-XSOhcYRFHjRalYFqjtEY659/view?usp=sharing"),
         ]
     ),
+    grroupedButtonBlockGen(`📌 Combined Note - `,
+        [
+            webBtnBlockGen("Alim(2023)","https://drive.google.com/file/d/1jdeR4Q8gcwp6r5X0F8tCVa1U-dPEYJ-W/view?usp=sharing"),
+        ]
+    ),
     grroupedButtonBlockGen(
         "🔰 Select Topics for FYT -",
         [

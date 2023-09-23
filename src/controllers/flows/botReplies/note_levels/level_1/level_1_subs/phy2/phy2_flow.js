@@ -22,6 +22,11 @@ let phy2_flow = [
             webBtnBlockGen("Nirob(Affl,2022)", "https://drive.google.com/file/d/1IMl_I9FoYIrjXFL-fvbBICERkyhBVch7/view?usp=sharing"),
         ]
     ),
+    grroupedButtonBlockGen("📌 Combined Note -",
+    [
+            webBtnBlockGen("Badhon(SKTEC,2023)", "https://drive.google.com/file/d/1ZsYnwu2NcWBa4JTUQ2vT8vKA-K9bgs5A/view?usp=sharing"),
+        ]
+    ),
     grroupedButtonBlockGen("📌 QB Solve - ",
         [
             webBtnBlockGen("By AE-45", "https://drive.google.com/file/d/1F1MVY00RL6MmjLhCgx7ODacgnJOQgI1A/view?usp=sharing"),

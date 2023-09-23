@@ -1381,6 +1381,7 @@ const labFlow = require("./flows/botReplies/labFlow");
 const labFlow_level1 = require("./flows/botReplies/lab_levels/level_1/level_1_lab_flow");
 const labFlow_level2 = require("./flows/botReplies/lab_levels/level_2/level_2_lab_flow");
 const labFlow_level3 = require("./flows/botReplies/lab_levels/level_3/level_3_lab_flow");
+const labFlow_level4 = require("./flows/botReplies/lab_levels/level_4/level_4_lab_flow");
 
 //lab->che1
 const labFlow_che1 = require("./flows/botReplies/lab_levels/level_1/level_1_lab_subs/che_1/che1LabFlow");
@@ -4946,6 +4947,9 @@ let handlePostback = async (sender_psid, received_postback) => {
     magicFunc(sender_psid, labFlow_level2);
   } else if (payload === "level_3_lab") {
     magicFunc(sender_psid, labFlow_level3);
+  }
+  else if (payload === "level_4_lab") {
+    magicFunc(sender_psid, labFlow_level4);
   }
 
   //lab -> che1

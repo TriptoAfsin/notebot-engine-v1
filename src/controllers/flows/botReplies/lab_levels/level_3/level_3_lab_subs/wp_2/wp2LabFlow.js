@@ -10,7 +10,8 @@ let wp2_lab_flow = [
         "📌 All Reports -",
         [
             webBtnBlockGen("All Combined(Bappi)", "https://drive.google.com/file/d/1996L45VwUk4jS1CwnozbVzU1PVD358ed/view"),
-            webBtnBlockGen("All Combined(Akib)", "https://drive.google.com/file/d/130wy9e5FxOUgqT1kQTt7Xhpxhj1-RpLR/view")
+            webBtnBlockGen("All Combined(Akib)", "https://drive.google.com/file/d/130wy9e5FxOUgqT1kQTt7Xhpxhj1-RpLR/view"),
+            webBtnBlockGen("All Combined(Shakil)", "https://drive.google.com/file/d/1hOP3webjVzkF2XTuxHiX1fUU2iLDZWOZ/view?usp=sharing")
         ]
     ),
     

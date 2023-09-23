@@ -9,6 +9,9 @@ let feee_lab_flow = [
         webBtnBlockGen("All(Shomir, 2022)", "https://drive.google.com/file/d/1pk-goLQ5kYGxhEFehYHla5Aez2Hvskmn/view?usp=sharing"),
         webBtnBlockGen("All(Nihat, 2023)", "https://drive.google.com/file/d/1ghyG5w3r2zTSAm4_QChAqlkybixmhElr/view?usp=sharing")
     ]),
+    grroupedButtonBlockGen("📌 Select Experiment for FEEE -", [
+        webBtnBlockGen("All(Jabbar, 2023)", "https://drive.google.com/file/d/1pDiQa_CU3u7S0OpZpdZo-OyI0tJLrPLD/view?usp=sharing"),
+    ]),
     grroupedButtonBlockGen("🔰 Select Experiment for FEEE -", [
         payloadBtnGen("Multimetre", "feee_lab_multiMetre_flow"),
         payloadBtnGen("Ohm's law Ve.", "feee_lab_ohmslaw_flow"),

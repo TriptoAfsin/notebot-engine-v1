@@ -8,6 +8,12 @@ let chem2_flow = [
   bondiFlow,
   grroupedButtonBlockGen("📌 Hand Notes -", [
     webBtnBlockGen(
+      "Reactions (Shakib,DCE-48,2023)",
+      "https://drive.google.com/file/d/1cAOZTo9tytK7RHo9Vh_qFRLBLYYeNxn_/view?usp=sharing"
+    ),
+  ]),
+  grroupedButtonBlockGen("📌 Hand Notes -", [
+    webBtnBlockGen(
       "Hand Note(Maruf)",
       "https://drive.google.com/file/d/12LLcW92t1BTLFENL9DQH9xkJOvn0VIVe/view?usp=sharing"
     ),

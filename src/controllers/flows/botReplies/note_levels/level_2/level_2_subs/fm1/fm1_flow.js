@@ -30,9 +30,10 @@ let fm1Flow = [
         ]
     ),
     grroupedButtonBlockGen(
-        `📌 Full Hand Notes(2022)- `,
+        `📌 Full Hand Notes- `,
         [
             webBtnBlockGen("Part-A(Urmi)","https://drive.google.com/file/d/1_eaOh72rQ1whd7LQDsr-7Fc795Vp29xA/view?usp=sharing"),
+            webBtnBlockGen("Alim(2023)","https://drive.google.com/file/d/1FK2yoajhr_c5y70PAbo9vQCyftuaAvL8/view?usp=sharing"),
         ]
     ),
     grroupedButtonBlockGen(

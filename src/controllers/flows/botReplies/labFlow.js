@@ -20,6 +20,11 @@ let lab = [
                         "type": "postback",
                         "title": "🟣 Level 3",
                         "payload": "level_3_lab"
+                    },
+                    {
+                        "type": "postback",
+                        "title": "🟣 Level 4",
+                        "payload": "level_4_lab"
                     }
                 ],
             },

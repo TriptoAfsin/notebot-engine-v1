@@ -11,6 +11,12 @@ let ap2_lab_flow = [
             webBtnBlockGen("Nadeem - 2022", "https://drive.google.com/file/d/1DPt9c0tVcXOJSxpgx9gROhkzxvUNfvEe/view"),
         ]
     ),
+    grroupedButtonBlockGen(
+        "🔰 Select report for AP-II - ",
+        [
+            webBtnBlockGen("Stitch Formation(2023)", "https://drive.google.com/file/d/1bQivgT_8yyHaRtnMG-hjZqPYYPdrYx89/view?usp=sharing"),
+        ]
+    ),
 ]
 
 

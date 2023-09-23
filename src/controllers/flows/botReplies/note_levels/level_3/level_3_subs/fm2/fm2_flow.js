@@ -5,6 +5,12 @@ let payloadBtnGen = require('simple-messenger-blocks/payloadBtnGen');
 
 let fm2Flow = [
     grroupedButtonBlockGen(
+        "⭐ Video Lessons - ",
+        [
+            webBtnBlockGen("Youtube Playlist", "https://www.youtube.com/playlist?list=PLpFoI_N-jBPEq8pI7aSDL5Ql0Q1WdSj9q"),
+        ]
+    ),
+    grroupedButtonBlockGen(
         "📌 Select Topics for FM-II -",
         [
             webBtnBlockGen("CT(June,2022)", "https://drive.google.com/file/d/1ljvCzAUku4g9D5eaOgzLSbqn32ej7u_N/view?usp=sharing"),
@@ -37,6 +43,7 @@ let fm2Flow = [
         "🔰 Select Topics for FM-II -",
         [
             webBtnBlockGen("Intro", "https://drive.google.com/drive/folders/17qy7I5T9gCrnJqnnSPRxVAC9EQ885qR7?usp=sharing"),
+            webBtnBlockGen("Basic Elements", "https://drive.google.com/file/d/1xhP6UI1CAEGXWmfedr9GO6TISMoJCjOi/view?usp=sharing"),
         ]
     ),
     grroupedButtonBlockGen(
