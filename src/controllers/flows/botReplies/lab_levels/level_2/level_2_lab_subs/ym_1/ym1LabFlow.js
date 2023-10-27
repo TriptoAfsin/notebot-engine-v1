@@ -24,6 +24,11 @@ let ym1_lab_flow = [
             webBtnBlockGen("Download", "https://drive.google.com/file/d/1roX4eDoc75v2Mfk-8jHm8t9YuXRDb5Rk/view"),
         ]
     ),
+    grroupedButtonBlockGen("⚡ Lab Viva Note(Sazzad, 2023) - ",
+        [
+            webBtnBlockGen("Download", "https://drive.google.com/file/d/1jxCxZI8N3t0BfdmDOOH9HCkoxDDU1WwE/view?usp=sharing"),
+        ]
+    ),
     grroupedButtonBlockGen("🔰 Select Experiment for YM-I -  ",
         [
             payloadBtnGen("1. Layout", "ym1_lab_layout_flow"),
