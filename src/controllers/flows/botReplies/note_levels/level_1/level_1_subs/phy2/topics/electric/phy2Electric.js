@@ -16,6 +16,7 @@ let phy2_electric_flow = [
         "🟩 Select -",
         [
             webBtnBlockGen("MCQ(Sabiha)", "https://drive.google.com/file/d/19J5OyRksMin03T5GjZro_eSzBSXxJzqG/view?usp=sharing"),
+            webBtnBlockGen("Hand Note(2023)", "https://drive.google.com/file/d/1wAXc-PeLbcrvjWZtrd_Fzcg5JKpThCMP/view?usp=sharing"),
             webBtnBlockGen("Hand Note(2021)", "https://drive.google.com/file/d/1n2LsMY9NfyuXp4qn4fYFVi7VCfVgTnMM/view?usp=sharing"),
         ]
     ),

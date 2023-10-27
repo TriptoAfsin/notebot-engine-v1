@@ -14,7 +14,13 @@ let wp2_lab_flow = [
             webBtnBlockGen("All Combined(Shakil)", "https://drive.google.com/file/d/1hOP3webjVzkF2XTuxHiX1fUU2iLDZWOZ/view?usp=sharing")
         ]
     ),
-    
+    grroupedButtonBlockGen(
+        "📌 All Reports -",
+        [
+            webBtnBlockGen("All Report(Sakib,2023)", "https://drive.google.com/file/d/1HxyY2WSxJJRiWo4xvKBugIginh8U6MWT/view?usp=sharing"),
+            webBtnBlockGen("All Report(Tarek,2023)", "https://drive.google.com/file/d/1GRtnjniYOsGVaDZ70RvduPijrg9z5b_a/view?usp=sharing"),
+        ]
+    ),
     grroupedButtonBlockGen(
         "🔰 Select Experiment for WP-II -",
         [
