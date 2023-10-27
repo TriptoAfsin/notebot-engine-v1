@@ -5,6 +5,12 @@ let payloadBtnGen = require("simple-messenger-blocks/payloadBtnGen");
 
 let am2Flow = [
     grroupedButtonBlockGen(
+        "📌 Topic Wise Hand Notes(2023) - ",
+        [
+            webBtnBlockGen("Hand Notes", "https://drive.google.com/drive/folders/1jKhXW3Z-SPywk8gMIRRxHLnQc_9GVUbc?usp=sharing"),
+        ]
+    ),
+    grroupedButtonBlockGen(
         "📌 Full Hand Notes(2022) - ",
         [
             webBtnBlockGen("A+B(Adee)", "https://drive.google.com/file/d/1V5FVYklWE1S2ka-nO-Jl-_-p1lFNCwt4/view?usp=sharing"),
