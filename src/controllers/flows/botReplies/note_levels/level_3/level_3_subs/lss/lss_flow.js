@@ -5,6 +5,12 @@ let payloadBtnGen = require('simple-messenger-blocks/payloadBtnGen');
 
 let lssFlow = [
     grroupedButtonBlockGen(
+        "📌 Spin Plan -",
+        [
+            webBtnBlockGen("QB(2021)", "https://drive.google.com/file/d/1opscebvkUU_yQnwj342RWiR0TiH7gHcx/view?usp=sharing"),
+        ]
+    ),
+    grroupedButtonBlockGen(
         "📌 Full Hand Notes -",
         [
             webBtnBlockGen("Adee(2022)", "https://drive.google.com/file/d/1478dh9aFpS1Pv3M2N9qvncrJg89Yuvwd/view?usp=sharing"),

@@ -28,6 +28,9 @@ let level_2_lab = [
     payloadBtnGen("WPE 202: WPP", "wpe_wpp_lab_flow"),
     webBtnBlockGen("FYT", "https://drive.google.com/drive/folders/1UKeBH7hsqxUe6ah3mKXdYoFsONncqMfC?usp=sharing"),
   ]),
+  grroupedButtonBlockGen("🔰 Select Subject Your Lab Report - ", [
+    webBtnBlockGen("WPP", "https://drive.google.com/drive/folders/1UKeBH7hsqxUe6ah3mKXdYoFsONncqMfC?usp=sharing"),
+  ]),
 ];
 
 module.exports = level_2_lab;

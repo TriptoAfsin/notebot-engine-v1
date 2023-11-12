@@ -12,6 +12,9 @@ let feee_lab_flow = [
     grroupedButtonBlockGen("📌 Select Experiment for FEEE -", [
         webBtnBlockGen("All(Jabbar, 2023)", "https://drive.google.com/file/d/1pDiQa_CU3u7S0OpZpdZo-OyI0tJLrPLD/view?usp=sharing"),
     ]),
+    grroupedButtonBlockGen("📌 Lab Notes -", [
+        webBtnBlockGen("Sazzad(2023)", "https://drive.google.com/file/d/1e2zAbEUZk5j7nnpxnPrxKGbxB6RRpBVs/view?usp=sharing"),
+    ]),
     grroupedButtonBlockGen("🔰 Select Experiment for FEEE -", [
         payloadBtnGen("Multimetre", "feee_lab_multiMetre_flow"),
         payloadBtnGen("Ohm's law Ve.", "feee_lab_ohmslaw_flow"),
