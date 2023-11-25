@@ -932,6 +932,9 @@ const marketing_advert = require("./flows/botReplies/note_levels/level_2/level_2
 const marketing_compStrat = require("./flows/botReplies/note_levels/level_2/level_2_subs/marketing/topics/marketCompetetive");
 const marketing_priceStrat = require("./flows/botReplies/note_levels/level_2/level_2_subs/marketing/topics/marketPriceStart");
 
+//academic flows -> idcc
+const idcc_flow = require("./flows/botReplies/note_levels/level_2/level_2_subs/idcc/idcc_flow");
+
 //fyt
 const fyt_flow = require("./flows/botReplies/note_levels/level_2/level_2_subs/fyt/fyt_flow");
 const fyt_books = require("./flows/botReplies/note_levels/level_2/level_2_subs/fyt/topics/fytBooks");
@@ -1174,6 +1177,9 @@ const acm_CostBehav = require("./flows/botReplies/note_levels/level_3/level_3_su
 const acm_accMerchendizing = require("./flows/botReplies/note_levels/level_3/level_3_subs/acm/topics/acmAccForMerchendizing");
 const acm_costAccountingSys = require("./flows/botReplies/note_levels/level_3/level_3_subs/acm/topics/acmCostAccountingSys");
 const acm_costingTech = require("./flows/botReplies/note_levels/level_3/level_3_subs/acm/topics/acmCostingTechn");
+
+//academic flows -> tc1
+const tc1_flow = require("./flows/botReplies/note_levels/level_3/level_3_subs/tc1/tc1_flow");
 
 //om
 const om_flow = require("./flows/botReplies/note_levels/level_3/level_3_subs/om/om_flow");
@@ -1637,6 +1643,8 @@ const labFlow_fm2_5 = require("./flows/botReplies/lab_levels/level_3/level_3_lab
 const help_flow = require("./flows/helpFlow");
 const ttm_words = require("./keywords/academic_words/subjects/ttmWords");
 const mpp_words = require("./keywords/academic_words/subjects/mppWords");
+const tc1_words = require("./keywords/academic_words/subjects/tc1Words");
+const idcc_words = require("./keywords/academic_words/subjects/idccWords");
 
 const MY_VERIFY_TOKEN = process.env.MY_VERIFY_TOKEN;
 const PAGE_ACCESS_TOKEN = process.env.PAGE_ACCESS_TOKEN;
@@ -2495,6 +2503,16 @@ let  handleMessage = async (sender_psid, received_message) =>  {
     }
 
     magicFunc(sender_psid, tqm_flow);
+  }
+
+  //academic -> idcc
+  else if (wordIncludes(idcc_words, received_message)) {
+    magicFunc(sender_psid, idcc_flow);
+  }
+
+  //academic -> tc1
+  else if (wordIncludes(tc1_words, received_message)) {
+    magicFunc(sender_psid, tc1_flow);
   }
 
   //academic -> ttm
