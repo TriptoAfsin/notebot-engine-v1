@@ -29,6 +29,7 @@ let ym1Flow = [
     grroupedButtonBlockGen(
         `📌 Full Hand Notes -   `,
         [
+            webBtnBlockGen("Arindom(AE-46,2023)", "https://drive.google.com/file/d/1Licfq20XlebNEsd-MKNoySU44fwzn0Lt/view?usp=sharing"),
             webBtnBlockGen("Nirob(BHETI,2023)", "https://drive.google.com/file/d/1odGZ-NPeH_GWYPVbS0-EdLmJfY2ZQXrt/view?usp=sharing"),
             webBtnBlockGen("Linkon(CTEC,2023)", "https://drive.google.com/file/d/1le7Y0Di_V7CKujbrFH4t3ciH-kZSGj90/view?usp=sharing"),
         ]

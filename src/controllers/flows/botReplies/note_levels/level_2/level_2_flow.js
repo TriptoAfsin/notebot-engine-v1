@@ -71,6 +71,7 @@ let level_2_note = [
     [
         webBtnBlockGen("Weaving-1", "https://drive.google.com/drive/folders/1SFjq8TMmb9X4O2d74-Z8z8TbknwEslkG?usp=sharing"),
         webBtnBlockGen("OM(TEM)", "https://drive.google.com/drive/folders/10RWll1pyS1cZFGV32vkaSjA2MdRM2T10?usp=sharing"),
+        webBtnBlockGen("IDCC(TEM)", "https://drive.google.com/drive/folders/1QEdJyJyPuYJ6Co9dWI5Zya0xxaioF8lW?usp=sharing"),
     ]
 ),
 ]
