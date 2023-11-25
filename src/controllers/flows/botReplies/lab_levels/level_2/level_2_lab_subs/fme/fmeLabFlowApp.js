@@ -5,6 +5,12 @@ let payloadBtnGen = require('simple-messenger-blocks/payloadBtnGen');
 
 let fme_lab_flow = [
     grroupedButtonBlockGen(
+        "📌 Lab Manual(2023) - ",
+        [
+            webBtnBlockGen("Download", "https://drive.google.com/file/d/14hx4HCuRby_LINwMk3VB2kiwniy2ImPs/view?usp=sharing")
+        ]
+    ),
+    grroupedButtonBlockGen(
         "📌 Lab Note(2022)",
         [
             webBtnBlockGen("Sazzad(2022)", "https://drive.google.com/file/d/1sRovtBb0HtblVsmVadr02eh8K1w_sigi/view?usp=sharing")
