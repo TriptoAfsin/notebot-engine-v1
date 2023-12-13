@@ -4,6 +4,7 @@ let textBlockGen = require('simple-messenger-blocks/textBlockGen');
 let chem1AcidBase = [
     textBlockGen(`🔷 Hand Note(Oindrela,WPE-45, 2019)-\n\nhttps://drive.google.com/file/d/1BJOqLGKPyVV8TgYY0gbqHP32a1XNDyNp/view?usp=sharing`),
     textBlockGen(`🔷 QB Solve(Sazzad, FE-46,2022)- \n\nhttps://drive.google.com/file/d/17R7ludcEZKrHnKfT9UJy7fY9W7dcYn3J/view?usp=sharing`),
+    textBlockGen(`🔷 Hand Note(Raiyan, FE-48,2023) - \n\nhttps://drive.google.com/file/d/1lQUkbdLkTQG61jIR1CiA_NSCRuHhl-Yl/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note(Hafiza, AE-48 ,2023)-\n\nhttps://drive.google.com/file/d/1_YGAuTHsQCTon6fb3pYNIzjb2G1tj2QV/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note(Azim, TEM-46,2020)- \n\nhttps://drive.google.com/file/d/18i2l3TRwk7wQMf30NLoch6GkHVZZChgp/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note(Sagar, WPE-46,2021)- \n\nhttps://drive.google.com/file/d/186ePXA7avjm9atcfABOsbePBS3q6_tbC/view?usp=sharing`),

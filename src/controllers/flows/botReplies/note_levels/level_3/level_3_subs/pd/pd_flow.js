@@ -10,6 +10,7 @@ let pdFlow = [
         "📌 Full Hand Notes  -",
         [
             webBtnBlockGen("Arefin(2023)", "https://drive.google.com/file/d/1AcSIKkKyiJfOSdCBhNZ2hzhyBSj9UHdO/view?usp=sharing"),
+            webBtnBlockGen("Fuad(2023)", "https://drive.google.com/file/d/1mbjyyHhlf9K4MO_QwPNU8MROnDsIMPqy/view?usp=sharing"),
         ]
     ),
     grroupedButtonBlockGen(

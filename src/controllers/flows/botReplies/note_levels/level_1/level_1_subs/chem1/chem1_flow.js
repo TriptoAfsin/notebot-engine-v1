@@ -52,6 +52,12 @@ let chem1_flow = [
             payloadBtnGen("Acid & Base", "chem1_acid_base_flow")
         ]
     ),
+    grroupedButtonBlockGen(
+        "🔰 Select Topics for CHE-I -",
+        [
+            webBtnBlockGen("Colligative Properties", "https://drive.google.com/drive/folders/1it7e1zEFk5wF-TVE7coP7ACXd2U37oXB?usp=sharing"),
+        ]
+    ),
 ]
 
 

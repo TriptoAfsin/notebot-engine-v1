@@ -26,6 +26,13 @@ let fm2Flow = [
         ]
     ),
     grroupedButtonBlockGen(
+        "📌 Full Hand Notes - ",
+        [
+            webBtnBlockGen("Part-A(2023)", "https://drive.google.com/file/d/1Q0x5t4ZiaHG_Xnk-bWrOIe7Icucdm7M9/view?usp=sharing"),
+            webBtnBlockGen("Part-B(2023)", "https://drive.google.com/file/d/1o5X037zHh4vWEu36iHexVRg4GPVEPONK/view?usp=sharing"),
+        ]
+    ),
+    grroupedButtonBlockGen(
         "📌 Question Analysis(2023) - ",
         [
             webBtnBlockGen("Arjan+Riaz", "https://drive.google.com/file/d/1vVG-cgpxfoFwRKAxpaqZ-hipFL8HTtkr/view?usp=sharing"),

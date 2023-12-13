@@ -19,6 +19,7 @@ let bce_flow = [
     grroupedButtonBlockGen(
         "📌 Full Hand Notes -",
         [
+            webBtnBlockGen("Sayim(2023)", "https://drive.google.com/file/d/1bUkAy1_faKnLzJw92mbtRp2QXRe_dEVp/view?usp=sharing"),
             webBtnBlockGen("Definitions(2022)", "https://drive.google.com/file/d/141ZMgBy78AMmZtGAagjuqJubiyzFi7pJ/view?usp=sharing"),
             webBtnBlockGen("QB Solve(Mamun,SKTEC)", "https://drive.google.com/file/d/1JW_Mk-5SePV6oDEAaAUWoRNVmyfFloUR/view?usp=sharing"),
         ]

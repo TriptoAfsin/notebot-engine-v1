@@ -27,6 +27,14 @@ let am1Flow = [
         ]
     ),
     grroupedButtonBlockGen(
+        "📌 Full Hand Notes - ",
+        [
+            webBtnBlockGen("Sazzad(2023)", "https://drive.google.com/file/d/1cf71s3dAgR1LTMTAUCZy5pM4Ep5ChgWk/view?usp=sharing"),
+            webBtnBlockGen("Maruf(2021)", "https://drive.google.com/file/d/1PtuUUaa1EbmazOEpa6GyjEuBEpr2d2zl/view?usp=sharing"),
+            webBtnBlockGen("Adee(2021)", "https://drive.google.com/file/d/1d31uMCWKBwqayCsMcLcDDKfRoX47fbH2/view?usp=sharing"),
+        ]
+    ),
+    grroupedButtonBlockGen(
         "📌 Full Hand Note & Slide (2020) -",
         [
             webBtnBlockGen("Part A (Rifat)", "https://drive.google.com/file/d/1MSe7Mc7MlqLCIziwBa3iTJQb6nkYRgM-/view"),
@@ -35,12 +43,13 @@ let am1Flow = [
         ]
     ),
     grroupedButtonBlockGen(
-        "📌 Full Hand Notes - ",
+        "📌 Full Hand Note & Slide (2020) -",
         [
-            webBtnBlockGen("Maruf(2021)", "https://drive.google.com/file/d/1PtuUUaa1EbmazOEpa6GyjEuBEpr2d2zl/view?usp=sharing"),
-            webBtnBlockGen("Adee(2021)", "https://drive.google.com/file/d/1d31uMCWKBwqayCsMcLcDDKfRoX47fbH2/view?usp=sharing"),
+            webBtnBlockGen("Part A(Ohee)", "https://drive.google.com/file/d/1ct3Zs9L8alsLMl6JTjLq3aKSLkRRGiIO/view?usp=sharing"),
+          
         ]
     ),
+    
     grroupedButtonBlockGen(
         "🔰 Select Topics for AM-I -",
         [
