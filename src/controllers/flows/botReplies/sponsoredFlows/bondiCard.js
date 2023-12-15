@@ -5,7 +5,7 @@ let cardGen = require("../../../genrators/cardGenerator");
 let bondiFlow = cardGen(
     "https://i.postimg.cc/Jn0Yz2x1/free-palestine.png",
     "Solidarity with Palestine ✊",
-    "We stand with solidarity with our brothers and sister of Palestine",
+    "We stand in solidarity with our brothers and sister of Palestine",
     "https://www.facebook.com/palestinembassydhaka/",
     [
         webBtnBlockGen("Support", "https://www.facebook.com/palestinembassydhaka/")
