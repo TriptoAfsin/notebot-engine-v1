@@ -3,14 +3,24 @@ let cardGen = require("../../../genrators/cardGenerator");
 
 
 let bondiFlow = cardGen(
-    "https://i.postimg.cc/HkwhXRXr/tc-chatbot.png",
-    "TrueCaller Premium!(Genuine)",
-    "মাত্র ৫ টাকায় Genuine TrueCaller Premium !",
-    "https://hullor.io/truecaller/notebot",
+    "https://i.postimg.cc/Jn0Yz2x1/free-palestine.png",
+    "Solidarity with Palestine ✊",
+    "We stand with solidarity with our brothers and sister of Palestine",
+    "https://www.facebook.com/palestinembassydhaka/",
     [
-        webBtnBlockGen("Buy Now 👑", "https://hullor.io/truecaller/notebot")
+        webBtnBlockGen("Support", "https://www.facebook.com/palestinembassydhaka/")
     ]
 )
+
+// let bondiFlow = cardGen(
+//     "https://i.postimg.cc/HkwhXRXr/tc-chatbot.png",
+//     "TrueCaller Premium!(Genuine)",
+//     "মাত্র ৫ টাকায় Genuine TrueCaller Premium !",
+//     "https://hullor.io/truecaller/notebot",
+//     [
+//         webBtnBlockGen("Buy Now 👑", "https://hullor.io/truecaller/notebot")
+//     ]
+// )
 
 // let bondiFlow = cardGen(
 //     "https://i.imgur.com/fQZqOwW.png",
