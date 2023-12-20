@@ -103,6 +103,14 @@ let level2Subs = [
         subName: "Weaving-I",
         url: "https://drive.google.com/drive/folders/1SFjq8TMmb9X4O2d74-Z8z8TbknwEslkG?usp=sharing"
     },
+    {
+        subName: "OM(TEM)",
+        url: "https://drive.google.com/drive/folders/10RWll1pyS1cZFGV32vkaSjA2MdRM2T10?usp=sharing"
+    },
+    {
+        subName: "IDCC(ESE)",
+        url: "https://drive.google.com/drive/folders/1QEdJyJyPuYJ6Co9dWI5Zya0xxaioF8lW?usp=sharing"
+    },
 ]
   
 
