@@ -1709,12 +1709,18 @@ let postWebhook = async (req, res) => {
       }
       // Gets the message. entry.messaging is an array, but
       // will only ever contain one message, so we get index 0
-      let webhook_event = entry.messaging[0];
-      console.log(webhook_event);
+      let webhook_event = entry?.messaging[0];
+      let sender_psid = webhook_event?.sender?.id;
+      let recipient_psid = webhook_event?.recipient?.id;
+      let timestamp = webhook_event?.timestamp;
+      let read_at = webhook_event?.read?.watermark;
+      console.log(`-------------------------------------------`)
+      console.log(`🔵 Messenger Platform:\n\n🧑 Sender PSID: ${sender_psid}\n🧑‍🦰 Recipient PSID: ${recipient_psid}\n🕝 Timestamp: ${timestamp}\n✅ Read: ${read_at}`);
+      console.log(`-------------------------------------------`)
+    
 
-      // Get the sender PSID
-      let sender_psid = webhook_event.sender.id;
-      console.log("🧑 Sender PSID: " + sender_psid);
+     
+      // console.log("🧑 Sender PSID: " + sender_psid);
 
       //getting userInfo
       //getUserInfo(sender_psid)
