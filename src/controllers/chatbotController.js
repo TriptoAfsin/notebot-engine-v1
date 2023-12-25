@@ -1715,7 +1715,7 @@ let postWebhook = async (req, res) => {
       let timestamp = webhook_event?.timestamp;
       let read_at = webhook_event?.read?.watermark;
       console.log(`-------------------------------------------`)
-      console.log(`🔵 Messenger Platform:\n\n🧑 Sender PSID: ${sender_psid}\n🧑‍🦰 Recipient PSID: ${recipient_psid}\n🕝 Timestamp: ${timestamp}\n✅ Read: ${read_at}`);
+      console.log(`🔵 Messenger Platform:\n🧑 Sender PSID: ${sender_psid}\n🧑‍🦰 Recipient PSID: ${recipient_psid}\n🕝 Timestamp: ${timestamp}`);
       console.log(`-------------------------------------------`)
     
 
