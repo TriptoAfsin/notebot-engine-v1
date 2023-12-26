@@ -23,6 +23,12 @@ let tpFlow = [
     grroupedButtonBlockGen(
         "📌 Full Hand Notes -",
         [
+            webBtnBlockGen("Sazzad(FE-46)", "https://drive.google.com/file/d/1O81J3bDe1ipWprSSyQKbtz7HjXcPvRjU/view?usp=sharing"),
+        ]
+    ),
+    grroupedButtonBlockGen(
+        "📌 Full Hand Notes -",
+        [
             webBtnBlockGen("☄️Download", "https://drive.google.com/file/d/15vQaaVfyd5gOQX_yg4-L18wVWLWkujwc/view"),
         ]
     ),
@@ -68,7 +74,8 @@ let tpFlow = [
         "🔰 Select Topics for TP -",
         [
             payloadBtnGen("Fabric Geometry", "tp_fabgemometry_flow"),
-            payloadBtnGen("Tensile Properties", "tp_tensile_flow")
+            payloadBtnGen("Tensile Properties", "tp_tensile_flow"),
+            webBtnBlockGen("Static Elec", "https://drive.google.com/file/d/145M8jxn2Ts3NhpEDbDZ5pM_u8U8d0ufD/view?usp=sharing"),
         ]
     )
 ]

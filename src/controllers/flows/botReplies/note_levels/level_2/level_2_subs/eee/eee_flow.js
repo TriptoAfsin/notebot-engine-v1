@@ -59,7 +59,7 @@ let eeeFlow = [
         "🔰 Select Topics for FEEE -",
         [
             payloadBtnGen("Ch 4:3 & 1 Phase Sys", "eee_ch4_flow"),
-            payloadBtnGen("Ch 5: Electronics", "eee_ch5_flow"),
+            payloadBtnGen("Electronics & E-Tex.", "eee_ch5_flow"),
             payloadBtnGen("Ch 8: Power System", "eee_ch8_flow"),
         ]
     ),
@@ -74,6 +74,7 @@ let eeeFlow = [
         "🔰 Select Topics for FEEE -",
         [
             webBtnBlockGen("Sensor(2021)", "https://drive.google.com/file/d/1ZPdioYHOByOck6kcAVRUdgfngUxNxody/view?usp=sharing"),
+            webBtnBlockGen("Electrical M/C", "https://drive.google.com/file/d/1i_P4lHpyQQnA4Yo7_ylz3cXMrISPmd5U/view?usp=sharing"),
         ]
     ),
     grroupedButtonBlockGen(

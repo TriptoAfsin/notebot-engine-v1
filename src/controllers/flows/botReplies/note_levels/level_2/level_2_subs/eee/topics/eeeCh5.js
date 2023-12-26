@@ -4,6 +4,9 @@ let eeeCh5 = [
     },
     {
         "text": `🔷 Hand Note(Akib, 2019)-\n\nhttps://drive.google.com/file/d/1MR46DTzBfU1Il5kUzc21AccoOAKyWWD7/view`
+    },
+    {
+        "text": `🔷 Hand Note(Nabanita, AE-47,2023)-\n\nhttps://drive.google.com/file/d/1VH4Hq3afqWJAVLyKTtvsH-D4Pf5xs-pi/view?usp=sharing`
     }
 ]
 
