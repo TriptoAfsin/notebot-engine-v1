@@ -52,6 +52,9 @@ let level_3_note = [
     payloadBtnGen("MPP", "mpp_flow"),
   ]),
   grroupedButtonBlockGen(`🔰 Select Subject for level 3 -`, [
+    payloadBtnGen("HRM", "hrm_flow"),
+  ]),
+  grroupedButtonBlockGen(`🔰 Select Subject for level 3 -`, [
     webBtnBlockGen(
       "TC-I",
       "https://drive.google.com/drive/folders/1Tg0ruIBuznlNWYGNYZVxGHnwu8UUNa2r?usp=sharing"

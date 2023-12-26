@@ -36,6 +36,10 @@ let level3Subs = [
         route: "app/notes/3/mic"
     },
     {
+        subName: "HRM",
+        route: "app/notes/4/hrm"
+    },
+    {
         subName: "Knitting-I",
         route: "app/notes/3/knit1"
     },
