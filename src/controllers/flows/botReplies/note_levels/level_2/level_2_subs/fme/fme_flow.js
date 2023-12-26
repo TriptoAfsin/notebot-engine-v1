@@ -4,7 +4,7 @@ let payloadBtnGen = require('simple-messenger-blocks/payloadBtnGen');
 
 
 let fmeFlow = [
-grroupedButtonBlockGen(`📌New(2023)`,
+grroupedButtonBlockGen(`📌 New(2023) - `,
         [
             webBtnBlockGen("Suggestions", "https://drive.google.com/file/d/1DSK8J-O-4UcQgZeSy973PBmcpzC1_F30/view?usp=sharing"),
         ]

@@ -11,6 +11,7 @@ let feee_lab_flow = [
     ]),
     grroupedButtonBlockGen("📌 Select Experiment for FEEE -", [
         webBtnBlockGen("All(Jabbar, 2023)", "https://drive.google.com/file/d/1pDiQa_CU3u7S0OpZpdZo-OyI0tJLrPLD/view?usp=sharing"),
+        webBtnBlockGen("All(Samet, 2023)", "https://drive.google.com/file/d/1ZlAfl-P8lI2SZndLoV2VSWFs-09XbxUJ/view?usp=sharing"),
     ]),
     grroupedButtonBlockGen("📌 Lab Notes -", [
         webBtnBlockGen("Sazzad(2023)", "https://drive.google.com/file/d/1e2zAbEUZk5j7nnpxnPrxKGbxB6RRpBVs/view?usp=sharing"),

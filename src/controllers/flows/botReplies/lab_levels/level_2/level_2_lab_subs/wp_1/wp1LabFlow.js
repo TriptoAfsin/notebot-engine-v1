@@ -17,6 +17,7 @@ let wp1_lab_flow = [
         "⚡ All Combined -",
         [
             webBtnBlockGen("Samia", "https://drive.google.com/file/d/1ki_Z6BLw3kgaaiULCqaj5EjiiCoWWM40/view?usp=sharing"),
+            webBtnBlockGen("Samet", "https://drive.google.com/file/d/1-c5v1-iBi9B_9PdV3kMPmVNHR_cupUGf/view?usp=sharing"),
         ]
     ),
     grroupedButtonBlockGen(
