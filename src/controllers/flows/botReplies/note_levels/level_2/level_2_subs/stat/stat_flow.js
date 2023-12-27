@@ -26,6 +26,13 @@ let statFlow = [
             webBtnBlockGen("Rifat(B, 2020)", "https://drive.google.com/file/d/1HsUaV_Y4AGjOXAMe4bjHO5y7Ooun9Da-/view")
         ]
     ),
+    grroupedButtonBlockGen(
+        `📌 Full Hand Notes -   `,
+        [
+            webBtnBlockGen("Part A(Samet)","https://drive.google.com/file/d/1G-pwOzmWap0J1lCNF-6BGX7I-Z03NWaC/view?usp=sharing"),
+            webBtnBlockGen("Part B(Samet)","https://drive.google.com/file/d/1b1Ae_m7waUz4zHmT7W-gppp07QR89gA-/view?usp=sharing"),
+        ]
+    ),
     grroupedButtonBlockGen(`📌 Full Hand Notes(Akib, 2021) -`,
         [
             webBtnBlockGen("Part A", "https://drive.google.com/file/d/10wu1HmCZYwC4JAWQtWkBN-ZTnlCczydF/view"),

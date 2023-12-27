@@ -16,6 +16,13 @@ grroupedButtonBlockGen(`📌 New(2023) - `,
             webBtnBlockGen("Fuad(2023)", "https://drive.google.com/file/d/1ZmeJ5cI39lX0jaVHeeqPd0xH9Vv9ugDI/view?usp=sharing"),
         ]
     ),
+    grroupedButtonBlockGen(
+        `📌 Full Hand Notes -   `,
+        [
+            webBtnBlockGen("Part A(Samet)","https://drive.google.com/file/d/1L4a2gMgmfMzSugqQGia3HWeT9JSnHTjr/view?usp=sharing"),
+            webBtnBlockGen("Part B(Samet)","https://drive.google.com/file/d/1CCon0eyrOQ7jqPdjOo4Lm--gAG-lqxh2/view?usp=sharing"),
+        ]
+    ),
     grroupedButtonBlockGen(`Sheets - `,
         [
             webBtnBlockGen("Fahim Sir", "https://drive.google.com/drive/folders/183z1Z-rE8t6I5PhhtHnH6zcqgiONPFmp?usp=sharing"),

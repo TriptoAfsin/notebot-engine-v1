@@ -35,6 +35,13 @@ let ym1Flow = [
         ]
     ),
     grroupedButtonBlockGen(
+        `📌 Full Hand Notes -   `,
+        [
+            webBtnBlockGen("Part A(Samet)","https://drive.google.com/file/d/1robnVSY9SE1Bo21ZzvW5MzgmfiFUU03y/view?usp=sharing"),
+            webBtnBlockGen("Part B(Samet)","https://drive.google.com/file/d/1pTgK7YzubpvG9QEbi64aYLeIiUkFJ_IT/view?usp=sharing"),
+        ]
+    ),
+    grroupedButtonBlockGen(
         `🔰 Select Topics for YM-I - `,
         [
             payloadBtnGen("Intro to YM","ym1_intro_flow"),

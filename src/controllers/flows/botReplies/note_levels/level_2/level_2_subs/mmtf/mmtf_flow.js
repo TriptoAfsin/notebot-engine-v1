@@ -21,6 +21,12 @@ let mmtfFlow = [
             webBtnBlockGen("Alim(2023)","https://drive.google.com/file/d/1Dqnqgckvdgs3dvEKJDrC4z5KdtdhWAik/view?usp=sharing"),
         ]
     ),
+    grroupedButtonBlockGen(
+        `📌 Full Hand Notes -   `,
+        [
+            webBtnBlockGen("Part A(Samet)","https://drive.google.com/file/d/1fsUiNahjR_-S4iZc9H5MtUjKmR-hE9SG/view?usp=sharing"),
+        ]
+    ),
     grroupedButtonBlockGen(`Sheets - `,
         [
             webBtnBlockGen("Arafat Sir", "https://drive.google.com/drive/folders/16z7I0LSz8w7yb5Sr2wdd68wm2wKw_XP_?usp=sharing"),

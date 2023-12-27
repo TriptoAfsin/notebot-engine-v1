@@ -23,6 +23,7 @@ let fytFlow = [
     grroupedButtonBlockGen(`📌 Combined Note - `,
         [
             webBtnBlockGen("Alim(2023)","https://drive.google.com/file/d/1jdeR4Q8gcwp6r5X0F8tCVa1U-dPEYJ-W/view?usp=sharing"),
+            webBtnBlockGen("Part-A(Samet)","https://drive.google.com/file/d/1tRX9sHu7giPsQZgmKoWVxYf0SW9cQQZT/view?usp=sharing"),
         ]
     ),
     grroupedButtonBlockGen(
