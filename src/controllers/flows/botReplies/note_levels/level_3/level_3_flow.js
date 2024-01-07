@@ -70,6 +70,12 @@ let level_3_note = [
   ]),
   grroupedButtonBlockGen(`🔰 Select Subject for level 3 -`, [
     webBtnBlockGen(
+      "CTPC",
+      "https://drive.google.com/drive/folders/1VU_oIoVdv4ERdazfucJHUf7sKY4pW9s4?usp=sharing"
+    ),
+  ]),
+  grroupedButtonBlockGen(`🔰 Select Subject for level 3 -`, [
+    webBtnBlockGen(
       "AWDP",
       "https://drive.google.com/drive/folders/1l_xuqNbZyDC_aHw4MgHiRd_7FMMDra8v?usp=sharing"
     ),
