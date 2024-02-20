@@ -20,7 +20,14 @@ let math2_flow = [
     [
         webBtnBlockGen("Linkon(2023)", "https://drive.google.com/file/d/1hKRX5vp08oTzu0UrkATK12W4GLx555-Q/view?usp=sharing")
     ]
-),
+    ),
+    grroupedButtonBlockGen(
+        "📌Full Hand Notes -  ",
+        [
+            webBtnBlockGen("Tonmoy(Part-A)(2024)", "https://drive.google.com/file/d/1kSsapJQT_jJtIYjKKFeOiraLQnCWDYcc/view?usp=sharing"),
+            webBtnBlockGen("Tonmoy(Part-B)(2024)", "https://drive.google.com/file/d/1ydYOt2QAsLmEypilWIgRr7xs1kPKCuQk/view?usp=sharing"),
+        ]
+    ),
     grroupedButtonBlockGen(
         "📌 Select Topic for Math-II -",
         [

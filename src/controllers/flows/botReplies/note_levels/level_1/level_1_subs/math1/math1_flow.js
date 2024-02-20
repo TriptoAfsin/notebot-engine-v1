@@ -19,6 +19,7 @@ let math1_flow = [
         [
             webBtnBlockGen("Linear, Mat.", "https://drive.google.com/file/d/1MbOxlNbEgtg2J1HNClPNLYfkm5DFt8PL/view?usp=sharing"),
             webBtnBlockGen("Tonmoy(2023)", "https://drive.google.com/file/d/17BSLjEZmOZ6FY6WziTUknrergBe8KvW0/view?usp=sharing"),
+            webBtnBlockGen("Shakib(2024)", "https://drive.google.com/file/d/1udynjguTpG0Jsa41l6yEUHHarA2wLQFS/view?usp=sharing"),
         ]
     ),
     grroupedButtonBlockGen(

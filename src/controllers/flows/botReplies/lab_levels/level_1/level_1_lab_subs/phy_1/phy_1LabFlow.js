@@ -32,7 +32,7 @@ let phy1_lab_flow = [
         "🔰 Select Experiment for PHY-I -",
         [
             webBtnBlockGen("M7", "https://drive.google.com/file/d/1YUx_u2jxctaD-2Rl6MVBLzy0Ct0fOt9f/view?usp=sharing"),
-            webBtnBlockGen("M10", "https://drive.google.com/file/d/1Kf0pLMtstFkQLUaoRsHlEM8339N7_alR/view?usp=sharing"),
+            webBtnBlockGen("M10", "https://drive.google.com/drive/folders/1IH3gleEoCe-ANfzcIHbr3jQonYXD89vu?usp=sharing"),
             payloadBtnGen("O1", "phy1_o1_flow"),
         ]
     ),
