@@ -28,6 +28,12 @@ let sss2Flow = [
         ]
     ),
     grroupedButtonBlockGen(
+        "📌 Full Hand Notes - ",
+        [
+            webBtnBlockGen("Alim(2024)", "https://drive.google.com/file/d/1Q5215ucatvoKkSIAoyEpHVvcBqHHecS4/view?usp=sharing"),
+        ]
+    ),
+    grroupedButtonBlockGen(
         "🔰 Select Topics for SSS-II -",
         [
             payloadBtnGen("Hand Notes", "sss2_notes_flow")

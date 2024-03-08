@@ -23,6 +23,7 @@ let tpFlow = [
     grroupedButtonBlockGen(
         "📌 Full Hand Notes -",
         [
+            webBtnBlockGen("Alim(2024)", "https://drive.google.com/file/d/16OT1urjBJAu1F-8c_fIiRs4VCbLlpkXC/view?usp=sharing"),
             webBtnBlockGen("Sazzad(FE-46)", "https://drive.google.com/file/d/1O81J3bDe1ipWprSSyQKbtz7HjXcPvRjU/view?usp=sharing"),
         ]
     ),
