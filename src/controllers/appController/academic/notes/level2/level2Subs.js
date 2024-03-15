@@ -48,16 +48,16 @@ let level2Subs = [
         route: "app/notes/2/am1"
     },
     {
+        subName: "AP-I",
+        route: "app/notes/2/ap1"
+    },
+    {
         subName: "YM-I",
         route: "app/notes/2/ym1"
     },
     {
         subName: "FD-II",
         route: "app/notes/2/fd2"
-    },
-    {
-        subName: "AP-I",
-        route: "app/notes/2/ap1"
     },
     {
         subName: "TTQC",

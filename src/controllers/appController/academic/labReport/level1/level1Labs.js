@@ -20,10 +20,6 @@ let level1Labs = [
         route: "app/labs/1/msp"
     },
     {
-        subName: "AP-I",
-        route: "app/labs/1/ap1"
-    },
-    {
         subName: "BCE",
         route: "app/labs/1/bce"
     },
