@@ -5,10 +5,12 @@ let imgBlockGen = require('simple-messenger-blocks/imgBlockGen');
 
 
 let phy1_lab_flow = [
-    imgBlockGen('https://manybot-thumbnails.s3.eu-central-1.amazonaws.com/fb243958719599028/ca/big_43439688e574c75733a93d3207ce0c16.png'),
+    // imgBlockGen('https://manybot-thumbnails.s3.eu-central-1.amazonaws.com/fb243958719599028/ca/big_43439688e574c75733a93d3207ce0c16.png'),
+    imgBlockGen('https://i.postimg.cc/PrFkhkBt/Phy-I-2024.jpg'),
     grroupedButtonBlockGen(
         "📌 All Reports - ",
         [
+            webBtnBlockGen("Hasnabul(2024)", "https://drive.google.com/drive/folders/1Y7WweNoZuGmspIintCA8PiEjmp6PZQTK?usp=sharing"),
             webBtnBlockGen("Emon(2022)", "https://drive.google.com/file/d/1RKd7KCULtdwPoCe2rA8x6rZTJT5EQdtm/view?usp=sharing"),
         ]
     ),

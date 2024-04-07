@@ -30,6 +30,7 @@ let fm2Flow = [
         [
             webBtnBlockGen("Part-A(Razon)", "https://drive.google.com/file/d/1Q0x5t4ZiaHG_Xnk-bWrOIe7Icucdm7M9/view?usp=sharing"),
             webBtnBlockGen("Part-B(2023)", "https://drive.google.com/file/d/1o5X037zHh4vWEu36iHexVRg4GPVEPONK/view?usp=sharing"),
+            webBtnBlockGen("Weft Knit(2024)", "https://drive.google.com/file/d/13uaY0cxPEToysTa7DEivdwQUPxRZcbFR/view?usp=sharing"),
         ]
     ),
     grroupedButtonBlockGen(

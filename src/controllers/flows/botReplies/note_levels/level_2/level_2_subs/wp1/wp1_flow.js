@@ -21,6 +21,7 @@ grroupedButtonBlockGen(
     "📌 Full Hand Notes - ",
     [
         webBtnBlockGen("⭐ Sazzad(2023)", "https://drive.google.com/file/d/1488a5EJs3H3Y0QNC9qoX9qZbfnjK8sFj/view?usp=sharing"),
+        webBtnBlockGen("⭐ Alim(2024)", "https://drive.google.com/file/d/1HDrrZLdRZCrqtJtHxlBz9WVvuYLPOT-Z/view?usp=sharing"),
     ]
 ),
     grroupedButtonBlockGen("📌 Full Hand Note & Basic Stuff -",

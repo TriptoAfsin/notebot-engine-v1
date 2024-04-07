@@ -35,6 +35,12 @@ let am1Flow = [
         ]
     ),
     grroupedButtonBlockGen(
+        "📌 Full Hand Notes - ",
+        [
+            webBtnBlockGen("⭐ Alim(2024)", "https://drive.google.com/file/d/1VE8IuqtaFMobOrn6hchCh_hCF8ak4R41/view?usp=sharing"),
+        ]
+    ),
+    grroupedButtonBlockGen(
         "📌 Full Hand Note & Slide (2020) -",
         [
             webBtnBlockGen("Part A (Rifat)", "https://drive.google.com/file/d/1MSe7Mc7MlqLCIziwBa3iTJQb6nkYRgM-/view"),
