@@ -1716,7 +1716,7 @@ let postWebhook = async (req, res) => {
       let read_at = webhook_event?.read?.watermark;
       console.log(`-------------------------------------------`)
       console.log(`🔵 Messenger Platform:\n🧑 Sender PSID: ${sender_psid}\n🧑‍🦰 Recipient PSID: ${recipient_psid}\n🕝 Timestamp: ${timestamp}`);
-      console.log(`-------------------------------------------`)
+      
     
 
      
@@ -1730,6 +1730,10 @@ let postWebhook = async (req, res) => {
       //   handlePostback(sender_psid, webhook_event.message.quick_reply);
       // }
       if (webhook_event.message && !webhook_event.message.is_echo) {
+        if(webhook_event?.message?.text){
+          console.log(`💬`, webhook_event?.message?.text);
+          console.log(`-------------------------------------------`)
+        }
         handleMessage(sender_psid, webhook_event.message);
       }
       //for postbacks
@@ -1960,7 +1964,8 @@ let  handleMessage = async (sender_psid, received_message) =>  {
       callSendAPI(sender_psid, response);
     }
     console.log(received_message);
-  } else if (wordIncludesWhole(greets, received_message)) {
+  } 
+  else if (wordIncludesWhole(greets, received_message)) {
     response = greetReplies[0];
     callSendAPI(sender_psid, response);
   }
