@@ -1716,6 +1716,7 @@ let postWebhook = async (req, res) => {
       let read_at = webhook_event?.read?.watermark;
       console.log(`-------------------------------------------`)
       console.log(`🔵 Messenger Platform:\n🧑 Sender PSID: ${sender_psid}\n🧑‍🦰 Recipient PSID: ${recipient_psid}\n🕝 Timestamp: ${timestamp}`);
+      console.log(`-------------------------------------------`)
       
     
 
@@ -1731,6 +1732,7 @@ let postWebhook = async (req, res) => {
       // }
       if (webhook_event.message && !webhook_event.message.is_echo) {
         if(webhook_event?.message?.text){
+          console.log(`-------------------------------------------`)
           console.log(`💬`, webhook_event?.message?.text);
           console.log(`-------------------------------------------`)
         }
