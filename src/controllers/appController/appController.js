@@ -3381,11 +3381,11 @@ let mpCastingFlow = (req, res) => {
 let fmeFlow = (req, res) => {
 
     //analytics
-    try{
-        handleAnalytics("fme");
-    }catch(err){
-        console.log(`🔴 Error while handling analytics(pre)`)
-    }
+    // try{
+    //     handleAnalytics("fme");
+    // }catch(err){
+    //     console.log(`🔴 Error while handling analytics(pre)`)
+    // }
 
 
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
