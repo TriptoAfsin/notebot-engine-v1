@@ -21,7 +21,7 @@ let SubTopicTrans = (routePrefix, chatbotSubjFlow) => {
                     }
                     if(chatbotSubjFlow[i].attachment.payload.buttons[j].url){
                         cleanedObjArr.push({
-                            topic: wordIncludes(["📌 full", "📌 all", "⚡", "📌 analytical"], chatbotSubjFlow[i].attachment.payload.text) ? `${chatbotSubjFlow[i].attachment.payload.text}${chatbotSubjFlow[i].attachment.payload.buttons[j].title}` : `${chatbotSubjFlow[i].attachment.payload.buttons[j].title}`,
+                            topic: wordIncludes(["📌 full", "📌 all", "⚡", "📌 analytical", "📌 QB Solve", "📌 qb solve", "📌 analysis", "⚡ Viva", "⚡ All"], chatbotSubjFlow[i].attachment.payload.text) ? `${chatbotSubjFlow[i].attachment.payload.text}${chatbotSubjFlow[i].attachment.payload.buttons[j].title}` : `${chatbotSubjFlow[i].attachment.payload.buttons[j].title}`,
                             url: `${chatbotSubjFlow[i].attachment.payload.buttons[j].url}`
                         }) 
                     }
