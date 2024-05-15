@@ -6,6 +6,11 @@ let imgBlockGen = require('simple-messenger-blocks/imgBlockGen');
 
 let wp2_lab_flow = [
     imgBlockGen("https://manybot-thumbnails.s3.eu-central-1.amazonaws.com/fb243958719599028/ca/big_5804a1d185b0eb2ba836a2262e32d963.png"),
+    grroupedButtonBlockGen("⚡ Viva Note - ",
+        [
+            webBtnBlockGen("Sazzad(2024)", "https://drive.google.com/file/d/1W8z4A_kIRaZUnc_aAemwyOyBFnE0YCrI/view?usp=sharing"),
+        ]
+    ),
     grroupedButtonBlockGen(
         "📌 All Reports -",
         [
@@ -19,6 +24,7 @@ let wp2_lab_flow = [
         [
             webBtnBlockGen("All Report(Sakib,2023)", "https://drive.google.com/file/d/1HxyY2WSxJJRiWo4xvKBugIginh8U6MWT/view?usp=sharing"),
             webBtnBlockGen("All Report(Tarek,2023)", "https://drive.google.com/file/d/1GRtnjniYOsGVaDZ70RvduPijrg9z5b_a/view?usp=sharing"),
+            webBtnBlockGen("All Report(Wasima,2024)", "https://drive.google.com/file/d/1RQiyuEaTZ9o3okpPxoY6dnPe7-dpuxGu/view?usp=sharing"),
         ]
     ),
     grroupedButtonBlockGen(

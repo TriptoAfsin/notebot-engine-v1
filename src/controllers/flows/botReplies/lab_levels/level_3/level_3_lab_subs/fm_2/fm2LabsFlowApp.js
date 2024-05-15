@@ -17,6 +17,7 @@ let fm2_lab_flow = [
         [
             webBtnBlockGen("All Report(Bappi)", "https://drive.google.com/file/d/1Y72PDOYkFwW9_l8yoSJ2e27Dh1iLaWiE/view"),
             webBtnBlockGen("All Report(Osmani,2022)", "https://drive.google.com/file/d/1Of6rRBvlEOT_OLCcUPF7y9M0BiExS8oM/view?usp=sharing"),
+            webBtnBlockGen("All Report(Wasima,2024)", "https://drive.google.com/file/d/1BJPHUb2N_bryRXnEK5KHg6PwHWpF_SZx/view?usp=sharing"),
         ]
     ),
 ]

@@ -45,6 +45,12 @@ let statFlow = [
             webBtnBlockGen("🟢 Solve(Nahid)", "https://drive.google.com/file/d/1Ew41DTFlO9ixg7DDNaQz-9eR7EnSlHkv/view?usp=sharing")
         ]
     ),
+    grroupedButtonBlockGen(
+        "📌 Full Hand Notes",
+        [
+            webBtnBlockGen("Lingkon(2024)", "https://drive.google.com/file/d/1heOYUCpDHhEy5Z0OnAq9IQTWr1semWrH/view?usp=sharing"),
+        ]
+    ),
     grroupedButtonBlockGen(`🔰 Select Topics for Stat - `,
         [
             payloadBtnGen("Books", "stat_books_flow"),

@@ -5,6 +5,11 @@ let cardGenerator = require("../../../../../../genrators/cardGenerator");
 
 
 let ttqc_lab_flow = [
+    grroupedButtonBlockGen("⚡ Viva Note - ",
+        [
+            webBtnBlockGen("Estiak(2024)", "https://drive.google.com/file/d/17ZcZFs43BdWkG146np1HatXr87-FUO_A/view?usp=sharing"),
+        ]
+    ),
     grroupedButtonBlockGen("⚡ All Report - ",
         [
             webBtnBlockGen("Dipa(2023)", "https://drive.google.com/file/d/12cy4xEEjPXSGmRchEpSep-CVX4qGJOud/view?usp=sharing"),

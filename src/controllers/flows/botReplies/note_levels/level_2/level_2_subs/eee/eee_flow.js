@@ -41,6 +41,12 @@ let eeeFlow = [
         ]
     ),
     grroupedButtonBlockGen(
+        "📌 Full Hand Notes",
+        [
+            webBtnBlockGen("Lingkon(2024)", "https://drive.google.com/file/d/17xdvsm_0LcY4nOvwKn2fQu_Lm0D_qKOL/view?usp=sharing"),
+        ]
+    ),
+    grroupedButtonBlockGen(
         "🔰 Select Topics for FEEE -",
         [
             payloadBtnGen("Books", "eee_books_flow"),

@@ -3,6 +3,11 @@ let webBtnBlockGen = require("../../../../../../genrators/webBtnBlockGen");
 let payloadBtnGen = require("../../../../../../genrators/payloadBtnGen");
 
 let ym2_lab_flow = [
+    grroupedButtonBlockGen("⚡ Viva Note - ",
+        [
+            webBtnBlockGen("Sazzad(2024)", "https://drive.google.com/file/d/1HhL0vCzzuaMxfnE6JgUtAlIty6qOrWH4/view?usp=sharing"),
+        ]
+    ),
     grroupedButtonBlockGen("🔰 Select Experiment for YM-II -", [
         webBtnBlockGen("Layout", "https://drive.google.com/file/d/14gYtkxMSQGTo2sq8avT1tv7U-GK6_lVF/view?usp=sharing"),
         webBtnBlockGen("Layout(2023)", "https://drive.google.com/file/d/1iM2h2RVYkq-8dfY2GH8Z6WdQrfV-sP9r/view?usp=sharing"),
