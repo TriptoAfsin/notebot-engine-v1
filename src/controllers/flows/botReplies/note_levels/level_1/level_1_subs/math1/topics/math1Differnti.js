@@ -3,6 +3,7 @@ let textBlockGen = require('simple-messenger-blocks/textBlockGen');
 
 let math1Differn = [
     textBlockGen(`🔷 Hand Note(Rafid, TEM-49, 2024)  - \n\nhttps://drive.google.com/file/d/1TCOuo3JSANTZY2ILWRgjCqB2_wjpuQfy/view?usp=sharing`),
+    textBlockGen(`🔷 Hand Note(Saad, FE-49, 2024)  - \n\nhttps://drive.google.com/file/d/1LWKmP6CKtddGv2YDnUEzO8zskrcnWKzl/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note(SAMAMA,DCE-47,2023)-\n\nhttps://drive.google.com/file/d/1-naKeHdZSLoaX7qTSxDnrDv0pFDOWhr4/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note(Wasy, Based on Rokun Sir's Lecture, 2019)-\n\nhttps://drive.google.com/file/d/1_xlJOBFHX9L1iyqLJcieI5f_Ar6o8RVs/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note(Tripto)  - \n\nhttps://drive.google.com/file/d/1nW2knGSBL_OtTBC3dAJwri_RJJBRO4ud/view?usp=sharing`),

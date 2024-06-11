@@ -15,6 +15,12 @@ let math1_flow = [
         ]
     ),
     grroupedButtonBlockGen(
+        "📌 Full Notes(2024) - ",
+        [
+            webBtnBlockGen("Part-B(Saad)", "https://drive.google.com/file/d/1sLB0RcKlKEnyPf0cPZpu6cSlxwoK-5CW/view?usp=sharing"),
+        ]
+    ),
+    grroupedButtonBlockGen(
         "📌 Full Notes - ",
         [
             webBtnBlockGen("Linear, Mat.", "https://drive.google.com/file/d/1MbOxlNbEgtg2J1HNClPNLYfkm5DFt8PL/view?usp=sharing"),

@@ -4,6 +4,7 @@ let textBlockGen = require('simple-messenger-blocks/textBlockGen');
 
 let math1Integre = [
     textBlockGen(`🔷 Hand Note(SAMAMA,DCE-47,2023)-\n\nhttps://drive.google.com/file/d/1Qv9zZnutfR580s_7uMVhGLvDZ2HGqJmu/view?usp=sharing`),
+    textBlockGen(`🔷 Hand Note(Saad, FE-49, 2024)  - \n\nhttps://drive.google.com/file/d/1AEFFMnVZTuNcz9V_8PiQ7M-y7qVGPH5b/view?usp=sharing`),
     textBlockGen(`🔷 Integration Solution (Risadul,SKTEC,2021) - \n\nhttps://drive.google.com/file/d/1OxlawuNq9afLxuRAH_V9MFxT3YF2vuKi/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note Full (Akib, 2018) - \n\nhttps://drive.google.com/file/d/1G6knLSoifRLnljugeSSLte8YvZzHAb0x/view`),
     textBlockGen(`🔷 Hand Note Full (Ripa,TFD-46,2021) - \n\nhttps://drive.google.com/file/d/1DAkT9S5jhHFjQwSnJ7zVrxIreVf20N6V/view?usp=sharing`),
