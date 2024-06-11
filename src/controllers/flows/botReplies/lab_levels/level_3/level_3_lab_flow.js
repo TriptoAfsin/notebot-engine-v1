@@ -34,7 +34,7 @@ let level_3_lab = [
         [
             payloadBtnGen("PM-II", "pm2LabFlow"),
             payloadBtnGen("ACWP", "acwp_lab_flow"),
-            webBtnBlockGen("TC-I(Osmani)", "https://drive.google.com/drive/folders/1Q6_wLwh8TWW3Qh3NHgZXBguLd8R8Cfz7?usp=sharing"),
+            webBtnBlockGen("TC-I", "https://drive.google.com/drive/folders/1Q6_wLwh8TWW3Qh3NHgZXBguLd8R8Cfz7?usp=sharing"),
         ]
     ),
     grroupedButtonBlockGen(
