@@ -8,7 +8,8 @@ let am2_lab_flow = [
         ]
     ),
     grroupedButtonBlockGen("📌 All Reports - ", [
-        webBtnBlockGen('Bappi', 'https://drive.google.com/file/d/1u2YX4OyycdHalBxQ0LLYSz42T0-naoJf/view')
+        webBtnBlockGen('Bappi', 'https://drive.google.com/file/d/1u2YX4OyycdHalBxQ0LLYSz42T0-naoJf/view'),
+        webBtnBlockGen('Wasima', 'https://drive.google.com/file/d/1xMtBHwCmWrAY_KJsCp9VR5JldYIYxvXv/view?usp=sharing')
     ]),
 ]
 
