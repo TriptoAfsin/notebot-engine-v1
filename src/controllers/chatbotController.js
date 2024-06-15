@@ -2462,7 +2462,7 @@ let  handleMessage = async (sender_psid, received_message) =>  {
   //sociology
   else if (wordIncludes(sociology_words, received_message)) {
     magicFunc(sender_psid, [
-      grroupedButtonBlockGen(
+      groupedBtnBlockGen(
         `🔰 Sociology - `,
         [
             webBtnBlockGen("Drive", "https://drive.google.com/drive/folders/1dp46oYLKPp2Iruv0mM01uTCB-x0Hvn3r?usp=sharing"),
