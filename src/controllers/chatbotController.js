@@ -1645,6 +1645,7 @@ const ttm_words = require("./keywords/academic_words/subjects/ttmWords");
 const mpp_words = require("./keywords/academic_words/subjects/mppWords");
 const tc1_words = require("./keywords/academic_words/subjects/tc1Words");
 const idcc_words = require("./keywords/academic_words/subjects/idccWords");
+const sociology_words = require("./keywords/academic_words/subjects/sociologyWords.js");
 
 const MY_VERIFY_TOKEN = process.env.MY_VERIFY_TOKEN;
 const PAGE_ACCESS_TOKEN = process.env.PAGE_ACCESS_TOKEN;
@@ -2456,6 +2457,18 @@ let  handleMessage = async (sender_psid, received_message) =>  {
   //bothAM
   else if (wordIs(bothAMWords, received_message)) {
     magicFunc(sender_psid, bothAMFlow);
+  }
+
+  //sociology
+  else if (wordIncludes(sociology_words, received_message)) {
+    magicFunc(sender_psid, [
+      grroupedButtonBlockGen(
+        `🔰 Sociology - `,
+        [
+            webBtnBlockGen("Drive", "https://drive.google.com/drive/folders/1dp46oYLKPp2Iruv0mM01uTCB-x0Hvn3r?usp=sharing"),
+        ]
+    ), 
+    ]);
   }
 
   //bothAP
