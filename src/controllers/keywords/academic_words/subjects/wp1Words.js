@@ -8,7 +8,8 @@ const wp1_words = [
     "wet process 1",
     "wpe 1",
     "scouring",
-    "bleaching"
+    "bleaching",
+    "wet processing 1",
 ];
 
 
