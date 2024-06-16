@@ -2,6 +2,7 @@ const help = [
     {
         "text": `⛳Usgae Instruction -\n\n🌠For Notes📗-\n1. just type any of these words - note, নোট, চোথা\n\n🌠For Routine 📃-\n\n1. Type  "routine" and send it
         \n\n🌠For Lab Report 🧾-\n\n 1. just type any of these words - report, lab, রিপোর্ট\n\n🌠For Result 📑-\n\n1. just type any of these words - result etc
+        \n\n🌠For Question Bank 📑-\n\n1. just type any of these words - qb, question bank etc\n\nTo Submit Notes - 📑-\n\n1. just type any of these words - submit, সাবমিট
         `,
         "quick_replies": [
             {

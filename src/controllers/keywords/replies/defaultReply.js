@@ -1,47 +1,44 @@
 let quickReplyBlockGen = require("../../genrators/quickReplyBlockGen");
 let quickReply = require("../../genrators/quickReply");
 
+let grroupedButtonBlockGen = require("simple-messenger-blocks/groupedBtnBlockGen");
+let webBtnBlockGen = require("simple-messenger-blocks/webBtnGen");
+let payloadBtnGen = require("simple-messenger-blocks/payloadBtnGen");
+
 
 
 const defaultReply = [
-    quickReplyBlockGen(
+    grroupedButtonBlockGen(
         "🔴 Sorry I didn't get what you meant\n Here are some suggestions - ",
         [
-            quickReply("Help😥", "help_flow"),
-            quickReply("Notes📗", "notes_flow"),
-            quickReply("Routine📅", "routine_flow"),
-            quickReply("Results📝", "result_flow"),
-            quickReply("Lab Reports📋", "reports_flow")
+            payloadBtnGen("Notes📗", "notes_flow"),
+            payloadBtnGen("Lab Reports📋", "reports_flow"),
+            payloadBtnGen("Help😥", "help_flow"),
         ]
     ),
-    quickReplyBlockGen(
+    grroupedButtonBlockGen(
         "🔴 সরি বুঝলাম না কি বললেন 😓",
         [
-            quickReply("Help😥", "help_flow"),
-            quickReply("Notes📗", "notes_flow"),
-            quickReply("Routine📅", "routine_flow"),
-            quickReply("Results📝", "result_flow"),
-            quickReply("Lab Reports📋", "reports_flow")
+            payloadBtnGen("Notes📗", "notes_flow"),
+            payloadBtnGen("Lab Reports📋", "reports_flow"),
+            payloadBtnGen("Help😥", "help_flow"),
         ]
     ),
-    quickReplyBlockGen(
+    grroupedButtonBlockGen(
         "🔴 বুঝি নাই 😶, দেখেন তো নিচের কিছু খুজছেন কিনা -",
         [
-            quickReply("Help😥", "help_flow"),
-            quickReply("Notes📗", "notes_flow"),
-            quickReply("Routine📅", "routine_flow"),
-            quickReply("Results📝", "result_flow"),
-            quickReply("Lab Reports📋", "reports_flow")
+            
+            payloadBtnGen("Notes📗", "notes_flow"),
+            payloadBtnGen("Lab Reports📋", "reports_flow"),
+            payloadBtnGen("Help😥", "help_flow"),
         ]
     ),
-    quickReplyBlockGen(
+    grroupedButtonBlockGen(
         "🔴 Sorry I didn't understand you, here are few some suggestions -",
         [
-            quickReply("Help😥", "help_flow"),
-            quickReply("Notes📗", "notes_flow"),
-            quickReply("Routine📅", "routine_flow"),
-            quickReply("Results📝", "result_flow"),
-            quickReply("Lab Reports📋", "reports_flow")
+            payloadBtnGen("Notes📗", "notes_flow"),
+            payloadBtnGen("Lab Reports📋", "reports_flow"),
+            payloadBtnGen("Help😥", "help_flow"),
         ]
     ),
 ]
