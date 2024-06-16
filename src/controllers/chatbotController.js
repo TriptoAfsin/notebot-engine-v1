@@ -49,6 +49,29 @@ let handleAnalyticsLabs = async subName => {
   }
 };
 
+const handleApiCallAnalytics = async (platform = "bot") => {
+  if (process.env.collectAnalytics === "true") {
+    try {
+      const result = await axios.post(
+        `${process.env.analyticsServerUrl}/daily_report?adminKey=${process.env.analyticsAuthKey}`,
+        {
+          platform: platform
+        }
+      ).then(function (response) {
+        console.log(`🚀 API call count ✅`);
+      })
+        .catch(function (err) {
+          console.log(`🔴  Error occurred while posting api call count`);
+        });;
+    } catch (err) {
+      //console.log(err)
+      console.log(`🔴 Error occurred while updating api call count `);
+    }
+  } else {
+    console.log(`🟠 Analytics is disabled`);
+  }
+}
+
 let handleMissedWordPosting = async missedWord => {
   try {
     const result = await axios
@@ -5686,6 +5709,8 @@ let callSendAPI = async (sender_psid, response) => {
     (err, res, body) => {
       if (!err) {
         console.log("🟢 Message sent!");
+        //daily report analytics
+        handleApiCallAnalytics();
       } else {
         console.error(`🔴 Unable to send message: ${err}`);
       }

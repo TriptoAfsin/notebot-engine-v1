@@ -60,6 +60,29 @@ let handleAnalyticsLabs =  async(subName) => {
     }
   }
 
+  const handleApiCallAnalytics = async (platform = "app") => {
+    if (process.env.collectAnalytics === "true") {
+      try {
+        const result = await axios.post(
+          `${process.env.analyticsServerUrl}/daily_report?adminKey=${process.env.analyticsAuthKey}`,
+          {
+            platform: platform
+          }
+        ).then(function (response) {
+          console.log(`🚀 API call count ✅`);
+        })
+          .catch(function (err) {
+            console.log(`🔴  Error occurred while posting api call count`);
+          });;
+      } catch (err) {
+        //console.log(err)
+        console.log(`🔴 Error occurred while updating api call count `);
+      }
+    } else {
+      console.log(`🟠 Analytics is disabled`);
+    }
+  }
+
 
 let noteLevel1Subs = require('./academic/notes/level1/level1Subs')
 let noteLevel2Subs = require('./academic/notes/level2/level2Subs')
@@ -1142,6 +1165,7 @@ let notes = (req, res) => {
             }
         ]
     }
+    handleApiCallAnalytics();
     return res.send(noteLevels);
 };
 
@@ -1149,12 +1173,13 @@ let notes = (req, res) => {
 let level1Notes = (req, res) => {
 
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
-
+    handleApiCallAnalytics();
     return res.send(noteLevel1Subs);
 };
 
 let level1Labs = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(labLevel1Subs);
 };
 
@@ -1162,17 +1187,19 @@ let level1Labs = (req, res) => {
 let level2Notes = (req, res) => {
 
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
-
+    handleApiCallAnalytics();
     return res.send(noteLevel2Subs);
 };
 
 let level2Labs = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(labLevel2Subs);
 };
 
 let level3Labs = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(labLevel3Subs);
 };
 
@@ -1181,7 +1208,7 @@ let level3Labs = (req, res) => {
 let level3Notes = (req, res) => {
 
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
-
+    handleApiCallAnalytics();
     return res.send(noteLevel3Subs);
 };
 
@@ -1189,7 +1216,7 @@ let level3Notes = (req, res) => {
 let level4Notes = (req, res) => {
 
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
-
+    handleApiCallAnalytics();
     return res.send(noteLevel4Subs);
 };
 
@@ -1198,82 +1225,98 @@ let math1 = async (req, res) => {
   //analytics
   try{
     handleAnalytics("math1");
+    handleApiCallAnalytics();
 }catch(err){
     console.log(`🔴 Error while handling analytics(pre)`)
 }
 
   //console.log(result.data.json)
   console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`);
+  handleApiCallAnalytics();
   return res.send(math1Flow);
 };
 
 let math1Solve2018Flow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(math1Solve2018);
 };
 
 let math1Books = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(math1BooksFlow);
 };
 
 let math1Ques = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(math1QuesFlow);
 };
 
 let math1Convergence = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(math1Conver);
 };
 
 let math1Expansion = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(math1Expan);
 };
 
 let math1Differen = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(math1Diff);
 };
 
 let math1Integretion = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(math1Inte);
 };
 
 let math1Extrema = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(math1Extrerma);
 };
 
 let math1Conic = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(math1Conics);
 };
 
 let math1VectorFlow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(math1Vector);
 };
 
 let math1CoOrdFlow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(math1CoOrd);
 };
 
 let math1MatrixFlow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(math1Matrix);
 };
 
 let math1LinearFlow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(math1Linear);
 };
 
 let math1ChangeofAxesFlow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(math1Axes);
 };
 
@@ -1283,6 +1326,7 @@ let math2 = (req, res) => {
     //analytics
     try{
         handleAnalytics("math2");
+        handleApiCallAnalytics();
     }catch(err){
         console.log(`🔴 Error while handling analytics(pre)`)
     }
@@ -1293,96 +1337,115 @@ let math2 = (req, res) => {
 
 let math2BooksFlow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(math2Books);
 };
 
 let math2QuesFlow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(math2Ques);
 };
 
 let math2SuggFlow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(math2Sugg);
 };
 
 let math2moivreFlow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(math2moivre);
 };
 
 let math2HomoFlow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(math2Homo);
 };
 
 let math2LDEFlow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(math2LDE);
 };
 
 let math2ExactFlow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(math2Exact);
 };
 
 let math2RedHomoFlow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(math2RedHomo);
 };
 
 let math2DiffEqnFlow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(math2DiffEqn);
 };
 
 let math2linEqnFlow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(math2linEqn);
 };
 
 let math2residueFlow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(math2Residue);
 };
 
 let math2LineIntFlow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(math2lineInt);
 };
 
 let math2methodVarFlow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(math2MethodVar);
 };
 
 let math2AnalyFuncFlow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(math2AnnalyFunc);
 };
 
 let math2VectorFlow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(math2Vector);
 };
 
 let math2odeFlow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(math2ode);
 };
 
 let math2SepaVarFlow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(math2SepaVar);
 };
 
 let math2laplaceFlow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(math2laplace);
 };
 
 let math2ComplexFlow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(math2Complex);
 };
 
@@ -1392,6 +1455,7 @@ let chem1Flow = (req, res) => {
     //analytics
     try{
         handleAnalytics("chem1");
+        handleApiCallAnalytics();
     }catch(err){
         console.log(`🔴 Error while handling analytics(pre)`)
     }
@@ -1402,66 +1466,78 @@ let chem1Flow = (req, res) => {
 
 let chem1BooksFlow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(chem1Books);
 };
 
 let chem1QuesFlow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(chem1Ques);
 };
 
 
 let chem1PeriodicFlow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(chem1Periodic);
 };
 
 
 let chem1DiluFlow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(chem1Dilu);
 };
 
 let chem1CxCompFlow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(chem1Complex);
 };
 
 let chem1BondFlow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(chem1Bond);
 };
 
 let chem1KineticsFlow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(chem1Kinetics);
 };
 
 
 let chem1EquiFlow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(chem1ChemicalEqui);
 };
 
 let chem1PhotoFlow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(chem1Photo);
 };
 
 
 let chem1AnalyFlow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(chem1Analy);
 };
 
 
 let chem1CollFlow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(chem1Colloid);
 };
 
 let chem1AcidBaseFlow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(chem1AcidBase);
 };
 
@@ -1472,6 +1548,7 @@ let chem2Flow = (req, res) => {
     //analytics
     try{
         handleAnalytics("chem2");
+        handleApiCallAnalytics();
     }catch(err){
         console.log(`🔴 Error while handling analytics(pre)`)
     }
@@ -1482,62 +1559,74 @@ let chem2Flow = (req, res) => {
 
 let chem2BooksFlow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(chem2Books);
 };
 
 let chem2QuesFlow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(chem2Ques);
 };
 
 let chem2OrganMetalFlow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(chem2OrganMetal);
 };
 
 let chem2CarboNylFlow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(chem2Carbonyl);
 };
 
 
 let chem2orgRecFlow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(chem2OrgReac);
 };
 
 let chem2AlcPhenFlow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(chem2AlcPhen);
 };
 
 let chem2AminoFlow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(chem2Amino);
 };
 
 let chem2CarboHyFlow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(chem2Carboh);
 };
 
 let chem2ColorDyeFlow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(chem2ColorDye);
 };
 
 let chem2CarboxylicAcidFlow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(chem2CarboxylicAcid);
 };
 
 let chem2AmineFlow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(chem2Amine);
 };
 
 let chem2SolubilityFlow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(chem2Sollubility);
 };
 
@@ -1548,6 +1637,7 @@ let phy1Flow = (req, res) => {
     //analytics
     try{
         handleAnalytics("phy1");
+        handleApiCallAnalytics();
     }catch(err){
         console.log(`🔴 Error while handling analytics(pre)`)
     }
@@ -1559,52 +1649,62 @@ let phy1Flow = (req, res) => {
 
 let phy1BooksFlow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(phy1Books);
 };
 
 let phy1QuesFlow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(phy1Ques);
 };
 
 let phy1CircularFlow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(phy1Circular);
 };
 
 let phy1HydroFlow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(phy1Hydro);
 };
 
 let phy1DiffracFlow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(phy1Diffrac);
 };
 
 let phy1InterFlow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(phy1Inter);
 };
 
 let phy1PolarFlow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(phy1Polar);
 };
 
 
 let phy1ElasticityFlow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(phy1Elasticity);
 };
 
 let phy1ViscoFlow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(phy1Visco);
 };
 
 let phy1SurfaceFlow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(phy1Surface);
 };
 
@@ -1615,6 +1715,7 @@ let phy2Flow = (req, res) => {
     //analytics
     try{
         handleAnalytics("phy2");
+        handleApiCallAnalytics();
     }catch(err){
         console.log(`🔴 Error while handling analytics(pre)`)
     }
@@ -1626,47 +1727,56 @@ let phy2Flow = (req, res) => {
 
 let phy2BooksFlow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(phy2Books);
 };
 
 
 let phy2QuesFlow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(phy2Ques);
 };
 
 let phy2KineticFlow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(phy2Kinetic);
 };
 
 let phy2ElectricFlow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(phy2Electric);
 };
 
 let phy2ThermoFlow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(phy2Thermo);
 };
 
 let phy2RadFlow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(phy2Rad);
 };
 
 let phy2MagFlow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(phy2Magnet);
 };
 
 let phy2ModernFlow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(phy2Modern);
 };
 
 let phy2EntropyFlow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(phy2Entropy);
 };
 
@@ -1676,6 +1786,7 @@ let emFlow = (req, res) => {
     //analytics
     try{
         handleAnalytics("em");
+        handleApiCallAnalytics();
     }catch(err){
         console.log(`🔴 Error while handling analytics(pre)`)
     }
@@ -1686,46 +1797,55 @@ let emFlow = (req, res) => {
 
 let emBooksFlow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(emBooks);
 };
 
 let emQuesFlow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(emQues);
 };
 
 let emMathFlow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(emMath);
 };
 
 let emBlastFurFlow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(emBlastFur);
 };
 
 let emHeatTreatFlow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(emHeatTre);
 };
 
 let emHeatWroughtFlow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(emWrought);
 };
 
 let emCrystalFlow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(emCrystal);
 };
 
 let emIronFlow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(emIron);
 };
 
 let emGlassFlow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(emGlass);
 };
 
@@ -1736,31 +1856,37 @@ let emCeramicsFlow = (req, res) => {
 
 let emCorrosionFlow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(emCorrosion);
 };
 
 let emAlloyFlow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(emAlloy);
 };
 
 let emCompositesFlow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(emComposites);
 };
 
 let emPlasticsFlow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(emPlastic);
 };
 
 let emPhasediagFlow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(emPhaseDiag);
 };
 
 let emAtomicFlow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(emAtomic);
 };
 
@@ -1768,11 +1894,13 @@ let emAtomicFlow = (req, res) => {
 //tmm
 let tmmFlow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(tmmAppFlow);
 };
 
 let tmmQuesFlow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(tmmQues);
 };
 
@@ -1780,61 +1908,73 @@ let tmmQuesFlow = (req, res) => {
 //fh
 let fhFlow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(fhAppFlow);
 };
 
 let fhArtDesFlow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(fhArtDes);
 };
 
 let fhRomanFlow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(fhRoman);
 };
 
 let fhElizaFlow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(fhEliza);
 };
 
 let fhGeorigianFlow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(fhGeorgian);
 };
 
 let fhGreekFlow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(fhGreek);
 };
 
 let fhEgyptFlow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(fhEgypt);
 };
 
 let fhRenasiFlow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(fhRenasi);
 };
 
 let fhSilkFlow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(fhSilk);
 };
 
 let fhJeansFlow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(fhJeans);
 };
 
 let fhMuslinFlow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(fhMuslin);
 };
 
 let fhHandloomFlow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(fhHandloom);
 };
 
@@ -1845,6 +1985,7 @@ let pseFlow = (req, res) => {
     //analytics
     try{
         handleAnalytics("pse");
+        handleApiCallAnalytics();
     }catch(err){
         console.log(`🔴 Error while handling analytics(pre)`)
     }
@@ -1855,31 +1996,37 @@ let pseFlow = (req, res) => {
 
 let pseBooksFlow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(pseBooks);
 };
 
 let pseQuesFlow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(pseQues);
 };
 
 let pseHandNotesFlow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(psehandNotes);
 };
 
 let pseIntroFlow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(pseIntro);
 };
 
 let psePhyStructFlow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(psePhyStruct);
 };
 
 let pseChemStructFlow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(pseChemStruct);
 };
 
@@ -2034,6 +2181,7 @@ let cpFlow = (req, res) => {
     //analytics
     try{
         handleAnalytics("cp");
+        handleApiCallAnalytics();
     }catch(err){
         console.log(`🔴 Error while handling analytics(pre)`)
     }
@@ -2095,6 +2243,7 @@ let bceFlow = (req, res) => {
     //analytics
     try{
         handleAnalytics("bce");
+        handleApiCallAnalytics();
     }catch(err){
         console.log(`🔴 Error while handling analytics(pre)`)
     }
@@ -2322,6 +2471,7 @@ let sss1Flow = (req, res) => {
     //analytics
     try{
         handleAnalytics("sss1");
+        handleApiCallAnalytics();
     }catch(err){
         console.log(`🔴 Error while handling analytics(pre)`)
     }
@@ -2368,6 +2518,7 @@ let sss2Flow = (req, res) => {
     //analytics
     try{
         handleAnalytics("sss2");
+        handleApiCallAnalytics();
     }catch(err){
         console.log(`🔴 Error while handling analytics(pre)`)
     }
@@ -2450,6 +2601,7 @@ let marketingFlow = (req, res) => {
     //analytics
     try{
         handleAnalytics("market");
+        handleApiCallAnalytics();
     }catch(err){
         console.log(`🔴 Error while handling analytics(pre)`)
     }
@@ -2579,6 +2731,7 @@ let am1Flow = (req, res) => {
     //analytics
     try{
         handleAnalytics("am1");
+        handleApiCallAnalytics();
     }catch(err){
         console.log(`🔴 Error while handling analytics(pre)`)
     }
@@ -2664,6 +2817,7 @@ let statFlow = (req, res) => {
     //analytics
     try{
         handleAnalytics("phy1");
+        handleApiCallAnalytics();
     }catch(err){
         console.log(`🔴 Error while handling analytics(pre)`)
     }
@@ -2862,6 +3016,7 @@ let ym1Flow = (req, res) => {
     //analytics
     try{
         handleAnalytics("ym1");
+        handleApiCallAnalytics();
     }catch(err){
         console.log(`🔴 Error while handling analytics(pre)`)
     }
@@ -2943,7 +3098,8 @@ let ttqcFlow = (req, res) => {
 
     //analytics
     try{
-        handleAnalytics("phy1");
+        handleAnalytics("ttqc");
+        handleApiCallAnalytics();
     }catch(err){
         console.log(`🔴 Error while handling analytics(pre)`)
     }
@@ -3100,6 +3256,7 @@ let feeeFlow = (req, res) => {
     //analytics
     try{
         handleAnalytics("feee");
+        handleApiCallAnalytics();
     }catch(err){
         console.log(`🔴 Error while handling analytics(pre)`)
     }
@@ -3177,6 +3334,7 @@ let mmtfFlow = (req, res) => {
     //analytics
     try{
         handleAnalytics("mmtf");
+        handleApiCallAnalytics();
     }catch(err){
         console.log(`🔴 Error while handling analytics(pre)`)
     }
@@ -3298,6 +3456,7 @@ let mpFlow = (req, res) => {
     //analytics
     try{
         handleAnalytics("mp");
+        handleApiCallAnalytics();
     }catch(err){
         console.log(`🔴 Error while handling analytics(pre)`)
     }
@@ -3379,6 +3538,11 @@ let mpCastingFlow = (req, res) => {
 
 //fme
 let fmeFlow = (req, res) => {
+    try{
+        handleApiCallAnalytics();
+    }catch(err){
+        console.log(`🔴 Error while handling analytics`)
+    }
 
     //analytics
     // try{
@@ -3501,6 +3665,7 @@ let fmeColumnFlow = (req, res) => {
 //ap1
 let ap1Flow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(ap1AppFlow);
 };
 
@@ -3558,6 +3723,7 @@ let ap1SewingFlow = (req, res) => {
 //ctca
 let ctcaFlow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(ctcaAppFlow);
 };
 
@@ -3605,6 +3771,7 @@ let ctcaColloidFlow = (req, res) => {
 //fdce
 let fdceFlow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(fdceAppFlow);
 };
 
@@ -3642,6 +3809,7 @@ let fdceFiltrationFlow = (req, res) => {
 //fd2
 let fd2Flow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(fd2AppFlow);
 };
 
@@ -3649,6 +3817,7 @@ let fd2Flow = (req, res) => {
 //weaving prep
 let weavingPrepFlow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(weavingPrepAppFlow);
 };
 
@@ -3664,6 +3833,7 @@ let wppFlow = (req, res) => {
     //analytics
     try{
         handleAnalytics("wpp");
+        handleApiCallAnalytics();
     }catch(err){
         console.log(`🔴 Error while handling analytics(pre)`)
     }
@@ -3710,6 +3880,7 @@ let wp1Flow = (req, res) => {
     //analytics
     try{
         handleAnalytics("wp1");
+        handleApiCallAnalytics();
     }catch(err){
         console.log(`🔴 Error while handling analytics(pre)`)
     }
@@ -3858,6 +4029,7 @@ let wp1WashingMCFlow = (req, res) => {
 //acfd
 let acfdFlow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(acfdAppFlow);
 };
 
@@ -3865,6 +4037,7 @@ let acfdFlow = (req, res) => {
 //tcp
 let tcpFlow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(tcpAppFlow);
 };
 let tcpKpcFlow = (req, res) => {
@@ -3876,6 +4049,7 @@ let tcpKpcFlow = (req, res) => {
 //pcs
 let pcsFlow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(pcsAppFlow);
 };
 let pcsBooksFlow = (req, res) => {
@@ -3887,6 +4061,7 @@ let pcsBooksFlow = (req, res) => {
 //lss
 let lssFlow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(lssAppFlow);
 };
 
@@ -3900,9 +4075,10 @@ let lssSpreaderFlow = (req, res) => {
 };
 
 
-//lss
+//mpp
 let mppFlow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(mppAppFlow);
 };
 
@@ -3910,6 +4086,7 @@ let mppFlow = (req, res) => {
 //knit1
 let knit1Flow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(knit1AppFlow);
 };
 let knit1LectureFlow = (req, res) => {
@@ -3921,6 +4098,7 @@ let knit1LectureFlow = (req, res) => {
 //im
 let imFlow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(imAppFlow);
 };
 
@@ -3993,6 +4171,7 @@ let imProdnManageFlow = (req, res) => {
 //pd
 let pdFlow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(pdAppFlow);
 };
 
@@ -4063,6 +4242,7 @@ let tqmFlow = (req, res) => {
     //analytics
     try{
         handleAnalytics("tqm");
+        handleApiCallAnalytics();
     }catch(err){
         console.log(`🔴 Error while handling analytics(pre)`)
     }
@@ -4122,6 +4302,7 @@ let ttmFlow = (req, res) => {
 //mic
 let micFlow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(micAppFlow);
 };
 
@@ -4197,6 +4378,7 @@ let aceFlow = (req, res) => {
     //analytics
     try{
         handleAnalytics("ace");
+        handleApiCallAnalytics();
     }catch(err){
         console.log(`🔴 Error while handling analytics(pre)`)
     }
@@ -4271,9 +4453,10 @@ let acmFlow = (req, res) => {
 
     //analytics
     try{
-        handleAnalytics("phy1");
+        handleAnalytics("acm");
+        handleApiCallAnalytics();
     }catch(err){
-        console.log(`🔴 Error while handling analytics(pre)`)
+        console.log(`🔴 Error while handling analytics(acm)`)
     }
 
 
@@ -4324,8 +4507,9 @@ let fsdFlow = (req, res) => {
     //analytics
     try{
         handleAnalytics("fsd");
+        handleApiCallAnalytics();
     }catch(err){
-        console.log(`🔴 Error while handling analytics(pre)`)
+        console.log(`🔴 Error while handling analytics(fsd)`)
     }
 
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
@@ -4374,8 +4558,9 @@ let am2Flow = (req, res) => {
     //analytics
     try{
         handleAnalytics("am2");
+        handleApiCallAnalytics();
     }catch(err){
-        console.log(`🔴 Error while handling analytics(pre)`)
+        console.log(`🔴 Error while handling analytics(am2)`)
     }
 
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
@@ -4406,6 +4591,7 @@ let am2ExcelFlow = (req, res) => {
 //ap2
 let ap2Flow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(ap2AppFlow);
 };
 
@@ -4441,8 +4627,9 @@ let econoFlow = (req, res) => {
     //analytics
     try{
         handleAnalytics("econo");
+        handleApiCallAnalytics();
     }catch(err){
-        console.log(`🔴 Error while handling analytics(pre)`)
+        console.log(`🔴 Error while handling analytics(economics)`)
     }
 
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
@@ -4463,6 +4650,7 @@ let econoClassLecFlow = (req, res) => {
 //fm2
 let fm2Flow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(fm2AppFlow);
 };
 
@@ -4498,8 +4686,9 @@ let wp2Flow = (req, res) => {
     //analytics
     try{
         handleAnalytics("wp2");
+        handleApiCallAnalytics();
     }catch(err){
-        console.log(`🔴 Error while handling analytics(pre)`)
+        console.log(`🔴 Error while handling analytics(wp2)`)
     }
 
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
@@ -4531,8 +4720,9 @@ let ym2Flow = (req, res) => {
     //analytics
     try{
         handleAnalytics("ym2");
+        handleApiCallAnalytics();
     }catch(err){
-        console.log(`🔴 Error while handling analytics(pre)`)
+        console.log(`🔴 Error while handling analytics(ym2)`)
     }
 
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
@@ -4579,6 +4769,7 @@ let ym2SpinningFlow = (req, res) => {
 //bil
 let bilFlow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(bilAppFlow);
 };
 
@@ -4591,6 +4782,7 @@ let bilLaborFlow = (req, res) => {
 //hrm
 let hrmFlow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(hrmAppFlow);
 };
 
@@ -4598,6 +4790,7 @@ let hrmFlow = (req, res) => {
 //bs
 let bsFlow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(bsAppFlow);
 };
 
@@ -4605,6 +4798,7 @@ let bsFlow = (req, res) => {
 //epd
 let epdFlow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(epdAppFlow);
 };
 
@@ -4612,6 +4806,7 @@ let epdFlow = (req, res) => {
 //ir
 let irFlow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(irAppFlow);
 };
 
@@ -4624,12 +4819,14 @@ let irIndusRelationFlow = (req, res) => {
 //ppc
 let ppcFlow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(ppcAppFlow);
 };
 
 //tam
 let tamFlow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(tamAppFlow);
 };
 
@@ -4644,6 +4841,7 @@ let labChem1Flow = (req, res) => {
     //analytics
     try {
         handleAnalyticsLabs("chem1");
+        handleApiCallAnalytics();
       } catch (err) {
         console.log(`🔴 Error while handling analytics(pre)`);
       }
@@ -4688,6 +4886,7 @@ let labChem2Flow = (req, res) => {
     //analytics
     try {
         handleAnalyticsLabs("chem2");
+        handleApiCallAnalytics();
       } catch (err) {
         console.log(`🔴 Error while handling analytics(pre)`);
       }
@@ -4758,6 +4957,7 @@ let labPhy1Flow = (req, res) => {
     //analytics
     try {
         handleAnalyticsLabs("phy1");
+        handleApiCallAnalytics();
       } catch (err) {
         console.log(`🔴 Error while handling analytics(pre)`);
       }
@@ -4824,6 +5024,7 @@ let labPhy2Flow = (req, res) => {
     //analytics
     try {
         handleAnalyticsLabs("phy2");
+        handleApiCallAnalytics();
       } catch (err) {
         console.log(`🔴 Error while handling analytics(pre)`);
       }
@@ -4900,6 +5101,7 @@ let labmspFlow = (req, res) => {
     //analytics
     try {
         handleAnalyticsLabs("msp");
+        handleApiCallAnalytics();
       } catch (err) {
         console.log(`🔴 Error while handling analytics(pre)`);
       }
@@ -4986,6 +5188,7 @@ let labBceFlow = (req, res) => {
     //analytics
     try {
         handleAnalyticsLabs("bce");
+        handleApiCallAnalytics();
       } catch (err) {
         console.log(`🔴 Error while handling analytics(pre)`);
       }
@@ -5044,6 +5247,7 @@ let labCpFlow = (req, res) => {
     //analytics
     try {
         handleAnalyticsLabs("cp");
+        handleApiCallAnalytics();
       } catch (err) {
         console.log(`🔴 Error while handling analytics(pre)`);
       }
@@ -5065,6 +5269,7 @@ let labEdFlow = (req, res) => {
 
 
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(edLabs);
 };
 
@@ -5114,6 +5319,7 @@ let labAm1Flow = (req, res) => {
     //analytics
     try {
         handleAnalyticsLabs("am1");
+        handleApiCallAnalytics();
       } catch (err) {
         console.log(`🔴 Error while handling analytics(pre)`);
       }
@@ -5142,6 +5348,7 @@ let labYm1Flow = (req, res) => {
     //analytics
     try {
         handleAnalyticsLabs("ym1");
+        handleApiCallAnalytics();
       } catch (err) {
         console.log(`🔴 Error while handling analytics(pre)`);
       }
@@ -5155,6 +5362,7 @@ let labFm1Flow = (req, res) => {
     //analytics
     try {
         handleAnalyticsLabs("fm1");
+        handleApiCallAnalytics();
       } catch (err) {
         console.log(`🔴 Error while handling analytics(pre)`);
       }
@@ -5218,6 +5426,7 @@ let labWp1Flow = (req, res) => {
     //analytics
     try {
         handleAnalyticsLabs("wp1");
+        handleApiCallAnalytics();
       } catch (err) {
         console.log(`🔴 Error while handling analytics(pre)`);
       }
@@ -5229,24 +5438,28 @@ let labWp1Flow = (req, res) => {
 //labs2 -> wpp
 let labWppFlow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(wppLabs);
 };
 
 //labs2 -> pm1
 let labPm1Flow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(pm1Labs);
 };
 
 //labs2 -> ttqc
 let labTtqcFlow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(ttqcLabs);
 };
 
 //labs2 -> fe_wpp
 let labFe_WppFlow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(fe_wppLabs);
 };
 
@@ -5256,6 +5469,7 @@ let labFmeFlow = (req, res) => {
     //analytics
     try {
         handleAnalyticsLabs("fme");
+        handleApiCallAnalytics();
       } catch (err) {
         console.log(`🔴 Error while handling analytics(pre)`);
       }
@@ -5269,6 +5483,7 @@ let labFeeeFlow = (req, res) => {
     //analytics
     try {
         handleAnalyticsLabs("feee");
+        handleApiCallAnalytics();
       } catch (err) {
         console.log(`🔴 Error while handling analytics(pre)`);
       }
@@ -5279,6 +5494,11 @@ let labFeeeFlow = (req, res) => {
 
 //labs3 -> acwp
 let labAcwpFlow = (req, res) => {
+    try {
+        handleApiCallAnalytics();
+      } catch (err) {
+        console.log(`🔴 Error while handling analytics(pre)`);
+      }
     //analytics
     // try {
     //     handleAnalyticsLabs("wp1");
@@ -5299,6 +5519,7 @@ let labApparelWashFlow = (req, res) => {
     //   }
 
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(apparelWashLabs);
 };
 
@@ -5309,6 +5530,7 @@ let labmicFlow = (req, res) => {
     //   } catch (err) {
     //     console.log(`🔴 Error while handling analytics(pre)`);
     //   }
+    handleApiCallAnalytics();
 
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
     return res.send(micLabs);
@@ -5321,7 +5543,7 @@ let labAm2Flow = (req, res) => {
     //   } catch (err) {
     //     console.log(`🔴 Error while handling analytics(pre)`);
     //   }
-
+    handleApiCallAnalytics();
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
     return res.send(am2Labs);
 };
@@ -5333,7 +5555,7 @@ let labAp2Flow = (req, res) => {
     //   } catch (err) {
     //     console.log(`🔴 Error while handling analytics(pre)`);
     //   }
-
+    handleApiCallAnalytics();
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
     return res.send(ap2Labs);
 };
@@ -5346,6 +5568,8 @@ let labFm2Flow = (req, res) => {
     //     console.log(`🔴 Error while handling analytics(pre)`);
     //   }
 
+    handleApiCallAnalytics();
+
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
     return res.send(fm2Labs);
 };
@@ -5357,6 +5581,7 @@ let labFsdFlow = (req, res) => {
     //   } catch (err) {
     //     console.log(`🔴 Error while handling analytics(pre)`);
     //   }
+    handleApiCallAnalytics();
 
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
     return res.send(fsdLabs);
@@ -5369,6 +5594,7 @@ let labYm2Flow = (req, res) => {
     //   } catch (err) {
     //     console.log(`🔴 Error while handling analytics(pre)`);
     //   }
+    handleApiCallAnalytics();
 
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
     return res.send(ym2Labs);
@@ -5381,6 +5607,7 @@ let labpm2Flow = (req, res) => {
     //   } catch (err) {
     //     console.log(`🔴 Error while handling analytics(pre)`);
     //   }
+    handleApiCallAnalytics();
 
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
     return res.send(pm2Labs);
@@ -5393,6 +5620,7 @@ let labWp2Flow = (req, res) => {
     //   } catch (err) {
     //     console.log(`🔴 Error while handling analytics(pre)`);
     //   }
+    handleApiCallAnalytics();
 
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
     return res.send(wp2Labs);
@@ -5473,18 +5701,21 @@ let labFeee2WayLightFlow = (req, res) => {
 //labs2 -> mp
 let labMpFlow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(mpLabs);
 };
 
 //labs2 -> sss1
 let labSss1Flow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(sss1Labs);
 };
 
 //labs2 -> sss2
 let labSss2Flow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(sss2Labs);
 };
 
@@ -5496,7 +5727,9 @@ let labSss2Flow = (req, res) => {
 
 //syllabus
 let syllabusLevelFlow = (req, res) => {
+    
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send([
         {
                 batch: "45",
@@ -5582,6 +5815,7 @@ let randomNum = (length) => {
 //jokes
 let jokesFlow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
     return res.send(jokes[randomNum(jokes.length)]);
 };
 
@@ -5601,6 +5835,7 @@ let notFound = (req, res) => {
 let labs = (req, res) => {
 
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
 
     var fullUrl = req.protocol + deploymentEnvDetector() + req.get('host') + req.originalUrl;
 
