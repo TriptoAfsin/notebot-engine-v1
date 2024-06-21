@@ -34,7 +34,7 @@ const defaultReply = [
         ]
     ),
     grroupedButtonBlockGen(
-        "🔴 Sorry I didn't understand you, here are few some suggestions -",
+        "🔴 Sorry I didn't understand you, here are some suggestions -",
         [
             payloadBtnGen("Notes📗", "notes_flow"),
             payloadBtnGen("Lab Reports📋", "reports_flow"),
