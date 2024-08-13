@@ -5712,7 +5712,6 @@ let callSendAPI = async (sender_psid, response) => {
         console.log("🟢 Message sent!");
         //daily report analytics
         handleApiCallAnalytics();
-        console.log("res message", res)
       } else {
         console.error(`🔴 Unable to send message: ${err}`);
       }
