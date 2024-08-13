@@ -1741,6 +1741,7 @@ let postWebhook = async (req, res) => {
       console.log(`-------------------------------------------`)
       console.log(`🔵 Messenger Platform:\n🧑 Sender PSID: ${sender_psid}\n🧑‍🦰 Recipient PSID: ${recipient_psid}\n🕝 Timestamp: ${timestamp}`);
       console.log(`-------------------------------------------`)
+      console.log("webhook_event", webhook_event);
       
     
 
@@ -5711,6 +5712,7 @@ let callSendAPI = async (sender_psid, response) => {
         console.log("🟢 Message sent!");
         //daily report analytics
         handleApiCallAnalytics();
+        console.log("res message", res)
       } else {
         console.error(`🔴 Unable to send message: ${err}`);
       }
