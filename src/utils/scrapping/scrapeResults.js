@@ -13,13 +13,17 @@ const scrapeResults = async (limit = 3) => {
 
     // Find the target elements and extract the data
     const results = [];
-    const elements = $('.large-9.columns h3 a');
+    const elements = $('.large-9.columns h3');
 
     for (let i = 0; i < elements.length && i < limit; i++) {
       const element = elements[i];
+      const aTag = $(element).find('a');
+      const dateElement = $(element).next('small').find('time');
+      
       results.push({
-        href: $(element).attr('href'),
-        content: $(element).text().trim()
+        href: aTag.attr('href'),
+        content: aTag.text().trim(),
+        date: dateElement.text().trim()
       });
     }
 

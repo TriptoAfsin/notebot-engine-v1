@@ -5,6 +5,7 @@ require("dotenv").config();
 // let Feed = require('rss-to-json');
 
 const axios = require('axios');
+const scrapeResults = require('../../utils/scrapping/scrapeResults')
 
 
 // analytics 
@@ -1139,6 +1140,32 @@ let appIntro = (req, res) => {
     console.log("🟠 App Platform Called")
 
     return res.send(appIntro);
+};
+
+let appResults = (req, res) => {
+    console.log("🟠 App results called");
+
+    // Get the limit from query parameters, default to 5 if not provided
+    const limit = parseInt(req.query.limit) || 10;
+
+    scrapeResults(limit).then(results => {
+        if (results && results.length > 0) {
+            const response = {
+                msg: `Here are the last ${results.length} results`,
+                data: results
+            };
+            return res.send(response);
+        } else {
+            return res.status(404).send({
+                msg: "No results found or error while getting results",
+            });
+        }
+    }).catch(error => {
+        console.error("Error in appResults:", error);
+        return res.status(500).send({
+            msg: "Internal server error while processing results",
+        });
+    });
 };
 
 
@@ -5901,6 +5928,9 @@ let labs = (req, res) => {
 
 module.exports = {
     intro: appIntro,
+
+    //results
+    results: appResults,
     
     labs: labs,
 
