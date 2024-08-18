@@ -3118,7 +3118,7 @@ let  handleMessage = async (sender_psid, received_message) =>  {
     callSendAPI(sender_psid, loadingResponse);
     scrapeResults(5).then(results => {
       const combinedPayload = [
-        grroupedButtonBlockGen(
+        groupedBtnBlockGen(
           "🔴 Latest Results -",
           [
               webBtnBlockGen(results[0]?.content, results[0]?.href),
@@ -3126,7 +3126,7 @@ let  handleMessage = async (sender_psid, received_message) =>  {
               webBtnBlockGen(results[2]?.content, results[2]?.href),
           ]
       ),
-      grroupedButtonBlockGen(
+      groupedBtnBlockGen(
         "🔴 Latest Results -",
         [
             webBtnBlockGen(results[3]?.content, results[3]?.href),
