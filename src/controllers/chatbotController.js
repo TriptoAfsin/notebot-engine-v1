@@ -3116,27 +3116,35 @@ let  handleMessage = async (sender_psid, received_message) =>  {
       "🟡 Please wait, looking for latest results ..."
     );
     callSendAPI(sender_psid, loadingResponse);
-    scrapeResults(5).then(results => {
-      const combinedPayload = [
-        groupedBtnBlockGen(
-          "🔴 Latest Results -",
-          [
-              webBtnBlockGen(results[0]?.content, results[0]?.href),
-              webBtnBlockGen(results[1]?.content, results[1]?.href),
-              webBtnBlockGen(results[2]?.content, results[2]?.href),
-          ]
-      ),
-      groupedBtnBlockGen(
-        "🔴 Latest Results -",
-        [
-            webBtnBlockGen(results[3]?.content, results[3]?.href),
-            webBtnBlockGen(results[4]?.content, results[4]?.href),
-        ]
-      ),
-        ...resultFlow,
-      ]
-      magicFunc(sender_psid, combinedPayload);
-    });
+    try {
+      await scrapeResults(5).then(results => {
+        const combinedPayload = [
+          textBlockGen(
+            `🔴 Latest Results -`
+          ),
+          textBlockGen(
+            `1. ${results[0]?.content} - \n\n${results[0]?.href}`
+          ),
+          textBlockGen(
+            `2. ${results[1]?.content} - \n\n${results[1]?.href}`
+          ),
+          textBlockGen(
+            `3. ${results[2]?.content} - \n\n${results[2]?.href}`
+          ),
+          textBlockGen(
+            `4. ${results[3]?.content} - \n\n${results[3]?.href}`
+          ),
+          textBlockGen(
+            `5. ${results[4]?.content} - \n\n${results[4]?.href}`
+          ),
+          ...resultFlow,
+        ];
+        magicFunc(sender_psid, combinedPayload);
+      });
+    } catch (error) {
+      console.error('Error in scraping and processing results:', error);
+      magicFunc(sender_psid, resultFlow);
+    }
    
   } else if (wordIncludes(routine, received_message)) {
     magicFunc(sender_psid, routineFlow);
