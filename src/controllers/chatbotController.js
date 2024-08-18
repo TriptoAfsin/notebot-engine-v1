@@ -14,6 +14,8 @@ const wordIs = require("./libs/wordDetectors/wordIs");
 const wordIncludes = require("./libs/wordDetectors/wordIncludes");
 const wordIncludesWhole = require("./libs/wordDetectors/wordIncludesWhole");
 
+const scrapeResults = require('../utils/scrapping/scrapeResults')
+
 //analytics
 let handleAnalytics = async subName => {
   //console.log(`${process.env.analyticsServerUrl}/notes/${subName}?adminKey=${process.env.analyticsAuthKey}`)
@@ -3110,7 +3112,32 @@ let  handleMessage = async (sender_psid, received_message) =>  {
   } else if (wordIs(onlylabWord, received_message)) {
     magicFunc(sender_psid, labFlow);
   } else if (wordIncludes(result, received_message)) {
-    magicFunc(sender_psid, resultFlow);
+    let loadingResponse = textBlockGen(
+      "🟡 Please wait, looking for latest results ..."
+    );
+    callSendAPI(sender_psid, loadingResponse);
+    scrapeResults(5).then(results => {
+      const combinedPayload = [
+        grroupedButtonBlockGen(
+          "🔴 Latest Results -",
+          [
+              webBtnBlockGen(results[0]?.content, results[0]?.href),
+              webBtnBlockGen(results[1]?.content, results[1]?.href),
+              webBtnBlockGen(results[2]?.content, results[2]?.href),
+          ]
+      ),
+      grroupedButtonBlockGen(
+        "🔴 Latest Results -",
+        [
+            webBtnBlockGen(results[3]?.content, results[3]?.href),
+            webBtnBlockGen(results[4]?.content, results[4]?.href),
+        ]
+      ),
+        ...resultFlow,
+      ]
+      magicFunc(sender_psid, combinedPayload);
+    });
+   
   } else if (wordIncludes(routine, received_message)) {
     magicFunc(sender_psid, routineFlow);
   } else if (wordIncludes(syllabus, received_message)) {
