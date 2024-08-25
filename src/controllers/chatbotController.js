@@ -2491,6 +2491,7 @@ let  handleMessage = async (sender_psid, received_message) =>  {
       groupedBtnBlockGen(
         `🔰 Sociology - `,
         [
+          webBtnBlockGen("Hand Notes(2024)", "https://drive.google.com/drive/folders/1f6z51rGacfVwd0jEM2D0vDKjQWd2px-g?usp=sharing"),
             webBtnBlockGen("Drive", "https://drive.google.com/drive/folders/1dp46oYLKPp2Iruv0mM01uTCB-x0Hvn3r?usp=sharing"),
         ]
     ), 
