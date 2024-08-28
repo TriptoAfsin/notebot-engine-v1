@@ -3243,6 +3243,10 @@ let handlePostback = async (sender_psid, received_postback) => {
   else if (payload === "manza_faq") {
     magicFunc(sender_psid, manzaFaq);
   }
+  else if (payload === "help_flow") {
+    response = help_flow[0];
+    callSendAPI(sender_psid, response);
+  }
 
   //subject-> bce
   else if (payload === "bce_flow") {
