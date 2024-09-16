@@ -205,6 +205,7 @@ let initWebRoutes = (app) => {
     router.get("/app/notes/1/ntf/ntf_silk_flow", appController.ntfSilkFlow);
     router.get("/app/notes/1/ntf/ntf_sisal_flow", appController.ntfSisalFlow);
     router.get("/app/notes/1/ntf/ntf_hemp_flow", appController.ntfHempFlow);
+    router.get("/app/notes/1/ntf/ntf_cotton_flow", appController.ntfCottonFlow);
     router.get("/app/notes/1/ntf/ntf_palf_flow", appController.ntfPalfFlow);
     router.get("/app/notes/1/ntf/ntf_kapok_flow", appController.ntfKapokFlow);
     router.get("/app/notes/1/ntf/ntf_asbestos_flow", appController.ntfAsbestosFlow);
