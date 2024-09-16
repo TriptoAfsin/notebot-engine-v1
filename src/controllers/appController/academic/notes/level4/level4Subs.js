@@ -1,11 +1,15 @@
 let level4Subs = [
     {
         subName: "🟣 Comprehensive Viva",
-        url: "https://drive.google.com/file/d/1rTDU3td_41k2pvGT8BbhuluoGoFzqOkK/view?usp=sharing"
+        url: "https://drive.google.com/drive/folders/1X3OIcJLAAc9maPhR0oUCK4smh-vA_mjG?usp=sharing"
     },
     {
-        subName: "🟣 Final Viva, Industrial Attachments Resources -",
-        url: "https://drive.google.com/drive/folders/1m-WnO6hdaJ2W7cRJ0v5UdKarvKen4hCM"
+        subName: "🟣 Industrial Attachments Resources -",
+        url: "https://drive.google.com/drive/folders/1txN44rDdppKq77b2qi51-EqSf3DW5zwg?usp=sharing"
+    },
+    {
+        subName: "🟣 Project Work/Thesis -",
+        url: "https://drive.google.com/drive/folders/1O3LQxlMBWrWTblO0LcsnnishsliMsu8h?usp=sharing"
     },
     {
         subName: "🔴 QB",

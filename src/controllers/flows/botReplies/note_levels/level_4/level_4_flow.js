@@ -5,11 +5,13 @@ let payloadBtnGen = require("../../../../genrators/payloadBtnGen");
 
 let level_4_note = [
     grroupedButtonBlockGen(
-        `🟣 Comprehensive Viva -`,
+        `🟣 Comprehensive Viva, Project Work/Thesis Resources -`,
         [
-            webBtnBlockGen("Book+Note", "https://drive.google.com/file/d/1rTDU3td_41k2pvGT8BbhuluoGoFzqOkK/view?usp=sharing"),
+            webBtnBlockGen("Comprehensive Viva", "https://drive.google.com/drive/folders/1X3OIcJLAAc9maPhR0oUCK4smh-vA_mjG?usp=sharing"),
+            webBtnBlockGen("Project Work", "https://drive.google.com/drive/folders/1O3LQxlMBWrWTblO0LcsnnishsliMsu8h?usp=sharing"),
+            webBtnBlockGen("Industrial Attachments", "https://drive.google.com/drive/folders/1txN44rDdppKq77b2qi51-EqSf3DW5zwg?usp=sharing"),
         ]
-    ),
+    ), 
     grroupedButtonBlockGen(
         `🔴 Question Banks -`,
         [
@@ -61,14 +63,7 @@ let level_4_note = [
             payloadBtnGen("B&IL", "bil_flow"),
             webBtnBlockGen("IE(Old Syl.)", "https://drive.google.com/drive/folders/1qrbsRc4WWRKjCO3bqQDp0JK5S6Tvl6b6?usp=sharing")
         ]
-    ), 
-    grroupedButtonBlockGen(
-        `🟣 Final Viva, Industrial Attachments Resources -`,
-        [
-            webBtnBlockGen("Drive Folder", "https://drive.google.com/drive/folders/1m-WnO6hdaJ2W7cRJ0v5UdKarvKen4hCM?usp=sharing"),
-            webBtnBlockGen("YE Project Work", "https://drive.google.com/file/d/1dEfe-DrJo6fvLDXAOzR7O4yger_fTUtH/view?usp=sharing"),
-        ]
-    ), 
+    )
 ]
 
 
