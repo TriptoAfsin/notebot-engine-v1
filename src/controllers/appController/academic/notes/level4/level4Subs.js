@@ -4,11 +4,11 @@ let level4Subs = [
         url: "https://drive.google.com/drive/folders/1X3OIcJLAAc9maPhR0oUCK4smh-vA_mjG?usp=sharing"
     },
     {
-        subName: "🟣 Industrial Attachments Resources -",
+        subName: "🟣 Industrial Attachment",
         url: "https://drive.google.com/drive/folders/1txN44rDdppKq77b2qi51-EqSf3DW5zwg?usp=sharing"
     },
     {
-        subName: "🟣 Project Work/Thesis -",
+        subName: "🟣 Project Work/Thesis",
         url: "https://drive.google.com/drive/folders/1O3LQxlMBWrWTblO0LcsnnishsliMsu8h?usp=sharing"
     },
     {
