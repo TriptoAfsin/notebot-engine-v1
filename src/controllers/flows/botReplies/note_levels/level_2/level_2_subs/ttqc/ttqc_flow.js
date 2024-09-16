@@ -7,15 +7,16 @@ let bondiFlow = require("../../../../sponsoredFlows/bondiCard");
 let ttqcFlow = [
     bondiFlow,
     grroupedButtonBlockGen(
-        "📌 QB Solve -",
+        "📌 Books -",
         [
-            webBtnBlockGen("Rafi(2023)", "https://drive.google.com/drive/folders/17Yv0ziAOwwxnoLCMb17vup-ljSxpEx5y?usp=sharing"),
+            webBtnBlockGen("Jalal Sir", "https://drive.google.com/file/d/1Hd5-K1t9X66MZBd3VqCJYSaJwLiIuuFk/view?usp=sharing"),
         ]
     ),
     grroupedButtonBlockGen(
-        "📌 Math Solve -",
+        "📌 Solves -",
         [
             webBtnBlockGen("Part-B(2023)", "https://drive.google.com/file/d/1wAXc-PeLbcrvjWZtrd_Fzcg5JKpThCMP/view?usp=sharing"),
+            webBtnBlockGen("Rafi(2023)", "https://drive.google.com/drive/folders/17Yv0ziAOwwxnoLCMb17vup-ljSxpEx5y?usp=sharing"),
         ]
     ),
     grroupedButtonBlockGen(`📌 Full Hand Notes -`,

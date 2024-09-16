@@ -9,6 +9,12 @@ let bondiFlow = require("../../../../sponsoredFlows/bondiCard");
 let econoFlow = [
     bondiFlow,
     grroupedButtonBlockGen(
+        `📽️ Youtube Playlist -`,
+        [
+            webBtnBlockGen("Rafi(ESE-46,2024)", "https://www.youtube.com/playlist?list=PLpFoI_N-jBPEPa5hMTIsu6-aGpQvuteh6"),
+        ]
+    ),
+    grroupedButtonBlockGen(
         "📌 Full Hand Notes - ",
         [
             webBtnBlockGen("B(Akib)(2022)", "https://drive.google.com/file/d/1-ZI1d9-AOvzUA_HhWpD9v51E_SA8Ocjn/view"),

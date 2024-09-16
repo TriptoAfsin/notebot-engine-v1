@@ -35,6 +35,10 @@ let level3Labs = [
     //     subName: "TC-I",
     //     route: "app/labs/3/tc1"
     // },
+    // {
+    //     subName: "EAIC",
+    //     link: "https://drive.google.com/drive/folders/1i10S7hEutVWy4ylFyT_SXTZ_9hakdBXJ?usp=sharing"
+    // },
     {
         subName: "PM-II",
         route: "app/labs/3/pm2"

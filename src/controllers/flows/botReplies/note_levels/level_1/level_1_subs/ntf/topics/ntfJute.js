@@ -4,6 +4,7 @@ let webBtnBlockGen = require("../../../../../../../genrators/webBtnBlockGen");
 
 
 let ntfJute = [
+    textBlockGen(`🔷 Hand Note(Abid,YE-49, 2024)-\n\nhttps://drive.google.com/file/d/1jI_1o0GY3pabX5Va2glAnNAADehHaEET/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note(Akib, 2019)-\n\nhttps://drive.google.com/file/d/10Mj6aGOHxmyhuhGwmzX9RZIHE2AIBpPk/view?usp=drivesdk`),
     textBlockGen(`🔷 Hand Note(Tripto,2019, partial)-\n\nhttps://drive.google.com/file/d/1IELE8_1MUI1prDi-QWaMmKUGpV1lSzfp/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note(Azim, TEM-46, 2021)-\n\nhttps://drive.google.com/file/d/1AJXuB35NiBG3zETb0Gkl1Zh73je5C0F3/view?usp=sharing`),

@@ -7,6 +7,12 @@ let bondiFlow = require("../../../../sponsoredFlows/bondiCard");
 let acmFlow = [
     bondiFlow,
     grroupedButtonBlockGen(
+        `📽️ Youtube Playlist -`,
+        [
+            webBtnBlockGen("Rafi(ESE-46,2024)", "https://www.youtube.com/playlist?list=PLpFoI_N-jBPEPa5hMTIsu6-aGpQvuteh6"),
+        ]
+    ),
+    grroupedButtonBlockGen(
         `📌 Full Notes -`,
         [
             webBtnBlockGen("Anika(Emu Mam)", "https://drive.google.com/file/d/1kFEKcaamuhpk4EfN8vnRpeHJbInTkhJ_/view?usp=sharing"),
