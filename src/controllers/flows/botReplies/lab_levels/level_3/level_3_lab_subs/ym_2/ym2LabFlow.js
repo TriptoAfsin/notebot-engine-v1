@@ -3,6 +3,12 @@ let webBtnBlockGen = require("../../../../../../genrators/webBtnBlockGen");
 let payloadBtnGen = require("../../../../../../genrators/payloadBtnGen");
 
 let ym2_lab_flow = [
+    grroupedButtonBlockGen(
+        "📌 All Reports -",
+        [
+            webBtnBlockGen("All Combined(Samia)", "https://drive.google.com/file/d/1ZhaMDec6y5QkgzFmhDs6sg1GnzbuRU4H/view?usp=sharing"),
+        ]
+    ),
     grroupedButtonBlockGen("⚡ Viva Note - ",
         [
             webBtnBlockGen("Sazzad(2024)", "https://drive.google.com/file/d/1HhL0vCzzuaMxfnE6JgUtAlIty6qOrWH4/view?usp=sharing"),

@@ -132,6 +132,8 @@ const bothAMWords = require("./keywords/academic_words/subjects/bothAM");
 const bothAPWords = require("./keywords/academic_words/subjects/bothAP");
 const bothWPWords = require("./keywords/academic_words/subjects/bothWP");
 
+const applicationOfComputers = require("./keywords/academic_words/subjects/applicationComputer");
+
 //bothSubj flows
 const bothWPFlow = require("./flows/botReplies/note_levels/level_2/bothWPFlow");
 const bothAMFlow = require("./flows/botReplies/note_levels/level_2/bothAMFlow");
@@ -578,6 +580,8 @@ const level_1_notes = require("./flows/botReplies/note_levels/level_1/level_1_fl
 const level_2_notes = require("./flows/botReplies/note_levels/level_2/level_2_flow");
 const level_3_notes = require("./flows/botReplies/note_levels/level_3/level_3_flow");
 const level_4_notes = require("./flows/botReplies/note_levels/level_4/level_4_flow");
+
+const applicationComputerFlow = require("./flows/botReplies/note_levels/level_3/application_computers");
 
 //academic flows -> bce
 const bce_flow = require("./flows/botReplies/note_levels/level_1/level_1_subs/bce/bce_flow");
@@ -2507,7 +2511,11 @@ let  handleMessage = async (sender_psid, received_message) =>  {
     magicFunc(sender_psid, level_2_notes);
   } else if (wordIncludes(level3, received_message)) {
     magicFunc(sender_psid, level_3_notes);
-  } else if (wordIncludes(level4, received_message)) {
+  } 
+  else if (wordIncludes(applicationOfComputers, received_message)) {
+    magicFunc(sender_psid, applicationComputerFlow);
+  }
+  else if (wordIncludes(level4, received_message)) {
     magicFunc(sender_psid, level_4_notes);
   } else if (wordIs(bothChem, received_message)) {
     magicFunc(sender_psid, bothChem_flow);

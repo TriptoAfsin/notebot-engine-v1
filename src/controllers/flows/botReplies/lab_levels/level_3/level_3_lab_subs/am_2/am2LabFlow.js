@@ -15,7 +15,8 @@ let am2_lab_flow = [
     },
     grroupedButtonBlockGen("📌 All Reports - ", [
         webBtnBlockGen('Bappi', 'https://drive.google.com/file/d/1u2YX4OyycdHalBxQ0LLYSz42T0-naoJf/view'),
-        webBtnBlockGen('Wasima', 'https://drive.google.com/file/d/1xMtBHwCmWrAY_KJsCp9VR5JldYIYxvXv/view?usp=sharing')
+        webBtnBlockGen('Wasima', 'https://drive.google.com/file/d/1xMtBHwCmWrAY_KJsCp9VR5JldYIYxvXv/view?usp=sharing'),
+        webBtnBlockGen('Samia', 'https://drive.google.com/file/d/12-k3-UwlJaQ2ceO2yiIocCJK429NSS0Z/view?usp=sharing')
     ]),
     grroupedButtonBlockGen("⚡ Select Experiment for AM-II - ", 
         [

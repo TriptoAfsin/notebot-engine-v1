@@ -8,6 +8,12 @@ let bondiFlow = require("../../../../sponsoredFlows/bondiCard");
 let fsdFlow = [
     bondiFlow,
     grroupedButtonBlockGen(
+        `📌 YouTube Playlist  `,
+        [
+            webBtnBlockGen("Watch 📺", "https://www.youtube.com/playlist?list=PLpFoI_N-jBPE6RvaZS-J5PZNj11hzVr0K"),
+        ]
+    ),
+    grroupedButtonBlockGen(
         `📌 Full Notes  `,
         [
             webBtnBlockGen("Akib(A)", "https://drive.google.com/file/d/1AIDhY0Y6KIHkzUgxsbKs2OxhDlwhGeS3/view"),
