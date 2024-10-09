@@ -13,6 +13,12 @@ let acmFlow = [
         ]
     ),
     grroupedButtonBlockGen(
+        `📌 Full Notes(2024) -  `,
+        [
+            webBtnBlockGen("Lingkon(Affli.)", "https://drive.google.com/file/d/1JtCgEYDxOIUaM_91lFh9HPK2L13Ivcm1/view?usp=sharing"),
+        ]
+    ),
+    grroupedButtonBlockGen(
         `📌 Full Notes -`,
         [
             webBtnBlockGen("Anika(Emu Mam)", "https://drive.google.com/file/d/1kFEKcaamuhpk4EfN8vnRpeHJbInTkhJ_/view?usp=sharing"),

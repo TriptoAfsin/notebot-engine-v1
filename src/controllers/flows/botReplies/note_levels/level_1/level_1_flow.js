@@ -59,6 +59,7 @@ let level_1_note = [
         [
             payloadBtnGen("Fashion His.", "fh_flow"),
             webBtnBlockGen("FMG(Mgmt.)", "https://drive.google.com/file/d/1q6llewteDyEz1TQegSB4rNF8EMxlsOr5/view?usp=sharing"),
+            webBtnBlockGen("IESE", "https://drive.google.com/drive/folders/1oAPDYr4C3DNDEiSJrL02UqBtkybhM04x?usp=sharing"),
         ]
     )
 ]

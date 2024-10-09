@@ -82,6 +82,10 @@ let level1Subs = [
     {
         subName: "FMG(Mgmt)",
         url: "https://drive.google.com/file/d/1q6llewteDyEz1TQegSB4rNF8EMxlsOr5/view?usp=sharing"
+    },
+    {
+        subName: "IESE",
+        url: "https://drive.google.com/drive/folders/1oAPDYr4C3DNDEiSJrL02UqBtkybhM04x?usp=sharing"
     }
 ]
 

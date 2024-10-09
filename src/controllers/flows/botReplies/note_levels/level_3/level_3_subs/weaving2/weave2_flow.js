@@ -6,9 +6,15 @@ let bondiFlow = require("../../../../sponsoredFlows/bondiCard");
 
 let weave2Flow = [
     grroupedButtonBlockGen(
-        "📌 Select Topics for WP-II -",
+        "📌 Select Topics for Weave-II -",
         [
             webBtnBlockGen("Sheets", "https://drive.google.com/drive/folders/1EOWS90PpbXe-iFwkyVybOjJAJw_TMgFd?usp=sharing")
+        ]
+    ),
+    grroupedButtonBlockGen(
+        `📌 Full Notes(2024) -  `,
+        [
+            webBtnBlockGen("Lingkon(Affli.)", "https://drive.google.com/file/d/1w_Ytd4VV1w_RjkbFXjtq61i84kYdbSH0/view?usp=sharing"),
         ]
     ),
     grroupedButtonBlockGen(

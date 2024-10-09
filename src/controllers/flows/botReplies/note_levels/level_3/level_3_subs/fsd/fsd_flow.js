@@ -14,6 +14,12 @@ let fsdFlow = [
         ]
     ),
     grroupedButtonBlockGen(
+        `📌 Full Notes(2024) -  `,
+        [
+            webBtnBlockGen("Lingkon(Affli.)", "https://drive.google.com/file/d/1JE_2banZEmUZkjJWJhcf4bunpQbgif0O/view?usp=sharing"),
+        ]
+    ),
+    grroupedButtonBlockGen(
         `📌 Full Notes  `,
         [
             webBtnBlockGen("Akib(A)", "https://drive.google.com/file/d/1AIDhY0Y6KIHkzUgxsbKs2OxhDlwhGeS3/view"),

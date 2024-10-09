@@ -16,6 +16,12 @@ let aceFlow = [
         ]
     ),
     grroupedButtonBlockGen(
+        `📌 Full Notes(2024) -  `,
+        [
+            webBtnBlockGen("Lingkon(Affli.)", "https://drive.google.com/file/d/1PrDbZw5zSpaz0JZJB1ubPJWfrZ2ermi0/view?usp=sharing"),
+        ]
+    ),
+    grroupedButtonBlockGen(
         `📌 Full Notes -  `,
         [
             webBtnBlockGen("Hamja Sir", "https://drive.google.com/file/d/1nmY_03EfkpJIM7cfc_2MrAo599D83Zzk/view?usp=sharing"),
