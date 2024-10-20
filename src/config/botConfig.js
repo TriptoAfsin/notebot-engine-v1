@@ -19,7 +19,7 @@ let botConfig = {
     payloadBtn("Donate 💰", "donation_payload"),
     webBtn("Founder 🧑", "https://triptex.me/"),
     webBtn("Submit Notes 📙", "https://goo.gl/forms/akfj9X8vxuoj2xQg2"),
-    webBtn("NoteBOT Web 🌍", "https://notebot.netlify.app/#/"),
+    webBtn("NoteBOT Web 🌍", "https://notebot-web.onrender.com"),
   ],
 
   //welcome message
