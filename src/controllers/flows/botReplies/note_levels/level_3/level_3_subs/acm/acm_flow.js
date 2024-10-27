@@ -16,6 +16,7 @@ let acmFlow = [
         `📌 Full Notes(2024) -  `,
         [
             webBtnBlockGen("Lingkon(Affli.)", "https://drive.google.com/file/d/1JtCgEYDxOIUaM_91lFh9HPK2L13Ivcm1/view?usp=sharing"),
+            webBtnBlockGen("Assignment(Forhad Sir)", "https://drive.google.com/file/d/1K8T964yk8J1wA_W8vRRn8a7nEC8NX6sV/view?usp=sharing"),
         ]
     ),
     grroupedButtonBlockGen(

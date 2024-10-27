@@ -1024,6 +1024,9 @@ let initWebRoutes = (app) => {
       //lab - mic
       router.get("/app/labs/3/mic", appController.labmicFlow);
 
+      //lab - mic
+      router.get("/app/labs/3/wpm_mach", appController.labWpmMachFlow);
+
       //lab - tc1
       router.get("/app/labs/3/tc1", appController.labAcwpFlow);
 

@@ -49,6 +49,7 @@ let level_3_lab = [
         "🔰 Select Subject Your Lab Report -",
         [
             webBtnBlockGen("EAIC", "https://drive.google.com/drive/folders/1i10S7hEutVWy4ylFyT_SXTZ_9hakdBXJ?usp=sharing"),
+            webBtnBlockGen("WPM(Wet ..)", "https://drive.google.com/drive/folders/1I6Jtxt7zhTLSK_vxOfVE9bl5OshIbOcQ?usp=sharing"),
         ]
     ),
     grroupedButtonBlockGen(

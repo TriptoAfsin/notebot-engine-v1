@@ -46,6 +46,10 @@ let level3Labs = [
     {
         subName: "MIC(New)",
         route: "app/labs/3/mic"
+    },
+    {
+        subName: "Wet Process Machinery",
+        route: "app/labs/3/wpm_mach"
     }
 ]
 
