@@ -4,10 +4,6 @@ let level2Labs = [
         route: "app/labs/2/am1"
     },
     {
-        subName: "AP-I",
-        route: "app/labs/1/ap1"
-    },
-    {
         subName: "WP-I",
         route: "app/labs/2/wp1"
     },

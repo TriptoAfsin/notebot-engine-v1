@@ -6,6 +6,12 @@ let payloadBtnGen = require('simple-messenger-blocks/payloadBtnGen');
 
 let wp1_lab_flow = [
     grroupedButtonBlockGen(
+        "⚡ Lab Viva -",
+        [
+            webBtnBlockGen("Estiak(2024)", "https://drive.google.com/file/d/1NM-YZx5_PwKXKscQ-EHSt0LFjkUc_ufq/view?usp=sharing"),
+        ]
+    ),
+    grroupedButtonBlockGen(
         "⚡ All Combined -",
         [
             webBtnBlockGen("ইয়ামিন", "https://drive.google.com/file/d/11E9-rVvkh0lFe6lXxfqkhY3HZfLeBKAB/view?usp=sharing"),
@@ -18,6 +24,7 @@ let wp1_lab_flow = [
         [
             webBtnBlockGen("Samia", "https://drive.google.com/file/d/1ki_Z6BLw3kgaaiULCqaj5EjiiCoWWM40/view?usp=sharing"),
             webBtnBlockGen("Samet", "https://drive.google.com/file/d/1-c5v1-iBi9B_9PdV3kMPmVNHR_cupUGf/view?usp=sharing"),
+            webBtnBlockGen("Estiak(2024)", "https://drive.google.com/file/d/1pIreENhMblpwc0C1-_ZmSSjnAf6oljNC/view?usp=sharing"),
         ]
     ),
     grroupedButtonBlockGen(

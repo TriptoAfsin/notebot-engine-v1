@@ -2,6 +2,7 @@ let textBlockGen = require('simple-messenger-blocks/textBlockGen');
 
 
 let electricNotes = [
+    textBlockGen(`🔷 Hand Note (Farabi, WPE-48, 2024) - \n\nhttps://drive.google.com/file/d/10LGsoq8QVZ4jaVCLN-qn8B4a2Vrdnp8F/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note (Tashfiq,TEM-47,2023) - \n\nhttps://drive.google.com/file/d/1e3d2aUwIJLRpV8ZfsPRhyWxZ0YCrx1sJ/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note (Sadia,TEM-46,2022) - \n\nhttps://drive.google.com/file/d/1QIWbGyWThErixB9yr-IszlA2CYsJCi2f/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note(Sakib,DCE-46,2022)-\n\nhttps://drive.google.com/file/d/1MCNm4yxaHyhh3k5l3pOZAD9MyXWnTdUi/view?usp=sharing`),

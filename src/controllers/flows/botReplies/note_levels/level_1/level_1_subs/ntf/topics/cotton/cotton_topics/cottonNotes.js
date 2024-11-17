@@ -1,4 +1,4 @@
-let textBlockGen = require("../../../../../../../../../genrators/textBlockGen");
+const textBlockGen = require("simple-messenger-blocks/textBlockGen");
 
 let cottonNotes = [
     textBlockGen(`🔷 Hand Note(Abid,YE-49, 2024)-\n\nhttps://drive.google.com/file/d/1CX0RAaErlilEpmBzm1nY4vT3ZBDrfLxr/view?usp=sharing`),

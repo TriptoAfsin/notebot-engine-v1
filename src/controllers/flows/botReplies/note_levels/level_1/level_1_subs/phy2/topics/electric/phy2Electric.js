@@ -1,6 +1,6 @@
-let grroupedButtonBlockGen = require("../../../../../../../../genrators/grroupedButtonBlockGen");
-let webBtnBlockGen = require("../../../../../../../../genrators/webBtnBlockGen");
-let payloadBtnGen = require("../../../../../../../../genrators/payloadBtnGen");
+const grroupedButtonBlockGen = require('simple-messenger-blocks/groupedBtnBlockGen');
+const webBtnBlockGen = require('simple-messenger-blocks/webBtnGen');
+const payloadBtnGen = require('simple-messenger-blocks/payloadBtnGen');
 
 let phy2_electric_flow = [
 
