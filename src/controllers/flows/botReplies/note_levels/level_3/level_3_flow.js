@@ -96,6 +96,10 @@ let level_3_note = [
       "ACAM",
       "https://drive.google.com/drive/folders/1Z1Xzjtc_9suoB12JBU0zoFud5y6pYC2k?usp=sharing"
     ),
+    webBtnBlockGen(
+      "SYM",
+      "https://drive.google.com/drive/folders/1632Rlb5rOPeQkKsGmO_VTxIEz6EY5OSY?usp=sharing"
+    ),
   ]),
 ];
 

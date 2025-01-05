@@ -7,9 +7,10 @@ let bondiFlow = require("../../../../sponsoredFlows/bondiCard");
 let tpFlow = [
     bondiFlow,
     grroupedButtonBlockGen(
-        "📌 QB Solve -",
+        "📌 QB Solve & Video Lectures -",
         [
             webBtnBlockGen("Rafi(2023)", "https://drive.google.com/drive/folders/16mRiVpUohGl_QHul0DSS8PwF2qKdVMdj?usp=sharing"),
+            webBtnBlockGen("YouTube Playlist", "https://www.youtube.com/playlist?list=PLpFoI_N-jBPErZss0jndEkuoiABWBTh0g"),
         ]
     ),
     grroupedButtonBlockGen(

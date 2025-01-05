@@ -2,6 +2,7 @@ let textBlockGen = require("../../../../../../../genrators/textBlockGen");
 
 
 let pseDegradation = [
+    textBlockGen(`🔷 Hand Note(Rashik,DCE-49,2025)  - \n\nhttps://drive.google.com/file/d/1UbyBeQnEoSxvVdRLj0YSTjazDuor8FE-/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note(Tonmoy,FE-48,2023)  - \n\nhttps://drive.google.com/file/d/1_3Jc308IDvUm__exST_-IZvDX0Ujoa1s/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note(Nafis,IPE-46,2021)  - \n\nhttps://drive.google.com/file/d/1P6081obS4ONucxdSoCrwt0fpfB7IEm6z/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note(Raiyan, FE-48,2023) - \n\nhttps://drive.google.com/file/d/1m8h90r6Km738TMY__gtrPElfIcZVIiv3/view?usp=sharing`),

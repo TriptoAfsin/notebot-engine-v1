@@ -1,6 +1,14 @@
 let chem2OrgReac = [
     {
-        "text": `🔷Brishty Mam Slide(2019)-
+        "text": `🔷 Hand Note(Mim, TEM-49, 2025)-
+        https://drive.google.com/file/d/11lBVKF18sYcWChcIJO6J-LXX2d6PXnKD/view?usp=sharing`
+    },
+    {
+        "text": `🔷 Hand Note(Abrar, IPE-49, 2025)-
+        https://drive.google.com/file/d/1Q4MmfeqkQd0OKXau8sRJAzpwI2wmx7Kn/view?usp=sharing`
+    },
+    {
+        "text": `🔷 Brishty Mam Slide(2019)-
         https://drive.google.com/open?id=13R9anxJhesIvHmZZriAf4fmMt8-xRAfm`
     },
     {

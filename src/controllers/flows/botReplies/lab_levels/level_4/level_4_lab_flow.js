@@ -20,6 +20,13 @@ let level_4_lab = [
             webBtnBlockGen("Wvg-II", "https://drive.google.com/drive/folders/1AJMRd7Q8h4I51ycg0e7ceqreyHaik9Ul?usp=sharing"),
         ]
     ),
+    grroupedButtonBlockGen(
+        "🔰 Select Subject Your Lab Report -",
+        [
+            webBtnBlockGen("WWMM", "https://drive.google.com/drive/folders/1sVhE7w1GKLQtn4It0KqOAwqy971V_9uj?usp=sharing"),
+            webBtnBlockGen("SHWM", "https://drive.google.com/drive/folders/1Ss6UOS_De1zRCVNonJnrsA18jGu8KavZ?usp=sharing"),
+        ]
+    ),
 ]
 
 

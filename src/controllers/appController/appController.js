@@ -998,6 +998,9 @@ let labLevel2Subs = require('./academic/labReport/level2/level2Labs')
 //lab level 3
 let labLevel3Subs = require('./academic/labReport/level3/level3Labs')
 
+//lab level 4
+let labLevel4Subs = require('./academic/labReport/level4/level4Labs')
+
 //lab2 - am1
 let am1Labs = require('./academic/labReport/level2/subs/am1/am1Labs')
 let am1LabsAll = require('./academic/labReport/level2/subs/am1/topics/appAm1AllReport')
@@ -1041,6 +1044,31 @@ let ym2Labs = require('./academic/labReport/level3/subs/ym2/ym2Labs');
 
 //lab3 - pm2
 let pm2Labs = require('./academic/labReport/level3/subs/pm2/pm2Labs');
+
+//lab3 - eaic
+const eaicLabs = require('./academic/labReport/level3/subs/eaic/eaicLabs');
+
+//lab4 - esm
+const esmLabs = require('./academic/labReport/level4/subs/esm/esmLabs');
+
+//lab4 - kfa
+const kfaLabs = require('./academic/labReport/level4/subs/kfa/kfaLabs');
+
+//lab4 - sfp
+const sfpLabs = require('./academic/labReport/level4/subs/sfp/sfpLabs');
+
+//lab4 - wvg2
+const wvg2Labs = require('./academic/labReport/level4/subs/wvg2/wvg2Labs');
+
+//lab4 - SHWM
+const shwmLabs = require('./academic/labReport/level4/subs/shwm/shwmLabs');
+
+//lab4 - WWMM
+const wwmmLabs = require('./academic/labReport/level4/subs/wwmm/wwmmLabs');
+
+//lab4 - MHMM
+const mhmmLabs = require('./academic/labReport/level4/subs/mhmm/mhmmLabs');
+
 
 //lab3 - fsd
 let fsdLabs = require('./academic/labReport/level3/subs/fsd/fsdLabs');
@@ -1234,6 +1262,12 @@ let level3Labs = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
     handleApiCallAnalytics();
     return res.send(labLevel3Subs);
+};
+
+let level4Labs = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
+    return res.send(labLevel4Subs);
 };
 
 
@@ -5659,6 +5693,113 @@ let labpm2Flow = (req, res) => {
     return res.send(pm2Labs);
 };
 
+let labEaicFlow = (req, res) => {
+    //analytics
+    // try {
+    //     handleAnalyticsLabs("wp1");
+    //   } catch (err) {
+    //     console.log(`🔴 Error while handling analytics(pre)`);
+    //   }
+    handleApiCallAnalytics();
+
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(eaicLabs);
+};
+
+let labWWMMFlow = (req, res) => {
+    //analytics
+    // try {
+    //     handleAnalyticsLabs("wp1");
+    //   } catch (err) {
+    //     console.log(`🔴 Error while handling analytics(pre)`);
+    //   }
+    handleApiCallAnalytics();
+
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(wwmmLabs);
+};
+
+let labSHWMFlow = (req, res) => {
+    //analytics
+    // try {
+    //     handleAnalyticsLabs("wp1");
+    //   } catch (err) {
+    //     console.log(`🔴 Error while handling analytics(pre)`);
+    //   }
+    handleApiCallAnalytics();
+
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(shwmLabs);
+};
+
+let labESMFlow = (req, res) => {
+    //analytics
+    // try {
+    //     handleAnalyticsLabs("wp1");
+    //   } catch (err) {
+    //     console.log(`🔴 Error while handling analytics(pre)`);
+    //   }
+    handleApiCallAnalytics();
+
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(esmLabs);
+};
+
+let labWVG2Flow = (req, res) => {
+    //analytics
+    // try {
+    //     handleAnalyticsLabs("wp1");
+    //   } catch (err) {
+    //     console.log(`🔴 Error while handling analytics(pre)`);
+    //   }
+    handleApiCallAnalytics();
+
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(wvg2Labs);
+};
+
+let labKFAFlow = (req, res) => {
+    //analytics
+    // try {
+    //     handleAnalyticsLabs("wp1");
+    //   } catch (err) {
+    //     console.log(`🔴 Error while handling analytics(pre)`);
+    //   }
+    handleApiCallAnalytics();
+
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(kfaLabs);
+};
+
+let labSFPFlow = (req, res) => {
+    //analytics
+    // try {
+    //     handleAnalyticsLabs("wp1");
+    //   } catch (err) {
+    //     console.log(`🔴 Error while handling analytics(pre)`);
+    //   }
+    handleApiCallAnalytics();
+
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(sfpLabs);
+};
+
+let labMHMMFlow = (req, res) => {
+    //analytics
+    // try {
+    //     handleAnalyticsLabs("wp1");
+    //   } catch (err) {
+    //     console.log(`🔴 Error while handling analytics(pre)`);
+    //   }
+    handleApiCallAnalytics();
+
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(mhmmLabs);
+};
+
+
+
+
 let labWp2Flow = (req, res) => {
     //analytics
     // try {
@@ -5957,6 +6098,15 @@ module.exports = {
     notesLevel2: level2Notes,
     notesLevel3: level3Notes,
     notesLevel4: level4Notes,
+
+
+    labMHMMFlow: labMHMMFlow,
+    labESMFlow: labESMFlow,
+    labSFPFlow: labSFPFlow,
+    labKFAFlow: labKFAFlow,
+    labWVG2Flow: labWVG2Flow,
+    labWWMMFlow: labWWMMFlow,
+    labSHWMFlow: labSHWMFlow,
 
     //math1
     math1: math1,
@@ -6658,6 +6808,7 @@ module.exports = {
     level1Labs: level1Labs,
     level2Labs: level2Labs,
     level3Labs: level3Labs,
+    level4Labs: level4Labs,
 
     labChem1Flow: labChem1Flow,
     labChem1ProcedureFlow: labChem1ProcedureFlow,
@@ -6777,6 +6928,7 @@ module.exports = {
     labWp2Flow: labWp2Flow,
     labYm2Flow: labYm2Flow,
     labpm2Flow: labpm2Flow,
+    labEaicFlow: labEaicFlow,
 
     labWppFlow: labWppFlow,
 

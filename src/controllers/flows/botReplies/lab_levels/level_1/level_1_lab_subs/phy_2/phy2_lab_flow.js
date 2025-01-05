@@ -9,6 +9,8 @@ let phy2_lab_flow = [
         "📌 All Lab Reports -",
         [
             webBtnBlockGen("2022", "https://drive.google.com/file/d/1dLXbV8GiLNiDUaapr1nopXWh0u-bs1xn/view?usp=sharing"),
+            webBtnBlockGen("Mahmudur(2025)", "https://drive.google.com/file/d/1qsBAIPXe6pykjioOG6zbWyarfk5NteHt/view?usp=sharing"),
+            webBtnBlockGen("Tahin(2025)", "https://drive.google.com/drive/folders/1QfhbXoPV4skCrmEet_07Ybpq-9sxjNBs?usp=sharing"),
         ]
     ),
     grroupedButtonBlockGen(

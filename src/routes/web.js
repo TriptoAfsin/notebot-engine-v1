@@ -847,6 +847,7 @@ let initWebRoutes = (app) => {
     router.get("/app/labs/1", appController.level1Labs);
     router.get("/app/labs/2", appController.level2Labs);
     router.get("/app/labs/3", appController.level3Labs);
+    router.get("/app/labs/4", appController.level4Labs);
 
 
     //lab- chem1
@@ -1015,6 +1016,9 @@ let initWebRoutes = (app) => {
       //lab - pm2
       router.get("/app/labs/3/pm2", appController.labpm2Flow);
 
+      //lab - eaic
+      router.get("/app/labs/3/eaic", appController.labEaicFlow);
+
       //lab - fm2
       router.get("/app/labs/3/fm2", appController.labFm2Flow);
 
@@ -1057,6 +1061,35 @@ let initWebRoutes = (app) => {
 
     //lab - fe_wpp
     router.get("/app/labs/2/fe_wpp", appController.labFe_WppFlow);
+
+
+    //lab level 4
+    //lab - MHMM
+    router.get("/app/labs/4/MHMM", appController.labMHMMFlow);
+
+
+    //lab - ESM
+    router.get("/app/labs/4/esm", appController.labESMFlow);
+
+    //lab - sfp
+    router.get("/app/labs/4/sfp", appController.labSFPFlow);
+
+    //lab - KFA
+    router.get("/app/labs/4/kfa", appController.labKFAFlow);
+
+    //lab - Wvg-II
+    router.get("/app/labs/4/wvg2", appController.labWVG2Flow);
+
+    //lab - WWMM
+    router.get("/app/labs/4/wwmm", appController.labWWMMFlow);
+
+     //lab - SHWM
+     router.get("/app/labs/4/shwm", appController.labSHWMFlow);
+
+
+
+
+
 
 
 
