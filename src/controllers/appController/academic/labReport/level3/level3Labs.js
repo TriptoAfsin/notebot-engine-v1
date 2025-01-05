@@ -37,7 +37,7 @@ let level3Labs = [
     // },
     {
         subName: "EAIC",
-        link: "app/labs/3/eaic"
+        route: "app/labs/3/eaic"
     },
     {
         subName: "PM-II",
