@@ -36,7 +36,7 @@ let handleAnalytics =  async(subName) => {
         }catch(err){
             //console.log(err)
             console.log(`🔴 Error occurred while handling analytics(${subName})`)
-            console.log(err)
+            console.log(err?.response)
         }
     }
     else{

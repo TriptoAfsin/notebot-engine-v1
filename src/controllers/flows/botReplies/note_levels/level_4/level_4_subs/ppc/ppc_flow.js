@@ -6,6 +6,7 @@ const ppcFlow = [
         "🔰 YouTube Playlist ",
         [
             webBtnBlockGen("Rafi(2025)", "https://www.youtube.com/playlist?list=PLpFoI_N-jBPHj4ptY35QehI-1TdzOX-eD"),
+            webBtnBlockGen("Maths", "https://www.youtube.com/playlist?list=PLpFoI_N-jBPHj4ptY35QehI-1TdzOX-eD"),
         ]
     ),
     grroupedButtonBlockGen(
