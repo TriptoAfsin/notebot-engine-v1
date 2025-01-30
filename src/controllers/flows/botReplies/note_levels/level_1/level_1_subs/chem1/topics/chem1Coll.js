@@ -1,6 +1,7 @@
 let textBlockGen = require('simple-messenger-blocks/textBlockGen');
 
 let chem1Coll = [
+    textBlockGen(`🔷 Hand Note(Prottush, FE-50, 2025) - \n\nhttps://drive.google.com/file/d/1JH84KKNRPNApFvHCTYatxBnJ5IcoS_Q_/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note(Akib, 2018) - \n\nhttps://drive.google.com/file/d/1Sc-oUR7Hxm7W0t5xEuQg9fhj4z1dar8m/view?usp=drivesdk`),
     textBlockGen(`🔷 Hand Note(Tripto, 2018)-\n\nhttps://drive.google.com/file/d/17GLC4UsQ8ICub3TQO_mRpQHx3l56_W0P/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note(Raiyan, FE-48,2023) - \n\nhttps://drive.google.com/file/d/1xqJOdhYS9_HpIirEt768ypFCy92T4Tyc/view?usp=sharing`),

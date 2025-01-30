@@ -2,7 +2,9 @@ let textBlockGen = require('simple-messenger-blocks/textBlockGen');
 
 
 let math2Vector = [
-    textBlockGen(`🔷 Handnote(Emon, Based on Rokon Sir's Lecture,2018)-\n\nhttps://drive.google.com/file/d/1hPUjDJtK7lqqLvxHLz-U-CYO_nCdkUZF/view?usp=sharing`),
+    textBlockGen(`🔷 Hand Note(Abinash, AE-49, 2025)-\n\nhttps://drive.google.com/file/d/1v5itY_s0datpeXav2bWbY9YOluOoVX04/view?usp=sharing`),
+    textBlockGen(`🔷 Hand Note(Nurul, IPE-49, 2025)-\n\nhttps://drive.google.com/file/d/1mxxAjgK8y5TRh8o8U-sGnqEUobNl5d6s/view?usp=sharing`),
+    textBlockGen(`🔷 Hand Note(Emon, Based on Rokon Sir's Lecture,2018)-\n\nhttps://drive.google.com/file/d/1hPUjDJtK7lqqLvxHLz-U-CYO_nCdkUZF/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note(Archi,AE-45,2021) - \n\nhttps://drive.google.com/file/d/1FtFnwBiTXDA1N47Qm6vCBZ7QQyQXc-Pa/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note(Samet,FE-47,2023) - \n\nhttps://drive.google.com/file/d/1nxGo73q1gBlXnrBikbFKZDrvF2YJbGVK/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note(Nafis,IPE-46,2022) - \n\nhttps://drive.google.com/file/d/1p5jZ6F_WmFLi9zJmQ6LAz3IVZV_MysG9/view?usp=sharing`),

@@ -4,9 +4,10 @@ let payloadBtnGen = require('simple-messenger-blocks/payloadBtnGen');
 
 
 let fmeFlow = [
-grroupedButtonBlockGen(`📌 New(2023) - `,
+grroupedButtonBlockGen(`📌 Solves - `,
         [
-            webBtnBlockGen("Suggestions", "https://drive.google.com/file/d/1DSK8J-O-4UcQgZeSy973PBmcpzC1_F30/view?usp=sharing"),
+            webBtnBlockGen("Suggestions(2023)", "https://drive.google.com/file/d/1DSK8J-O-4UcQgZeSy973PBmcpzC1_F30/view?usp=sharing"),
+            webBtnBlockGen("Solve(Mahi, 2025)", "https://drive.google.com/file/d/14Jsknhq8LnX-tzB8PixdWmAn0uC0wLDC/view?usp=sharing"),
         ]
     ),
     grroupedButtonBlockGen(

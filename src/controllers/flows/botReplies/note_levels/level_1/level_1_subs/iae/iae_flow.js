@@ -10,7 +10,8 @@ let iae_flow = [
     grroupedButtonBlockGen(
         "📌 Full Hand Notes - ",
         [
-            webBtnBlockGen("⭐ Najib(2023)", "https://drive.google.com/file/d/1P-OT6bNv5NRh1ft26flat8ZqcJBZ7_NE/view?usp=sharing")
+            webBtnBlockGen("⭐ Najib(2023)", "https://drive.google.com/file/d/1P-OT6bNv5NRh1ft26flat8ZqcJBZ7_NE/view?usp=sharing"),
+            webBtnBlockGen("⭐ Part-A(2025)", "https://drive.google.com/file/d/15tR7YAR7YIExiD4ntLgwHGWeLBbOP20U/view?usp=sharing")
         ]
     ),
     grroupedButtonBlockGen(
