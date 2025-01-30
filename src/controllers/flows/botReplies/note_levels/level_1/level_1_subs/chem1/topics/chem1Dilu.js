@@ -6,6 +6,7 @@ let textBlockGen = require("../../../../../../../genrators/textBlockGen");
 
 
 let chem1Dilu = [
+    textBlockGen(`🔷 Hand Note(Mahir, IPE-50,2025)-\n\nhttps://drive.google.com/file/d/1MeSbX-c6JKkCMGtLeiivwhpzWF3mayDC/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note(Tripto, 2018)-\n\nhttps://drive.google.com/file/d/1uTmx74qELgsBv6qWcVNTMOxAwp-zeuKR/view?usp=sharing`),
     grroupedButtonBlockGen(
         "🔷 Brishty Mam Sheets(New,2019)-",
