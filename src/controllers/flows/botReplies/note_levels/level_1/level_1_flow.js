@@ -61,6 +61,11 @@ let level_1_note = [
             webBtnBlockGen("FMG(Mgmt.)", "https://drive.google.com/file/d/1q6llewteDyEz1TQegSB4rNF8EMxlsOr5/view?usp=sharing"),
             webBtnBlockGen("IESE", "https://drive.google.com/drive/folders/1oAPDYr4C3DNDEiSJrL02UqBtkybhM04x?usp=sharing"),
         ]
+    ),
+    grroupedButtonBlockGen(`🔰 Select Subject for level 1 - `,
+        [
+            webBtnBlockGen("TNF", "https://drive.google.com/drive/folders/1ZfKkKd7abecno6A8qInDq_aYLFzn3ksi?usp=sharing"),
+        ]
     )
 ]
 

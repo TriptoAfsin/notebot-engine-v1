@@ -56,6 +56,7 @@ let chem1_flow = [
         "🔰 Select Topics for CHE-I -",
         [
             webBtnBlockGen("Colligative Properties", "https://drive.google.com/drive/folders/1it7e1zEFk5wF-TVE7coP7ACXd2U37oXB?usp=sharing"),
+            webBtnBlockGen("Green Chemistry", "https://drive.google.com/drive/folders/1PHpQ-xKy-XqU26oig9VMc-ZbEFdnbCbM?usp=sharing"),
         ]
     ),
 ]

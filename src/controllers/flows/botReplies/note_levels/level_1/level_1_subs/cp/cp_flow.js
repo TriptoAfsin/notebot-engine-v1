@@ -7,6 +7,12 @@ let bondiFlow = require("../../../../sponsoredFlows/bondiCard");
 let cp_flow = [
     bondiFlow,
     grroupedButtonBlockGen(
+        "⭐ New Notes(2025) - ",
+        [
+            webBtnBlockGen("Python Theories", "https://drive.google.com/file/d/1ci9dKXE2o93mg3VxnsswkwYKYFmuiZiU/view?usp=sharing"),
+        ]
+    ),
+    grroupedButtonBlockGen(
         "📌 Practical Practices with Solve-",
         [
             webBtnBlockGen("Mim(2020)", "https://drive.google.com/file/d/1YTSL0vZbTkmEzY3SgusNhwnR6oJqoKr9/view?usp=sharing"),

@@ -32,7 +32,8 @@ let cp_lab_flow = [
         "🔰 Select Experiment for CP -",
         [
             payloadBtnGen("7.Recursion: Fibo..", "cp_lab_recursionFibo"),
-            payloadBtnGen("Chapter(1,3,5)(2019)", "cp_lab_Chapter")
+            payloadBtnGen("Chapter(1,3,5)(2019)", "cp_lab_Chapter"),
+            webBtnBlockGen("Area of Rectangle", "https://drive.google.com/file/d/1cM_3zXp-38aEH7A4qycuQAyuC2XVN33a/view?usp=sharing"),
         ]
     )
 ]

@@ -82,6 +82,7 @@ let eeeFlow = [
         [
             webBtnBlockGen("Sensor(2021)", "https://drive.google.com/file/d/1ZPdioYHOByOck6kcAVRUdgfngUxNxody/view?usp=sharing"),
             webBtnBlockGen("Electrical M/C", "https://drive.google.com/file/d/1i_P4lHpyQQnA4Yo7_ylz3cXMrISPmd5U/view?usp=sharing"),
+            webBtnBlockGen("AC Sinu.(Ratul, TEM-48, 2025)", "https://drive.google.com/file/d/1pOLsYcu12aajh9ur-vQoXfqmIbHZvix9/view?usp=sharing"),
         ]
     ),
     grroupedButtonBlockGen(

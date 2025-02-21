@@ -1070,6 +1070,9 @@ const wwmmLabs = require('./academic/labReport/level4/subs/wwmm/wwmmLabs');
 //lab4 - MHMM
 const mhmmLabs = require('./academic/labReport/level4/subs/mhmm/mhmmLabs');
 
+//lab4 - Environmental Modeling
+const envMLabs = require('./academic/labReport/level4/subs/environmental-modeling/envMLabs');
+
 
 //lab3 - fsd
 let fsdLabs = require('./academic/labReport/level3/subs/fsd/fsdLabs');
@@ -5720,6 +5723,18 @@ let labWWMMFlow = (req, res) => {
     return res.send(wwmmLabs);
 };
 
+let labEnvModelingFlow = (req, res) => {
+    //analytics
+    // try {
+    //     handleAnalyticsLabs("wp1");
+    //   } catch (err) {
+    //     console.log(`🔴 Error while handling analytics(pre)`);
+    //   }
+
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(envMLabs);
+};
+
 let labSHWMFlow = (req, res) => {
     //analytics
     // try {
@@ -6107,6 +6122,7 @@ module.exports = {
     labKFAFlow: labKFAFlow,
     labWVG2Flow: labWVG2Flow,
     labWWMMFlow: labWWMMFlow,
+    labEnvModelingFlow: labEnvModelingFlow,
     labSHWMFlow: labSHWMFlow,
 
     //math1

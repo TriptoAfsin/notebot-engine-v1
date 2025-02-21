@@ -27,6 +27,10 @@ let level4Labs = [
         subName: "SHWM",
         route: "app/labs/4/shwm"
     },
+    {
+        subName: "Environmental Modeling",
+        route: "app/labs/4/envModeling"
+    },
     
 ]
 

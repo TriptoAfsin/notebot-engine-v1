@@ -15,6 +15,10 @@ let chem2_flow = [
       "Reactions (Shakib,DCE-48,2023)",
       "https://drive.google.com/file/d/1cAOZTo9tytK7RHo9Vh_qFRLBLYYeNxn_/view?usp=sharing"
     ),
+    webBtnBlockGen(
+      "Rashik(2025)",
+      "https://drive.google.com/drive/folders/1t6RmCrakBPKCGvfZy5SiebMDjl6F9dWC?usp=sharing"
+    ),
   ]),
   grroupedButtonBlockGen("📌 Hand Notes -", [
     webBtnBlockGen(
@@ -96,6 +100,10 @@ let chem2_flow = [
     webBtnBlockGen(
       "Grignard Rea.",
       "https://drive.google.com/file/d/1UnWcDu9vRCh1WFALLQG3SOR9LqiyfYif/view?usp=sharing"
+    ),
+    webBtnBlockGen(
+      "Organo Metalic Comp.",
+      "https://drive.google.com/file/d/1LHN50DwPNAkJMEfIq9LEUJwqjhoc-kM8/view?usp=sharing"
     ),
   ]),
   grroupedButtonBlockGen("📌 Sheets Folder - ", [

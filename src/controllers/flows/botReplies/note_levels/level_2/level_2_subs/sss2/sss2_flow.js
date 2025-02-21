@@ -31,6 +31,7 @@ let sss2Flow = [
         "📌 Full Hand Notes - ",
         [
             webBtnBlockGen("Alim(2024)", "https://drive.google.com/file/d/1Q5215ucatvoKkSIAoyEpHVvcBqHHecS4/view?usp=sharing"),
+            webBtnBlockGen("Affiliated(2025)", "https://drive.google.com/file/d/1oz_38BCOjs3NRkeWEV8LlpopJhOpGz5U/view?usp=sharing"),
         ]
     ),
     grroupedButtonBlockGen(

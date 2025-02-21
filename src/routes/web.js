@@ -1083,6 +1083,9 @@ let initWebRoutes = (app) => {
     //lab - WWMM
     router.get("/app/labs/4/wwmm", appController.labWWMMFlow);
 
+    //lab - Environmental Modeling
+    router.get("/app/labs/4/envModeling", appController.labEnvModelingFlow);
+
      //lab - SHWM
      router.get("/app/labs/4/shwm", appController.labSHWMFlow);
 

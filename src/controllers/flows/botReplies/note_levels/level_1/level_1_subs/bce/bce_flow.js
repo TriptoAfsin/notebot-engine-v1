@@ -66,7 +66,7 @@ let bce_flow = [
         "🔰 Select Topic For BCE -",
         [
             webBtnBlockGen("Meeting & Memo", "https://drive.google.com/file/d/1l7bLK56hBoUyRphM7AYB_PE8NEtYtScz/view?usp=sharing"),
-            webBtnBlockGen("Business Proposal", "https://drive.google.com/file/d/1hD7rxeD2LHLTyMtw_Pq_YaALQ_dPW0iO/view?usp=sharing")
+            webBtnBlockGen("Business Proposal", "https://drive.google.com/drive/folders/1Vxui2BB55qcUjaRzP6YcLCELUaGi751Z?usp=sharing")
         ]
     ),
 ]

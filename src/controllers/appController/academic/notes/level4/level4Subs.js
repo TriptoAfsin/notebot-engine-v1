@@ -52,6 +52,32 @@ let level4Subs = [
         url: "https://drive.google.com/drive/folders/1ePn1Q8xzepigVE1iujjMZ6H91_qCc3VH?usp=sharing"
     },
     {
+        subName: "FTQC",
+        url: "https://drive.google.com/drive/folders/1r0fyyCs71xrAgvhqYZ4N4Tt8_rCkxP5E?usp=sharing"
+    },
+    {
+        subName: "TFT",
+        url: "https://drive.google.com/drive/folders/1Th9_Pv1rfwtlC-o-uYFYxHGvsL-V93r1?usp=sharing"
+    },
+    {
+        subName: "SDC-II",
+        url: "https://drive.google.com/drive/folders/1HgZ8tqEPGiLInSRenFox7x8F2-hNWrX5?usp=sharing"
+    },
+    {
+        subName: "BE",
+        url: "https://drive.google.com/drive/folders/15t7jFvyddy2D6qH2R3gbMyWxuAkUBior?usp=sharing"
+    },
+    
+    {
+        subName: "IA",
+        url: "https://drive.google.com/drive/folders/1cgWwjWY8zeTmcSfElW96pAuqKRT7UPhj?usp=sharing"
+    },
+    {
+        subName: "Managerial Economics",
+        url: "https://drive.google.com/drive/folders/1mRlKZyUP65B7iRwTMfhqdcXoIVRjFHex?usp=sharing"
+    },
+    
+    {
         subName: "B&IL",
         route: "app/notes/4/bil"
     },

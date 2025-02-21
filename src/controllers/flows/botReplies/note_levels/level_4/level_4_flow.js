@@ -55,15 +55,26 @@ let level_4_note = [
         `🔰 Select Subject for level 4 -`,
         [
             webBtnBlockGen("TAM", "https://drive.google.com/drive/folders/1ePn1Q8xzepigVE1iujjMZ6H91_qCc3VH?usp=sharing"),
+            webBtnBlockGen("FTQC", "https://drive.google.com/drive/folders/1r0fyyCs71xrAgvhqYZ4N4Tt8_rCkxP5E?usp=sharing"),
+            webBtnBlockGen("TFT", "https://drive.google.com/drive/folders/1Th9_Pv1rfwtlC-o-uYFYxHGvsL-V93r1?usp=sharing"),
         ]
     ), 
     grroupedButtonBlockGen(
         `🔰 Select Subject for level 4 -`,
         [
             payloadBtnGen("B&IL", "bil_flow"),
-            webBtnBlockGen("IE(Old Syl.)", "https://drive.google.com/drive/folders/1qrbsRc4WWRKjCO3bqQDp0JK5S6Tvl6b6?usp=sharing")
+            webBtnBlockGen("IE(Old Syl.)", "https://drive.google.com/drive/folders/1qrbsRc4WWRKjCO3bqQDp0JK5S6Tvl6b6?usp=sharing"),
+            webBtnBlockGen("SDC-II", "https://drive.google.com/drive/folders/1HgZ8tqEPGiLInSRenFox7x8F2-hNWrX5?usp=sharing"),
         ]
-    )
+    ),
+    grroupedButtonBlockGen(
+        `🔰 Select Subject for level 4 -`,
+        [
+            webBtnBlockGen("BE", "https://drive.google.com/drive/folders/15t7jFvyddy2D6qH2R3gbMyWxuAkUBior?usp=sharing"),
+            webBtnBlockGen("Managerial Economics", "https://drive.google.com/drive/folders/1mRlKZyUP65B7iRwTMfhqdcXoIVRjFHex?usp=sharing"),
+            webBtnBlockGen("IA", "https://drive.google.com/drive/folders/1cgWwjWY8zeTmcSfElW96pAuqKRT7UPhj?usp=sharing"),
+        ]
+    ),
 ]
 
 

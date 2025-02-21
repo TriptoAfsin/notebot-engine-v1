@@ -25,6 +25,7 @@ let level_4_lab = [
         [
             webBtnBlockGen("WWMM", "https://drive.google.com/drive/folders/1sVhE7w1GKLQtn4It0KqOAwqy971V_9uj?usp=sharing"),
             webBtnBlockGen("SHWM", "https://drive.google.com/drive/folders/1Ss6UOS_De1zRCVNonJnrsA18jGu8KavZ?usp=sharing"),
+            webBtnBlockGen("Environmental Modeling", "https://drive.google.com/drive/folders/1jo2y6jTZdhr2AVyvmaMroR9qMljoGbWA?usp=sharing"),
         ]
     ),
 ]
