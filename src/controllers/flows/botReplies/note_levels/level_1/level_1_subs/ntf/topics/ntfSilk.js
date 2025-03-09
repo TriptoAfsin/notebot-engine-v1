@@ -8,6 +8,7 @@ let ntfSilk = [
         webBtnBlockGen("Slide", "https://drive.google.com/file/d/1gT5uya0bmp0upHHI2UG28jSm8nYQSzh9/view?usp=sharing"),
         webBtnBlockGen("Sericulture", "https://drive.google.com/file/d/1bBqGWTSwCBJfi1fpI6oB7yFBW90MVXiQ/view?usp=sharing"),
       ]),
+    textBlockGen(`🔷 Hand Note(Fardin,AE-50,2025)-\n\nhttps://drive.google.com/file/d/11eqjERVBf2tNOpuO3MWiifB2KBdnOKPS/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note(Abid,YE-49, 2024)-\n\nhttps://drive.google.com/file/d/1aLpkbS0JpeHy66mDnSb0oO4TFBfBbl_U/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note(Urmi, 2019)-\n\nhttps://drive.google.com/file/d/1nB8LJoNaW6J0aVzqVCgXti-KYGKWx6FT/view?usp=sharing`),
     textBlockGen(`🔷 Hand note(Laysa,AE-48, 2023)-\n\nhttps://drive.google.com/file/d/1ZCxk7Njy5krs5cq2AIGnYVKeCJi1Oumg/view?usp=sharing`),

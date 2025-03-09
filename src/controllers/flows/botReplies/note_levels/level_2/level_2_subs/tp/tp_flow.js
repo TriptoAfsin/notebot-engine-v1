@@ -32,6 +32,8 @@ let tpFlow = [
         "📌 Full Hand Notes -",
         [
             webBtnBlockGen("☄️Download", "https://drive.google.com/file/d/15vQaaVfyd5gOQX_yg4-L18wVWLWkujwc/view"),
+            webBtnBlockGen("Part-A(Tonmoy,2025)", "https://drive.google.com/file/d/1T5dkyJL98qTncz5hCfFlQWvP8Qhg_ehj/view?usp=sharing"),
+            webBtnBlockGen("Part-B(Tonmoy,2025)", "https://drive.google.com/file/d/1QWGmztT7uaBGxnwmHCnzRPzDvz1zYBb0/view?usp=sharing"),
         ]
     ),
     grroupedButtonBlockGen(

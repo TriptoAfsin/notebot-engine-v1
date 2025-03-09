@@ -1,4 +1,4 @@
-let textBlockGen = require("../../../../../../../genrators/textBlockGen");
+const textBlockGen = require('simple-messenger-blocks/textBlockGen'); 
 
 
 let phy1Diffrac = [
@@ -7,6 +7,7 @@ let phy1Diffrac = [
     textBlockGen(`🔷 Hand Note(Hafiza, AE-48 ,2023)-\n\nhttps://drive.google.com/file/d/14C88ekbQVEbEkYpFmFVWp7zwxot8s2ip/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note(Azim,TEM-46,2021)-\n\nhttps://drive.google.com/file/d/1IZaJC_lCo0EtTnTyvDc92Ei7Cofqcppp/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note(Nihat,YE-46,2021)-\n\nhttps://drive.google.com/file/d/1XEkkRrc4_NuuNk19Os7Imc6oodUeMAkA/view?usp=sharing`),
+    textBlockGen(`🔷 Hand Note(Gourab,IPE-50,2025)-\n\nhttps://drive.google.com/file/d/1s2Dy-sW-xs_NER-Uowugy5eiADZ-yHbe/view?usp=sharing`),
 ]
 
 

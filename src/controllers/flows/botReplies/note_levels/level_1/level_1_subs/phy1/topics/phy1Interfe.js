@@ -1,4 +1,4 @@
-let textBlockGen = require("../../../../../../../genrators/textBlockGen");
+const textBlockGen = require('simple-messenger-blocks/textBlockGen'); 
 
 let phy1Inter = [
     textBlockGen(`🔷 Book Scanned(Phy for engineers) - \n\nhttps://drive.google.com/file/d/1wmhdsXuEUynJQkokJBuRpJj-QOJ5r9Vc/view?usp=sharing`),
@@ -11,6 +11,8 @@ let phy1Inter = [
     textBlockGen(`🔷 Hand Note(Sazzad, 2019)-\n\nhttps://drive.google.com/file/d/18R8eLUU6fZLdkKdOPL-8jtHXfS1YFJpE/view?usp=sharing`),
     textBlockGen(`🔷 Class lecture(Rafsan, 2019)-\n\nhttps://drive.google.com/file/d/11NzB3kgkohHjCM5W3PRZnD3qyH_vZzxG/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note(Nafis,IPE-46, 2021)-\n\nhttps://drive.google.com/file/d/1Uf4fAnREdDst8OYaNJqx4VmGCAuC63KQ/view?usp=sharing`),
+    textBlockGen(`🔷 Hand Note(Gourab,IPE-50,2025)-\n\nhttps://drive.google.com/file/d/1ISOZtJ2PVeMnoS1V_6G6VMRhdSMzKqZN/view?usp=sharing`),
+    textBlockGen(`🔷 Hand Note(Fardin,AE-50,2025)-\n\nhttps://drive.google.com/file/d/1-h324kuyQNdFloKDtIdXm2XdcUFYnikR/view?usp=sharing`),
 ]
 
 

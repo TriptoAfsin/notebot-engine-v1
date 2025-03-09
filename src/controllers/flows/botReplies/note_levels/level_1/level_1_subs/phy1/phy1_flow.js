@@ -54,6 +54,7 @@ let phy1_flow = [
         [
             payloadBtnGen("Surface Tension", "phy1_surface_flow"),
             webBtnBlockGen("Fluid Mech..", "https://drive.google.com/file/d/1PfyCtmc1xX9g8pbxZp4eC9hyYAlWf0xa/view?usp=sharing"),
+            webBtnBlockGen("Laser phy.", "https://drive.google.com/file/d/16fyFcj8nhLiY5s7hvodV92Mf1WszQYhp/view?usp=sharing"),
         ]
     ),
 ]

@@ -1,6 +1,6 @@
-let textBlockGen = require("../../../../../../../genrators/textBlockGen");
-let grroupedButtonBlockGen = require("../../../../../../../genrators/grroupedButtonBlockGen");
-let webBtnBlockGen = require("../../../../../../../genrators/webBtnBlockGen");
+const textBlockGen = require("simple-messenger-blocks/textBlockGen");
+const grroupedButtonBlockGen = require("simple-messenger-blocks/groupedBtnBlockGen");
+const webBtnBlockGen = require("simple-messenger-blocks/webBtnGen");
 
 
 let ntfJute = [
@@ -10,6 +10,7 @@ let ntfJute = [
     textBlockGen(`🔷 Hand Note(Azim, TEM-46, 2021)-\n\nhttps://drive.google.com/file/d/1AJXuB35NiBG3zETb0Gkl1Zh73je5C0F3/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note(Sazzad, FE-46, 2021)-\n\nhttps://drive.google.com/file/d/1hoEPIvuL_0y6FVnMEkXBHJcJVnXiA1VO/view?usp=sharing`),
     textBlockGen(`🔷 QB Solve(Mamun, SKTEC,2022)-\n\nhttps://drive.google.com/file/d/1y-7uI4UMj1pPK1C-vC9aUxpUSgchsgQe/view?usp=sharing`),
+    textBlockGen(`🔷 Hand Note(Fardin,AE-50,2025)-\n\nhttps://drive.google.com/file/d/19nP6Vsz3bx54uCAPM6hqlCCQn8N5GkGL/view?usp=sharing`),
     grroupedButtonBlockGen(`🔷 Slide Bashar Sir(2018) -`,
         [
             webBtnBlockGen("1st Part", "https://drive.google.com/file/d/1fVkMLGknZ7rlWjVujhzGMcFkkFqe8GRV/view?usp=sharing"),

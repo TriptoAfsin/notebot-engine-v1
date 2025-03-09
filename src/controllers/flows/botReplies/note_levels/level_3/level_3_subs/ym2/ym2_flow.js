@@ -7,13 +7,19 @@ let bondiFlow = require("../../../../sponsoredFlows/bondiCard");
 
 let ym2Flow = [
     bondiFlow,
-    
     grroupedButtonBlockGen(
         "📌 Full Hand Notes - ",
         [
             webBtnBlockGen("Part-A(Akib)", "https://drive.google.com/file/d/1-rZCeR2uGfDY_ImbA08T9z4trSFfCx0O/view"),
             webBtnBlockGen("Arman(2023)", "https://drive.google.com/file/d/1t2jdoa5GK2UA3lUNivML19yajbpdHo49/view?usp=sharing"),
             webBtnBlockGen("Sifat(2024)", "https://drive.google.com/drive/folders/1ww6xcOo6uZpWIdPRrbsiJWd0dc9VVZA8?usp=sharing"),
+        ]
+    ),
+    grroupedButtonBlockGen(
+        "📌 Full Hand Notes - ",
+        [
+            webBtnBlockGen("Part-A(Arindom,2025)", "https://drive.google.com/file/d/1LLRGu7ZnIVZNTPjg4D8_Yw-Z5iLZGPxZ/view?usp=sharing"),
+            webBtnBlockGen("Part-B(Arindom,2025)", "https://drive.google.com/file/d/1O1n3DfwLUYFb0KsD9bukQlmhMSCpbikk/view?usp=sharing"),
         ]
     ),
     grroupedButtonBlockGen(

@@ -1,32 +1,17 @@
+const grroupedButtonBlockGen = require("simple-messenger-blocks/groupedBtnBlockGen");
+const payloadBtnGen = require("simple-messenger-blocks/payloadBtnGen");
+
 let ntfWool = [
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🟩 Select Topic for Wool - ",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "Hand Note",
-                        "payload": "ntf_wool_hand_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Slide/Sheet/Books",
-                        "payload": "ntf_wool_slides_flow"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Videos",
-                        "payload": "ntf_wool_videos_flow"
-                    }
-                ],
-            },
-        },
-    }
-   
+    grroupedButtonBlockGen(
+        "🟩 Select Topic for Wool - ",
+        [
+            payloadBtnGen("Hand Note", "ntf_wool_hand_flow"),
+            payloadBtnGen("Slide/Sheet/Books", "ntf_wool_slides_flow"),
+            payloadBtnGen("Videos", "ntf_wool_videos_flow")
+        ]
+    ),
 ]
+
 
 
 

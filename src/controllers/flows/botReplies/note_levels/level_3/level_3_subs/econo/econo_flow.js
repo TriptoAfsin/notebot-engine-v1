@@ -15,6 +15,12 @@ let econoFlow = [
         ]
     ),
     grroupedButtonBlockGen(
+        "📌 QB Solve - ",
+        [
+            webBtnBlockGen("2025", "https://drive.google.com/drive/folders/19pdc5zaAkBN7GgqFlbSMmr1_dJs0LbyI?usp=sharing"),
+        ]
+    ),
+    grroupedButtonBlockGen(
         "📌 Full Hand Notes - ",
         [
             webBtnBlockGen("B(Akib)(2022)", "https://drive.google.com/file/d/1-ZI1d9-AOvzUA_HhWpD9v51E_SA8Ocjn/view"),

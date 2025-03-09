@@ -11,6 +11,13 @@ let fm2Flow = [
         ]
     ),
     grroupedButtonBlockGen(
+        "📌 Full Hand Notes - ",
+        [
+            webBtnBlockGen("Part-A(Arindom,2025)", "https://drive.google.com/file/d/1lmfZhjBWC06TDPC_VHU9deDjtKujBZvo/view?usp=sharing"),
+            webBtnBlockGen("Part-B(Arindom,2025)", "https://drive.google.com/file/d/16XXDO-BxZfGXCv4W3sX9yP3M5Xw-bqLJ/view?usp=sharing"),
+        ]
+    ),
+    grroupedButtonBlockGen(
         "📌 Select Topics for FM-II -",
         [
             webBtnBlockGen("CT(June,2022)", "https://drive.google.com/file/d/1ljvCzAUku4g9D5eaOgzLSbqn32ej7u_N/view?usp=sharing"),

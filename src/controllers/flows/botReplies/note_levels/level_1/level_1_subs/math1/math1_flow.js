@@ -9,9 +9,10 @@ let bondiFlow = require("../../../../sponsoredFlows/bondiCard");
 let math1_flow = [
     bondiFlow,
     grroupedButtonBlockGen(
-        "📌 Online Exam Ques  ",
+        "📌 Exam Ques  ",
         [
-            webBtnBlockGen("2021", "https://drive.google.com/file/d/1o--oA-HRcx6uzDM1vxHw8fbX4p-J6246/view?usp=sharing"),
+            webBtnBlockGen("Online exam 2021", "https://drive.google.com/file/d/1o--oA-HRcx6uzDM1vxHw8fbX4p-J6246/view?usp=sharing"),
+            webBtnBlockGen("Chapter Wise", "https://drive.google.com/drive/folders/1cFTQbokoiOerJ4LyMxtvK0wBF53HF8oB?usp=sharing"),
         ]
     ),
     grroupedButtonBlockGen(

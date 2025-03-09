@@ -1,6 +1,7 @@
 const textBlockGen = require("simple-messenger-blocks/textBlockGen");
 
 let cottonNotes = [
+    textBlockGen(`🔷 Hand Note(Fardin,AE-50,2025)-\n\nhttps://drive.google.com/file/d/1yfSnUhVx5uxhzKLTs6Dm9DvcTSj4uHha/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note(Abid,YE-49, 2024)-\n\nhttps://drive.google.com/file/d/1CX0RAaErlilEpmBzm1nY4vT3ZBDrfLxr/view?usp=sharing`),
     textBlockGen(`🔷 Handnote (Tonmoy,FE-48,2023)-\n\nhttps://drive.google.com/file/d/1oDLssVYC_4mZMr9_vxBimJ_DLI6AQf0B/view?usp=sharing`),
     textBlockGen(`🔷 Hand note(Laysa,AE-48, 2023)-\n\nhttps://drive.google.com/file/d/1DQUqcZgiHerlupX1RWQ4fjtm3D3IAtdB/view?usp=sharing`),
