@@ -1,20 +1,14 @@
+let grroupedButtonBlockGen = require('simple-messenger-blocks/groupedBtnBlockGen');
+let webBtnBlockGen = require('simple-messenger-blocks/webBtnGen');
+
 let apparelWashing_lab_flow = [
-    {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "button",
-                "text": "🔰 Select Experiment for Apparel Washing - ",
-                "buttons": [
-                    {
-                        "type": "web_url",
-                        "url": "https://drive.google.com/drive/folders/1txn-Rwx-GURIdwK7cp4pW99ppthVr3Vo",
-                        "title": "All report",
-                    }
-                ],
-            },
-        },
-    }
+    grroupedButtonBlockGen(
+        "📌 All Reports -",
+        [
+            webBtnBlockGen("All report", "https://drive.google.com/drive/folders/1txn-Rwx-GURIdwK7cp4pW99ppthVr3Vo"),
+            webBtnBlockGen("Mashtura(2025)", "https://drive.google.com/file/d/1q0MbT7WSevwvoZ-zr0iG5k3lFOkXO9Q-/view?usp=sharing"),
+        ]
+    ),
 ]
 
 

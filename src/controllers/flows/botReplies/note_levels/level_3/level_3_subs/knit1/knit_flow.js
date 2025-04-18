@@ -9,6 +9,7 @@ let knit1Flow = [
         `📌 Full Hand Notes - `,
         [
             webBtnBlockGen("Zia(2024)", "https://drive.google.com/file/d/1Lb08EFFnfiejsSbCD2qoLc2MaoEBEDCL/view?usp=sharing"),
+            webBtnBlockGen("Lingkon(2025)", "https://drive.google.com/file/d/1fEGRKbJX-IP-1GicJa-z237I2SY4Equl/view?usp=sharing"),
         ]
     ),
     grroupedButtonBlockGen(

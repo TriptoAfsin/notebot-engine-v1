@@ -22,6 +22,7 @@ let statFlow = [
     ),
     grroupedButtonBlockGen(`📌 Full Hand Notes -`,
         [
+            webBtnBlockGen("Lingkon(2025)", "https://drive.google.com/file/d/1AcmkcTeqjjNgPZ7hnoNZ1g3tdxIEoU1h/view?usp=sharing"),
             webBtnBlockGen("Nahid(2020)", "https://drive.google.com/file/d/1buy5jwu1gR44OYS_srTuviCwpAEuPuq7/view"),
             webBtnBlockGen("Rifat(B, 2020)", "https://drive.google.com/file/d/1HsUaV_Y4AGjOXAMe4bjHO5y7Ooun9Da-/view")
         ]

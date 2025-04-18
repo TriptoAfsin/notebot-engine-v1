@@ -2,6 +2,7 @@ let textBlockGen = require('simple-messenger-blocks/textBlockGen');
 
 
 let phy2Kinetic = [
+    textBlockGen(`🔷 Hand Note(Fardin,AE-50,2025)-\n\nhttps://drive.google.com/file/d/1Jj__Ey0mhqm6cb-B9g9B80poqFKhRam9/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note(Azim,TEM-46,2022)-\n\nhttps://drive.google.com/file/d/1zv2EvueO7LFUfREdFSdqAGoyXEOtCXl2/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note(Shafiul,2022)-\n\nhttps://drive.google.com/file/d/1mcyoN8CxMxtDYtkNZ8D_6fBSQp4wefXg/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note(Sakib,DCE-46,2022)-\n\nhttps://drive.google.com/file/d/12womUfJYFTv8CKbhAoC7v-XLxbKDo-AS/view?usp=sharing`),

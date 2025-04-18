@@ -2,6 +2,7 @@ const textBlockGen = require('simple-messenger-blocks/textBlockGen');
 
 
 let phy1Diffrac = [
+    textBlockGen(`🔷 Hand Note(Fardin,AE-50,2025)-\n\nhttps://drive.google.com/file/d/1rfmw8Wpp53E5q8-_FkAgNNuOLBFWdhPO/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note(Tripto, 2018)-\n\nhttps://drive.google.com/file/d/1iiaEAMGEL-9eFsjSc1TylmCcK9LRR50i/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note(Shafiul,DCE-46,2021)-\n\nhttps://drive.google.com/file/d/1YOn5CkE2l8T8EZBXqapEJrD9zmXoz_M1/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note(Hafiza, AE-48 ,2023)-\n\nhttps://drive.google.com/file/d/14C88ekbQVEbEkYpFmFVWp7zwxot8s2ip/view?usp=sharing`),

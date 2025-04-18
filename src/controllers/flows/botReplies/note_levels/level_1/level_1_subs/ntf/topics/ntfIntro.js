@@ -2,6 +2,7 @@ let textBlockGen = require('simple-messenger-blocks/textBlockGen');
 
 
 let ntfIntro = [
+    textBlockGen(`🔷 Hand Note(Fardin,AE-50,2025)-\n\nhttps://drive.google.com/file/d/1Z5DQ_WHLtrvFTXNz12h9abekAMTlyUPF/view?usp=sharing`),
     textBlockGen(`🔷 Sheet(NTF) - \n\nhttps://drive.google.com/file/d/1boGl56Pi8uQV6C5oiXpVbiCAHQAYUEnB/view?usp=sharing`),
     textBlockGen(`🔷 Hand note(Laysa,AE-48, 2023)-\n\nhttps://drive.google.com/file/d/1DlsJCQ1HXN6dLbD3I0WVCi6oMi3GLvMs/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note(Sayim, 2023)-\n\nhttps://drive.google.com/file/d/1s1ipxhe5l7jfbxFGHb5QSE6Lp5Q-zjXV/view?usp=sharing`),

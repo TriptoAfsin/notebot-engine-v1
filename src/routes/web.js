@@ -1016,6 +1016,12 @@ let initWebRoutes = (app) => {
       //lab - pm2
       router.get("/app/labs/3/pm2", appController.labpm2Flow);
 
+      //lab - pm3
+      router.get("/app/labs/3/pm3", appController.labpm3Flow);
+
+      //lab - mym
+      router.get("/app/labs/3/mym", appController.labmymFlow);
+
       //lab - eaic
       router.get("/app/labs/3/eaic", appController.labEaicFlow);
 
