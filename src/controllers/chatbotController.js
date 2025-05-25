@@ -2493,10 +2493,16 @@ let  handleMessage = async (sender_psid, received_message) =>  {
   else if (wordIncludes(sociology_words, received_message)) {
     magicFunc(sender_psid, [
       groupedBtnBlockGen(
+        `📽️Class Recordings - `,
+        [
+          webBtnBlockGen("Youtube Playlist", "https://www.youtube.com/playlist?list=PLpFoI_N-jBPEgP5tsWeU8u0uTozfmtd04")
+        ]
+    ),
+      groupedBtnBlockGen(
         `🔰 Sociology - `,
         [
           webBtnBlockGen("Hand Notes(2024)", "https://drive.google.com/drive/folders/1f6z51rGacfVwd0jEM2D0vDKjQWd2px-g?usp=sharing"),
-            webBtnBlockGen("Drive", "https://drive.google.com/drive/folders/1dp46oYLKPp2Iruv0mM01uTCB-x0Hvn3r?usp=sharing"),
+          webBtnBlockGen("Drive", "https://drive.google.com/drive/folders/1dp46oYLKPp2Iruv0mM01uTCB-x0Hvn3r?usp=sharing"),
         ]
     ), 
     ]);

@@ -1,6 +1,5 @@
 let grroupedButtonBlockGen = require("../../../genrators/grroupedButtonBlockGen");
 let webBtnBlockGen = require("../../../genrators/webBtnBlockGen");
-let payloadBtnGen = require("../../../genrators/payloadBtnGen");
 
 let BooksQues = [
   grroupedButtonBlockGen(`🟪 Select QB Level - `, [
@@ -21,6 +20,12 @@ let BooksQues = [
     webBtnBlockGen(
       "🧑‍🎓 Level 4",
       "https://drive.google.com/drive/folders/17QQ6mXUYe3FL7sf4VMzdBBkRbJAId0VT?usp=sharing"
+    ),
+  ]),
+  grroupedButtonBlockGen(`✅ QB Solves - `, [
+    webBtnBlockGen(
+      "✅ QB Solves",
+      "https://drive.google.com/drive/folders/1hvldnZCyOX412pBbdElbRvh33o7uqg2R?usp=sharing"
     ),
   ]),
 ];

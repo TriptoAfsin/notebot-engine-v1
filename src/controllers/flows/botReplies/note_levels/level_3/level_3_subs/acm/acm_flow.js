@@ -1,11 +1,9 @@
 let grroupedButtonBlockGen = require("../../../../../../genrators/grroupedButtonBlockGen");
 let webBtnBlockGen = require("../../../../../../genrators/webBtnBlockGen");
 let payloadBtnGen = require("../../../../../../genrators/payloadBtnGen");
-let cardGenerator = require("../../../../../../genrators/cardGenerator");
-let bondiFlow = require("../../../../sponsoredFlows/bondiCard");
+
 
 let acmFlow = [
-    bondiFlow,
     grroupedButtonBlockGen(
         `📽️ Youtube Playlist -`,
         [
@@ -13,8 +11,9 @@ let acmFlow = [
         ]
     ),
     grroupedButtonBlockGen(
-        `📌 Full Notes(2024) -  `,
+        `📌 Full Notes -  `,
         [
+            webBtnBlockGen("Tasmia(Affli.)", "https://drive.google.com/file/d/1mdKY8SJHemWPGYt24KqWGLQHHW2hCcF5/view?usp=sharing"),
             webBtnBlockGen("Lingkon(Affli.)", "https://drive.google.com/file/d/1JtCgEYDxOIUaM_91lFh9HPK2L13Ivcm1/view?usp=sharing"),
             webBtnBlockGen("Assignment(Forhad Sir)", "https://drive.google.com/file/d/1K8T964yk8J1wA_W8vRRn8a7nEC8NX6sV/view?usp=sharing"),
         ]

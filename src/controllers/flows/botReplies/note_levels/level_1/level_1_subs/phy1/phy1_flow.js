@@ -5,7 +5,11 @@ let cardGenerator = require("simple-messenger-blocks/cardGenerator");
 let bondiFlow = require("../../../../sponsoredFlows/bondiCard");
 
 let phy1_flow = [
-    bondiFlow,
+    grroupedButtonBlockGen(`📌 Qb Solves - `,
+        [
+            webBtnBlockGen("Affiliated(2025)", "https://drive.google.com/drive/folders/1C_qwCyCSo-H4IOAPMBz9dWiuRRCWO_UD?usp=sharing")
+        ]
+    ),
     grroupedButtonBlockGen(`📌 New Sheets(2021)- `,
         [
             webBtnBlockGen("Harun Sir", "https://drive.google.com/drive/folders/10cPcvKA1_zhQN6brXWlcIPxUZzrfH7f7?usp=sharing"),

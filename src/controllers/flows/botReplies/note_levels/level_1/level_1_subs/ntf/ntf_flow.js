@@ -6,9 +6,10 @@ let bondiFlow = require("../../../../sponsoredFlows/bondiCard");
 
 let ntf_flow = [
     bondiFlow,
-    grroupedButtonBlockGen(`📌 Hand Notes & Questions -`,
+    grroupedButtonBlockGen(`📌 Hand Notes -`,
         [
             webBtnBlockGen("Wasy(2021)", "https://drive.google.com/file/d/1DmMmmwzpUErfcn3yeG58tnXg7bzXJ0PR/view?usp=sharing"),
+            webBtnBlockGen("Alvi, A(2025)", "https://drive.google.com/file/d/1AhseaVvrbGrKUljqe8vd6i63VB9Uq78u/view?usp=sharing")
         ]
     ),
     grroupedButtonBlockGen(`📌 Hand Notes & Questions -`,
@@ -21,8 +22,7 @@ let ntf_flow = [
     grroupedButtonBlockGen(`📌 Sheets -`,
     [
         webBtnBlockGen("Susmita Mam(2023)", "https://drive.google.com/drive/folders/1UYHYZ4P82WulYHktpQNVEwagOSl3ihqR?usp=sharing"),
-        webBtnBlockGen("Short Note", "https://drive.google.com/file/d/1ssWOEjOj1qJrfRO_sKM3uqit1zIbBOKT/view?usp=sharing"),
-        webBtnBlockGen("🔵 Akib(2019)", "https://drive.google.com/file/d/19JIpGWPQVP9SWFHfZdisdvNgaSlwxaW5/view?usp=drivesdk")
+        webBtnBlockGen("Short Note", "https://drive.google.com/file/d/1ssWOEjOj1qJrfRO_sKM3uqit1zIbBOKT/view?usp=sharing")
     ]
 ),
     grroupedButtonBlockGen(`⭐ All Properties Short Note -`,
