@@ -1158,7 +1158,8 @@ let syllabusBatch45Ese = require('./academic/syllabus/45/depts/ese45Syl')
 
 
 //jokes 
-let jokes = require('././entertainment/jokes/jokesFlow')
+let jokes = require('././entertainment/jokes/jokesFlow');
+const texGPTSearch = require('../../utils/ai/texGPT');
 
 
 /*--------------------------------------------------------------------------*/ 
@@ -6098,8 +6099,25 @@ let labs = (req, res) => {
     return res.send(labLevels);
 };
 
+const handleTexGPTSearch = async (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    const query = req?.body?.query;
+    if (!query) {
+        console.log(`🔴 TextGPTSearch : Query is missing`);
+        return res.status(400).send({ error: "Query is required" });
+    }
+    handleApiCallAnalytics();
+    try {
+        const result = await texGPTSearch(query);
+        return res.status(200).send(result);
+    } catch (error) {
+        console.log(`🔴 TextGPTSearch : Error Occured`);
+        return res.status(500).send({ error: "Error Occured" });
+    }
+}
 
-// // Extra App flows
+
+// // Extra App flows 
 // let noticeFlow = (req, res) => {
 //     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
 //     const rssUrl = "https://www.butex.edu.bd/feed";
@@ -6135,6 +6153,7 @@ let labs = (req, res) => {
 
 module.exports = {
     intro: appIntro,
+    texGPTSearch: handleTexGPTSearch,
 
     //results
     results: appResults,

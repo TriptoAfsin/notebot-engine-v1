@@ -824,6 +824,11 @@ let initWebRoutes = (app) => {
 
 
 
+     //texGPT
+     router.post("/app/tex-gpt", appController.texGPTSearch);
+
+
+
 
 
     
