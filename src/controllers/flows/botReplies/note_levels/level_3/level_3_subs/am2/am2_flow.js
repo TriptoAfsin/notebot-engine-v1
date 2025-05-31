@@ -8,6 +8,8 @@ let am2Flow = [
         "📌 Full Hand Notes(2024) - ",
         [
             webBtnBlockGen("Lingkon(Affli.)", "https://drive.google.com/file/d/1SiodvnAW16f-lM-ZiWTA7lXdDFxqxwNl/view?usp=sharing"),
+            webBtnBlockGen("Tawhid(A)(Short Note)", "https://drive.google.com/file/d/1XwT5ijFM7GZsdH6KqGfh_FkMayhLG2j2/view?usp=sharing"),
+            webBtnBlockGen("Tawhid(B)(Short Note)", "https://drive.google.com/file/d/1259oAp3bgs3eVnzlo8bLoc_Tgs2j6fym/view?usp=sharing"),
         ]
     ),
     grroupedButtonBlockGen(

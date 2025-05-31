@@ -24,6 +24,12 @@ let wp1Flow = [
         webBtnBlockGen("Vat,Reactive Dye(2023)", "https://drive.google.com/file/d/11Awi13SRQxJpvyotHexdZ6qwQZovYhOd/view?usp=sharing"),
     ]
     ),
+    grroupedButtonBlockGen(
+        "📌 Full Hand Notes - ",
+        [
+            webBtnBlockGen("Naim-PTEC(2025)", "https://drive.google.com/file/d/1CPNq-Q6kMe5swJDJk8Uq5VYuIROAOTRc/view?usp=sharing"),
+        ]
+    ),
 grroupedButtonBlockGen(
     "📌 Full Hand Notes - ",
     [

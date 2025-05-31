@@ -6,7 +6,13 @@ let bondiFlow = require("../../../../sponsoredFlows/bondiCard");
 
 
 let ym2Flow = [
-    bondiFlow,
+    grroupedButtonBlockGen(
+        "📌 Full Hand Notes - ",
+        [
+            webBtnBlockGen("Tawhid(A)(Short Note)", "https://drive.google.com/file/d/1rR4-IGL9zp0YvHQVtkOLdxKcLkDeIggR/view?usp=sharing"),
+            webBtnBlockGen("Tawhid(B)(Short Note)", "https://drive.google.com/file/d/1drAeoNbHkUngAVKU65ukQ7D6XJ4hxZSF/view?usp=sharing"),
+        ]
+    ),
     grroupedButtonBlockGen(
         "📌 Full Hand Notes - ",
         [

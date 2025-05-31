@@ -7,7 +7,13 @@ let bondiFlow = require("../../../../sponsoredFlows/bondiCard");
 
 
 let econoFlow = [
-    bondiFlow,
+    grroupedButtonBlockGen(
+        "📌 Full Hand Notes - ",
+        [
+            webBtnBlockGen("Tawhid(Rules)", "https://drive.google.com/file/d/13I0qB-GorP6GLtShJ9wsTXKBjhhzx2E4/view?usp=sharing"),
+            webBtnBlockGen("Tawhid(A)(Short Note)", "https://drive.google.com/file/d/1PbyuhA3ZLZBL__Jkf9pAkZouvjrDEyum/view?usp=sharing"),
+        ]
+    ),
     grroupedButtonBlockGen(
         `📽️ Youtube Playlist -`,
         [
