@@ -51,8 +51,11 @@ let level2Labs = [
         subName: "FE-204: WPP",
         route: "app/labs/2/fe_wpp"
     },
+    {
+        subName: "SDA",
+        route: "app/labs/2/sda"
+    },
 ]
-
 
 
 module.exports = level2Labs;

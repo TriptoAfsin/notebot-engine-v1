@@ -2,6 +2,7 @@ let textBlockGen = require('simple-messenger-blocks/textBlockGen');
 
 
 let chem1Carboxylic = [
+    textBlockGen(`🔷 Hand Note(Gourab, IPE-50,2025)-\n\nhttps://drive.google.com/file/d/1vC9I8cw8M2OEMDWhQRVOjcgdYxsWku0g/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note(Tripto, based on Forhad Sir's Lecture,2018)-\n\nhttps://drive.google.com/file/d/13axAYJWl0sugB1adlMiaPI87O0BufVPD/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note(Nihat, YE-46, 2021)-\n\nhttps://drive.google.com/file/d/17CgePr14KKSYV0xQQFXOFUk8idsUxtMD/view?usp=sharing`),
     textBlockGen(`🔷 HandNote(Nahid, 2019,Based on Farhad Sir's Lecture)-\n\nhttps://drive.google.com/file/d/1-MB3748bT9G8THTId5TJCvlTbZ18CfQ7/view?usp=sharing`),

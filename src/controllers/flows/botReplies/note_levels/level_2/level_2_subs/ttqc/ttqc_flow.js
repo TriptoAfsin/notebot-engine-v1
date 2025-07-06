@@ -13,10 +13,11 @@ let ttqcFlow = [
         ]
     ),
     grroupedButtonBlockGen(
-        "📌 Solves -",
+        "📌 Solves + Math -",
         [
             webBtnBlockGen("Part-B(2023)", "https://drive.google.com/file/d/1wAXc-PeLbcrvjWZtrd_Fzcg5JKpThCMP/view?usp=sharing"),
             webBtnBlockGen("Rafi(2023)", "https://drive.google.com/drive/folders/17Yv0ziAOwwxnoLCMb17vup-ljSxpEx5y?usp=sharing"),
+            webBtnBlockGen("Ratul(2025)", "https://drive.google.com/file/d/1sxd0eDnPNQg4iAX-mrhF6G4C_9dqRhai/view?usp=sharing"),
         ]
     ),
     grroupedButtonBlockGen(`📌 Full Hand Notes -`,

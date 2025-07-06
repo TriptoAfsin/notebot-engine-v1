@@ -57,6 +57,7 @@ let phy2_flow = [
     grroupedButtonBlockGen("🔰 Select Topic for PHY-II -",
         [
             webBtnBlockGen("Ideal Gas", "https://drive.google.com/file/d/1VFjnVq75gsr1MlAJJsiv8liua_XPb77Q/view?usp=sharing"),
+            webBtnBlockGen("Theory of Color", "https://drive.google.com/file/d/1S0n8P57vzWbPJKiIsYmWdu-ILDi5IZGW/view?usp=sharing"),
         ]
     ),
 ]

@@ -74,6 +74,11 @@ let level_2_note = [
         webBtnBlockGen("IDCC(ESE)", "https://drive.google.com/drive/folders/1QEdJyJyPuYJ6Co9dWI5Zya0xxaioF8lW?usp=sharing"),
     ]
 ),
+grroupedButtonBlockGen(`🔰 Select Subject for level 2 -`,
+    [
+        webBtnBlockGen("TQCFT", "https://drive.google.com/drive/folders/1z1vdls2FvQKW3jh7VriVtbVh8plynwje?usp=sharing"),
+    ]
+),
 ]
 
 

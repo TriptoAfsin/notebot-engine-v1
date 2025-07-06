@@ -2,6 +2,7 @@ let textBlockGen = require("../../../../../../../genrators/textBlockGen");
 
 
 let chem2Carbonyl = [
+    textBlockGen(`🔷 Hand Note(Gourab, IPE-50,2025)-\n\nhttps://drive.google.com/file/d/15V1-woFzA2QO_WMK69I5wnVi6sf3C_6f/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note(Likhon,ESE-49,2025)-\n\nhttps://drive.google.com/file/d/1uRXq3sYyjfwKXmLKpGfFNgqTbeao4sKX/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note(Tripto, 2019)-\n\nhttps://drive.google.com/file/d/1Dg53edvmvtXXg5nTnfz3m25MoSl8aa7a/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note(Nihat,YE-46,2022)-\n\nhttps://drive.google.com/file/d/1opT4Feeb0gUIPOo7uHb-zdao_BDsQRGS/view?usp=sharing`),

@@ -76,6 +76,13 @@ let wp2Flow = [
             webBtnBlockGen("Mesh & Screen Pri", "https://drive.google.com/file/d/1CwRW4GBxwfyw65sEXpB6wHhDYsxU6ZW7/view"),
             webBtnBlockGen("Screen Printing", "https://drive.google.com/file/d/1ZAr8hIzUqY7FIKawNnqUnsOx30lD0-hX/view?usp=sharing")
         ]
+    ),
+    grroupedButtonBlockGen(
+        "🔰 Select Topics for WP-II -",
+        [
+            webBtnBlockGen("Direct Print", "https://drive.google.com/drive/folders/1X4aidySziwH04yIAekacdKL9JrmpHYDi?usp=sharing"),
+            webBtnBlockGen("Special Wet Proc.", "https://drive.google.com/file/d/1eFxo2rUQx0mijOsGs3sGclvyM2F4gQqH/view?usp=sharing"),
+        ]
     )
 ]
 

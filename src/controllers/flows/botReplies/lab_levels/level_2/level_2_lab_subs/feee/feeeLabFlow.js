@@ -4,14 +4,15 @@ let payloadBtnGen = require('simple-messenger-blocks/payloadBtnGen');
 
 
 let feee_lab_flow = [
-    grroupedButtonBlockGen("📌 Select Experiment for FEEE -", [
+    grroupedButtonBlockGen("📌 All Reports -", [
         webBtnBlockGen("All(Emon)", "https://drive.google.com/file/d/1nGS7r0MKzv7c0VSl6q1UMaI6t7KslSlW/view"),
         webBtnBlockGen("All(Shomir, 2022)", "https://drive.google.com/file/d/1pk-goLQ5kYGxhEFehYHla5Aez2Hvskmn/view?usp=sharing"),
         webBtnBlockGen("All(Nihat, 2023)", "https://drive.google.com/file/d/1ghyG5w3r2zTSAm4_QChAqlkybixmhElr/view?usp=sharing")
     ]),
-    grroupedButtonBlockGen("📌 Select Experiment for FEEE -", [
+    grroupedButtonBlockGen("📌 All Reports -", [
         webBtnBlockGen("All(Jabbar, 2023)", "https://drive.google.com/file/d/1pDiQa_CU3u7S0OpZpdZo-OyI0tJLrPLD/view?usp=sharing"),
         webBtnBlockGen("All(Samet, 2023)", "https://drive.google.com/file/d/1ZlAfl-P8lI2SZndLoV2VSWFs-09XbxUJ/view?usp=sharing"),
+        webBtnBlockGen("All(Faiaz, 2025)", "https://drive.google.com/file/d/1Hha84ni-NArCGLkzWZjFbttuQvLQ2Jj8/view?usp=sharing"),
     ]),
     grroupedButtonBlockGen("📌 Lab Notes -", [
         webBtnBlockGen("Sazzad(2023)", "https://drive.google.com/file/d/1e2zAbEUZk5j7nnpxnPrxKGbxB6RRpBVs/view?usp=sharing"),

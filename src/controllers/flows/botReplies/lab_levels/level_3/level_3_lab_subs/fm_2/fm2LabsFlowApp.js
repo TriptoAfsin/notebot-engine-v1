@@ -20,6 +20,12 @@ let fm2_lab_flow = [
             webBtnBlockGen("All Report(Wasima,2024)", "https://drive.google.com/file/d/1BJPHUb2N_bryRXnEK5KHg6PwHWpF_SZx/view?usp=sharing"),
         ]
     ),
+    grroupedButtonBlockGen(
+        "📌 Viva Note - ",
+        [
+            webBtnBlockGen("All Report(Estiak, ESE-48,2025)", "https://drive.google.com/file/d/1WvYXlfwwvYXGBtx8fhpLYmThlk596MyB/view?usp=sharing"),
+        ]
+    ),
 ]
 
 

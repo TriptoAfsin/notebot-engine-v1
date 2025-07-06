@@ -1008,6 +1008,9 @@ let am1LabsAll = require('./academic/labReport/level2/subs/am1/topics/appAm1AllR
 let am1LabsLayout = require('./academic/labReport/level2/subs/am1/topics/appAm1LabLayout')
 let am1LabsStdBody = require('./academic/labReport/level2/subs/am1/topics/appAm1StdBodyMes')
 
+// lab2 - sda
+let sdaAppFlow = require('./academic/labReport/level2/subs/sda/sdaLabs')
+
 //lab2 - ym1
 let ym1Labs = require('./academic/labReport/level2/subs/ym1/ym1Labs')
 
@@ -6043,6 +6046,13 @@ let syllabusBatch45EseFlow = (req, res) => {
     return res.send(syllabusBatch45Ese);
 };
 
+//labs2 -> sda
+let labSdaFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
+    return res.send(sdaAppFlow);
+};
+
 //random func
 let randomNum = (length) => {
     return Math.floor(Math.random()*length)
@@ -6159,6 +6169,9 @@ module.exports = {
     results: appResults,
     
     labs: labs,
+
+    //lab - sda
+    labSdaFlow: labSdaFlow,
 
     notes: notes,
     notesLevel1: level1Notes,

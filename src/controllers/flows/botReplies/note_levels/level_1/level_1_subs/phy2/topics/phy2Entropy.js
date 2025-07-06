@@ -2,6 +2,7 @@ let textBlockGen = require('simple-messenger-blocks/textBlockGen');
 
 
 let phy2Entropy = [
+    textBlockGen(`🔷 Hand Note(Touhidul,DCE - 49,2025)-\n\nhttps://drive.google.com/file/d/1q2C4AjrWBLef7YG8JaIzohDQapqCdBAl/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note(Fardin,AE-50,2025)-\n\nhttps://drive.google.com/file/d/1JR7qgxnXJZ9l9Vp1DBzqsmYZpFAAs1bH/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note(Tripto, based on headyest Sir's Lecture,2019)-\n\nhttps://drive.google.com/file/d/14fKzyWHohHeJFC4r2OgSFMiIrVVUmbo5/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note(Akib, 2019)-\n\nhttps://drive.google.com/file/d/1GuOGxzexsUPK8k83sVQKeBtNGLTaKAdl/view?usp=drivesdk`),

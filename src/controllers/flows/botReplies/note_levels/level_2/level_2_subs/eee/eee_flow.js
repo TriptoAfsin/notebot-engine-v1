@@ -75,6 +75,7 @@ let eeeFlow = [
         [
             webBtnBlockGen("Ch 9", "https://drive.google.com/file/d/1CDRk6kZBwrn0JaxMle5vxI8ExqNiNBal/view?usp=sharing"),
             webBtnBlockGen("Ch 12", "https://drive.google.com/file/d/1wJe3_T-ewgsOz2nSqJdzSd8QQX-ak4Gj/view?usp=sharing"),
+            webBtnBlockGen("Electrical Machine", "https://drive.google.com/drive/folders/1uuOpi_sQBgZjpQ27-nH6OYD6UrxY75LV?usp=sharing"),
         ]
     ),
     grroupedButtonBlockGen(

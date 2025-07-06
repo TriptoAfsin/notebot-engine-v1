@@ -8,6 +8,7 @@ let ttqc_lab_flow = [
     grroupedButtonBlockGen("⚡ Viva Note - ",
         [
             webBtnBlockGen("Estiak(2024)", "https://drive.google.com/file/d/17ZcZFs43BdWkG146np1HatXr87-FUO_A/view?usp=sharing"),
+            webBtnBlockGen("Ratul(2025)", "https://drive.google.com/file/d/1x5LSwGVAOj6FbAmyJcDgIr5ycrqNrO_e/view?usp=sharing"),
         ]
     ),
     grroupedButtonBlockGen("⚡ All Report - ",

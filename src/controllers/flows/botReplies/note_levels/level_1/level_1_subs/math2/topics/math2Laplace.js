@@ -9,6 +9,7 @@ let math2Laplace = [
             webBtnBlockGen("Folder", "https://drive.google.com/drive/folders/1mb68x9nMU7KD3FDb5gBVXTo7tlfpRiB2?usp=sharing")
         ]
     ),
+    textBlockGen(`🔷 Hand Note Full(Shurja, WPE-50,2025)-\n\nhttps://drive.google.com/file/d/1yWzQqAuPdmvmB9921U6qVIpWYhJZUQiG/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note Full(Tanvir, 2019)-\n\nhttps://drive.google.com/file/d/164T13o5TWCLREezY2djcB1Qw_Sx4O5qR/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note Laplace(Archi,AE-45,2021)-\n\nhttps://drive.google.com/file/d/1k-Yt9LT5qArr5nVzNAHketGre1Ks-2Et/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note(Samet,FE-47,2023) - \n\nhttps://drive.google.com/file/d/1k4q0G1vLf_-IVT2-_kKPvSbqc8hS6CfT/view?usp=sharing`),

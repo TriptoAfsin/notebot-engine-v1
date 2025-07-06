@@ -958,6 +958,9 @@ let initWebRoutes = (app) => {
     router.get("/app/labs/2/am1/am1_lab_standardBody_flow", appController.labAm1StdBodyFlow);
     router.get("/app/labs/2/am1/am1_lab_AllReport_flow", appController.labAm1AllFlow);
 
+    //lab - sda
+    router.get("/app/labs/2/sda", appController.labSdaFlow);
+
 
     //lab - wp1
     router.get("/app/labs/2/wp1", appController.labWp1Flow);
