@@ -41,6 +41,7 @@ let iae_flow = [
         "🔰 Select Topics for IAE -",
         [
             payloadBtnGen("Components of Shirt", "iae_shirt_flow"),
+            webBtnBlockGen("Imp. Fabric Sam.", "https://drive.google.com/file/d/1eNzC8iF1r7m8viLXteCFbv9mVAydZWYC/view?usp=sharing")
         ]
     )
 ]
