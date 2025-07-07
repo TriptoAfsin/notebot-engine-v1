@@ -24,6 +24,7 @@ let math2_flow = [
     grroupedButtonBlockGen(
         "📌Full Hand Notes -  ",
         [
+            webBtnBlockGen("Fardin(Part-A)(2025)", "https://drive.google.com/file/d/1m_sSrW9UPtcHZI6S_nyZurNvlD4TkMCq/view?usp=sharing"),
             webBtnBlockGen("Tonmoy(Part-A)(2024)", "https://drive.google.com/file/d/1kSsapJQT_jJtIYjKKFeOiraLQnCWDYcc/view?usp=sharing"),
             webBtnBlockGen("Tonmoy(Part-B)(2024)", "https://drive.google.com/file/d/1ydYOt2QAsLmEypilWIgRr7xs1kPKCuQk/view?usp=sharing"),
         ]
