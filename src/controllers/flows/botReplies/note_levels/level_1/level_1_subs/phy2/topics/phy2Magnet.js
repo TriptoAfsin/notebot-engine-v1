@@ -2,6 +2,8 @@ let textBlockGen = require('simple-messenger-blocks/textBlockGen');
 
 
 let phy2Magnet = [
+    textBlockGen(`🔷 Hand Note(Naimul,WPE-50,2025)-\n\nhttps://drive.google.com/file/d/1vd7BjqtUBPFMeu6XUjyVTtCrRgTEJdd0/view?usp=sharing`),
+    textBlockGen(`🔷 Hand Note(Shurja,WPE-50,2025)-\n\nhttps://drive.google.com/file/d/1ClGmANeiyWp4DH9IqovOV6jCFHKFwB6j/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note(Fardin,AE-50,2025)-\n\nhttps://drive.google.com/file/d/1vm1nPa5y6YzSMUqmJQMJodkqS7Cj6pIC/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note (Tripto, based on Harun Sir's Lecture,2018)-\n\nhttps://drive.google.com/file/d/1rDKroNHDNk9-JSwKVwGibTZ_3yXsm77l/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note(Sakib,DCE-46,2022)-\n\nhttps://drive.google.com/file/d/1F4GdQjsMYAI1vMRXO_Gh86BTcjsFu2VH/view?usp=sharing`),

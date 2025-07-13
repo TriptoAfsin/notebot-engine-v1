@@ -35,6 +35,7 @@ let wp2Flow = [
         "🔰 Select Topics for WP-II -",
         [
             webBtnBlockGen("Intro to Tex Print", "https://drive.google.com/file/d/1FC9dIbItS7r3QY5H7mQcODGIFP3V-KgE/view?usp=sharing"),
+            webBtnBlockGen("Finishes(2025)", "https://drive.google.com/drive/folders/18ot2NH4pJKI9Kh25HudCpkcIA_JV7uks?usp=sharing"),
         ]
     ),
     grroupedButtonBlockGen(
