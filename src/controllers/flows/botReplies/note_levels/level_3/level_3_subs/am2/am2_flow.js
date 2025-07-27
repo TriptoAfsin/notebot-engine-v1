@@ -37,6 +37,7 @@ let am2Flow = [
         [
             payloadBtnGen("Books", "am2_books_flow"),
             payloadBtnGen("Class Lecture", "am2_classlec_flow"),
+            webBtnBlockGen("Dry Wash", "https://drive.google.com/file/d/14RD6bZP0eF8tExc-Ins5j59sMY0OSfOj/view?usp=sharing"),
         ]
     ),
     grroupedButtonBlockGen(

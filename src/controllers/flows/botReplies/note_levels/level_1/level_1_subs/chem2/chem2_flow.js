@@ -8,6 +8,16 @@ let chem2_flow = [
   bondiFlow,
   grroupedButtonBlockGen("📌 Hand Notes -", [
     webBtnBlockGen(
+      "Farhan(2025)",
+      "https://drive.google.com/drive/folders/1ieA5MEDj2vIqi7swP08P5GDlcWFAspcK?usp=sharing"
+    ),
+    webBtnBlockGen(
+      "Anika(2025)",
+      "https://drive.google.com/drive/folders/1HjbwRV1xlKi_-ZObZPgP71ZP_JL83Af0?usp=sharing"
+    ),
+  ]),
+  grroupedButtonBlockGen("📌 Hand Notes -", [
+    webBtnBlockGen(
       "Rubayet(2024)",
       "https://drive.google.com/file/d/1IXh4J6DT26yuI1w6PLWfOQxZZczA_AJd/view?usp=sharing"
     ),

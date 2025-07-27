@@ -1,7 +1,8 @@
-let textBlockGen = require('simple-messenger-blocks/textBlockGen');
+const textBlockGen = require('simple-messenger-blocks/textBlockGen');
 
 
-let electricNotes = [
+const electricNotes = [
+    textBlockGen(`🔷 Hand Note(Fardin,AE-50,2025)-\n\nhttps://drive.google.com/file/d/1FN1RLNbf0yexNvy11mbO8G6LnrWj3vzc/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note (Farabi, WPE-48, 2024) - \n\nhttps://drive.google.com/file/d/10LGsoq8QVZ4jaVCLN-qn8B4a2Vrdnp8F/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note (Tashfiq,TEM-47,2023) - \n\nhttps://drive.google.com/file/d/1e3d2aUwIJLRpV8ZfsPRhyWxZ0YCrx1sJ/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note (Sadia,TEM-46,2022) - \n\nhttps://drive.google.com/file/d/1QIWbGyWThErixB9yr-IszlA2CYsJCi2f/view?usp=sharing`),

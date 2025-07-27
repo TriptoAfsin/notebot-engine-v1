@@ -11,6 +11,12 @@ let level_4_note = [
             webBtnBlockGen("Project Work", "https://drive.google.com/drive/folders/1O3LQxlMBWrWTblO0LcsnnishsliMsu8h?usp=sharing"),
             webBtnBlockGen("Industrial Attachments", "https://drive.google.com/drive/folders/1txN44rDdppKq77b2qi51-EqSf3DW5zwg?usp=sharing"),
         ]
+    ),
+    grroupedButtonBlockGen(
+        `🟣 Comprehensive Viva, Project Work/Thesis Resources -`,
+        [
+            webBtnBlockGen("Emdad Sir(2025)", "https://drive.google.com/file/d/1CrIBYkTKJMwL45g7gZ8xk4qziB975TRu/view?usp=sharing"),
+        ]
     ), 
     grroupedButtonBlockGen(
         `🔴 Question Banks -`,
@@ -20,6 +26,12 @@ let level_4_note = [
             webBtnBlockGen("IPE - 4-1 Ques(2022)", "https://drive.google.com/file/d/1h0QFixuMTYPzSVZjtckhYFGqX4QTnj8-/view?usp=sharing")
         ]
     ),
+    grroupedButtonBlockGen(
+        `🔰 Department wise Notes -`,
+        [
+            webBtnBlockGen("IPE(4-1)", "https://drive.google.com/drive/folders/1oH_OZZPFNhDJx6azfiHFOxpQ5iRmXVbp?usp=sharing"),
+        ]
+    ), 
     grroupedButtonBlockGen(
         `🔰 Select Subject for level 4 -`,
         [

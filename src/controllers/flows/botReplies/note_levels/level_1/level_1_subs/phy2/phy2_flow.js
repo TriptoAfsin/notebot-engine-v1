@@ -8,6 +8,16 @@ let bondiFlow = require("../../../../sponsoredFlows/bondiCard");
 
 let phy2_flow = [
     bondiFlow,
+    grroupedButtonBlockGen("📌 Youtube Playlist",
+        [
+            webBtnBlockGen("Youtube Playlist", "https://www.youtube.com/playlist?list=PLakGb0S4SwU0obyfFUlu7ZM3a6CToVGkv")
+        ]
+    ),
+    grroupedButtonBlockGen("📌 Combined Note -",
+        [
+            webBtnBlockGen("Farhan(2025)", "https://drive.google.com/drive/folders/1BISB-EOhtalVEPlBN2Gz9LOdZSes52Rs?usp=sharing")
+        ]
+    ),
     grroupedButtonBlockGen("📌 Combined Note -",
         [
             webBtnBlockGen("Maruf(2019)", "https://drive.google.com/file/d/1fIgUIBddhWxMaS7hKrKViD5eNNhvhtXL/view"),
@@ -56,6 +66,7 @@ let phy2_flow = [
     ),
     grroupedButtonBlockGen("🔰 Select Topic for PHY-II -",
         [
+            webBtnBlockGen("VA, LT, CX Var.", "https://drive.google.com/file/d/1pCGL64-6iE5KmsEHS4Bvejt0UiOMmwcC/view?usp=sharing"),
             webBtnBlockGen("Ideal Gas", "https://drive.google.com/file/d/1VFjnVq75gsr1MlAJJsiv8liua_XPb77Q/view?usp=sharing"),
             webBtnBlockGen("Theory of Color", "https://drive.google.com/file/d/1S0n8P57vzWbPJKiIsYmWdu-ILDi5IZGW/view?usp=sharing"),
         ]
