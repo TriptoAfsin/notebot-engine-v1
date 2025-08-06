@@ -102,9 +102,15 @@ let level_3_note = [
     ),
     webBtnBlockGen("ACDCE", "https://drive.google.com/drive/folders/1ekFNG-qN4P-9fpnxnn0gdGrYsW-AC4UO?usp=sharing"),
   ]),
-  grroupedButtonBlockGen(`🔰 Select Subject for level 3 -`, [
-    webBtnBlockGen("ACTM", "https://drive.google.com/drive/folders/1Xn9FeVZIKi8eRz_LkE0gEt2FkzGalhRb?usp=sharing"),
+    grroupedButtonBlockGen(`🔰 Select Subject for level 3 -`, [
+      webBtnBlockGen("ACTM", "https://drive.google.com/drive/folders/1Xn9FeVZIKi8eRz_LkE0gEt2FkzGalhRb?usp=sharing"),
+      webBtnBlockGen("ES(Environmental Studies)", "https://drive.google.com/drive/folders/1V_LjWmWR2DZ7SYKgmzk_s9SKezIkC7gh?usp=sharing"),
+      webBtnBlockGen("FFTA(Fashion..)", "https://drive.google.com/drive/folders/1zozzpnNER_2F9VCbiP80A_tR-6QcTzwP?usp=sharing"),
   ]),
+  grroupedButtonBlockGen(`🔰 Select Subject for level 3 -`, [
+    webBtnBlockGen("FMR(Fashion..)", "https://drive.google.com/drive/folders/1lJh8TwfpZ_wft_S3OVfVULEbsJX6zn8p?usp=sharing"),
+    webBtnBlockGen("Special Clothing Materials", "https://drive.google.com/drive/folders/1SUb1uFAipbF8fwB7f-YiHUpm_duHt5So?usp=sharing"),
+]),
 ];
 
 module.exports = level_3_note;

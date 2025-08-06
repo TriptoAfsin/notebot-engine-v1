@@ -2,6 +2,7 @@ let textBlockGen = require('simple-messenger-blocks/textBlockGen');
 
 
 let chem1Kinetics = [
+    textBlockGen(`🔷 Hand Note(Pritom,WPE-50,2025) - \n\nhttps://drive.google.com/file/d/16Zx6jeY1ALuW_-QJtO-DeCCJBnkjRsKW/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note(Shazzad,FE-46,2021) - \n\nhttps://drive.google.com/file/d/18_59QXHdSk_S5YAcOTaESvoRLbihO_hu/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note(Hafiza, AE-48,2023) - \n\nhttps://drive.google.com/file/d/1oxB_rxyt1aRJQgPUrSxJO_6IGYxSdZNm/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note(Raiyan, FE-48,2023) - \n\nhttps://drive.google.com/file/d/1DyLBmTL7eWK9NWVc8CEMklpKs1gVB0Lu/view?usp=sharing`),

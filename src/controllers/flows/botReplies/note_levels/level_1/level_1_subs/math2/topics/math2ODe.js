@@ -2,6 +2,7 @@ let textBlockGen = require('simple-messenger-blocks/textBlockGen');
 
 
 let math2Ode = [
+    textBlockGen(`🔷 Hand Note(Pritom,WPE-50,2025) - \n\nhttps://drive.google.com/file/d/11Zw9MPf65OLCfNJa0aK_N75VIL9cPrTX/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note(Gourab, IPE-50,2025)-\n\nhttps://drive.google.com/file/d/1Fk5qK75Ev6TDmMq8_F2KcRi_NT0PtmMc/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note(Mamun,SKTEC,2022)-\n\nhttps://drive.google.com/file/d/19rD5gAdOs7nM6ZRqWooWuaOd0Uu8HrfS/view?usp=sharing`),
     textBlockGen(`🔷 1st order ODE(Saidul, 2019)-\n\nhttps://drive.google.com/file/d/1U1zqH3NUlv4oUEHKGgL8YGHgwhgqZ61Y/view?usp=sharing`),

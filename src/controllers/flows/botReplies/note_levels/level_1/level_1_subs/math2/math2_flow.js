@@ -87,6 +87,7 @@ let math2_flow = [
         "🔰 Select Topic for Math-II -",
         [
             payloadBtnGen("Complex Number", "math2_cx_num_flow"),
+            webBtnBlockGen("Integration", "https://drive.google.com/drive/folders/1relx6JAY9QKFsHFLlAHKFP-s8mAWdOaJ?usp=sharing"),
         ]
     ), 
 ]

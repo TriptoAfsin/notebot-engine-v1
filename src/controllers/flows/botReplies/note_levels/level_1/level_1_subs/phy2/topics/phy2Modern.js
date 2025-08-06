@@ -2,6 +2,7 @@ let textBlockGen = require('simple-messenger-blocks/textBlockGen');
 
 
 let phy2Modern = [
+    textBlockGen(`🔷 Hand Note(Debdas,FE-50,2025)-\n\nhttps://drive.google.com/file/d/1Kf6uIC3Zcm0Ev49gpuhGNIWiKZPKyfbU/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note(Fardin,AE-50,2025)-\n\nhttps://drive.google.com/file/d/1Nmm-9iCar6YTEx5HdvzhLZJTylaz2RPy/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note(Tripto, 2019)-\n\nhttps://drive.google.com/file/d/1QAyuTIO_DjhCqTE-NvSCDNyVwaCu73WO/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note(Nihat,YE-46,2022)-\n\nhttps://drive.google.com/file/d/1dpYxlo6go0UQ4DWdCOYnyUd_ZbJBq1-S/view?usp=sharing`),

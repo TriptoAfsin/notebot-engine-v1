@@ -143,6 +143,22 @@ let level3Subs = [
         subName: "SYM",
         url: "https://drive.google.com/drive/folders/1632Rlb5rOPeQkKsGmO_VTxIEz6EY5OSY?usp=sharing"
     },
+    {
+        subName: "ES(Environmental Studies)",
+        url: "https://drive.google.com/drive/folders/1V_LjWmWR2DZ7SYKgmzk_s9SKezIkC7gh?usp=sharing"
+    },
+    {
+        subName: "FFTA(Fashion..)",
+        url: "https://drive.google.com/drive/folders/1zozzpnNER_2F9VCbiP80A_tR-6QcTzwP?usp=sharing"
+    },
+    {
+        subName: "FMR(Fashion..)",
+        url: "https://drive.google.com/drive/folders/1lJh8TwfpZ_wft_S3OVfVULEbsJX6zn8p?usp=sharing"
+    },
+    {
+        subName: "Special Clothing Materials",
+        url: "https://drive.google.com/drive/folders/1SUb1uFAipbF8fwB7f-YiHUpm_duHt5So?usp=sharing"
+    },
 ]
   
 
