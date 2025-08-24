@@ -39,6 +39,7 @@ let ym1Flow = [
         [
             webBtnBlockGen("Part A(Samet)","https://drive.google.com/file/d/1robnVSY9SE1Bo21ZzvW5MzgmfiFUU03y/view?usp=sharing"),
             webBtnBlockGen("Part B(Samet)","https://drive.google.com/file/d/1pTgK7YzubpvG9QEbi64aYLeIiUkFJ_IT/view?usp=sharing"),
+            webBtnBlockGen("Part B(Joty)","https://drive.google.com/drive/folders/1BDjHIG2298-gOn9NjNhJNjLvlwe1Jh60?usp=sharing"),
         ]
     ),
     grroupedButtonBlockGen(

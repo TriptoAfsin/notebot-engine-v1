@@ -9,9 +9,11 @@ let bondiFlow = require("../../../../sponsoredFlows/bondiCard");
 let pse_flow = [
     bondiFlow,
     grroupedButtonBlockGen(
-        "📌 Sheets - ",
+        "📌 Sheets & Class lectures - ",
         [
             webBtnBlockGen("Shohag Sir(2024)", "https://drive.google.com/file/d/1LjOr1pHUzAzxmkqCQ9JwQnA_5_xb7Eda/view?usp=sharing"),
+            webBtnBlockGen("KSI Sir(2025)", "https://drive.google.com/file/d/1PFCA3mZzMF2jLKq4_P5tFLjgUB1hMolm/view?usp=sharing"),
+            webBtnBlockGen("Nusrat Mam(2025)", "https://drive.google.com/file/d/1wVEUrajYYQzYO-3uJWYCWXJL8xjUtt6_/view?usp=sharing"),
         ]
     ),
     grroupedButtonBlockGen(
