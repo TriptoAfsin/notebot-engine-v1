@@ -80,6 +80,10 @@ let level4Subs = [
         subName: "Managerial Economics",
         url: "https://drive.google.com/drive/folders/1mRlKZyUP65B7iRwTMfhqdcXoIVRjFHex?usp=sharing"
     },
+    {
+        subName: "WPE 405: Technical & Functional Textiles",
+        url: "https://drive.google.com/drive/folders/1B8TcqI3FTWFzd3VTKDJrAnKelHu5CinS?usp=sharing"
+    },
     
     {
         subName: "B&IL",

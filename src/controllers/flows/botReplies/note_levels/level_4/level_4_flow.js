@@ -87,6 +87,12 @@ let level_4_note = [
             webBtnBlockGen("IA", "https://drive.google.com/drive/folders/1cgWwjWY8zeTmcSfElW96pAuqKRT7UPhj?usp=sharing"),
         ]
     ),
+    grroupedButtonBlockGen(
+        `🔰 Select Subject for level 4 -`,
+        [
+            webBtnBlockGen("WPE 405: Technical & Functional Textiles", "https://drive.google.com/drive/folders/1B8TcqI3FTWFzd3VTKDJrAnKelHu5CinS?usp=sharing"),
+        ]
+    ),
 ]
 
 
