@@ -7,6 +7,12 @@ let bondiFlow = require("../../../../sponsoredFlows/bondiCard");
 let fm1Flow = [
     bondiFlow,
     grroupedButtonBlockGen(
+        "📌 Full Hand Notes -",
+        [
+            webBtnBlockGen("FR(2025)", "https://drive.google.com/file/d/1FK-B5Wp8SRxWxW185u4GKmh-oaOMZ-NB/view?usp=sharing"),
+        ]
+    ),
+    grroupedButtonBlockGen(
         `📌 Full Hand Notes - `,
         [
             webBtnBlockGen("Maruf(2020)","https://drive.google.com/file/d/1KLLujcKbcUUTzUxRKKBdXaOYHR9vg9Fr/view"),

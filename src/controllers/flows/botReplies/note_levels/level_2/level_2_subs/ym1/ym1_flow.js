@@ -20,6 +20,13 @@ let ym1Flow = [
         ]
     ),
     grroupedButtonBlockGen(
+        `📌 Hand Notes  `,
+        [
+            webBtnBlockGen("Bashar Sir(2025)","https://drive.google.com/file/d/1D-2KdxdtdPmlpLGhWVlzreRbBxp5pcH4/view?usp=sharing"),
+            webBtnBlockGen("Zahid Sir(2025)","https://drive.google.com/file/d/1k9rQN16oKrVPDZptYbG7IpRY0waZygdU/view?usp=sharing"),
+        ]
+    ),
+    grroupedButtonBlockGen(
         `📌 Akib's Hand Notes -   `,
         [
             webBtnBlockGen("Part A","https://drive.google.com/file/d/1LtfOtf5NkgwEFfcSdfSzFiBTnFdc_N3G/view"),

@@ -7,6 +7,7 @@ let wp2Flow = [
     grroupedButtonBlockGen(
         "📌 Full Hand Notes - ",
         [
+            webBtnBlockGen("Joty(2025)", "https://drive.google.com/drive/folders/1cghR1Fww8i3SFkpP8jC8HyKXTQdHSLi0?usp=sharing"),
             webBtnBlockGen("Tawhid(Short Note)", "https://drive.google.com/file/d/1XUtb5y2t1J8U_30yozAsSSElWsPgKE_C/view?usp=sharing"),
         ]
     ),

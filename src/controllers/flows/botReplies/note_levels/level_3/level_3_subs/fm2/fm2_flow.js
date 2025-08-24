@@ -13,6 +13,7 @@ let fm2Flow = [
     grroupedButtonBlockGen(
         "📌 Full Hand Notes - ",
         [
+            webBtnBlockGen("Sabuj Sir(2025)", "https://drive.google.com/file/d/1TKVIoSjPs6dfOwZEmdTF_mi_Lk8q0Q67/view?usp=sharing"),
             webBtnBlockGen("Part-A(Arindom,2025)", "https://drive.google.com/file/d/1lmfZhjBWC06TDPC_VHU9deDjtKujBZvo/view?usp=sharing"),
             webBtnBlockGen("Part-B(Arindom,2025)", "https://drive.google.com/file/d/16XXDO-BxZfGXCv4W3sX9yP3M5Xw-bqLJ/view?usp=sharing"),
         ]

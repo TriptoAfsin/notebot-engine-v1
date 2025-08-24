@@ -21,6 +21,13 @@ grroupedButtonBlockGen(`📌 Solves - `,
     grroupedButtonBlockGen(
         `📌 Full Hand Notes -   `,
         [
+            webBtnBlockGen("Part A(Palash Sir)","https://drive.google.com/file/d/1X86-UqosBU_lZ7Ck1LUmF5_j12Dts9-N/view?usp=sharing"),
+            webBtnBlockGen("Part B(FK Sir)","https://drive.google.com/file/d/1Dl44KPZBgxtQWSMw2rScqJpUd4Ijooh6/view?usp=sharing"),
+        ]
+    ),
+    grroupedButtonBlockGen(
+        `📌 Full Hand Notes -   `,
+        [
             webBtnBlockGen("Part A(Samet)","https://drive.google.com/file/d/1L4a2gMgmfMzSugqQGia3HWeT9JSnHTjr/view?usp=sharing"),
             webBtnBlockGen("Part B(Samet)","https://drive.google.com/file/d/1CCon0eyrOQ7jqPdjOo4Lm--gAG-lqxh2/view?usp=sharing"),
         ]

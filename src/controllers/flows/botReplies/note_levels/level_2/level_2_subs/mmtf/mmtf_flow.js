@@ -25,6 +25,8 @@ let mmtfFlow = [
         `📌 Full Hand Notes -   `,
         [
             webBtnBlockGen("Part A(Samet)","https://drive.google.com/file/d/1fsUiNahjR_-S4iZc9H5MtUjKmR-hE9SG/view?usp=sharing"),
+            webBtnBlockGen("AKA Sir(2025)","https://drive.google.com/file/d/1mVorziYccBppu1lmnkDjHa38V9wrwJfy/view?usp=sharing"),
+            webBtnBlockGen("Dr.AUS(2025)","https://drive.google.com/file/d/186O4dEN6m88jsnO4Y_4PjE23aqiuWjEd/view?usp=sharing"),
         ]
     ),
     grroupedButtonBlockGen(`Sheets - `,
