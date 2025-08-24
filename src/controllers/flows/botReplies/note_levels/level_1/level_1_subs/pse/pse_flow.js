@@ -15,7 +15,14 @@ let pse_flow = [
         ]
     ),
     grroupedButtonBlockGen(
-        "📌 Full Hand Notes(2022) - ",
+        "📌 Full Hand Notes - ",
+        [
+            webBtnBlockGen("Part-A(Nahid, 2025)", "https://drive.google.com/file/d/1OyFaEctc7AeU5d4LsOA61aWyNJ38JEls/view?usp=sharing"),
+            webBtnBlockGen("Part-B(Nahid, 2025)", "https://drive.google.com/file/d/1PHdLcy5C6LyizuZ_-5yRxsJrkbbYYMW0/view?usp=sharing"),
+        ]
+    ),
+    grroupedButtonBlockGen(
+        "📌 Full Hand Notes - ",
         [
             webBtnBlockGen("Part-B(Rafi)", "https://drive.google.com/file/d/1T87Wvn3dEVPyED6X70yyaiZer-dFqFml/view?usp=sharing"),
             webBtnBlockGen("Important Ques(2022)", "https://drive.google.com/file/d/13pluwYvVBZj5auqpRsE-x7OcavsmatOr/view?usp=sharing"),

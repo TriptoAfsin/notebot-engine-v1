@@ -15,7 +15,9 @@ let phy2_flow = [
     ),
     grroupedButtonBlockGen("📌 Combined Note -",
         [
-            webBtnBlockGen("Farhan(2025)", "https://drive.google.com/drive/folders/1BISB-EOhtalVEPlBN2Gz9LOdZSes52Rs?usp=sharing")
+            webBtnBlockGen("Farhan(2025)", "https://drive.google.com/drive/folders/1BISB-EOhtalVEPlBN2Gz9LOdZSes52Rs?usp=sharing"),
+            webBtnBlockGen("Nahid(Part-A, 2025)", "https://drive.google.com/file/d/1VwgR0GFrK1-7CKKCaDdd0LivK6AhbqEC/view?usp=sharing"),
+            webBtnBlockGen("Nahid(Part-B, 2025)", "https://drive.google.com/file/d/1ypeaTl6pqFgEQMcNk0UQFZJSCNEZJ6Yc/view?usp=sharing"),
         ]
     ),
     grroupedButtonBlockGen("📌 Combined Note -",

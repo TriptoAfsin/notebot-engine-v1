@@ -18,6 +18,7 @@ let math2_flow = [
     ),
     grroupedButtonBlockGen("📌 Full Hand Notes - ",
     [
+        webBtnBlockGen("Nahid(2025)", "https://drive.google.com/file/d/1QUxNGKRiqMM7qgUXs2k71AKFIbMHa6WI/view?usp=sharing"),
         webBtnBlockGen("Linkon(2023)", "https://drive.google.com/file/d/1hKRX5vp08oTzu0UrkATK12W4GLx555-Q/view?usp=sharing")
     ]
     ),

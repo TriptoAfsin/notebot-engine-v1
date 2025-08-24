@@ -19,6 +19,12 @@ let em_flow = [
     ),
     grroupedButtonBlockGen("📌 Full Hand Notes - ",
         [
+            webBtnBlockGen("Nahid(Part-A, 2025)", "https://drive.google.com/file/d/1orwscaMVLJuzBK-Zl_T6gFfBsGPtP1N4/view?usp=sharing"),
+            webBtnBlockGen("Nahid(Part-B, 2025)", "https://drive.google.com/file/d/1JT3ouTcJK2kd-NNr93CglIttEWI5um_B/view?usp=sharing")
+        ]
+    ),
+    grroupedButtonBlockGen("📌 Full Hand Notes - ",
+        [
             webBtnBlockGen("Rushad(2021)", "https://drive.google.com/file/d/1Nieo9oDLZw-_kQs0VhWrjIG2tp9GOG_c/view?usp=sharing"),
             webBtnBlockGen("Linkon(2023)", "https://drive.google.com/file/d/1OvBvwgBWdPBDnr1CpVulWqAmXTG_LvOt/view?usp=sharing")
         ]
