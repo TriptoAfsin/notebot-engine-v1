@@ -17,6 +17,12 @@ let fm1_lab_flow = [
       "https://drive.google.com/file/d/1Xm_APNpSFHnlvXY9gBCQ0m4hbbX41VK7/view?usp=sharing"
     ),
   ]),
+  grroupedButtonBlockGen("⚡ All Reports - ", [
+    webBtnBlockGen(
+      "Tahin(2025)",
+      "https://drive.google.com/drive/folders/1B8ejQq3vhnFqd2EWjHBPXGDVnltwcMbO?usp=sharing"
+    ),
+  ]),
   grroupedButtonBlockGen("🔰 Select Experiment for FM-I -", [
     payloadBtnGen("1.Layout", "fm1_lab_layout_flow"),
     payloadBtnGen("Tappet Shedding", "fm1_lab_tappetShedding_flow"),

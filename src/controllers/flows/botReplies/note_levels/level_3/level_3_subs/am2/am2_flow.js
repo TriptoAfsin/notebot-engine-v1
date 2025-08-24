@@ -19,6 +19,12 @@ let am2Flow = [
         ]
     ),
     grroupedButtonBlockGen(
+        "📌 Math Notes(2025) - ",
+        [
+            webBtnBlockGen("Ratul(Part-A)", "https://drive.google.com/file/d/1CQKruhL002oxPVTR4z7nDhnI7er94DEu/view?usp=sharing")
+        ]
+    ),
+    grroupedButtonBlockGen(
         "📌 Full Hand Notes(2022) - ",
         [
             webBtnBlockGen("A+B(Adee)", "https://drive.google.com/file/d/1V5FVYklWE1S2ka-nO-Jl-_-p1lFNCwt4/view?usp=sharing"),
@@ -38,6 +44,12 @@ let am2Flow = [
             payloadBtnGen("Books", "am2_books_flow"),
             payloadBtnGen("Class Lecture", "am2_classlec_flow"),
             webBtnBlockGen("Dry Wash", "https://drive.google.com/file/d/14RD6bZP0eF8tExc-Ins5j59sMY0OSfOj/view?usp=sharing"),
+        ]
+    ),
+    grroupedButtonBlockGen(
+        "🔰 Select Topics for AM-II -",
+        [
+            webBtnBlockGen("Wet Washing", "https://drive.google.com/file/d/13jRVPZ4MWXDrSzdMGh3kxNkch19KW1vd/view?usp=sharing"),
         ]
     ),
     grroupedButtonBlockGen(

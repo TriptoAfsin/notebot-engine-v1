@@ -14,6 +14,7 @@ let ym1_lab_flow = [
     ),
     grroupedButtonBlockGen("⚡ All Report - ",
         [
+            webBtnBlockGen("Tahin(2025)", "https://drive.google.com/drive/folders/1tsdkemeaIi4rnmpogDI818ROShF7cZF4?usp=sharing"),
             webBtnBlockGen("Fuad(2023)", "https://drive.google.com/file/d/1HVZKrJv2vdI51jOv0kZkouAEQp-6K4rj/view?usp=sharing"),
             webBtnBlockGen("Wasima(2023)", "https://drive.google.com/drive/folders/1U8bd2PTduCjrsTXo_2mLFSLXkp1EPqKZ?usp=sharing"),
         ]

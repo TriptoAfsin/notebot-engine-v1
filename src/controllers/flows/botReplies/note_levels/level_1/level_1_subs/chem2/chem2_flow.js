@@ -15,6 +15,10 @@ let chem2_flow = [
       "Anika(2025)",
       "https://drive.google.com/drive/folders/1HjbwRV1xlKi_-ZObZPgP71ZP_JL83Af0?usp=sharing"
     ),
+    webBtnBlockGen(
+      "Nahid(2025)",
+      "https://drive.google.com/file/d/19UwIbDxoBP_qW-yY0DLRqkvenmPrTVJd/view?usp=sharing"
+    ),
   ]),
   grroupedButtonBlockGen("📌 Hand Notes -", [
     webBtnBlockGen(

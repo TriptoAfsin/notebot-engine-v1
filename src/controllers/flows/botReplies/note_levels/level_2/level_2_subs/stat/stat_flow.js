@@ -31,6 +31,7 @@ let statFlow = [
         `📌 Full Hand Notes -   `,
         [
             webBtnBlockGen("Part A(Samet)","https://drive.google.com/file/d/1G-pwOzmWap0J1lCNF-6BGX7I-Z03NWaC/view?usp=sharing"),
+            webBtnBlockGen("Part A(SHYELEN)","https://drive.google.com/file/d/11u-kzBHdmaEgVpxUHBEeePlY1Zsn0o23/view?usp=sharing"),
             webBtnBlockGen("Part B(Samet)","https://drive.google.com/file/d/1b1Ae_m7waUz4zHmT7W-gppp07QR89gA-/view?usp=sharing"),
         ]
     ),
