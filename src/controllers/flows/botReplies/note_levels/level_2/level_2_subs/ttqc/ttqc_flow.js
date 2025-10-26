@@ -13,6 +13,12 @@ let ttqcFlow = [
         ]
     ),
     grroupedButtonBlockGen(
+        "📌 Online Class(Rafi)",
+        [
+            webBtnBlockGen("Youtube Link", "https://www.youtube.com/playlist?list=PLpFoI_N-jBPHfz0BAUM_Q5cklfntZfp9x"),
+        ]
+    ),
+    grroupedButtonBlockGen(
         "📌 Solves + Math -",
         [
             webBtnBlockGen("Part-B(2023)", "https://drive.google.com/file/d/1wAXc-PeLbcrvjWZtrd_Fzcg5JKpThCMP/view?usp=sharing"),
