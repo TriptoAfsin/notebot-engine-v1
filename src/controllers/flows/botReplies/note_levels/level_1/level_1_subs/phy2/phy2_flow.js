@@ -8,6 +8,11 @@ let bondiFlow = require("../../../../sponsoredFlows/bondiCard");
 
 let phy2_flow = [
     bondiFlow,
+    grroupedButtonBlockGen("📌 QB Solve(2025)",
+        [
+            webBtnBlockGen("Rafi(2025)", "https://drive.google.com/drive/folders/1C_qwCyCSo-H4IOAPMBz9dWiuRRCWO_UD?usp=sharing"),
+        ]
+    ),
     grroupedButtonBlockGen("📌 Youtube Playlist",
         [
             webBtnBlockGen("Youtube Playlist", "https://www.youtube.com/playlist?list=PLakGb0S4SwU0obyfFUlu7ZM3a6CToVGkv")

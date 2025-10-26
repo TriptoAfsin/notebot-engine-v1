@@ -7,6 +7,7 @@ let che1_lab_flow = [
     grroupedButtonBlockGen(
         "📌 All Lab Reports(New) - ",
         [
+            webBtnBlockGen("Kamal(2025)", "https://drive.google.com/drive/folders/1cWWupOc3zJhgZbATHM8CLc6XCa0yzRap?usp=sharing"),
             webBtnBlockGen("Emon(2022)", "https://drive.google.com/file/d/1fou-8FqdjtKuxrfAong4L-yAovzA04Rv/view?usp=sharing"),
         ]
     ),

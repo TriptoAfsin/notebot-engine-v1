@@ -10,6 +10,7 @@ let chem1_flow = [
     grroupedButtonBlockGen(
         "📌 Select Topics for CHE-I -",
         [
+            webBtnBlockGen("QB Solve(2025)", "https://drive.google.com/drive/folders/1fU_VX4oH9Yj8mTc85aDzQsdbH9PFryT8?usp=sharing"),
             webBtnBlockGen("QB Solve(2021)", "https://drive.google.com/drive/folders/1tOXp7lwSuoENfugIFQ3djiDgahxvR8Un?usp=sharing"),
         ]
     ),

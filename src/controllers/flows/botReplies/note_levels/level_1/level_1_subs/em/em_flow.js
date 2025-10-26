@@ -6,7 +6,11 @@ let bondiFlow = require("../../../../sponsoredFlows/bondiCard");
 
 
 let em_flow = [
-    bondiFlow,
+    grroupedButtonBlockGen("📌 Full Hand Notes - ",
+        [
+            webBtnBlockGen("Rafi(2025)", "https://drive.google.com/drive/folders/11kSPGcK32xjT-Zo8jC3XLQGeoqgEaej3?usp=sharing")
+        ]
+    ),
     grroupedButtonBlockGen("📌 Short Hand Note All(Saidul, 2019) -",
         [
             webBtnBlockGen("⚡ Download", "https://drive.google.com/file/d/11lnmfUbsrYQa0dwJvCoe3uU2JmNPAOUE/view?usp=sharing")
