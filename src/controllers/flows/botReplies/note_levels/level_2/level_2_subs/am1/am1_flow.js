@@ -5,7 +5,12 @@ let bondiFlow = require("../../../../sponsoredFlows/bondiCard");
 
 
 let am1Flow = [
-    bondiFlow,
+    grroupedButtonBlockGen(
+        "📌 Full Hand Notes - ",
+        [
+            webBtnBlockGen("Part-A(Anas,2025)", "https://drive.google.com/file/d/1LiBCk3y40OXM3m1uhgh-I1VbBWuf48VL/view?usp=sharing"),
+        ]
+    ),
     grroupedButtonBlockGen(
         "📌 QB Analysis - ",
         [

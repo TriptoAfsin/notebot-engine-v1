@@ -10,6 +10,8 @@ let fm1Flow = [
         "📌 Full Hand Notes -",
         [
             webBtnBlockGen("FR(2025)", "https://drive.google.com/file/d/1FK-B5Wp8SRxWxW185u4GKmh-oaOMZ-NB/view?usp=sharing"),
+            webBtnBlockGen("Part-A(Kakon,2025)", "https://drive.google.com/file/d/1w3sb_L_l89yhjQwA16u2mOAF4CBdIMW7/view?usp=sharing"),
+            webBtnBlockGen("Part-B(Kakon,2025)", "https://drive.google.com/file/d/1hvo6azMPiTMyVJAF-vOQB3S61d_5oBOC/view?usp=sharing"),
         ]
     ),
     grroupedButtonBlockGen(

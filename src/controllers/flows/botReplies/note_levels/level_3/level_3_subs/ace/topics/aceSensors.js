@@ -1,5 +1,6 @@
-let textBlockGen = require("../../../../../../../genrators/textBlockGen");
+let textBlockGen = require('simple-messenger-blocks/textBlockGen');
 let aceSensors = [
+    textBlockGen(`🔷 Hand Note(Sazid, WPE-48, 2025)-\n\nhttps://drive.google.com/file/d/1ssjGFLvkIlyhltSPfj0IC2mWgI36UiWs/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note(Nahid AE-44, 2021)-\n\nhttps://drive.google.com/file/d/16a9Kvw-pKMlX5sa4mWR5PRV_9w06zTV_/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note(Part-A)(Nahid AE-44, 2021)-\n\nhttps://drive.google.com/file/d/117fHybqXQcvREZqFRoubPSW8nO0TP_cU/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note(Janan Mam)(Tripto, IPE-44,2021)-\n\nhttps://drive.google.com/file/d/1ZipnEa-PeGaZgL8K4V4SAbsbG3-cbm7A/view?usp=sharing`),
