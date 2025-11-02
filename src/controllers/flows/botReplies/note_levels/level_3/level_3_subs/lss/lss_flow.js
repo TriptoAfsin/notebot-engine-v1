@@ -15,6 +15,7 @@ let lssFlow = [
         [
             webBtnBlockGen("Alim(2025)", "https://drive.google.com/file/d/1bcMpp-BcC4OUEucv6AwEQmfZuc692B69/view?usp=sharing"),
             webBtnBlockGen("Adee(2022)", "https://drive.google.com/file/d/1478dh9aFpS1Pv3M2N9qvncrJg89Yuvwd/view?usp=sharing"),
+            webBtnBlockGen("Mostakim(2025)", "https://drive.google.com/file/d/1MLLO1EuWZwrR90SK4HxFakJzfe_CWPgL/view?usp=sharing"),
         ]
     ),
     grroupedButtonBlockGen(

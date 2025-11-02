@@ -44,6 +44,7 @@ let eeeFlow = [
         "📌 Full Hand Notes",
         [
             webBtnBlockGen("Lingkon(2024)", "https://drive.google.com/file/d/17xdvsm_0LcY4nOvwKn2fQu_Lm0D_qKOL/view?usp=sharing"),
+            webBtnBlockGen("DCE Circuit(Gourab,2025)", "https://drive.google.com/file/d/1w5Se5R-f3wCXPtjTlWoH8y5-RQrXzRDL/view?usp=sharing"),
         ]
     ),
     grroupedButtonBlockGen(

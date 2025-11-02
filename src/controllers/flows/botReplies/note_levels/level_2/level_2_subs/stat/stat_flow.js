@@ -20,6 +20,11 @@ let statFlow = [
             webBtnBlockGen("Mamun(2023)", "https://drive.google.com/file/d/1fsI-6DOyAe1Vc-WPt6nVH0CqHuVkqCXw/view?usp=sharing"),
         ]
     ),
+    grroupedButtonBlockGen(`📌 Lab Notes -`,
+        [
+            webBtnBlockGen("Anonna(2025)", "https://drive.google.com/file/d/1x1GleOClhfh1UamNUs7b4UZpAjJEMtcj/view?usp=sharing"),
+        ]
+    ),
     grroupedButtonBlockGen(`📌 Full Hand Notes -`,
         [
             webBtnBlockGen("Lingkon(2025)", "https://drive.google.com/file/d/1AcmkcTeqjjNgPZ7hnoNZ1g3tdxIEoU1h/view?usp=sharing"),

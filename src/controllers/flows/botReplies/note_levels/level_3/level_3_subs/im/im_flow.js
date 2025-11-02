@@ -31,6 +31,7 @@ let imFlow = [
         [
             webBtnBlockGen("Nahid(B)", "https://drive.google.com/file/d/1RQX2Ax7pCnoGxFB93vXK_kp-xc_vbMEc/view?usp=sharing"),
             webBtnBlockGen("Lingkon(2025)", "https://drive.google.com/file/d/1_nGO31aCJrMiN5d7-TA3JOcagbZI0kgu/view?usp=sharing"),
+            webBtnBlockGen("Mostakim(2025)", "https://drive.google.com/file/d/1EL5jBD7KqkxUW2gCrOMrPxLoHJCTWSLi/view?usp=sharing"),
         ]
     ),
     grroupedButtonBlockGen(

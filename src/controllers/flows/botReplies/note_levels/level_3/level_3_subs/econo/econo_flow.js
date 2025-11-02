@@ -16,6 +16,12 @@ let econoFlow = [
         ]
     ),
     grroupedButtonBlockGen(
+        "📌 Full Hand Notes - ",
+        [
+            webBtnBlockGen("Mostakim(2025)", "https://drive.google.com/file/d/1I9j4WeJuZEvBk8FoJ9Dh5Qz7q_0E-cv0/view?usp=sharing"),
+        ]
+    ),
+    grroupedButtonBlockGen(
         `📽️ Youtube Playlist -`,
         [
             webBtnBlockGen("Rafi(ESE-46,2024)", "https://www.youtube.com/playlist?list=PLpFoI_N-jBPEPa5hMTIsu6-aGpQvuteh6"),

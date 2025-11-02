@@ -39,6 +39,7 @@ let marketingFlow = [
         "📌 Full Hand Notes",
         [
             webBtnBlockGen("Lingkon(2024)", "https://drive.google.com/file/d/1FIZ5oyzmAg2cF2yIoDmtgrQ6Ekm7AJSO/view?usp=sharing"),
+            webBtnBlockGen("Mostakim(2025)", "https://drive.google.com/file/d/1jZsFcrxeq4bpCi9dJllycHuOHqup-06v/view?usp=sharing"),
         ]
     ),
     grroupedButtonBlockGen(
