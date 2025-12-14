@@ -16,14 +16,28 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [10.x, 12.x, 14.x]
+        node-version: [16.x, 18.x, 20.x]
 
     steps:
-    - uses: actions/checkout@v2
+    - name: Checkout
+      uses: actions/checkout@v4
+
     - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
+      uses: actions/setup-node@v4
       with:
         node-version: ${{ matrix.node-version }}
-    - run: npm ci
-    - run: npm run build --if-present
+        cache: npm
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Smoke check npm start (15s timeout)
+      run: |
+        timeout 15 npm start
+        exit_code=$?
+        if [ "$exit_code" -eq 124 ]; then
+          echo "npm start ran for 15s; treating as success"
+          exit 0
+        fi
+        exit $exit_code
     
