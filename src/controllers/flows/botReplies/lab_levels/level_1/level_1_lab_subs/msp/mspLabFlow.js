@@ -6,6 +6,12 @@ let payloadBtnGen = require('simple-messenger-blocks/payloadBtnGen');
 
 let msp_lab_flow = [
     grroupedButtonBlockGen(
+        "📌 Lab Final -",
+        [
+            webBtnBlockGen("2025", "https://drive.google.com/file/d/1xPwDpEteXyAadGJvMcx0ncGuJR3lEOOX/view?usp=sharing"),
+        ]
+    ),
+    grroupedButtonBlockGen(
         "📌 All Lab Report -",
         [
             webBtnBlockGen("Emon(Affli,2022)", "https://drive.google.com/file/d/1gLFB4SIK_uKCMHDcTm1SomJGm75_-jvV/view?usp=sharing"),
