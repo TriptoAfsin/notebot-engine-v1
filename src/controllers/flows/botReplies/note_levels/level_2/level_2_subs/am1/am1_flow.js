@@ -9,6 +9,7 @@ let am1Flow = [
         "📌 Full Hand Notes - ",
         [
             webBtnBlockGen("Part-A(Anas,2025)", "https://drive.google.com/file/d/1LiBCk3y40OXM3m1uhgh-I1VbBWuf48VL/view?usp=sharing"),
+            webBtnBlockGen("Math Notes(Arindom,AE-47, 2025)", "https://drive.google.com/file/d/1LrRkmjiR4798sQFvY6f0LNDV-8WIwBYz/view?usp=sharing"),
         ]
     ),
     grroupedButtonBlockGen(
@@ -75,6 +76,7 @@ let am1Flow = [
         [
             payloadBtnGen("Intro", "am1_intro_flow"),
             payloadBtnGen("Structure of Tex In", "am1_structure_tex_flow"),
+            webBtnBlockGen("Garment Inspection", "https://drive.google.com/drive/folders/1PDhV1Pr13mQjBr2JRwDNflG3eHlhayGl?usp=sharing"),
         ]
     ),
     grroupedButtonBlockGen(

@@ -27,6 +27,7 @@ let wp1Flow = [
     grroupedButtonBlockGen(
         "📌 Full Hand Notes - ",
         [
+            webBtnBlockGen("Prottush(2025)", "https://drive.google.com/drive/folders/1hvyzwdEazRpzE7Wnbmw6hs8-wYrwiTWn?usp=sharing"),
             webBtnBlockGen("Naim-PTEC(2025)", "https://drive.google.com/file/d/1CPNq-Q6kMe5swJDJk8Uq5VYuIROAOTRc/view?usp=sharing"),
         ]
     ),

@@ -9,6 +9,12 @@ let bondiFlow = require("../../../../sponsoredFlows/bondiCard");
 let eeeFlow = [
     bondiFlow,
     grroupedButtonBlockGen(
+        "📌 Full Hand Notes",
+        [
+            webBtnBlockGen("Shurja, WPE-50,2025", "https://drive.google.com/file/d/1Tquv-GisspL2q0CpAPltKZ8grr-t-8CX/view?usp=sharing"),
+        ]
+    ),
+    grroupedButtonBlockGen(
         "📌 QB Solve -",
         [
             webBtnBlockGen("Rafi(2023)", "https://drive.google.com/drive/folders/1wOTKv9jDlR54evoAOS60gkrNOfDjvDvZ?usp=sharing"),
@@ -93,6 +99,12 @@ let eeeFlow = [
             payloadBtnGen("Wye-Delta", "eee_wye_delta_flow"),
             payloadBtnGen("RMS", "eee_rms_flow"),
             payloadBtnGen("Circuit Analysis", "eee_circuit_analy_flow"),
+        ]
+    ),
+    grroupedButtonBlockGen(
+        "🔰 Select Topics for FEEE -",
+        [
+            webBtnBlockGen("AC Power.. An.", "https://drive.google.com/drive/folders/1mWG23OkIzSNuzZppUB3vicMZjLK4jnET?usp=sharing"),
         ]
     ),
 ]

@@ -11,6 +11,7 @@ let cp_flow = [
         [
             webBtnBlockGen("Python Theories", "https://drive.google.com/file/d/1ci9dKXE2o93mg3VxnsswkwYKYFmuiZiU/view?usp=sharing"),
             webBtnBlockGen("Python Notes(2025)", "https://drive.google.com/drive/folders/1FM7ZWeUXMMoCjMOTzUeDMlj9NbqAWzy9?usp=sharing"),
+            webBtnBlockGen("Full Notes(Fardin, 2025)", "https://drive.google.com/drive/folders/1hS883F5SfjDuGfliSwALhXaIcnIlkz-l?usp=sharing"),
         ]
     ),
     grroupedButtonBlockGen(

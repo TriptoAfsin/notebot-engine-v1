@@ -7,10 +7,15 @@ let bondiFlow = require("../../../../sponsoredFlows/bondiCard");
 let tpFlow = [
     bondiFlow,
     grroupedButtonBlockGen(
+        "📺 Video Lectures(Rafi) - ",
+        [
+            webBtnBlockGen("YouTube Playlist", "https://www.youtube.com/playlist?list=PLpFoI_N-jBPFPP2UGDRO0YEnFcgURSlnD"),
+        ]
+    ),
+    grroupedButtonBlockGen(
         "📌 QB Solve & Video Lectures -",
         [
-            webBtnBlockGen("Rafi(2023)", "https://drive.google.com/drive/folders/16mRiVpUohGl_QHul0DSS8PwF2qKdVMdj?usp=sharing"),
-            webBtnBlockGen("YouTube Playlist", "https://www.youtube.com/playlist?list=PLpFoI_N-jBPErZss0jndEkuoiABWBTh0g"),
+            webBtnBlockGen("Rafi(2023)", "https://drive.google.com/drive/folders/16mRiVpUohGl_QHul0DSS8PwF2qKdVMdj?usp=sharing")
         ]
     ),
     grroupedButtonBlockGen(

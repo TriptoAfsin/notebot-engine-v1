@@ -22,6 +22,10 @@ let fm1_lab_flow = [
       "Tahin(2025)",
       "https://drive.google.com/drive/folders/1B8ejQq3vhnFqd2EWjHBPXGDVnltwcMbO?usp=sharing"
     ),
+    webBtnBlockGen(
+      "Anonna(2025)",
+      "https://drive.google.com/file/d/1xOeHmHEtFPrN4XXd-zt2m3kCYSBueXjw/view?usp=sharing"
+    ),
   ]),
   grroupedButtonBlockGen("🔰 Select Experiment for FM-I -", [
     payloadBtnGen("1.Layout", "fm1_lab_layout_flow"),
