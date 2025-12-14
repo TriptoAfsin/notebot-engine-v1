@@ -55,6 +55,10 @@ let level2Labs = [
         subName: "SDA",
         route: "app/labs/2/sda"
     },
+    {
+        subName: "FYT",
+        url: "https://drive.google.com/drive/folders/1UKeBH7hsqxUe6ah3mKXdYoFsONncqMfC?usp=sharing"
+    },
 ]
 
 
