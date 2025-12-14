@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Node backend for notebot",
   "main": "server.js",
+  "engines": {
+    "node": ">=18"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node src/server.js",
