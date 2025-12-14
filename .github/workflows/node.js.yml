@@ -33,6 +33,7 @@ jobs:
 
     - name: Smoke check npm start (15s timeout)
       run: |
+        set +e
         timeout 15 npm start
         exit_code=$?
         if [ "$exit_code" -eq 124 ]; then
