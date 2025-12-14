@@ -2,6 +2,7 @@ let textBlockGen = require('simple-messenger-blocks/textBlockGen');
 
 
 let math2Vector = [
+    textBlockGen(`🔷 Hand Note(Fardin,AE-50,2025) - \n\nhttps://drive.google.com/file/d/14JYV3OqIzoWzfv6fWB_7H7-jat3NbiXB/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note(Pritom,WPE-50,2025) - \n\nhttps://drive.google.com/file/d/1GiK6pW467HBu3cr35vP9PnGy9EyLHlQg/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note(Abinash, AE-49, 2025)-\n\nhttps://drive.google.com/file/d/1v5itY_s0datpeXav2bWbY9YOluOoVX04/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note(Nurul, IPE-49, 2025)-\n\nhttps://drive.google.com/file/d/1mxxAjgK8y5TRh8o8U-sGnqEUobNl5d6s/view?usp=sharing`),

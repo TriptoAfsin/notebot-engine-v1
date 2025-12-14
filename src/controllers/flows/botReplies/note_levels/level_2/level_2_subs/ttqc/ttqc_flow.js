@@ -35,6 +35,7 @@ let ttqcFlow = [
     ),
     grroupedButtonBlockGen(`📌 Full Hand Notes -`,
         [
+            webBtnBlockGen("Anonna(2025)", "https://drive.google.com/file/d/1lP8Wvp3WgE_V6a3u5Jm3Dh-kZNPoEAP6/view?usp=sharing"),
             webBtnBlockGen("Tahin(2025)", "https://drive.google.com/drive/folders/1PnlWqfV35T3MHCMA8gfjBklpHs__Mpae?usp=sharing"),
             webBtnBlockGen("Sakib(2023)", "https://drive.google.com/file/d/19Hhrxht0Rm6_fFxPXzsBoLSO3JJI2X1C/view?usp=sharing"),
         ]

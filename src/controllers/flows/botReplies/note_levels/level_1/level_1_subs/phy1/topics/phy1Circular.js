@@ -2,6 +2,7 @@ let textBlockGen = require("../../../../../../../genrators/textBlockGen");
 
 
 let phy1Circular = [
+    textBlockGen(`🔷 Hand Note(Fardin,AE-50,2025) - \n\nhttps://drive.google.com/file/d/1UkwjexP6F1hRLtclOLKSXfOjIRBi2Wjf/view?usp=sharing`),
     textBlockGen(`🔷 Book Scanned - \n\nhttps://drive.google.com/file/d/17mcDvnCVXekoka5BgKJuBpVr9kpScOI7/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note(Azim,TEM-46, 2020) - \n\nhttps://drive.google.com/file/d/11jLk7eDSoocQrTZR69_VpC1zutLhUucd/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note(Sayim, 2023)-\n\nhttps://drive.google.com/file/d/1QJ5SVr7vUQL1EqTCpvYFnurFuIGTc58G/view?usp=sharing`),

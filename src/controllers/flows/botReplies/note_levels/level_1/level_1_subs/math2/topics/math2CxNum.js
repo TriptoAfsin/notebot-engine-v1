@@ -2,6 +2,7 @@ let textBlockGen = require('simple-messenger-blocks/textBlockGen');
 
 
 let math2CxNum = [
+    textBlockGen(`🔷 Hand Note(Fardin,AE-50,2025) - \n\nhttps://drive.google.com/file/d/1HgcGGPgxtqARJ2UY1IzR8m1-anFXxVFS/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note(Pritom,WPE-50,2025) - \n\nhttps://drive.google.com/file/d/1cWSyyJGrEABSqxnCAlT3LzCsF58B6wRq/view?usp=sharing`),
     textBlockGen(`🔷 Complex Number(Anika, 2019)-\n\nhttps://drive.google.com/file/d/1hcdGDoU4Z0tZKmaUTrHKzaCyPxs5MGSt/view?usp=sharing`),
     textBlockGen(`🔷 Complex Analysis(Asha, 2019)-\n\nhttps://drive.google.com/file/d/1xqTfr21P0VsGef-OW3o9vimC5rHrDq1t/view?usp=sharing`),

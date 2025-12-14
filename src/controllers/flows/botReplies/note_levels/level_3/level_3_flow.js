@@ -110,6 +110,8 @@ let level_3_note = [
   grroupedButtonBlockGen(`🔰 Select Subject for level 3 -`, [
     webBtnBlockGen("FMR(Fashion..)", "https://drive.google.com/drive/folders/1lJh8TwfpZ_wft_S3OVfVULEbsJX6zn8p?usp=sharing"),
     webBtnBlockGen("Special Clothing Materials", "https://drive.google.com/drive/folders/1SUb1uFAipbF8fwB7f-YiHUpm_duHt5So?usp=sharing"),
+    webBtnBlockGen("CIAB", "https://drive.google.com/drive/folders/1dmMu64YUwiA6CN9iFVc7VRnosW8aAIh5?usp=sharing"),
+    webBtnBlockGen("CC", "https://drive.google.com/drive/folders/11oHS9OXplYQfwCzNTwmNjNvFeMKUt3LC?usp=sharing"),
 ]),
 ];
 
