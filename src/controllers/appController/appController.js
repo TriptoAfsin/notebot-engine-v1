@@ -1011,6 +1011,9 @@ let am1LabsStdBody = require('./academic/labReport/level2/subs/am1/topics/appAm1
 // lab2 - sda
 let sdaAppFlow = require('./academic/labReport/level2/subs/sda/sdaLabs')
 
+// lab2 - fyt
+let fytLabAppFlow = require('./academic/labReport/level2/subs/fyt/fytLabs')
+
 //lab2 - ym1
 let ym1Labs = require('./academic/labReport/level2/subs/ym1/ym1Labs')
 
@@ -6053,6 +6056,13 @@ let labSdaFlow = (req, res) => {
     return res.send(sdaAppFlow);
 };
 
+//labs2 -> fyt
+let labFytFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
+    return res.send(fytLabAppFlow);
+};
+
 //random func
 let randomNum = (length) => {
     return Math.floor(Math.random()*length)
@@ -6172,6 +6182,7 @@ module.exports = {
 
     //lab - sda
     labSdaFlow: labSdaFlow,
+    labFytFlow: labFytFlow,
 
     notes: notes,
     notesLevel1: level1Notes,

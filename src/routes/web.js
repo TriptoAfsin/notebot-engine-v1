@@ -960,6 +960,7 @@ let initWebRoutes = (app) => {
 
     //lab - sda
     router.get("/app/labs/2/sda", appController.labSdaFlow);
+    router.get("/app/labs/2/fyt", appController.labFytFlow);
 
 
     //lab - wp1
