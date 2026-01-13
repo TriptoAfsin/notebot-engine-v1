@@ -32,7 +32,7 @@ let getFacebookUserInfo = sender_psid => {
 let markMessageRead = (sender_psid) => {
   return new Promise((resolve, reject) => {
     try {
-      let uri = `https://graph.facebook.com/v17.0/me/messages?access_token=${process.env.PAGE_ACCESS_TOKEN}`;
+      let uri = `https://graph.facebook.com/v21.0/me/messages?access_token=${process.env.PAGE_ACCESS_TOKEN}`;
       // Send the HTTP request to the Messenger Platform
       request(
         {
@@ -63,7 +63,7 @@ let markMessageRead = (sender_psid) => {
 let sendTypingOn = (sender_psid) => {
   return new Promise((resolve, reject) => {
     try {
-      let uri = `https://graph.facebook.com/v17.0/me/messages?access_token=${process.env.PAGE_ACCESS_TOKEN}`;
+      let uri = `https://graph.facebook.com/v21.0/me/messages?access_token=${process.env.PAGE_ACCESS_TOKEN}`;
       // Send the HTTP request to the Messenger Platform
       request(
         {
@@ -94,7 +94,7 @@ let sendTypingOn = (sender_psid) => {
 let sendTypingOff = (sender_psid) => {
   return new Promise((resolve, reject) => {
     try {
-      let uri = `https://graph.facebook.com/v17.0/me/messages?access_token=${process.env.PAGE_ACCESS_TOKEN}`;
+      let uri = `https://graph.facebook.com/v21.0/me/messages?access_token=${process.env.PAGE_ACCESS_TOKEN}`;
       // Send the HTTP request to the Messenger Platform
       request(
         {
@@ -136,7 +136,7 @@ let passThreadControl = (sender_psid, app) => {
         target_app_id = process.env.FACEBOOK_APP_ID;
         metadata = "Pass control to bot"
       }
-      let uri = `https://graph.facebook.com/v17.0/me/pass_thread_control`;
+      let uri = `https://graph.facebook.com/v21.0/me/pass_thread_control`;
       // Send the HTTP request to the Messenger Platform
       request(
         {
@@ -169,7 +169,7 @@ let passThreadControl = (sender_psid, app) => {
 let takeThreadControl = (sender_psid) => {
   return new Promise(async (resolve, reject) => {
     try {
-      let uri = `https://graph.facebook.com/v17.0/me/take_thread_control`;
+      let uri = `https://graph.facebook.com/v21.0/me/take_thread_control`;
       // Send the HTTP request to the Messenger Platform
       request(
         {
