@@ -7,6 +7,12 @@ let level_4_note = [
     grroupedButtonBlockGen(
         `🟣 Comprehensive Viva, Project Work/Thesis Resources -`,
         [
+            webBtnBlockGen("All about Comprehensive Viva", "https://www.youtube.com/watch?v=qiI_w9YIpAY"),
+        ]
+    ),
+    grroupedButtonBlockGen(
+        `🟣 Comprehensive Viva, Project Work/Thesis Resources -`,
+        [
             webBtnBlockGen("Comprehensive Viva", "https://drive.google.com/drive/folders/1X3OIcJLAAc9maPhR0oUCK4smh-vA_mjG?usp=sharing"),
             webBtnBlockGen("Project Work", "https://drive.google.com/drive/folders/1O3LQxlMBWrWTblO0LcsnnishsliMsu8h?usp=sharing"),
             webBtnBlockGen("Industrial Attachments", "https://drive.google.com/drive/folders/1txN44rDdppKq77b2qi51-EqSf3DW5zwg?usp=sharing"),
