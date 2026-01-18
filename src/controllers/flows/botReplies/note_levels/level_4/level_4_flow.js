@@ -8,6 +8,7 @@ let level_4_note = [
         `🟣 Comprehensive Viva, Project Work/Thesis Resources -`,
         [
             webBtnBlockGen("All about Comprehensive Viva", "https://www.youtube.com/watch?v=qiI_w9YIpAY"),
+            webBtnBlockGen("Comprehensive Viva Basic Questions", "https://drive.google.com/file/d/1oXg3sBJiZ5lTfUQLsFWUa4-385uS8yN4/view?usp=sharing"),
         ]
     ),
     grroupedButtonBlockGen(
