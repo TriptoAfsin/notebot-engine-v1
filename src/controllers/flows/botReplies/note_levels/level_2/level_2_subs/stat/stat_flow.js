@@ -14,6 +14,12 @@ let statFlow = [
             webBtnBlockGen("Formulas Table", "https://drive.google.com/file/d/1JahjJx6EtYmeZHK1DElidWczDwn_UGaI/view?usp=sharing")
         ]
     ),
+    grroupedButtonBlockGen(`📌 Full Hand Notes(2026) -`,
+        [
+            webBtnBlockGen("Part-A(Sudip)", "https://drive.google.com/file/d/1WmIrtDE3eK-9llKNsSn4Vgsl_Tqhnev5/view?usp=sharing"),
+            webBtnBlockGen("Part-B(Sudip)", "https://drive.google.com/file/d/12pxHW9zQuKB46Dpr0q5f6pmHxdleu1pC/view?usp=sharing"),
+        ]
+    ),
     grroupedButtonBlockGen(`📌 Stat Solve -`,
         [
             webBtnBlockGen("Avik(2021)", "https://drive.google.com/file/d/19uqtuiAYmnJ7jvLxzYWnwq8j2cbgvGFz/view?usp=sharing"),
