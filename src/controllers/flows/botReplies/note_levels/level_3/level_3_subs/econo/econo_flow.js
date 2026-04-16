@@ -48,6 +48,13 @@ let econoFlow = [
         ]
     ),
     grroupedButtonBlockGen(
+        "📌 Full Notes -",
+        [
+            webBtnBlockGen("Bulbul(JTEC,2026)", "https://drive.google.com/file/d/1KBSHXnjZ8mHhAQmqWBVoFECpokW4EnVD/view?usp=sharing"),
+            webBtnBlockGen("Alim(Affli.)", "https://drive.google.com/file/d/1Dx-_D3d4zffRW0o0pVvp2p13ewqhjtpx/view?usp=sharing"),
+        ]
+    ),
+    grroupedButtonBlockGen(
         "🔰 Select Topics for Economics -",
         [
             payloadBtnGen("Books", "econo_books_flow"),

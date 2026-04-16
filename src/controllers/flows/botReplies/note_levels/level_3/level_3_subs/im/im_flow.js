@@ -35,6 +35,13 @@ let imFlow = [
         ]
     ),
     grroupedButtonBlockGen(
+        "📌 Full Notes -",
+        [
+            webBtnBlockGen("Bulbul(JTEC,2026)", "https://drive.google.com/file/d/1sQaJ6Kl0Fj9dlTCBNq2d4wYiNi4Mt1f-/view?usp=sharing"),
+            webBtnBlockGen("Alim(Affli.)", "https://drive.google.com/file/d/1MECX2EnU7rxvs8fadS3_WKhWNaSgG5nA/view?usp=sharing"),
+        ]
+    ),
+    grroupedButtonBlockGen(
         "🔰 Select Topics for IM -",
         [
             payloadBtnGen("Lectures", "im_lecture_flow"),

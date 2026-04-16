@@ -71,6 +71,10 @@ let level_3_note = [
       "https://drive.google.com/drive/folders/1JtOZ552EnvWUX8RZ-5XA1WaQliujL-TV?usp=sharing"
     ),
   ]),
+  grroupedButtonBlockGen(`📌 CDP/UM Notes -`, [
+    webBtnBlockGen("CDP-Bulbul(JTEC,2026)", "https://drive.google.com/file/d/1y2TxJZ9oRHZUnzmH6zaPn0k-2lIMh4m5/view?usp=sharing"),
+    webBtnBlockGen("UM-Alim(Affli.)", "https://drive.google.com/file/d/1LT0QZM-hEO1lM0FwZl-Tp1-20zzLvUYg/view?usp=sharing"),
+  ]),
   grroupedButtonBlockGen(`🔰 Select Subject for level 3 -`, [
     webBtnBlockGen(
       "CTPC",
@@ -91,6 +95,9 @@ let level_3_note = [
       "https://drive.google.com/drive/folders/1pCqxLyVgJ-BwhCpCtut7f6v9oQucaHzN?usp=sharing"
     ),
   ]),
+  grroupedButtonBlockGen(`📌 ACWP Note -`, [
+    webBtnBlockGen("Bulbul(JTEC,2026)", "https://drive.google.com/file/d/1__8PYpwPbJeMru6Q6ptyB9CDbsrV6WZl/view?usp=sharing"),
+  ]),
   grroupedButtonBlockGen(`🔰 Select Subject for level 3 -`, [
     webBtnBlockGen(
       "ACAM",
@@ -101,6 +108,10 @@ let level_3_note = [
       "https://drive.google.com/drive/folders/1632Rlb5rOPeQkKsGmO_VTxIEz6EY5OSY?usp=sharing"
     ),
     webBtnBlockGen("ACDCE", "https://drive.google.com/drive/folders/1ekFNG-qN4P-9fpnxnn0gdGrYsW-AC4UO?usp=sharing"),
+  ]),
+  grroupedButtonBlockGen(`📌 SYM/ES Notes -`, [
+    webBtnBlockGen("SYM-Alim(Affli.)", "https://drive.google.com/file/d/1os8s5lUwC16OMwJkZbzjROaxGsub1u3A/view?usp=sharing"),
+    webBtnBlockGen("ES-Alim(Affli.)", "https://drive.google.com/file/d/12Kg34TygC6M9Df0F12JxEtLbfphuOvpa/view?usp=sharing"),
   ]),
     grroupedButtonBlockGen(`🔰 Select Subject for level 3 -`, [
       webBtnBlockGen("ACTM", "https://drive.google.com/drive/folders/1Xn9FeVZIKi8eRz_LkE0gEt2FkzGalhRb?usp=sharing"),
@@ -113,6 +124,13 @@ let level_3_note = [
     webBtnBlockGen("CIAB", "https://drive.google.com/drive/folders/1dmMu64YUwiA6CN9iFVc7VRnosW8aAIh5?usp=sharing"),
     webBtnBlockGen("CC", "https://drive.google.com/drive/folders/11oHS9OXplYQfwCzNTwmNjNvFeMKUt3LC?usp=sharing"),
 ]),
+  grroupedButtonBlockGen(`🔰 Select Subject for level 3 -`, [
+    webBtnBlockGen("WPM(Wet Pro. Machinery)", "https://drive.google.com/drive/folders/1ozBKLhqdHnXUI8_L57cwnum32lPOedln?usp=sharing"),
+    webBtnBlockGen("MYM(Modern Yarn Mfg.)", "https://drive.google.com/drive/folders/1XVr30rkPpNrfx3-FNwZjmNbTlzjSqCeM?usp=sharing"),
+  ]),
+  grroupedButtonBlockGen(`📌 MYM Note -`, [
+    webBtnBlockGen("Alim(Affli.)", "https://drive.google.com/file/d/1ZO5jgiw6JtOQAabKDEH3DDYYFB7OtFHj/view?usp=sharing"),
+  ]),
 ];
 
 module.exports = level_3_note;

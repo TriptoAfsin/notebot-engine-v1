@@ -54,6 +54,13 @@ let fm2Flow = [
         ]
     ),
     grroupedButtonBlockGen(
+        "📌 Full Notes -",
+        [
+            webBtnBlockGen("Bulbul(JTEC,2026)", "https://drive.google.com/file/d/1YwCaJ6Q2SCezcoNVFmDmifdOyE6MdnoH/view?usp=sharing"),
+            webBtnBlockGen("Alim(Affli.)", "https://drive.google.com/file/d/12BMAB7hFUdVrcOJU0J1nQ25W1WWj4myn/view?usp=sharing"),
+        ]
+    ),
+    grroupedButtonBlockGen(
         "🔰 Select Topics for FM-II -",
         [
             payloadBtnGen("Books", "fm2_books_flow"),

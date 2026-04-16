@@ -89,6 +89,17 @@ Copy `.env.example` to `.env`. Key vars: `PORT`, `PAGE_ACCESS_TOKEN`, `MY_VERIFY
 3. If adding to a sub-topic (books, hand notes, questions), edit the corresponding file in `topics/`
 4. The chatbotController and appController both consume the same flow files — no duplicate registration needed
 
+## Adding Notes from Google Drive Folders
+
+When adding bulk notes from a shared Google Drive folder, use the `playwright-cli` skill to extract individual file IDs:
+
+1. `npx playwright-cli open "https://drive.google.com/drive/folders/FOLDER_ID?usp=sharing"`
+2. Run JS to extract file IDs: `npx playwright-cli run-code "async page => { const result = await page.evaluate(() => { ... extract data-id and data-tooltip ... }); return result; }"`
+3. Each file ID maps to `https://drive.google.com/file/d/FILE_ID/view?usp=sharing`
+4. Match file names to existing subject flows and add `webBtnBlockGen` entries
+
+Some subjects (CDP, UM, SYM, ES, ACWP, FTQC, etc.) only exist as web links in their level flow file (`level_3_flow.js`, `level_4_flow.js`) rather than having their own subdirectory — add individual file notes as new button blocks near those existing web links.
+
 ## Naming Conventions
 
 - Flow files: `{subject}_flow.js` or `{subject}{Topic}.js`

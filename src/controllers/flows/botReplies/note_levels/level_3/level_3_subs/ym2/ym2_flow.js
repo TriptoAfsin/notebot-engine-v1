@@ -34,6 +34,12 @@ let ym2Flow = [
             webBtnBlockGen("Arjan+Riaz", "https://drive.google.com/file/d/1lm6swCN15Px-VM0II0IepcWNwFNZ-Llt/view?usp=sharing"),
         ]
     ),
+    grroupedButtonBlockGen(
+        "📌 Full Notes -",
+        [
+            webBtnBlockGen("Bulbul(JTEC,2026)", "https://drive.google.com/file/d/1PkudB4EL6idpy887glClgd3tRj8kAmCk/view?usp=sharing"),
+        ]
+    ),
     grroupedButtonBlockGen("🔰 Select Topics for YM-II -",
         [
             payloadBtnGen("Books", "ym2_books_flow"),

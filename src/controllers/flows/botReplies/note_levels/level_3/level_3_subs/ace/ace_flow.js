@@ -51,6 +51,12 @@ let aceFlow = [
         ]
     ),
     grroupedButtonBlockGen(
+        `📌 Full Notes -`,
+        [
+            webBtnBlockGen("Bulbul(JTEC,2026)", "https://drive.google.com/file/d/1PNKIkiTeH9DvTQd-726jdEfcoKJjwlDS/view?usp=sharing"),
+        ]
+    ),
+    grroupedButtonBlockGen(
         "🔰 Select Topics for ACE -",
         [
             payloadBtnGen("Intro to Control Sy.", "ace_introSys_flow"),

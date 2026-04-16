@@ -77,6 +77,12 @@ let level_4_note = [
             webBtnBlockGen("FTQC", "https://drive.google.com/drive/folders/1r0fyyCs71xrAgvhqYZ4N4Tt8_rCkxP5E?usp=sharing"),
             webBtnBlockGen("TFT", "https://drive.google.com/drive/folders/1Th9_Pv1rfwtlC-o-uYFYxHGvsL-V93r1?usp=sharing"),
         ]
+    ),
+    grroupedButtonBlockGen(
+        `📌 FTQC Note -`,
+        [
+            webBtnBlockGen("Alim(Affli.)", "https://drive.google.com/file/d/1CJ-SqpoqkKkof_Xtp3sEHPUfE3_gSMRu/view?usp=sharing"),
+        ]
     ), 
     grroupedButtonBlockGen(
         `🔰 Select Subject for level 4 -`,

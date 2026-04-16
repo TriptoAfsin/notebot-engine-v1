@@ -62,6 +62,13 @@ let fsdFlow = [
         ]
     ),
     grroupedButtonBlockGen(
+        `📌 Full Notes -`,
+        [
+            webBtnBlockGen("Bulbul(JTEC,2026)", "https://drive.google.com/file/d/1eMeAs0ATsr3hl1CObahnpENv1eZYL7Nc/view?usp=sharing"),
+            webBtnBlockGen("Alim(Affli.)", "https://drive.google.com/file/d/1tr3g6o2fSs03Tl6_M3FLoi_GeiQx3AMp/view?usp=sharing"),
+        ]
+    ),
+    grroupedButtonBlockGen(
         `📌 Select Topics for FSD - `,
         [
             payloadBtnGen("Books", "fsd_books_flow"),

@@ -16,7 +16,8 @@ let pcsFlow = [
     grroupedButtonBlockGen(
         "📌 Full Hand Notes - ",
         [
-            webBtnBlockGen("Adee(2023)", "https://drive.google.com/file/d/1gnS3aPE87bafEmvNgYQDveHikIYcbr_1/view?usp=sharing")
+            webBtnBlockGen("Adee(2023)", "https://drive.google.com/file/d/1gnS3aPE87bafEmvNgYQDveHikIYcbr_1/view?usp=sharing"),
+            webBtnBlockGen("Alim(Affli.)", "https://drive.google.com/file/d/1ASFPZPTQi1pHQekcfZ8jd9Gvu8IYn9iZ/view?usp=sharing"),
         ]
     ),
     grroupedButtonBlockGen(

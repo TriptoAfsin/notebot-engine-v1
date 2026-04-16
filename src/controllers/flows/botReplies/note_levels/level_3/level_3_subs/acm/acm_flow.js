@@ -42,6 +42,12 @@ let acmFlow = [
         ]
     ),
     grroupedButtonBlockGen(
+        `📌 Full Notes -`,
+        [
+            webBtnBlockGen("Bulbul(JTEC,2026)", "https://drive.google.com/file/d/1ToUXMOy62pCNiamQtCEGqnP6muovvx5d/view?usp=sharing"),
+        ]
+    ),
+    grroupedButtonBlockGen(
         `🔰 Select Topics for ACM - `,
         [
             payloadBtnGen("Books", "acm_book_flow")

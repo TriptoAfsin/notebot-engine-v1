@@ -45,6 +45,12 @@ let am2Flow = [
         ]
     ),
     grroupedButtonBlockGen(
+        "📌 Full Notes -",
+        [
+            webBtnBlockGen("Bulbul(JTEC,2026)", "https://drive.google.com/file/d/1HYCofwsauMU5fZHE3wsCHhyk9m2sFSFB/view?usp=sharing"),
+        ]
+    ),
+    grroupedButtonBlockGen(
         "🔰 Select Topics for AM-II -",
         [
             payloadBtnGen("Books", "am2_books_flow"),

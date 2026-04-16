@@ -13,6 +13,12 @@ let tcpLecture = [
         ]
     ),
     grroupedButtonBlockGen(
+        "📌 Full Notes -",
+        [
+            webBtnBlockGen("Bulbul(JTEC,2026)", "https://drive.google.com/file/d/1X6ULxmRsNHUW5qSIHx2ncq82IEoA2-zF/view?usp=sharing"),
+        ]
+    ),
+    grroupedButtonBlockGen(
         "🔰 Select Topics for TCP -",
         [
             payloadBtnGen("KPC", "tcp_kpc_flow"),
