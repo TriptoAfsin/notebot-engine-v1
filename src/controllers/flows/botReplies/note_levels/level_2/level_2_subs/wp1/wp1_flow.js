@@ -54,6 +54,11 @@ grroupedButtonBlockGen(
             webBtnBlockGen("Part-A(Raafi Sir,2022)", "https://drive.google.com/file/d/1tukl8wSRhj0Kr1pLWHv4b7Qu-gbkfQZs/view?usp=sharing"),
         ]
     ),
+    grroupedButtonBlockGen("📌 Full Hand Notes -",
+        [
+            webBtnBlockGen("Debdas(FE-50),2026", "https://drive.google.com/file/d/1eTOA7CZDFug0-ViGS7qsMZWXoYq-Hz5v/view?usp=sharing"),
+        ]
+    ),
     grroupedButtonBlockGen("🔰 Select Topics for WP-I -",
         [
             payloadBtnGen("Books", "wp1_books_flow"),
