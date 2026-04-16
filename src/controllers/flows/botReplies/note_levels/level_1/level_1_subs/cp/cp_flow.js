@@ -48,6 +48,7 @@ let cp_flow = [
         "📌 Full Hand Notes -",
         [
             webBtnBlockGen("Lingkon(CTEC,2023)", "https://drive.google.com/file/d/1aTa8nrLfEXDSb3GwbWVnrGvx2Jt_ZThd/view?usp=sharing"),
+            webBtnBlockGen("Python Notes(Anisha, YE-51, 2026)", "https://drive.google.com/file/d/1u5Lpb2htDLzt3QT4r0tN1r1nksJkj9z1/view?usp=sharing"),
         ]
     ),
     grroupedButtonBlockGen(
