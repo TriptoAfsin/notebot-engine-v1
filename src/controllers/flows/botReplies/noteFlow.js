@@ -44,6 +44,12 @@ let notes = [
             webBtnBlockGen("Count Koto", "https://triptoafsin.github.io/CountKoto-/")
         ]
     ),
+    grroupedButtonBlockGen(
+        `🔰 Notes Github - `,
+        [
+            webBtnBlockGen("Notes Github", "https://github.com/itachi-re/butex-notes"),
+        ]
+    ),
 ]
 
 

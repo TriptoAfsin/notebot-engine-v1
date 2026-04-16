@@ -64,6 +64,11 @@ grroupedButtonBlockGen(`📌 Solves - `,
             webBtnBlockGen("Part B", "https://drive.google.com/file/d/18W-ask6cB34n6hI2BD7olZ_i-acM8Jp4/view"),
         ]
     ),
+    grroupedButtonBlockGen(`📌 All Math(Part-A) -`,
+        [
+            webBtnBlockGen("Nahid(YE-50)", "https://drive.google.com/file/d/1bI26kETQlI4uM_m4a7my4NHG7hKoxrB7/view?usp=sharing"),
+        ]
+    ),
     grroupedButtonBlockGen(`🔰 Select Topics for FME - `,
         [
             webBtnBlockGen("Data Sheet(Steam Ta)", "https://drive.google.com/file/d/1dcOpCnVPaebDJUXIvNqFPmzgzFi9MQaK/view"),
