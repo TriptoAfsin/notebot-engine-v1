@@ -6,7 +6,12 @@ let bondiFlow = require("../../../../sponsoredFlows/bondiCard");
 
 
 let chem1_flow = [
-    bondiFlow,
+    grroupedButtonBlockGen(
+        "📌 Suggestions -",
+        [
+            webBtnBlockGen("Durjoy(2026)", "https://drive.google.com/file/d/138ie-n-TJmfwSziaUzD2j56-unJ-G1Mm/view?usp=sharing"),
+        ]
+    ),
     grroupedButtonBlockGen(
         "📌 Select Topics for CHE-I -",
         [

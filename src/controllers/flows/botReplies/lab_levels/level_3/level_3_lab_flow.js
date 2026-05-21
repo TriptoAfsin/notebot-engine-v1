@@ -61,6 +61,12 @@ let level_3_lab = [
         ]
     ),
     grroupedButtonBlockGen(
+        "🔰 Select Subject Your Lab Report -",
+        [
+            webBtnBlockGen("SCM", "https://drive.google.com/drive/folders/1Fo5gmLOcep6JABUt6FJiVSda0MA4DFbW?usp=sharing"),
+        ]
+    ),
+    grroupedButtonBlockGen(
         "⚡ Lab Lectures -",
         [
             webBtnBlockGen("WP-II(Tazkia)", "https://drive.google.com/file/d/1AFSAcRKNOJICelLN7J8B8w-gncHKrDZL/view"),

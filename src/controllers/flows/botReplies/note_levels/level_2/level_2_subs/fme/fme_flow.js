@@ -4,6 +4,11 @@ let payloadBtnGen = require('simple-messenger-blocks/payloadBtnGen');
 
 
 let fmeFlow = [
+    grroupedButtonBlockGen(`Video Lectures - `,
+        [
+            webBtnBlockGen("Thermodynamics", "https://www.youtube.com/watch?v=4VrWjFxnp8E"),
+        ]
+    ),
 grroupedButtonBlockGen(`📌 Solves - `,
         [
             webBtnBlockGen("Suggestions(2023)", "https://drive.google.com/file/d/1DSK8J-O-4UcQgZeSy973PBmcpzC1_F30/view?usp=sharing"),
