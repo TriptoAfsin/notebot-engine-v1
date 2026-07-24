@@ -12,6 +12,8 @@ let chem1Photo = [
     textBlockGen(`🔷 Hand Note(Nafis, IPE-46,2020)-\n\nhttps://drive.google.com/file/d/1msasoTT1LEDG4w1rkpi4de2GNNpW8AvJ/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note(Nihat, 46,2021)-\n\nhttps://drive.google.com/file/d/1xtulOxDkVNkFYLKYLb1ZqqmLS8SB12hr/view?usp=sharing`),
    
+    textBlockGen(`🔷 Hand Note(Midul Hasan, WPE-51, 2026) - \n\nhttps://drive.google.com/file/d/1yUfAuGovD49YYPZxkf7KFEQo9Dn4Dc98/view?usp=sharing`),
+    textBlockGen(`🔷 Hand Note(Midul Hasan, WPE-51, 2026) - \n\nhttps://drive.google.com/file/d/11O5H3QlNbkJVwEsYGNsTNxLOfpcak8Re/view?usp=sharing`),
 ]
 
 

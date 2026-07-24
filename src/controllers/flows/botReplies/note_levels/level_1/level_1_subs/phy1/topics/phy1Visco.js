@@ -8,6 +8,8 @@ let phy1Visco = [
     textBlockGen(`🔷 Hand Note(Azim, TEM-46, 2021) -\n\nhttps://drive.google.com/file/d/1Ov0mzQdX8zrdt5sWCKtMHl8aWNVmiz6a/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note(Nafis, IPE-46, 2021) -\n\nhttps://drive.google.com/file/d/1WV2YywyGgO2qNjV1YRdWg4xyzNnyFu8c/view?usp=sharing`),
     textBlockGen(`🔷 Book Scanned - \n\nhttps://drive.google.com/file/d/1IL5SmJXrUrMCZxX4GlsdfUSSwFYwfGfl/view?usp=sharing`),
+    textBlockGen(`🔷 Hand Note(Midul Hasan, WPE-51, 2026) - \n\nhttps://drive.google.com/file/d/102PBAaWWol__Lj1XeNTXvn7vfHOErV04/view?usp=sharing`),
+    textBlockGen(`🔷 Hand Note(Midul Hasan, WPE-51, 2026) - \n\nhttps://drive.google.com/file/d/1aMM9VQrY3cpMxbiFmnn_QOb_13rr4nVR/view?usp=sharing`),
 ]
 
 

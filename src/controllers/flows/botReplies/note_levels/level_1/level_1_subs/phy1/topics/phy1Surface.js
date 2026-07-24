@@ -12,6 +12,8 @@ let phy1Surface = [
     textBlockGen(`🔷 Hand Note(Uzzal, Affliated, 2020)-\n\nhttps://drive.google.com/file/d/1a9x_pxlpfG3Va4MikAGg-3wCUgG6bZ_I/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note(Prottush,FE-50,2025)-\n\nhttps://drive.google.com/file/d/1B-HLkbWp5NsQRf7XuvCdVlWWm09-xHxd/view?usp=sharing`),
     
+    textBlockGen(`🔷 Hand Note(Midul Hasan, WPE-51, 2026) - \n\nhttps://drive.google.com/file/d/1_TvJM3i9K5HEneMa4KnqSTmOZ-yKz_Ab/view?usp=sharing`),
+    textBlockGen(`🔷 Hand Note(Midul Hasan, WPE-51, 2026) - \n\nhttps://drive.google.com/file/d/1_Pk6heVHqCe0pHFgO7HQc1YKVg908CTC/view?usp=sharing`),
 ]
 
 

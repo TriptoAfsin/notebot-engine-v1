@@ -15,6 +15,8 @@ let phy2Entropy = [
     textBlockGen(`🔷 Sheet(Hedayet Sir, 2021)-\n\nhttps://drive.google.com/file/d/1m9JHeyIDP1tDD9Mk9KK5vO-EI93rPex5/view?usp=sharing`),
     textBlockGen(`🔷 Tanusree Mam Lec(BA Group)-\n\nhttps://drive.google.com/file/d/1D0VmbVVBTVSw-jF-7A2DsNyC1xjKn9Gr/view?usp=sharing`),
     textBlockGen(`🔷 Book Scanned (Gias Uddin,2019)-\n\nhttps://drive.google.com/file/d/1H_PBmO6EyxrnKhv1EfSPFF3PdhbIZp8R/view`),
+    textBlockGen(`🔷 Hand Note(Midul Hasan, WPE-51, 2026) - \n\nhttps://drive.google.com/file/d/1pFTL2tmAE6t9lhxBfgGMZTRIFPdYUAjX/view?usp=sharing`),
+    textBlockGen(`🔷 Hand Note(Midul Hasan, WPE-51, 2026) - \n\nhttps://drive.google.com/file/d/1Hxd_nEEAMwPj6lU3dAeCH1oxfuQn5ZaC/view?usp=sharing`),
 ]
 
 

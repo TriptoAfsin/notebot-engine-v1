@@ -11,6 +11,8 @@ let chem2Carbonyl = [
     textBlockGen(`🔷 Hand Note(Fahim) -\n\nhttps://drive.google.com/file/d/1SjHUCqqVdzD4c7-mDaYHnvMIZAt2EU9i/view?usp=sharing`),
     textBlockGen(`🔷 Class Lecture(Amjad Sir) -\n\nhttps://drive.google.com/file/d/1c1qhsSVot07WD0iDFWjpdyVK2nGfVTQA/view?usp=sharing`),
     textBlockGen(`🔷 Carbonyl Compounds (Farzana Mam) - \n\nhttps://drive.google.com/file/d/15HGy76IIatx9pD-cbb_B9LTU_cFV9nvK/view?usp=drivesdk`),
+    textBlockGen(`🔷 Hand Note(Midul Hasan, WPE-51, 2026) - \n\nhttps://drive.google.com/file/d/1ALc892aCLTPyJgOUE8Nc6nzh573eSqHB/view?usp=sharing`),
+    textBlockGen(`🔷 Hand Note(Midul Hasan, WPE-51, 2026) - \n\nhttps://drive.google.com/file/d/1CoCi9ar0AZmVgA0YAMsc2deV3LFzEfpl/view?usp=sharing`),
 ]
 
 

@@ -12,6 +12,8 @@ let chem2OrgReac = [
     textBlockGen(`🔷 Organic Reaction Mechanism(Book Scanned) - \n\nhttps://drive.google.com/file/d/0B0FdOS_BOGE3ZFN5dlFTVG1OWXM/view?usp=sharing`),    
     textBlockGen(`🔷 Organic Reaction Mechanism(Book Scanned) - \n\nhttps://drive.google.com/file/d/0B0FdOS_BOGE3c0tLS0ZoY08yck0/view?usp=sharing`),    
    
+    textBlockGen(`🔷 Hand Note(Midul Hasan, WPE-51, 2026) - \n\nhttps://drive.google.com/file/d/1x04JcnVRRy_4NPg2mJIeYr8dm3tyIkl9/view?usp=sharing`),
+    textBlockGen(`🔷 Hand Note(Midul Hasan, WPE-51, 2026) - \n\nhttps://drive.google.com/file/d/1BzkCAtZkNeXu0QTJKMdKg9mLBVcvZklO/view?usp=sharing`),
 ]
 
 
