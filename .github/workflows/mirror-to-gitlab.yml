@@ -1,0 +1,23 @@
+name: Mirror main to GitLab (deploy)
+
+# On every push to main (i.e. when a PR is merged), mirror main to GitLab so
+# the GitLab CI pipeline runs and deploys. Replaces the manual `git push gitlab main`.
+
+on:
+  push:
+    branches: [main]
+
+concurrency:
+  group: gitlab-mirror
+  cancel-in-progress: false
+
+jobs:
+  mirror:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Push main to GitLab
+        run: |
+          git push "https://oauth2:${{ secrets.GITLAB_TOKEN }}@gitlab.com/TriptoAfsin/notebot-eng-v1.git" HEAD:main
