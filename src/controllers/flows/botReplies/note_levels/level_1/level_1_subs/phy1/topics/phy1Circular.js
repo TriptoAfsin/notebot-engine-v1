@@ -11,6 +11,8 @@ let phy1Circular = [
     textBlockGen(`🔷 Hand Note(Akib, 2018) - \n\nhttps://drive.google.com/file/d/1lPLj_asWPh9_q9J5yZ06_tMKSdPO3MH7/view?usp=drivesdk`),
     textBlockGen(`🔷 Hand Note(Sazzad, 2019)- \n\nhttps://drive.google.com/file/d/1Re1sTn7V96we1hxoCCX80eQEM0TiKo-Q/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note(Tripto, 2018) - \n\nhttps://drive.google.com/file/d/1FiD3RTw8oqpzWL3yxFpKTQbzcsCnpejP/view?usp=sharing`),
+    textBlockGen(`🔷 Hand Note(Midul Hasan, WPE-51, 2026) - \n\nhttps://drive.google.com/file/d/1m4p6ZJl7aDYxfyQDGO6LorIrNPjMX5Xh/view?usp=sharing`),
+    textBlockGen(`🔷 Hand Note(Midul Hasan, WPE-51, 2026) - \n\nhttps://drive.google.com/file/d/1odrQqMYCuq7mTymNMWMgwPKGAemgZJv1/view?usp=sharing`),
 ]
 
 

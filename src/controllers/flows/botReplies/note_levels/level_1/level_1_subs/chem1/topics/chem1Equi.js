@@ -11,6 +11,8 @@ let chem1Equi = [
     textBlockGen(`🔷 Hand Note(Nihat,YE-46,2021) - \n\nhttps://drive.google.com/file/d/1CsMyBlnuOJfkpVO1oCsZkfBLbEhirtaL/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note(Akib, 2018) - \n\nhttps://drive.google.com/file/d/1LLdjKRVQxX6_P3G8GA34hQcQTIh55EFJ/view?usp=drivesdk`),
     textBlockGen(`🔷 Hand Note(Oindrela, 2019)-\n\nhttps://drive.google.com/file/d/1e7rU0MYF8Fx_ntsNZNxeULdYNvgX0tLp/view?usp=sharing`),
+    textBlockGen(`🔷 Hand Note(Midul Hasan, WPE-51, 2026) - \n\nhttps://drive.google.com/file/d/1R_BgeYKKp_dN_KSwsAXSKlf0g3wLcAJY/view?usp=sharing`),
+    textBlockGen(`🔷 Hand Note(Midul Hasan, WPE-51, 2026) - \n\nhttps://drive.google.com/file/d/1k7MGBDw6k8fbJhEm4Bj84tuiVkSC1_1l/view?usp=sharing`),
 ]
 
 

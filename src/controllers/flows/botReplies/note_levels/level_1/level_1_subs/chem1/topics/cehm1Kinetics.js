@@ -12,6 +12,8 @@ let chem1Kinetics = [
     textBlockGen(`🔷 Hand Note(Suriya,YE-46 ,2021) - \n\nhttps://drive.google.com/file/d/1Rpptn_yR3DWm6pnHvfmfhtRH1wtKapAY/view?usp=sharing`),
     textBlockGen(`🔷 Slide(2019)-\n\nhttps://drive.google.com/file/d/1Tp8K8LazObsV9dVXBOaooXoeelsNoCUz/view?usp=sharing`),
     textBlockGen(`🔷 Sheet(2019)-\n\nhttps://drive.google.com/file/d/1-46QhXpDeEICp0jthkxzMIcD0G9_1Uf8/view?usp=sharing`),
+    textBlockGen(`🔷 Hand Note(Midul Hasan, WPE-51, 2026) - \n\nhttps://drive.google.com/file/d/1PsCtSH4iJhkEhv3bxnDaR2i9NCvVBpdI/view?usp=sharing`),
+    textBlockGen(`🔷 Hand Note(Midul Hasan, WPE-51, 2026) - \n\nhttps://drive.google.com/file/d/1KIdug1-UsQRo6QPQsvRJ2bhmm5ttT78x/view?usp=sharing`),
 ]
 
 

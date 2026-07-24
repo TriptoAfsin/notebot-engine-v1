@@ -15,6 +15,7 @@ let phy2Modern = [
     textBlockGen(`🔷 Hand Note (Khalid Sir)- \n\nhttps://drive.google.com/file/d/1KOzshzwiSKGfwoTyvKntqKBe1V1wE3MX/view?usp=sharing`),
     textBlockGen(`🔷 Sheet(2021) -\n\nhttps://drive.google.com/file/d/1oS7R2gXEBzQI41wi0DEE5g5T8aONBA5m/view?usp=sharing`),
     textBlockGen(`🔷 Maths(2021) -\n\nhttps://drive.google.com/file/d/1umPq4BA2iUDFPrgO-0XvSFXxPknfk3vu/view?usp=sharing`),
+    textBlockGen(`🔷 Hand Note(Midul Hasan, WPE-51, 2026) - \n\nhttps://drive.google.com/file/d/1RdPrOSMgd-eRxA2gGnPp7Wh8u5TPfXcq/view?usp=sharing`),
 ]
 
 
