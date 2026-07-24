@@ -1,0 +1,42 @@
+name: NoteBot - prepare ingest queue
+
+# Weekly, ~30 min BEFORE the cloud ingest routine (Mon 01:00 UTC). Reads the staging DB
+# on a GitHub runner (which has network egress the cloud sandbox lacks) and commits the
+# pending queue to .ingest/pending.json so the cloud agent can read it from its checkout.
+
+on:
+  schedule:
+    - cron: "30 0 * * 1" # Mondays 00:30 UTC
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: notebot-ingest-queue
+  cancel-in-progress: false
+
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - run: npm install pg@8 --no-save
+      - name: Generate queue
+        run: node .github/scripts/prepare-queue.js
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+      - name: Commit refreshed queue
+        run: |
+          git config user.name "notebot-ci"
+          git config user.email "notebot-ci@users.noreply.github.com"
+          git add .ingest/pending.json
+          if git diff --staged --quiet; then
+            echo "queue unchanged — nothing to commit"
+          else
+            git commit -m "chore(ingest): refresh pending queue [skip ci]"
+            git push
+          fi
