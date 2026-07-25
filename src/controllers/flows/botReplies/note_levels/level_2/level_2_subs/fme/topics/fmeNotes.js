@@ -10,6 +10,12 @@ let fmeNotes = [
     },
     {
         "text": `🔷 Hand Note(Heat Transfer)  - \n\nhttps://drive.google.com/file/d/1RxnlzXELxl9cWCZ4PAFhdoukr4ymoARK/view?usp=sharing`
+    },
+    {
+        "text": `🔷 Hand Note(Debdas Rajbongshi, FE-50, 2026) - \n\nhttps://drive.google.com/file/d/1TKHSKaKRr6bOGudB-VKKWjqvi7XID9Ns/view?usp=sharing`
+    },
+    {
+        "text": `🔷 Hand Note(Tasnuva Tabassum Anonna, FE-50, 2026) - \n\nhttps://drive.google.com/file/d/1Tk5DPH-7YSUO_yz4XkPPzuK0_a9TXyFT/view?usp=sharing`
     }
 ]
 
