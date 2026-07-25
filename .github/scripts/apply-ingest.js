@@ -73,5 +73,26 @@ const slug = (s) => String(s || "").toLowerCase().replace(/[^a-z0-9_]+/g, "").sl
   await c.end();
   console.log(`done:${done} | v2 inserted:${inserted} | dupes:${dupes} | new topics:${newTopics} | new subjects:${newSubjects} | problems:${problems.length}`);
   if (problems.length) console.log("  problems:", problems.join(" ; "));
+
+  // Telegram: report how many rows landed in the v2 DB on merge
+  const tok = process.env.TELEGRAM_BOT_TOKEN, chat = process.env.TELEGRAM_CHAT_ID;
+  if (tok && chat) {
+    const lines = [
+      "✅ <b>NoteBot v2 sync (merged)</b>",
+      "------------------",
+      `🗄️ Notes added to v2 DB: <b>${inserted}</b>`,
+      (newTopics || newSubjects) ? `🆕 new topics: ${newTopics} · new subjects: ${newSubjects}` : null,
+      dupes ? `♻️ already present: ${dupes}` : null,
+      problems.length ? `⚠️ problems: ${problems.length}` : null,
+    ].filter(Boolean);
+    try {
+      const r = await fetch(`https://api.telegram.org/bot${tok}/sendMessage`, {
+        method: "POST", headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ chat_id: chat, text: lines.join("\n"), parse_mode: "HTML" }),
+      });
+      console.log("telegram:", r.status);
+    } catch (e) { console.log("telegram failed:", e.message); }
+  }
+
   fs.writeFileSync(".ingest/applied.json", "[]\n");
 })().catch((e) => { console.error("apply-ingest failed:", e.message); process.exit(1); });
