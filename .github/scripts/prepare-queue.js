@@ -13,9 +13,11 @@ const { Client } = require("pg");
     ssl: { rejectUnauthorized: false },
   });
   await c.connect();
+  // kind='question' (QBs) are handled by n8n copying to the QB Drive folder — no code change,
+  // so they are excluded from the ingest queue entirely.
   const r = await c.query(
     "SELECT id, submitted_at, name, batch, department, level, subject_name, topic_name, kind, public_url " +
-    "FROM submissions WHERE status='pending' AND resolve_status='ok' ORDER BY submitted_at"
+    "FROM submissions WHERE status='pending' AND resolve_status='ok' AND kind <> 'question' ORDER BY submitted_at"
   );
   await c.end();
   fs.mkdirSync(".ingest", { recursive: true });
