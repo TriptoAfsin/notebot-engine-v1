@@ -8,7 +8,9 @@
 //   { id, level, subjectDir, subjectName, topicName, topicDisplay, title, url }
 //   topicName === v1 topic-file basename === v2 topics.name (the primary key we map on).
 //
-// Env: DATABASE_URL. Runner has DB egress the cloud agent lacks.
+// Env: DATABASE_URL (required); REDIS_URL (optional — busts the v2 cache so merged
+// content shows immediately instead of waiting out the ~1h TTL). Runner has the egress
+// the cloud agent lacks.
 const fs = require("fs");
 const { Client } = require("pg");
 
@@ -24,6 +26,7 @@ const slug = (s) => String(s || "").toLowerCase().replace(/[^a-z0-9_]+/g, "").sl
   await c.connect();
   let done = 0, inserted = 0, dupes = 0, newTopics = 0, newSubjects = 0;
   const problems = [];
+  const bustNotes = new Set(), bustTopics = new Set(), bustSubjects = new Set();
 
   for (const a of applied) {
     const id = parseInt(a.id, 10);
@@ -50,14 +53,14 @@ const slug = (s) => String(s || "").toLowerCase().replace(/[^a-z0-9_]+/g, "").sl
           "INSERT INTO subjects (level_id,name,display_name,slug,sort_order,metadata) VALUES ($1,$2,$3,$4,$5,$6) RETURNING id",
           [level.id, sKey, a.subjectName || a.subjectDir || sKey, sKey, sSort, JSON.stringify({ source: "ingest-auto" })]
         )).rows[0];
-        newSubjects++;
+        newSubjects++; bustSubjects.add(level.id);
       }
       const tSort = (await c.query("SELECT COALESCE(MAX(sort_order),0)+1 AS n FROM topics WHERE subject_id=$1", [subject.id])).rows[0].n;
       topic = (await c.query(
         "INSERT INTO topics (subject_id,name,display_name,slug,sort_order,metadata) VALUES ($1,$2,$3,$4,$5,$6) RETURNING id",
         [subject.id, a.topicName, a.topicDisplay || a.topicName, slug(a.topicName), tSort, JSON.stringify({ source: "ingest-auto" })]
       )).rows[0];
-      newTopics++;
+      newTopics++; bustTopics.add(subject.id);
     }
 
     // 3) insert the note (skip if the same Drive file id is already under this topic)
@@ -68,11 +71,28 @@ const slug = (s) => String(s || "").toLowerCase().replace(/[^a-z0-9_]+/g, "").sl
       "INSERT INTO notes (topic_id,title,url,sort_order,metadata) VALUES ($1,$2,$3,$4,$5)",
       [topic.id, a.title || "", a.url, nSort, JSON.stringify({ source: "ingest-auto" })]
     );
-    inserted++;
+    inserted++; bustNotes.add(topic.id);
   }
   await c.end();
   console.log(`done:${done} | v2 inserted:${inserted} | dupes:${dupes} | new topics:${newTopics} | new subjects:${newSubjects} | problems:${problems.length}`);
   if (problems.length) console.log("  problems:", problems.join(" ; "));
+
+  // Bust the v2 Redis cache so merged content is visible immediately (else ~1h TTL).
+  const redisUrl = process.env.REDIS_URL;
+  if (redisUrl && (bustNotes.size || bustTopics.size || bustSubjects.size)) {
+    try {
+      const Redis = require("ioredis");
+      const r = new Redis(redisUrl);
+      const keys = [
+        ...[...bustNotes].map((t) => `notebot:notes:${t}`),
+        ...[...bustTopics].map((s) => `notebot:topics:${s}`),
+        ...[...bustSubjects].map((l) => `notebot:subjects:${l}`),
+      ];
+      if (keys.length) await r.del(...keys);
+      await r.quit();
+      console.log("busted Redis:", keys.length, "key(s)");
+    } catch (e) { console.log("cache bust skipped:", e.message); }
+  }
 
   // Telegram: report how many rows landed in the v2 DB on merge
   const tok = process.env.TELEGRAM_BOT_TOKEN, chat = process.env.TELEGRAM_CHAT_ID;
