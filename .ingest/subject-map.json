@@ -1,0 +1,1215 @@
+{
+  "note": "Maps submission subject/topic -> v1 subject dir + topic file. Classifier reads this and APPENDS new aliases/subjects/topics as it creates them. dir codes are lowercase; topics are file basenames (no .js). To add a note, append a textBlockGen line to <dir>/topics/<topicFile>.js.",
+  "levels": {
+    "1": {
+      "bce": {
+        "dir": "src/controllers/flows/botReplies/note_levels/level_1/level_1_subs/bce",
+        "flow": "bce_flow.js",
+        "topics": [
+          "allsheetsBce",
+          "bceQuestions",
+          "communicationBce",
+          "fullabpartBce",
+          "introBce",
+          "langFuncBce",
+          "letterBce",
+          "partABce",
+          "partBBce",
+          "reading_writingBce",
+          "reportBce"
+        ],
+        "aliases": [
+          "bce"
+        ]
+      },
+      "bfs": {
+        "dir": "src/controllers/flows/botReplies/note_levels/level_1/level_1_subs/bfs",
+        "flow": "bfs_flow.js",
+        "topics": [
+          "bfsLec3"
+        ],
+        "aliases": [
+          "bfs"
+        ]
+      },
+      "chem1": {
+        "dir": "src/controllers/flows/botReplies/note_levels/level_1/level_1_subs/chem1",
+        "flow": "chem1_flow.js",
+        "topics": [
+          "cehm1Bond",
+          "cehm1Kinetics",
+          "chem1Acibas",
+          "chem1Analy",
+          "chem1Books",
+          "chem1Coll",
+          "chem1Complx",
+          "chem1Dilu",
+          "chem1Equi",
+          "chem1Perio",
+          "chem1Photo",
+          "chem1Ques"
+        ],
+        "aliases": [
+          "chem1"
+        ]
+      },
+      "chem2": {
+        "dir": "src/controllers/flows/botReplies/note_levels/level_1/level_1_subs/chem2",
+        "flow": "chem2_flow.js",
+        "topics": [
+          "chem2AlcPhe",
+          "chem2Amine",
+          "chem2Amino",
+          "chem2Books",
+          "chem2CarboHy",
+          "chem2Carbonyl",
+          "chem2Carboxylic",
+          "chem2ColorDye",
+          "chem2OrgMet",
+          "chem2OrgReac",
+          "chem2Ques",
+          "chem2Solubility"
+        ],
+        "aliases": [
+          "chem2"
+        ]
+      },
+      "cp": {
+        "dir": "src/controllers/flows/botReplies/note_levels/level_1/level_1_subs/cp",
+        "flow": "cp_flow.js",
+        "topics": [
+          "arrayCp",
+          "booksCp",
+          "conditionCp",
+          "funcCp",
+          "fundamentalCp",
+          "loopCp",
+          "quesCp",
+          "stringCp",
+          "suggestionCp"
+        ],
+        "aliases": [
+          "cp"
+        ]
+      },
+      "ecb": {
+        "dir": "src/controllers/flows/botReplies/note_levels/level_1/level_1_subs/ecb",
+        "flow": "ecb_flow.js",
+        "topics": [
+          "ecbHandNote",
+          "ecbIntro"
+        ],
+        "aliases": [
+          "ecb"
+        ]
+      },
+      "em": {
+        "dir": "src/controllers/flows/botReplies/note_levels/level_1/level_1_subs/em",
+        "flow": "em_flow.js",
+        "topics": [
+          "emAlloy",
+          "emAtomicStruct",
+          "emBlastFur",
+          "emBooks",
+          "emCeramic",
+          "emComposites",
+          "emCorrosion",
+          "emCrystal",
+          "emGlass",
+          "emHeattreat",
+          "emIron",
+          "emMath",
+          "emPhaseDiag",
+          "emPlastic",
+          "emQuestions",
+          "emWroughtCast"
+        ],
+        "aliases": [
+          "em"
+        ]
+      },
+      "fh": {
+        "dir": "src/controllers/flows/botReplies/note_levels/level_1/level_1_subs/fh",
+        "flow": "fh_flow.js",
+        "topics": [
+          "fhArtDes",
+          "fhEgypt",
+          "fhEliza",
+          "fhGeorgi",
+          "fhGreek",
+          "fhHandloom",
+          "fhJeansHis",
+          "fhMuslin",
+          "fhRenais",
+          "fhRoman",
+          "fhSilk"
+        ],
+        "aliases": [
+          "fh"
+        ]
+      },
+      "fmg": {
+        "dir": "src/controllers/flows/botReplies/note_levels/level_1/level_1_subs/fmg",
+        "flow": "fmg_flow.js",
+        "topics": [],
+        "aliases": [
+          "fmg"
+        ]
+      },
+      "iae": {
+        "dir": "src/controllers/flows/botReplies/note_levels/level_1/level_1_subs/iae",
+        "flow": "iae_flow.js",
+        "topics": [
+          "iaeBooks",
+          "iaeBrands",
+          "iaeCam",
+          "iaeDiffWoven",
+          "iaeFullSlide",
+          "iaeIntro",
+          "iaeQues",
+          "iaeQuota",
+          "iaeShirt"
+        ],
+        "aliases": [
+          "iae"
+        ]
+      },
+      "iee": {
+        "dir": "src/controllers/flows/botReplies/note_levels/level_1/level_1_subs/iee",
+        "flow": "iee_flow.js",
+        "topics": [
+          "ieeBooks",
+          "ieeEnvIssues",
+          "ieeHandNotes",
+          "ieeManEnv",
+          "ieeNatureEnv",
+          "ieeSheets",
+          "ieeSoil",
+          "ieeSPF"
+        ],
+        "aliases": [
+          "iee"
+        ]
+      },
+      "math1": {
+        "dir": "src/controllers/flows/botReplies/note_levels/level_1/level_1_subs/math1",
+        "flow": "math1_flow.js",
+        "topics": [
+          "math1Axes",
+          "math1Books",
+          "math1Conics",
+          "math1Conver",
+          "math1CoOrd",
+          "math1Differnti",
+          "math1Exapnasion",
+          "math1Extremea",
+          "math1Integreation",
+          "math1Linear",
+          "math1Matrix",
+          "math1Ques",
+          "math1Vector"
+        ],
+        "aliases": [
+          "math1"
+        ]
+      },
+      "math2": {
+        "dir": "src/controllers/flows/botReplies/note_levels/level_1/level_1_subs/math2",
+        "flow": "math2_flow.js",
+        "topics": [
+          "math2AnnalyFunc",
+          "math2Books",
+          "math2CxNum",
+          "math2Exact",
+          "math2Homo",
+          "math2Laplace",
+          "math2LDE",
+          "math2LinearEqn",
+          "math2LineInt",
+          "math2MethodVar",
+          "math2Moivre",
+          "math2ODe",
+          "math2Ques",
+          "math2RedHomo",
+          "math2Residue",
+          "math2Separ",
+          "math2Sugg",
+          "math2Vector"
+        ],
+        "aliases": [
+          "math2"
+        ]
+      },
+      "ntf": {
+        "dir": "src/controllers/flows/botReplies/note_levels/level_1/level_1_subs/ntf",
+        "flow": "ntf_flow.js",
+        "topics": [
+          "ntfAsbestos",
+          "ntfBooks",
+          "ntfFlax",
+          "ntfHandNotes",
+          "ntfHemp",
+          "ntfIntro",
+          "ntfJute",
+          "ntfKapok",
+          "ntfOtherFibres",
+          "ntfPalf",
+          "ntfQues",
+          "ntfSilk",
+          "ntfSisal",
+          "ntfSuggestion"
+        ],
+        "aliases": [
+          "ntf"
+        ]
+      },
+      "phy1": {
+        "dir": "src/controllers/flows/botReplies/note_levels/level_1/level_1_subs/phy1",
+        "flow": "phy1_flow.js",
+        "topics": [
+          "phy1Books",
+          "phy1Circular",
+          "phy1Diffrac",
+          "phy1Elasti",
+          "phy1Hydro",
+          "phy1Interfe",
+          "phy1Polar",
+          "phy1Ques",
+          "phy1Surface",
+          "phy1Visco"
+        ],
+        "aliases": [
+          "phy1"
+        ]
+      },
+      "phy2": {
+        "dir": "src/controllers/flows/botReplies/note_levels/level_1/level_1_subs/phy2",
+        "flow": "phy2_flow.js",
+        "topics": [
+          "phy2Books",
+          "phy2Entropy",
+          "phy2Kinetic",
+          "phy2Magnet",
+          "phy2Modern",
+          "phy2Ques",
+          "phy2Radiation",
+          "phy2Thermodynamic"
+        ],
+        "aliases": [
+          "phy2"
+        ]
+      },
+      "pse": {
+        "dir": "src/controllers/flows/botReplies/note_levels/level_1/level_1_subs/pse",
+        "flow": "pse_flow.js",
+        "topics": [
+          "pseAppliPoly",
+          "pseBooks",
+          "pseChainGrowth",
+          "pseChemical",
+          "pseDegradation",
+          "pseFiberForming",
+          "pseHandNotes",
+          "pseIntro",
+          "pseMoleWeight",
+          "pseMorpho",
+          "psePhysical",
+          "psePolymerizationTech",
+          "pseQuestions",
+          "pseStepGrowth",
+          "pseThermalTran"
+        ],
+        "aliases": [
+          "pse"
+        ]
+      },
+      "qb_1": {
+        "dir": "src/controllers/flows/botReplies/note_levels/level_1/level_1_subs/qb_1",
+        "flow": "qb_1_flow.js",
+        "topics": [],
+        "aliases": [
+          "qb_1"
+        ]
+      },
+      "tmm": {
+        "dir": "src/controllers/flows/botReplies/note_levels/level_1/level_1_subs/tmm",
+        "flow": "tmm_flow.js",
+        "topics": [
+          "tmmQues"
+        ],
+        "aliases": [
+          "tmm"
+        ]
+      },
+      "tpm": {
+        "dir": "src/controllers/flows/botReplies/note_levels/level_1/level_1_subs/tpm",
+        "flow": "tpm_flow.js",
+        "topics": [
+          "tpmQues",
+          "tpmWovFabManu",
+          "tpmWovFabWet"
+        ],
+        "aliases": [
+          "tpm"
+        ]
+      }
+    },
+    "2": {
+      "am1": {
+        "dir": "src/controllers/flows/botReplies/note_levels/level_2/level_2_subs/am1",
+        "flow": "am1_flow.js",
+        "topics": [
+          "am1Books",
+          "am1FabricCut",
+          "am1Inspection",
+          "am1Interlining",
+          "am1Intro",
+          "am1Marker",
+          "am1Notes",
+          "am1Pattern",
+          "am1Ques",
+          "am1Seam",
+          "am1Sizing",
+          "am1Spread",
+          "am1Structure",
+          "am1Trim"
+        ],
+        "aliases": [
+          "am1"
+        ]
+      },
+      "ap1": {
+        "dir": "src/controllers/flows/botReplies/note_levels/level_2/level_2_subs/ap1",
+        "flow": "ap1_flow.js",
+        "topics": [
+          "ap1Books",
+          "ap1FabricCut",
+          "ap1FabricSpreading",
+          "ap1Interlining",
+          "ap1MarkerMaking",
+          "ap1PatternMaking",
+          "ap1Ques",
+          "ap1SewingTherad",
+          "ap1Sizing",
+          "ap1Trim"
+        ],
+        "aliases": [
+          "ap1"
+        ]
+      },
+      "ctca": {
+        "dir": "src/controllers/flows/botReplies/note_levels/level_2/level_2_subs/ctca",
+        "flow": "ctca_flow.js",
+        "topics": [
+          "ctcaBleach",
+          "ctcaBooks",
+          "ctcaColloid",
+          "ctcaSheets",
+          "ctcaSolutions",
+          "ctcaSurfactant",
+          "ctcaThickAgent",
+          "ctcaWater"
+        ],
+        "aliases": [
+          "ctca"
+        ]
+      },
+      "eee": {
+        "dir": "src/controllers/flows/botReplies/note_levels/level_2/level_2_subs/eee",
+        "flow": "eee_flow.js",
+        "topics": [
+          "eeeBooks",
+          "eeeCh1",
+          "eeeCh2",
+          "eeeCh3",
+          "eeeCh4",
+          "eeeCh5",
+          "eeeCh8",
+          "eeeCircuit",
+          "eeeNotes",
+          "eeeQues",
+          "eeeRms",
+          "eeeWye"
+        ],
+        "aliases": [
+          "eee"
+        ]
+      },
+      "fd2": {
+        "dir": "src/controllers/flows/botReplies/note_levels/level_2/level_2_subs/fd2",
+        "flow": "fd2_flow.js",
+        "topics": [],
+        "aliases": [
+          "fd2"
+        ]
+      },
+      "fdce": {
+        "dir": "src/controllers/flows/botReplies/note_levels/level_2/level_2_subs/fdce",
+        "flow": "fdce_flow.js",
+        "topics": [
+          "fdceBalancingChem",
+          "fdceChromato",
+          "fdceDyesPig",
+          "fdceFiltrationMethod",
+          "fdcePolarity",
+          "fdceSeparationPuri"
+        ],
+        "aliases": [
+          "fdce"
+        ]
+      },
+      "fm1": {
+        "dir": "src/controllers/flows/botReplies/note_levels/level_2/level_2_subs/fm1",
+        "flow": "fm1_flow.js",
+        "topics": [
+          "fm1Beatup",
+          "fm1Books",
+          "fm1Denim",
+          "fm1Dobby",
+          "fm1HandNotes",
+          "fm1Intro",
+          "fm1Jacquard",
+          "fm1Letoff",
+          "fm1Loom",
+          "fm1MotionWeav",
+          "fm1Picking",
+          "fm1Ques",
+          "fm1Selvedge",
+          "fm1Shedding",
+          "fm1Sizing",
+          "fm1StopMotion",
+          "fm1Sugg",
+          "fm1Takeup",
+          "fm1Tappet",
+          "fm1Warping",
+          "fm1Weav",
+          "fm1Winding"
+        ],
+        "aliases": [
+          "fm1"
+        ]
+      },
+      "fme": {
+        "dir": "src/controllers/flows/botReplies/note_levels/level_2/level_2_subs/fme",
+        "flow": "fme_flow.js",
+        "topics": [
+          "fmeBeam",
+          "fmeBelt",
+          "fmeBoiler",
+          "fmeBooks",
+          "fmeCentroid",
+          "fmeColumn",
+          "fmeEnergProc",
+          "fmeEngineCombus",
+          "fmeEnginePetrol",
+          "fmeFluidMech",
+          "fmeGearTrain",
+          "fmeMomentInnertia",
+          "fmeNotes",
+          "fmePowerRef",
+          "fmePump",
+          "fmeQues",
+          "fmeSolid",
+          "fmeSteamTurb",
+          "fmeStress",
+          "fmeSugg",
+          "fmeThermalEng"
+        ],
+        "aliases": [
+          "fme"
+        ]
+      },
+      "fyt": {
+        "dir": "src/controllers/flows/botReplies/note_levels/level_2/level_2_subs/fyt",
+        "flow": "fyt_flow.js",
+        "topics": [
+          "fytAfis",
+          "fytBooks",
+          "fytcapaOptical",
+          "fytCounting",
+          "fytEvenness",
+          "fytIso",
+          "fytNotes",
+          "fytNumbering",
+          "fytSugg",
+          "fytTwist"
+        ],
+        "aliases": [
+          "fyt"
+        ]
+      },
+      "idcc": {
+        "dir": "src/controllers/flows/botReplies/note_levels/level_2/level_2_subs/idcc",
+        "flow": "idcc_flow.js",
+        "topics": [],
+        "aliases": [
+          "idcc"
+        ]
+      },
+      "marketing": {
+        "dir": "src/controllers/flows/botReplies/note_levels/level_2/level_2_subs/marketing",
+        "flow": "marketing_flow.js",
+        "topics": [
+          "marketAdvert",
+          "marketBooks",
+          "marketBranding",
+          "marketChannelDist",
+          "marketCompetetive",
+          "marketConcept",
+          "marketConsumerBuyer",
+          "marketDiffPos",
+          "marketField",
+          "marketFunc",
+          "marketingConsumer",
+          "marketIntro",
+          "marketMacroEnv",
+          "marketMajorPrice",
+          "marketMicroEnv",
+          "marketNewProduct",
+          "marketNotes",
+          "marketOrientation",
+          "marketPrice",
+          "marketPriceStart",
+          "marketQues",
+          "marketRetailing",
+          "marketSegment",
+          "marketSugg",
+          "marketTargeting"
+        ],
+        "aliases": [
+          "marketing"
+        ]
+      },
+      "mmtf": {
+        "dir": "src/controllers/flows/botReplies/note_levels/level_2/level_2_subs/mmtf",
+        "flow": "mmtf_flow.js",
+        "topics": [
+          "mmtfAcetate",
+          "mmtfAcrylic",
+          "mmtfBioFib",
+          "mmtfBooks",
+          "mmtfCarbonFib",
+          "mmtfElastomer",
+          "mmtfGlassFib",
+          "mmtfHighPerf",
+          "mmtfIntro",
+          "mmtfLyocell",
+          "mmtfModal",
+          "mmtfNotes",
+          "mmtfNylon",
+          "mmtfPolyamaide",
+          "mmtfPolyester",
+          "mmtfPolyolefin",
+          "mmtfRayon",
+          "mmtfRegen",
+          "mmtfSpinningSys",
+          "mmtfSuggestion",
+          "mmtfVectran"
+        ],
+        "aliases": [
+          "mmtf"
+        ]
+      },
+      "mp": {
+        "dir": "src/controllers/flows/botReplies/note_levels/level_2/level_2_subs/mp",
+        "flow": "mp_flow.js",
+        "topics": [
+          "mpCasting",
+          "mpCastingVideo",
+          "mpCeramics",
+          "mpDefects",
+          "mpEDM",
+          "mphotCold",
+          "mpLathe",
+          "mpMCEconomics",
+          "mpMilling",
+          "mpNonConv",
+          "mpPlastic",
+          "mpShapermc",
+          "mpSlideways",
+          "mpWelding"
+        ],
+        "aliases": [
+          "mp"
+        ]
+      },
+      "qb_2": {
+        "dir": "src/controllers/flows/botReplies/note_levels/level_2/level_2_subs/qb_2",
+        "flow": "qb_2_flow.js",
+        "topics": [],
+        "aliases": [
+          "qb_2"
+        ]
+      },
+      "sss1": {
+        "dir": "src/controllers/flows/botReplies/note_levels/level_2/level_2_subs/sss1",
+        "flow": "sss1_flow.js",
+        "topics": [
+          "sss1BlowRoom",
+          "sss1Books",
+          "sss1Carding",
+          "sss1DrawFrame",
+          "sss1Intro",
+          "sss1IntroFib"
+        ],
+        "aliases": [
+          "sss1"
+        ]
+      },
+      "sss2": {
+        "dir": "src/controllers/flows/botReplies/note_levels/level_2/level_2_subs/sss2",
+        "flow": "sss2_flow.js",
+        "topics": [
+          "sss2Notes",
+          "sss2Ringframe"
+        ],
+        "aliases": [
+          "sss2"
+        ]
+      },
+      "stat": {
+        "dir": "src/controllers/flows/botReplies/note_levels/level_2/level_2_subs/stat",
+        "flow": "stat_flow.js",
+        "topics": [
+          "statBinomial",
+          "statBooks",
+          "statCentralTend",
+          "statCv",
+          "statDesignExp",
+          "statIntro",
+          "statMoments",
+          "statNormalDistri",
+          "statNotes",
+          "statPoission",
+          "statProbab",
+          "statRegression",
+          "statShape"
+        ],
+        "aliases": [
+          "stat"
+        ]
+      },
+      "tp": {
+        "dir": "src/controllers/flows/botReplies/note_levels/level_2/level_2_subs/tp",
+        "flow": "tp_flow.js",
+        "topics": [
+          "tpBooks",
+          "tpFabgeometry",
+          "tpfibMigration",
+          "tpFibreDraw",
+          "tpFriction",
+          "tpNotes",
+          "tpOptical",
+          "tpQues",
+          "tpSugg",
+          "tpSwelling",
+          "tpTensileProp",
+          "tpThermalProp",
+          "tpXray",
+          "tpYarnJamming",
+          "tpYarnStruc"
+        ],
+        "aliases": [
+          "tp"
+        ]
+      },
+      "ttqc": {
+        "dir": "src/controllers/flows/botReplies/note_levels/level_2/level_2_subs/ttqc",
+        "flow": "ttqc_flow.js",
+        "topics": [
+          "ttqcAfis",
+          "ttqcBooks",
+          "ttqcCount",
+          "ttqcCrimp",
+          "ttqcFibreProp",
+          "ttqcHvi",
+          "ttqcIntro",
+          "ttqcMoisture",
+          "ttqcNeps",
+          "ttqcNotes",
+          "ttqcSampling",
+          "ttqcTwist"
+        ],
+        "aliases": [
+          "ttqc"
+        ]
+      },
+      "weaving_prep": {
+        "dir": "src/controllers/flows/botReplies/note_levels/level_2/level_2_subs/weaving_prep",
+        "flow": "weaving_prep_flow.js",
+        "topics": [
+          "weavBooks"
+        ],
+        "aliases": [
+          "weaving_prep"
+        ]
+      },
+      "wp1": {
+        "dir": "src/controllers/flows/botReplies/note_levels/level_2/level_2_subs/wp1",
+        "flow": "wp1_flow.js",
+        "topics": [
+          "wp1AcidDye",
+          "wp1BasicDye",
+          "wp1Bleaching",
+          "wp1Books",
+          "wp1ColorFastness",
+          "wp1ColorTest",
+          "wp1Desizing",
+          "wp1DirectDye",
+          "wp1DisperseDye",
+          "wp1DyeingFault",
+          "wp1FoldingTest",
+          "wp1GeneralConcepts",
+          "wp1Intro",
+          "wp1IntroDye",
+          "wp1JiggerMachine",
+          "wp1KierBoiler",
+          "wp1Notes",
+          "wp1Pigment",
+          "wp1Questions",
+          "wp1ReactiveDye",
+          "wp1Scouring",
+          "wp1Singeing",
+          "wp1Stripping",
+          "wp1TexFinishing",
+          "wp1VatDye",
+          "wp1WashingMachine",
+          "wp1Water"
+        ],
+        "aliases": [
+          "wp1"
+        ]
+      },
+      "wpp": {
+        "dir": "src/controllers/flows/botReplies/note_levels/level_2/level_2_subs/wpp",
+        "flow": "wpp_flow.js",
+        "topics": [
+          "wppBioScouring",
+          "wppDesizing",
+          "wppImpurities",
+          "wppPretreatment",
+          "wppQues",
+          "wppSingeing"
+        ],
+        "aliases": [
+          "wpp"
+        ]
+      },
+      "ym1": {
+        "dir": "src/controllers/flows/botReplies/note_levels/level_2/level_2_subs/ym1",
+        "flow": "ym1_flow.js",
+        "topics": [
+          "ym1Blowroom",
+          "ym1Carding",
+          "ym1Comber",
+          "ym1Drawframe",
+          "ym1FibreProp",
+          "ym1Indeterminer",
+          "ym1Intro",
+          "ym1LapFormer",
+          "ym1MixBlend",
+          "ym1RingFrame",
+          "ym1SpeedFrame",
+          "ym1Winding",
+          "ym1YarnCond"
+        ],
+        "aliases": [
+          "ym1"
+        ]
+      }
+    },
+    "3": {
+      "ace": {
+        "dir": "src/controllers/flows/botReplies/note_levels/level_3/level_3_subs/ace",
+        "flow": "ace_flow.js",
+        "topics": [
+          "aceActuator",
+          "aceBooks",
+          "aceGrips",
+          "aceHydraulics",
+          "aceIntroControlSys",
+          "aceIntroRobot",
+          "aceJoints",
+          "aceLogicGates",
+          "aceModleingFreq",
+          "aceNumberSysPLC",
+          "acePneumatic",
+          "aceSensors",
+          "aceStructElements",
+          "aceTimeResponse",
+          "aceTransferFunc"
+        ],
+        "aliases": [
+          "ace"
+        ]
+      },
+      "acfd": {
+        "dir": "src/controllers/flows/botReplies/note_levels/level_3/level_3_subs/acfd",
+        "flow": "acfd_flow.js",
+        "topics": [],
+        "aliases": [
+          "acfd"
+        ]
+      },
+      "acm": {
+        "dir": "src/controllers/flows/botReplies/note_levels/level_3/level_3_subs/acm",
+        "flow": "acm_flow.js",
+        "topics": [
+          "acmAccForMerchendizing",
+          "acmAccountingAction",
+          "acmBooks",
+          "acmCostAccountingSys",
+          "acmCostBehav",
+          "acmCostingTechn",
+          "acmInterestedUsers",
+          "acmIntroCost",
+          "acmRecordingProcess"
+        ],
+        "aliases": [
+          "acm"
+        ]
+      },
+      "am2": {
+        "dir": "src/controllers/flows/botReplies/note_levels/level_3/level_3_subs/am2",
+        "flow": "am2_flow.js",
+        "topics": [
+          "am2Books",
+          "am2ClassLecture",
+          "am2CostingExcel",
+          "am2LineBalancing"
+        ],
+        "aliases": [
+          "am2"
+        ]
+      },
+      "ap2": {
+        "dir": "src/controllers/flows/botReplies/note_levels/level_3/level_3_subs/ap2",
+        "flow": "ap2_flow.js",
+        "topics": [
+          "ap2FoldingPackage",
+          "ap2InspectionQuality",
+          "ap2LockStitch",
+          "ap2Pressing",
+          "ap2Stitch"
+        ],
+        "aliases": [
+          "ap2"
+        ]
+      },
+      "econo": {
+        "dir": "src/controllers/flows/botReplies/note_levels/level_3/level_3_subs/econo",
+        "flow": "econo_flow.js",
+        "topics": [
+          "econoBooks",
+          "econoClassLec"
+        ],
+        "aliases": [
+          "econo"
+        ]
+      },
+      "fm2": {
+        "dir": "src/controllers/flows/botReplies/note_levels/level_3/level_3_subs/fm2",
+        "flow": "fm2_flow.js",
+        "topics": [
+          "fm2BasicWarp",
+          "fm2Books",
+          "fm2ClassLec",
+          "fm2Misc",
+          "fm2Notes"
+        ],
+        "aliases": [
+          "fm2"
+        ]
+      },
+      "fsd": {
+        "dir": "src/controllers/flows/botReplies/note_levels/level_3/level_3_subs/fsd",
+        "flow": "fsd_flow.js",
+        "topics": [
+          "fsdBooks",
+          "fsdColorWeave",
+          "fsdFancy",
+          "fsdIntro",
+          "fsdPlainWeave",
+          "fsdSatin",
+          "fsdTwill"
+        ],
+        "aliases": [
+          "fsd"
+        ]
+      },
+      "im": {
+        "dir": "src/controllers/flows/botReplies/note_levels/level_3/level_3_subs/im",
+        "flow": "im_flow.js",
+        "topics": [
+          "imIndusMange",
+          "imLec1",
+          "imLec2",
+          "imLec3",
+          "imLec4",
+          "imMangeFunc",
+          "imMarket",
+          "imMarketMix",
+          "imNatureScope",
+          "imProdMange",
+          "imProjectFeasa",
+          "imTechMange"
+        ],
+        "aliases": [
+          "im"
+        ]
+      },
+      "knit1": {
+        "dir": "src/controllers/flows/botReplies/note_levels/level_3/level_3_subs/knit1",
+        "flow": "knit_flow.js",
+        "topics": [
+          "knitLec"
+        ],
+        "aliases": [
+          "knit1"
+        ]
+      },
+      "lss": {
+        "dir": "src/controllers/flows/botReplies/note_levels/level_3/level_3_subs/lss",
+        "flow": "lss_flow.js",
+        "topics": [
+          "lssDrawframe",
+          "lssSpreader"
+        ],
+        "aliases": [
+          "lss"
+        ]
+      },
+      "mic": {
+        "dir": "src/controllers/flows/botReplies/note_levels/level_3/level_3_subs/mic",
+        "flow": "mic_flow.js",
+        "topics": [
+          "micAngularMeas",
+          "micBooks",
+          "micCh1",
+          "micCh2",
+          "micCh4",
+          "micCH5",
+          "micFatigueFail",
+          "micGearMeas",
+          "micLimitFits",
+          "micLinearMeas",
+          "micNonDestructiveTesting",
+          "micSurfaceFinish",
+          "micThreadMeas"
+        ],
+        "aliases": [
+          "mic"
+        ]
+      },
+      "mpp": {
+        "dir": "src/controllers/flows/botReplies/note_levels/level_3/level_3_subs/mpp",
+        "flow": null,
+        "topics": [],
+        "aliases": [
+          "mpp"
+        ]
+      },
+      "om": {
+        "dir": "src/controllers/flows/botReplies/note_levels/level_3/level_3_subs/om",
+        "flow": "om_flow.js",
+        "topics": [
+          "ch1OmFlow",
+          "ch2OMFlow",
+          "ch3OMFlow"
+        ],
+        "aliases": [
+          "om"
+        ]
+      },
+      "pcs": {
+        "dir": "src/controllers/flows/botReplies/note_levels/level_3/level_3_subs/pcs",
+        "flow": "pcs_flow.js",
+        "topics": [
+          "pcsBooks"
+        ],
+        "aliases": [
+          "pcs"
+        ]
+      },
+      "pd": {
+        "dir": "src/controllers/flows/botReplies/note_levels/level_3/level_3_subs/pd",
+        "flow": "pd_flow.js",
+        "topics": [
+          "pdBooks",
+          "pdDesAssembly",
+          "pdDesTension",
+          "pdDFMain",
+          "pdDFManu",
+          "pdDFR",
+          "pdFast",
+          "pdIntro",
+          "pdLoadStress",
+          "pdPlanningDesign",
+          "pdQualityFunc",
+          "pdUnderstandingCustomer"
+        ],
+        "aliases": [
+          "pd"
+        ]
+      },
+      "qb_3": {
+        "dir": "src/controllers/flows/botReplies/note_levels/level_3/level_3_subs/qb_3",
+        "flow": "qb_3_flow.js",
+        "topics": [],
+        "aliases": [
+          "qb_3"
+        ]
+      },
+      "tc1": {
+        "dir": "src/controllers/flows/botReplies/note_levels/level_3/level_3_subs/tc1",
+        "flow": "tc1_flow.js",
+        "topics": [],
+        "aliases": [
+          "tc1"
+        ]
+      },
+      "tcp": {
+        "dir": "src/controllers/flows/botReplies/note_levels/level_3/level_3_subs/tcp",
+        "flow": "tcp_flow.js",
+        "topics": [
+          "tcpKpc"
+        ],
+        "aliases": [
+          "tcp"
+        ]
+      },
+      "tqm": {
+        "dir": "src/controllers/flows/botReplies/note_levels/level_3/level_3_subs/tqm",
+        "flow": "tqm_flow.js",
+        "topics": [
+          "tqmContinuousImprove",
+          "tqmControlManage",
+          "tqmIntro",
+          "tqmManageAppro",
+          "tqmQcTools",
+          "tqmQualityReliability",
+          "tqmQualityStd",
+          "tqmTotalQm"
+        ],
+        "aliases": [
+          "tqm"
+        ]
+      },
+      "ttm": {
+        "dir": "src/controllers/flows/botReplies/note_levels/level_3/level_3_subs/ttm",
+        "flow": "ttm_flow.js",
+        "topics": [],
+        "aliases": [
+          "ttm"
+        ]
+      },
+      "weaving2": {
+        "dir": "src/controllers/flows/botReplies/note_levels/level_3/level_3_subs/weaving2",
+        "flow": "weave2_flow.js",
+        "topics": [],
+        "aliases": [
+          "weaving2"
+        ]
+      },
+      "wp2": {
+        "dir": "src/controllers/flows/botReplies/note_levels/level_3/level_3_subs/wp2",
+        "flow": "wp2_flow.js",
+        "topics": [
+          "wp2Books",
+          "wp2ClassLec"
+        ],
+        "aliases": [
+          "wp2"
+        ]
+      },
+      "ym2": {
+        "dir": "src/controllers/flows/botReplies/note_levels/level_3/level_3_subs/ym2",
+        "flow": "ym2_flow.js",
+        "topics": [
+          "ym2Books",
+          "ym2ClassLec",
+          "ym2IntroSpin",
+          "ym2Notes",
+          "ym2Rotor",
+          "ym2SpecialYarns",
+          "ym2Spinning"
+        ],
+        "aliases": [
+          "ym2"
+        ]
+      }
+    },
+    "4": {
+      "bil": {
+        "dir": "src/controllers/flows/botReplies/note_levels/level_4/level_4_subs/bil",
+        "flow": "bil_flow.js",
+        "topics": [
+          "bilLaborLaw"
+        ],
+        "aliases": [
+          "bil"
+        ]
+      },
+      "bs": {
+        "dir": "src/controllers/flows/botReplies/note_levels/level_4/level_4_subs/bs",
+        "flow": "bs_flow.js",
+        "topics": [],
+        "aliases": [
+          "bs"
+        ]
+      },
+      "epd": {
+        "dir": "src/controllers/flows/botReplies/note_levels/level_4/level_4_subs/epd",
+        "flow": "epd_flow.js",
+        "topics": [],
+        "aliases": [
+          "epd"
+        ]
+      },
+      "hrm": {
+        "dir": "src/controllers/flows/botReplies/note_levels/level_4/level_4_subs/hrm",
+        "flow": "hrm_flow.js",
+        "topics": [],
+        "aliases": [
+          "hrm"
+        ]
+      },
+      "ir": {
+        "dir": "src/controllers/flows/botReplies/note_levels/level_4/level_4_subs/ir",
+        "flow": "ir_flow.js",
+        "topics": [
+          "irIndustrialRelation"
+        ],
+        "aliases": [
+          "ir"
+        ]
+      },
+      "ppc": {
+        "dir": "src/controllers/flows/botReplies/note_levels/level_4/level_4_subs/ppc",
+        "flow": "ppc_flow.js",
+        "topics": [],
+        "aliases": [
+          "ppc"
+        ]
+      },
+      "qm": {
+        "dir": "src/controllers/flows/botReplies/note_levels/level_4/level_4_subs/qm",
+        "flow": "qm_flow.js",
+        "topics": [],
+        "aliases": [
+          "qm"
+        ]
+      },
+      "tam": {
+        "dir": "src/controllers/flows/botReplies/note_levels/level_4/level_4_subs/tam",
+        "flow": "tam_flow.js",
+        "topics": [
+          "tamIntroMerch"
+        ],
+        "aliases": [
+          "tam"
+        ]
+      }
+    }
+  }
+}
