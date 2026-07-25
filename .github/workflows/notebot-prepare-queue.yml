@@ -6,7 +6,7 @@ name: NoteBot - prepare ingest queue
 
 on:
   schedule:
-    - cron: "30 0 * * 1" # Mondays 00:30 UTC
+    - cron: "30 0 * * *" # daily 00:30 UTC (30 min before the cloud routine)
   workflow_dispatch: {}
 
 permissions:

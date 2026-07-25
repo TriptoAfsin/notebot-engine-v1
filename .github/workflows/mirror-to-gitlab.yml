@@ -6,6 +6,8 @@ name: Mirror main to GitLab (deploy)
 on:
   push:
     branches: [main]
+    paths-ignore:
+      - ".ingest/**" # queue/manifest churn shouldn't trigger a GitLab deploy
 
 concurrency:
   group: gitlab-mirror

@@ -1,0 +1,35 @@
+name: NoteBot - open PR + notify
+
+# Fires when the cloud ingest agent pushes an ingest/auto-* branch. The agent's sandbox
+# can't reach api.github.com or Telegram, so this runner opens the PR, marks the applied
+# rows pr-open (dedup), and sends the Telegram notification with a note table.
+
+on:
+  push:
+    branches:
+      - "ingest/auto-*"
+
+permissions:
+  contents: read
+  pull-requests: write
+
+concurrency:
+  group: notebot-open-pr-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  open:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - run: npm install pg@8 --no-save
+      - name: Open PR, mark pr-open, notify Telegram
+        run: node .github/scripts/open-pr-notify.js
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
