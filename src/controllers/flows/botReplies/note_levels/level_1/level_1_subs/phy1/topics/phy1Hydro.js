@@ -12,7 +12,6 @@ let phy1Hydro = [
     textBlockGen(`🔷 Hand Note(Nihat,YE-46,2021)-\n\nhttps://drive.google.com/file/d/1humhZvc7wAr4of6dwJUuah7BlIqlQdq_/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note(Midul Hasan, WPE-51, 2026) - \n\nhttps://drive.google.com/file/d/1kybvAkLINvnE5vVodKPV0C8_e_xizxa5/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note(Midul Hasan, WPE-51, 2026) - \n\nhttps://drive.google.com/file/d/1ybTpbjv8vnrcYffzrifRaybxDONRcp-q/view?usp=sharing`),
-    textBlockGen(`🔷 Hand Note(Midul Hasan, WPE-51, 2026) - \n\nhttps://drive.google.com/file/d/1kybvAkLINvnE5vVodKPV0C8_e_xizxa5/view?usp=sharing`),
 ]
 
 

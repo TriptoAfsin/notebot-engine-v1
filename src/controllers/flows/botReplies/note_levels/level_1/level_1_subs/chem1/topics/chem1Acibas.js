@@ -12,7 +12,6 @@ let chem1AcidBase = [
     textBlockGen(`🔷 Hand Note(Nafis, IPE-46,2021)- \n\nhttps://drive.google.com/file/d/11ZngqbAz1c5QmiQY29noh6v-MGxJU94l/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note(Midul Hasan, WPE-51, 2026) - \n\nhttps://drive.google.com/file/d/1dHDsBZRJ0NoF7hII6CNzi1RE1cCOyo7N/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note(Midul Hasan, WPE-51, 2026) - \n\nhttps://drive.google.com/file/d/1UwHp2awMjw5L0dOMXMt00AWQJmvNryN1/view?usp=sharing`),
-    textBlockGen(`🔷 Hand Note(Midul Hasan, WPE-51, 2026) - \n\nhttps://drive.google.com/file/d/1dHDsBZRJ0NoF7hII6CNzi1RE1cCOyo7N/view?usp=sharing`),
 ]
 
 

@@ -15,7 +15,6 @@ let phy2ThermoDynamic = [
     textBlockGen(`🔷 Laws of Thermodynamics - \n\nhttps://drive.google.com/file/d/1-3oVc2VrIXF4pSwkeT1BQDr8hC8sewhK/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note(Midul Hasan, WPE-51, 2026) - \n\nhttps://drive.google.com/file/d/1RwA28jooQombdMvlThaSp5AGkeOXqLjj/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note(Midul Hasan, WPE-51, 2026) - \n\nhttps://drive.google.com/file/d/1QVcaw4PrrGw3N2zDbE0JASbVQihyNZDy/view?usp=sharing`),
-    textBlockGen(`🔷 Hand Note(Midul Hasan, WPE-51, 2026) - \n\nhttps://drive.google.com/file/d/1RwA28jooQombdMvlThaSp5AGkeOXqLjj/view?usp=sharing`),
 ]
 
 

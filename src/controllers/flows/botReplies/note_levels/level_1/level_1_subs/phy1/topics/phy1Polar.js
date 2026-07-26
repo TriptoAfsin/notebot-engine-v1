@@ -16,8 +16,6 @@ let phy1Polar = [
     textBlockGen(`🔷 Hand Note(Midul Hasan, WPE-51, 2026) - \n\nhttps://drive.google.com/file/d/1WverOUjBBgtB2_InD5ZKXl03VC7X3pNH/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note(Midul Hasan, WPE-51, 2026) - \n\nhttps://drive.google.com/file/d/1uAmxOkgSDtqpfdP0SpATt3WBt2a3yU0C/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note(Midul Hasan, WPE-51, 2026) - \n\nhttps://drive.google.com/file/d/19K_MMQd3h1jWynZTclXozCzkXl3CfOfa/view?usp=sharing`),
-    textBlockGen(`🔷 Hand Note(Midul Hasan, WPE-51, 2026) - \n\nhttps://drive.google.com/file/d/1WverOUjBBgtB2_InD5ZKXl03VC7X3pNH/view?usp=sharing`),
-    textBlockGen(`🔷 Hand Note(Midul Hasan, WPE-51, 2026) - \n\nhttps://drive.google.com/file/d/1uAmxOkgSDtqpfdP0SpATt3WBt2a3yU0C/view?usp=sharing`),
 ]
 
 
