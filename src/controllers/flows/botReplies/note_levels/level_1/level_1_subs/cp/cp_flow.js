@@ -6,6 +6,10 @@ let bondiFlow = require("../../../../sponsoredFlows/bondiCard");
 
 let cp_flow = [
     bondiFlow,
+    grroupedButtonBlockGen(`📌 Full Notes -`, [
+        webBtnBlockGen("Rupok(WPE,26)", "https://drive.google.com/file/d/14TVIPXRm_EVRhA3-jTQ3u4LuOnrOMmBd/view?usp=sharing"),
+        webBtnBlockGen("Rupok+QB(WPE)", "https://drive.google.com/file/d/1MjPxxAKbgZYlMo_SLPd1fVqNYuVPju4l/view?usp=sharing"),
+    ]),
     grroupedButtonBlockGen(
         "⭐ New Notes(2025) - ",
         [

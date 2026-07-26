@@ -6,6 +6,9 @@ let bondiFlow = require("../../../../sponsoredFlows/bondiCard");
 
 let fm1Flow = [
     bondiFlow,
+    grroupedButtonBlockGen(`📌 Full Notes -`, [
+        webBtnBlockGen("Fardin(AE,26)", "https://drive.google.com/drive/folders/1O0gRDJUqLb6ac0ywfbmD1irPNl98vETk"),
+    ]),
     grroupedButtonBlockGen(
         "📌 Full Hand Notes -",
         [

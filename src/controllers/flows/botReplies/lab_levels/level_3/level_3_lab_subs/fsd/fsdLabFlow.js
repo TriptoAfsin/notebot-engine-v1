@@ -38,6 +38,7 @@ let fsd_lab_flow = [
   ]),
   grroupedButtonBlockGen("📌  All reports -", [
     webBtnBlockGen("All report(Sadia)","https://drive.google.com/file/d/1GZdUfCgDbuvZcw7YJwCHg-KVARJfvcp-/view?usp=sharing"),
+    webBtnBlockGen("Tahin(TEM,2026)","https://drive.google.com/drive/folders/1a2U-oa6CCaJF4EPSJQgnMikG7d3N54X9"),
   ]),
 ];
 

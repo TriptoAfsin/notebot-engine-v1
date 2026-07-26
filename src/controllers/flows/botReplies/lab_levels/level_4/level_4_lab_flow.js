@@ -18,6 +18,7 @@ let level_4_lab = [
         [
             webBtnBlockGen("KFA", "https://drive.google.com/drive/folders/1vMOrdLv3JU8ekaWhQXVP1f5k0FmlXcvs?usp=sharing"),
             webBtnBlockGen("Wvg-II", "https://drive.google.com/drive/folders/1AJMRd7Q8h4I51ycg0e7ceqreyHaik9Ul?usp=sharing"),
+            webBtnBlockGen("SCM Viva", "https://drive.google.com/file/d/1w0Vvs4JuNf94E4zxTBTIO29d_3GfdcQT/view?usp=sharing"),
         ]
     ),
     grroupedButtonBlockGen(

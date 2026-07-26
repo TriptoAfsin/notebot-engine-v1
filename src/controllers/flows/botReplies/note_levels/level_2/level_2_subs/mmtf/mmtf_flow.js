@@ -5,6 +5,11 @@ let bondiFlow = require("../../../../sponsoredFlows/bondiCard");
 
 let mmtfFlow = [
     bondiFlow,
+    grroupedButtonBlockGen(`📌 Full Notes -`, [
+        webBtnBlockGen("Mridul(YE)PartB", "https://drive.google.com/drive/folders/1MFVTqrunhjvJttyxTfUdp8665HdEvist"),
+        webBtnBlockGen("Anas(WPE)PartA", "https://drive.google.com/file/d/19LhSe_DiYSF_XcZUL4JDYaV6w9RXKKo9/view?usp=sharing"),
+        webBtnBlockGen("Sinha(FE,26)", "https://drive.google.com/file/d/1Xf_p5f0GAG4n7imdpDX_PMyOMN9QjQ5g/view?usp=sharing"),
+    ]),
     grroupedButtonBlockGen(
         "📌 Full Hand Notes -",
         [

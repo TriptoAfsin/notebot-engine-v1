@@ -7,6 +7,9 @@ let bondiFlow = require("../../../../sponsoredFlows/bondiCard");
 
 
 let ap2Flow = [
+    grroupedButtonBlockGen(`📌 Full Notes -`, [
+        webBtnBlockGen("Fardin(AE,26)", "https://drive.google.com/drive/folders/12k818j4kIEfe_FnCNX6X5pVYW3K0sZkW"),
+    ]),
     grroupedButtonBlockGen(
         "📌 Select Topics for Ap-II -",
         [

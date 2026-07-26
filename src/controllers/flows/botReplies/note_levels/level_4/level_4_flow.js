@@ -106,6 +106,13 @@ let level_4_note = [
             webBtnBlockGen("WPE 405: Technical & Functional Textiles", "https://drive.google.com/drive/folders/1B8TcqI3FTWFzd3VTKDJrAnKelHu5CinS?usp=sharing"),
         ]
     ),
+    grroupedButtonBlockGen(
+        `🔰 Select Subject for level 4 -`,
+        [
+            payloadBtnGen("Sociology", "sociology_flow"),
+            payloadBtnGen("BELE", "bele_flow"),
+        ]
+    ),
 ]
 
 

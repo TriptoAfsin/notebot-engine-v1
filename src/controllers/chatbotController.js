@@ -448,6 +448,8 @@ const fm2_words = require("./keywords/academic_words/subjects/fm2Words");
 const ctca_words = require("./keywords/academic_words/subjects/ctacaWords");
 //academic -> wpp
 const wpp_words = require("./keywords/academic_words/subjects/wppWords");
+//academic -> ie
+const ie_words = require("./keywords/academic_words/subjects/ieWords");
 //academic -> weav prep
 const weav_prep_words = require("./keywords/academic_words/subjects/weavPrepWords");
 //academic -> mp
@@ -1091,6 +1093,17 @@ const wpp_singeing = require("./flows/botReplies/note_levels/level_2/level_2_sub
 const wpp_desizing = require("./flows/botReplies/note_levels/level_2/level_2_subs/wpp/topics/wppDesizing");
 const wpp_Impurities = require("./flows/botReplies/note_levels/level_2/level_2_subs/wpp/topics/wppImpurities");
 const wpp_BioScouring = require("./flows/botReplies/note_levels/level_2/level_2_subs/wpp/topics/wppBioScouring");
+
+//ie
+const ie_flow = require("./flows/botReplies/note_levels/level_2/level_2_subs/ie/ie_flow");
+//spe
+const spe_flow = require("./flows/botReplies/note_levels/level_2/level_2_subs/spe/spe_flow");
+//ietex
+const ietex_flow = require("./flows/botReplies/note_levels/level_3/level_3_subs/ietex/ietex_flow");
+//sociology
+const sociology_flow = require("./flows/botReplies/note_levels/level_4/level_4_subs/sociology/sociology_flow");
+//bele
+const bele_flow = require("./flows/botReplies/note_levels/level_4/level_4_subs/bele/bele_flow");
 
 //fd2
 const fd2_flow = require("./flows/botReplies/note_levels/level_2/level_2_subs/fd2/fd2_flow");
@@ -1900,6 +1913,7 @@ let  handleMessage = async (sender_psid, received_message) =>  {
   const fdce = fdce_words;
   const tp = tp_words;
   const wpp = wpp_words;
+  const ie = ie_words;
   const fd2 = fd2_words;
   const weavPrep = weavPrep_words;
   const ap1 = ap1_words;
@@ -2632,6 +2646,11 @@ let  handleMessage = async (sender_psid, received_message) =>  {
     }
 
     magicFunc(sender_psid, wpp_flow);
+  }
+
+  //academic -> ie
+  else if (wordIncludes(ie, received_message)) {
+    magicFunc(sender_psid, ie_flow);
   }
 
   //academic -> tcp
@@ -4490,6 +4509,27 @@ let handlePostback = async (sender_psid, received_postback) => {
     magicFunc(sender_psid, wpp_Impurities);
   } else if (payload === "wpp_bioScouring") {
     magicFunc(sender_psid, wpp_BioScouring);
+  }
+
+  //ie
+  else if (payload === "ie_flow") {
+    magicFunc(sender_psid, ie_flow);
+  }
+  //spe
+  else if (payload === "spe_flow") {
+    magicFunc(sender_psid, spe_flow);
+  }
+  //ietex
+  else if (payload === "ietex_flow") {
+    magicFunc(sender_psid, ietex_flow);
+  }
+  //sociology
+  else if (payload === "sociology_flow") {
+    magicFunc(sender_psid, sociology_flow);
+  }
+  //bele
+  else if (payload === "bele_flow") {
+    magicFunc(sender_psid, bele_flow);
   }
 
   //fd2

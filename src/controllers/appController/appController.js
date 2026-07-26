@@ -629,7 +629,14 @@ let weavingPrepAppFlow = require('./academic/notes/level2/subs/weave_prep/weave_
 let weavingPrepBooks = require('./academic/notes/level2/subs/weave_prep/topics/weavePrepBooks')
 
 
-//wpp 
+//ie
+let ieAppFlow = require('./academic/notes/level2/subs/ie/ie')
+let speAppFlow = require('./academic/notes/level2/subs/spe/spe')
+let ietexAppFlow = require('./academic/notes/level3/subs/ietex/ietex')
+let sociologyAppFlow = require('./academic/notes/level4/subs/sociology/sociology')
+let beleAppFlow = require('./academic/notes/level4/subs/bele/bele')
+
+//wpp
 let wppAppFlow = require('./academic/notes/level2/subs/wpp/wpp')
 let wppQues = require('./academic/notes/level2/subs/wpp/topics/appWppQues')
 let wppPretreatment = require('./academic/notes/level2/subs/wpp/topics/appWppPretreatment')
@@ -3911,6 +3918,32 @@ let weavingPrepBooksFlow = (req, res) => {
 };
 
 
+//ie
+let ieFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(ieAppFlow);
+};
+//spe
+let speFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(speAppFlow);
+};
+//ietex
+let ietexFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(ietexAppFlow);
+};
+//sociology
+let sociologyFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(sociologyAppFlow);
+};
+//bele
+let beleFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(beleAppFlow);
+};
+
 //wpp
 let wppFlow = (req, res) => {
 
@@ -6685,6 +6718,12 @@ module.exports = {
     weavingPrepFlow: weavingPrepFlow,
     weavingPrepBooksFlow: weavingPrepBooksFlow,
 
+
+    ieFlow: ieFlow,
+    speFlow: speFlow,
+    ietexFlow: ietexFlow,
+    sociologyFlow: sociologyFlow,
+    beleFlow: beleFlow,
 
     wppFlow: wppFlow,
     wppQuesFlow: wppQuesFlow,

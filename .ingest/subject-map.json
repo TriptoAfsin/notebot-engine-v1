@@ -546,6 +546,14 @@
           "idcc"
         ]
       },
+      "ie": {
+        "dir": "src/controllers/flows/botReplies/note_levels/level_2/level_2_subs/ie",
+        "flow": "ie_flow.js",
+        "topics": [],
+        "aliases": [
+          "ie"
+        ]
+      },
       "marketing": {
         "dir": "src/controllers/flows/botReplies/note_levels/level_2/level_2_subs/marketing",
         "flow": "marketing_flow.js",
@@ -639,6 +647,14 @@
         "topics": [],
         "aliases": [
           "qb_2"
+        ]
+      },
+      "spe": {
+        "dir": "src/controllers/flows/botReplies/note_levels/level_2/level_2_subs/spe",
+        "flow": "spe_flow.js",
+        "topics": [],
+        "aliases": [
+          "spe"
         ]
       },
       "sss1": {
@@ -937,6 +953,14 @@
           "fsd"
         ]
       },
+      "ietex": {
+        "dir": "src/controllers/flows/botReplies/note_levels/level_3/level_3_subs/ietex",
+        "flow": "ietex_flow.js",
+        "topics": [],
+        "aliases": [
+          "ietex"
+        ]
+      },
       "im": {
         "dir": "src/controllers/flows/botReplies/note_levels/level_3/level_3_subs/im",
         "flow": "im_flow.js",
@@ -1140,6 +1164,14 @@
       }
     },
     "4": {
+      "bele": {
+        "dir": "src/controllers/flows/botReplies/note_levels/level_4/level_4_subs/bele",
+        "flow": "bele_flow.js",
+        "topics": [],
+        "aliases": [
+          "bele"
+        ]
+      },
       "bil": {
         "dir": "src/controllers/flows/botReplies/note_levels/level_4/level_4_subs/bil",
         "flow": "bil_flow.js",
@@ -1198,6 +1230,14 @@
         "topics": [],
         "aliases": [
           "qm"
+        ]
+      },
+      "sociology": {
+        "dir": "src/controllers/flows/botReplies/note_levels/level_4/level_4_subs/sociology",
+        "flow": "sociology_flow.js",
+        "topics": [],
+        "aliases": [
+          "sociology"
         ]
       },
       "tam": {

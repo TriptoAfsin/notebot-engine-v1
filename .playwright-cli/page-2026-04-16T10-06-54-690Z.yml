@@ -1,0 +1,216 @@
+- generic [active] [ref=e1]:
+  - iframe [ref=e2]:
+    
+  - region
+  - generic [ref=e4]:
+    - navigation [ref=e5]:
+      - button "সরাসরি আসল কন্টেন্টে যান" [ref=e7] [cursor=pointer]:
+        - generic [ref=e9]: সরাসরি আসল কন্টেন্টে যান
+      - button "কীবোর্ড শর্টকাটগুলি" [ref=e11] [cursor=pointer]:
+        - generic [ref=e13]: কীবোর্ড শর্টকাটগুলি
+      - button "অ্যাক্সেসিবিলিটি সম্পর্কে মতামত জানান" [ref=e15] [cursor=pointer]:
+        - generic [ref=e17]: অ্যাক্সেসিবিলিটি সম্পর্কে মতামত জানান
+    - banner [ref=e19]:
+      - generic [ref=e20]:
+        - link "Drive" [ref=e24] [cursor=pointer]:
+          - /url: https://drive.google.com/?tab=oo
+          - img [ref=e25]
+          - generic [ref=e26]: Drive
+        - generic [ref=e28]:
+          - button "Google অ্যাপ্লিকেশানগুলি" [ref=e32] [cursor=pointer]:
+            - img [ref=e33]
+          - link "সাইন-ইন করুন" [ref=e36] [cursor=pointer]:
+            - /url: https://accounts.google.com/ServiceLogin?hl=bn&passive=true&continue=https://drive.google.com/drive/folders/1deni6Ewkwu_pXSPq7IaZtOJ3xRZ-VRNm%3Fusp%3Dsharing&service=writely&ec=GAZAMQ
+    - generic [ref=e37]:
+      - generic [ref=e46]:
+        - generic [ref=e48]:
+          - generic:
+            - navigation:
+              - heading "ফোল্ডার পাথ" [ref=e49]
+              - list "ফোল্ডার পাথ"
+        - toolbar [ref=e50]:
+          - radiogroup "তালিকা বা গ্রিড লেআউট (প্রথমে Alt+V, তারপর L)" [ref=e55]:
+            - generic [ref=e56]:
+              - radio "তালিকা" [checked] [ref=e57] [cursor=pointer]:
+                - generic [ref=e58]:
+                  - img [ref=e59]
+                  - img [ref=e63]
+              - radio "গ্রিড" [ref=e66] [cursor=pointer]:
+                - generic [ref=e67]:
+                  - img [ref=e68]
+                  - img [ref=e72]
+      - main [ref=e76]:
+        - region [ref=e82]:
+          - grid "আইটেমের তালিকা" [ref=e86]:
+            - rowgroup [ref=e87]:
+              - generic [ref=e88] [cursor=pointer]: Name
+              - img [ref=e90] [cursor=pointer]
+              - generic [ref=e92] [cursor=pointer]: Date modified
+              - text: File size
+              - generic [ref=e98]:
+                - button "বাছাই" [ref=e100] [cursor=pointer]:
+                  - img [ref=e104]
+                  - generic [ref=e106]: বাছাই
+                - tooltip [ref=e107]: ক্রম অনুসারে সাজানোর বিকল্প দেখুন
+            - rowgroup [ref=e108]:
+              - 'row "Economics by ÀÅŔ.pdf PDF Shared Modified ৩:১৫ PM Size: ৪.৪ এমবি Storage used: ৪.৪ এমবি" [ref=e109]':
+                - gridcell "Economics by ÀÅŔ.pdf PDF Shared" [ref=e110]:
+                  - generic [ref=e112]:
+                    - img [ref=e118]
+                    - generic "Economics by ÀÅŔ.pdf PDF Shared" [ref=e121]:
+                      - strong [ref=e124]: Economics by ÀÅŔ.pdf
+                      - img "শেয়ার করে হয়েছে" [ref=e126]:
+                        - img [ref=e127]
+                        - generic [ref=e130]: শেয়ার করে হয়েছে
+                - gridcell "Modified ৩:১৫ PM" [ref=e131]:
+                  - generic "Modified ৩:১৫ PM" [ref=e135]:
+                    - generic [ref=e136]: ৩:১৫ PM
+                - 'gridcell "Size: ৪.৪ এমবি Storage used: ৪.৪ এমবি" [ref=e137]':
+                  - 'generic "Size: ৪.৪ এমবি Storage used: ৪.৪ এমবি" [ref=e141]':
+                    - generic [ref=e142]: ৪.৪ এমবি
+                - gridcell [ref=e143]
+              - 'row "ES by ÀÅŔ.pdf PDF Shared Modified ৩:১১ PM Size: ৬.১ এমবি Storage used: ৬.১ এমবি" [ref=e147]':
+                - gridcell "ES by ÀÅŔ.pdf PDF Shared" [ref=e148]:
+                  - generic [ref=e150]:
+                    - img [ref=e156]
+                    - generic "ES by ÀÅŔ.pdf PDF Shared" [ref=e159]:
+                      - strong [ref=e162]: ES by ÀÅŔ.pdf
+                      - img "শেয়ার করে হয়েছে" [ref=e164]:
+                        - img [ref=e165]
+                        - generic [ref=e168]: শেয়ার করে হয়েছে
+                - gridcell "Modified ৩:১১ PM" [ref=e169]:
+                  - generic "Modified ৩:১১ PM" [ref=e173]:
+                    - generic [ref=e174]: ৩:১১ PM
+                - 'gridcell "Size: ৬.১ এমবি Storage used: ৬.১ এমবি" [ref=e175]':
+                  - 'generic "Size: ৬.১ এমবি Storage used: ৬.১ এমবি" [ref=e179]':
+                    - generic [ref=e180]: ৬.১ এমবি
+                - gridcell [ref=e181]
+              - 'row "FM 2 by ÀÅŔ.pdf PDF Shared Modified ৩:১৬ PM Size: ১০.৫ এমবি Storage used: ১০.৫ এমবি" [ref=e185]':
+                - gridcell "FM 2 by ÀÅŔ.pdf PDF Shared" [ref=e186]:
+                  - generic [ref=e188]:
+                    - img [ref=e194]
+                    - generic "FM 2 by ÀÅŔ.pdf PDF Shared" [ref=e197]:
+                      - strong [ref=e200]: FM 2 by ÀÅŔ.pdf
+                      - img "শেয়ার করে হয়েছে" [ref=e202]:
+                        - img [ref=e203]
+                        - generic [ref=e206]: শেয়ার করে হয়েছে
+                - gridcell "Modified ৩:১৬ PM" [ref=e207]:
+                  - generic "Modified ৩:১৬ PM" [ref=e211]:
+                    - generic [ref=e212]: ৩:১৬ PM
+                - 'gridcell "Size: ১০.৫ এমবি Storage used: ১০.৫ এমবি" [ref=e213]':
+                  - 'generic "Size: ১০.৫ এমবি Storage used: ১০.৫ এমবি" [ref=e217]':
+                    - generic [ref=e218]: ১০.৫ এমবি
+                - gridcell [ref=e219]
+              - 'row "FSD by ÀÅŔ.pdf PDF Shared Modified ৩:১৫ PM Size: ৮ এমবি Storage used: ৮ এমবি" [ref=e223]':
+                - gridcell "FSD by ÀÅŔ.pdf PDF Shared" [ref=e224]:
+                  - generic [ref=e226]:
+                    - img [ref=e232]
+                    - generic "FSD by ÀÅŔ.pdf PDF Shared" [ref=e235]:
+                      - strong [ref=e238]: FSD by ÀÅŔ.pdf
+                      - img "শেয়ার করে হয়েছে" [ref=e240]:
+                        - img [ref=e241]
+                        - generic [ref=e244]: শেয়ার করে হয়েছে
+                - gridcell "Modified ৩:১৫ PM" [ref=e245]:
+                  - generic "Modified ৩:১৫ PM" [ref=e249]:
+                    - generic [ref=e250]: ৩:১৫ PM
+                - 'gridcell "Size: ৮ এমবি Storage used: ৮ এমবি" [ref=e251]':
+                  - 'generic "Size: ৮ এমবি Storage used: ৮ এমবি" [ref=e255]':
+                    - generic [ref=e256]: ৮ এমবি
+                - gridcell [ref=e257]
+              - 'row "FTQC by ÀÅŔ.pdf PDF Shared Modified ৩:১২ PM Size: ৬.৪ এমবি Storage used: ৬.৪ এমবি" [ref=e261]':
+                - gridcell "FTQC by ÀÅŔ.pdf PDF Shared" [ref=e262]:
+                  - generic [ref=e264]:
+                    - img [ref=e270]
+                    - generic "FTQC by ÀÅŔ.pdf PDF Shared" [ref=e273]:
+                      - strong [ref=e276]: FTQC by ÀÅŔ.pdf
+                      - img "শেয়ার করে হয়েছে" [ref=e278]:
+                        - img [ref=e279]
+                        - generic [ref=e282]: শেয়ার করে হয়েছে
+                - gridcell "Modified ৩:১২ PM" [ref=e283]:
+                  - generic "Modified ৩:১২ PM" [ref=e287]:
+                    - generic [ref=e288]: ৩:১২ PM
+                - 'gridcell "Size: ৬.৪ এমবি Storage used: ৬.৪ এমবি" [ref=e289]':
+                  - 'generic "Size: ৬.৪ এমবি Storage used: ৬.৪ এমবি" [ref=e293]':
+                    - generic [ref=e294]: ৬.৪ এমবি
+                - gridcell [ref=e295]
+              - 'row "IM by ÀÅŔ.pdf PDF Shared Modified ৩:১৫ PM Size: ৪.৬ এমবি Storage used: ৪.৬ এমবি" [ref=e299]':
+                - gridcell "IM by ÀÅŔ.pdf PDF Shared" [ref=e300]:
+                  - generic [ref=e302]:
+                    - img [ref=e308]
+                    - generic "IM by ÀÅŔ.pdf PDF Shared" [ref=e311]:
+                      - strong [ref=e314]: IM by ÀÅŔ.pdf
+                      - img "শেয়ার করে হয়েছে" [ref=e316]:
+                        - img [ref=e317]
+                        - generic [ref=e320]: শেয়ার করে হয়েছে
+                - gridcell "Modified ৩:১৫ PM" [ref=e321]:
+                  - generic "Modified ৩:১৫ PM" [ref=e325]:
+                    - generic [ref=e326]: ৩:১৫ PM
+                - 'gridcell "Size: ৪.৬ এমবি Storage used: ৪.৬ এমবি" [ref=e327]':
+                  - 'generic "Size: ৪.৬ এমবি Storage used: ৪.৬ এমবি" [ref=e331]':
+                    - generic [ref=e332]: ৪.৬ এমবি
+                - gridcell [ref=e333]
+              - 'row "MYM by ÀÅŔ.pdf PDF Shared Modified ৩:১২ PM Size: ৬.১ এমবি Storage used: ৬.১ এমবি" [ref=e337]':
+                - gridcell "MYM by ÀÅŔ.pdf PDF Shared" [ref=e338]:
+                  - generic [ref=e340]:
+                    - img [ref=e346]
+                    - generic "MYM by ÀÅŔ.pdf PDF Shared" [ref=e349]:
+                      - strong [ref=e352]: MYM by ÀÅŔ.pdf
+                      - img "শেয়ার করে হয়েছে" [ref=e354]:
+                        - img [ref=e355]
+                        - generic [ref=e358]: শেয়ার করে হয়েছে
+                - gridcell "Modified ৩:১২ PM" [ref=e359]:
+                  - generic "Modified ৩:১২ PM" [ref=e363]:
+                    - generic [ref=e364]: ৩:১২ PM
+                - 'gridcell "Size: ৬.১ এমবি Storage used: ৬.১ এমবি" [ref=e365]':
+                  - 'generic "Size: ৬.১ এমবি Storage used: ৬.১ এমবি" [ref=e369]':
+                    - generic [ref=e370]: ৬.১ এমবি
+                - gridcell [ref=e371]
+              - 'row "PCS by ÀÅŔ.pdf PDF Shared Modified ৩:১৫ PM Size: ৮.১ এমবি Storage used: ৮.১ এমবি" [ref=e375]':
+                - gridcell "PCS by ÀÅŔ.pdf PDF Shared" [ref=e376]:
+                  - generic [ref=e378]:
+                    - img [ref=e384]
+                    - generic "PCS by ÀÅŔ.pdf PDF Shared" [ref=e387]:
+                      - strong [ref=e390]: PCS by ÀÅŔ.pdf
+                      - img "শেয়ার করে হয়েছে" [ref=e392]:
+                        - img [ref=e393]
+                        - generic [ref=e396]: শেয়ার করে হয়েছে
+                - gridcell "Modified ৩:১৫ PM" [ref=e397]:
+                  - generic "Modified ৩:১৫ PM" [ref=e401]:
+                    - generic [ref=e402]: ৩:১৫ PM
+                - 'gridcell "Size: ৮.১ এমবি Storage used: ৮.১ এমবি" [ref=e403]':
+                  - 'generic "Size: ৮.১ এমবি Storage used: ৮.১ এমবি" [ref=e407]':
+                    - generic [ref=e408]: ৮.১ এমবি
+                - gridcell [ref=e409]
+              - 'row "SYM by ÀÅŔ.pdf PDF Shared Modified ৩:১৪ PM Size: ৫ এমবি Storage used: ৫ এমবি" [ref=e413]':
+                - gridcell "SYM by ÀÅŔ.pdf PDF Shared" [ref=e414]:
+                  - generic [ref=e416]:
+                    - img [ref=e422]
+                    - generic "SYM by ÀÅŔ.pdf PDF Shared" [ref=e425]:
+                      - strong [ref=e428]: SYM by ÀÅŔ.pdf
+                      - img "শেয়ার করে হয়েছে" [ref=e430]:
+                        - img [ref=e431]
+                        - generic [ref=e434]: শেয়ার করে হয়েছে
+                - gridcell "Modified ৩:১৪ PM" [ref=e435]:
+                  - generic "Modified ৩:১৪ PM" [ref=e439]:
+                    - generic [ref=e440]: ৩:১৪ PM
+                - 'gridcell "Size: ৫ এমবি Storage used: ৫ এমবি" [ref=e441]':
+                  - 'generic "Size: ৫ এমবি Storage used: ৫ এমবি" [ref=e445]':
+                    - generic [ref=e446]: ৫ এমবি
+                - gridcell [ref=e447]
+              - 'row "UM by ÀÅŔ.pdf PDF Shared Modified ৩:১৪ PM Size: ৪.৫ এমবি Storage used: ৪.৫ এমবি" [ref=e451]':
+                - gridcell "UM by ÀÅŔ.pdf PDF Shared" [ref=e452]:
+                  - generic [ref=e454]:
+                    - img [ref=e460]
+                    - generic "UM by ÀÅŔ.pdf PDF Shared" [ref=e463]:
+                      - strong [ref=e466]: UM by ÀÅŔ.pdf
+                      - img "শেয়ার করে হয়েছে" [ref=e468]:
+                        - img [ref=e469]
+                        - generic [ref=e472]: শেয়ার করে হয়েছে
+                - gridcell "Modified ৩:১৪ PM" [ref=e473]:
+                  - generic "Modified ৩:১৪ PM" [ref=e477]:
+                    - generic [ref=e478]: ৩:১৪ PM
+                - 'gridcell "Size: ৪.৫ এমবি Storage used: ৪.৫ এমবি" [ref=e479]':
+                  - 'generic "Size: ৪.৫ এমবি Storage used: ৪.৫ এমবি" [ref=e483]':
+                    - generic [ref=e484]: ৪.৫ এমবি
+                - gridcell [ref=e485]
+  - region

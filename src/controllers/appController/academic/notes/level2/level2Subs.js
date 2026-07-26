@@ -119,6 +119,14 @@ let level2Subs = [
         subName: "Biochemical Engineering",
         url: "https://drive.google.com/drive/folders/11dO-FPMxESGbCUeKO9NV8SXOGBdm2Cgi?usp=sharing"
     },
+    {
+        subName: "Industrial Engineering",
+        route: "app/notes/2/ie"
+    },
+    {
+        subName: "SPE",
+        route: "app/notes/2/spe"
+    },
 ]
   
 

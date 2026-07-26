@@ -13,6 +13,12 @@ let pm2Lab = [
             webBtnBlockGen("Naimur(2021)", "https://drive.google.com/file/d/1reKITBkO3ppqIBXpGYQQop3AzhMblPK3/view?usp=sharing"),
         ]
     ),
+    grroupedButtonBlockGen(
+        "📌 All Reports -",
+        [
+            webBtnBlockGen("Tahin(TEM308)", "https://drive.google.com/drive/folders/1LX3L7X0h_gkNx_0aV7BJhYemfRhOCeTB"),
+        ]
+    ),
 ]
 
 

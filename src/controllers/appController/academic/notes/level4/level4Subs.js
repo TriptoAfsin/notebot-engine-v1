@@ -121,6 +121,14 @@ let level4Subs = [
         subName: "TAM",
         route: "app/notes/4/tam"
     },
+    {
+        subName: "Sociology",
+        route: "app/notes/4/sociology"
+    },
+    {
+        subName: "BELE",
+        route: "app/notes/4/bele"
+    },
 ]
   
 
