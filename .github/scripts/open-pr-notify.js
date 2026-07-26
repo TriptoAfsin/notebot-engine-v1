@@ -58,10 +58,15 @@ async function main() {
   });
   if (r.status === 201) { const j = await r.json(); prUrl = j.html_url; prNum = j.number; }
   else {
-    // likely already exists — look it up
+    // already exists (re-push) — look it up and PATCH its title/body so it stays current
     const ex = await (await fetch(`https://api.github.com/repos/${repo}/pulls?head=${owner}:${branch}&state=open`, { headers: ghHead })).json();
-    if (Array.isArray(ex) && ex[0]) { prUrl = ex[0].html_url; prNum = ex[0].number; }
-    else console.log("PR create failed:", r.status, (await r.text()).slice(0, 200));
+    if (Array.isArray(ex) && ex[0]) {
+      prUrl = ex[0].html_url; prNum = ex[0].number;
+      await fetch(`https://api.github.com/repos/${repo}/pulls/${prNum}`, {
+        method: "PATCH", headers: ghHead,
+        body: JSON.stringify({ title: `Auto note ingest ${date}`, body }),
+      });
+    } else console.log("PR create failed:", r.status, (await r.text()).slice(0, 200));
   }
   console.log("PR:", prNum, prUrl);
 
