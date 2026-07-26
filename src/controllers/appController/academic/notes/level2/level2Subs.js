@@ -123,6 +123,10 @@ let level2Subs = [
         subName: "Industrial Engineering",
         route: "app/notes/2/ie"
     },
+    {
+        subName: "SPE",
+        route: "app/notes/2/spe"
+    },
 ]
   
 

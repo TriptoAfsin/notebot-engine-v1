@@ -6,6 +6,10 @@ let bondiFlow = require("../../../../sponsoredFlows/bondiCard");
 
 
 let chem1_flow = [
+    grroupedButtonBlockGen(`📌 Suggestions -`, [
+        webBtnBlockGen("Durjoy(FE)-1", "https://drive.google.com/file/d/11SflDcxeIu0p2MjvzIBaRzzwbRyy1ZOB/view?usp=sharing"),
+        webBtnBlockGen("Durjoy(FE)-2", "https://drive.google.com/file/d/1kzb5NdTKg7z6wWCmZOuxSStg3xszICfF/view?usp=sharing"),
+    ]),
     grroupedButtonBlockGen(
         "📌 Suggestions -",
         [

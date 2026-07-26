@@ -171,6 +171,10 @@ let level3Subs = [
         subName: "SCM",
         url: "https://drive.google.com/drive/folders/1Fo5gmLOcep6JABUt6FJiVSda0MA4DFbW?usp=sharing"
     },
+    {
+        subName: "IE Textiles-I",
+        route: "app/notes/3/ietex"
+    },
 ]
   
 

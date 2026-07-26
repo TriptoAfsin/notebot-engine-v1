@@ -6,6 +6,13 @@ let bondiFlow = require("../../../../sponsoredFlows/bondiCard");
 
 let ym1Flow = [
     bondiFlow,
+    grroupedButtonBlockGen(`📌 Full Notes -`, [
+        webBtnBlockGen("Sinha(FE,26)", "https://drive.google.com/file/d/1Hdx6ria4iAKSBRx4nL9ycG7U8a14S4RB/view?usp=sharing"),
+        webBtnBlockGen("Fardin(AE,26)", "https://drive.google.com/drive/folders/1GoOgn8ja_i_hOURhb4LBonqjF0KVY5zb"),
+    ]),
+    grroupedButtonBlockGen(`📌 Math Solve -`, [
+        webBtnBlockGen("Anonna(FE,26)", "https://drive.google.com/file/d/1etRESSPlzV88EQBKeVH_1FFb3XBi_u8V/view?usp=sharing"),
+    ]),
     grroupedButtonBlockGen(
         `📌 Question Bank Solve -   `,
         [

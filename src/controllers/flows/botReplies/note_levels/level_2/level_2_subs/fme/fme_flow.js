@@ -4,6 +4,9 @@ let payloadBtnGen = require('simple-messenger-blocks/payloadBtnGen');
 
 
 let fmeFlow = [
+    grroupedButtonBlockGen(`📌 Math Solve -`, [
+        webBtnBlockGen("Anonna(FE,26)", "https://drive.google.com/file/d/1LAWVZysxPqAyiIUr__eQEzL1kAxSanI-/view?usp=sharing"),
+    ]),
     grroupedButtonBlockGen(`Video Lectures - `,
         [
             webBtnBlockGen("Thermodynamics", "https://www.youtube.com/watch?v=4VrWjFxnp8E"),

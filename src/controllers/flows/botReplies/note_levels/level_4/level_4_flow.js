@@ -107,33 +107,10 @@ let level_4_note = [
         ]
     ),
     grroupedButtonBlockGen(
-        `📌 Sociology Notes -`,
+        `🔰 Select Subject for level 4 -`,
         [
-            webBtnBlockGen("Shahed(TEM,26)", "https://drive.google.com/drive/folders/1ZmTUnOE2MlVBJfaQWMgSKAHh2JwxJp1V"),
-        ]
-    ),
-    grroupedButtonBlockGen(
-        `📌 EPD Notes -`,
-        [
-            webBtnBlockGen("Shahed(TEM,26)", "https://drive.google.com/drive/folders/1jP1LMAgckB6RgssNyazoWkLelokZYf62"),
-        ]
-    ),
-    grroupedButtonBlockGen(
-        `📌 TAM Notes -`,
-        [
-            webBtnBlockGen("Shahed(TEM,26)", "https://drive.google.com/drive/folders/1A64kkVecceIvzwCEY1uJcLijJxDZ103h"),
-        ]
-    ),
-    grroupedButtonBlockGen(
-        `📌 BELE Notes -`,
-        [
-            webBtnBlockGen("Shahed(TEM,26)", "https://drive.google.com/drive/folders/1SCIitNzpjG5vw7NtNXILqUOAZo5wyeqs"),
-        ]
-    ),
-    grroupedButtonBlockGen(
-        `📌 Operations Mgmt Notes -`,
-        [
-            webBtnBlockGen("Rubayet(IPE,26)", "https://drive.google.com/file/d/1OAMcnu_ju9seuwJ2BtL71qxbYjTw_bJL/view?usp=sharing"),
+            payloadBtnGen("Sociology", "sociology_flow"),
+            payloadBtnGen("BELE", "bele_flow"),
         ]
     ),
 ]

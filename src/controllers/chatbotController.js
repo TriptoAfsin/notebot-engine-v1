@@ -1096,6 +1096,14 @@ const wpp_BioScouring = require("./flows/botReplies/note_levels/level_2/level_2_
 
 //ie
 const ie_flow = require("./flows/botReplies/note_levels/level_2/level_2_subs/ie/ie_flow");
+//spe
+const spe_flow = require("./flows/botReplies/note_levels/level_2/level_2_subs/spe/spe_flow");
+//ietex
+const ietex_flow = require("./flows/botReplies/note_levels/level_3/level_3_subs/ietex/ietex_flow");
+//sociology
+const sociology_flow = require("./flows/botReplies/note_levels/level_4/level_4_subs/sociology/sociology_flow");
+//bele
+const bele_flow = require("./flows/botReplies/note_levels/level_4/level_4_subs/bele/bele_flow");
 
 //fd2
 const fd2_flow = require("./flows/botReplies/note_levels/level_2/level_2_subs/fd2/fd2_flow");
@@ -4506,6 +4514,22 @@ let handlePostback = async (sender_psid, received_postback) => {
   //ie
   else if (payload === "ie_flow") {
     magicFunc(sender_psid, ie_flow);
+  }
+  //spe
+  else if (payload === "spe_flow") {
+    magicFunc(sender_psid, spe_flow);
+  }
+  //ietex
+  else if (payload === "ietex_flow") {
+    magicFunc(sender_psid, ietex_flow);
+  }
+  //sociology
+  else if (payload === "sociology_flow") {
+    magicFunc(sender_psid, sociology_flow);
+  }
+  //bele
+  else if (payload === "bele_flow") {
+    magicFunc(sender_psid, bele_flow);
   }
 
   //fd2

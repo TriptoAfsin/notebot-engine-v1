@@ -5,6 +5,9 @@ let payloadBtnGen = require("../../../../../../genrators/payloadBtnGen");
 let cardGenerator = require("../../../../../../genrators/cardGenerator");
 
 let omFlow = [
+    grroupedButtonBlockGen(`📌 Full Notes -`, [
+        webBtnBlockGen("Rubayet(IPE)PtB", "https://drive.google.com/file/d/1OAMcnu_ju9seuwJ2BtL71qxbYjTw_bJL/view?usp=sharing"),
+    ]),
     grroupedButtonBlockGen(
         `🔰 Select Topics for OM - `,
         [

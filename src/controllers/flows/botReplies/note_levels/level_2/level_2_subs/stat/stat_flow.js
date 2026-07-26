@@ -6,6 +6,9 @@ let bondiFlow = require("../../../../sponsoredFlows/bondiCard");
 
 
 let statFlow = [
+    grroupedButtonBlockGen(`📌 Full Notes -`, [
+        webBtnBlockGen("Sinha(FE,26)", "https://drive.google.com/file/d/1cRLWZ7yBtM7OwRYlQPAySQRJ0P0-xwsO/view?usp=sharing"),
+    ]),
     grroupedButtonBlockGen(
         `📌 QB Solve -`,
         [

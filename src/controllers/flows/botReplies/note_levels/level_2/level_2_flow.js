@@ -81,69 +81,9 @@ grroupedButtonBlockGen(`🔰 Select Subject for level 2 -`,
         payloadBtnGen("Ind. Engg.", "ie_flow"),
     ]
 ),
-grroupedButtonBlockGen(`📌 WPP Notes -`,
+grroupedButtonBlockGen(`🔰 Select Subject for level 2 -`,
     [
-        webBtnBlockGen("Sinha(FE,26)", "https://drive.google.com/file/d/1btZBRE4be96fHE9n-pxEgaYk1yRohUlc/view?usp=sharing"),
-        webBtnBlockGen("Anonna(FE)PartA", "https://drive.google.com/file/d/1Jev0cmX3TyWBzC4JtJ5EdnxS0kUrWWmD/view?usp=sharing"),
-        webBtnBlockGen("Debdas(FE,26)", "https://drive.google.com/file/d/1W1qT1laWp3H3oCwmjtjhy59L7zphi_Mk/view?usp=sharing"),
-    ]
-),
-grroupedButtonBlockGen(`📌 WPP - Sizing -`,
-    [
-        webBtnBlockGen("Anonna(FE,26)", "https://drive.google.com/file/d/1ooAUSM4_7fkb0JNyn71ITCW193M1cI6l/view?usp=sharing"),
-    ]
-),
-grroupedButtonBlockGen(`📌 MMTF Notes -`,
-    [
-        webBtnBlockGen("Mridul(YE)PartB", "https://drive.google.com/drive/folders/1MFVTqrunhjvJttyxTfUdp8665HdEvist"),
-        webBtnBlockGen("Anas(WPE)PartA", "https://drive.google.com/file/d/19LhSe_DiYSF_XcZUL4JDYaV6w9RXKKo9/view?usp=sharing"),
-        webBtnBlockGen("Sinha(FE,26)", "https://drive.google.com/file/d/1Xf_p5f0GAG4n7imdpDX_PMyOMN9QjQ5g/view?usp=sharing"),
-    ]
-),
-grroupedButtonBlockGen(`📌 YM-1 Notes -`,
-    [
-        webBtnBlockGen("Sinha(FE,26)", "https://drive.google.com/file/d/1Hdx6ria4iAKSBRx4nL9ycG7U8a14S4RB/view?usp=sharing"),
-        webBtnBlockGen("Fardin(AE,26)", "https://drive.google.com/drive/folders/1GoOgn8ja_i_hOURhb4LBonqjF0KVY5zb"),
-    ]
-),
-grroupedButtonBlockGen(`📌 YM-1 - Math solve -`,
-    [
-        webBtnBlockGen("Anonna(FE,26)", "https://drive.google.com/file/d/1etRESSPlzV88EQBKeVH_1FFb3XBi_u8V/view?usp=sharing"),
-    ]
-),
-grroupedButtonBlockGen(`📌 FME - Math solve -`,
-    [
-        webBtnBlockGen("Anonna(FE,26)", "https://drive.google.com/file/d/1LAWVZysxPqAyiIUr__eQEzL1kAxSanI-/view?usp=sharing"),
-    ]
-),
-grroupedButtonBlockGen(`📌 FYT Notes -`,
-    [
-        webBtnBlockGen("Sinha(FE,26)", "https://drive.google.com/file/d/1xCxkH0NoCXn4orqosJR-y7XUyXYOr8K4/view?usp=sharing"),
-    ]
-),
-grroupedButtonBlockGen(`📌 Statistics Notes -`,
-    [
-        webBtnBlockGen("Sinha(FE,26)", "https://drive.google.com/file/d/1cRLWZ7yBtM7OwRYlQPAySQRJ0P0-xwsO/view?usp=sharing"),
-    ]
-),
-grroupedButtonBlockGen(`📌 SSS-I Notes -`,
-    [
-        webBtnBlockGen("Shihab(YE,26)", "https://drive.google.com/file/d/1WInHYBqcoeLYBhYiT-ax6zSpOXI3TJ3M/view?usp=sharing"),
-    ]
-),
-grroupedButtonBlockGen(`📌 FM-1 Notes -`,
-    [
-        webBtnBlockGen("Fardin(AE,26)", "https://drive.google.com/drive/folders/1O0gRDJUqLb6ac0ywfbmD1irPNl98vETk"),
-    ]
-),
-grroupedButtonBlockGen(`📌 AP-II Notes -`,
-    [
-        webBtnBlockGen("Fardin(AE,26)", "https://drive.google.com/drive/folders/12k818j4kIEfe_FnCNX6X5pVYW3K0sZkW"),
-    ]
-),
-grroupedButtonBlockGen(`📌 SPE Notes -`,
-    [
-        webBtnBlockGen("Fardin(AE,26)", "https://drive.google.com/drive/folders/1Wfu6aZbOT-cYpUSb4sBfheOVttySUQvU"),
+        payloadBtnGen("SPE", "spe_flow"),
     ]
 ),
 ]

@@ -68,24 +68,6 @@ let level_1_note = [
             webBtnBlockGen("BS", "https://drive.google.com/drive/folders/17wWNfGNjyPGDq1Gwekwjtkyvv16RTHYy?usp=sharing"),
         ]
     ),
-    grroupedButtonBlockGen(`📌 Chem-I Suggestions -`,
-        [
-            webBtnBlockGen("Durjoy(FE)-1", "https://drive.google.com/file/d/11SflDcxeIu0p2MjvzIBaRzzwbRyy1ZOB/view?usp=sharing"),
-            webBtnBlockGen("Durjoy(FE)-2", "https://drive.google.com/file/d/1kzb5NdTKg7z6wWCmZOuxSStg3xszICfF/view?usp=sharing"),
-        ]
-    ),
-    grroupedButtonBlockGen(`📌 Computer Programming Notes -`,
-        [
-            webBtnBlockGen("Rupok(WPE,26)", "https://drive.google.com/file/d/14TVIPXRm_EVRhA3-jTQ3u4LuOnrOMmBd/view?usp=sharing"),
-            webBtnBlockGen("Rupok+QB(WPE)", "https://drive.google.com/file/d/1MjPxxAKbgZYlMo_SLPd1fVqNYuVPju4l/view?usp=sharing"),
-        ]
-    ),
-    grroupedButtonBlockGen(`📌 IESE Notes -`,
-        [
-            webBtnBlockGen("Environment", "https://drive.google.com/file/d/1uecIaB8IbxqHp7IOEfBfJ2nLhnu0Um89/view?usp=sharing"),
-            webBtnBlockGen("Env. Science", "https://drive.google.com/file/d/1I0eTXh8-EtEVHQdkQL17RFepG40_sT2t/view?usp=sharing"),
-        ]
-    ),
 ]
 
 
