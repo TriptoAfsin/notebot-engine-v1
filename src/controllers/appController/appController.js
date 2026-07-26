@@ -629,7 +629,10 @@ let weavingPrepAppFlow = require('./academic/notes/level2/subs/weave_prep/weave_
 let weavingPrepBooks = require('./academic/notes/level2/subs/weave_prep/topics/weavePrepBooks')
 
 
-//wpp 
+//ie
+let ieAppFlow = require('./academic/notes/level2/subs/ie/ie')
+
+//wpp
 let wppAppFlow = require('./academic/notes/level2/subs/wpp/wpp')
 let wppQues = require('./academic/notes/level2/subs/wpp/topics/appWppQues')
 let wppPretreatment = require('./academic/notes/level2/subs/wpp/topics/appWppPretreatment')
@@ -3911,6 +3914,12 @@ let weavingPrepBooksFlow = (req, res) => {
 };
 
 
+//ie
+let ieFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(ieAppFlow);
+};
+
 //wpp
 let wppFlow = (req, res) => {
 
@@ -6685,6 +6694,8 @@ module.exports = {
     weavingPrepFlow: weavingPrepFlow,
     weavingPrepBooksFlow: weavingPrepBooksFlow,
 
+
+    ieFlow: ieFlow,
 
     wppFlow: wppFlow,
     wppQuesFlow: wppQuesFlow,

@@ -8,6 +8,13 @@ let ym2_lab_flow = [
         [
             webBtnBlockGen("All Combined(Samia)", "https://drive.google.com/file/d/1ZhaMDec6y5QkgzFmhDs6sg1GnzbuRU4H/view?usp=sharing"),
             webBtnBlockGen("Mashtura(2025)", "https://drive.google.com/file/d/1qw85dReb5gBQ9tPXEVKqdR26cUcipcck/view?usp=sharing"),
+            webBtnBlockGen("Afnan(WPE,2026)", "https://drive.google.com/file/d/1qWE8EOW3zYpNFwA35RRGd9U80xJzDOGY/view?usp=sharing"),
+        ]
+    ),
+    grroupedButtonBlockGen(
+        "📌 All Reports -",
+        [
+            webBtnBlockGen("Tahin(TEM,2026)", "https://drive.google.com/drive/folders/1ikSiwvjq_z9WW3HBfAcGsagVMEDNin2m"),
         ]
     ),
     grroupedButtonBlockGen("⚡ Viva Note - ",

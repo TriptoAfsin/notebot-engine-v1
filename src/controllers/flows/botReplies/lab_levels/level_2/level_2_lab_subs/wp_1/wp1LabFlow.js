@@ -15,6 +15,8 @@ let wp1_lab_flow = [
         "⚡ All Combined -",
         [
             webBtnBlockGen("Saad(2025)", "https://drive.google.com/file/d/10ueWWqGOLaJ0Rckj_w-DSiL4gsn2ddlH/view?usp=sharing"),
+            webBtnBlockGen("Hashibul(YE26)", "https://drive.google.com/file/d/1PmuyfxUOd_saTDRLe1n28ODsW2AH_b-u/view?usp=sharing"),
+            webBtnBlockGen("Mridul(YE,2026)", "https://drive.google.com/drive/folders/1uaBAZDEum-EbZHP4LT2AYi2LfI-MN2n1"),
         ]
     ),
     grroupedButtonBlockGen(

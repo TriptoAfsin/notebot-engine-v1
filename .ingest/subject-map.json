@@ -816,6 +816,15 @@
         "aliases": [
           "ym1"
         ]
+      },
+      "ie": {
+        "dir": "src/controllers/flows/botReplies/note_levels/level_2/level_2_subs/ie",
+        "flow": "ie_flow.js",
+        "topics": [],
+        "aliases": [
+          "ie",
+          "industrial engineering"
+        ]
       }
     },
     "3": {

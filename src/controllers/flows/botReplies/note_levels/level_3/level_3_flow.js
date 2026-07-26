@@ -131,6 +131,12 @@ let level_3_note = [
   grroupedButtonBlockGen(`📌 MYM Note -`, [
     webBtnBlockGen("Alim(Affli.)", "https://drive.google.com/file/d/1ZO5jgiw6JtOQAabKDEH3DDYYFB7OtFHj/view?usp=sharing"),
   ]),
+  grroupedButtonBlockGen(`📌 FSD Notes -`, [
+    webBtnBlockGen("Ratul(TEM,26)", "https://drive.google.com/file/d/1OrfwNOu8c0wyRA7uTamIp7AdPID8pg78/view?usp=sharing"),
+  ]),
+  grroupedButtonBlockGen(`📌 IE Textiles-I Notes -`, [
+    webBtnBlockGen("Lamia(IPE,26)", "https://drive.google.com/drive/folders/1VXcDcV0950x3DKByz7O-4mcenXT-FOCo"),
+  ]),
 ];
 
 module.exports = level_3_note;

@@ -13,6 +13,7 @@ let chem1Equi = [
     textBlockGen(`🔷 Hand Note(Oindrela, 2019)-\n\nhttps://drive.google.com/file/d/1e7rU0MYF8Fx_ntsNZNxeULdYNvgX0tLp/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note(Midul Hasan, WPE-51, 2026) - \n\nhttps://drive.google.com/file/d/1R_BgeYKKp_dN_KSwsAXSKlf0g3wLcAJY/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note(Midul Hasan, WPE-51, 2026) - \n\nhttps://drive.google.com/file/d/1k7MGBDw6k8fbJhEm4Bj84tuiVkSC1_1l/view?usp=sharing`),
+    textBlockGen(`🔷 Hand Note(Midul Hasan, WPE-51, 2026) - \n\nhttps://drive.google.com/file/d/1R_BgeYKKp_dN_KSwsAXSKlf0g3wLcAJY/view?usp=sharing`),
 ]
 
 

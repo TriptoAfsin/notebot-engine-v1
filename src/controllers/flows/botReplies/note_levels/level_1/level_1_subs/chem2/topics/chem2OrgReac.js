@@ -14,6 +14,7 @@ let chem2OrgReac = [
    
     textBlockGen(`🔷 Hand Note(Midul Hasan, WPE-51, 2026) - \n\nhttps://drive.google.com/file/d/1x04JcnVRRy_4NPg2mJIeYr8dm3tyIkl9/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note(Midul Hasan, WPE-51, 2026) - \n\nhttps://drive.google.com/file/d/1BzkCAtZkNeXu0QTJKMdKg9mLBVcvZklO/view?usp=sharing`),
+    textBlockGen(`🔷 Hand Note(Midul Hasan, WPE-51, 2026) - \n\nhttps://drive.google.com/file/d/1x04JcnVRRy_4NPg2mJIeYr8dm3tyIkl9/view?usp=sharing`),
 ]
 
 

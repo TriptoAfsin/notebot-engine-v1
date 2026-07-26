@@ -106,6 +106,36 @@ let level_4_note = [
             webBtnBlockGen("WPE 405: Technical & Functional Textiles", "https://drive.google.com/drive/folders/1B8TcqI3FTWFzd3VTKDJrAnKelHu5CinS?usp=sharing"),
         ]
     ),
+    grroupedButtonBlockGen(
+        `📌 Sociology Notes -`,
+        [
+            webBtnBlockGen("Shahed(TEM,26)", "https://drive.google.com/drive/folders/1ZmTUnOE2MlVBJfaQWMgSKAHh2JwxJp1V"),
+        ]
+    ),
+    grroupedButtonBlockGen(
+        `📌 EPD Notes -`,
+        [
+            webBtnBlockGen("Shahed(TEM,26)", "https://drive.google.com/drive/folders/1jP1LMAgckB6RgssNyazoWkLelokZYf62"),
+        ]
+    ),
+    grroupedButtonBlockGen(
+        `📌 TAM Notes -`,
+        [
+            webBtnBlockGen("Shahed(TEM,26)", "https://drive.google.com/drive/folders/1A64kkVecceIvzwCEY1uJcLijJxDZ103h"),
+        ]
+    ),
+    grroupedButtonBlockGen(
+        `📌 BELE Notes -`,
+        [
+            webBtnBlockGen("Shahed(TEM,26)", "https://drive.google.com/drive/folders/1SCIitNzpjG5vw7NtNXILqUOAZo5wyeqs"),
+        ]
+    ),
+    grroupedButtonBlockGen(
+        `📌 Operations Mgmt Notes -`,
+        [
+            webBtnBlockGen("Rubayet(IPE,26)", "https://drive.google.com/file/d/1OAMcnu_ju9seuwJ2BtL71qxbYjTw_bJL/view?usp=sharing"),
+        ]
+    ),
 ]
 
 

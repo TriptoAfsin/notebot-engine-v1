@@ -568,6 +568,9 @@ let initWebRoutes = (app) => {
     router.get("/app/notes/2/weav_books_flow", appController.weavingPrepBooksFlow);
 
 
+    //ie
+    router.get("/app/notes/2/ie", appController.ieFlow);
+
     //wpp
     router.get("/app/notes/2/wpp", appController.wppFlow);
     router.get("/app/notes/2/wpp/wpp_quess_flow", appController.wppQuesFlow);

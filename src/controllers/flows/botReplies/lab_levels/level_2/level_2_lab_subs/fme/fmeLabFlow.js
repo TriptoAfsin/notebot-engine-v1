@@ -20,7 +20,8 @@ let fme_lab_flow = [
         "📌 All Reports -",
         [
             webBtnBlockGen("Tahin(2025)", "https://drive.google.com/drive/folders/1luUARf52IkP89s-z_wqak2-XqJwTI1NS?usp=sharing"),
-            webBtnBlockGen("Naimur(2020)", "https://drive.google.com/file/d/1E_RNhj87kifJFY6JNjM8BQkgxh2fbBF4/view")
+            webBtnBlockGen("Naimur(2020)", "https://drive.google.com/file/d/1E_RNhj87kifJFY6JNjM8BQkgxh2fbBF4/view"),
+            webBtnBlockGen("Nihal(IPE,2026)", "https://drive.google.com/drive/folders/1bHwXnw02kGH_5XrcBubbmPsVw-lsEJpc")
         ]
     ),
     grroupedButtonBlockGen(

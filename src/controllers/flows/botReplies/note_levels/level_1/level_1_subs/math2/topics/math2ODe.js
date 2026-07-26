@@ -20,6 +20,10 @@ let math2Ode = [
     textBlockGen(`🔷 Hand Note(Midul Hasan, WPE-51, 2026) - \n\nhttps://drive.google.com/file/d/1A6Ir1kuWzcp7CDcZQnpVEJdcVYRdnVss/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note(Midul Hasan, WPE-51, 2026) - \n\nhttps://drive.google.com/file/d/12oVPEf8GVqitEUliBQ0VrwofDD4L387M/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note(Midul Hasan, WPE-51, 2026) - \n\nhttps://drive.google.com/file/d/1mj_o1yub38hF1k1tL5ZN1kE7ij7ZXx15/view?usp=sharing`),
+    textBlockGen(`🔷 Hand Note(Midul Hasan, WPE-51, 2026) - \n\nhttps://drive.google.com/file/d/1dCUTW3fND-brnMJqa1ElgP7FRgWrmjlP/view?usp=sharing`),
+    textBlockGen(`🔷 Hand Note(Midul Hasan, WPE-51, 2026) - \n\nhttps://drive.google.com/file/d/1A6Ir1kuWzcp7CDcZQnpVEJdcVYRdnVss/view?usp=sharing`),
+    textBlockGen(`🔷 Hand Note(Midul Hasan, WPE-51, 2026) - \n\nhttps://drive.google.com/file/d/12oVPEf8GVqitEUliBQ0VrwofDD4L387M/view?usp=sharing`),
+    textBlockGen(`🔷 Hand Note(Tahsin Azad Koli, ESE-51, 2026) - \n\nhttps://drive.google.com/file/d/1cdedmNuRJn4hsUHE5H4sYDuj6y1mCu5Y/view?usp=sharing`),
 ]
 
 

@@ -30,6 +30,8 @@ let chem1Dilu = [
     textBlockGen(`🔷 Hand Note(Midul Hasan, WPE-51, 2026) - \n\nhttps://drive.google.com/file/d/1_N8Ygh9MWX2MEODUmo5kuNrd0pt72HUl/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note(Midul Hasan, WPE-51, 2026) - \n\nhttps://drive.google.com/file/d/11vmMp3Up3K2dCLFsjRrd_2GV_LBiGRap/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note(Midul Hasan, WPE-51, 2026) - \n\nhttps://drive.google.com/file/d/10KdEqa7fGAQBPF8cfyg0qgOQk-0tdMqS/view?usp=sharing`),
+    textBlockGen(`🔷 Hand Note(Midul Hasan, WPE-51, 2026) - \n\nhttps://drive.google.com/file/d/11vmMp3Up3K2dCLFsjRrd_2GV_LBiGRap/view?usp=sharing`),
+    textBlockGen(`🔷 Hand Note(Midul Hasan, WPE-51, 2026) - \n\nhttps://drive.google.com/file/d/1_N8Ygh9MWX2MEODUmo5kuNrd0pt72HUl/view?usp=sharing`),
 ]
 
 
