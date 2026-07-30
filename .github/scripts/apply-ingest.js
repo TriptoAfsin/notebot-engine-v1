@@ -15,7 +15,9 @@ const fs = require("fs");
 const { Client } = require("pg");
 
 const idOf = (u) => { const m = String(u).match(/\/d\/([\w-]+)/); return m ? m[1] : String(u); };
-const slug = (s) => String(s || "").toLowerCase().replace(/[^a-z0-9_]+/g, "").slice(0, 60) || null;
+const base = (s) => String(s || "").split("/").filter(Boolean).pop() || "";        // last path segment ("…/fm_1" → "fm_1")
+const slug = (s, max = 50) => String(s || "").toLowerCase().replace(/[^a-z0-9_]+/g, "").slice(0, max) || null;
+const cut = (s, max) => String(s ?? "").slice(0, max);                              // fit a varchar(max) column
 
 (async () => {
   let applied = [];
@@ -42,8 +44,9 @@ const slug = (s) => String(s || "").toLowerCase().replace(/[^a-z0-9_]+/g, "").sl
       const level = (await c.query("SELECT id FROM levels WHERE slug=$1", [levelSlug])).rows[0];
       if (!level) { problems.push(`${a.topicName}: unknown level '${a.level}'`); continue; }
 
-      // find (or create) the subject: match by slug/name of the v1 subject dir within the level
-      const sKey = slug(a.subjectDir) || slug(a.subjectName);
+      // find (or create) the subject: match by slug/name of the v1 subject dir within the level.
+      // subjectDir is a full repo path — slugify only its basename, else we blow past varchar(50).
+      const sKey = slug(base(a.subjectDir)) || slug(a.subjectName);
       let subject = (await c.query(
         "SELECT id FROM subjects WHERE level_id=$1 AND (slug=$2 OR name=$2)", [level.id, sKey]
       )).rows[0];
@@ -51,14 +54,14 @@ const slug = (s) => String(s || "").toLowerCase().replace(/[^a-z0-9_]+/g, "").sl
         const sSort = (await c.query("SELECT COALESCE(MAX(sort_order),0)+1 AS n FROM subjects WHERE level_id=$1", [level.id])).rows[0].n;
         subject = (await c.query(
           "INSERT INTO subjects (level_id,name,display_name,slug,sort_order,metadata) VALUES ($1,$2,$3,$4,$5,$6) RETURNING id",
-          [level.id, sKey, a.subjectName || a.subjectDir || sKey, sKey, sSort, JSON.stringify({ source: "ingest-auto" })]
+          [level.id, sKey, cut(a.subjectName || base(a.subjectDir) || sKey, 100), sKey, sSort, JSON.stringify({ source: "ingest-auto" })]
         )).rows[0];
         newSubjects++; bustSubjects.add(level.id);
       }
       const tSort = (await c.query("SELECT COALESCE(MAX(sort_order),0)+1 AS n FROM topics WHERE subject_id=$1", [subject.id])).rows[0].n;
       topic = (await c.query(
         "INSERT INTO topics (subject_id,name,display_name,slug,sort_order,metadata) VALUES ($1,$2,$3,$4,$5,$6) RETURNING id",
-        [subject.id, a.topicName, a.topicDisplay || a.topicName, slug(a.topicName), tSort, JSON.stringify({ source: "ingest-auto" })]
+        [subject.id, cut(a.topicName, 100), cut(a.topicDisplay || a.topicName, 200), slug(a.topicName, 100), tSort, JSON.stringify({ source: "ingest-auto" })]
       )).rows[0];
       newTopics++; bustTopics.add(subject.id);
     }
@@ -69,7 +72,7 @@ const slug = (s) => String(s || "").toLowerCase().replace(/[^a-z0-9_]+/g, "").sl
     const nSort = (await c.query("SELECT COALESCE(MAX(sort_order),0)+1 AS n FROM notes WHERE topic_id=$1", [topic.id])).rows[0].n;
     await c.query(
       "INSERT INTO notes (topic_id,title,url,sort_order,metadata) VALUES ($1,$2,$3,$4,$5)",
-      [topic.id, a.title || "", a.url, nSort, JSON.stringify({ source: "ingest-auto" })]
+      [topic.id, cut(a.title || "", 500), cut(a.url, 1000), nSort, JSON.stringify({ source: "ingest-auto" })]
     );
     inserted++; bustNotes.add(topic.id);
   }
