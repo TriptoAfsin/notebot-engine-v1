@@ -23,6 +23,7 @@
     "dotenv": "^10.0.0",
     "ejs": "^3.1.6",
     "express": "^4.17.1",
+    "form-data": "^2.5.4",
     "get-caller-file": "^2.0.5",
     "json-server": "^0.17.0",
     "request": "^2.88.2",
