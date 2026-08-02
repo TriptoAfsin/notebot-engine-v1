@@ -13,12 +13,12 @@
   {
     "id": 158,
     "level": "2",
-    "subjectDir": "src/controllers/flows/botReplies/note_levels/level_2/level_2_subs/am1",
+    "subjectDir": "src/controllers/flows/botReplies/lab_levels/level_2/level_2_lab_subs/am_1",
     "subjectName": "am1",
-    "topicName": "",
-    "topicDisplay": "Body Measurement",
-    "title": "Midul(2026)",
+    "topicName": "am1LabStdBody",
+    "topicDisplay": "Standard Body Me.",
+    "title": "Study on Standard Body Measurement(Midul, WPE-51, 2026)",
     "url": "https://drive.google.com/file/d/1-OfJmj0iseLcDIYMJUbmxN7OH4TXzALk/view?usp=sharing",
-    "new": "subject-weblink"
+    "new": "lab"
   }
 ]
