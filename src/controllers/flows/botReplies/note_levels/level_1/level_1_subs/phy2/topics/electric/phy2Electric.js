@@ -21,6 +21,12 @@ let phy2_electric_flow = [
             webBtnBlockGen("Hand Note(2021)", "https://drive.google.com/file/d/1n2LsMY9NfyuXp4qn4fYFVi7VCfVgTnMM/view?usp=sharing"),
         ]
     ),
+    grroupedButtonBlockGen(
+        "🟩 QB Solve -",
+        [
+            webBtnBlockGen("Solve 20-24", "https://drive.google.com/file/d/13P9ie4aagsJwqSq1pEL4AX5RQXiPD_C2/view?usp=sharing"),
+        ]
+    ),
 ]
 
 
