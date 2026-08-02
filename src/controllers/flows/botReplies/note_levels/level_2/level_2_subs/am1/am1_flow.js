@@ -64,6 +64,12 @@ let am1Flow = [
     ),
     
     grroupedButtonBlockGen(
+        "📌 Body Measurement -",
+        [
+            webBtnBlockGen("Midul(2026)", "https://drive.google.com/file/d/1-OfJmj0iseLcDIYMJUbmxN7OH4TXzALk/view?usp=sharing"),
+        ]
+    ),
+    grroupedButtonBlockGen(
         "🔰 Select Topics for AM-I -",
         [
             payloadBtnGen("Books", "am1_books_flow"),
