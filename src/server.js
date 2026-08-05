@@ -1,9 +1,13 @@
 require("dotenv").config();
 const express = require("express");
 const bodyParser = require("body-parser");
+const rateLimit = require("express-rate-limit");
+const csrf = require("csrf");
 const viewEngine = require("./config/viewEngine");
 const initWebRoutes = require("./routes/web");
 const cors = require("cors");
+
+const tokens = new csrf();
 
 // //json server
 // const jsonServer = require('json-server')
@@ -19,6 +23,12 @@ const cors = require("cors");
 // })
 
 let app = express();
+
+const limiter = rateLimit({
+  windowMs: 15 * 60 * 1000,
+  max: 100,
+});
+app.use(limiter);
 
 //config view engine
 viewEngine(app);
