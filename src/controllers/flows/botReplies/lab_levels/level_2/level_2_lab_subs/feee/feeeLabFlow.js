@@ -16,6 +16,7 @@ let feee_lab_flow = [
     ]),
     grroupedButtonBlockGen("📌 Lab Notes -", [
         webBtnBlockGen("Sazzad(2023)", "https://drive.google.com/file/d/1e2zAbEUZk5j7nnpxnPrxKGbxB6RRpBVs/view?usp=sharing"),
+        webBtnBlockGen("Midul(2026)", "https://drive.google.com/file/d/1Usj1bTo2dxOSrt6lW9CZePhnBmUH94BP/view?usp=sharing"),
     ]),
     grroupedButtonBlockGen("🔰 Select Experiment for FEEE -", [
         payloadBtnGen("Multimetre", "feee_lab_multiMetre_flow"),

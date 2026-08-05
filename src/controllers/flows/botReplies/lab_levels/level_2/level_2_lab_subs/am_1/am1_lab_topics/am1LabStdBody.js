@@ -4,6 +4,9 @@ let am1LabStdBody = [
     },
     {
         "text": `🔷 Study on Standard Body Measurement(Midul, WPE-51, 2026)-\n\nhttps://drive.google.com/file/d/1-OfJmj0iseLcDIYMJUbmxN7OH4TXzALk/view?usp=sharing`
+    },
+    {
+        "text": `🔷 Study on Standard Body Measurement for Pants(Midul, WPE-51, 2026)-\n\nhttps://drive.google.com/file/d/1_3K4nPkdy6nKyt1j9V9j0ZKJML8BW3b8/view?usp=sharing`
     }
 ]
 
