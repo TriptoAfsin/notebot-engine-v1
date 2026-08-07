@@ -38,6 +38,12 @@ let pse_flow = [
         ]
     ),
     grroupedButtonBlockGen(
+        "📌 Characterization - ",
+        [
+            webBtnBlockGen("Jeba(2026)", "https://drive.google.com/file/d/1wxtc7I2hOCeqMPhT1GmKVOTAJk39ZHzY/view?usp=sharing"),
+        ]
+    ),
+    grroupedButtonBlockGen(
         "🔰 Select Topics for PSE - ",
         [
             payloadBtnGen("Books", "pse_books_flow"),
