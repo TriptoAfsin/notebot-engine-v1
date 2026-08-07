@@ -414,6 +414,8 @@ const pse_words = require("./keywords/academic_words/subjects/pseWords");
 const em_words = require("./keywords/academic_words/subjects/emWords");
 //academic -> bfs
 const bfs_words = require("./keywords/academic_words/subjects/bfsWords");
+//academic -> fpc
+const fpc_words = require("./keywords/academic_words/subjects/fpcWords");
 //academic -> tpm
 const tpm_words = require("./keywords/academic_words/subjects/tpmWords");
 //academic -> fmg
@@ -787,6 +789,10 @@ const pse_FiberForming = require("./flows/botReplies/note_levels/level_1/level_1
 //academic flows -> bfs
 const bfs_flow = require("./flows/botReplies/note_levels/level_1/level_1_subs/bfs/bfs_flow");
 const bfs_lec3 = require("./flows/botReplies/note_levels/level_1/level_1_subs/bfs/topics/bfsLec3");
+
+//academic flows -> fpc
+const fpc_flow = require("./flows/botReplies/note_levels/level_1/level_1_subs/fpc/fpc_flow");
+const fpc_degrad = require("./flows/botReplies/note_levels/level_1/level_1_subs/fpc/topics/fpcDegradation");
 
 //academic flows -> fmg
 const fmg_flow = require("./flows/botReplies/note_levels/level_1/level_1_subs/fmg/fmg_flow");
@@ -1884,6 +1890,7 @@ let  handleMessage = async (sender_psid, received_message) =>  {
   const ntf = ntf_words;
   const em = em_words;
   const bfs = bfs_words;
+  const fpc = fpc_words;
   const pse = pse_words;
   const tpm = tpm_words;
   const fmg = fmg_words;
@@ -3010,6 +3017,11 @@ let  handleMessage = async (sender_psid, received_message) =>  {
     magicFunc(sender_psid, bfs_flow);
   }
 
+  //academic -> fpc
+  else if (wordIs(fpc, received_message)) {
+    magicFunc(sender_psid, fpc_flow);
+  }
+
   //academic -> fmg
   else if (wordIncludes(fmg, received_message)) {
     magicFunc(sender_psid, fmg_flow);
@@ -3603,6 +3615,13 @@ let handlePostback = async (sender_psid, received_postback) => {
     magicFunc(sender_psid, bfs_flow);
   } else if (payload === "bfs_lec3_flow") {
     magicFunc(sender_psid, bfs_lec3);
+  }
+
+  //subject-> fpc
+  else if (payload === "fpc_flow") {
+    magicFunc(sender_psid, fpc_flow);
+  } else if (payload === "fpc_degrad_flow") {
+    magicFunc(sender_psid, fpc_degrad);
   }
 
   //subject-> pse

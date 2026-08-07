@@ -2,30 +2,30 @@
   {
     "id": 167,
     "level": "1",
-    "subjectDir": "pse",
-    "subjectName": "Polymer Science and Engineering",
-    "topicName": "pseDegradation",
+    "subjectDir": "fpc",
+    "subjectName": "Fundamental of Polymer Chemistry",
+    "topicName": "fpcDegradation",
     "topicDisplay": "Polymer Degradation",
     "title": "Hand Note(Jeba Fariha, TME-51, 2026)",
     "url": "https://drive.google.com/file/d/1Y7C6rbeGZDX_V4O7PtETXO-sSjww77bq/view?usp=sharing",
-    "new": null
+    "new": "subject"
   },
   {
     "id": 168,
     "level": "1",
-    "subjectDir": "pse",
-    "subjectName": "Polymer Science and Engineering",
-    "topicName": "pseAppliPoly",
+    "subjectDir": "fpc",
+    "subjectName": "Fundamental of Polymer Chemistry",
+    "topicName": "",
     "topicDisplay": "Conductive Polymer",
-    "title": "Hand Note(Jeba Fariha, TME-51, 2026)",
+    "title": "Jeba(2026)",
     "url": "https://drive.google.com/file/d/1BEdCQZ_MP2oRD8Zr4iCJR0jN2qa-OlOc/view?usp=sharing",
-    "new": null
+    "new": "subject-weblink"
   },
   {
     "id": 169,
     "level": "1",
-    "subjectDir": "pse",
-    "subjectName": "Polymer Science and Engineering",
+    "subjectDir": "fpc",
+    "subjectName": "Fundamental of Polymer Chemistry",
     "topicName": "",
     "topicDisplay": "Characterization of Polymers",
     "title": "Jeba(2026)",
