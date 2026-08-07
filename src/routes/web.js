@@ -254,6 +254,10 @@ let initWebRoutes = (app) => {
     router.get("/app/notes/1/bfs", appController.bfsFlow);
     router.get("/app/notes/1/bfs/bfs_lec3_flow", appController.bfsLec3Flow);
 
+    //fpc
+    router.get("/app/notes/1/fpc", appController.fpcFlow);
+    router.get("/app/notes/1/fpc/fpc_degrad_flow", appController.fpcDegradationFlow);
+
     //tpm
     router.get("/app/notes/1/tpm", appController.tpmFlow);
     router.get("/app/notes/1/tpm/tpm_ques_flow", appController.tpmQuesFlow);

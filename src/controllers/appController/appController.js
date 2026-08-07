@@ -309,6 +309,10 @@ let iaeShirt = require('./academic/notes/level1/subs/iae/topics/AppIaeShirtComp'
 let bfsAppFlow = require('./academic/notes/level1/subs/bfs/bfs')
 let bfsLec3 = require('./academic/notes/level1/subs/bfs/topics/appBfsLec3')
 
+//fpc
+let fpcAppFlow = require('./academic/notes/level1/subs/fpc/fpc')
+let fpcDegradation = require('./academic/notes/level1/subs/fpc/topics/appFpcDegradation')
+
 //tpm
 let tpmAppFlow = require('./academic/notes/level1/subs/tpm/tpm')
 let tpmQues = require('./academic/notes/level1/subs/tpm/topics/appTpmQues')
@@ -2460,6 +2464,17 @@ let bfsFlow = (req, res) => {
 let bfsLec3Flow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
     return res.send(bfsLec3);
+};
+
+//fpc
+let fpcFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(fpcAppFlow);
+};
+
+let fpcDegradationFlow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(fpcDegradation);
 };
 
 //tpm
@@ -6431,6 +6446,9 @@ module.exports = {
 
     bfsFlow: bfsFlow,
     bfsLec3Flow: bfsLec3Flow,
+
+    fpcFlow: fpcFlow,
+    fpcDegradationFlow: fpcDegradationFlow,
 
     tpmFlow: tpmFlow,
     tpmQuesFlow: tpmQuesFlow,

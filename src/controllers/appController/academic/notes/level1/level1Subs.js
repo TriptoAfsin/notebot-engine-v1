@@ -94,6 +94,10 @@ let level1Subs = [
     {
         subName: "BS",
         url: "https://drive.google.com/drive/folders/17wWNfGNjyPGDq1Gwekwjtkyvv16RTHYy?usp=sharing"
+    },
+    {
+        subName: "FPC",
+        route: "app/notes/1/fpc"
     }
 ]
 
