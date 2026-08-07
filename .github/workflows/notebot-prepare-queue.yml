@@ -1,12 +1,19 @@
 name: NoteBot - prepare ingest queue
 
-# Weekly, ~30 min BEFORE the cloud ingest routine (Mon 01:00 UTC). Reads the staging DB
-# on a GitHub runner (which has network egress the cloud sandbox lacks) and commits the
-# pending queue to .ingest/pending.json so the cloud agent can read it from its checkout.
+# Reads the staging DB on a GitHub runner (which has network egress the cloud sandbox lacks)
+# and commits the pending queue to .ingest/pending.json so the cloud agent can read it from
+# its checkout.
+#
+# TIMING — the queue must be committed inside this daily window:
+#   04:00 UTC (10:00 BDT) n8n stages new submissions  →  05:00 UTC (11:00 BDT) cloud routine reads
+# GitHub delays scheduled runs on this repo by ~3.5h in practice, so two entries cover both
+# punctual and drifted behaviour. The job is idempotent (commits only when the queue changed),
+# so a second run in the same window is harmless.
 
 on:
   schedule:
-    - cron: "30 0 * * *" # daily 00:30 UTC (30 min before the cloud routine)
+    - cron: "8 1 * * *" # if GitHub drifts ~3.5h → lands ~04:40 UTC, inside the window
+    - cron: "6 4 * * *" # if GitHub is punctual  → lands ~04:06 UTC, inside the window
   workflow_dispatch: {}
 
 permissions:
