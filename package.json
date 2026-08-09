@@ -8,6 +8,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "patch-package",
     "start": "node src/server.js",
     "dev": "nodemon src/server.js"
   },
@@ -32,6 +33,7 @@
     "@babel/core": "^7.15.5",
     "@babel/node": "^7.15.4",
     "@babel/preset-env": "^7.15.4",
-    "nodemon": "^2.0.12"
+    "nodemon": "^2.0.12",
+    "patch-package": "^8.0.1"
   }
 }

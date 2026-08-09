@@ -4,7 +4,7 @@ let lengthValidator = require('../../controllers/genrators/validators/lengthVali
 let webBtn = (title, url) => {
     return {
         "type": "web_url",
-        "title": lengthValidator(title, 15),
+        "title": lengthValidator(title, 20),
         "url": url,
         "webview_height_ratio": "full"
     }

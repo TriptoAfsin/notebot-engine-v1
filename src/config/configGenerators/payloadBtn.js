@@ -2,7 +2,7 @@ let lengthValidator = require('../../controllers/genrators/validators/lengthVali
 let payloadBtn = (title, payload) => {
     return {
         "type": "postback",
-        "title":  lengthValidator(title, 15),
+        "title":  lengthValidator(title, 20),
         "payload": payload
     }
 }

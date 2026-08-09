@@ -1,0 +1,39 @@
+diff --git a/node_modules/simple-messenger-blocks/payloadBtnGen.js b/node_modules/simple-messenger-blocks/payloadBtnGen.js
+index f5ac74f..3f64d7c 100644
+--- a/node_modules/simple-messenger-blocks/payloadBtnGen.js
++++ b/node_modules/simple-messenger-blocks/payloadBtnGen.js
+@@ -5,7 +5,7 @@ let lengthValidator = require('./validators/lengthValidator');
+ let payloadBtnGen = (title, payload) => {
+     return {
+         "type": "postback",
+-        "title":  lengthValidator(title, 15),
++        "title":  lengthValidator(title, 20),
+         "payload": payload
+     }
+ }
+diff --git a/node_modules/simple-messenger-blocks/phoneBtnGen.js b/node_modules/simple-messenger-blocks/phoneBtnGen.js
+index f946cc7..7a6d042 100644
+--- a/node_modules/simple-messenger-blocks/phoneBtnGen.js
++++ b/node_modules/simple-messenger-blocks/phoneBtnGen.js
+@@ -4,7 +4,7 @@ let lengthValidator = require("./validators/lengthValidator");
+ let phoneBtnGen = (title, phoneNo) => {
+   return {
+     type: "phone_number",
+-    title: lengthValidator(title, 15),
++    title: lengthValidator(title, 20),
+     payload: phoneNo,
+   };
+ };
+diff --git a/node_modules/simple-messenger-blocks/webBtnGen.js b/node_modules/simple-messenger-blocks/webBtnGen.js
+index 9809b14..b28ca2d 100644
+--- a/node_modules/simple-messenger-blocks/webBtnGen.js
++++ b/node_modules/simple-messenger-blocks/webBtnGen.js
+@@ -5,7 +5,7 @@ let webBtnGen = (title, url) => {
+   return {
+     type: "web_url",
+     url: url,
+-    title: lengthValidator(title, 15),
++    title: lengthValidator(title, 20),
+   };
+ };
+ 

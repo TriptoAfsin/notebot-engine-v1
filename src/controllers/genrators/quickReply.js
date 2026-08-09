@@ -2,7 +2,7 @@ let lengthValidator = require('./validators/lengthValidator');
 let quickReply = (title, payload) => {
     return {
         "content_type": "text",
-        "title":  lengthValidator(title, 15),
+        "title":  lengthValidator(title, 20),
         "payload": payload
     }
 }
