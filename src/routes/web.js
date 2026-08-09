@@ -624,6 +624,9 @@ router.get("/app/notes/4/bele", appController.beleFlow);
     //acfd
     router.get("/app/notes/3/acfd", appController.acfdFlow);
 
+    //tc1
+    router.get("/app/notes/3/tc1", appController.tc1Flow);
+
     //tcp
     router.get("/app/notes/3/tcp", appController.tcpFlow);
     router.get("/app/notes/3/tcp/tcp_kpc_flow", appController.tcpKpcFlow);

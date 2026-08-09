@@ -687,6 +687,9 @@ let wp1WashingMC = require('./academic/notes/level2/subs/wp1/topics/appWp1Washin
 let acfdAppFlow = require('./academic/notes/level3/subs/acfd/acfd')
 
 
+//tc1
+let tc1AppFlow = require('./academic/notes/level3/subs/tc1/tc1')
+
 //tcp
 let tcpAppFlow = require('./academic/notes/level3/subs/tcp/tcp')
 let tcpKpc = require('./academic/notes/level3/subs/tcp/topics/appTcpKpc')
@@ -4166,6 +4169,14 @@ let acfdFlow = (req, res) => {
 };
 
 
+//tc1
+let tc1Flow = (req, res) => {
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    handleApiCallAnalytics();
+    return res.send(tc1AppFlow);
+};
+
+
 //tcp
 let tcpFlow = (req, res) => {
     console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
@@ -6782,6 +6793,8 @@ module.exports = {
 
 
     acfdFlow: acfdFlow,
+
+    tc1Flow: tc1Flow,
 
     tcpFlow: tcpFlow,
     tcpKpcFlow: tcpKpcFlow,

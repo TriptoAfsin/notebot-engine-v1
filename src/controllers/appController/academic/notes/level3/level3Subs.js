@@ -101,7 +101,7 @@ let level3Subs = [
     },
     {
         subName: "TC-I",
-        url: "https://drive.google.com/drive/folders/1Tg0ruIBuznlNWYGNYZVxGHnwu8UUNa2r"
+        route: "app/notes/3/tc1"
     },
     {
         subName: "CDP",
