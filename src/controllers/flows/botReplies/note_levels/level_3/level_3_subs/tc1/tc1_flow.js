@@ -8,6 +8,12 @@ let bondiFlow = require("../../../../sponsoredFlows/bondiCard");
 let tc1Flow = [
     bondiFlow,
     grroupedButtonBlockGen(
+        "📌 QB Solve (Akash, NTEC) - ",
+        [
+            webBtnBlockGen("Download", "https://drive.google.com/file/d/1EcTnQY49Cp5EQqmaLBvzCrKnNBWneBMl/view?usp=sharing"),
+        ]
+    ),
+    grroupedButtonBlockGen(
         "📌 Drive Folder - ",
         [
             webBtnBlockGen("Download", "https://drive.google.com/drive/folders/1Tg0ruIBuznlNWYGNYZVxGHnwu8UUNa2r?usp=sharing"),
