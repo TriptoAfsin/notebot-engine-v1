@@ -19,6 +19,12 @@ let lssFlow = [
         ]
     ),
     grroupedButtonBlockGen(
+        "📌 Full Notes -",
+        [
+            webBtnBlockGen("Imdad(Affli.)", "https://drive.google.com/file/d/1YY1dPRqJTzJFHgnnnAhNXEKZJM-zFJV3/view?usp=sharing"),
+        ]
+    ),
+    grroupedButtonBlockGen(
         "📌 Select Topics for LSS -",
         [
             webBtnBlockGen("Books", "https://drive.google.com/drive/folders/1ZUFn6WYpCpQqFelEjlNkni9WvcSf9AUE"),
