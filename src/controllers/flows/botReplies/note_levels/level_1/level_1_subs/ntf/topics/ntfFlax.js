@@ -10,6 +10,7 @@ let ntfFlax = [
     textBlockGen(`🔷 Hand Note(Urmi,TEM-45,2019)-\n\nhttps://drive.google.com/file/d/1Fq1PlN9Abxzj5J3Tiha133dwaVK67KQ2/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note(Akib, 2019)-\n\nhttps://drive.google.com/file/d/15vmD773xo3dIyT_ykdpsqK5DiPLu85aD/view?usp=drivesdk`),
     textBlockGen(`🔷 Hand Note(tasin,TEM-46,2021)-\n\nhttps://drive.google.com/file/d/1oFBPgITnPZzIOZTfP91Y2-fKLb1ooe7H/view?usp=sharing`),
+    textBlockGen(`🔷 Hand Note(Bushra, YE-51, 2026) - \n\nhttps://drive.google.com/file/d/17QtV1ClkDg6hjvqynH91I-18Re15V6L7/view?usp=sharing`),
 ]
 
 

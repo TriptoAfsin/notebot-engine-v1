@@ -13,8 +13,15 @@ const { Client } = require("pg");
     ssl: { rejectUnauthorized: false },
   });
   await c.connect();
-  // kind='question' (QBs) are handled by n8n copying to the QB Drive folder — no code change,
-  // so they are excluded from the ingest queue entirely.
+  // kind='question' (QBs) are excluded because they have no v1 placement: v1 exposes question banks
+  // only as links to shared Drive *folders* (see qb_flow), so there is nothing per-file for the cloud
+  // agent to edit and nothing for a PR to change.
+  //
+  // This comment used to claim they were "handled by n8n copying to the QB Drive folder". They were
+  // not — the Level-2 QB folder tree held nothing newer than 2025, question_banks gained no row after
+  // 2026-02-03, and not one question submission had ever left status='pending'. They are now placed
+  // straight into v2's question_banks by .github/scripts/place-question-banks.js, which runs in the
+  // same workflow as this script.
   const r = await c.query(
     "SELECT id, submitted_at, name, batch, department, level, subject_name, topic_name, kind, public_url " +
     "FROM submissions WHERE status='pending' AND resolve_status='ok' AND kind <> 'question' ORDER BY submitted_at"
