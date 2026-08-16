@@ -31,6 +31,8 @@ let initWebRoutes = (app) => {
 
     router.get("/results", appController.results);
 
+    router.get("/schedules", appController.schedules);
+
     // router.get("/app/notices", appController.notice);
 
     router.get("/app/notes", appController.notes);

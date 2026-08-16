@@ -6,6 +6,7 @@ require("dotenv").config();
 
 const axios = require('axios');
 const scrapeResults = require('../../utils/scrapping/scrapeResults')
+const fetchSchedules = require('../../utils/scrapping/fetchSchedules')
 
 
 // analytics 
@@ -1228,6 +1229,35 @@ let appResults = (req, res) => {
         console.error("Error in appResults:", error);
         return res.status(500).send({
             msg: "Internal server error while processing results",
+        });
+    });
+};
+
+/**
+ * Class routines and exam schedules published on the BUTEX site.
+ *
+ * Same response envelope as appResults, so clients reuse one model. Sourced from
+ * the site's WordPress REST API rather than scraped HTML — see fetchSchedules.js.
+ */
+let appSchedules = (req, res) => {
+    console.log("🟠 App schedules called");
+
+    const limit = parseInt(req.query.limit) || 10;
+
+    fetchSchedules(limit).then(schedules => {
+        if (schedules && schedules.length > 0) {
+            return res.send({
+                msg: `Here are the last ${schedules.length} schedules`,
+                data: schedules
+            });
+        }
+        return res.status(404).send({
+            msg: "No schedules found or error while getting schedules",
+        });
+    }).catch(error => {
+        console.error("Error in appSchedules:", error);
+        return res.status(500).send({
+            msg: "Internal server error while processing schedules",
         });
     });
 };
@@ -6236,7 +6266,10 @@ module.exports = {
 
     //results
     results: appResults,
-    
+
+    //class routines & exam schedules, from the BUTEX site
+    schedules: appSchedules,
+
     labs: labs,
 
     //lab - sda
