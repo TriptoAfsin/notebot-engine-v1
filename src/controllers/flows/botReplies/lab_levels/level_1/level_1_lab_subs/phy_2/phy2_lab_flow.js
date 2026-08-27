@@ -14,6 +14,12 @@ let phy2_lab_flow = [
         ]
     ),
     grroupedButtonBlockGen(
+        "📌 All Lab Reports -",
+        [
+            webBtnBlockGen("Jeba(TME-51,26)", "https://drive.google.com/file/d/1VzKHi20q9Z11Egic8ohCojRNSp8NT7hI/view?usp=sharing"),
+        ]
+    ),
+    grroupedButtonBlockGen(
         "🔰 Select Experiment for PHY-II-",
         [
             webBtnBlockGen("Book Scanned", "https://drive.google.com/file/d/159l8qjOpNROAlbRCVJKLOWiqtpbGUSCY/view?usp=sharing"),
