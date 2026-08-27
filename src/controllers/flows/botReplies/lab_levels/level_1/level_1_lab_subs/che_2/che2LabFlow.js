@@ -13,6 +13,7 @@ let che2_lab_flow = [
     grroupedButtonBlockGen("📌 All Combined -",
     [
         webBtnBlockGen("Jabbar(IPE-47,2023)", "https://drive.google.com/file/d/1yVJK6W4DzF696FNaw5J4enqKnBaSPk5d/view?usp=sharing"),
+        webBtnBlockGen("Jeba(TME-51,26)", "https://drive.google.com/file/d/1cow1PybdPhQv9k2VC2teAc1vtdypFfp-/view?usp=sharing"),
     ]),
     grroupedButtonBlockGen("🔰 Select Experiment for Che-II -",
     [
