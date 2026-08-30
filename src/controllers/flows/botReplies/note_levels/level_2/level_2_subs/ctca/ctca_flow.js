@@ -7,6 +7,7 @@ let ctcaFlow = [
     grroupedButtonBlockGen("📌 Hand Notes - ", [
         webBtnBlockGen("Mamun(SKTEC,2023)", "https://drive.google.com/file/d/16qUQd3LetYvr5Btn-ljbu20s4f9w-dtI/view?usp=sharing"),
         webBtnBlockGen("Rasel(2024)", "https://drive.google.com/drive/folders/1zuEo3oeIBJ_BEYSogfqAsPgpKGCQvKj1?usp=sharing"),
+        webBtnBlockGen("Shirsho(WPE,26)", "https://drive.google.com/file/d/1WS9udAHnRiRdqtjjgV6HLP6VwWhO2hue/view?usp=sharing"),
     ]),
     grroupedButtonBlockGen("🔰 Select Topics for CTCA -", [
         payloadBtnGen("Books", "ctca_books_flow"),
