@@ -56,6 +56,9 @@ let ym1Flow = [
             webBtnBlockGen("Part B(Joty)","https://drive.google.com/drive/folders/1BDjHIG2298-gOn9NjNhJNjLvlwe1Jh60?usp=sharing"),
         ]
     ),
+    grroupedButtonBlockGen(`📌 Gear & Belt -`, [
+        webBtnBlockGen("Midul(WPE,26)", "https://drive.google.com/file/d/1sAPGOR8CDMZlDScarPll_Ul72_OrBpgr/view?usp=sharing"),
+    ]),
     grroupedButtonBlockGen(
         `🔰 Select Topics for YM-I - `,
         [
