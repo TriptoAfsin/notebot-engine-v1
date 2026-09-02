@@ -10,6 +10,9 @@ let ym1Books = [
     },
     {
         "text": `🔷Sheet(Rubel Sir, 2020)-\n\nhttps://drive.google.com/file/d/1mg9lAgW635F3zGFrjsNYon70CpnfbDsi/view`
+    },
+    {
+        "text": `🔷 Hand Note(Midul, WPE-51, 2026) - \n\nhttps://drive.google.com/file/d/1P7P4uxIX3vKbHiV1rKfyIs2u9WJOETwT/view?usp=sharing`
     }
 ]
 
