@@ -21,6 +21,8 @@ let math2Laplace = [
     textBlockGen(`🔷 Application to Diff Eqn(Akib, 2019)-\n\nhttps://drive.google.com/file/d/1w2e0hXUUwMi1Yj8rH9me3eVefJZ7oHHR/view`),
     textBlockGen(`🔷 Hand Note(Until Inverse, 2019, S. Ikbal)-\n\nhttps://drive.google.com/file/d/1Ag9V7yCe7oKqHjc6nkDZZbITv66fGnmA/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note(Inverse, 2019, S. Ikbal)-\n\nhttps://drive.google.com/file/d/1RrA4TcGlQd0LR0mkoo4qEF9Vn1mvKOE4/view?usp=sharing`),
+    textBlockGen(`🔷 Hand Note(Midul, WPE-51, 2026) - \n\nhttps://drive.google.com/file/d/1NF1MYkOyUg9_ypVL_mwMTQgN-qSTra40/view?usp=sharing`),
+    textBlockGen(`🔷 Hand Note Inverse Laplace(Midul, WPE-51, 2026) - \n\nhttps://drive.google.com/file/d/1m_PKVaWccREmWtnX2VLIdFrwcxvzZ8ba/view?usp=sharing`),
 ]
 
 
