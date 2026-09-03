@@ -9,6 +9,7 @@ let fm1Warping = [
     textBlockGen(`🔷ALL Slide(Lec 5,6,7,8)-\n\nhttps://drive.google.com/file/d/1j7cry7e2qJzrg1YPTVRr5GdFPKKBxKDH/view?usp=sharing`),
     textBlockGen(`🔷Warping Math(Khalid, 2019)-\n\nhttps://drive.google.com/file/d/1d1-1S_l_h0XbHD7zHGrj9oJvdSap1EwW/view`),
     textBlockGen(`🔷 Hand Note(Midul, WPE-51, 2026) - \n\nhttps://drive.google.com/file/d/1tdk1JCk0guJt5Pc0xiN-yln4Pzlk5OJR/view?usp=sharing`),
+    textBlockGen(`🔷 Hand Note(Midul, WPE-51, 2026) - \n\nhttps://drive.google.com/file/d/1txBH_M_fz3rXbreihJA8uX4Tn_xKJYqx/view?usp=sharing`),
 ]
 
 

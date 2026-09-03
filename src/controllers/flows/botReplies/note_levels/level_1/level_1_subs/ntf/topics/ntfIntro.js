@@ -14,6 +14,7 @@ let ntfIntro = [
     textBlockGen(`🔷 QB Solve(Mamun, SKTEC, 2022) - \n\nhttps://drive.google.com/file/d/1490mOF0hjPTEfJ2ot6Pmun5KhkMCuadY/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note(Tripto, 2018) - \n\nhttps://drive.google.com/file/d/1AvwQylZqFsjYQFmb9KmqdgyJyeg6ox51/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note(Nafis, IPE-46, 2021) - \n\nhttps://drive.google.com/file/d/1CteUE40EQsx2PMJwMtqnZqODnH70HUpY/view?usp=sharing`),
+    textBlockGen(`🔷 Hand Note(Midul, WPE-51, 2026) - \n\nhttps://drive.google.com/file/d/1RosnOpFBq0wo1Y1Z4TTseeybdORiegke/view?usp=sharing`),
 ]
 
 

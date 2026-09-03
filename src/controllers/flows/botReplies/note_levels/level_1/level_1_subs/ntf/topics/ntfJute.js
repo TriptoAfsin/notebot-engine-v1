@@ -24,6 +24,7 @@ let ntfJute = [
         ]
     ),
     textBlockGen(`🔷 Toufiqa Madam Sheet-\n\nhttps://drive.google.com/file/d/1oas42zAzvCi53QmBlY5TbI33ZeBekBsp/view`),
+    textBlockGen(`🔷 Hand Note(Midul, WPE-51, 2026) - \n\nhttps://drive.google.com/file/d/1Ih180D2HyMjc7ISIripeW6Zc8mzQOrih/view?usp=sharing`),
 ]
 
 

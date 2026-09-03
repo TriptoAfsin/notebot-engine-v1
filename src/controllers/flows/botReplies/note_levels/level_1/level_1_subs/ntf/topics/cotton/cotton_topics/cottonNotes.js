@@ -10,6 +10,7 @@ let cottonNotes = [
     textBlockGen(`🔷 Handnote (Archi,AE-45,2021)-\n\nhttps://drive.google.com/file/d/1_frbj26sgwp0YkDiVlCT1LxpwqCtDnVH/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note (Nahid,AE-44,2019)-\n\nhttps://drive.google.com/file/d/108ysYOQ_MDzXWvWcgwzPjGJpVnC1-Zr8/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note (Riya, ,Affliated Clg., 2021)-\n\nhttps://drive.google.com/file/d/1sJSYIOsB0spgvHzLsC1jeojKFOlVevjW/view?usp=sharing`),
+    textBlockGen(`🔷 Hand Note(Midul, WPE-51, 2026) - \n\nhttps://drive.google.com/file/d/1Ug2sBu7nxLgMRvHrk3Dys_B1ym1ZU6Bv/view?usp=sharing`),
 ]
 
 

@@ -8,6 +8,7 @@ let woolNotes = [
     textBlockGen(`🔷 Hand note(Laysa,AE-48, 2023)-\n\nhttps://drive.google.com/file/d/1BV-MBD7Kq6kkCmzirgf-3rR8A2z7l57Z/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note(Archi,AE-45,2021)-\n\nhttps://drive.google.com/file/d/1I-dJCruOM0D2YUjNj-19msekDzjfNXzf/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note(Nafis,IPE-46,2022)-\n\nhttps://drive.google.com/file/d/1rTF8qlpO6cfqTBEBZPCVBCGtXm40nWsG/view?usp=sharing`),
+    textBlockGen(`🔷 Hand Note(Midul, WPE-51, 2026) - \n\nhttps://drive.google.com/file/d/1SLjIDqeO8KT40aDH7YCK3w-Ac4C_j-wf/view?usp=sharing`),
 ]
 
 
