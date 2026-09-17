@@ -79,9 +79,14 @@ const isLabRow = (a) => a.new === "lab" || a.kind === "lab" || /(^|\/)lab_levels
       const lSort = (await c.query(
         "SELECT COALESCE(MAX(sort_order),0)+1 AS n FROM lab_reports WHERE level_id=$1 AND subject_slug=$2", [level.id, subjectSlug]
       )).rows[0].n;
+      // v1Display/v1Kind are what compat.routes.ts renders from. A lab web-link left without them
+      // falls back to a group-size heuristic, which is how an ingested report ended up hidden
+      // behind a drill-down instead of showing as the direct link v1 gives it.
+      const labTitle = cut(a.title || topicName, 500);
       await c.query(
         "INSERT INTO lab_reports (level_id,subject_slug,topic_name,title,url,sort_order,metadata) VALUES ($1,$2,$3,$4,$5,$6,$7)",
-        [level.id, subjectSlug, topicName, cut(a.title || topicName, 500), cut(a.url, 1000), lSort, JSON.stringify({ source: "ingest-auto" })]
+        [level.id, subjectSlug, topicName, labTitle, cut(a.url, 1000), lSort,
+         JSON.stringify({ source: "ingest-auto", v1Kind: "link", v1Display: `\u{1F4CC} ${topicName} -${labTitle}` })]
       );
       labs++; bustLabs.add(`${level.id}:${subjectSlug}`); await mark("done"); done++; continue;
     }
