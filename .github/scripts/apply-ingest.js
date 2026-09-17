@@ -28,6 +28,47 @@ const slug = (s, max = 50) => String(s || "").toLowerCase().replace(/[^a-z0-9_]+
 const cut = (s, max) => String(s ?? "").slice(0, max);                              // fit a varchar(max) column
 const isLabRow = (a) => a.new === "lab" || a.kind === "lab" || /(^|\/)lab_levels(\/|$)/.test(String(a.subjectDir || ""));
 
+/**
+ * Puts the same button into v2's Messenger snapshot of `level_<n>_flow.js`.
+ *
+ * v2 answers the `level_<n>` postback from a `bot_flows` row extracted from v1 (metadata.source =
+ * "v1-extract"), not from the subjects table — so a button added to the v1 flow file shows up in the
+ * web app (which reads subjects) and stays invisible in the bot until this row carries it too.
+ *
+ * `groupHeader` is the template text the button sits under, so a placement keeps v1's grouping
+ * ("\u{1F4CC} Question Analysis - " rather than another "\u{1F530} Select Subject" chip). Messenger
+ * allows 3 buttons per template, so a full group gets a sibling with the same header, exactly as the
+ * flow files do. `afterHeader` says which group it follows the first time that header appears.
+ * No-ops when the URL is already in the snapshot, so a re-run cannot duplicate it.
+ */
+async function addLevelButton(c, levelSlug, a) {
+  const payload = `level_${levelSlug}`;
+  const row = (await c.query("SELECT id, blocks FROM bot_flows WHERE payload=$1", [payload])).rows[0];
+  if (!row) return false;                                   // no snapshot for this level; nothing to keep in step
+  const blocks = Array.isArray(row.blocks) ? row.blocks : [];
+  const groups = blocks.filter((b) => Array.isArray(b?.attachment?.payload?.buttons));
+  if (groups.some((g) => g.attachment.payload.buttons.some((btn) => idOf(btn.url || "") === idOf(a.url)))) return false;
+
+  const header = a.groupHeader || "\u{1F530} Select Subject for level " + levelSlug + " - ";
+  const button = { type: "web_url", url: String(a.url), title: cut(a.title || a.subjectName || "Notes", 20) };
+
+  const open = groups.find((g) => g.attachment.payload.text === header && g.attachment.payload.buttons.length < 3);
+  if (open) {
+    open.attachment.payload.buttons.push(button);
+  } else {
+    const block = { attachment: { type: "template", payload: { text: header, buttons: [button], template_type: "button" } } };
+    // Sit next to the group it belongs with. For a header the snapshot has never seen, `afterHeader`
+    // is the placing agent telling us where the same group sits in the v1 file, so the bot lists the
+    // groups in v1's order rather than pushing every new one past the subject chips.
+    const texts = blocks.map((b) => b?.attachment?.payload?.text);
+    const at = texts.lastIndexOf(header);
+    const hint = a.afterHeader ? texts.lastIndexOf(a.afterHeader) : -1;
+    blocks.splice(at >= 0 ? at + 1 : hint >= 0 ? hint + 1 : blocks.length, 0, block);
+  }
+  await c.query("UPDATE bot_flows SET blocks=$2, updated_at=now() WHERE id=$1", [row.id, JSON.stringify(blocks)]);
+  return true;
+}
+
 (async () => {
   let applied = [];
   try { applied = JSON.parse(fs.readFileSync(".ingest/applied.json", "utf8")); } catch { applied = []; }
@@ -35,9 +76,10 @@ const isLabRow = (a) => a.new === "lab" || a.kind === "lab" || /(^|\/)lab_levels
 
   const c = new Client({ connectionString: process.env.DATABASE_URL, ssl: { rejectUnauthorized: false } });
   await c.connect();
-  let done = 0, inserted = 0, labs = 0, dupes = 0, newTopics = 0, newSubjects = 0;
+  let done = 0, inserted = 0, labs = 0, dupes = 0, newTopics = 0, newSubjects = 0, levelLinks = 0;
   const problems = [];
   const bustNotes = new Set(), bustTopics = new Set(), bustSubjects = new Set(), bustLabs = new Set();
+  let bustFlows = false;   // the bot's whole flow table is one cache entry, so this is a flag, not a set
 
   // resolve the v2 subject for a row, creating it if the agent added a brand-new v1 subject.
   // subjectDir is a repo path — slugify only its basename, else we blow past varchar(50).
@@ -91,6 +133,35 @@ const isLabRow = (a) => a.new === "lab" || a.kind === "lab" || /(^|\/)lab_levels
       labs++; bustLabs.add(`${level.id}:${subjectSlug}`); await mark("done"); done++; continue;
     }
 
+    // ---- a link in the LEVEL flow file, not a subject's own flow ----
+    // v1's level_<n>_flow.js carries a handful of buttons that are a bare Drive link rather than a
+    // subject with topics ("All Level 1", "TNF", "IESE"). v2 models those as a subjects row with
+    // zero topics and metadata.directUrl, which compat.routes.ts renders as { subName, url } - the
+    // direct link v1's app list gives. Routing one down the normal notes path instead would invent a
+    // "<slug>FullNotes" topic and bury the link behind a drill-down it does not have in v1.
+    if (a.new === "level-weblink") {
+      const sKey = slug(a.subjectDir ? base(a.subjectDir) : a.subjectName);
+      if (!sKey) { await fail("level-weblink without a usable slug"); continue; }
+      const existing = (await c.query("SELECT id, metadata FROM subjects WHERE level_id=$1 AND slug=$2", [level.id, sKey])).rows[0];
+      if (existing) {
+        if (idOf(existing.metadata?.directUrl || "") === idOf(a.url)) { dupes++; await mark("done"); done++; continue; }
+        await c.query("UPDATE subjects SET metadata = COALESCE(metadata,'{}'::jsonb) || $2::jsonb WHERE id=$1",
+          [existing.id, JSON.stringify({ directUrl: cut(a.url, 1000), source: "ingest-auto" })]);
+      } else {
+        const sSort = (await c.query("SELECT COALESCE(MAX(sort_order),0)+1 AS n FROM subjects WHERE level_id=$1", [level.id])).rows[0].n;
+        await c.query(
+          "INSERT INTO subjects (level_id,name,display_name,slug,sort_order,metadata) VALUES ($1,$2,$3,$4,$5,$6)",
+          [level.id, sKey, cut(a.subjectName || sKey, 100), sKey, sSort,
+           JSON.stringify({ directUrl: cut(a.url, 1000), source: "ingest-auto" })]);
+        newSubjects++;
+      }
+      // The Messenger side of v2 answers `level_<n>` from a frozen v1 extract in bot_flows, so a
+      // button added to level_<n>_flow.js is invisible to the bot until that snapshot carries it
+      // too. That is the same failure mode that kept 46 lab subjects frozen; keep the two in step.
+      if (await addLevelButton(c, levelSlug, a)) bustFlows = true;
+      levelLinks++; bustSubjects.add(level.id); await mark("done"); done++; continue;
+    }
+
     // ---- notes: resolve the subject first, so subject-level links have somewhere to land ----
     const subject = await resolveSubject(a, level.id);
 
@@ -122,12 +193,12 @@ const isLabRow = (a) => a.new === "lab" || a.kind === "lab" || /(^|\/)lab_levels
     inserted++; bustNotes.add(topic.id); await mark("done"); done++;
   }
   await c.end();
-  console.log(`done:${done}/${applied.length} | v2 notes:${inserted} | v2 labs:${labs} | dupes:${dupes} | new topics:${newTopics} | new subjects:${newSubjects} | problems:${problems.length}`);
+  console.log(`done:${done}/${applied.length} | v2 notes:${inserted} | v2 labs:${labs} | level links:${levelLinks} | dupes:${dupes} | new topics:${newTopics} | new subjects:${newSubjects} | problems:${problems.length}`);
   if (problems.length) console.log("  problems:", problems.join(" ; "));
 
   // Bust the v2 Redis cache so merged content is visible immediately (else ~1h TTL).
   const redisUrl = process.env.REDIS_URL;
-  if (redisUrl && (bustNotes.size || bustTopics.size || bustSubjects.size || bustLabs.size)) {
+  if (redisUrl && (bustNotes.size || bustTopics.size || bustSubjects.size || bustLabs.size || bustFlows)) {
     try {
       const Redis = require("ioredis");
       const r = new Redis(redisUrl);
@@ -136,6 +207,7 @@ const isLabRow = (a) => a.new === "lab" || a.kind === "lab" || /(^|\/)lab_levels
         ...[...bustTopics].map((s) => `notebot:topics:${s}`),
         ...[...bustSubjects].map((l) => `notebot:subjects:${l}`),
         ...[...bustLabs].map((k) => `notebot:labs:${k.split(":")[0]}:${k.split(":")[1]}`),
+        ...(bustFlows ? ["notebot:botflows:all"] : []),   // bot-flow.service.ts caches the table under one key
       ];
       if (keys.length) await r.del(...keys);
       await r.quit();
@@ -151,6 +223,7 @@ const isLabRow = (a) => a.new === "lab" || a.kind === "lab" || /(^|\/)lab_levels
       "------------------",
       `🗄️ Notes added to v2 DB: <b>${inserted}</b>`,
       labs ? `🧪 Lab reports added: <b>${labs}</b>` : null,
+      levelLinks ? `\u{1F517} Level links added: <b>${levelLinks}</b>` : null,
       (newTopics || newSubjects) ? `🆕 new topics: ${newTopics} · new subjects: ${newSubjects}` : null,
       dupes ? `♻️ already present: ${dupes}` : null,
       // a mismatch here means rows were applied to v1 but never mirrored — always surface it

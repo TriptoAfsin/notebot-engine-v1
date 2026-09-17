@@ -4,6 +4,10 @@ let level1Subs = [
         url: "https://drive.google.com/drive/folders/1XSV3_96TvLXmkqnhK6zFQQ67jCj4_NzL"
     },
     {
+        subName: "Ques. Analysis (L1 T2)",
+        url: "https://drive.google.com/file/d/1GZyLwC9FOvSxdYK6dC6jkAv_sFmQGKuM/view?usp=sharing"
+    },
+    {
         subName: "Math-I",
         route: "app/notes/1/math1"
     },

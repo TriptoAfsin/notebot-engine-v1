@@ -13,6 +13,11 @@ let level_1_note = [
             webBtnBlockGen("⭕ Online(2021)", "https://drive.google.com/drive/folders/1sjF1ivgKg7bjjPCwaH08PYtW_8Rp1tWY?usp=sharing")
         ]
     ),
+    grroupedButtonBlockGen(`📌 Question Analysis - `,
+        [
+            webBtnBlockGen("L1 T2 All Sub YE/FE", "https://drive.google.com/file/d/1GZyLwC9FOvSxdYK6dC6jkAv_sFmQGKuM/view?usp=sharing"),
+        ]
+    ),
     grroupedButtonBlockGen(`🔰 Select Subject for level 1 - `,
         [
             payloadBtnGen("Math-I", "math1_flow"),

@@ -75,10 +75,22 @@ const claimedLevel = (...fields) => {
   return null;
 };
 
+/**
+ * A solved paper or a question analysis, which is a NOTE and not a question bank.
+ *
+ * "QB Solve" is a note kind in the CMS taxonomy, and v1 files one as a pin group inside the
+ * subject's own flow - tc1_flow.js already carries "QB Solve (Akash, NTEC) - ". The shared
+ * "QB Solves" Drive folder that v1 links from qb_flow is a bulk folder, not the classification;
+ * reading it as one put five solves and a question analysis in front of students as question banks.
+ * n8n's classifier now keeps them out of kind='question' (Parse & Route), and this refuses them too
+ * so a hand-set kind cannot walk them back in.
+ */
+const isNotAQuestionBank = (...fields) =>
+  /\bsolv|\bsolution|\banalys/i.test(fields.map((f) => clean(f)).join(" "));
+
 /** A short qualifier that separates two submissions for the same subject. */
 const qualifier = (topic) => {
   const t = clean(topic).toLowerCase();
-  if (/solve|solution/.test(t)) return "solve";
   if (/math/.test(t)) return "math";
   if (/important/.test(t)) return "important";
   if (/\b(20\d{2})\b/.test(t)) return t.match(/\b(20\d{2})\b/)[1];
@@ -139,6 +151,15 @@ const slugify = (s, max = 50) =>
       // Already reachable — mark the submission done rather than leaving it pending forever.
       if (!DRY) await c.query("UPDATE submissions SET status='done' WHERE id=$1", [s.id]);
       alreadyThere++;
+      continue;
+    }
+
+    if (isNotAQuestionBank(s.subject_name, s.topic_name)) {
+      problems.push(
+        `${s.id}: reads as a solve/analysis ("${clean(s.topic_name).slice(0, 40)}") - that is a note, ` +
+        `not a question bank; left pending for the note pipeline`
+      );
+      skipped++;
       continue;
     }
 
