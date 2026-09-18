@@ -10,6 +10,7 @@ let sss1Flow = [
         `📌 QB Solve -`,
         [
             webBtnBlockGen("All Math Solve(Nafiz,2026)", "https://drive.google.com/file/d/1G8S0I__GV57z_J0S_lkEvNL8oKB-1M58/view?usp=sharing"),
+            webBtnBlockGen("PrevQ(Nafiz,26)", "https://drive.google.com/file/d/1hAxniyWa0QzyNu7BZ4-80ZWMC5hs-ePJ/view?usp=sharing"),
         ]
     ),
     grroupedButtonBlockGen(
