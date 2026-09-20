@@ -11,6 +11,7 @@ let phy1Elasticity = [
     textBlockGen(`🔷 Hand Note(Nihat, YE-46, 2020)-\n\nhttps://drive.google.com/file/d/1b9HCBVDH64Irz7KuwioznA1fW9algjml/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note- Formulas & Graph (Mim, TEM-47.2022)-\n\nhttps://drive.google.com/file/d/1Xs4P8HhpgYbBD7r9DXMe5s9J-f2vcBxn/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note(MD. SHOYAIB AHMMAD, Affliated, 2026) - \n\nhttps://drive.google.com/file/d/19RbMuRWFU8tIO4WwkwRpDjInWmEFBp4N/view?usp=sharing`),
+    textBlockGen(`🔷 Hand Note(Tahsan Islam Tonmoy, WPE-52, 2026) - \n\nhttps://drive.google.com/file/d/1wku9sNyqJy59HQ8BiiqHt9N3jgKcYpWa/view?usp=sharing`),
 ]
 
 
