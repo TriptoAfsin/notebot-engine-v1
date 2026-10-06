@@ -6,7 +6,7 @@ option that fits**. When a case isn't covered here, add a new rule to this file 
 
 Messenger hard limits (enforced silently in the generators — respect them):
 - **≤ 3 buttons per `grroupedButtonBlockGen`** (a 4th is silently dropped). Split into multiple groups.
-- **button titles ≤ 15 chars** (silently truncated). Keep labels short (e.g. `Alim(Aff.,26)`).
+- **button titles ≤ 20 chars** — Messenger's limit; both `genrators/webBtnBlockGen` and `simple-messenger-blocks/webBtnGen` cut anything longer to 20 without failing. Keep labels short (e.g. `Alim(Aff.,26)`), and shorten the submitter's name before dropping a meaningful prefix like `QB Solve`.
 - No enforced block cap, but keep a level section tidy (~≤10 blocks); start a new group rather than overloading one.
 
 ---
@@ -22,7 +22,7 @@ Messenger hard limits (enforced silently in the generators — respect them):
 2. **Subject-flow web-link (EXISTING subject)** — a whole-subject / "Full" / "Full Course" / "Part A|B Full" note, or a topic with no dedicated topic file, for a subject whose **dir EXISTS**. Add a grouped web-button block INSIDE that subject's own flow `.../<subject>/<subject>_flow.js`, placed BEFORE its `🔰 Select Topics` group:
    ```js
    grroupedButtonBlockGen(`📌 Full Notes -`, [        // or `📌 <Topic> -`
-     webBtnBlockGen("<ShortLabel ≤15>", "<public_url>"),
+     webBtnBlockGen("<ShortLabel ≤20>", "<public_url>"),
    ]),
    ```
    This gives **BOTH chatbot AND web-app parity automatically** — the subject flow is already routed (`handlePostback`) and translated by its app wrapper (`SubTopicTrans`). No controller/route/keyword edit. Group same-kind links under one header (≤3 buttons/group; new group past 3). **Do NOT put this in `level_N_flow.js`.**
@@ -45,6 +45,16 @@ Messenger hard limits (enforced silently in the generators — respect them):
 
 - **New chapter/topic that doesn't exist** (ym1 "Math solve", wpp "Sizing") → **option 2**: a `📌 <Topic> -` group inside the subject's `<subject>_flow.js`, unless multiple notes justify a full topic file (option 3). wpp's real topics are Desizing/Pretreatment/BioScouring/Singeing/Impurities — "Sizing" is genuinely new, so a web-link group in `wpp_flow.js` is right.
 
+- **Solved papers — "question solve", "QB solve", "previous year question solve", "math solve", "solution"** → a **note**, never a question bank (n8n's classifier and `place-question-banks.js` both keep them out of `kind=question`). Name them so a student can tell they are getting answers:
+  - **Button** (option 2): `webBtnBlockGen("QB Solve(<Name>,<YY>)", url)` — e.g. `QB Solve(Nafiz,26)`, `QB Solve(Shirsho,26)`. Inside the subject's `<subject>_flow.js`, under a **`📌 QB Solve -`** group. If the subject already has a solve group (`📌 QB Solve -`, `📌 Math Solve -`, `📌 Prev Q Solve -`), add to that one (≤3/group) instead of starting another.
+  - **Text line** (option 1, appending to a topic file such as `<subject>Ques.js`): `` textBlockGen(`🔷 QB Solve(<Name>, <dept>, <year>) - 
+
+<url>`) ``.
+  - Never label a solve `Hand Note`, `PrevQ`, `QB` or the bare submitter name: those read as notes or as unsolved questions. (Four 2026 ingests had to be retitled — sss1, ym1, am1, wpp.)
+  - Why `📌 QB Solve -` for the header: the web app (`SubTopicTrans`) only prints a group's header for a whitelist that includes `📌 qb solve`; under `📌 Math Solve -` / `📌 Prev Q Solve -` the app shows the button text alone, so the button text must say `QB Solve` regardless.
+
+- **Question analysis** (topic-frequency / "which questions come" analysis) → also a **note**, not a question bank. Covering one subject → option 2 under `📌 Question Analysis -` in that subject's flow. Covering a whole level/term ("All Subjects") → a `📌 Question Analysis -` group in `level_N_flow.js` right after `🔴 Question Banks -`, and a matching entry in the app's `levelNSubs.js`; record it in `applied.json` with `"new": "level-weblink"`, `"groupHeader"` and `"afterHeader"` so apply-ingest mirrors it into v2 and the bot's level snapshot (see submission 205).
+
 - **`cp` (Computer Programming)** only has per-chapter files (arrays/loops/conditions/functions/strings) — a whole-course "Full Note" has no topic file → **option 2**: `📌 Full Notes -` group inside `cp_flow.js`.
 
 - **Non-existent-dir real subjects**: **AP-II (`ap2`)**, **SPE**, **INDUSTRIAL ENGINEERING** (level 2), **IESE / Environment** (`iee` exists but its topic files use a legacy `{text:...}` format — do NOT append `textBlockGen` there) → **option 4: create a new subject** (full wiring, flag loudly). Put the note inside the new `<subject>_flow.js`. Never dump into `level_N_flow.js`.
@@ -61,7 +71,7 @@ Mirror of notes. Level lab menu = `level_L_lab_flow.js` (already required + disp
 
 - If the subject's lab menu file `.../level_L_lab_subs/<X>/<X>LabFlow.js` exists → add `webBtnBlockGen("<name>(<yr>)", url)` into its `📌 All Lab Reports -` group (≤3/group). No controller edit needed (the subject menu is already routed).
 - If the subject has no lab menu yet → create it + wire it (WIRING-style: chatbot require + `handlePostback` `payload === "<X>_lab_flow"` branch + register `payloadBtnGen("<Label>","<X>_lab_flow")` in `level_L_lab_flow.js`; web app: `labReport/levelL/subs/<X>/<X>Labs.js` wrapper + `appController.js` require/handler/export + `web.js` `/app/labs/L/<X>` route + `levelLLabs.js` entry). Lab topics are `{text:...url...}` blocks. Keywords are NOT needed (labs are postback-only).
-- Silent breaks: payload↔`handlePostback`↔`/app/labs` route must all match; titles ≤15 chars; ≤3 buttons/group.
+- Silent breaks: payload↔`handlePostback`↔`/app/labs` route must all match; titles ≤20 chars; ≤3 buttons/group.
 
 ---
 
