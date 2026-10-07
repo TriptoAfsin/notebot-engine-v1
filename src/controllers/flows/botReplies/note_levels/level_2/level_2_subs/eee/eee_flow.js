@@ -54,6 +54,18 @@ let eeeFlow = [
         ]
     ),
     grroupedButtonBlockGen(
+        "📌 Transformer -",
+        [
+            webBtnBlockGen("Midul(WPE-51,2026)", "https://drive.google.com/file/d/1RvFrZr1MRIxh1VYJWu_UmxRIyYbxAZSA/view?usp=sharing"),
+        ]
+    ),
+    grroupedButtonBlockGen(
+        "📌 DC Generator -",
+        [
+            webBtnBlockGen("Midul(WPE-51,2026)", "https://drive.google.com/file/d/1jODqdgUikoBpXks-r-HN1LGMJQtf2lcd/view?usp=sharing"),
+        ]
+    ),
+    grroupedButtonBlockGen(
         "🔰 Select Topics for FEEE -",
         [
             payloadBtnGen("Books", "eee_books_flow"),

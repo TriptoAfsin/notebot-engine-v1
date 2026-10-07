@@ -14,6 +14,7 @@ let phy1Circular = [
     textBlockGen(`🔷 Hand Note(Midul Hasan, WPE-51, 2026) - \n\nhttps://drive.google.com/file/d/1m4p6ZJl7aDYxfyQDGO6LorIrNPjMX5Xh/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note(Midul Hasan, WPE-51, 2026) - \n\nhttps://drive.google.com/file/d/1odrQqMYCuq7mTymNMWMgwPKGAemgZJv1/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note(Tahsan Islam Tonmoy, WPE-52, 2026) - \n\nhttps://drive.google.com/file/d/1km1HnZUSubuwixcKKqjoPYr2IGq9eR5p/view?usp=sharing`),
+    textBlockGen(`🔷 Hand Note(Asaf Mahmud Siam, FE-52, 2026) - \n\nhttps://drive.google.com/file/d/1btqg-KQUVDYs2mx1I9_9VWvUKGdoaSIZ/view?usp=sharing`),
 ]
 
 
