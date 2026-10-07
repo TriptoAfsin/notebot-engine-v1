@@ -16,6 +16,7 @@ let math1CoOrd = [
     textBlockGen(`🔷 Book Scanned-\n\nhttps://drive.google.com/file/d/1ikxcoKWT94WYn4e-_121ZdIOd7iqA_b2/view?usp=sharing`),
     textBlockGen(`🔷 Changes of axes - \n\nhttps://drive.google.com/file/d/13b67KQlsA2jOcy_W7WnVjizbCMf2zqps/view?usp=sharing`),
     textBlockGen(`🔷 Co-ord Shifting - \n\nhttps://drive.google.com/file/d/1S1G8ql75dfFm3geG5WgCbErLHpAyaJho/view?usp=sharing`),
+    textBlockGen(`🔷 Hand Note(Nahid Hamim, FE-51, 2026) - \n\nhttps://drive.google.com/file/d/1ZtDr0-0MxWgNw58Iqn5FKrJWX2rfR4Wu/view?usp=sharing`),
 ]
 
 

@@ -21,6 +21,12 @@ let fm2_lab_flow = [
         ]
     ),
     grroupedButtonBlockGen(
+        "📌 Viva Note - ",
+        [
+            webBtnBlockGen("DEW(TEM-49,2026)", "https://drive.google.com/file/d/1bcfTuolvK6_kcKN9jW_3gRPPPqEq7UPE/view?usp=sharing"),
+        ]
+    ),
+    grroupedButtonBlockGen(
         "🔰 Select Experiment for FM-II -",
         [
             payloadBtnGen("1", "fm2_lab_1_flow"),
