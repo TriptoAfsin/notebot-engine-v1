@@ -48,6 +48,7 @@ let phy2_flow = [
         [
             webBtnBlockGen("By AE-45", "https://drive.google.com/file/d/1F1MVY00RL6MmjLhCgx7ODacgnJOQgI1A/view?usp=sharing"),
             webBtnBlockGen("Math Solve(Affli.)", "https://drive.google.com/file/d/1qi-Ev2jCffNfyfov9PBra2MDUNFLUXEI/view?usp=sharing"),
+            webBtnBlockGen("QB Solve(Saikot,26)", "https://drive.google.com/file/d/1FuiibPNpfiw5Uhg943O6gzgi4DDMN8L-/view?usp=sharing"),
         ]
     ),
     grroupedButtonBlockGen("🔰 Select Topic for PHY-II -",

@@ -10,6 +10,10 @@ let am1FabricCut = [
     {
         "text": `🔷Hand Note(Tripto, 2019)-
         https://drive.google.com/file/d/1C2ZIxtwxm5UF8uwXJPmDL_T__3hV-Xxp/view?usp=sharing`
+    },
+    {
+        "text": `🔷Hand Note(Maksuda Akter Lily, TFD-51, 2026)-
+        https://drive.google.com/file/d/1Olok2k3IZCuFq48B_FrjHA91MRAOjL1D/view?usp=sharing`
     }
 ]
 

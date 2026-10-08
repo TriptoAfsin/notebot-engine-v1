@@ -10,7 +10,8 @@ let chem1Coll = [
     textBlockGen(`🔷 Hand Note(Nihat, YE-46 ,2021)-\n\nhttps://drive.google.com/file/d/1MAc3f3_Oo78Ooo3AKrzc_tugVTPlcai5/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note(nafis, IPE-46 ,2021)-\n\nhttps://drive.google.com/file/d/1QP25JprT2DOQ9LGup0aGY3_1xs_Z5Cct/view?usp=sharing`),
     textBlockGen(`🔷 Nargis Mam Sheet(2021)-\n\nhttps://drive.google.com/file/d/123OnC9SnAY67Q08KVth_Y2TUmFLdoOG2/view?usp=sharing`),
-    textBlockGen(`🔷 Sheet(2019)-\n\nhttps://drive.google.com/file/d/1282uOhZZiJvaM27pQQaC6iipU8E3Plvk/view?usp=sharing`)
+    textBlockGen(`🔷 Sheet(2019)-\n\nhttps://drive.google.com/file/d/1282uOhZZiJvaM27pQQaC6iipU8E3Plvk/view?usp=sharing`),
+    textBlockGen(`🔷 Hand Note(Shrestho, WPE-51, 2026) - \n\nhttps://drive.google.com/file/d/1LtQVtqWchzevxLJ5BLx7o-I6utjT25Rw/view?usp=sharing`)
 ]
 
 

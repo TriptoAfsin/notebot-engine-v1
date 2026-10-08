@@ -11,6 +11,7 @@ let chem1Cx = [
     textBlockGen(`🔷 Isomerism Hand Note(Tripto, 2018)-\n\nhttps://drive.google.com/file/d/1a6_u_o-HqgxmqHH-t3YkeH9Y-l8j6OH3/view?usp=sharing`),
     textBlockGen(`🔷 Question Solve Complex Compund(2012-18)(Sumaiya, 2019) - \n\nhttps://drive.google.com/file/d/1RBGbEFZJ0BRp-eiRiBOQ59tt-oo5kSQB/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note(Akib, 2018)-\n\nhttps://drive.google.com/file/d/1V4KymkQ7gDF5BdfglmboJRlRFMj9ugEY/view?usp=drivesdk`),
+    textBlockGen(`🔷 Hand Note(Shrestho, WPE-51, 2026) - \n\nhttps://drive.google.com/file/d/1XzjZXSCWe9pI0Yp52_HEELgdDeeUhFtT/view?usp=sharing`),
 ]
 
 
