@@ -18,13 +18,6 @@ const SIG = '<p style="margin-top:24px"><b>Afshin Nahian Tripto</b><br/>'
   + '<span style="color:#666;font-size:13px">Senior Full Stack Engineer, Provision Capital<br/>'
   + "Software Engineer, REDQ<br/>Founder, BUTEX NoteBOT</span></p>";
 
-/** Where a student finds it on the website: the level page for its section. */
-function siteLink(item) {
-  if (item.section === "question-bank") return `${SITE}/q-bank`;
-  if (item.section === "lab") return `${SITE}/lab-reports/${encodeURIComponent(item.level)}`;
-  return `${SITE}/notes/${encodeURIComponent(item.level)}`;
-}
-
 /** "Level 2 › AM-1 › Fabric Cutting" - the path a student taps through in the bot or on the site. */
 function wherePath(item) {
   const parts = [`Level ${item.level}`];
@@ -51,7 +44,6 @@ function renderAck({ name, items }) {
     <tr><td style="padding:12px 0;border-top:1px solid #e6e8eb">
       <div style="font-weight:600">${esc(it.submittedSubject)}${it.submittedTopic ? " — " + esc(it.submittedTopic) : ""}</div>
       <div style="color:#555;font-size:14px;margin-top:2px">Added to: ${esc(wherePath(it))}</div>
-      <div style="font-size:14px;margin-top:4px"><a href="${esc(siteLink(it))}" style="color:${BRAND}">Find it on the website</a></div>
     </td></tr>`).join("");
 
   const html = `<div style="font-family:-apple-system,Segoe UI,Roboto,Arial,sans-serif;max-width:520px;margin:0 auto;color:#1a1a1a;line-height:1.5">
@@ -72,8 +64,7 @@ function renderAck({ name, items }) {
     `Here is where ${many ? "they were" : "it was"} added:`, "",
     ...items.flatMap((it) => [
       `- ${it.submittedSubject}${it.submittedTopic ? " — " + it.submittedTopic : ""}`,
-      `  Added to: ${wherePath(it)}`,
-      `  ${siteLink(it)}`, ""]),
+      `  Added to: ${wherePath(it)}`, ""]),
     `Find ${many ? "them" : "it"} on NoteBot:`, `  Web: ${SITE}`, `  Bot: ${BOT}`, `  App: ${APP}`, "",
     `Notes like yours are what keep NoteBot useful for your juniors, so thank you for taking the time. If you have more to share, you can submit them any time: ${SUBMIT}`, "",
     "Afshin Nahian Tripto", "Founder, BUTEX NoteBOT", "",
@@ -83,7 +74,7 @@ function renderAck({ name, items }) {
   return { subject, html, text };
 }
 
-module.exports = { renderAck, wherePath, siteLink };
+module.exports = { renderAck, wherePath };
 
 // Preview: writes the single- and multi-note versions as HTML files, sends nothing.
 if (require.main === module && process.argv[2] === "--preview") {
