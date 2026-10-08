@@ -45,3 +45,14 @@ jobs:
             git commit -m "chore(ingest): clear applied manifest [skip ci]"
             git push
           fi
+      # Thank the submitters whose notes just went live (one email per person, listing every note
+      # and where it was added). Last and non-blocking on purpose: an email problem must never hold
+      # up publishing. Anything not sent stays ack_status NULL and the next run retries it.
+      - name: Thank contributors
+        continue-on-error: true
+        run: node .github/scripts/ack-contributors.js
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
