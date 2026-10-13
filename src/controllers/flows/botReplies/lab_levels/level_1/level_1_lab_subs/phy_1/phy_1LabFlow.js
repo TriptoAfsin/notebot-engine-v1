@@ -12,6 +12,7 @@ let phy1_lab_flow = [
         [
             webBtnBlockGen("Hasnabul(2024)", "https://drive.google.com/drive/folders/1Y7WweNoZuGmspIintCA8PiEjmp6PZQTK?usp=sharing"),
             webBtnBlockGen("Emon(2022)", "https://drive.google.com/file/d/1RKd7KCULtdwPoCe2rA8x6rZTJT5EQdtm/view?usp=sharing"),
+            webBtnBlockGen("Farhan Labib(2026)", "https://drive.google.com/file/d/1D47gdDQl6BawjrgChgG87ZIeJQAv7rIe/view?usp=sharing"),
         ]
     ),
     grroupedButtonBlockGen(
