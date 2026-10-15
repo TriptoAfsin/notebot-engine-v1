@@ -63,6 +63,8 @@ Messenger hard limits (enforced silently in the generators — respect them):
 
 - **Malformed / spans many courses** ("All courses of AE-49 L-3 T-1", "INDUSTRIAL ENGINEERING [PART A ALI SIR FULL HAND NOTE]") → **flag** for manual review; don't guess.
 
+- **BCE (Business and Communication English) "All report" / "All Report"** → this is the **lab** viva/report group (`📌 All Report -` in `lab_levels/level_1/level_1_lab_subs/bce/bceLabFlow.js`), **not** a note — even when the submission's `kind` field says `note`. Don't confuse it with the note-side `reportBce` topic file (`bce_flow.js` → "Business Report" button), which covers the *Business Report writing* skill, a different topic entirely. Place it per the LAB rules: `webBtnBlockGen("<ShortName>(<dept>-<batch>,<yr>)", url)` added to the existing `📌 All Report -` group (≤3 buttons/group — start a second `📌 All Report -` group past 3). (Submission #230 was initially misplaced as a note in `reportBce.js` and had to be corrected.)
+
 ---
 
 ## LAB reports (`kind=lab`) — `lab_levels/level_L/`
