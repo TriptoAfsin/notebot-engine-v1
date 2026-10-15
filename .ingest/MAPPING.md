@@ -35,6 +35,15 @@ Messenger hard limits (enforced silently in the generators — respect them):
 
 6. **Question bank (`kind=question`)** — excluded from ingest entirely (copied to the QB Drive folder by n8n; no code). These are pre-filtered out of the queue.
 
+**`content_type` — the submitter's own answer.** Since Oct 2026 the form asks "Content type" and each queue row carries it (`null` on rows submitted before that, so never require it):
+- `Notes / Sheets/ Slides/ Books` → a note; options 1–4 as usual.
+- `Lab Report` → `kind=lab`; LAB rules.
+- `Question Solve` → a solved paper: follow the **Solved papers** case rule below (`QB Solve(...)`), even when the subject/topic text never says "solve".
+- `Question Bank` → `kind=question`; never in the queue.
+- anything else is the form's free-text "Other" answer — read it as a hint alongside subject/topic.
+
+n8n already derives `kind` from it; when `content_type` is set, trust it over guesses from the subject/topic wording. When it is `null`, decide from subject/topic exactly as before.
+
 ---
 
 ## Case rules (from real flagged submissions — extend as new ones appear)

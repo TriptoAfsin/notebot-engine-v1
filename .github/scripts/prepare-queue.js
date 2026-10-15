@@ -23,7 +23,7 @@ const { Client } = require("pg");
   // straight into v2's question_banks by .github/scripts/place-question-banks.js, which runs in the
   // same workflow as this script.
   const r = await c.query(
-    "SELECT id, submitted_at, name, batch, department, level, subject_name, topic_name, kind, public_url " +
+    "SELECT id, submitted_at, name, batch, department, level, subject_name, topic_name, kind, content_type, public_url " +
     "FROM submissions WHERE status='pending' AND resolve_status='ok' AND kind <> 'question' ORDER BY submitted_at"
   );
   await c.end();
