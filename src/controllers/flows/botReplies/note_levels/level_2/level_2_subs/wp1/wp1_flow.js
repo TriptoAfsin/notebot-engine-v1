@@ -9,6 +9,8 @@ let wp1Flow = [
         "📌 QB Solve -",
         [
             webBtnBlockGen("Rafi(2023)", "https://drive.google.com/drive/folders/1RbAuvw2oFdUap3cqi5zWleNUtWIHDBNl?usp=sharing"),
+            webBtnBlockGen("QB Solve(Lily-DD,26)", "https://drive.google.com/file/d/1Q7fSDMnjey2rTvt17caNRmTFcy1rK-Nv/view?usp=sharing"),
+            webBtnBlockGen("QB Solve(Lily-In,26)", "https://drive.google.com/file/d/1JqOcpfa1jN8K47MKXeK32STzE2pbFQkv/view?usp=sharing"),
         ]
     ),
     grroupedButtonBlockGen("📌 Sheets -",
