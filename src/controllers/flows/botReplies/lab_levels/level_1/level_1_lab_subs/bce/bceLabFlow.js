@@ -9,7 +9,7 @@ let bce_lab_flow = [
         [
             payloadBtnGen("All(2022)", "https://drive.google.com/file/d/1tu8slkIs7pTJ3LJseqX04l5o04NDbjDv/view?usp=sharing"),
             webBtnBlockGen("Mahir(FE-52,2026)", "https://drive.google.com/file/d/1sQEIqP2jxrLVGnkOD8mNtyNjpXp6nOsq/view?usp=sharing"),
-            webBtnBlockGen("Tahsan(WPE-52,2026)", "https://drive.google.com/file/d/1Eeqka2gU__yVdMx2oKBegU6kL4EcK6wT/view?usp=sharing"),
+            webBtnBlockGen("Tonmoy(WPE-52,2026)", "https://drive.google.com/file/d/1Eeqka2gU__yVdMx2oKBegU6kL4EcK6wT/view?usp=sharing"),
         ]
     ),
     grroupedButtonBlockGen(
