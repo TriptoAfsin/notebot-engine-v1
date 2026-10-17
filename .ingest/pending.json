@@ -1,28 +1,15 @@
 [
   {
-    "id": 232,
-    "submitted_at": "10/15/2026 19:01:13",
-    "name": "Maksuda Akter Lily",
-    "batch": "51",
-    "department": "TFD",
-    "level": "2",
-    "subject_name": "Wp-1 part B (Rafi sir)",
-    "topic_name": "Application of direct dye",
-    "kind": "note",
-    "content_type": "Question Solve",
-    "public_url": "https://drive.google.com/file/d/1Q7fSDMnjey2rTvt17caNRmTFcy1rK-Nv/view?usp=sharing"
-  },
-  {
-    "id": 233,
-    "submitted_at": "10/15/2026 19:14:52",
-    "name": "Maksuda Akter Lily",
-    "batch": "51",
-    "department": "TFD",
-    "level": "2",
-    "subject_name": "Wp-1 part B (Rafi sir)",
-    "topic_name": "Introduction",
-    "kind": "note",
-    "content_type": "Question Solve",
-    "public_url": "https://drive.google.com/file/d/1JqOcpfa1jN8K47MKXeK32STzE2pbFQkv/view?usp=sharing"
+    "id": 235,
+    "submitted_at": "10/16/2026 4:44:35",
+    "name": "Md. Mahir Abrar",
+    "batch": "52",
+    "department": "FE",
+    "level": "1",
+    "subject_name": "CSE",
+    "topic_name": "CSE all lab report-2026",
+    "kind": "lab",
+    "content_type": "Lab Report",
+    "public_url": "https://drive.google.com/file/d/1NMD-h600XActzmCbU44A4chsjGHc5ypG/view?usp=sharing"
   }
 ]
