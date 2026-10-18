@@ -13,6 +13,12 @@ let cp_lab_flow = [
         ]
     ),
     grroupedButtonBlockGen(
+        "📌 All Lab Reports(New) - ",
+        [
+            webBtnBlockGen("Mahir(2026)", "https://drive.google.com/file/d/1NMD-h600XActzmCbU44A4chsjGHc5ypG/view?usp=sharing"),
+        ]
+    ),
+    grroupedButtonBlockGen(
         "🔰 Select Experiment for CP -",
         [
             payloadBtnGen("1.Intro to C", "cp_lab_intro"),
