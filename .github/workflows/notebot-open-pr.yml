@@ -3,6 +3,14 @@ name: NoteBot - open PR + notify
 # Fires when the cloud ingest agent pushes an ingest/auto-* branch. The agent's sandbox
 # can't reach api.github.com or Telegram, so this runner opens the PR, marks the applied
 # rows pr-open (dedup), and sends the Telegram notification with a note table.
+#
+# It also keeps .ingest/pending.json out of the PR. That file is CI-owned: notebot-prepare-queue
+# rewrites it on main every day, at a time GitHub's cron drift makes unpredictable. When the agent
+# edited or emptied it on its branch, any refresh landing on main before the merge made the PR
+# conflict (PR #43, and the hand-made "merge main: pick up pending queue refresh" commits before it).
+# Restoring it to the version at the branch's fork point (not main's latest - that would itself be a
+# change that a later refresh conflicts with) means the PR makes no change to it, so git always takes
+# main's copy on merge, however many refreshes land in between.
 
 on:
   push:
@@ -10,7 +18,7 @@ on:
       - "ingest/auto-*"
 
 permissions:
-  contents: read
+  contents: write
   pull-requests: write
 
 concurrency:
@@ -22,6 +30,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Keep the CI-owned queue file out of the PR
+        run: |
+          git config user.name "notebot-ci"
+          git config user.email "notebot-ci@users.noreply.github.com"
+          git checkout "$(git merge-base origin/main HEAD)" -- .ingest/pending.json
+          if git diff --staged --quiet; then
+            echo "pending.json untouched by this branch"
+          else
+            git commit -m "chore(ingest): leave pending.json to CI [skip ci]"
+            git push origin HEAD:${{ github.ref_name }}
+          fi
       - uses: actions/setup-node@v4
         with:
           node-version: "20"
