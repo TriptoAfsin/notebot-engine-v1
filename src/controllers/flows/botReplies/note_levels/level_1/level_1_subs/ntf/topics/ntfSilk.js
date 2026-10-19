@@ -22,6 +22,7 @@ let ntfSilk = [
     textBlockGen(`🔷 Hand note(Nahid,2019)-\n\nhttps://drive.google.com/file/d/104vqDmeJQ60tJ8_5Y_HkyIy4RMt42HXW/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note(Bushra, YE-51, 2026) - \n\nhttps://drive.google.com/file/d/1By7BM4pG_MVnpRjQbmbAgx3GDjuCWLO4/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note(Midul, WPE-51, 2026) - \n\nhttps://drive.google.com/file/d/18jfM-OokC90HdaGn4bNPTA-5lXociB2x/view?usp=sharing`),
+    textBlockGen(`🔷 Hand Note(Fahim, IPE-52, 2026) - \n\nhttps://drive.google.com/file/d/1lCymryk9j4nNrxWGCODOZy4vhGp94C1f/view?usp=sharing`),
 ]
 
 
