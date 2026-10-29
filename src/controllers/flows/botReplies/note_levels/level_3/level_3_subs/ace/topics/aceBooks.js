@@ -8,6 +8,7 @@ let aceBooks = [
     textBlockGen(`🔷 Modern Control Eng.(5th)-\n\nhttps://drive.google.com/file/d/1yAlPbvY0DKaW0mQok9Zy57xeVhhpgexy/view?usp=sharing`),
     textBlockGen(`🔷 Control Eng. Theory & Practice -\n\nhttps://drive.google.com/file/d/1Lj1CBgQeDqSRMCnvgtyZnU5C2mtVvqoY/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note(Md. Shahadat Hosen, AE-Affliated, 2026) - \n\nhttps://drive.google.com/file/d/1l8thNf5E4g_rA-RANl0kV8U0Cyc-aHXK/view?usp=sharing`),
+    textBlockGen(`🔷 Hand Note(Md. Shahadat Hosen, AE-Affliated, 2026) - \n\nhttps://drive.google.com/file/d/1JrXWttLgTg-M3EyaqEphkGO5amdeui6d/view?usp=sharing`),
 ]
 
 
