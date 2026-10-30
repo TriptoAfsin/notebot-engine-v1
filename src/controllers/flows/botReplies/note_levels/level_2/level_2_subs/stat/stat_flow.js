@@ -37,6 +37,7 @@ let statFlow = [
     grroupedButtonBlockGen(`📌 Lab Notes -`,
         [
             webBtnBlockGen("Anonna(2025)", "https://drive.google.com/file/d/1x1GleOClhfh1UamNUs7b4UZpAjJEMtcj/view?usp=sharing"),
+            webBtnBlockGen("Arafat(TME,26)", "https://drive.google.com/file/d/1t-EuYDejBhbjIZ-LXQb0T_LQR_Im_0al/view?usp=sharing"),
         ]
     ),
     grroupedButtonBlockGen(`📌 Full Hand Notes -`,
