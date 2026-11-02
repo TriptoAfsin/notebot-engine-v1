@@ -68,6 +68,8 @@ n8n already derives `kind` from it; when `content_type` is set, trust it over gu
 
 - **Non-existent-dir real subjects**: **AP-II (`ap2`)**, **SPE**, **INDUSTRIAL ENGINEERING** (level 2), **IESE / Environment** (`iee` exists but its topic files use a legacy `{text:...}` format — do NOT append `textBlockGen` there) → **option 4: create a new subject** (full wiring, flag loudly). Put the note inside the new `<subject>_flow.js`. Never dump into `level_N_flow.js`.
 
+- **Mathematics, ambiguous I vs II** — unlike Chemistry, a bare `subject_name` of "Mathematics"/"Math" with `level=1` does NOT disambiguate by level alone: both `math1` and `math2` are Level-1 subjects (Term-1 vs Term-2), and the row carries no term field. Topic wording like "Part A"/"Part B" does not help either — `math1_flow.js` and `math2_flow.js` **both** already use Part-A/Part-B groupings for full notes. Do not guess from department or submitter name. **Flag** unless the topic text names a course-specific chapter (e.g. "Laplace", "ODE", "Residue" → math2; "Conics", "Extrema", "Vector Space" → math1 — cross-check against each subject's topic list in `subject-map.json`). (Submission #251, TONMOY/WPE-52, "Math Part A full" — flagged.)
+
 - **Submitter's name in the subject field** (e.g. subject "Rubayet") → the real subject is in the topic text ("Full operations management part B" → Operations Management). Recover the real subject; if unclear, **flag**.
 
 - **Malformed / spans many courses** ("All courses of AE-49 L-3 T-1", "INDUSTRIAL ENGINEERING [PART A ALI SIR FULL HAND NOTE]") → **flag** for manual review; don't guess.
