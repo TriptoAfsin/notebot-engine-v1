@@ -21,6 +21,12 @@ let fm2_lab_flow = [
         ]
     ),
     grroupedButtonBlockGen(
+        "📌 All Report - ",
+        [
+            webBtnBlockGen("Arman(WPE-50,26)", "https://drive.google.com/file/d/1Dwa9LhZTbX9Vmm797R8MW4nK8niKtAih/view?usp=sharing"),
+        ]
+    ),
+    grroupedButtonBlockGen(
         "📌 Viva Note - ",
         [
             webBtnBlockGen("All Report(Estiak, ESE-48,2025)", "https://drive.google.com/file/d/1WvYXlfwwvYXGBtx8fhpLYmThlk596MyB/view?usp=sharing"),
