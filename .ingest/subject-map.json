@@ -1263,9 +1263,9 @@
     }
   },
   "labs": {
-    "1": {
+    "2": {
       "nfs": {
-        "dir": "src/controllers/flows/botReplies/lab_levels/level_1/level_1_lab_subs/nfs",
+        "dir": "src/controllers/flows/botReplies/lab_levels/level_2/level_2_lab_subs/nfs",
         "flow": "nfsLabFlow.js",
         "topics": [],
         "aliases": [

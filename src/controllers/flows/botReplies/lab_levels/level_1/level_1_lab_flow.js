@@ -18,9 +18,6 @@ let level_1_lab = [
     payloadBtnGen("BCE", "bce_lab_flow"),
     payloadBtnGen("CP", "cp_lab_flow"),
   ]),
-  grroupedButtonBlockGen("🔰 Select Subject Your Lab Report -", [
-    payloadBtnGen("NFS", "nfs_lab_flow"),
-  ]),
 ];
 
 module.exports = level_1_lab;

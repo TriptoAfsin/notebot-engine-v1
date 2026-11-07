@@ -59,6 +59,10 @@ let level2Labs = [
         subName: "FYT",
         route: "app/labs/2/fyt"
     },
+    {
+        subName: "NFS",
+        route: "app/labs/2/nfs"
+    },
 ]
 
 

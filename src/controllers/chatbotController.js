@@ -1498,7 +1498,7 @@ const labFlow_bceLabSheet = require("./flows/botReplies/lab_levels/level_1/level
 const labFlow_ed = require("./flows/botReplies/lab_levels/level_1/level_1_lab_subs/ed/edLabFlow");
 
 //lab->nfs
-const labFlow_nfs = require("./flows/botReplies/lab_levels/level_1/level_1_lab_subs/nfs/nfsLabFlow");
+const labFlow_nfs = require("./flows/botReplies/lab_levels/level_2/level_2_lab_subs/nfs/nfsLabFlow");
 
 //lab->cp
 const labFlow_cp = require("./flows/botReplies/lab_levels/level_1/level_1_lab_subs/cp/cpLabFlow");

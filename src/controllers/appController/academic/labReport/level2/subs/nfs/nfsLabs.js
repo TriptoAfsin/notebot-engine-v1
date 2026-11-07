@@ -1,8 +1,8 @@
-let nfsLabFlow = require('../../../../../../flows/botReplies/lab_levels/level_1/level_1_lab_subs/nfs/nfsLabFlow')
+let nfsLabFlow = require('../../../../../../flows/botReplies/lab_levels/level_2/level_2_lab_subs/nfs/nfsLabFlow')
 let SubTopicTrans = require('../../../../../translaters/SubTopicTrans')
 
 
-let routePrefix = "app/labs/1/nfs"
+let routePrefix = "app/labs/2/nfs"
 
 let nfsLabApp = SubTopicTrans(routePrefix, nfsLabFlow)
 

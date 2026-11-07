@@ -995,7 +995,7 @@ let ap1LabsStrtKnife = require('./academic/labReport/level1/subs/ap1/topics/appA
 
 
 //lab - cp
-let nfsLabs = require('./academic/labReport/level1/subs/nfs/nfsLabs')
+let nfsLabs = require('./academic/labReport/level2/subs/nfs/nfsLabs')
 let cpLabs = require('./academic/labReport/level1/subs/cp/cpLabs')
 let cpLabs1 = require('./academic/labReport/level1/subs/cp/topics/appCpLabs1')
 let cpLabs2 = require('./academic/labReport/level1/subs/cp/topics/appCpLabs2')

@@ -35,10 +35,6 @@ let level1Labs = [
         subName: "ED",
         route: "app/labs/1/ed"
     },
-    {
-        subName: "NFS",
-        route: "app/labs/1/nfs"
-    },
 ]
 
 
