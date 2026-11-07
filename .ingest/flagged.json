@@ -1,1 +1,11 @@
-[]
+[
+  {
+    "id": 256,
+    "name": "Jeba Fariha",
+    "subject_name": "Natural Fibre Science Lab",
+    "topic_name": "All Lab Report",
+    "kind": "lab",
+    "public_url": "https://drive.google.com/file/d/1F56w-cYGUq2KkDh4Qtle2z7q6wZblM38/view?usp=sharing",
+    "reason": "No level-2 lab subject exists for 'Natural Fibre Science Lab' (dept TME, batch 51). The only known subject matching 'Natural Fibre Science' is `ntf` (Natural Textile Fibre) in subject-map.json, but that is a Level-1 NOTE-only subject with no lab directory in either level_1_lab_subs or level_2_lab_subs - both the level and the content kind (lab vs note) mismatch the existing mapping. None of the Level-2 lab subjects in level_2_lab_flow.js (AM-I, WP-I, FM-I, SSS-I, YM-I, Fe-204:WPP, TTQC, MP, FME, FEEE, AP-I, PM-I, SSS-II, WPE 202:WPP, FYT, SDA) correspond to this subject either. Needs a human to confirm whether this is a TME-specific Level-2 course that needs a brand-new lab subject created, or a mislabeled submission for `ntf`."
+  }
+]
