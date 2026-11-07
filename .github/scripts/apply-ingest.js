@@ -130,6 +130,17 @@ async function addLevelButton(c, levelSlug, a) {
         [level.id, subjectSlug, topicName, labTitle, cut(a.url, 1000), lSort,
          JSON.stringify({ source: "ingest-auto", v1Kind: "link", v1Display: `\u{1F4CC} ${topicName} -${labTitle}` })]
       );
+      // A lab subject v2 has never seen also has to be listed on the level: v2's lab menus (bot and
+      // app) are built from levels.metadata.labSubjects, not from lab_reports, so without this the
+      // report is stored but no menu leads to it. The v1 dir name is both the route and the db slug.
+      const meta = (await c.query("SELECT metadata FROM levels WHERE id=$1", [level.id])).rows[0]?.metadata || {};
+      const labSubjects = Array.isArray(meta.labSubjects) ? meta.labSubjects : [];
+      if (!labSubjects.some((s) => s.dbSlug === subjectSlug || s.v1RouteSlug === subjectSlug)) {
+        labSubjects.push({ dbSlug: subjectSlug, displayName: cut(a.subjectName || subjectSlug.toUpperCase(), 20), v1RouteSlug: subjectSlug });
+        await c.query("UPDATE levels SET metadata = COALESCE(metadata,'{}'::jsonb) || $2::jsonb WHERE id=$1",
+          [level.id, JSON.stringify({ labSubjects })]);
+        newSubjects++;
+      }
       labs++; bustLabs.add(`${level.id}:${subjectSlug}`); await mark("done"); done++; continue;
     }
 

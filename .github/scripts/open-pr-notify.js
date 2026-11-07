@@ -3,7 +3,9 @@
 //   1. builds a PR body = table of applied notes (+ new subjects/topics + flagged list)
 //   2. opens the PR (base main) if one doesn't already exist
 //   3. marks the applied submissions status='pr-open' (dedup: next queue skips them)
-//   4. sends a Telegram message with the PR link + note table
+//   4. sends a Telegram message with the PR link + note table - only when this push OPENED the PR.
+//      The agent often pushes a branch in several commits (Nov 7: seven pushes in 50 minutes), and
+//      each push runs this script; re-pushes refresh the PR body silently instead of re-announcing it.
 //
 // Env: GITHUB_TOKEN, GITHUB_REPOSITORY (owner/repo), GITHUB_REF_NAME (branch),
 //      DATABASE_URL, TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID.
@@ -50,13 +52,13 @@ async function main() {
   body += `\n_On merge, \`apply-ingest\` mirrors these into the v2 notes DB._`;
 
   // ---- open PR (or find existing) ----
-  let prUrl = "", prNum = 0;
+  let prUrl = "", prNum = 0, opened = false;
   const owner = repo.split("/")[0];
   let r = await fetch(`https://api.github.com/repos/${repo}/pulls`, {
     method: "POST", headers: ghHead,
     body: JSON.stringify({ title: `Auto note ingest ${date}`, head: branch, base: "main", body }),
   });
-  if (r.status === 201) { const j = await r.json(); prUrl = j.html_url; prNum = j.number; }
+  if (r.status === 201) { const j = await r.json(); prUrl = j.html_url; prNum = j.number; opened = true; }
   else {
     // already exists (re-push) — look it up and PATCH its title/body so it stays current
     const ex = await (await fetch(`https://api.github.com/repos/${repo}/pulls?head=${owner}:${branch}&state=open`, { headers: ghHead })).json();
@@ -82,7 +84,9 @@ async function main() {
 
   // ---- Telegram ----
   const tok = process.env.TELEGRAM_BOT_TOKEN, chat = process.env.TELEGRAM_CHAT_ID;
-  if (tok && chat) {
+  // Still announce when no PR could be found at all, so a failure is never silent.
+  if (prNum && !opened) console.log("telegram: skipped (PR already open, announced on first push)");
+  else if (tok && chat) {
     const lines = [
       "📥 <b>NoteBot ingest PR ready</b>",
       "------------------",
