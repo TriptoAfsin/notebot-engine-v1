@@ -87,6 +87,9 @@ Mirror of notes. Level lab menu = `level_L_lab_flow.js` (already required + disp
 - If the subject's lab menu file `.../level_L_lab_subs/<X>/<X>LabFlow.js` exists → add `webBtnBlockGen("<name>(<yr>)", url)` into its `📌 All Lab Reports -` group (≤3/group). No controller edit needed (the subject menu is already routed).
 - If the subject has no lab menu yet → create it + wire it (WIRING-style: chatbot require + `handlePostback` `payload === "<X>_lab_flow"` branch + register `payloadBtnGen("<Label>","<X>_lab_flow")` in `level_L_lab_flow.js`; web app: `labReport/levelL/subs/<X>/<X>Labs.js` wrapper + `appController.js` require/handler/export + `web.js` `/app/labs/L/<X>` route + `levelLLabs.js` entry). Lab topics are `{text:...url...}` blocks. Keywords are NOT needed (labs are postback-only).
 - Silent breaks: payload↔`handlePostback`↔`/app/labs` route must all match; titles ≤20 chars; ≤3 buttons/group.
+- **The level is the subject's level, not the form's.** Submitters pick the level they are in when they submit, which is often a later one. Place by where the subject sits in the existing tree (`level_L_lab_subs/`, `subject-map.json` → `labs`), and use the form's level only for a subject that exists nowhere yet.
+- **Natural Fibre Science Lab / NFS** → **level 1** lab `level_1_lab_subs/nfs/nfsLabFlow.js` (`nfs_lab_flow`, `/app/labs/1/nfs`), even when the form says level 2. (Submission #256 was first wired as a new level 2 lab and had to be redone.)
+- **Wiring is always the plain edits listed above.** Never a "shim", a webhook intercept, a monkey-patch of `appController`, or any file that mutates another module at runtime to avoid editing `chatbotController.js`/`appController.js`. If you cannot make the plain edits, flag the row with that reason instead.
 
 ---
 
