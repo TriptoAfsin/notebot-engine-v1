@@ -1261,5 +1261,21 @@
         ]
       }
     }
+  },
+  "labs": {
+    "1": {
+      "nfs": {
+        "dir": "src/controllers/flows/botReplies/lab_levels/level_1/level_1_lab_subs/nfs",
+        "flow": "nfsLabFlow.js",
+        "topics": [],
+        "aliases": [
+          "nfs",
+          "natural fibre science lab",
+          "natural fiber science lab",
+          "natural fibre science",
+          "natural fiber science"
+        ]
+      }
+    }
   }
 }

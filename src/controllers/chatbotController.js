@@ -1497,6 +1497,9 @@ const labFlow_bceLabSheet = require("./flows/botReplies/lab_levels/level_1/level
 //lab->ed
 const labFlow_ed = require("./flows/botReplies/lab_levels/level_1/level_1_lab_subs/ed/edLabFlow");
 
+//lab->nfs
+const labFlow_nfs = require("./flows/botReplies/lab_levels/level_1/level_1_lab_subs/nfs/nfsLabFlow");
+
 //lab->cp
 const labFlow_cp = require("./flows/botReplies/lab_levels/level_1/level_1_lab_subs/cp/cpLabFlow");
 const labFlow_cp_intro = require("./flows/botReplies/lab_levels/level_1/level_1_lab_subs/cp/cp_lab_topics/cpLabIntro");
@@ -5278,6 +5281,16 @@ let handlePostback = async (sender_psid, received_postback) => {
     magicFunc(sender_psid, labFlow_ed);
   }
 
+  //lab -> nfs
+  else if (payload === "nfs_lab_flow") {
+    //analytics
+    try {
+      handleAnalyticsLabs("nfs");
+    } catch (err) {
+      console.log(`🔴 Error while handling analytics(pre)`);
+    }
+    magicFunc(sender_psid, labFlow_nfs);
+  }
   //lab -> cp
   else if (payload === "cp_lab_flow") {
     //analytics

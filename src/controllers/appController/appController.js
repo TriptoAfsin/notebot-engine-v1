@@ -995,6 +995,7 @@ let ap1LabsStrtKnife = require('./academic/labReport/level1/subs/ap1/topics/appA
 
 
 //lab - cp
+let nfsLabs = require('./academic/labReport/level1/subs/nfs/nfsLabs')
 let cpLabs = require('./academic/labReport/level1/subs/cp/cpLabs')
 let cpLabs1 = require('./academic/labReport/level1/subs/cp/topics/appCpLabs1')
 let cpLabs2 = require('./academic/labReport/level1/subs/cp/topics/appCpLabs2')
@@ -5415,6 +5416,21 @@ let labAp1StrtKnifeFlow = (req, res) => {
 
 
 //labs - cp
+let labNfsFlow = (req, res) => {
+
+    //analytics
+    try {
+        handleAnalyticsLabs("nfs");
+        handleApiCallAnalytics();
+      } catch (err) {
+        console.log(`🔴 Error while handling analytics(pre)`);
+      }
+
+
+    console.log(`🟠 App Platform : ${req.originalUrl} || IP: ${req.ip}`)
+    return res.send(nfsLabs);
+};
+
 let labCpFlow = (req, res) => {
 
     //analytics
@@ -7079,6 +7095,7 @@ module.exports = {
     labAp1FusingFlow: labAp1FusingFlow,
     labAp1StrtKnifeFlow: labAp1StrtKnifeFlow,
 
+    labNfsFlow: labNfsFlow,
     labCpFlow: labCpFlow,
     labCp1Flow: labCp1Flow,
     labCp2Flow: labCp2Flow,

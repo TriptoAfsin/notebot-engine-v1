@@ -941,6 +941,9 @@ router.get("/app/notes/4/bele", appController.beleFlow);
     router.get("/app/labs/1/msp/msp_lab_manuAssm_flow", appController.labMspMfgAssmFlow);
     router.get("/app/labs/1/msp/msp_lab_mspQuiz_flow", appController.labMspQuizFlow);
 
+    //lab - nfs
+    router.get("/app/labs/1/nfs", appController.labNfsFlow);
+
     //lab - cp
     router.get("/app/labs/1/cp", appController.labCpFlow);
     router.get("/app/labs/1/cp/cp_lab_intro", appController.labCp1Flow);
