@@ -1,1 +1,11 @@
-[]
+[
+  {
+    "id": 260,
+    "name": "Farhan Labib",
+    "subject_name": "Math 1",
+    "topic_name": "Math part B all topic",
+    "kind": "note",
+    "public_url": "https://drive.google.com/file/d/1ZU-kFLr0mYKUa5v7C8zdxB23xY4PczDb/view?usp=sharing",
+    "reason": "Likely duplicate/resubmission of #259 - same submitter (Farhan Labib, YE-52), same subject (Math 1) and same topic text (\"Part B all topic\"), submitted 78 seconds after #259 but with a different Drive file-id. Cannot tell without opening both files whether this is a corrected re-upload (should replace #259's link) or a genuinely separate file (should get its own button). Placed #259 as Part-B(Farhan) in math1_flow.js's Full Notes(2026) group; flagging #260 rather than guessing which link is correct or adding a second indistinguishable \"Part-B\" button."
+  }
+]
