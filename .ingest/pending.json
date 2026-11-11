@@ -1,16 +1,29 @@
 [
   {
-    "id": 263,
-    "submitted_at": "11/10/2026 2:34:22",
-    "name": "Md Tahsin Rahman",
-    "batch": "52",
-    "department": "TEM",
+    "id": 264,
+    "submitted_at": "11/10/2026 17:40:01",
+    "name": "Mohammad Monaeym Shaheriar",
+    "batch": "51",
+    "department": "TME",
     "level": "1",
-    "subject_name": "Math",
-    "topic_name": "Coordinate Geometry",
+    "subject_name": "Fundamentals of Polymer Chemistry",
+    "topic_name": "One shot FPC/Overview",
     "kind": "note",
-    "content_type": "Class",
-    "public_url": "https://youtube.com/playlist?list=PLSNiVyQs2Cdo&si=LZuXdAFt5r1wOes2"
+    "content_type": "Notes / Sheets/ Slides/ Books",
+    "public_url": "https://drive.google.com/file/d/1VJrRnXHrGPlRrcxn_Ufhc8V0cVxXJlND/view?usp=sharing"
+  },
+  {
+    "id": 265,
+    "submitted_at": "11/10/2026 20:50:57",
+    "name": "Nahid Hamim",
+    "batch": "51",
+    "department": "FE",
+    "level": "2",
+    "subject_name": "Apparel Manufacturing-1",
+    "topic_name": "Marker Making",
+    "kind": "note",
+    "content_type": "Notes / Sheets/ Slides/ Books",
+    "public_url": "https://drive.google.com/file/d/1egzhLIhlAsF-1FzO2cIrXx52sey_TnyQ/view?usp=sharing"
   },
   {
     "id": 260,
@@ -24,19 +37,6 @@
     "kind": "note",
     "content_type": "Notes / Sheets/ Slides/ Books",
     "public_url": "https://drive.google.com/file/d/1ZU-kFLr0mYKUa5v7C8zdxB23xY4PczDb/view?usp=sharing"
-  },
-  {
-    "id": 261,
-    "submitted_at": "11/9/2026 17:58:09",
-    "name": "Farhan Labib",
-    "batch": "52",
-    "department": "YE",
-    "level": "1",
-    "subject_name": "Mathematics 1",
-    "topic_name": "Part A",
-    "kind": "note",
-    "content_type": "Notes / Sheets/ Slides/ Books",
-    "public_url": "https://drive.google.com/file/d/1NMHuP1mqZTzXp0S0PW2Totj3IVi4BSyg/view?usp=sharing"
   },
   {
     "id": 262,
