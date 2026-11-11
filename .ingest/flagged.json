@@ -1,1 +1,20 @@
-[]
+[
+  {
+    "id": 260,
+    "name": "Farhan Labib",
+    "subject_name": "Math 1",
+    "topic_name": "Math part B all topic",
+    "kind": "note",
+    "public_url": "https://drive.google.com/file/d/1ZU-kFLr0mYKUa5v7C8zdxB23xY4PczDb/view?usp=sharing",
+    "reason": "Already flagged yesterday in open PR #55 (ingest/auto-2026-11-10, unmerged) as a likely duplicate/resubmission of submission #259, whose different Drive file-id (1hmtMKcREYRrxO63Y_1tIvz9Fn-EgG4RO) was placed as Part-B(Farhan) in math1_flow.js's Full Notes(2026) group. This exact row (same id, same url) has resurfaced in today's queue because PR #55 has not been merged, so it is still unresolved -- not re-processing it to avoid a second PR fighting over the same slot/duplicate decision. Needs a human to pick one link (or merge #55) before this is placed."
+  },
+  {
+    "id": 262,
+    "name": "Farhan Labib",
+    "subject_name": "Mathematics",
+    "topic_name": "Part B",
+    "kind": "note",
+    "public_url": "https://drive.google.com/file/d/1jm7TnIXKvHSCC4uWWm72W76_ldFyHVLL/view?usp=sharing",
+    "reason": "Bare 'Mathematics' with level=1 is ambiguous between math1/math2 per MAPPING.md (both are Level-1 subjects); topic text 'Part B' does not name a course-specific chapter and both math1_flow.js and math2_flow.js use Part-A/Part-B full-note groupings, so it can't be disambiguated by wording alone. Same submitter (Farhan Labib, YE-52) submitted id 261 'Mathematics 1' / 'Part A' one minute earlier (placed as math1) and id 260 'Math 1' / 'Part B all topic' two days earlier (also math1, but separately flagged above as a duplicate) -- so this row is very likely also math1 Part B, but MAPPING.md explicitly says not to guess from submitter/department pattern-matching in this ambiguous case; flagging per the rule rather than assuming."
+  }
+]
