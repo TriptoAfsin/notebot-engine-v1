@@ -6,6 +6,12 @@ let payloadBtnGen = require("simple-messenger-blocks/payloadBtnGen");
 
 let fpc_flow = [
     grroupedButtonBlockGen(
+        "📌 Full Notes - ",
+        [
+            webBtnBlockGen("Monaeym(TME-51,26)", "https://drive.google.com/file/d/1VJrRnXHrGPlRrcxn_Ufhc8V0cVxXJlND/view?usp=sharing"),
+        ]
+    ),
+    grroupedButtonBlockGen(
         "🔰 Select Topics for FPC - ",
         [
             webBtnBlockGen("Polymer Characterization(Jeba,2026)", "https://drive.google.com/file/d/1wxtc7I2hOCeqMPhT1GmKVOTAJk39ZHzY/view?usp=sharing"),
