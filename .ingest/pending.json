@@ -1,54 +1,28 @@
 [
   {
-    "id": 264,
-    "submitted_at": "11/10/2026 17:40:01",
-    "name": "Mohammad Monaeym Shaheriar",
-    "batch": "51",
-    "department": "TME",
-    "level": "1",
-    "subject_name": "Fundamentals of Polymer Chemistry",
-    "topic_name": "One shot FPC/Overview",
-    "kind": "note",
-    "content_type": "Notes / Sheets/ Slides/ Books",
-    "public_url": "https://drive.google.com/file/d/1VJrRnXHrGPlRrcxn_Ufhc8V0cVxXJlND/view?usp=sharing"
-  },
-  {
-    "id": 265,
-    "submitted_at": "11/10/2026 20:50:57",
-    "name": "Nahid Hamim",
-    "batch": "51",
-    "department": "FE",
-    "level": "2",
-    "subject_name": "Apparel Manufacturing-1",
-    "topic_name": "Marker Making",
-    "kind": "note",
-    "content_type": "Notes / Sheets/ Slides/ Books",
-    "public_url": "https://drive.google.com/file/d/1egzhLIhlAsF-1FzO2cIrXx52sey_TnyQ/view?usp=sharing"
-  },
-  {
-    "id": 260,
-    "submitted_at": "11/8/2026 6:02:37",
-    "name": "Farhan Labib",
+    "id": 266,
+    "submitted_at": "11/11/2026 15:27:55",
+    "name": "Tahsin",
     "batch": "52",
-    "department": "YE",
+    "department": "TEM",
     "level": "1",
-    "subject_name": "Math 1",
-    "topic_name": "Math part B all topic",
+    "subject_name": "Physics",
+    "topic_name": "Fluid Mechanics",
     "kind": "note",
-    "content_type": "Notes / Sheets/ Slides/ Books",
-    "public_url": "https://drive.google.com/file/d/1ZU-kFLr0mYKUa5v7C8zdxB23xY4PczDb/view?usp=sharing"
+    "content_type": "Video class",
+    "public_url": "https://youtube.com/playlist?list=PLTp1bB7UINwc&si=LzLtDsqPMxazt-Y5"
   },
   {
-    "id": 262,
-    "submitted_at": "11/9/2026 17:59:08",
-    "name": "Farhan Labib",
+    "id": 267,
+    "submitted_at": "11/11/2026 15:29:39",
+    "name": "Tahsin",
     "batch": "52",
-    "department": "YE",
+    "department": "TEM",
     "level": "1",
-    "subject_name": "Mathematics",
-    "topic_name": "Part B",
+    "subject_name": "Physics",
+    "topic_name": "Viscosity",
     "kind": "note",
-    "content_type": "Notes / Sheets/ Slides/ Books",
-    "public_url": "https://drive.google.com/file/d/1jm7TnIXKvHSCC4uWWm72W76_ldFyHVLL/view?usp=sharing"
+    "content_type": "Video",
+    "public_url": "https://youtube.com/playlist?list=PLMinJfnG4FAI&si=LQh3TKYXBsy5k9m4"
   }
 ]
