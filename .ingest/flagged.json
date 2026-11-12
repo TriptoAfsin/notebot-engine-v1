@@ -6,7 +6,7 @@
     "topic_name": "Math part B all topic",
     "kind": "note",
     "public_url": "https://drive.google.com/file/d/1ZU-kFLr0mYKUa5v7C8zdxB23xY4PczDb/view?usp=sharing",
-    "reason": "Likely duplicate/resubmission of #259 - same submitter (Farhan Labib, YE-52), same subject (Math 1) and same topic text (\"Part B all topic\"), submitted 78 seconds after #259 but with a different Drive file-id. Cannot tell without opening both files whether this is a corrected re-upload (should replace #259's link) or a genuinely separate file (should get its own button). #259 was merged via PR #55 as Part-B(Farhan) in math1_flow.js's Full Notes(2026) group; flagging #260 rather than guessing which link is correct or adding a second indistinguishable \"Part-B\" button."
+    "reason": "Likely duplicate/resubmission of #259 - same submitter (Farhan Labib, YE-52), same subject (Math 1) and same topic text (\"Part B all topic\"), submitted 78 seconds after #259 but with a different Drive file-id. Cannot tell without opening both files whether this is a corrected re-upload (should replace #259's link) or a genuinely separate file (should get its own button). #259 was merged via PR #55 as Part-B(Farhan) in math1_flow.js's Full Notes(2026) group; flagging #260 rather than guessing which link is correct or adding a second indistinguishable \"Part-B\" button. (Re-flagged unchanged on 2026-11-12: still present in the queue, nothing new to disambiguate it.)"
   },
   {
     "id": 262,
@@ -15,6 +15,6 @@
     "topic_name": "Part B",
     "kind": "note",
     "public_url": "https://drive.google.com/file/d/1jm7TnIXKvHSCC4uWWm72W76_ldFyHVLL/view?usp=sharing",
-    "reason": "Bare 'Mathematics' with level=1 is ambiguous between math1/math2 per MAPPING.md (both are Level-1 subjects); topic text 'Part B' does not name a course-specific chapter and both math1_flow.js and math2_flow.js use Part-A/Part-B full-note groupings, so it can't be disambiguated by wording alone. Same submitter (Farhan Labib, YE-52) submitted id 261 'Mathematics 1' / 'Part A' one minute earlier (placed as math1) and id 260 'Math 1' / 'Part B all topic' two days earlier (also math1, but separately flagged above as a duplicate) -- so this row is very likely also math1 Part B, but MAPPING.md explicitly says not to guess from submitter/department pattern-matching in this ambiguous case; flagging per the rule rather than assuming."
+    "reason": "Bare 'Mathematics' with level=1 is ambiguous between math1/math2 per MAPPING.md (both are Level-1 subjects); topic text 'Part B' does not name a course-specific chapter and both math1_flow.js and math2_flow.js use Part-A/Part-B full-note groupings, so it can't be disambiguated by wording alone. Same submitter (Farhan Labib, YE-52) submitted id 261 'Mathematics 1' / 'Part A' one minute earlier (placed as math1) and id 260 'Math 1' / 'Part B all topic' two days earlier (also math1, but separately flagged above as a duplicate) -- so this row is very likely also math1 Part B, but MAPPING.md explicitly says not to guess from submitter/department pattern-matching in this ambiguous case; flagging per the rule rather than assuming. (Re-flagged unchanged on 2026-11-12: still present in the queue, nothing new to disambiguate it.)"
   }
 ]

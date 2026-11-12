@@ -93,5 +93,7 @@ Mirror of notes. Level lab menu = `level_L_lab_flow.js` (already required + disp
 
 ---
 
+- **Topic matches an existing topic file, but that file is in the legacy `{text:...}` format** (e.g. am1's `topics/am1Marker.js`) — do NOT append `textBlockGen` there (STEP 2 rule 1 forbids it), and do NOT treat this as a "new subject" case (the subject dir is fine; only this one topic file is legacy). Instead use **option 2**: add a small `📌 <Topic> -` web-link group inside the subject's own `<subject>_flow.js` (no controller/route edit needed, since the subject flow is already wired). (Submission #265, am1/"Marker Making" — `am1Marker.js` is legacy while sibling topic files like `am1Books.js` already use `textBlockGen`.)
+
 ## When mapping genuinely fails
 Flag the row (write it to `flagged.json` with a concrete `reason`) rather than guessing — a flagged row the human places beats a wrong auto-edit. Then add a rule here so the next occurrence is handled.
