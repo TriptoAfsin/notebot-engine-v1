@@ -30,6 +30,13 @@ let math1_flow = [
         ]
     ),
     grroupedButtonBlockGen(
+        "📌 Full Notes(2026) - ",
+        [
+            webBtnBlockGen("Part-B(Labib,1)", "https://drive.google.com/file/d/1ZU-kFLr0mYKUa5v7C8zdxB23xY4PczDb/view?usp=sharing"),
+            webBtnBlockGen("Part-B(Labib,2)", "https://drive.google.com/file/d/1jm7TnIXKvHSCC4uWWm72W76_ldFyHVLL/view?usp=sharing"),
+        ]
+    ),
+    grroupedButtonBlockGen(
         "📌 Full Notes - ",
         [
             webBtnBlockGen("Linear, Mat.", "https://drive.google.com/file/d/1MbOxlNbEgtg2J1HNClPNLYfkm5DFt8PL/view?usp=sharing"),
