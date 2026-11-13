@@ -57,3 +57,7 @@ Feel free to clone this repo for your own projects or contribute to this project
 ### Contact me at: <a href="mailto:afsintripto@gmail.com">AfsinTripto@gmail.com</a>
 
 ### Thanks for your interest ❤
+
+## Support NoteBot
+
+NoteBot has been free for every BUTEX student since 2018, and it stays that way. If it helped you through an exam, you can help keep it running on [Patreon](https://www.patreon.com/triptex). Support pays for the servers, the bots and app store fees.
