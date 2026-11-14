@@ -70,6 +70,7 @@ let fsdFlow = [
         [
             webBtnBlockGen("Bulbul(JTEC,2026)", "https://drive.google.com/file/d/1eMeAs0ATsr3hl1CObahnpENv1eZYL7Nc/view?usp=sharing"),
             webBtnBlockGen("Alim(Affli.)", "https://drive.google.com/file/d/1tr3g6o2fSs03Tl6_M3FLoi_GeiQx3AMp/view?usp=sharing"),
+            webBtnBlockGen("Anonna(TEM,2026)", "https://drive.google.com/file/d/1B8rObXcygpfIqGG-xTbMs7LnlNSgaWA9/view?usp=sharing"),
         ]
     ),
     grroupedButtonBlockGen(

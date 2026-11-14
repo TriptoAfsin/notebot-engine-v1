@@ -6,6 +6,7 @@ let payloadBtnGen = require('simple-messenger-blocks/payloadBtnGen');
 let fytFlow = [
     grroupedButtonBlockGen(`📌 Full Notes -`, [
         webBtnBlockGen("Sinha(FE,26)", "https://drive.google.com/file/d/1xCxkH0NoCXn4orqosJR-y7XUyXYOr8K4/view?usp=sharing"),
+        webBtnBlockGen("Mashrur(YE,2026)", "https://drive.google.com/file/d/1CMv9yWlY8d1f9rhJJ5ASF3-DvZinLZr5/view?usp=sharing"),
     ]),
     grroupedButtonBlockGen(
         "🔰 Select Topics for FYT -",
