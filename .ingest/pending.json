@@ -1,41 +1,15 @@
 [
   {
-    "id": 268,
-    "submitted_at": "11/12/2026 11:11:16",
-    "name": "Anonna Kamrul",
-    "batch": "50",
+    "id": 271,
+    "submitted_at": "11/13/2026 9:19:02",
+    "name": "Tahsin",
+    "batch": "52",
     "department": "TEM",
-    "level": "3",
-    "subject_name": "Fabric Manufacturing -II",
-    "topic_name": "Whole syllabus",
+    "level": "1",
+    "subject_name": "Math",
+    "topic_name": "Integration",
     "kind": "note",
-    "content_type": "Notes / Sheets/ Slides/ Books",
-    "public_url": "https://drive.google.com/file/d/1Q5tb1SEjUi28drIQZmL_ouhakOZ48j7P/view?usp=sharing"
-  },
-  {
-    "id": 269,
-    "submitted_at": "11/12/2026 11:12:26",
-    "name": "Anonna Kamrul",
-    "batch": "50",
-    "department": "TEM",
-    "level": "3",
-    "subject_name": "Fabric Structure and Design",
-    "topic_name": "Whole syllabus",
-    "kind": "note",
-    "content_type": "Notes / Sheets/ Slides/ Books",
-    "public_url": "https://drive.google.com/file/d/1B8rObXcygpfIqGG-xTbMs7LnlNSgaWA9/view?usp=sharing"
-  },
-  {
-    "id": 270,
-    "submitted_at": "11/13/2026 4:19:14",
-    "name": "Mashrur",
-    "batch": "49",
-    "department": "YE",
-    "level": "2",
-    "subject_name": "FYT",
-    "topic_name": "Full",
-    "kind": "note",
-    "content_type": "Notes / Sheets/ Slides/ Books",
-    "public_url": "https://drive.google.com/file/d/1CMv9yWlY8d1f9rhJJ5ASF3-DvZinLZr5/view?usp=sharing"
+    "content_type": "Video",
+    "public_url": "https://youtube.com/playlist?list=PLQCXutBt9K7U&si=YmMbaNgVX9N-bQ2o"
   }
 ]
