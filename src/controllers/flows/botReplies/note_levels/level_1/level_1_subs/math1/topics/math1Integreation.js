@@ -12,6 +12,7 @@ let math1Integre = [
     textBlockGen(`🔷 Hand Note Full (Ripa,TFD-46,2021) - \n\nhttps://drive.google.com/file/d/1DAkT9S5jhHFjQwSnJ7zVrxIreVf20N6V/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note Full (Sazid,FE-46,2021) - \n\nhttps://drive.google.com/file/d/1flhN31aiCW5u_NpvwXi0WYQRjUwGFenV/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note(Hafiza, AE-48 ,2023)-\n\nhttps://drive.google.com/file/d/1WFn8YzqtJU-SJ-QL07Wyy60iAbm0uv3f/view?usp=sharing`),
+    textBlockGen(`📺 Video Lecture(Tahsin, TEM-52, 2026) - \n\nhttps://youtube.com/playlist?list=PLQCXutBt9K7U&si=YmMbaNgVX9N-bQ2o`),
     // textBlockGen(`🔷 Rules(1-10),Gamma-Beta, Partial(Tripto)-\n\nhttps://drive.google.com/file/d/1AysunFQthF0CW7k6H8i3rbPz31_iZRRn/view?usp=sharing`),
     textBlockGen(`🔷 Volume -\n\nhttps://drive.google.com/file/d/1fMQOkXdJk8SFBqRRkwoVQbMSCV0gjYS4/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note(Samet,FE-47,2023) - \n\nhttps://drive.google.com/file/d/1NMCXF9kDsCw9LaH-GdvSgvsqvrik-yhy/view?usp=sharing`),
