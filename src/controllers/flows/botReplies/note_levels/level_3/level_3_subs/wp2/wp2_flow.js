@@ -26,6 +26,12 @@ let wp2Flow = [
         ]
     ),
     grroupedButtonBlockGen(
+        "📌 QB Solve - ",
+        [
+            webBtnBlockGen("QB Solve(Raunak,26)", "https://drive.google.com/file/d/1sfRk6N5XKmXPxAFa7bdjv54qI1proFS7/view?usp=sharing"),
+        ]
+    ),
+    grroupedButtonBlockGen(
         "🔰 Select Topics for WP-II -",
         [
             payloadBtnGen("Books", "wp2_books_flow"),
