@@ -15,6 +15,7 @@ let phy1Inter = [
     textBlockGen(`🔷 Hand Note(Fardin,AE-50,2025)-\n\nhttps://drive.google.com/file/d/1-h324kuyQNdFloKDtIdXm2XdcUFYnikR/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note(Tahsan Islam Tonmoy, WPE-52, 2026) - \n\nhttps://drive.google.com/file/d/1REziX7Z2-BTu9pN5VyLoLi5b-LaH6JyU/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note(Asaf Mahmud Siam, FE-52, 2026) - \n\nhttps://drive.google.com/file/d/1UTJyptOBPjhP1uUjQa8vwcga9DhI6QMX/view?usp=sharing`),
+    textBlockGen(`📺 Video Lecture(Tahsin, TEM-52, 2026) - \n\nhttps://youtube.com/playlist?list=PLU8rJxgNs8oM&si=_WYIKgMkDqkm_i77`),
 ]
 
 
