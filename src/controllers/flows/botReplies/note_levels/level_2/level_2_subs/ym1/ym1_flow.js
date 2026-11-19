@@ -60,6 +60,15 @@ let ym1Flow = [
     grroupedButtonBlockGen(`📌 Gear & Belt -`, [
         webBtnBlockGen("Midul(WPE,26)", "https://drive.google.com/file/d/1sAPGOR8CDMZlDScarPll_Ul72_OrBpgr/view?usp=sharing"),
     ]),
+    grroupedButtonBlockGen(`📌 Intro to YM -`, [
+        webBtnBlockGen("Lily(TFD-51,26)", "https://drive.google.com/file/d/1aDu9fk1ggZ-9M5yoTLJNBnyQcumiD5ci/view?usp=sharing"),
+    ]),
+    grroupedButtonBlockGen(`📌 Mixing & Blend -`, [
+        webBtnBlockGen("Lily(TFD-51,26)", "https://drive.google.com/file/d/1IDS_R2UYF0r6_KZ5Jaho-hLWpcOAkfPX/view?usp=sharing"),
+    ]),
+    grroupedButtonBlockGen(`📌 Fibre Prop. -`, [
+        webBtnBlockGen("Lily(TFD-51,26)", "https://drive.google.com/file/d/1WHe1c3n63oMMWVJcnS_coQqAdDKp_7VV/view?usp=sharing"),
+    ]),
     grroupedButtonBlockGen(
         `🔰 Select Topics for YM-I - `,
         [
