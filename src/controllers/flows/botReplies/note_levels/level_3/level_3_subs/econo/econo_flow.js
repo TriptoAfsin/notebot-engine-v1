@@ -52,6 +52,7 @@ let econoFlow = [
         [
             webBtnBlockGen("Bulbul(JTEC,2026)", "https://drive.google.com/file/d/1KBSHXnjZ8mHhAQmqWBVoFECpokW4EnVD/view?usp=sharing"),
             webBtnBlockGen("Alim(Affli.)", "https://drive.google.com/file/d/1Dx-_D3d4zffRW0o0pVvp2p13ewqhjtpx/view?usp=sharing"),
+            webBtnBlockGen("Mashrur(YE-49,26)", "https://drive.google.com/file/d/10FxoFXbZVAAynd6ZHQzh5ogBu2Ia7MM4/view?usp=sharing"),
         ]
     ),
     grroupedButtonBlockGen(
