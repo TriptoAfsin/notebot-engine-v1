@@ -9,6 +9,7 @@ let phy1Diffrac = [
     textBlockGen(`🔷 Hand Note(Azim,TEM-46,2021)-\n\nhttps://drive.google.com/file/d/1IZaJC_lCo0EtTnTyvDc92Ei7Cofqcppp/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note(Nihat,YE-46,2021)-\n\nhttps://drive.google.com/file/d/1XEkkRrc4_NuuNk19Os7Imc6oodUeMAkA/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note(Gourab,IPE-50,2025)-\n\nhttps://drive.google.com/file/d/1s2Dy-sW-xs_NER-Uowugy5eiADZ-yHbe/view?usp=sharing`),
+    textBlockGen(`📺 Video Lecture(Mohammad Nihal Chowdhury, ESE-52, 2026) - \n\nhttps://youtube.com/playlist?list=PLejz2bWw1VVw&si=DgvfUFlctZnM_zG6`),
 ]
 
 
