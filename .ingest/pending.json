@@ -1,28 +1,41 @@
 [
   {
-    "id": 284,
-    "submitted_at": "11/19/2026 11:19:05",
-    "name": "Md. Hasnabul Mahdin Tahin",
-    "batch": "49",
+    "id": 287,
+    "submitted_at": "11/20/2026 19:55:20",
+    "name": "Tahsin",
+    "batch": "52",
     "department": "TEM",
-    "level": "3",
-    "subject_name": "Wet Processing-II",
-    "topic_name": "Part (B)",
+    "level": "1",
+    "subject_name": "Physics",
+    "topic_name": "Elasticity",
     "kind": "note",
-    "content_type": "Notes / Sheets/ Slides/ Books",
-    "public_url": "https://drive.google.com/file/d/10jtn1bby7vX6JbYlba9ibabWyBuMvYvn/view?usp=sharing"
+    "content_type": "Video",
+    "public_url": "https://youtube.com/playlist?list=PLeczcLD2C4N4&si=MC0vJPmmqss8iEO2"
   },
   {
-    "id": 285,
-    "submitted_at": "11/19/2026 16:09:15",
+    "id": 288,
+    "submitted_at": "11/20/2026 20:03:00",
     "name": "Mohammad Nihal Chowdhury",
     "batch": "52",
     "department": "ESE",
     "level": "1",
     "subject_name": "Physics",
-    "topic_name": "Diffraction and X-Ray Diffraction",
+    "topic_name": "Polarization",
     "kind": "note",
     "content_type": "Video",
-    "public_url": "https://youtube.com/playlist?list=PLejz2bWw1VVw&si=DgvfUFlctZnM_zG6"
+    "public_url": "https://youtube.com/playlist?list=PLfdyxzWoFeUA&si=h1DqQdeNDIo-pGgF"
+  },
+  {
+    "id": 289,
+    "submitted_at": "11/21/2026 2:18:29",
+    "name": "Mohammad Nihal Chowdhury",
+    "batch": "52",
+    "department": "ESE",
+    "level": "1",
+    "subject_name": "Physics",
+    "topic_name": "Surface Tension",
+    "kind": "note",
+    "content_type": "Video",
+    "public_url": "https://youtube.com/playlist?list=PLJrmqieHyMFQ&si=Fb2IhyepFaUpkDaI"
   }
 ]
