@@ -1,41 +1,28 @@
 [
   {
-    "id": 287,
-    "submitted_at": "11/20/2026 19:55:20",
-    "name": "Tahsin",
-    "batch": "52",
-    "department": "TEM",
-    "level": "1",
-    "subject_name": "Physics",
-    "topic_name": "Elasticity",
+    "id": 291,
+    "submitted_at": "11/21/2026 23:52:13",
+    "name": "Mehedi Hasan Farhan",
+    "batch": "50",
+    "department": "AE",
+    "level": "3",
+    "subject_name": "YM ||",
+    "topic_name": "Part A full",
     "kind": "note",
-    "content_type": "Video",
-    "public_url": "https://youtube.com/playlist?list=PLeczcLD2C4N4&si=MC0vJPmmqss8iEO2"
+    "content_type": "Notes / Sheets/ Slides/ Books",
+    "public_url": "https://drive.google.com/file/d/1XnDcxIBJY0iYTH-IU2SNNp9EnTigaOO5/view?usp=sharing"
   },
   {
-    "id": 288,
-    "submitted_at": "11/20/2026 20:03:00",
-    "name": "Mohammad Nihal Chowdhury",
-    "batch": "52",
-    "department": "ESE",
-    "level": "1",
-    "subject_name": "Physics",
-    "topic_name": "Polarization",
+    "id": 290,
+    "submitted_at": "11/21/2026 5:50:16",
+    "name": "Mashrur",
+    "batch": "49",
+    "department": "YE",
+    "level": "2",
+    "subject_name": "SSS-1",
+    "topic_name": "Full obe",
     "kind": "note",
-    "content_type": "Video",
-    "public_url": "https://youtube.com/playlist?list=PLfdyxzWoFeUA&si=h1DqQdeNDIo-pGgF"
-  },
-  {
-    "id": 289,
-    "submitted_at": "11/21/2026 2:18:29",
-    "name": "Mohammad Nihal Chowdhury",
-    "batch": "52",
-    "department": "ESE",
-    "level": "1",
-    "subject_name": "Physics",
-    "topic_name": "Surface Tension",
-    "kind": "note",
-    "content_type": "Video",
-    "public_url": "https://youtube.com/playlist?list=PLJrmqieHyMFQ&si=Fb2IhyepFaUpkDaI"
+    "content_type": "Notes / Sheets/ Slides/ Books",
+    "public_url": "https://drive.google.com/file/d/1uitqCVClxA_BcuVymAlIjHg8xOVX-qiA/view?usp=sharing"
   }
 ]
