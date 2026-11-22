@@ -1,1 +1,35 @@
-[]
+[
+  {
+    "id": 287,
+    "level": "1",
+    "subjectDir": "phy1",
+    "subjectName": "Physics",
+    "topicName": "phy1Elasti",
+    "topicDisplay": "Elasticity",
+    "title": "📺 Video Lecture(Tahsin, TEM-52, 2026)",
+    "url": "https://youtube.com/playlist?list=PLeczcLD2C4N4&si=MC0vJPmmqss8iEO2",
+    "new": null
+  },
+  {
+    "id": 288,
+    "level": "1",
+    "subjectDir": "phy1",
+    "subjectName": "Physics",
+    "topicName": "phy1Polar",
+    "topicDisplay": "Polarization",
+    "title": "📺 Video Lecture(Mohammad Nihal Chowdhury, ESE-52, 2026)",
+    "url": "https://youtube.com/playlist?list=PLfdyxzWoFeUA&si=h1DqQdeNDIo-pGgF",
+    "new": null
+  },
+  {
+    "id": 289,
+    "level": "1",
+    "subjectDir": "phy1",
+    "subjectName": "Physics",
+    "topicName": "phy1Surface",
+    "topicDisplay": "Surface Tension",
+    "title": "📺 Video Lecture(Mohammad Nihal Chowdhury, ESE-52, 2026)",
+    "url": "https://youtube.com/playlist?list=PLJrmqieHyMFQ&si=Fb2IhyepFaUpkDaI",
+    "new": null
+  }
+]
