@@ -38,6 +38,7 @@ let ym2Flow = [
         "📌 Full Notes -",
         [
             webBtnBlockGen("Bulbul(JTEC,2026)", "https://drive.google.com/file/d/1PkudB4EL6idpy887glClgd3tRj8kAmCk/view?usp=sharing"),
+            webBtnBlockGen("Part-A(Farhan,26)", "https://drive.google.com/file/d/1XnDcxIBJY0iYTH-IU2SNNp9EnTigaOO5/view?usp=sharing"),
         ]
     ),
     grroupedButtonBlockGen("🔰 Select Topics for YM-II -",
