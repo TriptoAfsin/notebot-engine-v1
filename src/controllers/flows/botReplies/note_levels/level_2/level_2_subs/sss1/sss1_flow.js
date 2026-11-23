@@ -5,6 +5,7 @@ let webBtnBlockGen = require("simple-messenger-blocks/webBtnGen");
 let sss1Flow = [
     grroupedButtonBlockGen(`📌 Full Notes -`, [
         webBtnBlockGen("Shihab(YE,26)", "https://drive.google.com/file/d/1WInHYBqcoeLYBhYiT-ax6zSpOXI3TJ3M/view?usp=sharing"),
+        webBtnBlockGen("Mashrur(YE,26)", "https://drive.google.com/file/d/1uitqCVClxA_BcuVymAlIjHg8xOVX-qiA/view?usp=sharing"),
     ]),
     grroupedButtonBlockGen(
         `📌 QB Solve -`,
