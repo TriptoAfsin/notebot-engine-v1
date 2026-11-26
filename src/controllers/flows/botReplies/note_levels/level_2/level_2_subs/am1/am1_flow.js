@@ -76,6 +76,12 @@ let am1Flow = [
         ]
     ),
     grroupedButtonBlockGen(
+        "📌 Fabric Cutting - ",
+        [
+            webBtnBlockGen("Lily(TFD-51,26)", "https://drive.google.com/file/d/1PZ783PWE5uIt-RVWoZuW_ozwSmd2V79P/view?usp=sharing"),
+        ]
+    ),
+    grroupedButtonBlockGen(
         "🔰 Select Topics for AM-I -",
         [
             payloadBtnGen("Books", "am1_books_flow"),
