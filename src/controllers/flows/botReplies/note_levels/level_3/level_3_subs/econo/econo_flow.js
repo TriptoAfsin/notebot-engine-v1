@@ -56,6 +56,12 @@ let econoFlow = [
         ]
     ),
     grroupedButtonBlockGen(
+        "📌 Full Notes -",
+        [
+            webBtnBlockGen("A(Tahin,TEM-49,26)", "https://drive.google.com/file/d/1bWWV_GOzQAQtnm8ZE2Eefr8Ra_8Xd4l9/view?usp=sharing"),
+        ]
+    ),
+    grroupedButtonBlockGen(
         "🔰 Select Topics for Economics -",
         [
             payloadBtnGen("Books", "econo_books_flow"),
