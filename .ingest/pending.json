@@ -1,54 +1,41 @@
 [
   {
-    "id": 299,
-    "submitted_at": "11/25/2026 14:01:25",
+    "id": 301,
+    "submitted_at": "11/26/2026 18:42:08",
+    "name": "Tahsin",
+    "batch": "52",
+    "department": "TEM",
+    "level": "1",
+    "subject_name": "Chemistry",
+    "topic_name": "Colloid",
+    "kind": "note",
+    "content_type": "Video",
+    "public_url": "https://youtube.com/playlist?list=PLfM68_J5XN20&si=qpKPJtZGrmS8bBAE"
+  },
+  {
+    "id": 300,
+    "submitted_at": "11/26/2026 18:45:52",
+    "name": "Md. Hasnabul Mahdin Tahin",
+    "batch": "49",
+    "department": "TEM",
+    "level": "3",
+    "subject_name": "Wet Processing-II Lab (WPE 322-0723)",
+    "topic_name": "All Lab Report (Rafi Sir)",
+    "kind": "lab",
+    "content_type": "Lab Report",
+    "public_url": "https://drive.google.com/file/d/154NrXm2c8sgEFLu7zO5YxFjpd823_4M4/view?usp=sharing"
+  },
+  {
+    "id": 303,
+    "submitted_at": "11/27/2026 2:42:04",
     "name": "Nihal",
     "batch": "52",
     "department": "ESE",
     "level": "1",
     "subject_name": "Chemistry",
-    "topic_name": "Dilute Solution",
+    "topic_name": "Photo Chemistry",
     "kind": "note",
     "content_type": "Video",
-    "public_url": "https://youtube.com/playlist?list=PLd7C8FyTvcs0&si=QhXS_oMHgV-sekQC"
-  },
-  {
-    "id": 297,
-    "submitted_at": "11/25/2026 7:47:44",
-    "name": "Minhaz",
-    "batch": "52",
-    "department": "IPE",
-    "level": "1",
-    "subject_name": "Chemistry",
-    "topic_name": "Chemical Kinetics",
-    "kind": "note",
-    "content_type": "Video",
-    "public_url": "https://youtube.com/playlist?list=PLVQoPbEHVpIE&si=bcaDUmBsIPLeeTG0"
-  },
-  {
-    "id": 298,
-    "submitted_at": "11/25/2026 9:28:34",
-    "name": "Tahsin",
-    "batch": "52",
-    "department": "TEM",
-    "level": "1",
-    "subject_name": "Math",
-    "topic_name": "Differentiation",
-    "kind": "note",
-    "content_type": "Video",
-    "public_url": "https://youtube.com/playlist?list=PLeLlQinjYTVU&si=Xuar0zTNr8DNizCQ"
-  },
-  {
-    "id": 296,
-    "submitted_at": "11/25/2026 9:36:59",
-    "name": "Md. Tarekuzzaman Tarek",
-    "batch": "52",
-    "department": "ESE",
-    "level": "1",
-    "subject_name": "Chemistry-I",
-    "topic_name": "Previous Year All chapter solution",
-    "kind": "note",
-    "content_type": "Question Solve",
-    "public_url": "https://drive.google.com/file/d/17nJvdRZcZ9Bl6UMUM133k7tzkhs8Y_w_/view?usp=sharing"
+    "public_url": "https://youtube.com/playlist?list=PLWr4p1KBi_ok&si=jsqGq8DU8qYNIWy2"
   }
 ]
