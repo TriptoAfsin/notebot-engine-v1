@@ -17,6 +17,7 @@ let math1Differn = [
     textBlockGen(`🔷 Partial Derivative(Akib) - \n\nhttps://drive.google.com/file/d/1-X4pohf1ACsMr_Jt_wMx4iPnIudQWApq/view?usp=drivesdk`),
     textBlockGen(`🔷 Hand Note(Samet,FE-47,2023) - \n\nhttps://drive.google.com/file/d/1Q1iYL_LOWbaVgesJz7Id6YsDWpFzg7nq/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note(Md Arman Prodhan, WPE-50, 2026) - \n\nhttps://drive.google.com/file/d/1S62-trWIhSchYs1OynFmW5BuYV2GtWO-/view?usp=sharing`),
+    textBlockGen(`📺 Video Lecture(Tahsin, TEM-52, 2026) - \n\nhttps://youtube.com/playlist?list=PLeLlQinjYTVU&si=Xuar0zTNr8DNizCQ`),
 ]
 
 
