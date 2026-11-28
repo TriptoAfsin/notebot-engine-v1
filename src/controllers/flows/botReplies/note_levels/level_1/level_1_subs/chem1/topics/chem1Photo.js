@@ -1,5 +1,6 @@
 let textBlockGen = require("../../../../../../../genrators/textBlockGen");
 
+
 let chem1Photo = [
     textBlockGen(`🔷 Sheet(2025) - \n\nhttps://drive.google.com/file/d/1_QhJX4kEwp5vC_sncgWYGlc1nouW64Tq/view?usp=sharing`),
     textBlockGen(`🔷 Sheet(Prottush,FE-50,2025) - \n\nhttps://drive.google.com/file/d/1q6nNHtyvCbBsvDyRLrJYutEcyE6SC7Om/view?usp=sharing`),
@@ -14,6 +15,7 @@ let chem1Photo = [
    
     textBlockGen(`🔷 Hand Note(Midul Hasan, WPE-51, 2026) - \n\nhttps://drive.google.com/file/d/1yUfAuGovD49YYPZxkf7KFEQo9Dn4Dc98/view?usp=sharing`),
     textBlockGen(`🔷 Hand Note(Midul Hasan, WPE-51, 2026) - \n\nhttps://drive.google.com/file/d/11O5H3QlNbkJVwEsYGNsTNxLOfpcak8Re/view?usp=sharing`),
+    textBlockGen(`📺 Video Lecture(Nihal, ESE-52, 2026) - \n\nhttps://youtube.com/playlist?list=PLWr4p1KBi_ok&si=jsqGq8DU8qYNIWy2`),
 ]
 
 
