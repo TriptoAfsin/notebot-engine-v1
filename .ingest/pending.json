@@ -1,41 +1,15 @@
 [
   {
-    "id": 301,
-    "submitted_at": "11/26/2026 18:42:08",
+    "id": 305,
+    "submitted_at": "11/27/2026 12:42:14",
     "name": "Tahsin",
     "batch": "52",
     "department": "TEM",
     "level": "1",
     "subject_name": "Chemistry",
-    "topic_name": "Colloid",
+    "topic_name": "Chemical Kinetics",
     "kind": "note",
     "content_type": "Video",
-    "public_url": "https://youtube.com/playlist?list=PLfM68_J5XN20&si=qpKPJtZGrmS8bBAE"
-  },
-  {
-    "id": 300,
-    "submitted_at": "11/26/2026 18:45:52",
-    "name": "Md. Hasnabul Mahdin Tahin",
-    "batch": "49",
-    "department": "TEM",
-    "level": "3",
-    "subject_name": "Wet Processing-II Lab (WPE 322-0723)",
-    "topic_name": "All Lab Report (Rafi Sir)",
-    "kind": "lab",
-    "content_type": "Lab Report",
-    "public_url": "https://drive.google.com/file/d/154NrXm2c8sgEFLu7zO5YxFjpd823_4M4/view?usp=sharing"
-  },
-  {
-    "id": 303,
-    "submitted_at": "11/27/2026 2:42:04",
-    "name": "Nihal",
-    "batch": "52",
-    "department": "ESE",
-    "level": "1",
-    "subject_name": "Chemistry",
-    "topic_name": "Photo Chemistry",
-    "kind": "note",
-    "content_type": "Video",
-    "public_url": "https://youtube.com/playlist?list=PLWr4p1KBi_ok&si=jsqGq8DU8qYNIWy2"
+    "public_url": "https://youtube.com/playlist?list=PLX4pPr330Eos&si=dgLel4wmVk1ShEr5"
   }
 ]
