@@ -34,6 +34,12 @@ let wp2_lab_flow = [
         ]
     ),
     grroupedButtonBlockGen(
+        "📌 All Reports -",
+        [
+            webBtnBlockGen("All Report(Tahin,26)", "https://drive.google.com/file/d/154NrXm2c8sgEFLu7zO5YxFjpd823_4M4/view?usp=sharing"),
+        ]
+    ),
+    grroupedButtonBlockGen(
         "🔰 Select Experiment for WP-II -",
         [
             webBtnBlockGen("1", "https://drive.google.com/file/d/10PC4gqZhNOa9xw6badWvJh6YZxzAc2yT/view"),
